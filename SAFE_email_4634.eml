@@ -1,0 +1,906 @@
+X-GM-THRID: 1825920698292300752
+X-Gmail-Labels: Inbox,Category Updates,Unread
+Delivered-To: azfarali007.aa@gmail.com
+Received: by 2002:a05:6f02:323:b0:81:a727:4d4e with SMTP id 35csp2100568rcf;
+        Thu, 6 Mar 2025 23:47:54 -0800 (PST)
+X-Google-Smtp-Source: AGHT+IFR5t8UTaZyD2P1hIMVQ8AGSlBXKFQxO8h8xCR9xTFVB0YC/5yA76GddGl/doEb1aHOsUEK
+X-Received: by 2002:a05:600c:3591:b0:439:9e8b:228e with SMTP id 5b1f17b1804b1-43c5a630697mr13589235e9.20.1741333673990;
+        Thu, 06 Mar 2025 23:47:53 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1741333673; cv=none;
+        d=google.com; s=arc-20240605;
+        b=T3zPNkkdQG2bqDh7/S26YFJnAR8Ll5xOZcAUV0EIKdruqHQFpscioX3Pfy09bcPZPl
+         6gILWV8A4sWNInqiRxBCV0ENGbJ0KzdvC8wi00eruMns7AL1RDs23AZIc6wCzyVkZZ2B
+         92Ttqiwi3gka9MnikegDh4LWVVjhEwCPCqhz2F0HiMbRMyjEZoaKq/ToxwaiQisvfj4Y
+         VJjB7g5UWhuRYu8gTBt9X0sQlegXKAD8F+ePcDb96sVx8u1Xbwb2yHrNJhFnXWcz/mT4
+         Nc0wvAXqiPkpIDV2WiDK7gNVSdWWvB620BRow/A7UaXulbzUiLPyuLakQwsymJdY99dq
+         o9Uw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=mime-version:feedback-id:list-unsubscribe:list-unsubscribe-post
+         :date:subject:to:from:sendername:senderemail:message-id
+         :dkim-signature:dkim-signature;
+        bh=tMnaFu+hnJma4aMImZI1gNlmsgVzu8Rgm63mnIpwW/4=;
+        fh=Jj7sUw2qhHptu4+aO194fmzRgazfROtcgmaVnMuCrZQ=;
+        b=VmSl9DR3CUjU6LwuyrWgjwBAjI6HluMzXJYttf7HAjpypNlekaXqas4UYZeV8sAq/r
+         W6Zf/sQcKmL3GWyZLsD/RuhTlgQ5RSNlYE4tUpliQ8NZMkka1S5O+45EBJSilqTx5x5r
+         T/t5X3k5/YC+VXbbAfWc5n/LtKKp8E3leeGyzuFnPp5xz13sAAqOgZ9Yfsu9r8IKJksb
+         xz8u1ZZSMEV9809gaky1jfw6luV+n6ePh1D6ILYP5y4SgRU1V+upvxSjWCTxLPisCKeP
+         Xm7juj4ORQF3PwOCkGttKv8+kBprxvO/QkIeFIpKQCzh7wA+prPDMQdPSg1L44ZofiJi
+         ztuA==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@mistral.ai header.s=mailjet header.b=hUNLOzc7;
+       dkim=pass header.i=@bnc3.mailjet.com header.s=mailjet2 header.b=rRs55cmT;
+       spf=pass (google.com: domain of ed344254.baaabr3d6ikaaaaaaaaaanumnkwaaycubisaaaaaacaamwbnyqsp@a2529843.bnc3.mailjet.com designates 87.253.233.148 as permitted sender) smtp.mailfrom=ed344254.BAAABr3d6IkAAAAAAAAAAnUMNKwAAYCuBisAAAAAACaaMwBnyqSp@a2529843.bnc3.mailjet.com;
+       dmarc=pass (p=NONE sp=REJECT dis=NONE) header.from=mistral.ai
+Return-Path: <ed344254.BAAABr3d6IkAAAAAAAAAAnUMNKwAAYCuBisAAAAAACaaMwBnyqSp@a2529843.bnc3.mailjet.com>
+Received: from o148.p8.mailjet.com (o148.p8.mailjet.com. [87.253.233.148])
+        by mx.google.com with UTF8SMTPS id 5b1f17b1804b1-43bdd8b0a0dsi21604915e9.30.2025.03.06.23.47.53
+        for <azfarali007.aa@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Thu, 06 Mar 2025 23:47:53 -0800 (PST)
+Received-SPF: pass (google.com: domain of ed344254.baaabr3d6ikaaaaaaaaaanumnkwaaycubisaaaaaacaamwbnyqsp@a2529843.bnc3.mailjet.com designates 87.253.233.148 as permitted sender) client-ip=87.253.233.148;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@mistral.ai header.s=mailjet header.b=hUNLOzc7;
+       dkim=pass header.i=@bnc3.mailjet.com header.s=mailjet2 header.b=rRs55cmT;
+       spf=pass (google.com: domain of ed344254.baaabr3d6ikaaaaaaaaaanumnkwaaycubisaaaaaacaamwbnyqsp@a2529843.bnc3.mailjet.com designates 87.253.233.148 as permitted sender) smtp.mailfrom=ed344254.BAAABr3d6IkAAAAAAAAAAnUMNKwAAYCuBisAAAAAACaaMwBnyqSp@a2529843.bnc3.mailjet.com;
+       dmarc=pass (p=NONE sp=REJECT dis=NONE) header.from=mistral.ai
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; q=dns/txt;
+  d=mistral.ai; i=no-reply@mistral.ai; s=mailjet; x=1741340873;
+  h=message-id:senderemail:sendername:from:from:to:to:subject:subject:date:date:list-unsubscribe-post:
+  list-unsubscribe:feedback-id:x-csa-complaints:x-mj-mid:x-report-abuse-to:
+  mime-version:content-type;
+  bh=Hlpj5Z1p1ePd2Ci1cVVslJygwt2oqGMVykTXqs0GJYU=;
+  b=hUNLOzc74cS1JDzTshizsLMofpwm+37wEDzikzXBUBgcCtDfxqGyVgq1x
+ JKSbDrR4VUllzjkezbXL7ws5F2ohIzS9X9OJ9HF78Yh58NhuhzGwBa6Ua8Gj
+ 6z823oYDtcxCXZL4JqgO+ViVzqPdNvwH3xe75MJnfNTSw16fiWtoLc=
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; q=dns/txt;
+  d=bnc3.mailjet.com; s=mailjet2; x=1741340873;
+  h=message-id:senderemail:sendername:from:from:to:to:subject:subject:date:date:list-unsubscribe-post:
+  list-unsubscribe:feedback-id:x-csa-complaints:x-mj-mid:x-report-abuse-to:
+  mime-version:content-type;
+  bh=Hlpj5Z1p1ePd2Ci1cVVslJygwt2oqGMVykTXqs0GJYU=;
+  b=rRs55cmTJ5ft5AsLKQ911P2DNzZlCwVh1EHxnJjUqx5N1f1QhQFHE71qC
+ giPCfhyZjd4KuuZpEBVLXMwjZ2rUJy0wEspZ3nkthZUz2+FDlo8S0c26Ywqk
+ Jpi4vqL/+TOA3PiZVfoA1m9NCSNY4C277LO2SNOCNNPLSbbCEgsuZs=
+Return-Path: 
+	<ed344254.BAAABr3d6IkAAAAAAAAAAnUMNKwAAYCuBisAAAAAACaaMwBnyqSp@a2529843.bnc3.mailjet.com>
+Message-Id: <ed344254.BAAABr3d6IkAAAAAAAAAAnUMNKwAAYCuBisAAAAAACaaMwBnyqSp@mailjet.com>
+SenderEmail: no-reply@mistral.ai
+SenderName: Mistral AI
+From: Mistral AI <no-reply@mistral.ai>
+To: Azfar Ali <azfarali007.aa@gmail.com>
+Subject: Welcome to Mistral AI!
+Date: Fri, 7 Mar 2025 07:47:53 +0000
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+List-Unsubscribe: 
+	<mailto:unsub-ed344254.ssiys.vps6hznz7oz3@bnc3.mailjet.com>,
+	<https://ssiys.mjt.lu/unsub2?m=BAAABr3d6IkAAAAAAAAAAnUMNKwAAYCuBisAAAAAACaaMwBnyqSpRWlvC5b3S4qY552S9YKGUQAj69U&b=ed344254&e=140a5e6d&x=_tKYT0UE4P7_1dJbMxHWLujm0UKPyBWkwvOkiBEo0WA>
+Feedback-Id: 42.2529843.2354133:MJ
+X-CSA-Complaints: csa-complaints@eco.de
+X-MJ-Mid: 
+	BAAABr3d6IkAAAAAAAAAAnUMNKwAAYCuBisAAAAAACaaMwBnyqSpRWlvC5b3S4qY552S9YKGUQAj69U
+X-REPORT-ABUSE-TO: Message sent by Mailjet please report to
+	abuse@mailjet.com with a copy of the message
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="=-tIu9zr6SYgwO7G0xt4jT"
+
+--=-tIu9zr6SYgwO7G0xt4jT
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+
+
+
+Welcome to Mistral AI La Plateforme!
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+=E2=80=87=EF=BB=BF=CD=8F
+
+
+
+
+
+
+
+
+
+
+
+Mistral AI Logo [https://mistral.ai/static/img/logo-mistral.png]
+https://mistral.ai
+
+
+
+
+
+La Plateforme
+[https://console.mistral.ai]
+
+
+
+Docs [https://docs.mistral.ai]
+=E2=80=A2
+API [https://docs.mistral.ai/api]
+
+
+
+
+
+
+
+
+
+
+=E2=80=8D
+
+
+
+
+
+
+
+
+
+Welcome to Mistral AI La Plateforme!
+
+
+
+
+Hello Azfar,
+
+
+Welcome to Mistral AI La Plateforme! We're thrilled to have you on board.
+
+
+Here's how to get started to access our API and best models:
+
+
+1. Head over to the Mistral AI console and
+complete your subscription [https://console.mistral.ai/billing/].
+
+
+2. After validation of your payment details, your API keys will be all set
+for action.
+
+
+For a detailed guide on client libraries and API specs, check out our
+documentation:
+https://docs.mistral.ai/ [https://docs.mistral.ai/].
+
+
+
+
+=E2=80=8D
+
+
+
+
+
+
+Complete my subscription
+
+
+[https://console.mistral.ai/billing/]
+
+
+
+
+
+
+
+=E2=80=8D
+
+
+
+
+
+
+
+
+
+Need help?
+
+
+
+
+Check the
+Help Center [https://help.mistral.ai/]
+for answers to your most common questions. You can also reach out to
+the Support team directly from
+La Plateforme [https://console.mistral.ai/].
+
+
+
+
+Thanks,
+The Mistral AI Team
+
+
+
+
+
+
+
+
+=E2=80=8D
+
+
+
+
+
+Mistral AI
+
+
+
+Github [https://github.com/mistralai]
+=E2=80=A2
+X [https://twitter.com/mistralai]
+=E2=80=A2
+Linkedin [https://www.linkedin.com/company/mistralai/]
+=E2=80=A2
+Discord [https://discord.gg/mistralai]
+
+
+
+
+
+
+=
+
+--=-tIu9zr6SYgwO7G0xt4jT
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>
+<html lang=3D"en" xmlns:v=3D"urn:schemas-microsoft-com:vml" style=3D"color-=
+scheme: light dark; supported-color-schemes: light dark;">
+<head>
+  <meta charset=3D"utf-8">
+  <meta name=3D"x-apple-disable-message-reformatting">
+  <meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=3D=
+1">
+  <meta name=3D"format-detection" content=3D"telephone=3Dno, date=3Dno, add=
+ress=3Dno, email=3Dno, url=3Dno">
+  <meta name=3D"color-scheme" content=3D"light dark">
+  <meta name=3D"supported-color-schemes" content=3D"light dark">
+  <!--[if mso]>
+      <noscript>
+        <xml>
+          <o:OfficeDocumentSettings
+            xmlns:o=3D"urn:schemas-microsoft-com:office:office"
+          >
+            <o:PixelsPerInch>96</o:PixelsPerInch>
+          </o:OfficeDocumentSettings>
+        </xml>
+      </noscript>
+      <style>
+        td,
+        th,
+        div,
+        p,
+        a,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+          font-family: "Segoe UI", sans-serif;
+          mso-line-height-rule: exactly;
+        }
+      </style>
+    <![endif]-->
+  <title>Welcome to Mistral AI!</title>
+  <style>
+    @font-face {
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url(https://fonts.gstatic.com/s/inter/v13/UcCO3FwrK3iLTeHuS_fvQt=
+MwCp50KnMw2boKoduKmMEVuLyfAZJhiJ-Ek-_EeAmM.woff2) format('woff2');
+      unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-=
+A69F, U+FE2E-FE2F;
+    }
+    @font-face {
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url(https://fonts.gstatic.com/s/inter/v13/UcCO3FwrK3iLTeHuS_fvQt=
+MwCp50KnMw2boKoduKmMEVuLyfAZthiJ-Ek-_EeAmM.woff2) format('woff2');
+      unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+    }
+    @font-face {
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url(https://fonts.gstatic.com/s/inter/v13/UcCO3FwrK3iLTeHuS_fvQt=
+MwCp50KnMw2boKoduKmMEVuLyfAZNhiJ-Ek-_EeAmM.woff2) format('woff2');
+      unicode-range: U+1F00-1FFF;
+    }
+    @font-face {
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url(https://fonts.gstatic.com/s/inter/v13/UcCO3FwrK3iLTeHuS_fvQt=
+MwCp50KnMw2boKoduKmMEVuLyfAZxhiJ-Ek-_EeAmM.woff2) format('woff2');
+      unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-=
+03A1, U+03A3-03FF;
+    }
+    @font-face {
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url(https://fonts.gstatic.com/s/inter/v13/UcCO3FwrK3iLTeHuS_fvQt=
+MwCp50KnMw2boKoduKmMEVuLyfAZBhiJ-Ek-_EeAmM.woff2) format('woff2');
+      unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+=
+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+03=
+29, U+1EA0-1EF9, U+20AB;
+    }
+    @font-face {
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url(https://fonts.gstatic.com/s/inter/v13/UcCO3FwrK3iLTeHuS_fvQt=
+MwCp50KnMw2boKoduKmMEVuLyfAZFhiJ-Ek-_EeAmM.woff2) format('woff2');
+      unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1E=
+F2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF=
+;
+    }
+    @font-face {
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url(https://fonts.gstatic.com/s/inter/v13/UcCO3FwrK3iLTeHuS_fvQt=
+MwCp50KnMw2boKoduKmMEVuLyfAZ9hiJ-Ek-_EeA.woff2) format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6,=
+ U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+212=
+2, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+    :root {
+      color-scheme: light dark;
+      supported-color-schemes: light dark;
+    }
+    .hover-important-text-decoration-underline:hover {
+      text-decoration: underline !important
+    }
+    @media (max-width: 600px) {
+      .sm-px-4 {
+        padding-left: 16px !important;
+        padding-right: 16px !important
+      }
+      .sm-px-6 {
+        padding-left: 24px !important;
+        padding-right: 24px !important
+      }
+      .sm-leading-8 {
+        line-height: 32px !important
+      }
+    }
+    @media (prefers-color-scheme: dark) {
+      .dark-bg-stone-900 {
+        background-color: #1c1917 !important
+      }
+      .dark-bg-stone-950 {
+        background-color: #0c0a09 !important
+      }
+      .dark-text-stone-200 {
+        color: #e7e5e4 !important
+      }
+      .dark-text-stone-300 {
+        color: #d6d3d1 !important
+      }
+      .dark-text-white {
+        color: #fff !important
+      }
+    }
+  </style>
+</head>
+<body class=3D"dark-bg-stone-950" style=3D"margin: 0; width: 100%; backgrou=
+nd-color: #fafaf9; padding: 0; -webkit-font-smoothing: antialiased; word-br=
+eak: break-word">
+  <div style=3D"display: none">
+    Welcome to Mistral AI La Plateforme!
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847;
+    &#8199;&#65279;&#847; </div>
+  <div role=3D"article" aria-roledescription=3D"email" aria-label=3D"Welcom=
+e to Mistral AI!" lang=3D"en" style=3D"font-family: 'Inter', ui-sans-serif,=
+ system-ui, -apple-system, 'Segoe UI', sans-serif">
+    <div class=3D"sm-px-4" style=3D"padding-top: 48px">
+      <table align=3D"center" class=3D"dark-text-stone-200 dark-bg-stone-90=
+0" style=3D"width: 600px; max-width: 100%; border-radius: 4px; border: 1px =
+solid #e5e7eb; background-color: #fff; padding-bottom: 48px; padding-top: 2=
+4px; font-size: 16px; color: #44403c" cellpadding=3D"0" cellspacing=3D"0" r=
+ole=3D"none">
+        <tr>
+          <td class=3D"sm-px-6" style=3D"padding-left: 48px; padding-right:=
+ 48px">
+            <table style=3D"width: 100%;" cellpadding=3D"0" cellspacing=3D"=
+0" role=3D"none">
+              <tr>
+                <td>
+                  <a href=3D"https://ssiys.mjt.lu/lnk/BAAABr3d6IkAAAAAAAAAA=
+nUMNKwAAYCuBisAAAAAACaaMwBnyqSpRWlvC5b3S4qY552S9YKGUQAj69U/1/2A5UjwSygrYFC6=
+ku_fZe2A/aHR0cHM6Ly9taXN0cmFsLmFp">
+                    <img src=3D"https://mistral.ai/static/img/logo-mistral.=
+png" width=3D"60" alt=3D"Mistral AI Logo" style=3D"max-width: 100%; vertica=
+l-align: middle">
+                  </a>
+                </td>
+                <td style=3D"text-align: right">
+                  <div>
+                    <a href=3D"https://ssiys.mjt.lu/lnk/BAAABr3d6IkAAAAAAAA=
+AAnUMNKwAAYCuBisAAAAAACaaMwBnyqSpRWlvC5b3S4qY552S9YKGUQAj69U/2/9Z4iAUI6vFRU=
+QgvQHnJSRw/aHR0cHM6Ly9jb25zb2xlLm1pc3RyYWwuYWk" class=3D"dark-text-white" s=
+tyle=3D"font-weight: 600; color: #000; text-decoration: none">
+                      La Plateforme
+                    </a>
+                  </div>
+                  <div>
+                    <a href=3D"https://ssiys.mjt.lu/lnk/BAAABr3d6IkAAAAAAAA=
+AAnUMNKwAAYCuBisAAAAAACaaMwBnyqSpRWlvC5b3S4qY552S9YKGUQAj69U/3/B_Nqu-uIOCQK=
+weoxR89djQ/aHR0cHM6Ly9kb2NzLm1pc3RyYWwuYWk" style=3D"font-size: 14px; color=
+: #a8a29e; text-decoration: none">Docs</a>
+                    &bull;
+                    <a href=3D"https://ssiys.mjt.lu/lnk/BAAABr3d6IkAAAAAAAA=
+AAnUMNKwAAYCuBisAAAAAACaaMwBnyqSpRWlvC5b3S4qY552S9YKGUQAj69U/4/Q3V3A1VWoLtG=
+zLm6HL6A5A/aHR0cHM6Ly9kb2NzLm1pc3RyYWwuYWkvYXBp" style=3D"font-size: 14px; =
+color: #a8a29e; text-decoration: none;">API</a>
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr role=3D"separator">
+          <td style=3D"padding-bottom: 24px">
+            <div role=3D"separator" style=3D"background-color: #cbd5e1; hei=
+ght: 1px; line-height: 1px; margin: 24px 0">
+              &zwj;
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class=3D"sm-px-6" style=3D"padding-left: 48px; padding-right:=
+ 48px">
+            <h1 class=3D"dark-text-white" style=3D"margin: 0 0 24px; font-s=
+ize: 20px; font-weight: 600; line-height: 32px; color: #000">
+              Welcome to Mistral AI La Plateforme!
+            </h1>
+            <p style=3D"margin: 0; line-height: 24px">
+              Hello Azfar, <br><br>
+              Welcome to Mistral AI La Plateforme! We're thrilled to have y=
+ou on board.<br><br>
+              Here's how to get started to access our API and best models:<=
+br><br>
+              1. Head over to the Mistral AI console and
+              <a href=3D"https://ssiys.mjt.lu/lnk/BAAABr3d6IkAAAAAAAAAAnUMN=
+KwAAYCuBisAAAAAACaaMwBnyqSpRWlvC5b3S4qY552S9YKGUQAj69U/5/kUmO5XRRYv2oN-VePF=
+054Q/aHR0cHM6Ly9jb25zb2xlLm1pc3RyYWwuYWkvYmlsbGluZy8">complete your subscri=
+ption</a>.<br><br>
+              2. After validation of your payment details, your API keys wi=
+ll be all set
+              for action.<br><br>
+              For a detailed guide on client libraries and API specs, check=
+ out our
+              documentation:
+              <a href=3D"https://ssiys.mjt.lu/lnk/BAAABr3d6IkAAAAAAAAAAnUMN=
+KwAAYCuBisAAAAAACaaMwBnyqSpRWlvC5b3S4qY552S9YKGUQAj69U/6/yWmMHIBMkm9wzk6jAn=
+W5hw/aHR0cHM6Ly9kb2NzLm1pc3RyYWwuYWkv">https://docs.mistral.ai/</a>.
+            </p>
+            <div role=3D"separator" style=3D"line-height: 24px">
+              &zwj;
+            </div>
+            <div>
+              <a href=3D"https://ssiys.mjt.lu/lnk/BAAABr3d6IkAAAAAAAAAAnUMN=
+KwAAYCuBisAAAAAACaaMwBnyqSpRWlvC5b3S4qY552S9YKGUQAj69U/7/yfR9BsnyKmva8Ghyd4=
+52yQ/aHR0cHM6Ly9jb25zb2xlLm1pc3RyYWwuYWkvYmlsbGluZy8" style=3D"display: inl=
+ine-block; border-radius: 4px; padding: 16px 24px; font-size: 16px; line-he=
+ight: 1; font-weight: 600; text-decoration: none; color: #f8fafc; backgroun=
+d-color: #F97316">
+                <!--[if mso]>
+      <i style=3D"mso-font-width: 150%; mso-text-raise: 30px" hidden>&emsp;=
+</i>
+    <![endif]-->
+                <span style=3D"mso-text-raise: 16px">
+    Complete my subscription
+  </span>
+                <!--[if mso]>
+      <i hidden style=3D"mso-font-width: 150%;">&emsp;&#8203;</i>
+    <![endif]-->
+              </a>
+            </div>
+          </td>
+        </tr>
+        <tr role=3D"separator">
+          <td style=3D"padding-top: 24px; padding-bottom: 24px">
+            <div role=3D"separator" style=3D"background-color: #cbd5e1; hei=
+ght: 1px; line-height: 1px; margin: 24px 0;">
+              &zwj;
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class=3D"sm-px-6" style=3D"padding-left: 48px; padding-right:=
+ 48px; font-size: 14px">
+            <h1 class=3D"sm-leading-8 dark-text-white" style=3D"margin: 0 0=
+ 24px; font-size: 18px; font-weight: 500; color: #000">
+              Need help?
+            </h1>
+            <p style=3D"margin: 0; line-height: 24px;">
+              Check the
+              <a href=3D"https://ssiys.mjt.lu/lnk/BAAABr3d6IkAAAAAAAAAAnUMN=
+KwAAYCuBisAAAAAACaaMwBnyqSpRWlvC5b3S4qY552S9YKGUQAj69U/8/PBzdar8PMt9nc8ULuh=
+XaXA/aHR0cHM6Ly9oZWxwLm1pc3RyYWwuYWkv" class=3D"dark-text-stone-200" style=
+=3D"color: #44403c">Help Center</a>
+              for answers to your most common questions. You can also reach=
+ out to
+              the Support team directly from
+              <a href=3D"https://ssiys.mjt.lu/lnk/BAAABr3d6IkAAAAAAAAAAnUMN=
+KwAAYCuBisAAAAAACaaMwBnyqSpRWlvC5b3S4qY552S9YKGUQAj69U/9/lPHPWzeGYJ-qS-KHxj=
+or-A/aHR0cHM6Ly9jb25zb2xlLm1pc3RyYWwuYWkv" class=3D"dark-text-stone-200" st=
+yle=3D"color: #44403c">La Plateforme</a>.
+              <br>
+              <br>
+              Thanks, <br>The Mistral AI Team
+            </p>
+          </td>
+        </tr>
+      </table>
+      <table align=3D"center" style=3D"width: 552px; max-width: 100%" cellp=
+adding=3D"0" cellspacing=3D"0" role=3D"none">
+        <tr role=3D"separator">
+          <td style=3D"line-height: 48px">&zwj;</td>
+        </tr>
+        <tr>
+          <td class=3D"dark-text-stone-300" style=3D"padding-left: 24px; pa=
+dding-right: 24px; text-align: center; font-size: 12px; color: #57534e">
+            <p style=3D"margin: 0 0 16px; font-weight: 600">Mistral AI</p>
+            <p style=3D"cursor: default">
+              <a href=3D"https://ssiys.mjt.lu/lnk/BAAABr3d6IkAAAAAAAAAAnUMN=
+KwAAYCuBisAAAAAACaaMwBnyqSpRWlvC5b3S4qY552S9YKGUQAj69U/10/gWsnLRYVClMeAyMZM=
+D2Z5g/aHR0cHM6Ly9naXRodWIuY29tL21pc3RyYWxhaQ" class=3D"dark-text-stone-200 =
+hover-important-text-decoration-underline" style=3D"color: #44403c; text-de=
+coration: none">Github</a>
+              &bull;
+              <a href=3D"https://ssiys.mjt.lu/lnk/BAAABr3d6IkAAAAAAAAAAnUMN=
+KwAAYCuBisAAAAAACaaMwBnyqSpRWlvC5b3S4qY552S9YKGUQAj69U/11/H-y-Ye0XBYE3V-mx6=
+21q6g/aHR0cHM6Ly90d2l0dGVyLmNvbS9taXN0cmFsYWk" class=3D"dark-text-stone-200=
+ hover-important-text-decoration-underline" style=3D"color: #44403c; text-d=
+ecoration: none">X</a>
+              &bull;
+              <a href=3D"https://ssiys.mjt.lu/lnk/BAAABr3d6IkAAAAAAAAAAnUMN=
+KwAAYCuBisAAAAAACaaMwBnyqSpRWlvC5b3S4qY552S9YKGUQAj69U/12/1n5sWfhE-FnBdaLrG=
+AK1IQ/aHR0cHM6Ly93d3cubGlua2VkaW4uY29tL2NvbXBhbnkvbWlzdHJhbGFpLw" class=3D"=
+dark-text-stone-200 hover-important-text-decoration-underline" style=3D"col=
+or: #44403c; text-decoration: none">Linkedin</a>
+              &bull;
+              <a href=3D"https://ssiys.mjt.lu/lnk/BAAABr3d6IkAAAAAAAAAAnUMN=
+KwAAYCuBisAAAAAACaaMwBnyqSpRWlvC5b3S4qY552S9YKGUQAj69U/13/QD96u1lz6-FWfZv25=
+dl25g/aHR0cHM6Ly9kaXNjb3JkLmdnL21pc3RyYWxhaQ" class=3D"dark-text-stone-200 =
+hover-important-text-decoration-underline" style=3D"color: #44403c; text-de=
+coration: none">Discord</a>
+            </p>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+<br/><a style=3D"font-family: Arial, sans-serif;" href=3D"https://ssiys.mjt=
+.lu/lnk/BAAABr3d6IkAAAAAAAAAAnUMNKwAAYCuBisAAAAAACaaMwBnyqSpRWlvC5b3S4qY552=
+S9YKGUQAj69U/0/n1MoNev_KV2x1xI1-O6Wfw/aHR0cHM6Ly9taXN0cmFsLmFp?b=3D1">&#820=
+3;</a><div style=3D"display: none; height: 0px; width: 0px; overflow: hidde=
+n; visibility: hidden; mso-hide: all"><a href=3D"https://ssiys.mjt.lu/lnk/B=
+AAABr3d6IkAAAAAAAAAAnUMNKwAAYCuBisAAAAAACaaMwBnyqSpRWlvC5b3S4qY552S9YKGUQAj=
+69U/0/n1MoNev_KV2x1xI1-O6Wfw/aHR0cHM6Ly9taXN0cmFsLmFp?b=3D2" target=3D"_bla=
+nk" rel=3D"noreferrer">Click on me</a></div><a href=3D"https://ssiys.mjt.lu=
+/lnk/BAAABr3d6IkAAAAAAAAAAnUMNKwAAYCuBisAAAAAACaaMwBnyqSpRWlvC5b3S4qY552S9Y=
+KGUQAj69U/0/n1MoNev_KV2x1xI1-O6Wfw/aHR0cHM6Ly9taXN0cmFsLmFp?b=3D3">
+<img src=3D"https://ssiys.mjt.lu/oo/BAAABr3d6IkAAAAAAAAAAnUMNKwAAYCuBisAAAA=
+AACaaMwBnyqSpRWlvC5b3S4qY552S9YKGUQAj69U/e80e1826/e.gif" height=3D"1" width=
+=3D"1" alt=3D"" border=3D"0" style=3D"height:1px;width:1px;border:0;"/>
+</a></body>
+</html>=
+
+--=-tIu9zr6SYgwO7G0xt4jT--

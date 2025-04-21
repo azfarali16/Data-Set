@@ -1,0 +1,1842 @@
+X-GM-THRID: 1741283707003759543
+X-Gmail-Labels: Inbox,Category Promotions,Unread
+Delivered-To: azfarali007.aa@gmail.com
+Received: by 2002:a05:6214:762:0:0:0:0 with SMTP id f2csp2929549qvz;
+        Mon, 15 Aug 2022 19:39:09 -0700 (PDT)
+X-Google-Smtp-Source: AA6agR5iHjvN8ccy2Acx9rmRuN07LBjO6IJukA3eRaQHr9+U9kV5pJ6uUPT7O6NDyRJ4RsJrQ82R
+X-Received: by 2002:a05:620a:45a4:b0:6bb:5c02:3d16 with SMTP id bp36-20020a05620a45a400b006bb5c023d16mr1641607qkb.198.1660617549105;
+        Mon, 15 Aug 2022 19:39:09 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1660617549; cv=none;
+        d=google.com; s=arc-20160816;
+        b=eNnbZnVRqCpl9PV2tb6pjKtQXqd6UpHza3Dz1Nkb+I8afCAEx1Vfb8o8cTs/D5fPVY
+         g1rP0fkPHmurXQr7PIEp+lzIH1LLcVbaIRpz6tLdU4m1lDxK+kGBupgM0+PbyMnWngo6
+         U0+gts4JEA7bb7PCjExbCJhZa1rF/M2xMvyWJrXdHzIoLI8YBBMEqQlzivzlQIYotNon
+         fX1m8mgT/F6+jymVZaeqXfzo68tTJ/ZE3SD6XG9zP478k+j5rJIqc2fP6EDnpkD1NCub
+         1PUL4YGpiMLpT3Pby/N9VuTbKrdSUhxfFI4tWN491rxKcjw292NXXn/vVlWwqIXPY61E
+         2tBw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=message-id:date:list-unsubscribe:subject:to:from:mime-version
+         :dkim-signature;
+        bh=GeXva1HZoWBpxi2aqAxbaYJD6ntZJdBbr6nrBhnlRjo=;
+        b=NaLnLGPkg3mfj6ZDGMrkZy1ujCTRYzD0mOoHfe2UGvgfsA2lP1/f6LQr5y/BwE8E5e
+         ylaxLhdGqJAGsT45MhSMrJaOU9mHkjDEpXwgCTxPNJSOIwjzZAuO+VO3tPGccyDBFwIm
+         8VMtuBliEvujpKfpzBfoiAn+wQx10UPMkjfad0D45XTZ9CrA8GJ80Z0lqKDCAZH8Cfsx
+         LwN3eT805tRwgtM/WPjPWEac/7fX3IdFps8nJ36xvY5BETefC5QGV46TVqYMMuchx6/M
+         9Sl+cUpu9NXVifREQXkvnLyhvJU1+EfKYEXz40Iohv797b43YcwSbfFnFbJPB5XFQJlJ
+         fDMw==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@quora.com header.s=pigeon header.b=Uabff3Ni;
+       spf=pass (google.com: domain of noreply@quora.com designates 52.71.63.89 as permitted sender) smtp.mailfrom=noreply@quora.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=quora.com
+Return-Path: <noreply@quora.com>
+Received: from o10.pigeon.quora.com (o10.pigeon.quora.com. [52.71.63.89])
+        by mx.google.com with ESMTPS id r3-20020a0562140c4300b0047472d30fe7si5818222qvj.207.2022.08.15.19.39.08
+        for <azfarali007.aa@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Mon, 15 Aug 2022 19:39:09 -0700 (PDT)
+Received-SPF: pass (google.com: domain of noreply@quora.com designates 52.71.63.89 as permitted sender) client-ip=52.71.63.89;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@quora.com header.s=pigeon header.b=Uabff3Ni;
+       spf=pass (google.com: domain of noreply@quora.com designates 52.71.63.89 as permitted sender) smtp.mailfrom=noreply@quora.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=quora.com
+Received: 
+	by pigeon-at-10046 (OpenSMTPD) with ESMTP id d7f7907b
+	for <azfarali007.aa@gmail.com>;
+	Tue, 16 Aug 2022 02:39:08 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; d=quora.com; h=
+	content-type:mime-version:from:to:subject:list-unsubscribe:date
+	:message-id; s=pigeon; bh=3nqFHNNLlti+atFll3nAa8ZIZsU=; b=Uabff3
+	Ni3CQg84vFBHkjDsvQNtZd5isZQ5wpbshd30anthmL7NdIYoqHv6Jw/Us0GWchm8
+	2gCcp48dS5NS24fMTUhLf+LH9fzCoMibbcWRpgl07xvUSOwd9UR0/8Ekh98Buz/W
+	TBrUJkZgnd/22jsTok7L3viRBlpxorkldLzuGYaxsO9oGamiUAmS1t7c+hIxtrb4
+	yXDywH6a01psEiBhQLvZ6mup08/U9AnrwVnaVSLTBfyJ6WWEZyVbUoK98bEgmCW7
+	oXx07lqV+ogcE31iJAN+HafHP0Ow3NHLzSxo38kggraCzbqfxyDByveL9PRmnfVK
+	wGt+P9ftIoGFHacA==
+Content-Type: multipart/alternative;
+ boundary="===============2916031222064506361=="
+MIME-Version: 1.0
+From: Quora <curiosity-noreply@quora.com>
+To: azfarali007.aa@gmail.com
+Subject: =?utf-8?q?More_related_to_=22Why_does_Payoneer_keep_every_payment_under_revi?=
+ =?utf-8?q?ew_and_ask_for_documents=3F=22?=
+List-Unsubscribe: <https://www.quora.com/email_optout/qemail_unsubscribe?email_track_id=fe2ec86ef7b14dfbaab21c2269fb7837&ish=1&t=1660617544909919&token=f351cca7af3c39f3a566c7508cc40b05b41c361ab42f19dcb7b7efb41a6733e4c3d7d242554d03ac0918c91ad75d742c379073ca7a16e3b129757d7c688885d1&type=130&uid=905486825>
+X-CID: xUR4RjTfVGHQ9ujtUAZEHkECcXHMwNxijy0bsW2yNamsjLQyztRa4RGZZAfr6mK2hVEjdqPznTmqHl3pj5btKbSy6yjo3g6d5fW2XLFLRMs8y_ARDVktWu-1Qyw4mCTZRIsN-kKXMvv4quwlfb_rxtcAAQIA
+Date: Tue, 16 Aug 2022 02:39:08 +0000
+Message-ID: <xUR4RjTfVGHQ9ujtUAZEHkECcXHMwNxijy0bsW2yNamsjLQyztRa4RGZZAfr6mK2hVEjdqPznTmqHl3pj5btKbSy6yjo3g6d5fW2XLFLRMs8y_ARDVktWu-1Qyw4mCTZRIsN-kKXMvv4quwlfb_rxtcAAQIA@t1.msgid.quoramail.com>
+X-SMTPAPI: =?utf-8?q?=7B=22unique=5Fargs=22=3A_=7B=22Message-ID=22=3A_=22=3CxUR4RjTfVGH?=
+ =?utf-8?q?Q9ujtUAZEHkECcXHMwNxijy0bsW2yNamsjLQyztRa4RGZZAfr6mK2hVEjdqPznTmq?=
+ =?utf-8?q?Hl3pj5btKbSy6yjo3g6d5fW2XLFLRMs8y=5FARDVktWu-1Qyw4mCTZRIsN-kKXMvv?=
+ =?utf-8?q?4quwlfb=5FrxtcAAQIA=40t1=2Emsgid=2Equoramail=2Ecom=3E=22=2C_=22ac?=
+ =?utf-8?q?count=22=3A_=22main=22=2C_=22email=5Ftype=22=3A_130=2C_=22ip=5Fpo?=
+ =?utf-8?q?ol=22=3A_=22main=22=2C_=22X-QMSG=22=3A_=22waxwGK02HH-JGL-rKQta55a?=
+ =?utf-8?q?A8HSBziJT-JyC1lGdK=5FAVw1U1LNWzHpWZZQ7FxeR84vLYDY0=5FRWlh-VfQ90wu?=
+ =?utf-8?q?0m73PsrjFkJhQgrIVuYq91jJ568BdKJUkDLCG7gP3ulTJ5h20pJN8vji2WmtIbPJJ?=
+ =?utf-8?q?oP-fwfdjZZneG0fwwrpSScd8ikhp9O0DexVVDuinyuMVYl3TmXFf7eDdTL7yDE=5F?=
+ =?utf-8?q?tT6LZ1H3wx4adYLCe3N5otGV6c-dlwC8dWzsixdGgLgCXA3YcTBJkwD34Gc2-dnFC?=
+ =?utf-8?q?G5H9Ze1tt23nf5NYYHG2UdhBGxx=5Fo0RaSzlb-Xq6s3ESals-xXGYkOyYLteK0m3?=
+ =?utf-8?q?-7LFESxwj5RHPAoPrAOKC8hcCGSdVC0ezl07z5VlFLW9NoLafXMaVB2YE1r3JcSdf?=
+ =?utf-8?q?=5Fz6DCGbttLHdDAXccXalAWc9i1qumZxPb75MTZaufANdaohwbaTziJfil8ehNOH?=
+ =?utf-8?q?3AvYVDfjtPCY0LkTkpE10=5FPMAIuJQyPpdFXyMT=5F27ON9nMHNJohuGyH12nzav?=
+ =?utf-8?q?XymkdqjxDeQVHQ7OyYvVSb905HilxoUo6CZ22pEhwatouc=5FXyoAAQIA=22=7D?=
+ =?utf-8?q?=2C_=22category=22=3A_=5B=22account=5Fmain=22=2C_=22email=5Ftype?=
+ =?utf-8?q?=5F130=22=2C_=22ip=5Fpool=5Fmain=22=5D=2C_=22filters=22=3A_=7B=22?=
+ =?utf-8?q?bypass=5Flist=5Fmanagement=22=3A_=7B=22settings=22=3A_=7B=22enabl?=
+ =?utf-8?q?e=22=3A_1=7D=7D=7D=2C_=22ip=5Fpool=22=3A_=22main=22=7D?=
+X-QMSG: =?utf-8?q?waxwGK02HH-JGL-rKQta55aA8HSBziJT-JyC1lGdK=5FAVw1U1LNWzHpWZZQ7FxeR8?=
+ =?utf-8?q?4vLYDY0=5FRWlh-VfQ90wu0m73PsrjFkJhQgrIVuYq91jJ568BdKJUkDLCG7gP3ul?=
+ =?utf-8?q?TJ5h20pJN8vji2WmtIbPJJoP-fwfdjZZneG0fwwrpSScd8ikhp9O0DexVVDuinyuM?=
+ =?utf-8?q?VYl3TmXFf7eDdTL7yDE=5FtT6LZ1H3wx4adYLCe3N5otGV6c-dlwC8dWzsixdGgLg?=
+ =?utf-8?q?CXA3YcTBJkwD34Gc2-dnFCG5H9Ze1tt23nf5NYYHG2UdhBGxx=5Fo0RaSzlb-Xq6s?=
+ =?utf-8?q?3ESals-xXGYkOyYLteK0m3-7LFESxwj5RHPAoPrAOKC8hcCGSdVC0ezl07z5VlFLW?=
+ =?utf-8?q?9NoLafXMaVB2YE1r3JcSdf=5Fz6DCGbttLHdDAXccXalAWc9i1qumZxPb75MTZauf?=
+ =?utf-8?q?ANdaohwbaTziJfil8ehNOH3AvYVDfjtPCY0LkTkpE10=5FPMAIuJQyPpdFXyMT=5F?=
+ =?utf-8?q?27ON9nMHNJohuGyH12nzavXymkdqjxDeQVHQ7OyYvVSb905HilxoUo6CZ22pEhwat?=
+ =?utf-8?q?ouc=5FXyoAAQIA?=
+
+--===============2916031222064506361==
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: quoted-printable
+
+Stories from your activity
+
+-----
+
+
+Question: How long will it take for the pending payment to appear in my bal=
+ance in Payoneer? My AdSense earning has been pending for a week.
+
+Answer from Lazar Jari=C4=87
+
+As a freelancer, I=E2=80=99ve been using Payoneer services for several year=
+s now, so this is what I=E2=80=99ve learned:
+
+ * if the transfer happened from account to an account within their ne
+Read More: https://www.quora.com/How-long-will-it-take-for-the-pending-paym=
+ent-to-appear-in-my-balance-in-Payoneer-My-AdSense-earning-has-been-pending=
+-for-a-week/answer/Lazar-Jari=C4=87
+-----
+Question: How much time does it take for Payoneer to review a payment and s=
+end it to me after I send them all the needed documents?
+
+Answer from Payoneer
+
+Hi there
+
+Generally speaking, it takes 3=E2=80=935 business days for verification of =
+documents to be complete but it can be delayed if the wrong or insufficient=
+ documents are provided
+Read More: https://www.quora.com/How-much-time-does-it-take-for-Payoneer-to=
+-review-a-payment-and-send-it-to-me-after-I-send-them-all-the-needed-docume=
+nts/answer/Payoneer
+-----
+Question: Why my payment is in pending in Payoneer?
+
+Answer from Sadaf Shoukat
+
+there must be some pending verification in your account. if every thing is =
+clear then it takes maximum 24 hrs to transfer your money.
+
+if your account is verified and still fa
+Read More: https://www.quora.com/Why-my-payment-is-in-pending-in-Payoneer/a=
+nswer/Sadaf-Shoukat-1
+-----
+Question: Why is Payoneer keep my payments (from authentic freelancing webs=
+ite) under review since 14 days? Customer support has given no/zero respons=
+e to my repeated requests.
+
+Answer from Daniel Matthews
+
+Freelance websites can be unreliable sometimes and that includes their escr=
+ow periods. It is probably a unique situation to Payoneer
+Read More: https://www.quora.com/Why-is-Payoneer-keep-my-payments-from-auth=
+entic-freelancing-website-under-review-since-14-days-Customer-support-has-g=
+iven-no-zero-response-to-my-repeated-requests/answer/Daniel-Matthews-215
+-----
+Question: How long does Payoneer take to verify an account?
+
+Answer from Sahil Ahmad
+
+It usually takes up to 30 to 60 days however in the meantime they do not mi=
+nd collecting the money you are being paid.
+
+Yes. It=E2=80=99s possible to receive payment from different ma
+Read More: https://www.quora.com/How-long-does-Payoneer-take-to-verify-an-a=
+ccount/answer/Sahil-Ahmad-230
+-----
+Question: Is it possible to receive payment via an unverified Payoneer acco=
+unt?
+
+Answer from Ubong Koffi
+
+Of course, The only thing you have to do to be safe is to receive Monies fr=
+om recognized sources with it, for example, Fiverr, Upwork, Click Bank, JvZ=
+oo, Rakuten, and other tr
+Read More: https://www.quora.com/Is-it-possible-to-receive-payment-via-an-u=
+nverified-Payoneer-account/answer/Ubong-Koffi-7
+-----
+Question: What is the time for pending payment approval on Payoneer, my acc=
+ount is approved and I have done many transactions through Payoneer, but th=
+is time it's in pending stage. its going to be 2 days. what should I do?
+
+Answer from Adam Gilo
+
+Every payment is subject to review prior to approval. When an extended revi=
+ew is being conducted, additional information will be requested prior to th=
+e payment being approved=20
+Read More: https://www.quora.com/What-is-the-time-for-pending-payment-appro=
+val-on-Payoneer-my-account-is-approved-and-I-have-done-many-transactions-th=
+rough-Payoneer-but-this-time-its-in-pending-stage-its-going-to-be-2-days-wh=
+at-should-I-do/answer/Adam-Gilo
+-----
+Question: How long does a Payoneer application reviewed before being approv=
+ed?
+
+Answer from Heron Jain
+
+Mine took exactly 17 days.
+
+It takes less than 17 days, I delayed the process myself.
+
+keep waiting or you can contact them.
+
+They're friendly.
+Read More: https://www.quora.com/How-long-does-a-Payoneer-application-revie=
+wed-before-being-approved/answer/Heron-Jain
+-----
+Question: Recently, I have created Payoneer account for Fiverr. I uploaded =
+necessary documents for verifying the Payoneer account and is on under revi=
+ew. Can I withdraw from Fiverr?
+
+Answer from Tauseef Abbas
+
+=E2=84=96. No. Until your account isn't confirmed and active, you can't wit=
+hdraw money to that account.
+Read More: https://www.quora.com/Recently-I-have-created-Payoneer-account-f=
+or-Fiverr-I-uploaded-necessary-documents-for-verifying-the-Payoneer-account=
+-and-is-on-under-review-Can-I-withdraw-from-Fiverr/answer/Tauseef-Abbas-1
+-----
+Question: Is Payoneer stealing people=E2=80=99s money now?
+
+Answer from Mulonda Singongi
+
+I have used Payoneer for something like five years.
+
+I have never ever experienced a problem of my money going missing or unacco=
+unted for.
+
+First thing to note with Payoneer o
+Read More: https://www.quora.com/Is-Payoneer-stealing-people-s-money-now/an=
+swer/Mulonda-Singongi-1
+-----
+
+-----
+To control which emails we send you, visit: https://www.quora.com/qemail/tr=
+ack_click?aoid&aoty=3D14&aty=3D4&cp=3D0&ct=3D1660617544880003&et=3D130&id=
+=3Dfe2ec86ef7b14dfbaab21c2269fb7837&source&src=3D1&st=3D1660617544904913&st=
+ories=3D1_LFq1TpSdcDH%7C1_z8IXKjclfCd%7C1_9o2fZnEtKLr%7C1_jPNDLSjTssj%7C1_F=
+1ycInnHg68%7C1_YXZdyZxi6FB%7C1_yWYYJnJsU%7C1_Mol1dLDbXcY%7C1_q5MhVWCzfQ8%7C=
+1_VlbooeWEwuF&ty&ty_data&uid=3Dm36BZ4XFnST&v=3D0
+
+To unsubscribe from this type of email, visit: https://www.quora.com/email_=
+optout/qemail_unsubscribe?email_track_id=3Dfe2ec86ef7b14dfbaab21c2269fb7837=
+&t=3D1660617545298377&token=3D7f39d088c291a107b015ba28e8077408e938cacb2832e=
+e0861cb2c4160e2200f35d305469edefd31a4201edd8d0a06ebac260d6f2c227b0e06285bf7=
+d57fdc0c&type=3D130&uid=3D905486825
+--===============2916031222064506361==
+Content-Type: text/html; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>
+<html>
+<head>
+<style type=3D"text/css">@media screen and (max-width: 480px) {
+    .background_inner {
+        padding: 0;
+        background: #fff
+        }
+    .container {
+        padding: 0 8px 16px
+        }
+    .footer_container {
+        border-top: 1px solid #e2e2e2
+        }
+    .AnnualThankYouEmail .background_inner {
+        padding: 10px 0
+        }
+    .polish_background_inner {
+        padding: 10px 0
+        }
+    .polish_header_logo img.header_logo_img {
+        width: 118px;
+        height: 40px
+        }
+    .polish_header_title {
+        font-size: 16px;
+        padding-top: 0;
+        padding-bottom: 5px
+        }
+    .polish_question_text {
+        line-height: 1.3
+        }
+    .polish_story .voters_list, .polish_story .user_link {
+        line-height: 1.5
+        }
+    .polish_story .truncated_q_text, .polish_story .qtext_para {
+        line-height: 1.5
+        }
+    .polish_story .content_header {
+        padding: 6px 0
+        }
+    .EndOfYearLookbackEmail .stat_large {
+        font-size: 28px
+        }
+    .EndOfYearLookbackEmail .content_text {
+        text-align: center
+        }
+    .EndOfYearLookbackEmail .half_column {
+        width: 100%
+        }
+    .EndOfYearLookbackEmail .img_wrapper {
+        margin: 10px auto
+        }
+    .TopicDigestEmail .topic_digest_header_logo img.polish_header_logo_img {
+        width: 89px;
+        height: 30px
+        }
+    .TopicDigestEmail .topic_digest_header_title {
+        font-size: 16px;
+        padding-top: 0;
+        padding-bottom: 5px
+        }
+    .WriteDigestEmail .question_text .rendered_qtext {
+        font-size: 16px
+        }
+    .email_app_link-content {
+        display: block;
+        text-align: center
+        }
+    .email_app_link-text, .email_app_link-badges_wrapper {
+        display: block
+        }
+    .email_app_link-text {
+        padding-bottom: 0;
+        box-sizing: border-box
+        }
+    .email_app_link-badges_wrapper {
+        padding-left: 10px
+        }
+    }
+@media screen and (max-width: 600px) {
+    .DigestEmail .mobile_image.digest_ad {
+        display: table;
+        width: 92vw
+        }
+    .DigestEmail .desktop_image.digest_ad {
+        display: none
+        }
+    }</style>
+<style type=3D"text/css">h1 a:active {color:red}
+h2 a:active {color:red}
+h3 a:active {color:red}
+h4 a:active {color:red}
+h5 a:active {color:red}
+h6 a:active {color:red}
+h1 a:visited {color:purple}
+h2 a:visited {color:purple}
+h3 a:visited {color:purple}
+h4 a:visited {color:purple}
+h5 a:visited {color:purple}
+h6 a:visited {color:purple}
+.banner_wrapper .banner_link:hover {text-decoration:underline}
+.polish_button_wrapper .polish_action_button:hover {opacity:0.8}
+@media (max-width: 812px) {
+    .ad_email_background .ad_table {
+        margin: 0
+        }
+    }
+.banner_wrapper .banner_link:hover {text-decoration:underline}
+.polish_button_wrapper .polish_action_button:hover {opacity:0.8}
+@media (max-width: 812px) {
+    .ad_email_background .ad_table {
+        margin: 0
+        }
+    }</style>
+</head>
+<body class=3D"email_body" style=3D"-ms-text-size-adjust:100%; -webkit-text=
+-size-adjust:100%; margin:0; padding:0; width:100%" width=3D"100%"><div cla=
+ss=3D"q_ltr u-ltr lang_en" dir=3D"ltr" lang=3D"en"><table class=3D"SearchEn=
+gagementEmail Email EmailComponent background" cellpadding=3D"0" border=3D"=
+0" style=3D'border-collapse:collapse; mso-table-lspace:0; mso-table-rspace:=
+0; background:#eee; font-family:-apple-system, BlinkMacSystemFont, "Segoe U=
+I", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif; f=
+ont-size:13px; height:100%; text-align:left; width:100%' height=3D"100%" al=
+ign=3D"left" width=3D"100%"><tbody><tr><td class=3D"polish_background_inner=
+" align=3D"center" valign=3D"top" style=3D"border-collapse:collapse; backgr=
+ound:#fff; padding:0"><table cellpadding=3D"0" cellspacing=3D"0" border=3D"=
+0" style=3D"border-collapse:collapse; mso-table-lspace:0; mso-table-rspace:=
+0"><tbody>
+<tr><td class=3D"container" align=3D"left" style=3D"border-collapse:collaps=
+e; background:#fff; border-radius:3px; height:100%; padding:32px; width:525=
+px" height=3D"100%" width=3D"525"><table class=3D"polish_container_inner" s=
+tyle=3D"border-collapse:collapse; mso-table-lspace:0; mso-table-rspace:0; b=
+order:0; cellpadding:0; cellspacing:0; width:100%" width=3D"100%"><tbody>
+<tr><td class=3D"polish_header" style=3D"border-collapse:collapse">
+<span style=3D"display:none;font-size:1px;color:white;line-height:1px;max-h=
+eight
+        :0px;max-width:0px;opacity:0;overflow:hidden;">Answer: As a freelan=
+cer, I=E2=80=99ve been using Payoneer services for several years n.=E2=80=
+=8B.=E2=80=8B.=E2=80=8B</span><table cellpadding=3D"0" cellspacing=3D"0" bo=
+rder=3D"0" width=3D"100%" style=3D"border-collapse:collapse; mso-table-lspa=
+ce:0; mso-table-rspace:0"><tbody>
+<tr><td class=3D"polish_header_logo" style=3D"border-collapse:collapse; tex=
+t-align:center" align=3D"center"><a href=3D"https://www.quora.com/qemail/tr=
+ack_click?aoid&amp;aoty=3D7&amp;aty=3D4&amp;cp=3D0&amp;ct=3D166061754488000=
+3&amp;et=3D130&amp;id=3Dfe2ec86ef7b14dfbaab21c2269fb7837&amp;source&amp;src=
+=3D1&amp;st=3D1660617544904913&amp;stories=3D1_LFq1TpSdcDH%7C1_z8IXKjclfCd%=
+7C1_9o2fZnEtKLr%7C1_jPNDLSjTssj%7C1_F1ycInnHg68%7C1_YXZdyZxi6FB%7C1_yWYYJnJ=
+sU%7C1_Mol1dLDbXcY%7C1_q5MhVWCzfQ8%7C1_VlbooeWEwuF&amp;ty&amp;ty_data&amp;u=
+id=3Dm36BZ4XFnST&amp;v=3D0" style=3D"color:#2b6dad; text-decoration:none"><=
+img class=3D"header_logo_img" src=3D"https://qsf.fs.quoracdn.net/-4-images.=
+logo.WordmarkLogo_592x200_4x.png-26-b469cd653dba282b.png" alt=3D"Quora" sty=
+le=3D"-ms-interpolation-mode:bicubic; outline:0; text-decoration:none; bord=
+er:0; height:50px; width:148px" height=3D"50" width=3D"148"><img class=3D"t=
+racking_img" style=3D"-ms-interpolation-mode:bicubic; outline:0; text-decor=
+ation:none; border:0; display:none" width=3D"1" height=3D"1" src=3D"https:/=
+/www.quora.com/qemail/mark_read?ct=3D1660617544880003&amp;et=3D130&amp;id=
+=3Dfe2ec86ef7b14dfbaab21c2269fb7837&amp;src=3D1&amp;st=3D1660617544904913&a=
+mp;stories=3D1_LFq1TpSdcDH%7C1_z8IXKjclfCd%7C1_9o2fZnEtKLr%7C1_jPNDLSjTssj%=
+7C1_F1ycInnHg68%7C1_YXZdyZxi6FB%7C1_yWYYJnJsU%7C1_Mol1dLDbXcY%7C1_q5MhVWCzf=
+Q8%7C1_VlbooeWEwuF&amp;uid=3Dm36BZ4XFnST&amp;v=3D0"></a></td></tr>
+<tr><td class=3D"polish_header_title" style=3D'border-collapse:collapse; te=
+xt-align:center; color:#333; font-family:-apple-system, BlinkMacSystemFont,=
+ "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans=
+-serif; font-size:19px; font-weight:400; padding-bottom:20px' align=3D"cent=
+er">Stories from your activity</td></tr>
+<tr><td style=3D"border-collapse:collapse"><table class=3D"polish_header_wr=
+apper" style=3D"border-collapse:collapse; mso-table-lspace:0; mso-table-rsp=
+ace:0; border:0; cellpadding:0; margin-bottom:20px; width:100%" width=3D"10=
+0%"><tbody><tr>
+<td style=3D"border-collapse:collapse"></td>
+<td class=3D"polish_header_line" style=3D"border-collapse:collapse; border-=
+bottom:1px solid #b92b27; height:1px; width:198px" height=3D"1" width=3D"19=
+8"></td>
+<td style=3D"border-collapse:collapse"></td>
+</tr></tbody></table></td></tr>
+</tbody></table>
+</td></tr>
+<tr class=3D"body_container" id=3D"simple-content-row"><td class=3D"body_co=
+ntent" bgcolor=3D"#ffffff" style=3D"border-collapse:collapse"><table style=
+=3D"border-collapse:collapse; mso-table-lspace:0; mso-table-rspace:0; width=
+:100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%"><tbo=
+dy><tr>
+<td style=3D"border-collapse:collapse"><table style=3D"border-collapse:coll=
+apse; mso-table-lspace:0; mso-table-rspace:0; width:100%" cellpadding=3D"0"=
+ cellspacing=3D"0" border=3D"0" width=3D"100%"><tbody><tr><td style=3D"bord=
+er-collapse:collapse">
+<div class=3D"no_para_breaks"><div data-clog-trigger=3D"impression" data-cl=
+og-metadata=3D'{"action_log_target": {"type": 33, "hash": "0|1|1|97832390"}=
+}' data-clog-event-type=3D"ActionLogImpression" id=3D"__w2_wneHM9HE22_actio=
+nable"><table class=3D"story_wrapper" cellspacing=3D"0" border=3D"0" style=
+=3D"border-collapse:collapse; mso-table-lspace:0; mso-table-rspace:0; width=
+:100%" width=3D"100%"><tbody><tr><td class=3D"story  first_story" style=3D"=
+border-collapse:collapse; border-bottom:0; padding:20px 0; padding-top:15px=
+"><table class=3D"digest_story_wrapper" cellpadding=3D"0" cellspacing=3D"0"=
+ border=3D"0" style=3D"border-collapse:collapse; mso-table-lspace:0; mso-ta=
+ble-rspace:0; width:100%" width=3D"100%"><tbody>
+<tr><td class=3D"reason" style=3D"border-collapse:collapse; padding-bottom:=
+4px"><table class=3D"digest_reason" cellpadding=3D"0" cellspacing=3D"0" bor=
+der=3D"0" style=3D"border-collapse:collapse; mso-table-lspace:0; mso-table-=
+rspace:0"><tbody><tr><td valign=3D"top" style=3D"border-collapse:collapse">=
+</td></tr></tbody></table></td></tr>
+<tr><td style=3D"border-collapse:collapse"><a class=3D"question_text" href=
+=3D"https://www.quora.com/qemail/track_click?al_imp=3DeyJ0eXBlIjogMzMsICJoY=
+XNoIjogIjB8MXwxfDk3ODMyMzkwIn0%3D&amp;al_pri=3D1&amp;aoid=3DmXD60ySHali&amp=
+;aoty=3D2&amp;aty=3D4&amp;cp=3D1&amp;ct=3D1660617544880003&amp;et=3D130&amp=
+;id=3Dfe2ec86ef7b14dfbaab21c2269fb7837&amp;source=3D7&amp;src=3D1&amp;st=3D=
+1660617544904913&amp;stories=3D1_LFq1TpSdcDH%7C1_z8IXKjclfCd%7C1_9o2fZnEtKL=
+r%7C1_jPNDLSjTssj%7C1_F1ycInnHg68%7C1_YXZdyZxi6FB%7C1_yWYYJnJsU%7C1_Mol1dLD=
+bXcY%7C1_q5MhVWCzfQ8%7C1_VlbooeWEwuF&amp;ty=3D1&amp;ty_data=3DLFq1TpSdcDH&a=
+mp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"color:#333; text-decoration:none; =
+display:block; font-size:19px; font-weight:bold; letter-spacing:-0.5px; lin=
+e-height:1.4"><span class=3D"rendered_qtext" style=3D"word-break:break-word=
+">How long will it take for the pending payment to appear in my balance in =
+Payoneer? My AdSense earning has been pending for a week.</span></a></td></=
+tr>
+<tr><td style=3D"border-collapse:collapse"><table class=3D"item_content_wra=
+pper" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"border-coll=
+apse:collapse; mso-table-lspace:0; mso-table-rspace:0; width:100%" width=3D=
+"100%"><tbody>
+<tr><td class=3D"content_header metadata" style=3D"border-collapse:collapse=
+; padding:8px 0"><table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" st=
+yle=3D"border-collapse:collapse; mso-table-lspace:0; mso-table-rspace:0"><t=
+body><tr>
+<td class=3D"content_header_photo" style=3D"border-collapse:collapse; verti=
+cal-align:top" valign=3D"top"><a href=3D"https://www.quora.com/qemail/track=
+_click?aoid=3DVK6TDJBURtd&amp;aoty=3D3&amp;aty=3D4&amp;cp=3D1&amp;ct=3D1660=
+617544880003&amp;et=3D130&amp;id=3Dfe2ec86ef7b14dfbaab21c2269fb7837&amp;sou=
+rce=3D7&amp;src=3D1&amp;st=3D1660617544904913&amp;stories=3D1_LFq1TpSdcDH%7=
+C1_z8IXKjclfCd%7C1_9o2fZnEtKLr%7C1_jPNDLSjTssj%7C1_F1ycInnHg68%7C1_YXZdyZxi=
+6FB%7C1_yWYYJnJsU%7C1_Mol1dLDbXcY%7C1_q5MhVWCzfQ8%7C1_VlbooeWEwuF&amp;ty=3D=
+1&amp;ty_data=3DLFq1TpSdcDH&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"color=
+:#2b6dad; text-decoration:none"><div id=3D"wneHM9HE84">
+<div class=3D"hover_menu hidden white_bg show_nub" id=3D"__w2_wneHM9HE85_me=
+nu"><div class=3D"hover_menu_contents" id=3D"__w2_wneHM9HE85_menu_contents"=
+> </div></div>
+<span class=3D"photo_tooltip IdentityPhoto Photo HoverMenu" id=3D"__w2_wneH=
+M9HE85_link"><img class=3D"profile_photo_img" src=3D"https://qph.fs.quoracd=
+n.net/main-thumb-229628408-50-mynitwlguxihxrfuemrikfojboaumhee.jpeg" alt=3D=
+"Lazar Jari=C4=87" style=3D"-ms-interpolation-mode:bicubic; outline:0; text=
+-decoration:none; border:0; border-radius:100px; display:block; height:40px=
+; width:40px; border-style:none" height=3D"40" width=3D"40"></span>
+</div></a></td>
+<td class=3D"content_header_text" style=3D"border-collapse:collapse; paddin=
+g-left:8px; color:#333"><table cellpadding=3D"0" cellspacing=3D"0" border=
+=3D"0" style=3D"border-collapse:collapse; mso-table-lspace:0; mso-table-rsp=
+ace:0"><tbody>
+<tr><td style=3D"border-collapse:collapse">
+<a class=3D"user_link" href=3D"https://www.quora.com/qemail/track_click?aoi=
+d=3DVK6TDJBURtd&amp;aoty=3D3&amp;aty=3D4&amp;cp=3D1&amp;ct=3D16606175448800=
+03&amp;et=3D130&amp;id=3Dfe2ec86ef7b14dfbaab21c2269fb7837&amp;source=3D7&am=
+p;src=3D1&amp;st=3D1660617544904913&amp;stories=3D1_LFq1TpSdcDH%7C1_z8IXKjc=
+lfCd%7C1_9o2fZnEtKLr%7C1_jPNDLSjTssj%7C1_F1ycInnHg68%7C1_YXZdyZxi6FB%7C1_yW=
+YYJnJsU%7C1_Mol1dLDbXcY%7C1_q5MhVWCzfQ8%7C1_VlbooeWEwuF&amp;ty=3D1&amp;ty_d=
+ata=3DLFq1TpSdcDH&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"color:#333; tex=
+t-decoration:none; font-weight:bold; line-height:1.4; font-size:15px">Lazar=
+ Jari=C4=87</a><span style=3D"font-size:15px; line-height:1.4">, Cryptocurr=
+ency Analysist / Enthusiast</span>
+</td></tr>
+<tr><td class=3D"answer_details" style=3D"border-collapse:collapse; color:#=
+999; font-size:13px"><a href=3D"https://www.quora.com/qemail/track_click?ao=
+id=3DLFq1TpSdcDH&amp;aoty=3D1&amp;aty=3D4&amp;cp=3D1&amp;ct=3D1660617544880=
+003&amp;et=3D130&amp;id=3Dfe2ec86ef7b14dfbaab21c2269fb7837&amp;source=3D7&a=
+mp;src=3D1&amp;st=3D1660617544904913&amp;stories=3D1_LFq1TpSdcDH%7C1_z8IXKj=
+clfCd%7C1_9o2fZnEtKLr%7C1_jPNDLSjTssj%7C1_F1ycInnHg68%7C1_YXZdyZxi6FB%7C1_y=
+WYYJnJsU%7C1_Mol1dLDbXcY%7C1_q5MhVWCzfQ8%7C1_VlbooeWEwuF&amp;ty=3D1&amp;ty_=
+data=3DLFq1TpSdcDH&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"color:#999; te=
+xt-decoration:none">Written Sep 2, 2018</a></td></tr>
+</tbody></table></td>
+</tr></tbody></table></td></tr>
+<tr><td class=3D"item_content" style=3D'border-collapse:collapse; color:#33=
+3; display:block; font-family:-apple-system, BlinkMacSystemFont, "Segoe UI"=
+, Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif; fon=
+t-size:15px; line-height:1.4'><a href=3D"https://www.quora.com/qemail/track=
+_click?al_imp=3DeyJ0eXBlIjogMzMsICJoYXNoIjogIjB8MXwxfDk3ODMyMzkwIn0%3D&amp;=
+al_pri=3D0&amp;aoid=3DLFq1TpSdcDH&amp;aoty=3D1&amp;aty=3D4&amp;cp=3D1&amp;c=
+t=3D1660617544880003&amp;et=3D130&amp;id=3Dfe2ec86ef7b14dfbaab21c2269fb7837=
+&amp;source=3D7&amp;src=3D1&amp;st=3D1660617544904913&amp;stories=3D1_LFq1T=
+pSdcDH%7C1_z8IXKjclfCd%7C1_9o2fZnEtKLr%7C1_jPNDLSjTssj%7C1_F1ycInnHg68%7C1_=
+YXZdyZxi6FB%7C1_yWYYJnJsU%7C1_Mol1dLDbXcY%7C1_q5MhVWCzfQ8%7C1_VlbooeWEwuF&a=
+mp;ty=3D1&amp;ty_data=3DLFq1TpSdcDH&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=
+=3D"color:#333; text-decoration:none"><div id=3D"wneHM9HE62"><div class=3D"=
+truncated_q_text truncated_para_breaks TruncatedAnswerForEmail TruncatedAns=
+wer TruncatedQText TruncatedAnswerForDigestEmail" id=3D"__w2_wneHM9HE63_tru=
+ncated" style=3D"line-height:1.6">
+<span class=3D"rendered_qtext" style=3D"word-break:break-word"><p class=3D"=
+qtext_para u-ltr u-text-align--start" style=3D"margin:1em 0; line-height:1.=
+6">As a freelancer, I=E2=80=99ve been using Payoneer services for several y=
+ears now, so this is what I=E2=80=99ve learned:</p>
+<ul><li>if the transfer happened from account to an account within their ne=
+tw...</li></ul></span> <a class=3D"read_more_blue" href=3D"https://www.quor=
+a.com/qemail/track_click?al_imp=3DeyJ0eXBlIjogMzMsICJoYXNoIjogIjB8MXwxfDk3O=
+DMyMzkwIn0%3D&amp;al_pri=3D8&amp;aoid=3DLFq1TpSdcDH&amp;aoty=3D1&amp;aty=3D=
+4&amp;cp=3D1&amp;ct=3D1660617544880003&amp;et=3D130&amp;id=3Dfe2ec86ef7b14d=
+fbaab21c2269fb7837&amp;source=3D7&amp;src=3D1&amp;st=3D1660617544904913&amp=
+;stories=3D1_LFq1TpSdcDH%7C1_z8IXKjclfCd%7C1_9o2fZnEtKLr%7C1_jPNDLSjTssj%7C=
+1_F1ycInnHg68%7C1_YXZdyZxi6FB%7C1_yWYYJnJsU%7C1_Mol1dLDbXcY%7C1_q5MhVWCzfQ8=
+%7C1_VlbooeWEwuF&amp;ty=3D1&amp;ty_data=3DLFq1TpSdcDH&amp;uid=3Dm36BZ4XFnST=
+&amp;v=3D0" style=3D"color:#168de9; text-decoration:none">Read More =C2=BB<=
+/a>
+</div></div>
+<div class=3D"non_quora_share_embed_wrapper"><div class=3D"item_metadata"><=
+a href=3D"https://www.quora.com/qemail/track_click?al_imp=3DeyJ0eXBlIjogMzM=
+sICJoYXNoIjogIjB8MXwxfDk3ODMyMzkwIn0%3D&amp;al_pri=3D0&amp;aoid=3DLFq1TpSdc=
+DH&amp;aoty=3D1&amp;aty=3D4&amp;cp=3D1&amp;ct=3D1660617544880003&amp;et=3D1=
+30&amp;id=3Dfe2ec86ef7b14dfbaab21c2269fb7837&amp;source=3D7&amp;src=3D1&amp=
+;st=3D1660617544904913&amp;stories=3D1_LFq1TpSdcDH%7C1_z8IXKjclfCd%7C1_9o2f=
+ZnEtKLr%7C1_jPNDLSjTssj%7C1_F1ycInnHg68%7C1_YXZdyZxi6FB%7C1_yWYYJnJsU%7C1_M=
+ol1dLDbXcY%7C1_q5MhVWCzfQ8%7C1_VlbooeWEwuF&amp;ty=3D1&amp;ty_data=3DLFq1TpS=
+dcDH&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"color:#2b6dad; text-decorati=
+on:none"></a></div></div></a></td></tr>
+</tbody></table></td></tr>
+</tbody></table></td></tr></tbody></table></div></div>
+<div class=3D"no_para_breaks"><div data-clog-trigger=3D"impression" data-cl=
+og-metadata=3D'{"action_log_target": {"type": 33, "hash": "0|2|1|176965693"=
+}}' data-clog-event-type=3D"ActionLogImpression" id=3D"__w2_wneHM9HE23_acti=
+onable">
+<table class=3D"polish_separator_wrapper" style=3D"border-collapse:collapse=
+; mso-table-lspace:0; mso-table-rspace:0; border:0; cellpadding:0; width:10=
+0%" width=3D"100%"><tbody><tr>
+<td style=3D"border-collapse:collapse"></td>
+<td class=3D"polish_separator" style=3D"border-collapse:collapse; border-bo=
+ttom:1px solid #eee; height:1px; width:140px" height=3D"1" width=3D"140"></=
+td>
+<td style=3D"border-collapse:collapse"></td>
+</tr></tbody></table>
+<table class=3D"story_wrapper" cellspacing=3D"0" border=3D"0" style=3D"bord=
+er-collapse:collapse; mso-table-lspace:0; mso-table-rspace:0; width:100%" w=
+idth=3D"100%"><tbody><tr><td class=3D"story " style=3D"border-collapse:coll=
+apse; border-bottom:0; padding:20px 0"><table class=3D"digest_story_wrapper=
+" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"border-collapse=
+:collapse; mso-table-lspace:0; mso-table-rspace:0; width:100%" width=3D"100=
+%"><tbody>
+<tr><td class=3D"reason" style=3D"border-collapse:collapse; padding-bottom:=
+4px"><table class=3D"digest_reason" cellpadding=3D"0" cellspacing=3D"0" bor=
+der=3D"0" style=3D"border-collapse:collapse; mso-table-lspace:0; mso-table-=
+rspace:0"><tbody><tr><td valign=3D"top" style=3D"border-collapse:collapse">=
+</td></tr></tbody></table></td></tr>
+<tr><td style=3D"border-collapse:collapse"><a class=3D"question_text" href=
+=3D"https://www.quora.com/qemail/track_click?al_imp=3DeyJ0eXBlIjogMzMsICJoY=
+XNoIjogIjB8MnwxfDE3Njk2NTY5MyJ9&amp;al_pri=3D1&amp;aoid=3Dms1fAxxYAo7&amp;a=
+oty=3D2&amp;aty=3D4&amp;cp=3D2&amp;ct=3D1660617544880003&amp;et=3D130&amp;i=
+d=3Dfe2ec86ef7b14dfbaab21c2269fb7837&amp;source=3D7&amp;src=3D1&amp;st=3D16=
+60617544904913&amp;stories=3D1_LFq1TpSdcDH%7C1_z8IXKjclfCd%7C1_9o2fZnEtKLr%=
+7C1_jPNDLSjTssj%7C1_F1ycInnHg68%7C1_YXZdyZxi6FB%7C1_yWYYJnJsU%7C1_Mol1dLDbX=
+cY%7C1_q5MhVWCzfQ8%7C1_VlbooeWEwuF&amp;ty=3D1&amp;ty_data=3Dz8IXKjclfCd&amp=
+;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"color:#333; text-decoration:none; di=
+splay:block; font-size:19px; font-weight:bold; letter-spacing:-0.5px; line-=
+height:1.4"><span class=3D"rendered_qtext" style=3D"word-break:break-word">=
+How much time does it take for Payoneer to review a payment and send it to =
+me after I send them all the needed documents?</span></a></td></tr>
+<tr><td style=3D"border-collapse:collapse"><table class=3D"item_content_wra=
+pper" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"border-coll=
+apse:collapse; mso-table-lspace:0; mso-table-rspace:0; width:100%" width=3D=
+"100%"><tbody>
+<tr><td class=3D"content_header metadata" style=3D"border-collapse:collapse=
+; padding:8px 0"><table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" st=
+yle=3D"border-collapse:collapse; mso-table-lspace:0; mso-table-rspace:0"><t=
+body><tr>
+<td class=3D"content_header_photo" style=3D"border-collapse:collapse; verti=
+cal-align:top" valign=3D"top"><a href=3D"https://www.quora.com/qemail/track=
+_click?aoid=3D4SZEiTQSjDa&amp;aoty=3D3&amp;aty=3D4&amp;cp=3D2&amp;ct=3D1660=
+617544880003&amp;et=3D130&amp;id=3Dfe2ec86ef7b14dfbaab21c2269fb7837&amp;sou=
+rce=3D7&amp;src=3D1&amp;st=3D1660617544904913&amp;stories=3D1_LFq1TpSdcDH%7=
+C1_z8IXKjclfCd%7C1_9o2fZnEtKLr%7C1_jPNDLSjTssj%7C1_F1ycInnHg68%7C1_YXZdyZxi=
+6FB%7C1_yWYYJnJsU%7C1_Mol1dLDbXcY%7C1_q5MhVWCzfQ8%7C1_VlbooeWEwuF&amp;ty=3D=
+1&amp;ty_data=3Dz8IXKjclfCd&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"color=
+:#2b6dad; text-decoration:none"><div id=3D"wneHM9HE91">
+<div class=3D"hover_menu hidden white_bg show_nub" id=3D"__w2_wneHM9HE92_me=
+nu"><div class=3D"hover_menu_contents" id=3D"__w2_wneHM9HE92_menu_contents"=
+> </div></div>
+<span class=3D"photo_tooltip IdentityPhoto Photo HoverMenu" id=3D"__w2_wneH=
+M9HE92_link"><img class=3D"profile_photo_img" src=3D"https://qph.fs.quoracd=
+n.net/main-thumb-264600653-50-pklxdfzfngknabkvxrtwimuiyruqduud.jpeg" alt=3D=
+"Payoneer" style=3D"-ms-interpolation-mode:bicubic; outline:0; text-decorat=
+ion:none; border:0; border-radius:100px; display:block; height:40px; width:=
+40px; border-style:none" height=3D"40" width=3D"40"></span>
+</div></a></td>
+<td class=3D"content_header_text" style=3D"border-collapse:collapse; paddin=
+g-left:8px; color:#333"><table cellpadding=3D"0" cellspacing=3D"0" border=
+=3D"0" style=3D"border-collapse:collapse; mso-table-lspace:0; mso-table-rsp=
+ace:0"><tbody>
+<tr><td style=3D"border-collapse:collapse">
+<a class=3D"user_link" href=3D"https://www.quora.com/qemail/track_click?aoi=
+d=3D4SZEiTQSjDa&amp;aoty=3D3&amp;aty=3D4&amp;cp=3D2&amp;ct=3D16606175448800=
+03&amp;et=3D130&amp;id=3Dfe2ec86ef7b14dfbaab21c2269fb7837&amp;source=3D7&am=
+p;src=3D1&amp;st=3D1660617544904913&amp;stories=3D1_LFq1TpSdcDH%7C1_z8IXKjc=
+lfCd%7C1_9o2fZnEtKLr%7C1_jPNDLSjTssj%7C1_F1ycInnHg68%7C1_YXZdyZxi6FB%7C1_yW=
+YYJnJsU%7C1_Mol1dLDbXcY%7C1_q5MhVWCzfQ8%7C1_VlbooeWEwuF&amp;ty=3D1&amp;ty_d=
+ata=3Dz8IXKjclfCd&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"color:#333; tex=
+t-decoration:none; font-weight:bold; line-height:1.4; font-size:15px">Payon=
+eer</a><span style=3D"font-size:15px; line-height:1.4">, The commerce techn=
+ology company powering payments and growth</span>
+</td></tr>
+<tr><td class=3D"answer_details" style=3D"border-collapse:collapse; color:#=
+999; font-size:13px"><a href=3D"https://www.quora.com/qemail/track_click?ao=
+id=3Dz8IXKjclfCd&amp;aoty=3D1&amp;aty=3D4&amp;cp=3D2&amp;ct=3D1660617544880=
+003&amp;et=3D130&amp;id=3Dfe2ec86ef7b14dfbaab21c2269fb7837&amp;source=3D7&a=
+mp;src=3D1&amp;st=3D1660617544904913&amp;stories=3D1_LFq1TpSdcDH%7C1_z8IXKj=
+clfCd%7C1_9o2fZnEtKLr%7C1_jPNDLSjTssj%7C1_F1ycInnHg68%7C1_YXZdyZxi6FB%7C1_y=
+WYYJnJsU%7C1_Mol1dLDbXcY%7C1_q5MhVWCzfQ8%7C1_VlbooeWEwuF&amp;ty=3D1&amp;ty_=
+data=3Dz8IXKjclfCd&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"color:#999; te=
+xt-decoration:none">Written Oct 28, 2019</a></td></tr>
+</tbody></table></td>
+</tr></tbody></table></td></tr>
+<tr><td class=3D"item_content" style=3D'border-collapse:collapse; color:#33=
+3; display:block; font-family:-apple-system, BlinkMacSystemFont, "Segoe UI"=
+, Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif; fon=
+t-size:15px; line-height:1.4'><a href=3D"https://www.quora.com/qemail/track=
+_click?al_imp=3DeyJ0eXBlIjogMzMsICJoYXNoIjogIjB8MnwxfDE3Njk2NTY5MyJ9&amp;al=
+_pri=3D0&amp;aoid=3Dz8IXKjclfCd&amp;aoty=3D1&amp;aty=3D4&amp;cp=3D2&amp;ct=
+=3D1660617544880003&amp;et=3D130&amp;id=3Dfe2ec86ef7b14dfbaab21c2269fb7837&=
+amp;source=3D7&amp;src=3D1&amp;st=3D1660617544904913&amp;stories=3D1_LFq1Tp=
+SdcDH%7C1_z8IXKjclfCd%7C1_9o2fZnEtKLr%7C1_jPNDLSjTssj%7C1_F1ycInnHg68%7C1_Y=
+XZdyZxi6FB%7C1_yWYYJnJsU%7C1_Mol1dLDbXcY%7C1_q5MhVWCzfQ8%7C1_VlbooeWEwuF&am=
+p;ty=3D1&amp;ty_data=3Dz8IXKjclfCd&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=
+=3D"color:#333; text-decoration:none"><div id=3D"wneHM9HE64"><div class=3D"=
+truncated_para_breaks expanded_q_text TruncatedAnswerForEmail TruncatedAnsw=
+er TruncatedQText TruncatedAnswerForDigestEmail" id=3D"__w2_wneHM9HE65_trun=
+cated">
+<span class=3D"rendered_qtext" style=3D"word-break:break-word"><p class=3D"=
+qtext_para u-ltr u-text-align--start" style=3D"margin:1em 0; line-height:1.=
+6">Hi there</p>
+<p class=3D"qtext_para u-ltr u-text-align--start" style=3D"margin:1em 0; li=
+ne-height:1.6">Generally speaking, it takes 3=E2=80=935 business days for v=
+erification of documents to be complete but it can be delayed if the wrong =
+or insufficient documents are provided</p></span> <a class=3D"read_more_blu=
+e" href=3D"https://www.quora.com/qemail/track_click?al_imp=3DeyJ0eXBlIjogMz=
+MsICJoYXNoIjogIjB8MnwxfDE3Njk2NTY5MyJ9&amp;al_pri=3D8&amp;aoid=3Dz8IXKjclfC=
+d&amp;aoty=3D1&amp;aty=3D4&amp;cp=3D2&amp;ct=3D1660617544880003&amp;et=3D13=
+0&amp;id=3Dfe2ec86ef7b14dfbaab21c2269fb7837&amp;source=3D7&amp;src=3D1&amp;=
+st=3D1660617544904913&amp;stories=3D1_LFq1TpSdcDH%7C1_z8IXKjclfCd%7C1_9o2fZ=
+nEtKLr%7C1_jPNDLSjTssj%7C1_F1ycInnHg68%7C1_YXZdyZxi6FB%7C1_yWYYJnJsU%7C1_Mo=
+l1dLDbXcY%7C1_q5MhVWCzfQ8%7C1_VlbooeWEwuF&amp;ty=3D1&amp;ty_data=3Dz8IXKjcl=
+fCd&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"color:#168de9; text-decoratio=
+n:none">Read More =C2=BB</a>
+</div></div>
+<div class=3D"non_quora_share_embed_wrapper"><div class=3D"item_metadata"><=
+a href=3D"https://www.quora.com/qemail/track_click?al_imp=3DeyJ0eXBlIjogMzM=
+sICJoYXNoIjogIjB8MnwxfDE3Njk2NTY5MyJ9&amp;al_pri=3D0&amp;aoid=3Dz8IXKjclfCd=
+&amp;aoty=3D1&amp;aty=3D4&amp;cp=3D2&amp;ct=3D1660617544880003&amp;et=3D130=
+&amp;id=3Dfe2ec86ef7b14dfbaab21c2269fb7837&amp;source=3D7&amp;src=3D1&amp;s=
+t=3D1660617544904913&amp;stories=3D1_LFq1TpSdcDH%7C1_z8IXKjclfCd%7C1_9o2fZn=
+EtKLr%7C1_jPNDLSjTssj%7C1_F1ycInnHg68%7C1_YXZdyZxi6FB%7C1_yWYYJnJsU%7C1_Mol=
+1dLDbXcY%7C1_q5MhVWCzfQ8%7C1_VlbooeWEwuF&amp;ty=3D1&amp;ty_data=3Dz8IXKjclf=
+Cd&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"color:#2b6dad; text-decoration=
+:none"></a></div></div></a></td></tr>
+</tbody></table></td></tr>
+</tbody></table></td></tr></tbody></table>
+</div></div>
+<div class=3D"no_para_breaks"><div data-clog-trigger=3D"impression" data-cl=
+og-metadata=3D'{"action_log_target": {"type": 33, "hash": "0|3|1|238237013"=
+}}' data-clog-event-type=3D"ActionLogImpression" id=3D"__w2_wneHM9HE24_acti=
+onable">
+<table class=3D"polish_separator_wrapper" style=3D"border-collapse:collapse=
+; mso-table-lspace:0; mso-table-rspace:0; border:0; cellpadding:0; width:10=
+0%" width=3D"100%"><tbody><tr>
+<td style=3D"border-collapse:collapse"></td>
+<td class=3D"polish_separator" style=3D"border-collapse:collapse; border-bo=
+ttom:1px solid #eee; height:1px; width:140px" height=3D"1" width=3D"140"></=
+td>
+<td style=3D"border-collapse:collapse"></td>
+</tr></tbody></table>
+<table class=3D"story_wrapper" cellspacing=3D"0" border=3D"0" style=3D"bord=
+er-collapse:collapse; mso-table-lspace:0; mso-table-rspace:0; width:100%" w=
+idth=3D"100%"><tbody><tr><td class=3D"story " style=3D"border-collapse:coll=
+apse; border-bottom:0; padding:20px 0"><table class=3D"digest_story_wrapper=
+" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"border-collapse=
+:collapse; mso-table-lspace:0; mso-table-rspace:0; width:100%" width=3D"100=
+%"><tbody>
+<tr><td class=3D"reason" style=3D"border-collapse:collapse; padding-bottom:=
+4px"><table class=3D"digest_reason" cellpadding=3D"0" cellspacing=3D"0" bor=
+der=3D"0" style=3D"border-collapse:collapse; mso-table-lspace:0; mso-table-=
+rspace:0"><tbody><tr><td valign=3D"top" style=3D"border-collapse:collapse">=
+</td></tr></tbody></table></td></tr>
+<tr><td style=3D"border-collapse:collapse"><a class=3D"question_text" href=
+=3D"https://www.quora.com/qemail/track_click?al_imp=3DeyJ0eXBlIjogMzMsICJoY=
+XNoIjogIjB8M3wxfDIzODIzNzAxMyJ9&amp;al_pri=3D1&amp;aoid=3Dj61R8DaVmIr&amp;a=
+oty=3D2&amp;aty=3D4&amp;cp=3D3&amp;ct=3D1660617544880003&amp;et=3D130&amp;i=
+d=3Dfe2ec86ef7b14dfbaab21c2269fb7837&amp;source=3D7&amp;src=3D1&amp;st=3D16=
+60617544904913&amp;stories=3D1_LFq1TpSdcDH%7C1_z8IXKjclfCd%7C1_9o2fZnEtKLr%=
+7C1_jPNDLSjTssj%7C1_F1ycInnHg68%7C1_YXZdyZxi6FB%7C1_yWYYJnJsU%7C1_Mol1dLDbX=
+cY%7C1_q5MhVWCzfQ8%7C1_VlbooeWEwuF&amp;ty=3D1&amp;ty_data=3D9o2fZnEtKLr&amp=
+;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"color:#333; text-decoration:none; di=
+splay:block; font-size:19px; font-weight:bold; letter-spacing:-0.5px; line-=
+height:1.4"><span class=3D"rendered_qtext" style=3D"word-break:break-word">=
+Why my payment is in pending in Payoneer?</span></a></td></tr>
+<tr><td style=3D"border-collapse:collapse"><table class=3D"item_content_wra=
+pper" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"border-coll=
+apse:collapse; mso-table-lspace:0; mso-table-rspace:0; width:100%" width=3D=
+"100%"><tbody>
+<tr><td class=3D"content_header metadata" style=3D"border-collapse:collapse=
+; padding:8px 0"><table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" st=
+yle=3D"border-collapse:collapse; mso-table-lspace:0; mso-table-rspace:0"><t=
+body><tr>
+<td class=3D"content_header_photo" style=3D"border-collapse:collapse; verti=
+cal-align:top" valign=3D"top"><a href=3D"https://www.quora.com/qemail/track=
+_click?aoid=3Dqf18JyYKjE2&amp;aoty=3D3&amp;aty=3D4&amp;cp=3D3&amp;ct=3D1660=
+617544880003&amp;et=3D130&amp;id=3Dfe2ec86ef7b14dfbaab21c2269fb7837&amp;sou=
+rce=3D7&amp;src=3D1&amp;st=3D1660617544904913&amp;stories=3D1_LFq1TpSdcDH%7=
+C1_z8IXKjclfCd%7C1_9o2fZnEtKLr%7C1_jPNDLSjTssj%7C1_F1ycInnHg68%7C1_YXZdyZxi=
+6FB%7C1_yWYYJnJsU%7C1_Mol1dLDbXcY%7C1_q5MhVWCzfQ8%7C1_VlbooeWEwuF&amp;ty=3D=
+1&amp;ty_data=3D9o2fZnEtKLr&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"color=
+:#2b6dad; text-decoration:none"><div id=3D"wneHM9HE98">
+<div class=3D"hover_menu hidden white_bg show_nub" id=3D"__w2_wneHM9HE99_me=
+nu"><div class=3D"hover_menu_contents" id=3D"__w2_wneHM9HE99_menu_contents"=
+> </div></div>
+<span class=3D"photo_tooltip IdentityPhoto Photo HoverMenu" id=3D"__w2_wneH=
+M9HE99_link"><img class=3D"profile_photo_img" src=3D"https://qph.fs.quoracd=
+n.net/main-thumb-342478506-50-yvmezyqcpcogchmmfbebzpzlcspiapks.jpeg" alt=3D=
+"Sadaf Shoukat" style=3D"-ms-interpolation-mode:bicubic; outline:0; text-de=
+coration:none; border:0; border-radius:100px; display:block; height:40px; w=
+idth:40px; border-style:none" height=3D"40" width=3D"40"></span>
+</div></a></td>
+<td class=3D"content_header_text" style=3D"border-collapse:collapse; paddin=
+g-left:8px; color:#333"><table cellpadding=3D"0" cellspacing=3D"0" border=
+=3D"0" style=3D"border-collapse:collapse; mso-table-lspace:0; mso-table-rsp=
+ace:0"><tbody>
+<tr><td style=3D"border-collapse:collapse">
+<a class=3D"user_link" href=3D"https://www.quora.com/qemail/track_click?aoi=
+d=3Dqf18JyYKjE2&amp;aoty=3D3&amp;aty=3D4&amp;cp=3D3&amp;ct=3D16606175448800=
+03&amp;et=3D130&amp;id=3Dfe2ec86ef7b14dfbaab21c2269fb7837&amp;source=3D7&am=
+p;src=3D1&amp;st=3D1660617544904913&amp;stories=3D1_LFq1TpSdcDH%7C1_z8IXKjc=
+lfCd%7C1_9o2fZnEtKLr%7C1_jPNDLSjTssj%7C1_F1ycInnHg68%7C1_YXZdyZxi6FB%7C1_yW=
+YYJnJsU%7C1_Mol1dLDbXcY%7C1_q5MhVWCzfQ8%7C1_VlbooeWEwuF&amp;ty=3D1&amp;ty_d=
+ata=3D9o2fZnEtKLr&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"color:#333; tex=
+t-decoration:none; font-weight:bold; line-height:1.4; font-size:15px">Sadaf=
+ Shoukat</a><span style=3D"font-size:15px; line-height:1.4">, Chemical Engi=
+neer.</span>
+</td></tr>
+<tr><td class=3D"answer_details" style=3D"border-collapse:collapse; color:#=
+999; font-size:13px"><a href=3D"https://www.quora.com/qemail/track_click?ao=
+id=3D9o2fZnEtKLr&amp;aoty=3D1&amp;aty=3D4&amp;cp=3D3&amp;ct=3D1660617544880=
+003&amp;et=3D130&amp;id=3Dfe2ec86ef7b14dfbaab21c2269fb7837&amp;source=3D7&a=
+mp;src=3D1&amp;st=3D1660617544904913&amp;stories=3D1_LFq1TpSdcDH%7C1_z8IXKj=
+clfCd%7C1_9o2fZnEtKLr%7C1_jPNDLSjTssj%7C1_F1ycInnHg68%7C1_YXZdyZxi6FB%7C1_y=
+WYYJnJsU%7C1_Mol1dLDbXcY%7C1_q5MhVWCzfQ8%7C1_VlbooeWEwuF&amp;ty=3D1&amp;ty_=
+data=3D9o2fZnEtKLr&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"color:#999; te=
+xt-decoration:none">Written Sep 11, 2020</a></td></tr>
+</tbody></table></td>
+</tr></tbody></table></td></tr>
+<tr><td class=3D"item_content" style=3D'border-collapse:collapse; color:#33=
+3; display:block; font-family:-apple-system, BlinkMacSystemFont, "Segoe UI"=
+, Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif; fon=
+t-size:15px; line-height:1.4'><a href=3D"https://www.quora.com/qemail/track=
+_click?al_imp=3DeyJ0eXBlIjogMzMsICJoYXNoIjogIjB8M3wxfDIzODIzNzAxMyJ9&amp;al=
+_pri=3D0&amp;aoid=3D9o2fZnEtKLr&amp;aoty=3D1&amp;aty=3D4&amp;cp=3D3&amp;ct=
+=3D1660617544880003&amp;et=3D130&amp;id=3Dfe2ec86ef7b14dfbaab21c2269fb7837&=
+amp;source=3D7&amp;src=3D1&amp;st=3D1660617544904913&amp;stories=3D1_LFq1Tp=
+SdcDH%7C1_z8IXKjclfCd%7C1_9o2fZnEtKLr%7C1_jPNDLSjTssj%7C1_F1ycInnHg68%7C1_Y=
+XZdyZxi6FB%7C1_yWYYJnJsU%7C1_Mol1dLDbXcY%7C1_q5MhVWCzfQ8%7C1_VlbooeWEwuF&am=
+p;ty=3D1&amp;ty_data=3D9o2fZnEtKLr&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=
+=3D"color:#333; text-decoration:none"><div id=3D"wneHM9HE66"><div class=3D"=
+truncated_q_text truncated_para_breaks TruncatedAnswerForEmail TruncatedAns=
+wer TruncatedQText TruncatedAnswerForDigestEmail" id=3D"__w2_wneHM9HE67_tru=
+ncated" style=3D"line-height:1.6">
+<span class=3D"rendered_qtext" style=3D"word-break:break-word"><p class=3D"=
+qtext_para u-ltr u-text-align--start" style=3D"margin:1em 0; line-height:1.=
+6">there must be some pending verification in your account. if every thing =
+is clear then it takes maximum 24 hrs to transfer your money.</p>
+<p class=3D"qtext_para u-ltr u-text-align--start" style=3D"margin:1em 0; li=
+ne-height:1.6">if your account is verified and still f...</p></span> <a cla=
+ss=3D"read_more_blue" href=3D"https://www.quora.com/qemail/track_click?al_i=
+mp=3DeyJ0eXBlIjogMzMsICJoYXNoIjogIjB8M3wxfDIzODIzNzAxMyJ9&amp;al_pri=3D8&am=
+p;aoid=3D9o2fZnEtKLr&amp;aoty=3D1&amp;aty=3D4&amp;cp=3D3&amp;ct=3D166061754=
+4880003&amp;et=3D130&amp;id=3Dfe2ec86ef7b14dfbaab21c2269fb7837&amp;source=
+=3D7&amp;src=3D1&amp;st=3D1660617544904913&amp;stories=3D1_LFq1TpSdcDH%7C1_=
+z8IXKjclfCd%7C1_9o2fZnEtKLr%7C1_jPNDLSjTssj%7C1_F1ycInnHg68%7C1_YXZdyZxi6FB=
+%7C1_yWYYJnJsU%7C1_Mol1dLDbXcY%7C1_q5MhVWCzfQ8%7C1_VlbooeWEwuF&amp;ty=3D1&a=
+mp;ty_data=3D9o2fZnEtKLr&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"color:#1=
+68de9; text-decoration:none">Read More =C2=BB</a>
+</div></div>
+<div class=3D"non_quora_share_embed_wrapper"><div class=3D"item_metadata"><=
+a href=3D"https://www.quora.com/qemail/track_click?al_imp=3DeyJ0eXBlIjogMzM=
+sICJoYXNoIjogIjB8M3wxfDIzODIzNzAxMyJ9&amp;al_pri=3D0&amp;aoid=3D9o2fZnEtKLr=
+&amp;aoty=3D1&amp;aty=3D4&amp;cp=3D3&amp;ct=3D1660617544880003&amp;et=3D130=
+&amp;id=3Dfe2ec86ef7b14dfbaab21c2269fb7837&amp;source=3D7&amp;src=3D1&amp;s=
+t=3D1660617544904913&amp;stories=3D1_LFq1TpSdcDH%7C1_z8IXKjclfCd%7C1_9o2fZn=
+EtKLr%7C1_jPNDLSjTssj%7C1_F1ycInnHg68%7C1_YXZdyZxi6FB%7C1_yWYYJnJsU%7C1_Mol=
+1dLDbXcY%7C1_q5MhVWCzfQ8%7C1_VlbooeWEwuF&amp;ty=3D1&amp;ty_data=3D9o2fZnEtK=
+Lr&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"color:#2b6dad; text-decoration=
+:none"></a></div></div></a></td></tr>
+</tbody></table></td></tr>
+</tbody></table></td></tr></tbody></table>
+</div></div>
+<div class=3D"no_para_breaks"><div data-clog-trigger=3D"impression" data-cl=
+og-metadata=3D'{"action_log_target": {"type": 33, "hash": "0|4|1|247477793"=
+}}' data-clog-event-type=3D"ActionLogImpression" id=3D"__w2_wneHM9HE25_acti=
+onable">
+<table class=3D"polish_separator_wrapper" style=3D"border-collapse:collapse=
+; mso-table-lspace:0; mso-table-rspace:0; border:0; cellpadding:0; width:10=
+0%" width=3D"100%"><tbody><tr>
+<td style=3D"border-collapse:collapse"></td>
+<td class=3D"polish_separator" style=3D"border-collapse:collapse; border-bo=
+ttom:1px solid #eee; height:1px; width:140px" height=3D"1" width=3D"140"></=
+td>
+<td style=3D"border-collapse:collapse"></td>
+</tr></tbody></table>
+<table class=3D"story_wrapper" cellspacing=3D"0" border=3D"0" style=3D"bord=
+er-collapse:collapse; mso-table-lspace:0; mso-table-rspace:0; width:100%" w=
+idth=3D"100%"><tbody><tr><td class=3D"story " style=3D"border-collapse:coll=
+apse; border-bottom:0; padding:20px 0"><table class=3D"digest_story_wrapper=
+" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"border-collapse=
+:collapse; mso-table-lspace:0; mso-table-rspace:0; width:100%" width=3D"100=
+%"><tbody>
+<tr><td class=3D"reason" style=3D"border-collapse:collapse; padding-bottom:=
+4px"><table class=3D"digest_reason" cellpadding=3D"0" cellspacing=3D"0" bor=
+der=3D"0" style=3D"border-collapse:collapse; mso-table-lspace:0; mso-table-=
+rspace:0"><tbody><tr><td valign=3D"top" style=3D"border-collapse:collapse">=
+</td></tr></tbody></table></td></tr>
+<tr><td style=3D"border-collapse:collapse"><a class=3D"question_text" href=
+=3D"https://www.quora.com/qemail/track_click?al_imp=3DeyJ0eXBlIjogMzMsICJoY=
+XNoIjogIjB8NHwxfDI0NzQ3Nzc5MyJ9&amp;al_pri=3D1&amp;aoid=3D9mVaRAXrwiD&amp;a=
+oty=3D2&amp;aty=3D4&amp;cp=3D4&amp;ct=3D1660617544880003&amp;et=3D130&amp;i=
+d=3Dfe2ec86ef7b14dfbaab21c2269fb7837&amp;source=3D7&amp;src=3D1&amp;st=3D16=
+60617544904913&amp;stories=3D1_LFq1TpSdcDH%7C1_z8IXKjclfCd%7C1_9o2fZnEtKLr%=
+7C1_jPNDLSjTssj%7C1_F1ycInnHg68%7C1_YXZdyZxi6FB%7C1_yWYYJnJsU%7C1_Mol1dLDbX=
+cY%7C1_q5MhVWCzfQ8%7C1_VlbooeWEwuF&amp;ty=3D1&amp;ty_data=3DjPNDLSjTssj&amp=
+;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"color:#333; text-decoration:none; di=
+splay:block; font-size:19px; font-weight:bold; letter-spacing:-0.5px; line-=
+height:1.4"><span class=3D"rendered_qtext" style=3D"word-break:break-word">=
+Why is Payoneer keep my payments (from authentic freelancing website) under=
+ review since 14 days? Customer support has given no/zero response to my re=
+peated requests.</span></a></td></tr>
+<tr><td style=3D"border-collapse:collapse"><table class=3D"item_content_wra=
+pper" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"border-coll=
+apse:collapse; mso-table-lspace:0; mso-table-rspace:0; width:100%" width=3D=
+"100%"><tbody>
+<tr><td class=3D"content_header metadata" style=3D"border-collapse:collapse=
+; padding:8px 0"><table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" st=
+yle=3D"border-collapse:collapse; mso-table-lspace:0; mso-table-rspace:0"><t=
+body><tr>
+<td class=3D"content_header_photo" style=3D"border-collapse:collapse; verti=
+cal-align:top" valign=3D"top"><a href=3D"https://www.quora.com/qemail/track=
+_click?aoid=3DVIQ5K5r71o6&amp;aoty=3D3&amp;aty=3D4&amp;cp=3D4&amp;ct=3D1660=
+617544880003&amp;et=3D130&amp;id=3Dfe2ec86ef7b14dfbaab21c2269fb7837&amp;sou=
+rce=3D7&amp;src=3D1&amp;st=3D1660617544904913&amp;stories=3D1_LFq1TpSdcDH%7=
+C1_z8IXKjclfCd%7C1_9o2fZnEtKLr%7C1_jPNDLSjTssj%7C1_F1ycInnHg68%7C1_YXZdyZxi=
+6FB%7C1_yWYYJnJsU%7C1_Mol1dLDbXcY%7C1_q5MhVWCzfQ8%7C1_VlbooeWEwuF&amp;ty=3D=
+1&amp;ty_data=3DjPNDLSjTssj&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"color=
+:#2b6dad; text-decoration:none"><div id=3D"wneHM9HE167">
+<div class=3D"hover_menu hidden white_bg show_nub" id=3D"__w2_wneHM9HE168_m=
+enu"><div class=3D"hover_menu_contents" id=3D"__w2_wneHM9HE168_menu_content=
+s"> </div></div>
+<span class=3D"photo_tooltip IdentityPhoto Photo HoverMenu" id=3D"__w2_wneH=
+M9HE168_link"><img class=3D"profile_photo_img" src=3D"https://qph.fs.quorac=
+dn.net/main-thumb-1334190839-50-oybsgkcjmcrqufwuunkuzkfkmmdqozzl.jpeg" alt=
+=3D"Daniel Matthews" style=3D"-ms-interpolation-mode:bicubic; outline:0; te=
+xt-decoration:none; border:0; border-radius:100px; display:block; height:40=
+px; width:40px; border-style:none" height=3D"40" width=3D"40"></span>
+</div></a></td>
+<td class=3D"content_header_text" style=3D"border-collapse:collapse; paddin=
+g-left:8px; color:#333"><table cellpadding=3D"0" cellspacing=3D"0" border=
+=3D"0" style=3D"border-collapse:collapse; mso-table-lspace:0; mso-table-rsp=
+ace:0"><tbody>
+<tr><td style=3D"border-collapse:collapse">
+<a class=3D"user_link" href=3D"https://www.quora.com/qemail/track_click?aoi=
+d=3DVIQ5K5r71o6&amp;aoty=3D3&amp;aty=3D4&amp;cp=3D4&amp;ct=3D16606175448800=
+03&amp;et=3D130&amp;id=3Dfe2ec86ef7b14dfbaab21c2269fb7837&amp;source=3D7&am=
+p;src=3D1&amp;st=3D1660617544904913&amp;stories=3D1_LFq1TpSdcDH%7C1_z8IXKjc=
+lfCd%7C1_9o2fZnEtKLr%7C1_jPNDLSjTssj%7C1_F1ycInnHg68%7C1_YXZdyZxi6FB%7C1_yW=
+YYJnJsU%7C1_Mol1dLDbXcY%7C1_q5MhVWCzfQ8%7C1_VlbooeWEwuF&amp;ty=3D1&amp;ty_d=
+ata=3DjPNDLSjTssj&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"color:#333; tex=
+t-decoration:none; font-weight:bold; line-height:1.4; font-size:15px">Danie=
+l Matthews</a><span style=3D"font-size:15px; line-height:1.4">, Get a Dedic=
+ated Marketing Strategist Starting At $97/mo</span>
+</td></tr>
+<tr><td class=3D"answer_details" style=3D"border-collapse:collapse; color:#=
+999; font-size:13px"><a href=3D"https://www.quora.com/qemail/track_click?ao=
+id=3DjPNDLSjTssj&amp;aoty=3D1&amp;aty=3D4&amp;cp=3D4&amp;ct=3D1660617544880=
+003&amp;et=3D130&amp;id=3Dfe2ec86ef7b14dfbaab21c2269fb7837&amp;source=3D7&a=
+mp;src=3D1&amp;st=3D1660617544904913&amp;stories=3D1_LFq1TpSdcDH%7C1_z8IXKj=
+clfCd%7C1_9o2fZnEtKLr%7C1_jPNDLSjTssj%7C1_F1ycInnHg68%7C1_YXZdyZxi6FB%7C1_y=
+WYYJnJsU%7C1_Mol1dLDbXcY%7C1_q5MhVWCzfQ8%7C1_VlbooeWEwuF&amp;ty=3D1&amp;ty_=
+data=3DjPNDLSjTssj&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"color:#999; te=
+xt-decoration:none">Written Nov 2, 2020</a></td></tr>
+</tbody></table></td>
+</tr></tbody></table></td></tr>
+<tr><td class=3D"item_content" style=3D'border-collapse:collapse; color:#33=
+3; display:block; font-family:-apple-system, BlinkMacSystemFont, "Segoe UI"=
+, Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif; fon=
+t-size:15px; line-height:1.4'><a href=3D"https://www.quora.com/qemail/track=
+_click?al_imp=3DeyJ0eXBlIjogMzMsICJoYXNoIjogIjB8NHwxfDI0NzQ3Nzc5MyJ9&amp;al=
+_pri=3D0&amp;aoid=3DjPNDLSjTssj&amp;aoty=3D1&amp;aty=3D4&amp;cp=3D4&amp;ct=
+=3D1660617544880003&amp;et=3D130&amp;id=3Dfe2ec86ef7b14dfbaab21c2269fb7837&=
+amp;source=3D7&amp;src=3D1&amp;st=3D1660617544904913&amp;stories=3D1_LFq1Tp=
+SdcDH%7C1_z8IXKjclfCd%7C1_9o2fZnEtKLr%7C1_jPNDLSjTssj%7C1_F1ycInnHg68%7C1_Y=
+XZdyZxi6FB%7C1_yWYYJnJsU%7C1_Mol1dLDbXcY%7C1_q5MhVWCzfQ8%7C1_VlbooeWEwuF&am=
+p;ty=3D1&amp;ty_data=3DjPNDLSjTssj&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=
+=3D"color:#333; text-decoration:none"><div id=3D"wneHM9HE161"><div class=3D=
+"truncated_para_breaks expanded_q_text TruncatedAnswerForEmail TruncatedAns=
+wer TruncatedQText TruncatedAnswerForDigestEmail" id=3D"__w2_wneHM9HE162_tr=
+uncated">
+<span class=3D"rendered_qtext" style=3D"word-break:break-word"><p class=3D"=
+qtext_para u-ltr u-text-align--start" style=3D"margin:1em 0; line-height:1.=
+6">Freelance websites can be unreliable sometimes and that includes their e=
+scrow periods. It is probably a unique situation to Payoneer</p></span> <a =
+class=3D"read_more_blue" href=3D"https://www.quora.com/qemail/track_click?a=
+l_imp=3DeyJ0eXBlIjogMzMsICJoYXNoIjogIjB8NHwxfDI0NzQ3Nzc5MyJ9&amp;al_pri=3D8=
+&amp;aoid=3DjPNDLSjTssj&amp;aoty=3D1&amp;aty=3D4&amp;cp=3D4&amp;ct=3D166061=
+7544880003&amp;et=3D130&amp;id=3Dfe2ec86ef7b14dfbaab21c2269fb7837&amp;sourc=
+e=3D7&amp;src=3D1&amp;st=3D1660617544904913&amp;stories=3D1_LFq1TpSdcDH%7C1=
+_z8IXKjclfCd%7C1_9o2fZnEtKLr%7C1_jPNDLSjTssj%7C1_F1ycInnHg68%7C1_YXZdyZxi6F=
+B%7C1_yWYYJnJsU%7C1_Mol1dLDbXcY%7C1_q5MhVWCzfQ8%7C1_VlbooeWEwuF&amp;ty=3D1&=
+amp;ty_data=3DjPNDLSjTssj&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"color:#=
+168de9; text-decoration:none">Read More =C2=BB</a>
+</div></div>
+<div class=3D"non_quora_share_embed_wrapper"><div class=3D"item_metadata"><=
+a href=3D"https://www.quora.com/qemail/track_click?al_imp=3DeyJ0eXBlIjogMzM=
+sICJoYXNoIjogIjB8NHwxfDI0NzQ3Nzc5MyJ9&amp;al_pri=3D0&amp;aoid=3DjPNDLSjTssj=
+&amp;aoty=3D1&amp;aty=3D4&amp;cp=3D4&amp;ct=3D1660617544880003&amp;et=3D130=
+&amp;id=3Dfe2ec86ef7b14dfbaab21c2269fb7837&amp;source=3D7&amp;src=3D1&amp;s=
+t=3D1660617544904913&amp;stories=3D1_LFq1TpSdcDH%7C1_z8IXKjclfCd%7C1_9o2fZn=
+EtKLr%7C1_jPNDLSjTssj%7C1_F1ycInnHg68%7C1_YXZdyZxi6FB%7C1_yWYYJnJsU%7C1_Mol=
+1dLDbXcY%7C1_q5MhVWCzfQ8%7C1_VlbooeWEwuF&amp;ty=3D1&amp;ty_data=3DjPNDLSjTs=
+sj&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"color:#2b6dad; text-decoration=
+:none"></a></div></div></a></td></tr>
+</tbody></table></td></tr>
+</tbody></table></td></tr></tbody></table>
+</div></div>
+<div class=3D"no_para_breaks"><div data-clog-trigger=3D"impression" data-cl=
+og-metadata=3D'{"action_log_target": {"type": 33, "hash": "0|5|1|266143025"=
+}}' data-clog-event-type=3D"ActionLogImpression" id=3D"__w2_wneHM9HE26_acti=
+onable">
+<table class=3D"polish_separator_wrapper" style=3D"border-collapse:collapse=
+; mso-table-lspace:0; mso-table-rspace:0; border:0; cellpadding:0; width:10=
+0%" width=3D"100%"><tbody><tr>
+<td style=3D"border-collapse:collapse"></td>
+<td class=3D"polish_separator" style=3D"border-collapse:collapse; border-bo=
+ttom:1px solid #eee; height:1px; width:140px" height=3D"1" width=3D"140"></=
+td>
+<td style=3D"border-collapse:collapse"></td>
+</tr></tbody></table>
+<table class=3D"story_wrapper" cellspacing=3D"0" border=3D"0" style=3D"bord=
+er-collapse:collapse; mso-table-lspace:0; mso-table-rspace:0; width:100%" w=
+idth=3D"100%"><tbody><tr><td class=3D"story " style=3D"border-collapse:coll=
+apse; border-bottom:0; padding:20px 0"><table class=3D"digest_story_wrapper=
+" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"border-collapse=
+:collapse; mso-table-lspace:0; mso-table-rspace:0; width:100%" width=3D"100=
+%"><tbody>
+<tr><td class=3D"reason" style=3D"border-collapse:collapse; padding-bottom:=
+4px"><table class=3D"digest_reason" cellpadding=3D"0" cellspacing=3D"0" bor=
+der=3D"0" style=3D"border-collapse:collapse; mso-table-lspace:0; mso-table-=
+rspace:0"><tbody><tr><td valign=3D"top" style=3D"border-collapse:collapse">=
+</td></tr></tbody></table></td></tr>
+<tr><td style=3D"border-collapse:collapse"><a class=3D"question_text" href=
+=3D"https://www.quora.com/qemail/track_click?al_imp=3DeyJ0eXBlIjogMzMsICJoY=
+XNoIjogIjB8NXwxfDI2NjE0MzAyNSJ9&amp;al_pri=3D1&amp;aoid=3D4grRZFOlja8&amp;a=
+oty=3D2&amp;aty=3D4&amp;cp=3D5&amp;ct=3D1660617544880003&amp;et=3D130&amp;i=
+d=3Dfe2ec86ef7b14dfbaab21c2269fb7837&amp;source=3D7&amp;src=3D1&amp;st=3D16=
+60617544904913&amp;stories=3D1_LFq1TpSdcDH%7C1_z8IXKjclfCd%7C1_9o2fZnEtKLr%=
+7C1_jPNDLSjTssj%7C1_F1ycInnHg68%7C1_YXZdyZxi6FB%7C1_yWYYJnJsU%7C1_Mol1dLDbX=
+cY%7C1_q5MhVWCzfQ8%7C1_VlbooeWEwuF&amp;ty=3D1&amp;ty_data=3DF1ycInnHg68&amp=
+;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"color:#333; text-decoration:none; di=
+splay:block; font-size:19px; font-weight:bold; letter-spacing:-0.5px; line-=
+height:1.4"><span class=3D"rendered_qtext" style=3D"word-break:break-word">=
+How long does Payoneer take to verify an account?</span></a></td></tr>
+<tr><td style=3D"border-collapse:collapse"><table class=3D"item_content_wra=
+pper" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"border-coll=
+apse:collapse; mso-table-lspace:0; mso-table-rspace:0; width:100%" width=3D=
+"100%"><tbody>
+<tr><td class=3D"content_header metadata" style=3D"border-collapse:collapse=
+; padding:8px 0"><table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" st=
+yle=3D"border-collapse:collapse; mso-table-lspace:0; mso-table-rspace:0"><t=
+body><tr>
+<td class=3D"content_header_photo" style=3D"border-collapse:collapse; verti=
+cal-align:top" valign=3D"top"><a href=3D"https://www.quora.com/qemail/track=
+_click?aoid=3DVp7sAAhFtgW&amp;aoty=3D3&amp;aty=3D4&amp;cp=3D5&amp;ct=3D1660=
+617544880003&amp;et=3D130&amp;id=3Dfe2ec86ef7b14dfbaab21c2269fb7837&amp;sou=
+rce=3D7&amp;src=3D1&amp;st=3D1660617544904913&amp;stories=3D1_LFq1TpSdcDH%7=
+C1_z8IXKjclfCd%7C1_9o2fZnEtKLr%7C1_jPNDLSjTssj%7C1_F1ycInnHg68%7C1_YXZdyZxi=
+6FB%7C1_yWYYJnJsU%7C1_Mol1dLDbXcY%7C1_q5MhVWCzfQ8%7C1_VlbooeWEwuF&amp;ty=3D=
+1&amp;ty_data=3DF1ycInnHg68&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"color=
+:#2b6dad; text-decoration:none"><div id=3D"wneHM9HE105">
+<div class=3D"hover_menu hidden white_bg show_nub" id=3D"__w2_wneHM9HE106_m=
+enu"><div class=3D"hover_menu_contents" id=3D"__w2_wneHM9HE106_menu_content=
+s"> </div></div>
+<span class=3D"photo_tooltip IdentityPhoto Photo HoverMenu" id=3D"__w2_wneH=
+M9HE106_link"><img class=3D"profile_photo_img" src=3D"https://qph.fs.quorac=
+dn.net/main-thumb-1359288057-50-ashjioofmsmmfsnizwikvuynetivszty.jpeg" alt=
+=3D"Sahil Ahmad" style=3D"-ms-interpolation-mode:bicubic; outline:0; text-d=
+ecoration:none; border:0; border-radius:100px; display:block; height:40px; =
+width:40px; border-style:none" height=3D"40" width=3D"40"></span>
+</div></a></td>
+<td class=3D"content_header_text" style=3D"border-collapse:collapse; paddin=
+g-left:8px; color:#333"><table cellpadding=3D"0" cellspacing=3D"0" border=
+=3D"0" style=3D"border-collapse:collapse; mso-table-lspace:0; mso-table-rsp=
+ace:0"><tbody>
+<tr><td style=3D"border-collapse:collapse">
+<a class=3D"user_link" href=3D"https://www.quora.com/qemail/track_click?aoi=
+d=3DVp7sAAhFtgW&amp;aoty=3D3&amp;aty=3D4&amp;cp=3D5&amp;ct=3D16606175448800=
+03&amp;et=3D130&amp;id=3Dfe2ec86ef7b14dfbaab21c2269fb7837&amp;source=3D7&am=
+p;src=3D1&amp;st=3D1660617544904913&amp;stories=3D1_LFq1TpSdcDH%7C1_z8IXKjc=
+lfCd%7C1_9o2fZnEtKLr%7C1_jPNDLSjTssj%7C1_F1ycInnHg68%7C1_YXZdyZxi6FB%7C1_yW=
+YYJnJsU%7C1_Mol1dLDbXcY%7C1_q5MhVWCzfQ8%7C1_VlbooeWEwuF&amp;ty=3D1&amp;ty_d=
+ata=3DF1ycInnHg68&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"color:#333; tex=
+t-decoration:none; font-weight:bold; line-height:1.4; font-size:15px">Sahil=
+ Ahmad</a><span style=3D"font-size:15px; line-height:1.4">, CEO at Founder =
+of Tech9solution (2020-present)</span>
+</td></tr>
+<tr><td class=3D"answer_details" style=3D"border-collapse:collapse; color:#=
+999; font-size:13px"><a href=3D"https://www.quora.com/qemail/track_click?ao=
+id=3DF1ycInnHg68&amp;aoty=3D1&amp;aty=3D4&amp;cp=3D5&amp;ct=3D1660617544880=
+003&amp;et=3D130&amp;id=3Dfe2ec86ef7b14dfbaab21c2269fb7837&amp;source=3D7&a=
+mp;src=3D1&amp;st=3D1660617544904913&amp;stories=3D1_LFq1TpSdcDH%7C1_z8IXKj=
+clfCd%7C1_9o2fZnEtKLr%7C1_jPNDLSjTssj%7C1_F1ycInnHg68%7C1_YXZdyZxi6FB%7C1_y=
+WYYJnJsU%7C1_Mol1dLDbXcY%7C1_q5MhVWCzfQ8%7C1_VlbooeWEwuF&amp;ty=3D1&amp;ty_=
+data=3DF1ycInnHg68&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"color:#999; te=
+xt-decoration:none">Written Feb 17, 2021</a></td></tr>
+</tbody></table></td>
+</tr></tbody></table></td></tr>
+<tr><td class=3D"item_content" style=3D'border-collapse:collapse; color:#33=
+3; display:block; font-family:-apple-system, BlinkMacSystemFont, "Segoe UI"=
+, Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif; fon=
+t-size:15px; line-height:1.4'><a href=3D"https://www.quora.com/qemail/track=
+_click?al_imp=3DeyJ0eXBlIjogMzMsICJoYXNoIjogIjB8NXwxfDI2NjE0MzAyNSJ9&amp;al=
+_pri=3D0&amp;aoid=3DF1ycInnHg68&amp;aoty=3D1&amp;aty=3D4&amp;cp=3D5&amp;ct=
+=3D1660617544880003&amp;et=3D130&amp;id=3Dfe2ec86ef7b14dfbaab21c2269fb7837&=
+amp;source=3D7&amp;src=3D1&amp;st=3D1660617544904913&amp;stories=3D1_LFq1Tp=
+SdcDH%7C1_z8IXKjclfCd%7C1_9o2fZnEtKLr%7C1_jPNDLSjTssj%7C1_F1ycInnHg68%7C1_Y=
+XZdyZxi6FB%7C1_yWYYJnJsU%7C1_Mol1dLDbXcY%7C1_q5MhVWCzfQ8%7C1_VlbooeWEwuF&am=
+p;ty=3D1&amp;ty_data=3DF1ycInnHg68&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=
+=3D"color:#333; text-decoration:none"><div id=3D"wneHM9HE68"><div class=3D"=
+truncated_q_text truncated_para_breaks TruncatedAnswerForEmail TruncatedAns=
+wer TruncatedQText TruncatedAnswerForDigestEmail" id=3D"__w2_wneHM9HE69_tru=
+ncated" style=3D"line-height:1.6">
+<span class=3D"rendered_qtext" style=3D"word-break:break-word"><p class=3D"=
+qtext_para u-ltr u-text-align--start" style=3D"margin:1em 0; line-height:1.=
+6">It usually takes <b>up to 30 to 60 days</b> however in the meantime they=
+ <b>do not mind collecting the money you are being paid.</b></p>
+<p class=3D"qtext_para u-ltr u-text-align--start" style=3D"margin:1em 0; li=
+ne-height:1.6">Yes. It=E2=80=99s possible to receive payment from different=
+ m...</p></span> <a class=3D"read_more_blue" href=3D"https://www.quora.com/=
+qemail/track_click?al_imp=3DeyJ0eXBlIjogMzMsICJoYXNoIjogIjB8NXwxfDI2NjE0MzA=
+yNSJ9&amp;al_pri=3D8&amp;aoid=3DF1ycInnHg68&amp;aoty=3D1&amp;aty=3D4&amp;cp=
+=3D5&amp;ct=3D1660617544880003&amp;et=3D130&amp;id=3Dfe2ec86ef7b14dfbaab21c=
+2269fb7837&amp;source=3D7&amp;src=3D1&amp;st=3D1660617544904913&amp;stories=
+=3D1_LFq1TpSdcDH%7C1_z8IXKjclfCd%7C1_9o2fZnEtKLr%7C1_jPNDLSjTssj%7C1_F1ycIn=
+nHg68%7C1_YXZdyZxi6FB%7C1_yWYYJnJsU%7C1_Mol1dLDbXcY%7C1_q5MhVWCzfQ8%7C1_Vlb=
+ooeWEwuF&amp;ty=3D1&amp;ty_data=3DF1ycInnHg68&amp;uid=3Dm36BZ4XFnST&amp;v=
+=3D0" style=3D"color:#168de9; text-decoration:none">Read More =C2=BB</a>
+</div></div>
+<div class=3D"non_quora_share_embed_wrapper"><div class=3D"item_metadata"><=
+a href=3D"https://www.quora.com/qemail/track_click?al_imp=3DeyJ0eXBlIjogMzM=
+sICJoYXNoIjogIjB8NXwxfDI2NjE0MzAyNSJ9&amp;al_pri=3D0&amp;aoid=3DF1ycInnHg68=
+&amp;aoty=3D1&amp;aty=3D4&amp;cp=3D5&amp;ct=3D1660617544880003&amp;et=3D130=
+&amp;id=3Dfe2ec86ef7b14dfbaab21c2269fb7837&amp;source=3D7&amp;src=3D1&amp;s=
+t=3D1660617544904913&amp;stories=3D1_LFq1TpSdcDH%7C1_z8IXKjclfCd%7C1_9o2fZn=
+EtKLr%7C1_jPNDLSjTssj%7C1_F1ycInnHg68%7C1_YXZdyZxi6FB%7C1_yWYYJnJsU%7C1_Mol=
+1dLDbXcY%7C1_q5MhVWCzfQ8%7C1_VlbooeWEwuF&amp;ty=3D1&amp;ty_data=3DF1ycInnHg=
+68&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"color:#2b6dad; text-decoration=
+:none"></a></div></div></a></td></tr>
+</tbody></table></td></tr>
+</tbody></table></td></tr></tbody></table>
+</div></div>
+<div class=3D"no_para_breaks"><div data-clog-trigger=3D"impression" data-cl=
+og-metadata=3D'{"action_log_target": {"type": 33, "hash": "0|6|1|221114065"=
+}}' data-clog-event-type=3D"ActionLogImpression" id=3D"__w2_wneHM9HE27_acti=
+onable">
+<table class=3D"polish_separator_wrapper" style=3D"border-collapse:collapse=
+; mso-table-lspace:0; mso-table-rspace:0; border:0; cellpadding:0; width:10=
+0%" width=3D"100%"><tbody><tr>
+<td style=3D"border-collapse:collapse"></td>
+<td class=3D"polish_separator" style=3D"border-collapse:collapse; border-bo=
+ttom:1px solid #eee; height:1px; width:140px" height=3D"1" width=3D"140"></=
+td>
+<td style=3D"border-collapse:collapse"></td>
+</tr></tbody></table>
+<table class=3D"story_wrapper" cellspacing=3D"0" border=3D"0" style=3D"bord=
+er-collapse:collapse; mso-table-lspace:0; mso-table-rspace:0; width:100%" w=
+idth=3D"100%"><tbody><tr><td class=3D"story " style=3D"border-collapse:coll=
+apse; border-bottom:0; padding:20px 0"><table class=3D"digest_story_wrapper=
+" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"border-collapse=
+:collapse; mso-table-lspace:0; mso-table-rspace:0; width:100%" width=3D"100=
+%"><tbody>
+<tr><td class=3D"reason" style=3D"border-collapse:collapse; padding-bottom:=
+4px"><table class=3D"digest_reason" cellpadding=3D"0" cellspacing=3D"0" bor=
+der=3D"0" style=3D"border-collapse:collapse; mso-table-lspace:0; mso-table-=
+rspace:0"><tbody><tr><td valign=3D"top" style=3D"border-collapse:collapse">=
+</td></tr></tbody></table></td></tr>
+<tr><td style=3D"border-collapse:collapse"><a class=3D"question_text" href=
+=3D"https://www.quora.com/qemail/track_click?al_imp=3DeyJ0eXBlIjogMzMsICJoY=
+XNoIjogIjB8NnwxfDIyMTExNDA2NSJ9&amp;al_pri=3D1&amp;aoid=3DoPswh2HWIJW&amp;a=
+oty=3D2&amp;aty=3D4&amp;cp=3D6&amp;ct=3D1660617544880003&amp;et=3D130&amp;i=
+d=3Dfe2ec86ef7b14dfbaab21c2269fb7837&amp;source=3D7&amp;src=3D1&amp;st=3D16=
+60617544904913&amp;stories=3D1_LFq1TpSdcDH%7C1_z8IXKjclfCd%7C1_9o2fZnEtKLr%=
+7C1_jPNDLSjTssj%7C1_F1ycInnHg68%7C1_YXZdyZxi6FB%7C1_yWYYJnJsU%7C1_Mol1dLDbX=
+cY%7C1_q5MhVWCzfQ8%7C1_VlbooeWEwuF&amp;ty=3D1&amp;ty_data=3DYXZdyZxi6FB&amp=
+;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"color:#333; text-decoration:none; di=
+splay:block; font-size:19px; font-weight:bold; letter-spacing:-0.5px; line-=
+height:1.4"><span class=3D"rendered_qtext" style=3D"word-break:break-word">=
+Is it possible to receive payment via an unverified Payoneer account?</span=
+></a></td></tr>
+<tr><td style=3D"border-collapse:collapse"><table class=3D"item_content_wra=
+pper" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"border-coll=
+apse:collapse; mso-table-lspace:0; mso-table-rspace:0; width:100%" width=3D=
+"100%"><tbody>
+<tr><td class=3D"content_header metadata" style=3D"border-collapse:collapse=
+; padding:8px 0"><table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" st=
+yle=3D"border-collapse:collapse; mso-table-lspace:0; mso-table-rspace:0"><t=
+body><tr>
+<td class=3D"content_header_photo" style=3D"border-collapse:collapse; verti=
+cal-align:top" valign=3D"top"><a href=3D"https://www.quora.com/qemail/track=
+_click?aoid=3DajTl3DznQD8&amp;aoty=3D3&amp;aty=3D4&amp;cp=3D6&amp;ct=3D1660=
+617544880003&amp;et=3D130&amp;id=3Dfe2ec86ef7b14dfbaab21c2269fb7837&amp;sou=
+rce=3D7&amp;src=3D1&amp;st=3D1660617544904913&amp;stories=3D1_LFq1TpSdcDH%7=
+C1_z8IXKjclfCd%7C1_9o2fZnEtKLr%7C1_jPNDLSjTssj%7C1_F1ycInnHg68%7C1_YXZdyZxi=
+6FB%7C1_yWYYJnJsU%7C1_Mol1dLDbXcY%7C1_q5MhVWCzfQ8%7C1_VlbooeWEwuF&amp;ty=3D=
+1&amp;ty_data=3DYXZdyZxi6FB&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"color=
+:#2b6dad; text-decoration:none"><div id=3D"wneHM9HE112">
+<div class=3D"hover_menu hidden white_bg show_nub" id=3D"__w2_wneHM9HE113_m=
+enu"><div class=3D"hover_menu_contents" id=3D"__w2_wneHM9HE113_menu_content=
+s"> </div></div>
+<span class=3D"photo_tooltip IdentityPhoto Photo HoverMenu" id=3D"__w2_wneH=
+M9HE113_link"><img class=3D"profile_photo_img" src=3D"https://qph.fs.quorac=
+dn.net/main-thumb-1062515037-50-euapihsmdnssqucmfarglmxvxsmpkwos.jpeg" alt=
+=3D"Ubong Koffi" style=3D"-ms-interpolation-mode:bicubic; outline:0; text-d=
+ecoration:none; border:0; border-radius:100px; display:block; height:40px; =
+width:40px; border-style:none" height=3D"40" width=3D"40"></span>
+</div></a></td>
+<td class=3D"content_header_text" style=3D"border-collapse:collapse; paddin=
+g-left:8px; color:#333"><table cellpadding=3D"0" cellspacing=3D"0" border=
+=3D"0" style=3D"border-collapse:collapse; mso-table-lspace:0; mso-table-rsp=
+ace:0"><tbody>
+<tr><td style=3D"border-collapse:collapse">
+<a class=3D"user_link" href=3D"https://www.quora.com/qemail/track_click?aoi=
+d=3DajTl3DznQD8&amp;aoty=3D3&amp;aty=3D4&amp;cp=3D6&amp;ct=3D16606175448800=
+03&amp;et=3D130&amp;id=3Dfe2ec86ef7b14dfbaab21c2269fb7837&amp;source=3D7&am=
+p;src=3D1&amp;st=3D1660617544904913&amp;stories=3D1_LFq1TpSdcDH%7C1_z8IXKjc=
+lfCd%7C1_9o2fZnEtKLr%7C1_jPNDLSjTssj%7C1_F1ycInnHg68%7C1_YXZdyZxi6FB%7C1_yW=
+YYJnJsU%7C1_Mol1dLDbXcY%7C1_q5MhVWCzfQ8%7C1_VlbooeWEwuF&amp;ty=3D1&amp;ty_d=
+ata=3DYXZdyZxi6FB&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"color:#333; tex=
+t-decoration:none; font-weight:bold; line-height:1.4; font-size:15px">Ubong=
+ Koffi</a><span style=3D"font-size:15px; line-height:1.4">, Top Rated Resea=
+rchs at Westland, MI</span>
+</td></tr>
+<tr><td class=3D"answer_details" style=3D"border-collapse:collapse; color:#=
+999; font-size:13px"><a href=3D"https://www.quora.com/qemail/track_click?ao=
+id=3DYXZdyZxi6FB&amp;aoty=3D1&amp;aty=3D4&amp;cp=3D6&amp;ct=3D1660617544880=
+003&amp;et=3D130&amp;id=3Dfe2ec86ef7b14dfbaab21c2269fb7837&amp;source=3D7&a=
+mp;src=3D1&amp;st=3D1660617544904913&amp;stories=3D1_LFq1TpSdcDH%7C1_z8IXKj=
+clfCd%7C1_9o2fZnEtKLr%7C1_jPNDLSjTssj%7C1_F1ycInnHg68%7C1_YXZdyZxi6FB%7C1_y=
+WYYJnJsU%7C1_Mol1dLDbXcY%7C1_q5MhVWCzfQ8%7C1_VlbooeWEwuF&amp;ty=3D1&amp;ty_=
+data=3DYXZdyZxi6FB&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"color:#999; te=
+xt-decoration:none">Written Jun 12, 2020</a></td></tr>
+</tbody></table></td>
+</tr></tbody></table></td></tr>
+<tr><td class=3D"item_content" style=3D'border-collapse:collapse; color:#33=
+3; display:block; font-family:-apple-system, BlinkMacSystemFont, "Segoe UI"=
+, Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif; fon=
+t-size:15px; line-height:1.4'><a href=3D"https://www.quora.com/qemail/track=
+_click?al_imp=3DeyJ0eXBlIjogMzMsICJoYXNoIjogIjB8NnwxfDIyMTExNDA2NSJ9&amp;al=
+_pri=3D0&amp;aoid=3DYXZdyZxi6FB&amp;aoty=3D1&amp;aty=3D4&amp;cp=3D6&amp;ct=
+=3D1660617544880003&amp;et=3D130&amp;id=3Dfe2ec86ef7b14dfbaab21c2269fb7837&=
+amp;source=3D7&amp;src=3D1&amp;st=3D1660617544904913&amp;stories=3D1_LFq1Tp=
+SdcDH%7C1_z8IXKjclfCd%7C1_9o2fZnEtKLr%7C1_jPNDLSjTssj%7C1_F1ycInnHg68%7C1_Y=
+XZdyZxi6FB%7C1_yWYYJnJsU%7C1_Mol1dLDbXcY%7C1_q5MhVWCzfQ8%7C1_VlbooeWEwuF&am=
+p;ty=3D1&amp;ty_data=3DYXZdyZxi6FB&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=
+=3D"color:#333; text-decoration:none"><div id=3D"wneHM9HE70"><div class=3D"=
+truncated_q_text truncated_para_breaks TruncatedAnswerForEmail TruncatedAns=
+wer TruncatedQText TruncatedAnswerForDigestEmail" id=3D"__w2_wneHM9HE71_tru=
+ncated" style=3D"line-height:1.6">
+<div class=3D"truncated_thumbnail_holder thumbnail_small thumbnail_featured=
+_image" style=3D"display:inline; float:right"><span class=3D"rendered_qtext=
+" style=3D"word-break:break-word"><div class=3D"ui_qtext_image_outer"><div =
+class=3D"qtext_image_wrapper"><img class=3D"landscape qtext_image zoomable_=
+in zoomable_in_feed" src=3D"https://qph.fs.quoracdn.net/main-qimg-d6c4e4714=
+9d26fc57abd93092980d9eb" master_src=3D"https://qph.fs.quoracdn.net/main-qim=
+g-ce211c94998c8a4f1e15ae39a9f42686" master_w=3D"937" master_h=3D"444" style=
+=3D"-ms-interpolation-mode:bicubic; outline:0; text-decoration:none; border=
+:0; max-width:200px; margin-left:10px; border-style:none; float:left; max-h=
+eight:100px" align=3D"left"></div></div></span></div>
+<span class=3D"rendered_qtext" style=3D"word-break:break-word"><p class=3D"=
+qtext_para u-ltr u-text-align--start" style=3D"margin:1em 0; line-height:1.=
+6">Of course, The only thing you have to do to be safe is to receive Monies=
+ from recognized sources with it, for example, Fiverr, Upwork, Click Bank, =
+JvZoo, Rakuten, and other...</p></span> <a class=3D"read_more_blue" href=3D=
+"https://www.quora.com/qemail/track_click?al_imp=3DeyJ0eXBlIjogMzMsICJoYXNo=
+IjogIjB8NnwxfDIyMTExNDA2NSJ9&amp;al_pri=3D8&amp;aoid=3DYXZdyZxi6FB&amp;aoty=
+=3D1&amp;aty=3D4&amp;cp=3D6&amp;ct=3D1660617544880003&amp;et=3D130&amp;id=
+=3Dfe2ec86ef7b14dfbaab21c2269fb7837&amp;source=3D7&amp;src=3D1&amp;st=3D166=
+0617544904913&amp;stories=3D1_LFq1TpSdcDH%7C1_z8IXKjclfCd%7C1_9o2fZnEtKLr%7=
+C1_jPNDLSjTssj%7C1_F1ycInnHg68%7C1_YXZdyZxi6FB%7C1_yWYYJnJsU%7C1_Mol1dLDbXc=
+Y%7C1_q5MhVWCzfQ8%7C1_VlbooeWEwuF&amp;ty=3D1&amp;ty_data=3DYXZdyZxi6FB&amp;=
+uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"color:#168de9; text-decoration:none">=
+Read More =C2=BB</a>
+</div></div>
+<div class=3D"non_quora_share_embed_wrapper"><div class=3D"item_metadata"><=
+a href=3D"https://www.quora.com/qemail/track_click?al_imp=3DeyJ0eXBlIjogMzM=
+sICJoYXNoIjogIjB8NnwxfDIyMTExNDA2NSJ9&amp;al_pri=3D0&amp;aoid=3DYXZdyZxi6FB=
+&amp;aoty=3D1&amp;aty=3D4&amp;cp=3D6&amp;ct=3D1660617544880003&amp;et=3D130=
+&amp;id=3Dfe2ec86ef7b14dfbaab21c2269fb7837&amp;source=3D7&amp;src=3D1&amp;s=
+t=3D1660617544904913&amp;stories=3D1_LFq1TpSdcDH%7C1_z8IXKjclfCd%7C1_9o2fZn=
+EtKLr%7C1_jPNDLSjTssj%7C1_F1ycInnHg68%7C1_YXZdyZxi6FB%7C1_yWYYJnJsU%7C1_Mol=
+1dLDbXcY%7C1_q5MhVWCzfQ8%7C1_VlbooeWEwuF&amp;ty=3D1&amp;ty_data=3DYXZdyZxi6=
+FB&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"color:#2b6dad; text-decoration=
+:none"></a></div></div></a></td></tr>
+</tbody></table></td></tr>
+</tbody></table></td></tr></tbody></table>
+</div></div>
+<div class=3D"no_para_breaks"><div data-clog-trigger=3D"impression" data-cl=
+og-metadata=3D'{"action_log_target": {"type": 33, "hash": "0|7|1|260386048"=
+}}' data-clog-event-type=3D"ActionLogImpression" id=3D"__w2_wneHM9HE28_acti=
+onable">
+<table class=3D"polish_separator_wrapper" style=3D"border-collapse:collapse=
+; mso-table-lspace:0; mso-table-rspace:0; border:0; cellpadding:0; width:10=
+0%" width=3D"100%"><tbody><tr>
+<td style=3D"border-collapse:collapse"></td>
+<td class=3D"polish_separator" style=3D"border-collapse:collapse; border-bo=
+ttom:1px solid #eee; height:1px; width:140px" height=3D"1" width=3D"140"></=
+td>
+<td style=3D"border-collapse:collapse"></td>
+</tr></tbody></table>
+<table class=3D"story_wrapper" cellspacing=3D"0" border=3D"0" style=3D"bord=
+er-collapse:collapse; mso-table-lspace:0; mso-table-rspace:0; width:100%" w=
+idth=3D"100%"><tbody><tr><td class=3D"story " style=3D"border-collapse:coll=
+apse; border-bottom:0; padding:20px 0"><table class=3D"digest_story_wrapper=
+" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"border-collapse=
+:collapse; mso-table-lspace:0; mso-table-rspace:0; width:100%" width=3D"100=
+%"><tbody>
+<tr><td class=3D"reason" style=3D"border-collapse:collapse; padding-bottom:=
+4px"><table class=3D"digest_reason" cellpadding=3D"0" cellspacing=3D"0" bor=
+der=3D"0" style=3D"border-collapse:collapse; mso-table-lspace:0; mso-table-=
+rspace:0"><tbody><tr><td valign=3D"top" style=3D"border-collapse:collapse">=
+</td></tr></tbody></table></td></tr>
+<tr><td style=3D"border-collapse:collapse"><a class=3D"question_text" href=
+=3D"https://www.quora.com/qemail/track_click?al_imp=3DeyJ0eXBlIjogMzMsICJoY=
+XNoIjogIjB8N3wxfDI2MDM4NjA0OCJ9&amp;al_pri=3D1&amp;aoid=3D1DNLZpmndTh&amp;a=
+oty=3D2&amp;aty=3D4&amp;cp=3D7&amp;ct=3D1660617544880003&amp;et=3D130&amp;i=
+d=3Dfe2ec86ef7b14dfbaab21c2269fb7837&amp;source=3D7&amp;src=3D1&amp;st=3D16=
+60617544904913&amp;stories=3D1_LFq1TpSdcDH%7C1_z8IXKjclfCd%7C1_9o2fZnEtKLr%=
+7C1_jPNDLSjTssj%7C1_F1ycInnHg68%7C1_YXZdyZxi6FB%7C1_yWYYJnJsU%7C1_Mol1dLDbX=
+cY%7C1_q5MhVWCzfQ8%7C1_VlbooeWEwuF&amp;ty=3D1&amp;ty_data=3DyWYYJnJsU&amp;u=
+id=3Dm36BZ4XFnST&amp;v=3D0" style=3D"color:#333; text-decoration:none; disp=
+lay:block; font-size:19px; font-weight:bold; letter-spacing:-0.5px; line-he=
+ight:1.4"><span class=3D"rendered_qtext" style=3D"word-break:break-word">Wh=
+at is the time for pending payment approval on Payoneer, my account is appr=
+oved and I have done many transactions through Payoneer, but this time it's=
+ in pending stage. its going to be 2 days. what should I do?</span></a></td=
+></tr>
+<tr><td style=3D"border-collapse:collapse"><table class=3D"item_content_wra=
+pper" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"border-coll=
+apse:collapse; mso-table-lspace:0; mso-table-rspace:0; width:100%" width=3D=
+"100%"><tbody>
+<tr><td class=3D"content_header metadata" style=3D"border-collapse:collapse=
+; padding:8px 0"><table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" st=
+yle=3D"border-collapse:collapse; mso-table-lspace:0; mso-table-rspace:0"><t=
+body><tr>
+<td class=3D"content_header_photo" style=3D"border-collapse:collapse; verti=
+cal-align:top" valign=3D"top"><a href=3D"https://www.quora.com/qemail/track=
+_click?aoid=3DYyRA7Xdeyvr&amp;aoty=3D3&amp;aty=3D4&amp;cp=3D7&amp;ct=3D1660=
+617544880003&amp;et=3D130&amp;id=3Dfe2ec86ef7b14dfbaab21c2269fb7837&amp;sou=
+rce=3D7&amp;src=3D1&amp;st=3D1660617544904913&amp;stories=3D1_LFq1TpSdcDH%7=
+C1_z8IXKjclfCd%7C1_9o2fZnEtKLr%7C1_jPNDLSjTssj%7C1_F1ycInnHg68%7C1_YXZdyZxi=
+6FB%7C1_yWYYJnJsU%7C1_Mol1dLDbXcY%7C1_q5MhVWCzfQ8%7C1_VlbooeWEwuF&amp;ty=3D=
+1&amp;ty_data=3DyWYYJnJsU&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"color:#=
+2b6dad; text-decoration:none"><div id=3D"wneHM9HE119">
+<div class=3D"hover_menu hidden white_bg show_nub" id=3D"__w2_wneHM9HE120_m=
+enu"><div class=3D"hover_menu_contents" id=3D"__w2_wneHM9HE120_menu_content=
+s"> </div></div>
+<span class=3D"photo_tooltip IdentityPhoto Photo HoverMenu" id=3D"__w2_wneH=
+M9HE120_link"><img class=3D"profile_photo_img" src=3D"https://qph.fs.quorac=
+dn.net/main-thumb-206215644-50-nhnvwonshcesbsjqmmacrgwkmecpeqlq.jpeg" alt=
+=3D"Adam Gilo" style=3D"-ms-interpolation-mode:bicubic; outline:0; text-dec=
+oration:none; border:0; border-radius:100px; display:block; height:40px; wi=
+dth:40px; border-style:none" height=3D"40" width=3D"40"></span>
+</div></a></td>
+<td class=3D"content_header_text" style=3D"border-collapse:collapse; paddin=
+g-left:8px; color:#333"><table cellpadding=3D"0" cellspacing=3D"0" border=
+=3D"0" style=3D"border-collapse:collapse; mso-table-lspace:0; mso-table-rsp=
+ace:0"><tbody>
+<tr><td style=3D"border-collapse:collapse">
+<a class=3D"user_link" href=3D"https://www.quora.com/qemail/track_click?aoi=
+d=3DYyRA7Xdeyvr&amp;aoty=3D3&amp;aty=3D4&amp;cp=3D7&amp;ct=3D16606175448800=
+03&amp;et=3D130&amp;id=3Dfe2ec86ef7b14dfbaab21c2269fb7837&amp;source=3D7&am=
+p;src=3D1&amp;st=3D1660617544904913&amp;stories=3D1_LFq1TpSdcDH%7C1_z8IXKjc=
+lfCd%7C1_9o2fZnEtKLr%7C1_jPNDLSjTssj%7C1_F1ycInnHg68%7C1_YXZdyZxi6FB%7C1_yW=
+YYJnJsU%7C1_Mol1dLDbXcY%7C1_q5MhVWCzfQ8%7C1_VlbooeWEwuF&amp;ty=3D1&amp;ty_d=
+ata=3DyWYYJnJsU&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"color:#333; text-=
+decoration:none; font-weight:bold; line-height:1.4; font-size:15px">Adam Gi=
+lo</a><span style=3D"font-size:15px; line-height:1.4">, works at Payoneer</=
+span>
+</td></tr>
+<tr><td class=3D"answer_details" style=3D"border-collapse:collapse; color:#=
+999; font-size:13px"><a href=3D"https://www.quora.com/qemail/track_click?ao=
+id=3DyWYYJnJsU&amp;aoty=3D1&amp;aty=3D4&amp;cp=3D7&amp;ct=3D166061754488000=
+3&amp;et=3D130&amp;id=3Dfe2ec86ef7b14dfbaab21c2269fb7837&amp;source=3D7&amp=
+;src=3D1&amp;st=3D1660617544904913&amp;stories=3D1_LFq1TpSdcDH%7C1_z8IXKjcl=
+fCd%7C1_9o2fZnEtKLr%7C1_jPNDLSjTssj%7C1_F1ycInnHg68%7C1_YXZdyZxi6FB%7C1_yWY=
+YJnJsU%7C1_Mol1dLDbXcY%7C1_q5MhVWCzfQ8%7C1_VlbooeWEwuF&amp;ty=3D1&amp;ty_da=
+ta=3DyWYYJnJsU&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"color:#999; text-d=
+ecoration:none">Written Jan 17, 2021</a></td></tr>
+</tbody></table></td>
+</tr></tbody></table></td></tr>
+<tr><td class=3D"item_content" style=3D'border-collapse:collapse; color:#33=
+3; display:block; font-family:-apple-system, BlinkMacSystemFont, "Segoe UI"=
+, Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif; fon=
+t-size:15px; line-height:1.4'><a href=3D"https://www.quora.com/qemail/track=
+_click?al_imp=3DeyJ0eXBlIjogMzMsICJoYXNoIjogIjB8N3wxfDI2MDM4NjA0OCJ9&amp;al=
+_pri=3D0&amp;aoid=3DyWYYJnJsU&amp;aoty=3D1&amp;aty=3D4&amp;cp=3D7&amp;ct=3D=
+1660617544880003&amp;et=3D130&amp;id=3Dfe2ec86ef7b14dfbaab21c2269fb7837&amp=
+;source=3D7&amp;src=3D1&amp;st=3D1660617544904913&amp;stories=3D1_LFq1TpSdc=
+DH%7C1_z8IXKjclfCd%7C1_9o2fZnEtKLr%7C1_jPNDLSjTssj%7C1_F1ycInnHg68%7C1_YXZd=
+yZxi6FB%7C1_yWYYJnJsU%7C1_Mol1dLDbXcY%7C1_q5MhVWCzfQ8%7C1_VlbooeWEwuF&amp;t=
+y=3D1&amp;ty_data=3DyWYYJnJsU&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"col=
+or:#333; text-decoration:none"><div id=3D"wneHM9HE72"><div class=3D"truncat=
+ed_q_text truncated_para_breaks TruncatedAnswerForEmail TruncatedAnswer Tru=
+ncatedQText TruncatedAnswerForDigestEmail" id=3D"__w2_wneHM9HE73_truncated"=
+ style=3D"line-height:1.6">
+<span class=3D"rendered_qtext" style=3D"word-break:break-word"><p class=3D"=
+qtext_para u-ltr u-text-align--start" style=3D"margin:1em 0; line-height:1.=
+6">Every payment is subject to review prior to approval. When an extended r=
+eview is being conducted, additional information will be requested prior to=
+ the payment being approv...</p></span> <a class=3D"read_more_blue" href=3D=
+"https://www.quora.com/qemail/track_click?al_imp=3DeyJ0eXBlIjogMzMsICJoYXNo=
+IjogIjB8N3wxfDI2MDM4NjA0OCJ9&amp;al_pri=3D8&amp;aoid=3DyWYYJnJsU&amp;aoty=
+=3D1&amp;aty=3D4&amp;cp=3D7&amp;ct=3D1660617544880003&amp;et=3D130&amp;id=
+=3Dfe2ec86ef7b14dfbaab21c2269fb7837&amp;source=3D7&amp;src=3D1&amp;st=3D166=
+0617544904913&amp;stories=3D1_LFq1TpSdcDH%7C1_z8IXKjclfCd%7C1_9o2fZnEtKLr%7=
+C1_jPNDLSjTssj%7C1_F1ycInnHg68%7C1_YXZdyZxi6FB%7C1_yWYYJnJsU%7C1_Mol1dLDbXc=
+Y%7C1_q5MhVWCzfQ8%7C1_VlbooeWEwuF&amp;ty=3D1&amp;ty_data=3DyWYYJnJsU&amp;ui=
+d=3Dm36BZ4XFnST&amp;v=3D0" style=3D"color:#168de9; text-decoration:none">Re=
+ad More =C2=BB</a>
+</div></div>
+<div class=3D"non_quora_share_embed_wrapper"><div class=3D"item_metadata"><=
+a href=3D"https://www.quora.com/qemail/track_click?al_imp=3DeyJ0eXBlIjogMzM=
+sICJoYXNoIjogIjB8N3wxfDI2MDM4NjA0OCJ9&amp;al_pri=3D0&amp;aoid=3DyWYYJnJsU&a=
+mp;aoty=3D1&amp;aty=3D4&amp;cp=3D7&amp;ct=3D1660617544880003&amp;et=3D130&a=
+mp;id=3Dfe2ec86ef7b14dfbaab21c2269fb7837&amp;source=3D7&amp;src=3D1&amp;st=
+=3D1660617544904913&amp;stories=3D1_LFq1TpSdcDH%7C1_z8IXKjclfCd%7C1_9o2fZnE=
+tKLr%7C1_jPNDLSjTssj%7C1_F1ycInnHg68%7C1_YXZdyZxi6FB%7C1_yWYYJnJsU%7C1_Mol1=
+dLDbXcY%7C1_q5MhVWCzfQ8%7C1_VlbooeWEwuF&amp;ty=3D1&amp;ty_data=3DyWYYJnJsU&=
+amp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"color:#2b6dad; text-decoration:no=
+ne"></a></div></div></a></td></tr>
+</tbody></table></td></tr>
+</tbody></table></td></tr></tbody></table>
+</div></div>
+<div class=3D"no_para_breaks"><div data-clog-trigger=3D"impression" data-cl=
+og-metadata=3D'{"action_log_target": {"type": 33, "hash": "0|8|1|95719532"}=
+}' data-clog-event-type=3D"ActionLogImpression" id=3D"__w2_wneHM9HE29_actio=
+nable">
+<table class=3D"polish_separator_wrapper" style=3D"border-collapse:collapse=
+; mso-table-lspace:0; mso-table-rspace:0; border:0; cellpadding:0; width:10=
+0%" width=3D"100%"><tbody><tr>
+<td style=3D"border-collapse:collapse"></td>
+<td class=3D"polish_separator" style=3D"border-collapse:collapse; border-bo=
+ttom:1px solid #eee; height:1px; width:140px" height=3D"1" width=3D"140"></=
+td>
+<td style=3D"border-collapse:collapse"></td>
+</tr></tbody></table>
+<table class=3D"story_wrapper" cellspacing=3D"0" border=3D"0" style=3D"bord=
+er-collapse:collapse; mso-table-lspace:0; mso-table-rspace:0; width:100%" w=
+idth=3D"100%"><tbody><tr><td class=3D"story " style=3D"border-collapse:coll=
+apse; border-bottom:0; padding:20px 0"><table class=3D"digest_story_wrapper=
+" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"border-collapse=
+:collapse; mso-table-lspace:0; mso-table-rspace:0; width:100%" width=3D"100=
+%"><tbody>
+<tr><td class=3D"reason" style=3D"border-collapse:collapse; padding-bottom:=
+4px"><table class=3D"digest_reason" cellpadding=3D"0" cellspacing=3D"0" bor=
+der=3D"0" style=3D"border-collapse:collapse; mso-table-lspace:0; mso-table-=
+rspace:0"><tbody><tr><td valign=3D"top" style=3D"border-collapse:collapse">=
+</td></tr></tbody></table></td></tr>
+<tr><td style=3D"border-collapse:collapse"><a class=3D"question_text" href=
+=3D"https://www.quora.com/qemail/track_click?al_imp=3DeyJ0eXBlIjogMzMsICJoY=
+XNoIjogIjB8OHwxfDk1NzE5NTMyIn0%3D&amp;al_pri=3D1&amp;aoid=3DYtmgMPZqjMy&amp=
+;aoty=3D2&amp;aty=3D4&amp;cp=3D8&amp;ct=3D1660617544880003&amp;et=3D130&amp=
+;id=3Dfe2ec86ef7b14dfbaab21c2269fb7837&amp;source=3D7&amp;src=3D1&amp;st=3D=
+1660617544904913&amp;stories=3D1_LFq1TpSdcDH%7C1_z8IXKjclfCd%7C1_9o2fZnEtKL=
+r%7C1_jPNDLSjTssj%7C1_F1ycInnHg68%7C1_YXZdyZxi6FB%7C1_yWYYJnJsU%7C1_Mol1dLD=
+bXcY%7C1_q5MhVWCzfQ8%7C1_VlbooeWEwuF&amp;ty=3D1&amp;ty_data=3DMol1dLDbXcY&a=
+mp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"color:#333; text-decoration:none; =
+display:block; font-size:19px; font-weight:bold; letter-spacing:-0.5px; lin=
+e-height:1.4"><span class=3D"rendered_qtext" style=3D"word-break:break-word=
+">How long does a Payoneer application reviewed before being approved?</spa=
+n></a></td></tr>
+<tr><td style=3D"border-collapse:collapse"><table class=3D"item_content_wra=
+pper" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"border-coll=
+apse:collapse; mso-table-lspace:0; mso-table-rspace:0; width:100%" width=3D=
+"100%"><tbody>
+<tr><td class=3D"content_header metadata" style=3D"border-collapse:collapse=
+; padding:8px 0"><table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" st=
+yle=3D"border-collapse:collapse; mso-table-lspace:0; mso-table-rspace:0"><t=
+body><tr>
+<td class=3D"content_header_photo" style=3D"border-collapse:collapse; verti=
+cal-align:top" valign=3D"top"><a href=3D"https://www.quora.com/qemail/track=
+_click?aoid=3Dz0uuDSM7dvW&amp;aoty=3D3&amp;aty=3D4&amp;cp=3D8&amp;ct=3D1660=
+617544880003&amp;et=3D130&amp;id=3Dfe2ec86ef7b14dfbaab21c2269fb7837&amp;sou=
+rce=3D7&amp;src=3D1&amp;st=3D1660617544904913&amp;stories=3D1_LFq1TpSdcDH%7=
+C1_z8IXKjclfCd%7C1_9o2fZnEtKLr%7C1_jPNDLSjTssj%7C1_F1ycInnHg68%7C1_YXZdyZxi=
+6FB%7C1_yWYYJnJsU%7C1_Mol1dLDbXcY%7C1_q5MhVWCzfQ8%7C1_VlbooeWEwuF&amp;ty=3D=
+1&amp;ty_data=3DMol1dLDbXcY&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"color=
+:#2b6dad; text-decoration:none"><div id=3D"wneHM9HE126">
+<div class=3D"hover_menu hidden white_bg show_nub" id=3D"__w2_wneHM9HE127_m=
+enu"><div class=3D"hover_menu_contents" id=3D"__w2_wneHM9HE127_menu_content=
+s"> </div></div>
+<span class=3D"photo_tooltip IdentityPhoto Photo HoverMenu" id=3D"__w2_wneH=
+M9HE127_link"><img class=3D"profile_photo_img" src=3D"https://qph.fs.quorac=
+dn.net/main-thumb-255809089-50-oshvpyrwqzlqzqblyzsjvdcawmfncckv.jpeg" alt=
+=3D"Heron Jain" style=3D"-ms-interpolation-mode:bicubic; outline:0; text-de=
+coration:none; border:0; border-radius:100px; display:block; height:40px; w=
+idth:40px; border-style:none" height=3D"40" width=3D"40"></span>
+</div></a></td>
+<td class=3D"content_header_text" style=3D"border-collapse:collapse; paddin=
+g-left:8px; color:#333"><table cellpadding=3D"0" cellspacing=3D"0" border=
+=3D"0" style=3D"border-collapse:collapse; mso-table-lspace:0; mso-table-rsp=
+ace:0"><tbody>
+<tr><td style=3D"border-collapse:collapse">
+<a class=3D"user_link" href=3D"https://www.quora.com/qemail/track_click?aoi=
+d=3Dz0uuDSM7dvW&amp;aoty=3D3&amp;aty=3D4&amp;cp=3D8&amp;ct=3D16606175448800=
+03&amp;et=3D130&amp;id=3Dfe2ec86ef7b14dfbaab21c2269fb7837&amp;source=3D7&am=
+p;src=3D1&amp;st=3D1660617544904913&amp;stories=3D1_LFq1TpSdcDH%7C1_z8IXKjc=
+lfCd%7C1_9o2fZnEtKLr%7C1_jPNDLSjTssj%7C1_F1ycInnHg68%7C1_YXZdyZxi6FB%7C1_yW=
+YYJnJsU%7C1_Mol1dLDbXcY%7C1_q5MhVWCzfQ8%7C1_VlbooeWEwuF&amp;ty=3D1&amp;ty_d=
+ata=3DMol1dLDbXcY&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"color:#333; tex=
+t-decoration:none; font-weight:bold; line-height:1.4; font-size:15px">Heron=
+ Jain</a><span style=3D"font-size:15px; line-height:1.4">, works at Self-Em=
+ployment</span>
+</td></tr>
+<tr><td class=3D"answer_details" style=3D"border-collapse:collapse; color:#=
+999; font-size:13px"><a href=3D"https://www.quora.com/qemail/track_click?ao=
+id=3DMol1dLDbXcY&amp;aoty=3D1&amp;aty=3D4&amp;cp=3D8&amp;ct=3D1660617544880=
+003&amp;et=3D130&amp;id=3Dfe2ec86ef7b14dfbaab21c2269fb7837&amp;source=3D7&a=
+mp;src=3D1&amp;st=3D1660617544904913&amp;stories=3D1_LFq1TpSdcDH%7C1_z8IXKj=
+clfCd%7C1_9o2fZnEtKLr%7C1_jPNDLSjTssj%7C1_F1ycInnHg68%7C1_YXZdyZxi6FB%7C1_y=
+WYYJnJsU%7C1_Mol1dLDbXcY%7C1_q5MhVWCzfQ8%7C1_VlbooeWEwuF&amp;ty=3D1&amp;ty_=
+data=3DMol1dLDbXcY&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"color:#999; te=
+xt-decoration:none">Written Aug 17, 2018</a></td></tr>
+</tbody></table></td>
+</tr></tbody></table></td></tr>
+<tr><td class=3D"item_content" style=3D'border-collapse:collapse; color:#33=
+3; display:block; font-family:-apple-system, BlinkMacSystemFont, "Segoe UI"=
+, Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif; fon=
+t-size:15px; line-height:1.4'><a href=3D"https://www.quora.com/qemail/track=
+_click?al_imp=3DeyJ0eXBlIjogMzMsICJoYXNoIjogIjB8OHwxfDk1NzE5NTMyIn0%3D&amp;=
+al_pri=3D0&amp;aoid=3DMol1dLDbXcY&amp;aoty=3D1&amp;aty=3D4&amp;cp=3D8&amp;c=
+t=3D1660617544880003&amp;et=3D130&amp;id=3Dfe2ec86ef7b14dfbaab21c2269fb7837=
+&amp;source=3D7&amp;src=3D1&amp;st=3D1660617544904913&amp;stories=3D1_LFq1T=
+pSdcDH%7C1_z8IXKjclfCd%7C1_9o2fZnEtKLr%7C1_jPNDLSjTssj%7C1_F1ycInnHg68%7C1_=
+YXZdyZxi6FB%7C1_yWYYJnJsU%7C1_Mol1dLDbXcY%7C1_q5MhVWCzfQ8%7C1_VlbooeWEwuF&a=
+mp;ty=3D1&amp;ty_data=3DMol1dLDbXcY&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=
+=3D"color:#333; text-decoration:none"><div id=3D"wneHM9HE74"><div class=3D"=
+truncated_para_breaks expanded_q_text TruncatedAnswerForEmail TruncatedAnsw=
+er TruncatedQText TruncatedAnswerForDigestEmail" id=3D"__w2_wneHM9HE75_trun=
+cated">
+<span class=3D"rendered_qtext" style=3D"word-break:break-word"><p class=3D"=
+qtext_para u-ltr u-text-align--start" style=3D"margin:1em 0; line-height:1.=
+6">Mine took exactly 17 days.</p>
+<p class=3D"qtext_para u-ltr u-text-align--start" style=3D"margin:1em 0; li=
+ne-height:1.6">It takes less than 17 days, I delayed the process myself.</p>
+<p class=3D"qtext_para u-ltr u-text-align--start" style=3D"margin:1em 0; li=
+ne-height:1.6">keep waiting or you can contact them.</p>
+<p class=3D"qtext_para u-ltr u-text-align--start" style=3D"margin:1em 0; li=
+ne-height:1.6">They're friendly.</p></span> <a class=3D"read_more_blue" hre=
+f=3D"https://www.quora.com/qemail/track_click?al_imp=3DeyJ0eXBlIjogMzMsICJo=
+YXNoIjogIjB8OHwxfDk1NzE5NTMyIn0%3D&amp;al_pri=3D8&amp;aoid=3DMol1dLDbXcY&am=
+p;aoty=3D1&amp;aty=3D4&amp;cp=3D8&amp;ct=3D1660617544880003&amp;et=3D130&am=
+p;id=3Dfe2ec86ef7b14dfbaab21c2269fb7837&amp;source=3D7&amp;src=3D1&amp;st=
+=3D1660617544904913&amp;stories=3D1_LFq1TpSdcDH%7C1_z8IXKjclfCd%7C1_9o2fZnE=
+tKLr%7C1_jPNDLSjTssj%7C1_F1ycInnHg68%7C1_YXZdyZxi6FB%7C1_yWYYJnJsU%7C1_Mol1=
+dLDbXcY%7C1_q5MhVWCzfQ8%7C1_VlbooeWEwuF&amp;ty=3D1&amp;ty_data=3DMol1dLDbXc=
+Y&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"color:#168de9; text-decoration:=
+none">Read More =C2=BB</a>
+</div></div>
+<div class=3D"non_quora_share_embed_wrapper"><div class=3D"item_metadata"><=
+a href=3D"https://www.quora.com/qemail/track_click?al_imp=3DeyJ0eXBlIjogMzM=
+sICJoYXNoIjogIjB8OHwxfDk1NzE5NTMyIn0%3D&amp;al_pri=3D0&amp;aoid=3DMol1dLDbX=
+cY&amp;aoty=3D1&amp;aty=3D4&amp;cp=3D8&amp;ct=3D1660617544880003&amp;et=3D1=
+30&amp;id=3Dfe2ec86ef7b14dfbaab21c2269fb7837&amp;source=3D7&amp;src=3D1&amp=
+;st=3D1660617544904913&amp;stories=3D1_LFq1TpSdcDH%7C1_z8IXKjclfCd%7C1_9o2f=
+ZnEtKLr%7C1_jPNDLSjTssj%7C1_F1ycInnHg68%7C1_YXZdyZxi6FB%7C1_yWYYJnJsU%7C1_M=
+ol1dLDbXcY%7C1_q5MhVWCzfQ8%7C1_VlbooeWEwuF&amp;ty=3D1&amp;ty_data=3DMol1dLD=
+bXcY&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"color:#2b6dad; text-decorati=
+on:none"></a></div></div></a></td></tr>
+</tbody></table></td></tr>
+</tbody></table></td></tr></tbody></table>
+</div></div>
+<div class=3D"no_para_breaks"><div data-clog-trigger=3D"impression" data-cl=
+og-metadata=3D'{"action_log_target": {"type": 33, "hash": "0|9|1|268807337"=
+}}' data-clog-event-type=3D"ActionLogImpression" id=3D"__w2_wneHM9HE30_acti=
+onable">
+<table class=3D"polish_separator_wrapper" style=3D"border-collapse:collapse=
+; mso-table-lspace:0; mso-table-rspace:0; border:0; cellpadding:0; width:10=
+0%" width=3D"100%"><tbody><tr>
+<td style=3D"border-collapse:collapse"></td>
+<td class=3D"polish_separator" style=3D"border-collapse:collapse; border-bo=
+ttom:1px solid #eee; height:1px; width:140px" height=3D"1" width=3D"140"></=
+td>
+<td style=3D"border-collapse:collapse"></td>
+</tr></tbody></table>
+<table class=3D"story_wrapper" cellspacing=3D"0" border=3D"0" style=3D"bord=
+er-collapse:collapse; mso-table-lspace:0; mso-table-rspace:0; width:100%" w=
+idth=3D"100%"><tbody><tr><td class=3D"story " style=3D"border-collapse:coll=
+apse; border-bottom:0; padding:20px 0"><table class=3D"digest_story_wrapper=
+" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"border-collapse=
+:collapse; mso-table-lspace:0; mso-table-rspace:0; width:100%" width=3D"100=
+%"><tbody>
+<tr><td class=3D"reason" style=3D"border-collapse:collapse; padding-bottom:=
+4px"><table class=3D"digest_reason" cellpadding=3D"0" cellspacing=3D"0" bor=
+der=3D"0" style=3D"border-collapse:collapse; mso-table-lspace:0; mso-table-=
+rspace:0"><tbody><tr><td valign=3D"top" style=3D"border-collapse:collapse">=
+</td></tr></tbody></table></td></tr>
+<tr><td style=3D"border-collapse:collapse"><a class=3D"question_text" href=
+=3D"https://www.quora.com/qemail/track_click?al_imp=3DeyJ0eXBlIjogMzMsICJoY=
+XNoIjogIjB8OXwxfDI2ODgwNzMzNyJ9&amp;al_pri=3D1&amp;aoid=3DmyQgairyvwq&amp;a=
+oty=3D2&amp;aty=3D4&amp;cp=3D9&amp;ct=3D1660617544880003&amp;et=3D130&amp;i=
+d=3Dfe2ec86ef7b14dfbaab21c2269fb7837&amp;source=3D7&amp;src=3D1&amp;st=3D16=
+60617544904913&amp;stories=3D1_LFq1TpSdcDH%7C1_z8IXKjclfCd%7C1_9o2fZnEtKLr%=
+7C1_jPNDLSjTssj%7C1_F1ycInnHg68%7C1_YXZdyZxi6FB%7C1_yWYYJnJsU%7C1_Mol1dLDbX=
+cY%7C1_q5MhVWCzfQ8%7C1_VlbooeWEwuF&amp;ty=3D1&amp;ty_data=3Dq5MhVWCzfQ8&amp=
+;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"color:#333; text-decoration:none; di=
+splay:block; font-size:19px; font-weight:bold; letter-spacing:-0.5px; line-=
+height:1.4"><span class=3D"rendered_qtext" style=3D"word-break:break-word">=
+Recently, I have created Payoneer account for Fiverr. I uploaded necessary =
+documents for verifying the Payoneer account and is on under review. Can I =
+withdraw from Fiverr?</span></a></td></tr>
+<tr><td style=3D"border-collapse:collapse"><table class=3D"item_content_wra=
+pper" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"border-coll=
+apse:collapse; mso-table-lspace:0; mso-table-rspace:0; width:100%" width=3D=
+"100%"><tbody>
+<tr><td class=3D"content_header metadata" style=3D"border-collapse:collapse=
+; padding:8px 0"><table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" st=
+yle=3D"border-collapse:collapse; mso-table-lspace:0; mso-table-rspace:0"><t=
+body><tr>
+<td class=3D"content_header_photo" style=3D"border-collapse:collapse; verti=
+cal-align:top" valign=3D"top"><a href=3D"https://www.quora.com/qemail/track=
+_click?aoid=3DRKoSJdgMCru&amp;aoty=3D3&amp;aty=3D4&amp;cp=3D9&amp;ct=3D1660=
+617544880003&amp;et=3D130&amp;id=3Dfe2ec86ef7b14dfbaab21c2269fb7837&amp;sou=
+rce=3D7&amp;src=3D1&amp;st=3D1660617544904913&amp;stories=3D1_LFq1TpSdcDH%7=
+C1_z8IXKjclfCd%7C1_9o2fZnEtKLr%7C1_jPNDLSjTssj%7C1_F1ycInnHg68%7C1_YXZdyZxi=
+6FB%7C1_yWYYJnJsU%7C1_Mol1dLDbXcY%7C1_q5MhVWCzfQ8%7C1_VlbooeWEwuF&amp;ty=3D=
+1&amp;ty_data=3Dq5MhVWCzfQ8&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"color=
+:#2b6dad; text-decoration:none"><div id=3D"wneHM9HE133">
+<div class=3D"hover_menu hidden white_bg show_nub" id=3D"__w2_wneHM9HE134_m=
+enu"><div class=3D"hover_menu_contents" id=3D"__w2_wneHM9HE134_menu_content=
+s"> </div></div>
+<span class=3D"photo_tooltip IdentityPhoto Photo HoverMenu" id=3D"__w2_wneH=
+M9HE134_link"><img class=3D"profile_photo_img" src=3D"https://qph.fs.quorac=
+dn.net/main-thumb-120121522-50-zaszkchbcfhreuiwblxpnuhgwjnyaymn.jpeg" alt=
+=3D"Tauseef Abbas" style=3D"-ms-interpolation-mode:bicubic; outline:0; text=
+-decoration:none; border:0; border-radius:100px; display:block; height:40px=
+; width:40px; border-style:none" height=3D"40" width=3D"40"></span>
+</div></a></td>
+<td class=3D"content_header_text" style=3D"border-collapse:collapse; paddin=
+g-left:8px; color:#333"><table cellpadding=3D"0" cellspacing=3D"0" border=
+=3D"0" style=3D"border-collapse:collapse; mso-table-lspace:0; mso-table-rsp=
+ace:0"><tbody>
+<tr><td style=3D"border-collapse:collapse">
+<a class=3D"user_link" href=3D"https://www.quora.com/qemail/track_click?aoi=
+d=3DRKoSJdgMCru&amp;aoty=3D3&amp;aty=3D4&amp;cp=3D9&amp;ct=3D16606175448800=
+03&amp;et=3D130&amp;id=3Dfe2ec86ef7b14dfbaab21c2269fb7837&amp;source=3D7&am=
+p;src=3D1&amp;st=3D1660617544904913&amp;stories=3D1_LFq1TpSdcDH%7C1_z8IXKjc=
+lfCd%7C1_9o2fZnEtKLr%7C1_jPNDLSjTssj%7C1_F1ycInnHg68%7C1_YXZdyZxi6FB%7C1_yW=
+YYJnJsU%7C1_Mol1dLDbXcY%7C1_q5MhVWCzfQ8%7C1_VlbooeWEwuF&amp;ty=3D1&amp;ty_d=
+ata=3Dq5MhVWCzfQ8&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"color:#333; tex=
+t-decoration:none; font-weight:bold; line-height:1.4; font-size:15px">Tause=
+ef Abbas</a><span style=3D"font-size:15px; line-height:1.4">, Content Write=
+r  at Upwork (2020-present)</span>
+</td></tr>
+<tr><td class=3D"answer_details" style=3D"border-collapse:collapse; color:#=
+999; font-size:13px"><a href=3D"https://www.quora.com/qemail/track_click?ao=
+id=3Dq5MhVWCzfQ8&amp;aoty=3D1&amp;aty=3D4&amp;cp=3D9&amp;ct=3D1660617544880=
+003&amp;et=3D130&amp;id=3Dfe2ec86ef7b14dfbaab21c2269fb7837&amp;source=3D7&a=
+mp;src=3D1&amp;st=3D1660617544904913&amp;stories=3D1_LFq1TpSdcDH%7C1_z8IXKj=
+clfCd%7C1_9o2fZnEtKLr%7C1_jPNDLSjTssj%7C1_F1ycInnHg68%7C1_YXZdyZxi6FB%7C1_y=
+WYYJnJsU%7C1_Mol1dLDbXcY%7C1_q5MhVWCzfQ8%7C1_VlbooeWEwuF&amp;ty=3D1&amp;ty_=
+data=3Dq5MhVWCzfQ8&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"color:#999; te=
+xt-decoration:none">Written Mar 5, 2021</a></td></tr>
+</tbody></table></td>
+</tr></tbody></table></td></tr>
+<tr><td class=3D"item_content" style=3D'border-collapse:collapse; color:#33=
+3; display:block; font-family:-apple-system, BlinkMacSystemFont, "Segoe UI"=
+, Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif; fon=
+t-size:15px; line-height:1.4'><a href=3D"https://www.quora.com/qemail/track=
+_click?al_imp=3DeyJ0eXBlIjogMzMsICJoYXNoIjogIjB8OXwxfDI2ODgwNzMzNyJ9&amp;al=
+_pri=3D0&amp;aoid=3Dq5MhVWCzfQ8&amp;aoty=3D1&amp;aty=3D4&amp;cp=3D9&amp;ct=
+=3D1660617544880003&amp;et=3D130&amp;id=3Dfe2ec86ef7b14dfbaab21c2269fb7837&=
+amp;source=3D7&amp;src=3D1&amp;st=3D1660617544904913&amp;stories=3D1_LFq1Tp=
+SdcDH%7C1_z8IXKjclfCd%7C1_9o2fZnEtKLr%7C1_jPNDLSjTssj%7C1_F1ycInnHg68%7C1_Y=
+XZdyZxi6FB%7C1_yWYYJnJsU%7C1_Mol1dLDbXcY%7C1_q5MhVWCzfQ8%7C1_VlbooeWEwuF&am=
+p;ty=3D1&amp;ty_data=3Dq5MhVWCzfQ8&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=
+=3D"color:#333; text-decoration:none"><div id=3D"wneHM9HE76"><div class=3D"=
+truncated_para_breaks expanded_q_text TruncatedAnswerForEmail TruncatedAnsw=
+er TruncatedQText TruncatedAnswerForDigestEmail" id=3D"__w2_wneHM9HE77_trun=
+cated">
+<span class=3D"rendered_qtext" style=3D"word-break:break-word"><p class=3D"=
+qtext_para u-ltr u-text-align--start" style=3D"margin:1em 0; line-height:1.=
+6">=E2=84=96. No. Until your account isn't confirmed and active, you can't =
+withdraw money to that account.</p></span> <a class=3D"read_more_blue" href=
+=3D"https://www.quora.com/qemail/track_click?al_imp=3DeyJ0eXBlIjogMzMsICJoY=
+XNoIjogIjB8OXwxfDI2ODgwNzMzNyJ9&amp;al_pri=3D8&amp;aoid=3Dq5MhVWCzfQ8&amp;a=
+oty=3D1&amp;aty=3D4&amp;cp=3D9&amp;ct=3D1660617544880003&amp;et=3D130&amp;i=
+d=3Dfe2ec86ef7b14dfbaab21c2269fb7837&amp;source=3D7&amp;src=3D1&amp;st=3D16=
+60617544904913&amp;stories=3D1_LFq1TpSdcDH%7C1_z8IXKjclfCd%7C1_9o2fZnEtKLr%=
+7C1_jPNDLSjTssj%7C1_F1ycInnHg68%7C1_YXZdyZxi6FB%7C1_yWYYJnJsU%7C1_Mol1dLDbX=
+cY%7C1_q5MhVWCzfQ8%7C1_VlbooeWEwuF&amp;ty=3D1&amp;ty_data=3Dq5MhVWCzfQ8&amp=
+;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"color:#168de9; text-decoration:none"=
+>Read More =C2=BB</a>
+</div></div>
+<div class=3D"non_quora_share_embed_wrapper"><div class=3D"item_metadata"><=
+a href=3D"https://www.quora.com/qemail/track_click?al_imp=3DeyJ0eXBlIjogMzM=
+sICJoYXNoIjogIjB8OXwxfDI2ODgwNzMzNyJ9&amp;al_pri=3D0&amp;aoid=3Dq5MhVWCzfQ8=
+&amp;aoty=3D1&amp;aty=3D4&amp;cp=3D9&amp;ct=3D1660617544880003&amp;et=3D130=
+&amp;id=3Dfe2ec86ef7b14dfbaab21c2269fb7837&amp;source=3D7&amp;src=3D1&amp;s=
+t=3D1660617544904913&amp;stories=3D1_LFq1TpSdcDH%7C1_z8IXKjclfCd%7C1_9o2fZn=
+EtKLr%7C1_jPNDLSjTssj%7C1_F1ycInnHg68%7C1_YXZdyZxi6FB%7C1_yWYYJnJsU%7C1_Mol=
+1dLDbXcY%7C1_q5MhVWCzfQ8%7C1_VlbooeWEwuF&amp;ty=3D1&amp;ty_data=3Dq5MhVWCzf=
+Q8&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"color:#2b6dad; text-decoration=
+:none"></a></div></div></a></td></tr>
+</tbody></table></td></tr>
+</tbody></table></td></tr></tbody></table>
+</div></div>
+<div class=3D"no_para_breaks"><div data-clog-trigger=3D"impression" data-cl=
+og-metadata=3D'{"action_log_target": {"type": 33, "hash": "0|10|1|243464190=
+"}}' data-clog-event-type=3D"ActionLogImpression" id=3D"__w2_wneHM9HE31_act=
+ionable">
+<table class=3D"polish_separator_wrapper" style=3D"border-collapse:collapse=
+; mso-table-lspace:0; mso-table-rspace:0; border:0; cellpadding:0; width:10=
+0%" width=3D"100%"><tbody><tr>
+<td style=3D"border-collapse:collapse"></td>
+<td class=3D"polish_separator" style=3D"border-collapse:collapse; border-bo=
+ttom:1px solid #eee; height:1px; width:140px" height=3D"1" width=3D"140"></=
+td>
+<td style=3D"border-collapse:collapse"></td>
+</tr></tbody></table>
+<table class=3D"story_wrapper" cellspacing=3D"0" border=3D"0" style=3D"bord=
+er-collapse:collapse; mso-table-lspace:0; mso-table-rspace:0; width:100%" w=
+idth=3D"100%"><tbody><tr><td class=3D"story " style=3D"border-collapse:coll=
+apse; border-bottom:0; padding:20px 0"><table class=3D"digest_story_wrapper=
+" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"border-collapse=
+:collapse; mso-table-lspace:0; mso-table-rspace:0; width:100%" width=3D"100=
+%"><tbody>
+<tr><td class=3D"reason" style=3D"border-collapse:collapse; padding-bottom:=
+4px"><table class=3D"digest_reason" cellpadding=3D"0" cellspacing=3D"0" bor=
+der=3D"0" style=3D"border-collapse:collapse; mso-table-lspace:0; mso-table-=
+rspace:0"><tbody><tr><td valign=3D"top" style=3D"border-collapse:collapse">=
+</td></tr></tbody></table></td></tr>
+<tr><td style=3D"border-collapse:collapse"><a class=3D"question_text" href=
+=3D"https://www.quora.com/qemail/track_click?al_imp=3DeyJ0eXBlIjogMzMsICJoY=
+XNoIjogIjB8MTB8MXwyNDM0NjQxOTAifQ%3D%3D&amp;al_pri=3D1&amp;aoid=3DqV5WQeclM=
+Oy&amp;aoty=3D2&amp;aty=3D4&amp;cp=3D10&amp;ct=3D1660617544880003&amp;et=3D=
+130&amp;id=3Dfe2ec86ef7b14dfbaab21c2269fb7837&amp;source=3D7&amp;src=3D1&am=
+p;st=3D1660617544904913&amp;stories=3D1_LFq1TpSdcDH%7C1_z8IXKjclfCd%7C1_9o2=
+fZnEtKLr%7C1_jPNDLSjTssj%7C1_F1ycInnHg68%7C1_YXZdyZxi6FB%7C1_yWYYJnJsU%7C1_=
+Mol1dLDbXcY%7C1_q5MhVWCzfQ8%7C1_VlbooeWEwuF&amp;ty=3D1&amp;ty_data=3DVlbooe=
+WEwuF&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"color:#333; text-decoration=
+:none; display:block; font-size:19px; font-weight:bold; letter-spacing:-0.5=
+px; line-height:1.4"><span class=3D"rendered_qtext" style=3D"word-break:bre=
+ak-word">Is Payoneer stealing people=E2=80=99s money now?</span></a></td></=
+tr>
+<tr><td style=3D"border-collapse:collapse"><table class=3D"item_content_wra=
+pper" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"border-coll=
+apse:collapse; mso-table-lspace:0; mso-table-rspace:0; width:100%" width=3D=
+"100%"><tbody>
+<tr><td class=3D"content_header metadata" style=3D"border-collapse:collapse=
+; padding:8px 0"><table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" st=
+yle=3D"border-collapse:collapse; mso-table-lspace:0; mso-table-rspace:0"><t=
+body><tr>
+<td class=3D"content_header_photo" style=3D"border-collapse:collapse; verti=
+cal-align:top" valign=3D"top"><a href=3D"https://www.quora.com/qemail/track=
+_click?aoid=3Do18UiwHPyfW&amp;aoty=3D3&amp;aty=3D4&amp;cp=3D10&amp;ct=3D166=
+0617544880003&amp;et=3D130&amp;id=3Dfe2ec86ef7b14dfbaab21c2269fb7837&amp;so=
+urce=3D7&amp;src=3D1&amp;st=3D1660617544904913&amp;stories=3D1_LFq1TpSdcDH%=
+7C1_z8IXKjclfCd%7C1_9o2fZnEtKLr%7C1_jPNDLSjTssj%7C1_F1ycInnHg68%7C1_YXZdyZx=
+i6FB%7C1_yWYYJnJsU%7C1_Mol1dLDbXcY%7C1_q5MhVWCzfQ8%7C1_VlbooeWEwuF&amp;ty=
+=3D1&amp;ty_data=3DVlbooeWEwuF&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"co=
+lor:#2b6dad; text-decoration:none"><div id=3D"wneHM9HE140">
+<div class=3D"hover_menu hidden white_bg show_nub" id=3D"__w2_wneHM9HE141_m=
+enu"><div class=3D"hover_menu_contents" id=3D"__w2_wneHM9HE141_menu_content=
+s"> </div></div>
+<span class=3D"photo_tooltip IdentityPhoto Photo HoverMenu" id=3D"__w2_wneH=
+M9HE141_link"><img class=3D"profile_photo_img" src=3D"https://qph.fs.quorac=
+dn.net/main-thumb-232954847-50-zhircyljqvuasimqnirysstialayykwm.jpeg" alt=
+=3D"Mulonda Singongi" style=3D"-ms-interpolation-mode:bicubic; outline:0; t=
+ext-decoration:none; border:0; border-radius:100px; display:block; height:4=
+0px; width:40px; border-style:none" height=3D"40" width=3D"40"></span>
+</div></a></td>
+<td class=3D"content_header_text" style=3D"border-collapse:collapse; paddin=
+g-left:8px; color:#333"><table cellpadding=3D"0" cellspacing=3D"0" border=
+=3D"0" style=3D"border-collapse:collapse; mso-table-lspace:0; mso-table-rsp=
+ace:0"><tbody>
+<tr><td style=3D"border-collapse:collapse">
+<a class=3D"user_link" href=3D"https://www.quora.com/qemail/track_click?aoi=
+d=3Do18UiwHPyfW&amp;aoty=3D3&amp;aty=3D4&amp;cp=3D10&amp;ct=3D1660617544880=
+003&amp;et=3D130&amp;id=3Dfe2ec86ef7b14dfbaab21c2269fb7837&amp;source=3D7&a=
+mp;src=3D1&amp;st=3D1660617544904913&amp;stories=3D1_LFq1TpSdcDH%7C1_z8IXKj=
+clfCd%7C1_9o2fZnEtKLr%7C1_jPNDLSjTssj%7C1_F1ycInnHg68%7C1_YXZdyZxi6FB%7C1_y=
+WYYJnJsU%7C1_Mol1dLDbXcY%7C1_q5MhVWCzfQ8%7C1_VlbooeWEwuF&amp;ty=3D1&amp;ty_=
+data=3DVlbooeWEwuF&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"color:#333; te=
+xt-decoration:none; font-weight:bold; line-height:1.4; font-size:15px">Mulo=
+nda Singongi</a><span style=3D"font-size:15px; line-height:1.4">, Founder &=
+amp; Creative Head (2017-present)</span>
+</td></tr>
+<tr><td class=3D"answer_details" style=3D"border-collapse:collapse; color:#=
+999; font-size:13px"><a href=3D"https://www.quora.com/qemail/track_click?ao=
+id=3DVlbooeWEwuF&amp;aoty=3D1&amp;aty=3D4&amp;cp=3D10&amp;ct=3D166061754488=
+0003&amp;et=3D130&amp;id=3Dfe2ec86ef7b14dfbaab21c2269fb7837&amp;source=3D7&=
+amp;src=3D1&amp;st=3D1660617544904913&amp;stories=3D1_LFq1TpSdcDH%7C1_z8IXK=
+jclfCd%7C1_9o2fZnEtKLr%7C1_jPNDLSjTssj%7C1_F1ycInnHg68%7C1_YXZdyZxi6FB%7C1_=
+yWYYJnJsU%7C1_Mol1dLDbXcY%7C1_q5MhVWCzfQ8%7C1_VlbooeWEwuF&amp;ty=3D1&amp;ty=
+_data=3DVlbooeWEwuF&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"color:#999; t=
+ext-decoration:none">Written Oct 10, 2020</a></td></tr>
+</tbody></table></td>
+</tr></tbody></table></td></tr>
+<tr><td class=3D"item_content" style=3D'border-collapse:collapse; color:#33=
+3; display:block; font-family:-apple-system, BlinkMacSystemFont, "Segoe UI"=
+, Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif; fon=
+t-size:15px; line-height:1.4'><a href=3D"https://www.quora.com/qemail/track=
+_click?al_imp=3DeyJ0eXBlIjogMzMsICJoYXNoIjogIjB8MTB8MXwyNDM0NjQxOTAifQ%3D%3=
+D&amp;al_pri=3D0&amp;aoid=3DVlbooeWEwuF&amp;aoty=3D1&amp;aty=3D4&amp;cp=3D1=
+0&amp;ct=3D1660617544880003&amp;et=3D130&amp;id=3Dfe2ec86ef7b14dfbaab21c226=
+9fb7837&amp;source=3D7&amp;src=3D1&amp;st=3D1660617544904913&amp;stories=3D=
+1_LFq1TpSdcDH%7C1_z8IXKjclfCd%7C1_9o2fZnEtKLr%7C1_jPNDLSjTssj%7C1_F1ycInnHg=
+68%7C1_YXZdyZxi6FB%7C1_yWYYJnJsU%7C1_Mol1dLDbXcY%7C1_q5MhVWCzfQ8%7C1_Vlbooe=
+WEwuF&amp;ty=3D1&amp;ty_data=3DVlbooeWEwuF&amp;uid=3Dm36BZ4XFnST&amp;v=3D0"=
+ style=3D"color:#333; text-decoration:none"><div id=3D"wneHM9HE78"><div cla=
+ss=3D"truncated_q_text truncated_para_breaks TruncatedAnswerForEmail Trunca=
+tedAnswer TruncatedQText TruncatedAnswerForDigestEmail" id=3D"__w2_wneHM9HE=
+79_truncated" style=3D"line-height:1.6">
+<span class=3D"rendered_qtext" style=3D"word-break:break-word"><p class=3D"=
+qtext_para u-ltr u-text-align--start" style=3D"margin:1em 0; line-height:1.=
+6">I have used Payoneer for something like five years.</p>
+<p class=3D"qtext_para u-ltr u-text-align--start" style=3D"margin:1em 0; li=
+ne-height:1.6">I have never ever experienced a problem of my money going mi=
+ssing or unaccounted for.</p>
+<p class=3D"qtext_para u-ltr u-text-align--start" style=3D"margin:1em 0; li=
+ne-height:1.6">First thing to note with Payoneer or...</p></span> <a class=
+=3D"read_more_blue" href=3D"https://www.quora.com/qemail/track_click?al_imp=
+=3DeyJ0eXBlIjogMzMsICJoYXNoIjogIjB8MTB8MXwyNDM0NjQxOTAifQ%3D%3D&amp;al_pri=
+=3D8&amp;aoid=3DVlbooeWEwuF&amp;aoty=3D1&amp;aty=3D4&amp;cp=3D10&amp;ct=3D1=
+660617544880003&amp;et=3D130&amp;id=3Dfe2ec86ef7b14dfbaab21c2269fb7837&amp;=
+source=3D7&amp;src=3D1&amp;st=3D1660617544904913&amp;stories=3D1_LFq1TpSdcD=
+H%7C1_z8IXKjclfCd%7C1_9o2fZnEtKLr%7C1_jPNDLSjTssj%7C1_F1ycInnHg68%7C1_YXZdy=
+Zxi6FB%7C1_yWYYJnJsU%7C1_Mol1dLDbXcY%7C1_q5MhVWCzfQ8%7C1_VlbooeWEwuF&amp;ty=
+=3D1&amp;ty_data=3DVlbooeWEwuF&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"co=
+lor:#168de9; text-decoration:none">Read More =C2=BB</a>
+</div></div>
+<div class=3D"non_quora_share_embed_wrapper"><div class=3D"item_metadata"><=
+a href=3D"https://www.quora.com/qemail/track_click?al_imp=3DeyJ0eXBlIjogMzM=
+sICJoYXNoIjogIjB8MTB8MXwyNDM0NjQxOTAifQ%3D%3D&amp;al_pri=3D0&amp;aoid=3DVlb=
+ooeWEwuF&amp;aoty=3D1&amp;aty=3D4&amp;cp=3D10&amp;ct=3D1660617544880003&amp=
+;et=3D130&amp;id=3Dfe2ec86ef7b14dfbaab21c2269fb7837&amp;source=3D7&amp;src=
+=3D1&amp;st=3D1660617544904913&amp;stories=3D1_LFq1TpSdcDH%7C1_z8IXKjclfCd%=
+7C1_9o2fZnEtKLr%7C1_jPNDLSjTssj%7C1_F1ycInnHg68%7C1_YXZdyZxi6FB%7C1_yWYYJnJ=
+sU%7C1_Mol1dLDbXcY%7C1_q5MhVWCzfQ8%7C1_VlbooeWEwuF&amp;ty=3D1&amp;ty_data=
+=3DVlbooeWEwuF&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"color:#2b6dad; tex=
+t-decoration:none"></a></div></div></a></td></tr>
+</tbody></table></td></tr>
+</tbody></table></td></tr></tbody></table>
+</div></div>
+</td></tr></tbody></table></td>
+<td class=3D"w30" style=3D"border-collapse:collapse"> </td>
+</tr></tbody></table></td></tr>
+<tr><td style=3D"border-collapse:collapse"><div class=3D"polish_button_wrap=
+per" style=3D"margin-bottom:25px; text-align:center" align=3D"center"><a cl=
+ass=3D"polish_action_button" href=3D"https://www.quora.com/qemail/track_cli=
+ck?aoid&amp;aoty=3D7&amp;aty=3D4&amp;cp=3D0&amp;ct=3D1660617544880003&amp;e=
+t=3D130&amp;id=3Dfe2ec86ef7b14dfbaab21c2269fb7837&amp;source&amp;src=3D1&am=
+p;st=3D1660617544904913&amp;stories=3D1_LFq1TpSdcDH%7C1_z8IXKjclfCd%7C1_9o2=
+fZnEtKLr%7C1_jPNDLSjTssj%7C1_F1ycInnHg68%7C1_YXZdyZxi6FB%7C1_yWYYJnJsU%7C1_=
+Mol1dLDbXcY%7C1_q5MhVWCzfQ8%7C1_VlbooeWEwuF&amp;ty&amp;ty_data&amp;uid=3Dm3=
+6BZ4XFnST&amp;v=3D0" style=3D"color:#fff; text-decoration:none; background-=
+color:#168de9; border-radius:3px; box-shadow:0 1px 1px 0 rgba(200, 200, 200=
+, 0.2); cursor:pointer; display:inline-block; font-size:15px; line-height:1=
+.4; outline:0; padding:15px 25px; text-align:center" bgcolor=3D"#168de9" al=
+ign=3D"center">Search More on Quora</a></div></td></tr>
+<tr><td style=3D"border-collapse:collapse"></td></tr>
+</tbody></table></td></tr>
+<tr><td class=3D"polish_footer_section footer_container_wrapper" align=3D"c=
+enter" style=3D"border-collapse:collapse; max-width:525px; margin-top:16px"=
+><table class=3D"footer_container" cellpadding=3D"0" cellspacing=3D"0" bord=
+er=3D"0" style=3D"border-collapse:collapse; mso-table-lspace:0; mso-table-r=
+space:0; color:#999; font-size:11px; padding-top:16px; text-align:center; w=
+idth:100%" align=3D"center" width=3D"100%"><tr><td style=3D"border-collapse=
+:collapse"><div class=3D"footer_text_wrapper" style=3D"padding:25px 20px"><=
+div>
+<span style=3D"color:#999; display:block; padding-bottom:8px">This email wa=
+s sent by Quora (605 Castro Street, Mountain View, CA 94041). </span><span =
+style=3D"color:#999; display:block; padding-bottom:8px">If you don't want t=
+o receive this type of email in the future, please <a class=3D"unsubscribe_=
+link" href=3D"https://www.quora.com/email_optout/qemail_unsubscribe?email_t=
+rack_id=3Dfe2ec86ef7b14dfbaab21c2269fb7837&amp;t=3D1660617545319192&amp;tok=
+en=3D4fb20d75bee530fda48a46a222bf5c36c8c047455b6a1aff5ad9c5eaa18fce34bdb4ad=
+41632c83ff77ba8a2d1931155717161dfdc820de1f734179e0946cfe9f&amp;type=3D130&a=
+mp;uid=3D905486825" style=3D"color:#999; text-decoration:underline">unsubsc=
+ribe</a>.</span><span style=3D"color:#999; display:block; padding-bottom:8p=
+x"><a href=3D"https://www.quora.com/" style=3D"color:#999; text-decoration:=
+underline">https://www.quora.com/</a></span>
+</div></div></td></tr></table></td></tr>
+</tbody></table></td></tr></tbody></table></div></body>
+</html>
+
+--===============2916031222064506361==--

@@ -1,0 +1,544 @@
+X-GM-THRID: 1763134640365719448
+X-Gmail-Labels: Inbox,Category Updates,Unread
+Delivered-To: azfarali007.aa@gmail.com
+Received: by 2002:a05:6214:c2:b0:5ee:8eca:efa7 with SMTP id f2csp247528qvs;
+        Fri, 14 Apr 2023 00:10:23 -0700 (PDT)
+X-Google-Smtp-Source: AKy350apHGPClDs7Wk1y7qpXL8d7tF2ZGYIXiZAXkgyjwR6u9Eure1mmxAupSJa2eH9Go7hPbQ+k
+X-Received: by 2002:a25:5006:0:b0:b86:8209:8671 with SMTP id e6-20020a255006000000b00b8682098671mr9083704ybb.12.1681456222856;
+        Fri, 14 Apr 2023 00:10:22 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1681456222; cv=none;
+        d=google.com; s=arc-20160816;
+        b=Clu7B02uTdFLnrCvBW3IauLQXthy+YCRTqwPpc6bVqpep990Hk/zFPl49GWNQb65s+
+         uKnrKCZ2ZEOsDV+bTVqGSgBGryVwDDVFiqOR+Zs6yoJIkI8NqJaLov1NGKYOfiH2ZjSl
+         LGXjeFolzetQgNnl+2bn9kAFLIp3jyp14OZvs40PrwNqQeD33Q2QwVR7BsqJCDJKgg4t
+         eiGAcdCGhiQ4F9QjWPLF2FEHwEHUzg3slz2oIi179KlKj3bliBGummTdK611hB9jzQrr
+         z4n5pUTyWiSwcwNcOzcsUX79rm/mP44tAArhjAR8gcn7F09AN9zeO/rsNXz8/+5kAFk4
+         ruwA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:reply-to:subject:message-id:mime-version:from:date
+         :dkim-signature:dkim-signature;
+        bh=mmrFI8aEEf1xLsbQQWyDQsNgSQyygasFciLK0mtNOTQ=;
+        b=WgSGdRo2kcUZh+wXgtBO8Q/1JHtB/sVW5sN05JgHkAwuglX4OxJz6dDzaWQLJsFWV3
+         od2AKaSEeyUgLUfbDzgvoPOiXecJAGiAoMjN88qPbd8+AoemkGWSlSktgevFO7G/qmSE
+         GfQpvTDn5rM7tYbZPM7u7Ww+YXrBNcLZF7mU4bmJXvN6EIPPbETmqspp2RBjFaUXblXN
+         a3yD8+VS8B+aac/LNGMdiXGaUAUyz6q3i8mEuKIwdF6fFfuvX7ibmDK64UgPWSweoHba
+         F+u+OAlykOm3u4tNJSYXsV5/jss71SuEqaEse4aYhMP4dRJ5sTxzO1QQ3cTVp91L3RyH
+         q9VQ==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gdsc.community.dev header.s=bvy header.b=fJcguBZo;
+       dkim=pass header.i=@sendgrid.info header.s=smtpapi header.b=pYoVQhq8;
+       spf=pass (google.com: domain of bounces+16161593-3a24-azfarali007.aa=gmail.com@em656.gdsc.community.dev designates 50.31.42.31 as permitted sender) smtp.mailfrom="bounces+16161593-3a24-azfarali007.aa=gmail.com@em656.gdsc.community.dev"
+Return-Path: <bounces+16161593-3a24-azfarali007.aa=gmail.com@em656.gdsc.community.dev>
+Received: from o1.ptr7481.bevy.com (o1.ptr7481.bevy.com. [50.31.42.31])
+        by mx.google.com with ESMTPS id p64-20020a255b43000000b00b8f62faaf67si3296457ybb.664.2023.04.14.00.10.22
+        for <azfarali007.aa@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Fri, 14 Apr 2023 00:10:22 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bounces+16161593-3a24-azfarali007.aa=gmail.com@em656.gdsc.community.dev designates 50.31.42.31 as permitted sender) client-ip=50.31.42.31;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gdsc.community.dev header.s=bvy header.b=fJcguBZo;
+       dkim=pass header.i=@sendgrid.info header.s=smtpapi header.b=pYoVQhq8;
+       spf=pass (google.com: domain of bounces+16161593-3a24-azfarali007.aa=gmail.com@em656.gdsc.community.dev designates 50.31.42.31 as permitted sender) smtp.mailfrom="bounces+16161593-3a24-azfarali007.aa=gmail.com@em656.gdsc.community.dev"
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gdsc.community.dev;
+	h=content-type:from:mime-version:subject:reply-to:x-feedback-id:to:cc:
+	content-type:from:subject:to;
+	s=bvy; bh=mmrFI8aEEf1xLsbQQWyDQsNgSQyygasFciLK0mtNOTQ=;
+	b=fJcguBZokQJ1oHaTRniBXXtyztVLUFOFUKc/qe3tQMv3WTbvhtyoghHKjJtFQY6WUSp6
+	fCl2xxwm1HZhqV/tkw0unfgMbqPDlqLHgLLC/kFM+IesvYTQmspIW64F+r7GvUizBldag1
+	cUGOeyaWnl7IQ+YkSK1sNEbteVtwyj90Lf1YX37OIcdCfj8enezT2Us7iigEU3e+VEhlng
+	3/hbmF4haG3lvTWKnxTcc1q7aYi+9uq8wtD+J7TTI3Gz0e2kz3KYY2/x3rc9TIGV6MrO84
+	2Ui4LasV2H1dJviadk/O/SdqaFsZ8B0qA+O2vasbrTDZVfHk/eshupaiUq2lNBkQ==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=sendgrid.info;
+	h=content-type:from:mime-version:subject:reply-to:x-feedback-id:to:cc:
+	content-type:from:subject:to;
+	s=smtpapi; bh=mmrFI8aEEf1xLsbQQWyDQsNgSQyygasFciLK0mtNOTQ=;
+	b=pYoVQhq8fuYAokcbAzWJaA/GvSS/DKRHW6SjNYsVLiLtfh3JnQlvS1DRi8+sQTBv/s6U
+	JBTJzbr5eq9YSg5jdor+gsgLxMrUCtd7AWO9GL2olXNvhso/MkjfZ01DSvRz0gGZuAX+kc
+	ZZXcyzbWpnN2BRheEVtMtDfPiuEnEkyHs=
+Received: by filterdrecv-56ccf5977c-xcms6 with SMTP id filterdrecv-56ccf5977c-xcms6-1-6438FC58-14
+        2023-04-14 07:10:16.320906427 +0000 UTC m=+4433798.648553159
+Received: from MTYxNjE1OTM (unknown)
+	by geopod-ismtpd-3 (SG) with HTTP
+	id _Van831nS0uP8BdAv_plVA
+	Fri, 14 Apr 2023 07:10:16.126 +0000 (UTC)
+Content-Type: multipart/alternative; boundary=1322e1018361850b2cd046accf3936569e56a8ea9eb90f9e62a05b1b8f1e
+Date: Fri, 14 Apr 2023 07:10:22 +0000 (UTC)
+From: GDSC Event Platform <noreply@gdsc.community.dev>
+Mime-Version: 1.0
+Message-ID: <_Van831nS0uP8BdAv_plVA@geopod-ismtpd-3>
+Subject: New National University of Modern Languages (NUML) - Islamabad event:
+ Cybersecurity 101: Protecting Yourself Online
+Reply-To: GDSC Event Platform <noreply@gdsc.community.dev>
+X-Feedback-ID: 16161593:SG
+X-SG-EID: 
+ =?us-ascii?Q?L92cBbLnKzcdBNkQwAYQ+sr1gkgAdysofGN=2FhuKNVQJd0G5iopz4Y0O=2FX9Tovl?=
+ =?us-ascii?Q?Z=2F8SrF=2FwCO1xHfCtgD5LT8L6dJQ9xy+VDdYEsSm?=
+ =?us-ascii?Q?uhpGwJTZp8b+Oyb0=2FEejKKcec541QUOAoQD1rWL?=
+ =?us-ascii?Q?ZjJhtIQimsg5iY7Lz5ZKAK0hulLSdSZ=2Fk2eIWnF?=
+ =?us-ascii?Q?s+e6B5gW6a+fNx4rnGjh3eU3XubbCg9XTKQUX7A?=
+ =?us-ascii?Q?0gBDbAZ5EykhRoIrBmMAqkm3SE0LH4l3r5Bmpuw?=
+ =?us-ascii?Q?XgP7B9tFf3FpVcCb=2F18uA=3D=3D?=
+X-SG-ID: 
+ =?us-ascii?Q?N2C25iY2uzGMFz6rgvQsb8raWjw0ZPf1VmjsCkspi=2FI6OjusMqsQbh1b0Ag1oi?=
+ =?us-ascii?Q?xWHUdAM+aVlmjuv7hxvYfRpLCn2vp+0tJ=2FtLFto?=
+ =?us-ascii?Q?Ad3+ugg8gNs0nvvjkipC=2Fd06ehc?=
+To: azfarali007.aa@gmail.com
+X-Entity-ID: MUf8aKHxItgYcsqRjrDjLA==
+
+--1322e1018361850b2cd046accf3936569e56a8ea9eb90f9e62a05b1b8f1e
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset=us-ascii
+Mime-Version: 1.0
+
+Hi Azfar, Check out our next event:Cybersecurity 101: Protecting Yourself O=
+nline
+Date & time: Sat, Apr 15, 3:00 PM (PKT)
+
+Agenda:
+
+
+
+About this eventWith the rise of digital technology and the increasing prev=
+alence of the internet in our daily lives, online security has never been m=
+ore important. In today's interconnected world, it's more crucial than ever=
+ to be aware of the potential risks and threats that come with navigating t=
+he online world. Whether you're using social media, shopping online, or sen=
+ding emails, cyber threats can come from all directions.To help you stay sa=
+fe online, we're hosting a 2-hour online session on cyber awareness. Our ex=
+pert speaker will provide a comprehensive roadmap for navigating the cyber =
+landscape and teach you how to protect yourself from common online threats.=
+During the session, you'll learn about the latest trends and threats in the=
+ cyber world, including the most common types of cyber attacks, such as phi=
+shing scams, malware, and ransomware. Our speaker will share their insights=
+ on how cybercriminals operate and the tools they use to gain access to you=
+r personal information. You'll also discover best practices for securing yo=
+ur personal data, such as creating strong passwords, keeping your software =
+updated, and avoiding public Wi-Fi networks.But that's not all - our speake=
+rs will also delve into the impact of social media on cybersecurity, discus=
+sing how to use social media safely and how to protect your privacy online.=
+ You'll gain a better understanding of the dark web, how it works, and how =
+to navigate it safely.Whether you're new to the topic of cybersecurity or l=
+ooking to build on your existing knowledge, this session is perfect for you=
+. Our expert speakers will provide you with essential tips and tricks for s=
+taying safe in the digital age. You'll walk away from this session with a d=
+eeper understanding of the implications of cyber threats and how to stay ah=
+ead of the curve.Don't miss out on this unique opportunity to learn from ex=
+perts in the field and take control of your online security. Register now a=
+nd join us for an engaging and informative session on cyber awareness. Hope=
+ to see you there!RSVP
+You are receiving this email because you have signed up as a member of a De=
+veloper Student Club. To change your email preferences, visit National Univ=
+ersity of Modern Languages (NUML) - Islamabad. To leave the group, unsubscr=
+ibe below.
+
+
+
+
+
+---
+
+View in browser: https://u16161593.ct.sendgrid.net/ls/click?upn=3D6FylDzOsB=
+jandYrle4FqVZSdv3-2BbZ0ATs1aFPrX0Lwww-2F4aLXFYpI9LpCjVfU0l4vk4ttyw7KMPYaPrl=
+mi-2BwZ9jDRmaPMu8VB6BjnxiLxsXizLhXQmnemvVu0RUFOvrUOwy__H65ljNg3foEJU6dJQZHM=
+cp3Zdimzb4muCFBEwI-2BtxR7OKIGJ1b2DH2qtBgNRiHoO4dZ13ifMjRkDWXQVzwirQxeYV7gH2=
+pRAPw4FBd33RrgvOOZdulJxFpxCuGN8-2BTKvNVsaxyaQtHzeS-2FTE9Qs4dThK5MbiVV75OKJL=
+ZJ-2Bkz3xi0F0VKh58tmsK-2BddVFwRCnWGg1oVT6m-2BBU6ek2Ogj-2F581rCn6YyRIhm5x-2F=
+5D-2BYu5mp1wxlfvZeSt5UZgPAng-2Bzxw9iEj76GHr7Qw4vqEsYTwTq71-2BRXaWKE79ShgjNX=
+-2Fzu5x1DewCyP-2B9u-2FuMZp-2F3
+
+
+---
+Click here to unsubscribe: https://u16161593.ct.sendgrid.net/ls/click?upn=
+=3DVV2HEC-2Fpe7sihHx9m-2BUmcs-2BdnFkKhwwi5VD5YfGijmo0MZi5SFxDTV8TT5gQPRXR6g=
+8Y1qrYZ2c5aiYngv-2Bh7fDAtyNzJ4-2Bzgo5jIKM-2FyVh-2FK1bLbgmPoM8So64QbJaW3VQfs=
+-2BYq-2FiA9qXeZe3O47NINvPn3qg6t0D-2BCGK6BqhG9a6AYQ2douDzu5VMMKVudXxYV6tX-2F=
+XdswSJEWehgQeZNr1BDWbyBEiOH1gqhxDmleGlj5YIazNHi-2FNbuRLSXdcMUmkvKmKh-2BpB8X=
+Fcl4NPBEOx2y-2B6lhRZYPbpelDwF4-3D1q1P_H65ljNg3foEJU6dJQZHMcp3Zdimzb4muCFBEw=
+I-2BtxR7OKIGJ1b2DH2qtBgNRiHoO4dZ13ifMjRkDWXQVzwirQxeYV7gH2pRAPw4FBd33RrgvOO=
+ZdulJxFpxCuGN8-2BTKvNVsaxyaQtHzeS-2FTE9Qs4dThK5MbiVV75OKJLZJ-2Bkz3zPUB-2B-2=
+BBMkyLTuI8y3-2Fz4SiAfmvs1DyBeivw6Fuj-2BvuFMPuOxFrfowxFTc7taVmQqKU-2BkJe4m7a=
+lYjtyr-2FqiPVdinsNBVvirllDjbs4v56i48HM28aWuwOtJOlqtFzLKjeGhlwxViqRkNLX6Zo-2=
+F-2Bugm
+
+--1322e1018361850b2cd046accf3936569e56a8ea9eb90f9e62a05b1b8f1e
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset=iso-8859-1
+Mime-Version: 1.0
+
+
+<html lang=3D"en" dir=3D"ltr" xml:lang=3D"en" xmlns=3D"http://www.w3.org/19=
+99/xhtml"  xmlns:v=3D"urn:schemas-microsoft-com:vml" xmlns:o=3D"urn:schemas=
+-microsoft-com:office:office">
+    <head>
+        <title>New National University of Modern Languages (NUML) - Islamab=
+ad event: Cybersecurity 101: Protecting Yourself Online </title>
+        <link href=3D"https://fonts.googleapis.com/css?family=3DOpen+Sans:3=
+00italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel=
+=3D"stylesheet" type=3D"text/css">
+        <style type=3D"text/css">
+            a { color: #4285F4; }
+        </style>
+        <!--[if gte mso 9]>
+            <xml>
+                <o:OfficeDocumentSettings>
+                    <o:AllowPNG/>
+                    <o:PixelsPerInch>96</o:PixelsPerInch>
+                </o:OfficeDocumentSettings>
+            </xml>
+        <![endif]-->
+       =20
+    </head>
+
+    <body style=3D"background-color: #F6F7F9; margin:0; padding:0; font-fam=
+ily: 'Open Sans', Arial, sans-serif !important; font-weight: 400; color: #2=
+02124;">
+        <table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D=
+"15">
+            <tr>
+                <td width=3D"100%" align=3D"center" style=3D"background-col=
+or: #F6F7F9;">
+                    <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0"=
+ style=3D"border-bottom-left-radius: 4px; border-bottom-right-radius: 4px; =
+overflow: hidden; min-width: 290px; max-width: 600px;">
+                       =20
+
+
+
+<tr><td>
+    <table width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0">
+        <tbody>
+            <tr>
+               =20
+                <td valign=3D"middle" style=3D"padding: 0 0 15px; font-fami=
+ly: 'Open Sans', Arial, sans-serif !important;">
+                   =20
+                    <a href=3D"https://u16161593.ct.sendgrid.net/ls/click?u=
+pn=3D6FylDzOsBjandYrle4FqVZSdv3-2BbZ0ATs1aFPrX0LwyUnpz6b-2BcnvDvQJuNtdeXTcn=
+r41iC-2Bsm2lDoP7VVuvQNy8FOT6Nr0L79UcPMO0zL4645SxnQNyVmHVqSZUni7STXSC_H65ljN=
+g3foEJU6dJQZHMcp3Zdimzb4muCFBEwI-2BtxR7OKIGJ1b2DH2qtBgNRiHoO4dZ13ifMjRkDWXQ=
+VzwirQxeYV7gH2pRAPw4FBd33RrgvOOZdulJxFpxCuGN8-2BTKvNVsaxyaQtHzeS-2FTE9Qs4df=
+EOzzuXZ61SUWcv7QnW2hXV6nozHzLYpVC-2FteF2dXnMak-2BX15-2Bz86p4xcfGD1kJyE25CXv=
+NBgpeP2zMC8c73yj7UqEsdomoab9ULjmKL92FUGk8w2go1QAJZ2qSl3u0A3hpr8xFvwOtROpF-2=
+FV1WgYfHuaCRZdnexkJmb5i-2B-2BLAq" style=3D"font-size: 12px; color: #6f6f6f =
+!important; padding: 1px 0; text-decoration: none !important;">
+                        Google Developer Student Clubs - National Universit=
+y of Modern Languages (NUML) - Islamabad
+                    </a>
+                   =20
+                </td>
+               =20
+               =20
+               =20
+               =20
+               =20
+                <td align=3D"right" valign=3D"middle" style=3D"padding: 0 0=
+ 15px; font-family: 'Open Sans', Arial, sans-serif !important;">
+                    <a class=3D"hideinbrowser" href=3D"https://u16161593.ct=
+.sendgrid.net/ls/click?upn=3D6FylDzOsBjandYrle4FqVZSdv3-2BbZ0ATs1aFPrX0Lwww=
+-2F4aLXFYpI9LpCjVfU0l4vk4ttyw7KMPYaPrlmi-2BwZ9jDRmaPMu8VB6BjnxiLxsXhtVhve2o=
+5uil1sisrlKFOkfD9_H65ljNg3foEJU6dJQZHMcp3Zdimzb4muCFBEwI-2BtxR7OKIGJ1b2DH2q=
+tBgNRiHoO4dZ13ifMjRkDWXQVzwirQxeYV7gH2pRAPw4FBd33RrgvOOZdulJxFpxCuGN8-2BTKv=
+NVsaxyaQtHzeS-2FTE9Qs4dfEOzzuXZ61SUWcv7QnW2hXnhKQGFX1-2B81Zw-2BbHEMwIikK-2F=
+hvi4bljLk7DG9xBc-2BEk7VkJ3QEzAgh3awBxnQjJJdlPztyzJfoRaMwkgF0BbSeD70NCs8a5w-=
+2BNgCu8tYZg1sPKNKXeKYeosldJojs7o1003KxYDVnOZtLfn2NKsio" style=3D"font-size:=
+ 12px; color: #6f6f6f !important; padding: 1px 0; text-decoration: none !im=
+portant;" >
+                        View in browser
+                    </a>
+                </td>
+               =20
+            </tr>
+        </tbody>
+    </table>
+</td></tr>
+
+
+
+
+
+                       =20
+
+                       =20
+                        <tr>
+                           =20
+<td style=3D"width: 600px; height: 136px; vertical-align: middle; border-bo=
+ttom: 0px solid #F6F7F9;
+
+   =20
+   =20
+         background-image: url(https://res.cloudinary.com/startup-grind/ima=
+ge/upload/c_fill,dpr_2.0,f_auto,g_center,h_135,q_auto:eco,w_600/v1/gcs/plat=
+form-data-dsc/contentbuilder/email_header.png);
+   =20
+   =20
+
+background-color: #fff;  border-top-right-radius: 4px; border-top-left-radi=
+us: 4px;background-size: cover;">
+
+   =20
+   =20
+    <!--[if gte mso 9]>
+        <v:rect xmlns:v=3D"urn:schemas-microsoft-com:vml" fill=3D"true" str=
+oke=3D"false" style=3D"width:600px;height:135px;">
+        <v:fill type=3D"frame" src=3D"https://res.cloudinary.com/startup-gr=
+ind/image/upload/c_fill,dpr_2.0,f_auto,g_center,h_135,q_auto:eco,w_600/v1/g=
+cs/platform-data-dsc/contentbuilder/email_header.png" color=3D"#fff" />
+        <v:textbox inset=3D"0,0,0,0">
+    <![endif]-->
+   =20
+   =20
+
+
+
+                            <table border=3D"0" cellpadding=3D"0" cellspaci=
+ng=3D"20" width=3D"100%" style=3D"width: 100%;">
+                                <tr>
+                                   =20
+                                   =20
+
+    <td style=3D"vertical-align: middle; text-align: center; ">
+        <div style=3D"display: inline-block;">
+           =20
+
+
+   =20
+        <a href=3D"https://u16161593.ct.sendgrid.net/ls/click?upn=3D6FylDzO=
+sBjandYrle4FqVZSdv3-2BbZ0ATs1aFPrX0LwyUnpz6b-2BcnvDvQJuNtdeXTcnr41iC-2Bsm2l=
+DoP7VVuvQNy8FOT6Nr0L79UcPMO0zL4645SxnQNyVmHVqSZUni7Sokib_H65ljNg3foEJU6dJQZ=
+HMcp3Zdimzb4muCFBEwI-2BtxR7OKIGJ1b2DH2qtBgNRiHoO4dZ13ifMjRkDWXQVzwirQxeYV7g=
+H2pRAPw4FBd33RrgvOOZdulJxFpxCuGN8-2BTKvNVsaxyaQtHzeS-2FTE9Qs4dfEOzzuXZ61SUW=
+cv7QnW2hV-2BHNQK0fVI51Akelrqug-2BoLcDrq0lLwoaMiaW0FSHIJTOF-2B-2F97l5zeyS5HJ=
+XA-2Bn2qJ-2FkDY3CTab-2F3eB8ZZoaSaEDRQ5cYIJb9cPd-2Bphp1QWmDqZEo6HOSfoquJFNps=
+OmjZ9vgtuE1rH6dcB9F8BiLf" style=3D"text-align: center; display: block;">
+            <img src=3D"https://res.cloudinary.com/startup-grind/image/uplo=
+ad/c_fit,dpr_2.0,f_auto,g_center,h_100,q_auto:good,w_500/v1/gcs/platform-da=
+ta-dsc/contentbuilder/logo_dark_stacked_ziDh4mP.png" alt=3D"Google Develope=
+r Student Clubs" border=3D"0" height=3D"50">
+        </a>
+   =20
+
+
+           =20
+        </div>
+    </td>
+
+
+                                </tr>
+                            </table>
+
+                               =20
+    <!--[if gte mso 9]>
+        </v:textbox>
+        </v:rect>
+    <![endif]-->
+   =20
+</td>
+
+                        </tr>
+
+                       =20
+
+                       =20
+    <tr style=3D"background-color: #fff;"><td><table width=3D"100%" border=
+=3D"0" cellPadding=3D"0" cellSpacing=3D"0"><tbody><tr><td><table width=3D"1=
+00%" border=3D"0" cellPadding=3D"0" cellSpacing=3D"0"><tbody><tr><td><table=
+ width=3D"100%" border=3D"0" cellPadding=3D"0" cellSpacing=3D"0"><tbody><tr=
+><td><table width=3D"100%" style=3D"background:#fff" border=3D"0" cellPaddi=
+ng=3D"0" cellSpacing=3D"0"><tbody><tr><td width=3D"100%" style=3D"font-size=
+:16px;line-height:1.5em;padding:0 30px"><br /><span style=3D"font-size:15px=
+">Hi Azfar, <br/></span><br /><strong><span style=3D"font-size:18px">Check =
+out our next event:</span></strong><br /><strong><span style=3D"font-size:1=
+8px">Cybersecurity 101: Protecting Yourself Online</span></strong><br /><br=
+ /></td></tr></tbody></table><table style=3D"margin-bottom:30px;margin-top:=
+30px" border=3D"0" cellPadding=3D"0" cellSpacing=3D"0" width=3D"100%"><tbod=
+y><tr><td style=3D"padding:5px 7px 5px 30px;text-align:center;vertical-alig=
+n:top;width:40px" width=3D"40"><img alt=3D"" src=3D"https://res.cloudinary.=
+com/startup-grind/image/upload/c_fill,dpr_2,f_auto,g_center,q_auto:good/v1/=
+gcs/platform-data-dsc/contentbuilder/Date.png" style=3D"border:0;max-height=
+:38px;max-width:38px"/></td><td style=3D"font-size:19px;padding:5px;padding=
+-right:30px"><table border=3D"0" cellPadding=3D"0" cellSpacing=3D"0" width=
+=3D"100%"><tbody><tr><td><span><span style=3D"font-size:15px">Date &amp; ti=
+me</span><br /></span></td></tr><tr><td style=3D"font-size:16px;padding-bot=
+tom:10px">Sat, Apr 15, 3:00 PM (PKT)<p style=3D"font-size:12px;color:#666;p=
+adding-top:5px;margin:0">Add to  <a href=3D"https://u16161593.ct.sendgrid.n=
+et/ls/click?upn=3D6FylDzOsBjandYrle4FqVcj-2FGqDuEYpjJPwK5iiSaRKxCmpiL07iNWQ=
+Mqk7TMqSall4hjsI6qyQHw2NvjzfL22ABw3Hf-2FQuohBoa6RP9idHOUBzVDypeJCSaxiF72J7j=
+1gucdblXQ4a1LDNybFFBwfJm2rPg8ZzywfSnPZwtIkG8nGxGzgSfOQfLKFshaqhbenCQkf8CEJs=
+Pq5YW-2FSHdrTpQLyyTc0l9aBxO-2BcriATy4yrPTHW8WXxJ-2BYGJ3u52cR1-2BABPg23OohKz=
+-2BoEYNY6ayseKoLpuaMxG77wYxPnUkwzB8EKi9TSeE-2BgENJ2O5H4Wo6G0bsOa-2FB1jgGfVW=
+sszgviTwBPDCdufqljM87i5Z6BiMyuLfq09lJyo4A9dnbVK1XYTk7tP9zb3xJSHDvaG0ZOMy-2F=
+iSN-2Fwn1XXvcG7BmMA8npbkNpPw69wM22SqUdlE2AgpkhzMWGr5GWV49Q0zOv8ylXle5qjvYoF=
+3x1RVDKiezY8oSWoSaX4wjsiiaJ9pXnq6XnR0HpBQeKapCBDxw7Pa65PR-2BvVfuHcrwsSib2rH=
+4EtYjnDyHvhDRqkW5LB13ZgfNeJdBgDnYglqTpr5jLPr1o2CmwoPbA9AY7zOQjOJyOpF5csYVt1=
+JzZAxmHGOTO5yA40o2gZtIi0OVnKWn4UPdoTXh5lVwAjTZkh9MDDfFIzo1IvNSbB3MtULli_Y-7=
+_H65ljNg3foEJU6dJQZHMcp3Zdimzb4muCFBEwI-2BtxR7OKIGJ1b2DH2qtBgNRiHoO4dZ13ifM=
+jRkDWXQVzwirQxeYV7gH2pRAPw4FBd33RrgvOOZdulJxFpxCuGN8-2BTKvNVsaxyaQtHzeS-2FT=
+E9Qs4dfEOzzuXZ61SUWcv7QnW2hU7lewk8FYYMN3jIFiUJ0mMXaNMYr0aPksRCowvuu4oZ-2Bhx=
+ZlG0pPngAK08iX3dW0VCw2wxlVSYWjffdTLiAzDWW38k9c-2BRuglfATaNyg5Ox-2Bej4qi4K1Z=
+GphqE1YEJyWB9rh1YdF-2F-2FD8akk998MN-2Bz" style=3D"color:#4285F4">Google</a>=
+ =B7 <a href=3D"https://u16161593.ct.sendgrid.net/ls/click?upn=3D6FylDzOsBj=
+andYrle4FqVZSdv3-2BbZ0ATs1aFPrX0LwxItlEhg9lStYwbETtEQzBWwrL4xM9B32OWMs0jirz=
+iAQ-3D-3DjxWy_H65ljNg3foEJU6dJQZHMcp3Zdimzb4muCFBEwI-2BtxR7OKIGJ1b2DH2qtBgN=
+RiHoO4dZ13ifMjRkDWXQVzwirQxeYV7gH2pRAPw4FBd33RrgvOOZdulJxFpxCuGN8-2BTKvNVsa=
+xyaQtHzeS-2FTE9Qs4dfEOzzuXZ61SUWcv7QnW2hVPG1iHmNj25KR5fD1sOqArENuF-2BKZO9V-=
+2BPyxtiJwOuBxV8aEn7N-2FuCmSlShrgHBhlM6-2FqYGA5npkZeW5XJIZ8uoFngine5WEraVf-2=
+FP2ONmP0hmkhLz0gs4lPQT7g2hIShdfFEchrbqvIZLCORRKX4m" style=3D"color:#4285F4"=
+>Outlook</a> =B7 <a href=3D"https://u16161593.ct.sendgrid.net/ls/click?upn=
+=3D6FylDzOsBjandYrle4FqVZSdv3-2BbZ0ATs1aFPrX0LwxItlEhg9lStYwbETtEQzBWwrL4xM=
+9B32OWMs0jirziAQ-3D-3DMuQg_H65ljNg3foEJU6dJQZHMcp3Zdimzb4muCFBEwI-2BtxR7OKI=
+GJ1b2DH2qtBgNRiHoO4dZ13ifMjRkDWXQVzwirQxeYV7gH2pRAPw4FBd33RrgvOOZdulJxFpxCu=
+GN8-2BTKvNVsaxyaQtHzeS-2FTE9Qs4dfEOzzuXZ61SUWcv7QnW2hVEIGr8G5i3Eqa9-2BXoDjb=
+n1m4nQaSOaDCAsj8cBBzYv4f4Rh9f-2BK-2Be9t8ajTvydTWL9tp2v92t0DHEOBVdfuCHwxUchz=
+zUpP-2BpwO0Z8Aa76g0yMJnXz34QhJPAEGlwCsitMRC78WdsIiYPA4CaXf1mG" style=3D"col=
+or:#4285F4">iCal</a> =B7 <a href=3D"https://u16161593.ct.sendgrid.net/ls/cl=
+ick?upn=3DVV2HEC-2Fpe7sihHx9m-2BUmcmOW1cGbj1vhu2Kflt26PDOTq7TMR7VbWvu-2BlgE=
+8uDbYDC7rdpeQsZBJ1-2Bewtns-2BKdJvFtpfl5mR7yLjFIKKVD2ffo3PWuboA1GAq3PJFxEwQ5=
+w1akiUhvm3lYE-2BQLMrQPXjzitBUTdZmiBTjHCX6-2FAzPvj7aRs8nXtiP2OoDsM8eFi0baNxA=
+nhXrJAHZAoyo1qb5JsxE-2FwPNh0yOcbrTymwHuKxdy6IywEYpF2PBTg0ojQGg7hlfJ10JkWWx2=
+GQs0Nj3cxBfsF44XNNL184Qq6YHyxgRxasiKp31GnsX6jgN1rhNt89MBIk-2FNWlkc1heQ682DE=
+JBQtrAqtnCAkmhaxyTHTI865-2Bjk9hrMHxH9uGBIaJAeBPBGSxxb6PeJ-2B-2Fyr-2B8Z1yVk0=
+CBpSYAi704AER-2B8mO9cOrwXeJwiwhGdIFYhomqbOw3KecpkdW619660V-2B5kl3bINWzzIWAM=
+tFU1BPfeTHEr-2BRO5UzujoNihGwJ3Ur5I0t-2BsdoYDweC-2BwW67S1736m0plOM-2FSS-2BNB=
+q-2F9iyRZDrW1VRq8KihllU1nreaZnJgU-2BJtMul9BA4EVS48PyjombPxNPKragoChuNKgU-2F=
+G7nU5YWk5q9PMYJP5sgARi3IGTRyCmvKdWLSJ-2BVL0yA-3D-3DIwQc_H65ljNg3foEJU6dJQZH=
+Mcp3Zdimzb4muCFBEwI-2BtxR7OKIGJ1b2DH2qtBgNRiHoO4dZ13ifMjRkDWXQVzwirQxeYV7gH=
+2pRAPw4FBd33RrgvOOZdulJxFpxCuGN8-2BTKvNVsaxyaQtHzeS-2FTE9Qs4dfEOzzuXZ61SUWc=
+v7QnW2hWmke5zgF-2B4bCSeZNfwPAmlc2F12OH0IRTuprF9pXCO6cAEQhEx5hpF-2B39n0SG-2F=
+mZdH9WH31pIW3TNG-2FlWzLrogu99tQ1spjyWRxsruhaiQa-2FkyUKGix0sM25jVAJmm3turLW9=
+rglyspnFxcq8mMHL2" style=3D"color:#4285F4">Yahoo</a></p></td></tr></tbody><=
+/table></td></tr></tbody></table><table width=3D"100%" style=3D"background:=
+#fff" border=3D"0" cellPadding=3D"0" cellSpacing=3D"0"><tbody><tr><td width=
+=3D"100%" style=3D"font-size:16px;line-height:1.5em;padding:0 30px"><strong=
+><span style=3D"font-size:18px">About this event</span></strong><br /><br /=
+><span style=3D"font-size:15px"><p>With the rise of digital technology and =
+the increasing prevalence of the internet in our daily lives, online securi=
+ty has never been more important. In today's interconnected world, it's mor=
+e crucial than ever to be aware of the potential risks and threats that com=
+e with navigating the online world. Whether you're using social media, shop=
+ping online, or sending emails, cyber threats can come from all directions.=
+</p><p>To help you stay safe online, we're hosting a 2-hour online session =
+on cyber awareness. Our expert speaker will provide a comprehensive roadmap=
+ for navigating the cyber landscape and teach you how to protect yourself f=
+rom common online threats.</p><p>During the session, you'll learn about the=
+ latest trends and threats in the cyber world, including the most common ty=
+pes of cyber attacks, such as phishing scams, malware, and ransomware. Our =
+speaker will share their insights on how cybercriminals operate and the too=
+ls they use to gain access to your personal information. You'll also discov=
+er best practices for securing your personal data, such as creating strong =
+passwords, keeping your software updated, and avoiding public Wi-Fi network=
+s.</p><p>But that's not all - our speakers will also delve into the impact =
+of social media on cybersecurity, discussing how to use social media safely=
+ and how to protect your privacy online. You'll gain a better understanding=
+ of the dark web, how it works, and how to navigate it safely.</p><p>Whethe=
+r you're new to the topic of cybersecurity or looking to build on your exis=
+ting knowledge, this session is perfect for you. Our expert speakers will p=
+rovide you with essential tips and tricks for staying safe in the digital a=
+ge. You'll walk away from this session with a deeper understanding of the i=
+mplications of cyber threats and how to stay ahead of the curve.</p><p>Don'=
+t miss out on this unique opportunity to learn from experts in the field an=
+d take control of your online security. Register now and join us for an eng=
+aging and informative session on cyber awareness.</p> </span><br /><br /><s=
+pan style=3D"font-size:15px">Hope to see you there!</span><br /><span style=
+=3D"font-size:15px"><div style=3D"display:block;text-align:center;margin:20=
+px"><a style=3D"background-color:#1a73e8;padding:15px 20px;text-decoration:=
+none;color:#fff;border-radius:4px;display:inline-block;font-size:14px;font-=
+weight:500" href=3D"https://u16161593.ct.sendgrid.net/ls/click?upn=3D6FylDz=
+OsBjandYrle4FqVZSdv3-2BbZ0ATs1aFPrX0LwwZmWIHD22a-2BZj4cgofXJY58LTbSIecdvAy5=
+TUJhyc9yKAcmxp1YzGw2-2F7YRQaYbVa8Sw-2FZq-2FcyPyKka5l-2FVJGkaQgvQ-2BDbmsc1gd=
+Vpj090fkHY-2B4yEwAc2N0xJb12zojigYorUkgkchMae31v48zjAczOuWwCrY8VldSw0Nl39nzG=
+wxzloWwO9rga7JP8Jx88Z9tIC8xaqJlZ18CffAUA-2FcBFJFC1sq2EBOBV3EHUBvw-3D-3Dm6Kd=
+_H65ljNg3foEJU6dJQZHMcp3Zdimzb4muCFBEwI-2BtxR7OKIGJ1b2DH2qtBgNRiHoO4dZ13ifM=
+jRkDWXQVzwirQxeYV7gH2pRAPw4FBd33RrgvOOZdulJxFpxCuGN8-2BTKvNVsaxyaQtHzeS-2FT=
+E9Qs4dfEOzzuXZ61SUWcv7QnW2hXoV4P-2FXzJo-2Fkpoj8JEVk5NSMR4XGgEqMky0evRJQfZw-=
+2FjlanSo4TuzgidY8lgAy31XLsbK7Xdgodas4kRyVHHQFVF6354Vr6KBl2kiaHQpU9J6-2FLZId=
+h-2Fvd8hAs62Wgy6Bz40xKDGbPA0R8J7adqsb">RSVP</a></div></span><br /></td></tr=
+></tbody></table><table width=3D"100%" style=3D"background:#fff" border=3D"=
+0" cellPadding=3D"0" cellSpacing=3D"0"><tbody><tr><td width=3D"100%" style=
+=3D"font-size:16px;line-height:1.5em;padding:0 30px"><br /><span style=3D"f=
+ont-size:12px">You are receiving this email because you have signed up as a=
+ member of a Developer Student Club. To change your email preferences, visi=
+t <a style=3D"color:#4285F4" href=3D"https://u16161593.ct.sendgrid.net/ls/c=
+lick?upn=3D6FylDzOsBjandYrle4FqVZSdv3-2BbZ0ATs1aFPrX0LwyUnpz6b-2BcnvDvQJuNt=
+deXTcnr41iC-2Bsm2lDoP7VVuvQNy8FOT6Nr0L79UcPMO0zL4645SxnQNyVmHVqSZUni7Sj8fU_=
+H65ljNg3foEJU6dJQZHMcp3Zdimzb4muCFBEwI-2BtxR7OKIGJ1b2DH2qtBgNRiHoO4dZ13ifMj=
+RkDWXQVzwirQxeYV7gH2pRAPw4FBd33RrgvOOZdulJxFpxCuGN8-2BTKvNVsaxyaQtHzeS-2FTE=
+9Qs4dfEOzzuXZ61SUWcv7QnW2hU-2FMjzZHQZmfPq7GJGK7IA2S6-2F2d5zc6Y-2B3mxSYVe-2F=
+OcV0jBGt9e5ck0WM0l2oFxSJwqHXG17aKV0x3VTpmg4Wtpr1wMOclC7BIFJ-2BV42ub82VpBvIX=
+Rs2qF5XS-2F8ekRK-2BDorSP052I8NtCEFL2yMVk">National University of Modern Lan=
+guages (NUML) - Islamabad</a></span><span style=3D"font-size:10px">. </span=
+><span style=3D"font-size:12px">To leave the group, unsubscribe below.</spa=
+n><br /><br /></td></tr></tbody></table></td></tr></tbody></table></td></tr=
+></tbody></table></td></tr></tbody></table></td></tr>
+
+
+                       =20
+
+
+    <tr>
+        <td>
+            <table width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacin=
+g=3D"0">
+                <tr>
+                    <td align=3D"center" style=3D"background-color: #ffffff=
+; border-top: 1px solid #F6F7F9; padding: 40px 0 40px; font-size: 13px; col=
+or: #7e8890;">
+                       =20
+
+
+   =20
+        <a href=3D"https://u16161593.ct.sendgrid.net/ls/click?upn=3D6FylDzO=
+sBjandYrle4FqVZSdv3-2BbZ0ATs1aFPrX0Lwzg9C4VAJP20noOG84jTS0m1WZf_H65ljNg3foE=
+JU6dJQZHMcp3Zdimzb4muCFBEwI-2BtxR7OKIGJ1b2DH2qtBgNRiHoO4dZ13ifMjRkDWXQVzwir=
+QxeYV7gH2pRAPw4FBd33RrgvOOZdulJxFpxCuGN8-2BTKvNVsaxyaQtHzeS-2FTE9Qs4dfEOzzu=
+XZ61SUWcv7QnW2hU1iLABYIOpcjuviddk4Odxu5fMlIlarO0copbh6O8LAOsNgYUroE3OI4BwMk=
+lN-2FauJdh2Kl34AhYVdJXTK1zj8ZWe1Z-2FjKiOSwFb4Y6jf-2B1mvOAYZboSnWXTPgx2bbQTe=
+K6vHxSGKzbVh6reYQLNd7"><img height=3D"30" src=3D"https://res.cloudinary.com=
+/startup-grind/image/upload/c_fit,dpr_2.0,f_auto,g_center,h_60,q_auto:good,=
+w_500/v1/gcs/platform-data-dsc/contentbuilder/logo_dark_horizontal_WVttpzD.=
+png" border=3D"0"></a>
+   =20
+
+
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+
+
+
+
+                       =20
+
+                       =20
+                    </table>
+                </td>
+            </tr>
+        </table>
+   =20
+<div style=3D"text-align: center; font-size: 13px; padding-bottom: 20px;">
+    <a href=3D"https://u16161593.ct.sendgrid.net/ls/click?upn=3DVV2HEC-2Fpe=
+7sihHx9m-2BUmcs-2BdnFkKhwwi5VD5YfGijmo0MZi5SFxDTV8TT5gQPRXR6g8Y1qrYZ2c5aiYn=
+gv-2Bh7fDAtyNzJ4-2Bzgo5jIKM-2FyVh-2FK1bLbgmPoM8So64QbJaW3VQfs-2BYq-2FiA9qXe=
+Ze3O47NINvPn3qg6t0D-2BCGK6BqhG9a6AYQ2douDzu5VMMKVudXxYV6tX-2FXdswSJEWehgQeZ=
+Nr1BDWbyBEiOH1gqhxDmleGlj5YIazNHi-2FNbuRLSXdtLk6SfkHifDNnPqGHcqu4Q-3D-3Dygj=
+X_H65ljNg3foEJU6dJQZHMcp3Zdimzb4muCFBEwI-2BtxR7OKIGJ1b2DH2qtBgNRiHoO4dZ13if=
+MjRkDWXQVzwirQxeYV7gH2pRAPw4FBd33RrgvOOZdulJxFpxCuGN8-2BTKvNVsaxyaQtHzeS-2F=
+TE9Qs4dfEOzzuXZ61SUWcv7QnW2hWROCsL51SIa0wVzZ418s24SNTxw-2FyPNuFSCKr9F8rQ8Aj=
+TeV-2Fj6HadIgNiSDsJkB-2FAo-2Bsw6FKYfFGVOezLmuzbHNphuMbBpH5EZXAQm0lX65b2GQTU=
+qvmmuwuGpM-2BJTDuRd6CDbv8lGxZjR-2B-2BYYpwy" style=3D"color: #888888">Unsubs=
+cribe</a>
+</div>
+<img src=3D"https://u16161593.ct.sendgrid.net/wf/open?upn=3DI2ZneDYMm30bX-2=
+BRxYz82EqVmWgovkXO1mHRl89j0THzy4lAu-2BMXnVm-2FvaXHCyt5nVWdbxNiypHX7kr-2BOhK=
+bQ8G6T6vwHaNkVOsLVnInDIdhuvrAXi0mTTXgkNToO0DEDW2CR3a08exF2cOxx97hjPRjR2eqJz=
+ib-2BZcF5esznFEaAbuEKAhgJG8eb1vJyag3sJAjPNZKh9B3KQs08a0dGZ39D9iVdIKa70HS6hG=
+ianD0zC5p3LOoDNH3JuI2Obvc3STisU8P38Kev9EWHkG5xzUs54zAeJieZ2p29HpWK-2BDYlNFY=
+zfh6C6NCj9eUEDqqh" alt=3D"" width=3D"1" height=3D"1" border=3D"0" style=3D"=
+height:1px !important;width:1px !important;border-width:0 !important;margin=
+-top:0 !important;margin-bottom:0 !important;margin-right:0 !important;marg=
+in-left:0 !important;padding-top:0 !important;padding-bottom:0 !important;p=
+adding-right:0 !important;padding-left:0 !important;"/></body>
+</html>
+
+--1322e1018361850b2cd046accf3936569e56a8ea9eb90f9e62a05b1b8f1e--

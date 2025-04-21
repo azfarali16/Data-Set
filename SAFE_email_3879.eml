@@ -1,0 +1,492 @@
+X-GM-THRID: 1766940980951487325
+X-Gmail-Labels: Inbox,Category Updates,Unread
+Delivered-To: azfarali007.aa@gmail.com
+Received: by 2002:a05:6214:2d14:b0:623:a3c4:bf7e with SMTP id mz20csp951967qvb;
+        Fri, 26 May 2023 00:30:32 -0700 (PDT)
+X-Google-Smtp-Source: ACHHUZ53zfQlfJ8qV8HodUqyXXr8L22WT/IgyaaeorK2B2MLmS6eeIg7Q8D6IHDGndHzQqCbwazF
+X-Received: by 2002:a17:903:41d2:b0:1af:f253:24b1 with SMTP id u18-20020a17090341d200b001aff25324b1mr5665742ple.9.1685086232341;
+        Fri, 26 May 2023 00:30:32 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1685086232; cv=none;
+        d=google.com; s=arc-20160816;
+        b=BAIxTdw3nQolTe5zLeMa6WD1JF4KNVJMmkhkqATRdM+k6DEiBKzrd2z6csgL+9Serb
+         vagj67CmU+s2Xl0hs6vG927QwVtSx+yiiNfCh1KBYpvmfg9S0TE7VjhmjpGzVk52G2Wl
+         GEpHAGcq4zRmfBPrAkm6iKNhyNtbkYwNmfeYosXCEZPO35QVTjccbsoS4pSg2/bStT4f
+         8VRyM09zpTbBZAwasHZ6Eko7wF3+JhN7LJEm3Xm4LgfmwzINz2kgPKfA1BrJHKg7QTbv
+         ICbn11CzPN5SGbETd2dgEDC/3t96ixD0BOWGjYY5sJG+8S4L0bUe2jDSux+o8ZTpiqCp
+         k53Q==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:reply-to:subject:message-id:mime-version:from:date
+         :dkim-signature:dkim-signature;
+        bh=BJw0JGGEux88j02MaoPEnUdPMSc8+RX/Ft5Y/R2bouI=;
+        b=Yw86c/26as139ptLzpipIxphdSAoGC7HCAVw/UeQxdKrx5Cf8MsKjxC7Kyv3Av2/b7
+         x4BvFnEuHQTqyV4XQvYtiVKIeabBHp95PMncRAKTf9xziO15FBPJxu00A7yyoRZQ1Nk3
+         wMDpmNjKqHnAob49s7n87bEiIhIbYeVXO+LdPfn/YGgwV057bnNSWlq2djfPjnop8w4k
+         458UNGOkpkgTPdqjP7GXPoOQakdBV2QrTHWOJgAKos1eMPRbHDAM8Qb4bXGvNrFX+5Kh
+         F47uE2Mt5WpHYrA+eNC+EKTn5esHLSVvyxhzXktfW3Qhxnvsyd/Xf3i2iZO6hAMNflwC
+         BCfg==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gdsc.community.dev header.s=bvy header.b="H/KRnop6";
+       dkim=pass header.i=@sendgrid.info header.s=smtpapi header.b=ua3cmxPq;
+       spf=pass (google.com: domain of bounces+16161593-3a24-azfarali007.aa=gmail.com@em656.gdsc.community.dev designates 50.31.42.31 as permitted sender) smtp.mailfrom="bounces+16161593-3a24-azfarali007.aa=gmail.com@em656.gdsc.community.dev"
+Return-Path: <bounces+16161593-3a24-azfarali007.aa=gmail.com@em656.gdsc.community.dev>
+Received: from o1.ptr7481.bevy.com (o1.ptr7481.bevy.com. [50.31.42.31])
+        by mx.google.com with ESMTPS id q6-20020a17090311c600b001a5089fe47fsi2972625plh.326.2023.05.26.00.30.31
+        for <azfarali007.aa@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Fri, 26 May 2023 00:30:32 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bounces+16161593-3a24-azfarali007.aa=gmail.com@em656.gdsc.community.dev designates 50.31.42.31 as permitted sender) client-ip=50.31.42.31;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gdsc.community.dev header.s=bvy header.b="H/KRnop6";
+       dkim=pass header.i=@sendgrid.info header.s=smtpapi header.b=ua3cmxPq;
+       spf=pass (google.com: domain of bounces+16161593-3a24-azfarali007.aa=gmail.com@em656.gdsc.community.dev designates 50.31.42.31 as permitted sender) smtp.mailfrom="bounces+16161593-3a24-azfarali007.aa=gmail.com@em656.gdsc.community.dev"
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gdsc.community.dev;
+	h=content-type:from:mime-version:subject:reply-to:x-feedback-id:to:cc:
+	content-type:from:subject:to;
+	s=bvy; bh=BJw0JGGEux88j02MaoPEnUdPMSc8+RX/Ft5Y/R2bouI=;
+	b=H/KRnop6NdYn5shwjfaJyJ+oYq7/8d12OvlmBj5riFDE3OuY+bjlQ7SGDp6Yjw344+aw
+	8PItWuQdBfr422sZO1LFuY8WCPbHwT0YBHj7Blum9smJHaoVoREO76a0qMgGsWOvvW+1Lr
+	JCam17Cw//d3PSIDTx5hFmXdUSam/SiWcwefad0vMd4bzNQcRxyCQBMHpwzdT3ZQ/QN/NI
+	Ajuyo49GQGGtlAv1fTDX1zziyITFkuweoy6lye86nN1lPVESDuJS64xG55igiWCnUwBZ1g
+	iEJ6UJTI6giX/cF0E4IJ5AqVPCr1ogyaArl7Yzq38QxIgPutB4gS5yL/zo8Cqw7Q==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=sendgrid.info;
+	h=content-type:from:mime-version:subject:reply-to:x-feedback-id:to:cc:
+	content-type:from:subject:to;
+	s=smtpapi; bh=BJw0JGGEux88j02MaoPEnUdPMSc8+RX/Ft5Y/R2bouI=;
+	b=ua3cmxPq1wdDwtYX/jwJAHVHMExbUFuO3ts1xKaJalw2rNGQXowhLOFi0b/OEG1SfDtL
+	7XimeYxgjSxpd3pkax5yZCy6Ilb4zHUsRgvqj/wsfKx8jNHEosZ7BL5f0pHzWDbCKBuIDJ
+	yjc8LlRER9bKuQFS9U9h9uzJW6lVaayPk=
+Received: by filterdrecv-648f9945cb-nrpj9 with SMTP id filterdrecv-648f9945cb-nrpj9-1-6470600E-4C
+        2023-05-26 07:30:22.395407283 +0000 UTC m=+1324312.433912268
+Received: from MTYxNjE1OTM (unknown)
+	by geopod-ismtpd-7 (SG) with HTTP
+	id m1-hEyisQVez2lqlAoi1lg
+	Fri, 26 May 2023 07:30:22.350 +0000 (UTC)
+Content-Type: multipart/alternative; boundary=16893c738f6a9edbcb68155b43239f9ea8261d70dd0798da59c50d4630e7
+Date: Fri, 26 May 2023 07:30:30 +0000 (UTC)
+From: GDSC Event Platform <noreply@gdsc.community.dev>
+Mime-Version: 1.0
+Message-ID: <m1-hEyisQVez2lqlAoi1lg@geopod-ismtpd-7>
+Subject: New National University of Modern Languages (NUML) - Islamabad event:
+ Andriod Seekho 2.0
+Reply-To: GDSC Event Platform <noreply@gdsc.community.dev>
+X-Feedback-ID: 16161593:SG
+X-SG-EID: 
+ =?us-ascii?Q?L92cBbLnKzcdBNkQwAYQ+sr1gkgAdysofGN=2FhuKNVQJd0G5iopz4Y0O=2FX9Tovl?=
+ =?us-ascii?Q?Z=2F8SrF=2FwCO1xHfCtgD5LT8L6dJQ9xy+VDdYEsSm?=
+ =?us-ascii?Q?uhpGwK=2FB6r23Nq9IRRpSm9sbfYfKYuE1jb6oChY?=
+ =?us-ascii?Q?zioBGUobCR8yKF9lQ2PsTG4JSpWDrGmuxmXsIUq?=
+ =?us-ascii?Q?rg9ERNVYpyjr++PjfcuDYYBmSHdTFGyJL6aZhms?=
+ =?us-ascii?Q?btL3hI7=2FbKxko9=2FqEhIZwiKJDSOvZDdQ4dP1zuF?=
+ =?us-ascii?Q?ayRdDpSWff3k5Hjh3j6ww=3D=3D?=
+X-SG-ID: 
+ =?us-ascii?Q?N2C25iY2uzGMFz6rgvQsb8raWjw0ZPf1VmjsCkspi=2FI6OjusMqsQbh1b0Ag1oi?=
+ =?us-ascii?Q?xWHUdAM+aVlmjuv7hxvYfRpLCn2vp+0tJ=2FtLFto?=
+ =?us-ascii?Q?Ad3+uhvLldgcR+w+BmO+bXQEY8T?=
+To: azfarali007.aa@gmail.com
+X-Entity-ID: MUf8aKHxItgYcsqRjrDjLA==
+
+--16893c738f6a9edbcb68155b43239f9ea8261d70dd0798da59c50d4630e7
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset=us-ascii
+Mime-Version: 1.0
+
+Hi Azfar, Check out our next event:Andriod Seekho 2.0
+Date & time: Mon, Jun 5, 8:00 PM (PKT)
+
+Agenda:
+
+
+
+About this eventApp development is one of the trendiest domains today. Goog=
+le Developers Student Club is back with another study jam to help you build=
+ Android apps and master all the essential skills that can help you pave yo=
+ur path to becoming an app developer.#AndoidSeekho is a community-organized=
+ study group for people to learn how to build Android apps in Kotlin using =
+an online curriculum from Google.Join us and Get started with Android Devel=
+opment using Kotlin Programming Language. Complete the pathways and units t=
+o win exciting Android swags!!! Hope to see you there!RSVP
+You are receiving this email because you have signed up as a member of a De=
+veloper Student Club. To change your email preferences, visit National Univ=
+ersity of Modern Languages (NUML) - Islamabad. To leave the group, unsubscr=
+ibe below.
+
+
+
+
+
+---
+
+View in browser: https://u16161593.ct.sendgrid.net/ls/click?upn=3D6FylDzOsB=
+jandYrle4FqVZSdv3-2BbZ0ATs1aFPrX0Lwww-2F4aLXFYpI9LpCjVfU0l4peLcIj0p-2BbdgxI=
+xo4JSgDCnLv1fLuTP-2BZby4FVlv6Y0LebuZhqLaCnSmqqRwEnBej9_R_H65ljNg3foEJU6dJQZ=
+HMcp3Zdimzb4muCFBEwI-2BtxR7OKIGJ1b2DH2qtBgNRiHoO4dZ13ifMjRkDWXQVzwirQxeYV7g=
+H2pRAPw4FBd33Rri7n7TX99zhROrnjUc3bvcYJPv9fOMPnkH7DIkSrHYoUdHz7eE5-2Bby-2BvR=
+m-2BMQKsWJwY3lEPWTaQhTbGGyvzgNXKrk0LLb-2FUkPoQJ7b-2FRNhKeTZ-2FfFCThxPZ-2FzF=
+OnsRxYhjan7vLuBUmy24Y3qmI4zsXjapDuEzRCRLCwXJV5C0wnDawAFibDKSDsgA6wGzPShJZ5c=
+J6x7SzCNv4Ns7XjCbR
+
+
+---
+Click here to unsubscribe: https://u16161593.ct.sendgrid.net/ls/click?upn=
+=3DVV2HEC-2Fpe7sihHx9m-2BUmcs-2BdnFkKhwwi5VD5YfGijmo0MZi5SFxDTV8TT5gQPRXR6g=
+8Y1qrYZ2c5aiYngv-2Bh7fDAtyNzJ4-2Bzgo5jIKM-2FyVh-2FK1bLbgmPoM8So64QbJaW3VQfs=
+-2BYq-2FiA9qXeZe3O47NINvPn3qg6t0D-2BCGK6BqhG9a6AYQ2douDzu5VMMKVudXxYV6tX-2F=
+XdswSJEWehgQeXwnhqe3ajtdSgYg-2B5Is3KGj58aEtz740HP5U0u-2Fij3J5Djb-2FQW4M5aVi=
+m4kq8yuDa6SwoWA9P9wGXsEew6m1Vc-3D7FZX_H65ljNg3foEJU6dJQZHMcp3Zdimzb4muCFBEw=
+I-2BtxR7OKIGJ1b2DH2qtBgNRiHoO4dZ13ifMjRkDWXQVzwirQxeYV7gH2pRAPw4FBd33Rri7n7=
+TX99zhROrnjUc3bvcYJPv9fOMPnkH7DIkSrHYoUdHz7eE5-2Bby-2BvRm-2BMQKsWJzC4yAQPq7=
+3q0pJVdO2aYhluQSvgcFXLnfXoCbmjBvUO5Bmdq4xRb-2F1l6yCNCGYd7mABUWGvWqzMrDKI2RL=
+UyZKVYtsEMTfQBOAK3Cs0piGt6ivtNg2s4LFvaYwur916ihRtjiI121EYpnVvTOh1-2FcP
+
+--16893c738f6a9edbcb68155b43239f9ea8261d70dd0798da59c50d4630e7
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset=iso-8859-1
+Mime-Version: 1.0
+
+
+<html lang=3D"en" dir=3D"ltr" xml:lang=3D"en" xmlns=3D"http://www.w3.org/19=
+99/xhtml"  xmlns:v=3D"urn:schemas-microsoft-com:vml" xmlns:o=3D"urn:schemas=
+-microsoft-com:office:office">
+    <head>
+        <title>New National University of Modern Languages (NUML) - Islamab=
+ad event: Andriod Seekho 2.0 </title>
+        <link href=3D"https://fonts.googleapis.com/css?family=3DOpen+Sans:3=
+00italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel=
+=3D"stylesheet" type=3D"text/css">
+        <style type=3D"text/css">
+            a { color: #4285F4; }
+        </style>
+        <!--[if gte mso 9]>
+            <xml>
+                <o:OfficeDocumentSettings>
+                    <o:AllowPNG/>
+                    <o:PixelsPerInch>96</o:PixelsPerInch>
+                </o:OfficeDocumentSettings>
+            </xml>
+        <![endif]-->
+       =20
+    </head>
+
+    <body style=3D"background-color: #F6F7F9; margin:0; padding:0; font-fam=
+ily: 'Open Sans', Arial, sans-serif !important; font-weight: 400; color: #2=
+02124;">
+        <table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D=
+"15">
+            <tr>
+                <td width=3D"100%" align=3D"center" style=3D"background-col=
+or: #F6F7F9;">
+                    <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0"=
+ style=3D"border-bottom-left-radius: 4px; border-bottom-right-radius: 4px; =
+overflow: hidden; min-width: 290px; max-width: 600px;">
+                       =20
+
+
+
+<tr><td>
+    <table width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0">
+        <tbody>
+            <tr>
+               =20
+                <td valign=3D"middle" style=3D"padding: 0 0 15px; font-fami=
+ly: 'Open Sans', Arial, sans-serif !important;">
+                   =20
+                    <a href=3D"https://u16161593.ct.sendgrid.net/ls/click?u=
+pn=3D6FylDzOsBjandYrle4FqVZSdv3-2BbZ0ATs1aFPrX0LwyUnpz6b-2BcnvDvQJuNtdeXTcn=
+r41iC-2Bsm2lDoP7VVuvQNy8FOT6Nr0L79UcPMO0zL4645SxnQNyVmHVqSZUni7SqSuC_H65ljN=
+g3foEJU6dJQZHMcp3Zdimzb4muCFBEwI-2BtxR7OKIGJ1b2DH2qtBgNRiHoO4dZ13ifMjRkDWXQ=
+VzwirQxeYV7gH2pRAPw4FBd33Rri7n7TX99zhROrnjUc3bvcYJPv9fOMPnkH7DIkSrHYoUYhN5T=
+vD-2FXtK-2Fen5IZLpX2fA2Ck4ipEQkskcBm5qMdxbzA0kzV66Kyqz0JBAdCsidx9fsJSJWd-2B=
+NHFox9Msi9bP7aF-2Bvsd7IyJC6Euz6GNaXqz-2FT0YSKvLXzwAP7z8RADXWtdd7hRK7-2Fo8Wy=
+owdSkpfGEVKXNDbs3NrcXXVQlZGz" style=3D"font-size: 12px; color: #6f6f6f !imp=
+ortant; padding: 1px 0; text-decoration: none !important;">
+                        Google Developer Student Clubs - National Universit=
+y of Modern Languages (NUML) - Islamabad
+                    </a>
+                   =20
+                </td>
+               =20
+               =20
+               =20
+               =20
+               =20
+                <td align=3D"right" valign=3D"middle" style=3D"padding: 0 0=
+ 15px; font-family: 'Open Sans', Arial, sans-serif !important;">
+                    <a class=3D"hideinbrowser" href=3D"https://u16161593.ct=
+.sendgrid.net/ls/click?upn=3D6FylDzOsBjandYrle4FqVZSdv3-2BbZ0ATs1aFPrX0Lwww=
+-2F4aLXFYpI9LpCjVfU0l4peLcIj0p-2BbdgxIxo4JSgDCnLv1fLuTP-2BZby4FVlv6Y0fnuvRn=
+JxXgAdrQaK7vopBg3o7_H65ljNg3foEJU6dJQZHMcp3Zdimzb4muCFBEwI-2BtxR7OKIGJ1b2DH=
+2qtBgNRiHoO4dZ13ifMjRkDWXQVzwirQxeYV7gH2pRAPw4FBd33Rri7n7TX99zhROrnjUc3bvcY=
+JPv9fOMPnkH7DIkSrHYoUYhN5TvD-2FXtK-2Fen5IZLpX2fC4wBNAT-2FVy1AY7wJABICJIVelD=
+sByOBfmwhXhXYIb0HMUVCZ5noI2dgoKErnCGP9EehSeJjywnOBBYOQWJCI0HdLbvb-2FTgFAZlE=
+iLkTWVFH6e3HLgbnIcWR2y9UVyz5Z0SIKPZsv6H0u-2FO1xP1nkp" style=3D"font-size: 1=
+2px; color: #6f6f6f !important; padding: 1px 0; text-decoration: none !impo=
+rtant;" >
+                        View in browser
+                    </a>
+                </td>
+               =20
+            </tr>
+        </tbody>
+    </table>
+</td></tr>
+
+
+
+
+
+                       =20
+
+                       =20
+                        <tr>
+                           =20
+<td style=3D"width: 600px; height: 136px; vertical-align: middle; border-bo=
+ttom: 0px solid #F6F7F9;
+
+   =20
+   =20
+         background-image: url(https://res.cloudinary.com/startup-grind/ima=
+ge/upload/c_fill,dpr_2.0,f_auto,g_center,h_135,q_auto:eco,w_600/v1/gcs/plat=
+form-data-dsc/contentbuilder/email_header.png);
+   =20
+   =20
+
+background-color: #fff;  border-top-right-radius: 4px; border-top-left-radi=
+us: 4px;background-size: cover;">
+
+   =20
+   =20
+    <!--[if gte mso 9]>
+        <v:rect xmlns:v=3D"urn:schemas-microsoft-com:vml" fill=3D"true" str=
+oke=3D"false" style=3D"width:600px;height:135px;">
+        <v:fill type=3D"frame" src=3D"https://res.cloudinary.com/startup-gr=
+ind/image/upload/c_fill,dpr_2.0,f_auto,g_center,h_135,q_auto:eco,w_600/v1/g=
+cs/platform-data-dsc/contentbuilder/email_header.png" color=3D"#fff" />
+        <v:textbox inset=3D"0,0,0,0">
+    <![endif]-->
+   =20
+   =20
+
+
+
+                            <table border=3D"0" cellpadding=3D"0" cellspaci=
+ng=3D"20" width=3D"100%" style=3D"width: 100%;">
+                                <tr>
+                                   =20
+                                   =20
+
+    <td style=3D"vertical-align: middle; text-align: center; ">
+        <div style=3D"display: inline-block;">
+           =20
+
+
+   =20
+        <a href=3D"https://u16161593.ct.sendgrid.net/ls/click?upn=3D6FylDzO=
+sBjandYrle4FqVZSdv3-2BbZ0ATs1aFPrX0LwyUnpz6b-2BcnvDvQJuNtdeXTcnr41iC-2Bsm2l=
+DoP7VVuvQNy8FOT6Nr0L79UcPMO0zL4645SxnQNyVmHVqSZUni7SidHN_H65ljNg3foEJU6dJQZ=
+HMcp3Zdimzb4muCFBEwI-2BtxR7OKIGJ1b2DH2qtBgNRiHoO4dZ13ifMjRkDWXQVzwirQxeYV7g=
+H2pRAPw4FBd33Rri7n7TX99zhROrnjUc3bvcYJPv9fOMPnkH7DIkSrHYoUYhN5TvD-2FXtK-2Fe=
+n5IZLpX2dscR9dKMcd-2BS01yJ2uVHKFdNtpeqTddd6-2FKAv6WvbxsbXfriVGgQsJ8L1O118Rt=
+N-2FmzzjSy67y9BBv1ZU4oo6-2FQfPOJcW1evdjN9ckq34o-2BQj12wQP4-2FVZlS9A2ObCXp2C=
+kFTTabPN0r2febNlD5Ds" style=3D"text-align: center; display: block;">
+            <img src=3D"https://res.cloudinary.com/startup-grind/image/uplo=
+ad/c_fit,dpr_2.0,f_auto,g_center,h_100,q_auto:good,w_500/v1/gcs/platform-da=
+ta-dsc/contentbuilder/logo_dark_stacked_ziDh4mP.png" alt=3D"Google Develope=
+r Student Clubs" border=3D"0" height=3D"50">
+        </a>
+   =20
+
+
+           =20
+        </div>
+    </td>
+
+
+                                </tr>
+                            </table>
+
+                               =20
+    <!--[if gte mso 9]>
+        </v:textbox>
+        </v:rect>
+    <![endif]-->
+   =20
+</td>
+
+                        </tr>
+
+                       =20
+
+                       =20
+    <tr style=3D"background-color: #fff;"><td><table width=3D"100%" border=
+=3D"0" cellPadding=3D"0" cellSpacing=3D"0"><tbody><tr><td><table width=3D"1=
+00%" border=3D"0" cellPadding=3D"0" cellSpacing=3D"0"><tbody><tr><td><table=
+ width=3D"100%" border=3D"0" cellPadding=3D"0" cellSpacing=3D"0"><tbody><tr=
+><td><table width=3D"100%" style=3D"background:#fff" border=3D"0" cellPaddi=
+ng=3D"0" cellSpacing=3D"0"><tbody><tr><td width=3D"100%" style=3D"font-size=
+:16px;line-height:1.5em;padding:0 30px"><br /><span style=3D"font-size:15px=
+">Hi Azfar, <br/></span><br /><strong><span style=3D"font-size:18px">Check =
+out our next event:</span></strong><br /><strong><span style=3D"font-size:1=
+8px">Andriod Seekho 2.0</span></strong><br /><br /></td></tr></tbody></tabl=
+e><table style=3D"margin-bottom:30px;margin-top:30px" border=3D"0" cellPadd=
+ing=3D"0" cellSpacing=3D"0" width=3D"100%"><tbody><tr><td style=3D"padding:=
+5px 7px 5px 30px;text-align:center;vertical-align:top;width:40px" width=3D"=
+40"><img alt=3D"" src=3D"https://res.cloudinary.com/startup-grind/image/upl=
+oad/c_fill,dpr_2,f_auto,g_center,q_auto:good/v1/gcs/platform-data-dsc/conte=
+ntbuilder/Date.png" style=3D"border:0;max-height:38px;max-width:38px"/></td=
+><td style=3D"font-size:19px;padding:5px;padding-right:30px"><table border=
+=3D"0" cellPadding=3D"0" cellSpacing=3D"0" width=3D"100%"><tbody><tr><td><s=
+pan><span style=3D"font-size:15px">Date &amp; time</span><br /></span></td>=
+</tr><tr><td style=3D"font-size:16px;padding-bottom:10px">Mon, Jun 5, 8:00 =
+PM (PKT)<p style=3D"font-size:12px;color:#666;padding-top:5px;margin:0">Add=
+ to  <a href=3D"https://u16161593.ct.sendgrid.net/ls/click?upn=3D6FylDzOsBj=
+andYrle4FqVcj-2FGqDuEYpjJPwK5iiSaRKxCmpiL07iNWQMqk7TMqSall4hjsI6qyQHw2Nvjzf=
+L2ynclN5DfizVSknQ1nHkBM0D-2BUa-2Bkmr1KDR0hh-2BKkn6qrKJTTgwRQwsPKkYkO2SpTQu7=
+rqs2qVZwYEmaYuZcjHFt1-2BK3KZzPFn9XBaESf3TmeSh4YVwI6JRNfikQXFU8bZn29UCseJ6ye=
+DXqaPxjxd04pA0hV4TghTnYqHB54KfZ-2B-2FDv-2B-2BR71x6T1ujn-2BbfNcfzXc0TpHoKRnt=
+nIbyTTZwafLZ1PtKsDKnFXsXOHK7wafFNqKf26FKwqrdJv2Yp-2F3Q-3D-3Dw5HK_H65ljNg3fo=
+EJU6dJQZHMcp3Zdimzb4muCFBEwI-2BtxR7OKIGJ1b2DH2qtBgNRiHoO4dZ13ifMjRkDWXQVzwi=
+rQxeYV7gH2pRAPw4FBd33Rri7n7TX99zhROrnjUc3bvcYJPv9fOMPnkH7DIkSrHYoUYhN5TvD-2=
+FXtK-2Fen5IZLpX2eKUO-2FxZAEvUVbrVqEubT7V90kgKWRt2bYD7PemRPJoPDn3no1rE5xb3El=
+itfYfkYU8C1-2Bl0ZvTFmnAdtXt-2F-2FXKemFiaRF4W-2B9CbGDXZ91ODPQxf-2Fk6yctsDfqu=
+FFeP0aLjduaNnSX56Pjys8xskJQv" style=3D"color:#4285F4">Google</a> =B7 <a hre=
+f=3D"https://u16161593.ct.sendgrid.net/ls/click?upn=3D6FylDzOsBjandYrle4FqV=
+ZSdv3-2BbZ0ATs1aFPrX0Lwzk2MG07dITmu-2FdkwrPNNqk3RO6MCCEEPVa0g264DjR9g-3D-3D=
+opRk_H65ljNg3foEJU6dJQZHMcp3Zdimzb4muCFBEwI-2BtxR7OKIGJ1b2DH2qtBgNRiHoO4dZ1=
+3ifMjRkDWXQVzwirQxeYV7gH2pRAPw4FBd33Rri7n7TX99zhROrnjUc3bvcYJPv9fOMPnkH7DIk=
+SrHYoUYhN5TvD-2FXtK-2Fen5IZLpX2fYM143Cvf67KbUnhIQLY6iIIgxIqL3bwj1LFdxPV8XiZ=
+mKMOzAnlztV2NO0JmBFAZO3ERpevTDcvJAiTaPGDCN9B9PsAl385W61n19Mt7lBOZu5aRgWIVad=
+6eYhYgel6TZtXcBSo5U37hwUdHnPeUJ" style=3D"color:#4285F4">Outlook</a> =B7 <a=
+ href=3D"https://u16161593.ct.sendgrid.net/ls/click?upn=3D6FylDzOsBjandYrle=
+4FqVZSdv3-2BbZ0ATs1aFPrX0Lwzk2MG07dITmu-2FdkwrPNNqk3RO6MCCEEPVa0g264DjR9g-3=
+D-3DocR__H65ljNg3foEJU6dJQZHMcp3Zdimzb4muCFBEwI-2BtxR7OKIGJ1b2DH2qtBgNRiHoO=
+4dZ13ifMjRkDWXQVzwirQxeYV7gH2pRAPw4FBd33Rri7n7TX99zhROrnjUc3bvcYJPv9fOMPnkH=
+7DIkSrHYoUYhN5TvD-2FXtK-2Fen5IZLpX2cVKzPqu07sRugON-2BR-2BBSy3LRIbaKDNTbAavL=
+om-2BK-2FYvOo3fXQ60YKdiSvKpVF3MJhNWbHMS8dQKdjxb83x648haauR1mHCM0KrySqqudAZX=
+NsO-2BNflXmGp2LRCtkXwfo-2BoVmTfV-2BAWpv71l4LsGkMi" style=3D"color:#4285F4">=
+iCal</a> =B7 <a href=3D"https://u16161593.ct.sendgrid.net/ls/click?upn=3DVV=
+2HEC-2Fpe7sihHx9m-2BUmcmOW1cGbj1vhu2Kflt26PDOTq7TMR7VbWvu-2BlgE8uDbY7qeFHFL=
+Imaq3fAzMOUikExo69KnqJFBOo525RCAYjD8ZLbwTkepQ1IKf8lFrn4KXvRquhCvwoS9M-2FZ30=
+znyCAIvgQpdL8PxdIrr-2BpXw-2Ftdbmh9h4-2BOGDnYGCZWkTrTVBGPlIGmSdJBhnuq6HR0msu=
+GaUvs3wv-2FSKCB5k7fxmUNzc06YqoCzshjQh-2BI3v1GAtAAOhSZ5rJxQu3PYkZwJjNGtl1rHY=
+9YEPL2EBuuk0EKc-3D9AQj_H65ljNg3foEJU6dJQZHMcp3Zdimzb4muCFBEwI-2BtxR7OKIGJ1b=
+2DH2qtBgNRiHoO4dZ13ifMjRkDWXQVzwirQxeYV7gH2pRAPw4FBd33Rri7n7TX99zhROrnjUc3b=
+vcYJPv9fOMPnkH7DIkSrHYoUYhN5TvD-2FXtK-2Fen5IZLpX2dfswKq-2FhnadsEPQhF9wTzcGU=
+06o4b7YFqsXiBdQBhXVubZhp2sWdhAcAlRPRuHvaCC-2FY6p5eiQ2bsn5SBRPvWMk-2FStP0epH=
+AXpB8GmOnkj-2FSz-2F9sRh49nxwNWX7-2FWWjf7-2FXjj4sf7r7Ckpe9Nw5APZ" style=3D"c=
+olor:#4285F4">Yahoo</a></p></td></tr></tbody></table></td></tr></tbody></ta=
+ble><table width=3D"100%" style=3D"background:#fff" border=3D"0" cellPaddin=
+g=3D"0" cellSpacing=3D"0"><tbody><tr><td width=3D"100%" style=3D"font-size:=
+16px;line-height:1.5em;padding:0 30px"><strong><span style=3D"font-size:18p=
+x">About this event</span></strong><br /><br /><span style=3D"font-size:15p=
+x"><p>App development is one of the trendiest domains today. Google Develop=
+ers Student Club is back with another study jam to help you build Android a=
+pps and master all the essential skills that can help you pave your path to=
+ becoming an app developer.</p><p>#AndoidSeekho is a community-organized st=
+udy group for people to learn how to build Android apps in Kotlin using an =
+online curriculum from Google.</p><p>Join us and Get started with Android D=
+evelopment using Kotlin Programming Language. Complete the pathways and uni=
+ts to win exciting Android swags!!!</p> </span><br /><br /><span style=3D"f=
+ont-size:15px">Hope to see you there!</span><br /><span style=3D"font-size:=
+15px"><div style=3D"display:block;text-align:center;margin:20px"><a style=
+=3D"background-color:#1a73e8;padding:15px 20px;text-decoration:none;color:#=
+fff;border-radius:4px;display:inline-block;font-size:14px;font-weight:500" =
+href=3D"https://u16161593.ct.sendgrid.net/ls/click?upn=3D6FylDzOsBjandYrle4=
+FqVZSdv3-2BbZ0ATs1aFPrX0LwwZmWIHD22a-2BZj4cgofXJY58LTbSIecdvAy5TUJhyc9yK52z=
+Q0sS3nyK8kqaddAFagCZ4LJ0Ujh-2By4pzMI9OL1XvZW2likYKAMUVMXYmdr1wxgM9-2BsySt9v=
+y-2FibmTuYsxQO1kEml8pszxx2hhbSCDv2QiQM9LYH8jfEaEter3og8A-3D-3DPPmK_H65ljNg3=
+foEJU6dJQZHMcp3Zdimzb4muCFBEwI-2BtxR7OKIGJ1b2DH2qtBgNRiHoO4dZ13ifMjRkDWXQVz=
+wirQxeYV7gH2pRAPw4FBd33Rri7n7TX99zhROrnjUc3bvcYJPv9fOMPnkH7DIkSrHYoUYhN5TvD=
+-2FXtK-2Fen5IZLpX2ciBWL7oavacY-2F4dVGWRlL1RwzDycKWF17CX8pG5MEKHjHgsukCVy1S8=
+cdl4ZqmIeH5wTFZdg2xg0LJwcImdNGgNaZdTCF3tkvugJIoLTdFQvMyWQDG-2FeUoCxIKPtzbLH=
+En9JVYpHRLU3jAwtgN62f9">RSVP</a></div></span><br /></td></tr></tbody></tabl=
+e><table width=3D"100%" style=3D"background:#fff" border=3D"0" cellPadding=
+=3D"0" cellSpacing=3D"0"><tbody><tr><td width=3D"100%" style=3D"font-size:1=
+6px;line-height:1.5em;padding:0 30px"><br /><span style=3D"font-size:12px">=
+You are receiving this email because you have signed up as a member of a De=
+veloper Student Club. To change your email preferences, visit <a style=3D"c=
+olor:#4285F4" href=3D"https://u16161593.ct.sendgrid.net/ls/click?upn=3D6Fyl=
+DzOsBjandYrle4FqVZSdv3-2BbZ0ATs1aFPrX0LwyUnpz6b-2BcnvDvQJuNtdeXTcnr41iC-2Bs=
+m2lDoP7VVuvQNy8FOT6Nr0L79UcPMO0zL4645SxnQNyVmHVqSZUni7S9knp_H65ljNg3foEJU6d=
+JQZHMcp3Zdimzb4muCFBEwI-2BtxR7OKIGJ1b2DH2qtBgNRiHoO4dZ13ifMjRkDWXQVzwirQxeY=
+V7gH2pRAPw4FBd33Rri7n7TX99zhROrnjUc3bvcYJPv9fOMPnkH7DIkSrHYoUYhN5TvD-2FXtK-=
+2Fen5IZLpX2epjTcJBtYwQO2EgrCvdhaqvt3xtkbQrzfNStGtJts08mkNq67E95QG0QfkK9EWxy=
+J2wmdCAhNyAsEDcrPgllPnIQDaz67C1HkzV7Zufe9kKcRlS9hb3hNmsGy1vnBTnwrKAWwDvUJML=
+Ry3gk-2B03p35">National University of Modern Languages (NUML) - Islamabad</=
+a></span><span style=3D"font-size:10px">. </span><span style=3D"font-size:1=
+2px">To leave the group, unsubscribe below.</span><br /><br /></td></tr></t=
+body></table></td></tr></tbody></table></td></tr></tbody></table></td></tr>=
+</tbody></table></td></tr>
+
+
+                       =20
+
+
+    <tr>
+        <td>
+            <table width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacin=
+g=3D"0">
+                <tr>
+                    <td align=3D"center" style=3D"background-color: #ffffff=
+; border-top: 1px solid #F6F7F9; padding: 40px 0 40px; font-size: 13px; col=
+or: #7e8890;">
+                       =20
+
+
+   =20
+        <a href=3D"https://u16161593.ct.sendgrid.net/ls/click?upn=3D6FylDzO=
+sBjandYrle4FqVZSdv3-2BbZ0ATs1aFPrX0Lwzg9C4VAJP20noOG84jTS0mI__1_H65ljNg3foE=
+JU6dJQZHMcp3Zdimzb4muCFBEwI-2BtxR7OKIGJ1b2DH2qtBgNRiHoO4dZ13ifMjRkDWXQVzwir=
+QxeYV7gH2pRAPw4FBd33Rri7n7TX99zhROrnjUc3bvcYJPv9fOMPnkH7DIkSrHYoUYhN5TvD-2F=
+XtK-2Fen5IZLpX2e8Z1bBjPCVzhJzQFTxCkDqJE9PP9udtPIHTzvTuXsYKxKn8pVOwM6rU2lRnU=
+XmYC6kqmFMAu7xuz8YViIPwdGtgn3MEtLIKnSxr7J1JutN9bVF-2FZIOAXdBQ9GSrGBB62mcOvH=
+j4glFf47TRU00VqtV"><img height=3D"30" src=3D"https://res.cloudinary.com/sta=
+rtup-grind/image/upload/c_fit,dpr_2.0,f_auto,g_center,h_60,q_auto:good,w_50=
+0/v1/gcs/platform-data-dsc/contentbuilder/logo_dark_horizontal_WVttpzD.png"=
+ border=3D"0"></a>
+   =20
+
+
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+
+
+
+
+                       =20
+
+                       =20
+                    </table>
+                </td>
+            </tr>
+        </table>
+   =20
+<div style=3D"text-align: center; font-size: 13px; padding-bottom: 20px;">
+    <a href=3D"https://u16161593.ct.sendgrid.net/ls/click?upn=3DVV2HEC-2Fpe=
+7sihHx9m-2BUmcs-2BdnFkKhwwi5VD5YfGijmo0MZi5SFxDTV8TT5gQPRXR6g8Y1qrYZ2c5aiYn=
+gv-2Bh7fDAtyNzJ4-2Bzgo5jIKM-2FyVh-2FK1bLbgmPoM8So64QbJaW3VQfs-2BYq-2FiA9qXe=
+Ze3O47NINvPn3qg6t0D-2BCGK6BqhG9a6AYQ2douDzu5VMMKVudXxYV6tX-2FXdswSJEWehgQeX=
+wnhqe3ajtdSgYg-2B5Is3KGj58aEtz740HP5U0u-2Fij3JCvbe5jGvknRrGDtgbQo1vA-3D-3Du=
+KSZ_H65ljNg3foEJU6dJQZHMcp3Zdimzb4muCFBEwI-2BtxR7OKIGJ1b2DH2qtBgNRiHoO4dZ13=
+ifMjRkDWXQVzwirQxeYV7gH2pRAPw4FBd33Rri7n7TX99zhROrnjUc3bvcYJPv9fOMPnkH7DIkS=
+rHYoUYhN5TvD-2FXtK-2Fen5IZLpX2ez2Qa4lcXgBpBBnvWmKKJt1kNcrdOIdcXEewQIrRwAY3Z=
+plM2beCilAC1UEvnojrFCsymDQHOJyM7B-2FbWjxZM1dY-2BU937J6Hs1Tuxpnvu0ef5JyqNx2p=
+pJO87DHvegpRszkCICQfiYEwvm-2BBkocNRf" style=3D"color: #888888">Unsubscribe<=
+/a>
+</div>
+<img src=3D"https://u16161593.ct.sendgrid.net/wf/open?upn=3DI2ZneDYMm30bX-2=
+BRxYz82EqVmWgovkXO1mHRl89j0THzy4lAu-2BMXnVm-2FvaXHCyt5nVWdbxNiypHX7kr-2BOhK=
+bQ8G6T6vwHaNkVOsLVnInDIdifa49JwzAfMYmaJKo2-2FxaJ0-2F1gDm8GBy2tk2okLK0FsecP6=
+Wjil9EjpH3-2BDFDVNtJOflnzNpa0UFCUzGUDSV2-2BZRPkCIe73LZM-2BrChqpS-2FfbFesQRQ=
+-2BER1I8VfOKWntdBtfyw0fZoFJbKjv6pSWKD3uxXLp4fJKfmxDvVm-2BNB5IpU3jmhHsRROyEo=
+nP-2BCI3eCT-2Bixqbqfg1dEil36CFUPD" alt=3D"" width=3D"1" height=3D"1" border=
+=3D"0" style=3D"height:1px !important;width:1px !important;border-width:0 !=
+important;margin-top:0 !important;margin-bottom:0 !important;margin-right:0=
+ !important;margin-left:0 !important;padding-top:0 !important;padding-botto=
+m:0 !important;padding-right:0 !important;padding-left:0 !important;"/></bo=
+dy>
+</html>
+
+--16893c738f6a9edbcb68155b43239f9ea8261d70dd0798da59c50d4630e7--

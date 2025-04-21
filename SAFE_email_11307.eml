@@ -1,0 +1,73 @@
+X-GM-THRID: 1772973884397346478
+X-Gmail-Labels: Inbox,Category Updates,Unread
+Delivered-To: azfarali007.aa@gmail.com
+Received: by 2002:a0c:9a41:0:b0:63d:2999:b0b with SMTP id q1csp2596292qvd;
+        Mon, 31 Jul 2023 14:40:57 -0700 (PDT)
+X-Google-Smtp-Source: APBJJlFrxIIJSloSYY+S57LU0P2O1Sd3TA5Pfx7T9YW17ym2V56b6Ws3PlpQPtyzJzHp8+S0qlZp
+X-Received: by 2002:a05:620a:c47:b0:767:3fa7:2afa with SMTP id u7-20020a05620a0c4700b007673fa72afamr15096111qki.28.1690839657470;
+        Mon, 31 Jul 2023 14:40:57 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1690839657; cv=none;
+        d=google.com; s=arc-20160816;
+        b=eNPyoOMONsTDKpw4w+YkN6Yr2Usx94SBJhRfuIhQCvBPRpotcyzPZEZjz5sUU3sfm0
+         Fpz+yx+PmtcZ1fV/4rQH1jrN5xck5WNHN2dQqrQhdaB46ofqIHqkkkf+QZtAuK6s9Jxb
+         nNcYMEiQPHAmgPh3R6rpSjwJRwD9JSrsknmLzyv1B7SbelvKjCqAKhEhM/E8gbkjoA6K
+         MrZ9H9qUaiZwQq4xd3mIvPbiyYML+l86tJEQJ04u6goC34PNcIyQXcvAE1toFeX2XrA3
+         KISzDEsda6OZlUavAqLpUcajwkHKBCvv3M+p3jphBDv94shBJZ4ExEGsDSH66AZlHqii
+         yInw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=content-transfer-encoding:mime-version:subject:message-id:to:from
+         :date:dkim-signature;
+        bh=wlAIEIoH2FJ7d0K67gEXUBV587+Z+bYP+amwrpyNKv8=;
+        fh=lu9E5mBP5oYefo+aGKtAPXkb7chtqX6lY9rVKzGu82U=;
+        b=WJwaLbBSbfUtteQ/Ooobce/JnSejvEHvLz3dZ4AsIlnKSot3VVLtXcAIGlLWk00Qhq
+         SQsRvhtM3NY8v7x1aQvdEu+XRBGSr1bDcIV1A3ai2WQDkzzzBO64rlZW9Go5ElZCWm9e
+         Ry7xD/XyvT4VNxGGokFbzU9hgyIpC2XB/Uf2uPbRolszbzlVVdwSxtVZgHeuP1zpqjZL
+         SKW2O9yrFPQdBhGTT3l8kQLlijXXol0TGPVmn8LlsFyMMeOCEuIfJAf44C1f9zlQ6lww
+         ixUFZFtFGyypxObPIS2/ekNF1M8BHfNmz7Iyi7Elr4Ou7Cjz49d9HEWstpCE/OcWFEox
+         9Tfg==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@github.com header.s=pf2023 header.b="E/TEanQL";
+       spf=pass (google.com: domain of noreply@github.com designates 192.30.252.211 as permitted sender) smtp.mailfrom=noreply@github.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=github.com
+Return-Path: <noreply@github.com>
+Received: from out-28.smtp.github.com (out-28.smtp.github.com. [192.30.252.211])
+        by mx.google.com with ESMTPS id t19-20020a05620a451300b007680f98f35csi6666505qkp.320.2023.07.31.14.40.57
+        for <azfarali007.aa@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Mon, 31 Jul 2023 14:40:57 -0700 (PDT)
+Received-SPF: pass (google.com: domain of noreply@github.com designates 192.30.252.211 as permitted sender) client-ip=192.30.252.211;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@github.com header.s=pf2023 header.b="E/TEanQL";
+       spf=pass (google.com: domain of noreply@github.com designates 192.30.252.211 as permitted sender) smtp.mailfrom=noreply@github.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=github.com
+Received: from github.com (hubbernetes-node-501ba83.ash1-iad.github.net [10.56.201.74])
+	by smtp.github.com (Postfix) with ESMTPA id 2ADF010107F;
+	Mon, 31 Jul 2023 14:40:57 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=github.com;
+	s=pf2023; t=1690839657;
+	bh=wlAIEIoH2FJ7d0K67gEXUBV587+Z+bYP+amwrpyNKv8=;
+	h=Date:From:To:Subject:From;
+	b=E/TEanQLeJAYZKoP6UVfUW6PUmJWABfRnXH9VnZOEvvLxy8ZtIPu/WlMw47fQDnq7
+	 da80vErNKtAfK12/GEmf2zfKd2zS5OEJdAtL0SDqlB5FzTHKpKelgDUOrm7VvLOA8x
+	 rR0PlXHPr96ZHTpt+J6UqTKkFTyiWCDNOhfoWAsE=
+Date: Mon, 31 Jul 2023 14:40:57 -0700
+From: GitHub <noreply@github.com>
+To: Syed Azfar Ali <ali4402832@cloud.neduet.edu.pk>
+Message-ID: <64c82a6928cc0_b32d0c058143@lowworker-56b655559f-h8s4s.mail>
+Subject: [GitHub] Your personal access token (classic) is about to expire
+Mime-Version: 1.0
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+X-Auto-Response-Suppress: All
+
+Hi @azfarali16,
+
+We noticed your personal access token (classic) "POS System" with admin:enterprise, admin:gpg_key, admin:org, admin:public_key, admin:repo_hook, admin:ssh_signing_key, audit_log, codespace, gist, project, repo, user, workflow, write:discussion, and write:packages scopes will expire in about 21 hours.
+
+If this token is still needed, visit https://github.com/settings/tokens/1245490503/regenerate to generate an equivalent.
+
+If you run into problems, please contact support by visiting https://github.com/contact?tags=dotcom-accounts
+
+Thanks,
+The GitHub Team

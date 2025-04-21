@@ -1,0 +1,730 @@
+X-GM-THRID: 1810544710651424502
+X-Gmail-Labels: Inbox,Category Updates,Unread
+Delivered-To: azfarali007.aa@gmail.com
+Received: by 2002:a0c:ead0:0:b0:6c3:6285:2032 with SMTP id y16csp839809qvp;
+        Wed, 18 Sep 2024 07:33:09 -0700 (PDT)
+X-Google-Smtp-Source: AGHT+IEMbrafVeNLmnKOXNHjDJOIZi05nXA39cW+Z+3ydnDsxw7X+SiQu9T3iIS6hTCv3Z8lQ8DX
+X-Received: by 2002:a05:6102:358f:b0:498:d12b:4774 with SMTP id ada2fe7eead31-49d4147ebc1mr14941430137.7.1726669989346;
+        Wed, 18 Sep 2024 07:33:09 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1726669989; cv=none;
+        d=google.com; s=arc-20240605;
+        b=bUssRqiwmiNe20OEFnzn4Y0aYCncClW8KSEbHf9bW+zPY1mJGUV1OcJbwjM0tgV6ys
+         UOPQEpm0sdsRY8mxXfCFYlxlKL9d1lY5iVMh6k5BieeSv9Ibu0dYg4p6op558JxvMYv6
+         8YuO4uSFaK5FmAS6XgKtd+9lD4eS9Uzo70m4p0xf9YNV3OvU6pFEIK0NrqfID4WrsRk0
+         DxDKfFD8atpxOZqYdxhhHV+l//jV2yjyzDW3fg7ds7C0fyR5r/bIyXnpnDbABsGwvbYd
+         QHfKflIWVjR7JWozHTI9LUQdrq4wYENKpS3AP9yS32MS1mE7e6AJZHz+Msg/FQgsKk6h
+         dNnw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=list-unsubscribe:list-unsubscribe-post:mime-version:subject
+         :message-id:to:reply-to:from:date:dkim-signature:dkim-signature;
+        bh=ZS9SQPh8CE4wGwv5C3pYGeboYC0dCdU0m0Uv7O7Yvzs=;
+        fh=1ghr3/vhIGL7+ytS5gYC2yrxOtO8q7dbhZ8cIHrxcdk=;
+        b=PFXQsm0sV+0ZPdY+6Y4bSE6Rbh9gMJhA4Qid1aaxcdiDzUYn2BWam8e8Vs7l8shwSs
+         Wq8UylIBsZV23sBbT191nwhGXSp/rGh57QbDbGzBjvY7v9AZJrXaaHpTu7TInIUK0Epy
+         DjrKpM+oDL8NS4d2MiRMGZaKB85qK1CMIfb27L6WPc4vsaFVaZZ76Sd0gcku9x3coG0/
+         VTQQAGwUQwHtCHOnBSwdcouZ8EZUzTLk54RbMQ9TqcifxfyxSZ5l1kz3YsrwiEBkkcyU
+         rJm6/u2Mce16q1lPtHH8DkjaknCuKl+GfdYqvw0HfRT7IA+RI8Fr26tPCiSJMmUzArVN
+         achA==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@mail.datacamp.com header.s=m1 header.b=hPUURpvq;
+       dkim=pass header.i=@mktdns.com header.s=m1 header.b=lWk99tsJ;
+       spf=pass (google.com: domain of 307-oat-968.0.97972.0.0.11604.9.92672229@bounce.datacamp.com designates 192.28.145.41 as permitted sender) smtp.mailfrom=307-OAT-968.0.97972.0.0.11604.9.92672229@bounce.datacamp.com;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=mail.datacamp.com
+Return-Path: <307-OAT-968.0.97972.0.0.11604.9.92672229@bounce.datacamp.com>
+Received: from bounce.datacamp.com (bounce.datacamp.com. [192.28.145.41])
+        by mx.google.com with ESMTPS id ada2fe7eead31-49e6b43c114si1798330137.319.2024.09.18.07.33.09
+        for <azfarali007.aa@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Wed, 18 Sep 2024 07:33:09 -0700 (PDT)
+Received-SPF: pass (google.com: domain of 307-oat-968.0.97972.0.0.11604.9.92672229@bounce.datacamp.com designates 192.28.145.41 as permitted sender) client-ip=192.28.145.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@mail.datacamp.com header.s=m1 header.b=hPUURpvq;
+       dkim=pass header.i=@mktdns.com header.s=m1 header.b=lWk99tsJ;
+       spf=pass (google.com: domain of 307-oat-968.0.97972.0.0.11604.9.92672229@bounce.datacamp.com designates 192.28.145.41 as permitted sender) smtp.mailfrom=307-OAT-968.0.97972.0.0.11604.9.92672229@bounce.datacamp.com;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=mail.datacamp.com
+X-MSFBL: iyFrvx0eMhPWKxi9yf6RhWuHrFrvmQh/98mvG5GrPKg=|eyJyIjoiYXpmYXJhbGk
+	wMDcuYWFAZ21haWwuY29tIiwidSI6IjMwNy1PQVQtOTY4OjA6ODY1MDoyOTE0OTo
+	xMTUzODA6MTE2MDQ6OTo5Nzk3Mjo5MjY3MjIyOSIsImciOiJiZy1hYmQtOTg1Iiw
+	iYiI6ImR2cC0xOTItMjgtMTQ1LTQxIn0=
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; t=1726669901;
+	s=m1; d=mail.datacamp.com; i=@mail.datacamp.com;
+	h=List-Unsubscribe:List-Unsubscribe-Post:Content-Type:MIME-Version:Subject:To:From:Date;
+	bh=ZS9SQPh8CE4wGwv5C3pYGeboYC0dCdU0m0Uv7O7Yvzs=;
+	b=hPUURpvqUDklODIvPDF10tvwuThSNimAo6Bg3VHIZnuPYk+2KPraMGK6uENaHUkB
+	GpDgbOgT+uuu84x061gKEjvppt2Np9DpEcuJB2qN3zLqAbJKTlOM4NKfifpGBVGHG9A
+	WFXDTglOjorOXYRX1zyBIuEt9SipsqgkU4Cmp7js=
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; t=1726669901;
+	s=m1; d=mktdns.com; i=@mktdns.com;
+	h=List-Unsubscribe:List-Unsubscribe-Post:Content-Type:MIME-Version:Subject:To:From:Date;
+	bh=ZS9SQPh8CE4wGwv5C3pYGeboYC0dCdU0m0Uv7O7Yvzs=;
+	b=lWk99tsJFzM8Kp2B8EJel6hl1wW6sk4u1Nr22dv6A1pBs8c6pAw2EeFw4qLglXgC
+	kPytbnRoLaNnKoyOFE23QWenpc5F/IHYEU2hOVb+CKA99T5jpNGSxHNIKSUyAOmVk7B
+	iRJU4912SSZmaBShzEToQ5d81f+Upk1xUgjkhewo=
+Date: Wed, 18 Sep 2024 09:31:41 -0500 (CDT)
+From: The DataCamp Team <demand@mail.datacamp.com>
+Reply-To: demand@mail.datacamp.com
+To: azfarali007.aa@gmail.com
+Message-ID: <662908936.606072239.1726669901842@abmktmail-batch1h.marketo.org>
+Subject: [Data Literacy Month] Increasing Your Organization's Data & AI
+ Maturity
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+	boundary="----=_Part_606072238_1127443004.1726669901842"
+X-Binding: bg-abd-985
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+List-Unsubscribe: <http://go2.datacamp.com/u/MzA3LU9BVC05NjgAAAGVpISADqofmjP6URnvJ8kwotA9NEDxOahkfJk9afl1Xwlslx6TAKw3p_DPrYoATDhSFF697MM=?emailAddress=MzA3LU9BVC05NjgAAAGVpISADZ9XloypndYorqXbHUna25aXd1CWcgccUTjpZ7i_1YQiZ4Ihwc2BDh0CklyWT1IK-2TUQLw>, <mailto:IFEEWQ3POZZF6MKIIRZVOMS2JZDGYULGNNRG44CJJRSU6YSXMRBFUX3MJBMG26KPJJMDIPI=.97972.11604.9@unsub-ab.mktomail.com>
+X-MarketoID: 307-OAT-968:0:8650:29149:115380:11604:9:97972:92672229
+X-Mailfrom: 307-OAT-968.0.97972.0.0.11604.9.92672229@bounce.datacamp.com
+X-MktArchive: false
+X-MSYS-API: {"options":{"open_tracking":false,"click_tracking":false}}
+X-MktMailDKIM: true
+
+------=_Part_606072238_1127443004.1726669901842
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+
+This email was sent to azfarali007.aa@gmail.com. If you no longer wish to receive these emails you may unsubscribe here: http://www2.datacamp.com/UnsubscribePage.html?mkt_unsubscribe=1&mkt_tok=MzA3LU9BVC05NjgAAAGVpISADgGct8I5C8gH9LI4Dv1NCFLOWtdhglAiFBvI0dCoZVgeUgAQW9TViS6XjhLOlm6zF3qeoLoF33vpa4ojol3FjP9oOLsW_R0xevxWlk44.
+
+------=_Part_606072238_1127443004.1726669901842
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!doctype html>
+<html lang="en" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" style="color-scheme: light dark;">
+<head> 
+<meta charset="utf-8"> 
+<title>DataCamp</title> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<meta name="format-detection" content="telephone=no, date=no, address=no, email=no, url=no"> 
+<link rel="shortcut icon" href="https://assets.datacamp.com/email/icon/favicon.png"> 
+<meta name="supported-color-scheme" value="light dark"> 
+<meta name="x-apple-disable-message-reformatting"> 
+<style id="datacamp-css-maizzle">
+      .hover-bg-greenLight:hover {
+        background-color: #65ff8f !important;
+      }
+
+      .hover-bg-none:hover {
+        background-image: none !important;
+      }
+
+      .hover-text-navy:hover {
+        color: #05192d !important;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        .darkmode-list-item-dark:not([class^="x_"]) {
+          background-image: url(https://assets.datacamp.com/email/icon/list%40dark.png) !important;
+          color: #fff !important;
+        }
+
+        .darkmode-border-white:not([class^="x_"]) {
+          border-color: #fff !important;
+        }
+
+        .darkmode-border-navy:not([class^="x_"]) {
+          border-color: #05192d !important;
+        }
+
+        .darkmode-bg-greenLight:not([class^="x_"]) {
+          background-color: #65ff8f !important;
+        }
+
+        .darkmode-bg-navyLight:not([class^="x_"]) {
+          background-color: #213147 !important;
+        }
+
+        .darkmode-bg-navySubtleTextOnLight:not([class^="x_"]) {
+          background-color: #65707c !important;
+        }
+
+        .darkmode-bg-greyMedium:not([class^="x_"]) {
+          background-color: #d9d9e2 !important;
+        }
+
+        .darkmode-bg-none:not([class^="x_"]) {
+          background-image: none !important;
+        }
+
+        .darkmode-text-white:not([class^="x_"]) {
+          color: #fff !important;
+        }
+
+        .darkmode-text-greenLight:not([class^="x_"]) {
+          color: #65ff8f !important;
+        }
+
+        .darkmode-text-navy:not([class^="x_"]) {
+          color: #05192d !important;
+        }
+      }
+
+      [data-ogsb] .darkmode-list-item-dark {
+        background-image: url(https://assets.datacamp.com/email/icon/list%40dark.png) !important;
+        color: #fff !important;
+      }
+
+      [data-ogsb] .darkmode-border-white {
+        border-color: #fff !important;
+      }
+
+      [data-ogsb] .darkmode-border-navy {
+        border-color: #05192d !important;
+      }
+
+      [data-ogsb] .darkmode-bg-greenLight {
+        background-color: #65ff8f !important;
+      }
+
+      [data-ogsb] .darkmode-bg-navyLight {
+        background-color: #213147 !important;
+      }
+
+      [data-ogsb] .darkmode-bg-navySubtleTextOnLight {
+        background-color: #65707c !important;
+      }
+
+      [data-ogsb] .darkmode-bg-greyMedium {
+        background-color: #d9d9e2 !important;
+      }
+
+      [data-ogsb] .darkmode-bg-none {
+        background-image: none !important;
+      }
+
+      [data-ogsb] .darkmode-text-white {
+        color: #fff !important;
+      }
+
+      [data-ogsb] .darkmode-text-greenLight {
+        color: #65ff8f !important;
+      }
+
+      [data-ogsb] .darkmode-text-navy {
+        color: #05192d !important;
+      }
+
+      @media (max-width: 599px) {
+        .mobile-heading-40 {
+          font-size: 40px !important;
+          line-height: 48px !important;
+        }
+
+        .mobile-heading-36 {
+          font-size: 36px !important;
+          line-height: 40px !important;
+        }
+
+        .mobile-heading-32 {
+          font-size: 32px !important;
+          line-height: 40px !important;
+        }
+
+        .mobile-heading-24 {
+          font-size: 24px !important;
+          line-height: 30px !important;
+        }
+
+        .mobile-heading-20 {
+          font-size: 20px !important;
+          line-height: 25px !important;
+        }
+
+        .mobile-heading-16 {
+          font-size: 16px !important;
+          line-height: 20px !important;
+        }
+
+        .mobile-paragraph-16 {
+          font-size: 16px !important;
+          line-height: 24px !important;
+        }
+
+        .mobile-mb-17px {
+          margin-bottom: 17px !important;
+        }
+
+        .mobile-mb-8px {
+          margin-bottom: 8px !important;
+        }
+
+        .mobile-mb-9px {
+          margin-bottom: 9px !important;
+        }
+
+        .mobile-mb-16px {
+          margin-bottom: 16px !important;
+        }
+
+        .mobile-mb-14px {
+          margin-bottom: 14px !important;
+        }
+
+        .mobile-mb-20px {
+          margin-bottom: 20px !important;
+        }
+
+        .mobile-mb-18px {
+          margin-bottom: 18px !important;
+        }
+
+        .mobile-mb-13px {
+          margin-bottom: 13px !important;
+        }
+
+        .mobile-mb-10px {
+          margin-bottom: 10px !important;
+        }
+
+        .mobile-mb-11px {
+          margin-bottom: 11px !important;
+        }
+
+        .mobile-mb-3px {
+          margin-bottom: 3px !important;
+        }
+
+        .mobile-mb-24px {
+          margin-bottom: 24px !important;
+        }
+
+        .mobile-ml-0 {
+          margin-left: 0 !important;
+        }
+
+        .mobile-mb-21px {
+          margin-bottom: 21px !important;
+        }
+
+        .mobile-mt-0 {
+          margin-top: 0 !important;
+        }
+
+        .mobile-block {
+          display: block !important;
+        }
+
+        .mobile-flex {
+          display: flex !important;
+        }
+
+        .mobile-hidden {
+          display: none !important;
+        }
+
+        .mobile-h-14px {
+          height: 14px !important;
+        }
+
+        .mobile-h-auto {
+          height: auto !important;
+        }
+
+        .mobile-h-29px {
+          height: 29px !important;
+        }
+
+        .mobile-w-100px {
+          width: 100px !important;
+        }
+
+        .mobile-w-14px {
+          width: 14px !important;
+        }
+
+        .mobile-w-44px {
+          width: 44px !important;
+        }
+
+        .mobile-w-272px {
+          width: 272px !important;
+        }
+
+        .mobile-w-full {
+          width: 100% !important;
+        }
+
+        .mobile-w-136px {
+          width: 136px !important;
+        }
+
+        .mobile-w-304px {
+          width: 304px !important;
+        }
+
+        .mobile-w-106px {
+          width: 106px !important;
+        }
+
+        .mobile-w-29px {
+          width: 29px !important;
+        }
+
+        .mobile-max-w-157px {
+          max-width: 157px !important;
+        }
+
+        .mobile-p-0 {
+          padding: 0 !important;
+        }
+
+        .mobile-p-16px {
+          padding: 16px !important;
+        }
+
+        .mobile-px-0 {
+          padding-left: 0 !important;
+          padding-right: 0 !important;
+        }
+
+        .mobile-py-20px {
+          padding-top: 20px !important;
+          padding-bottom: 20px !important;
+        }
+
+        .mobile-py-30px {
+          padding-top: 30px !important;
+          padding-bottom: 30px !important;
+        }
+
+        .mobile-py-24px {
+          padding-top: 24px !important;
+          padding-bottom: 24px !important;
+        }
+
+        .mobile-py-12px {
+          padding-top: 12px !important;
+          padding-bottom: 12px !important;
+        }
+
+        .mobile-px-1_5px {
+          padding-left: 1.5px !important;
+          padding-right: 1.5px !important;
+        }
+
+        .mobile-pr-20px {
+          padding-right: 20px !important;
+        }
+
+        .mobile-pl-20px {
+          padding-left: 20px !important;
+        }
+
+        .mobile-pb-30px {
+          padding-bottom: 30px !important;
+        }
+
+        .mobile-pt-17px {
+          padding-top: 17px !important;
+        }
+
+        .mobile-pb-24px {
+          padding-bottom: 24px !important;
+        }
+
+        .mobile-pt-24px {
+          padding-top: 24px !important;
+        }
+
+        .mobile-pt-21px {
+          padding-top: 21px !important;
+        }
+
+        .mobile-pt-14px {
+          padding-top: 14px !important;
+        }
+
+        .mobile-pt-0 {
+          padding-top: 0 !important;
+        }
+
+        .mobile-pt-23px {
+          padding-top: 23px !important;
+        }
+
+        .mobile-pt-20px {
+          padding-top: 20px !important;
+        }
+
+        .mobile-text-center {
+          text-align: center !important;
+        }
+
+        .mobile-text-8px {
+          font-size: 8px !important;
+        }
+
+        .mobile-text-36px {
+          font-size: 36px !important;
+        }
+
+        .mobile-text-16px {
+          font-size: 16px !important;
+        }
+
+        .mobile-text-14px {
+          font-size: 14px !important;
+        }
+
+        .mobile-leading-9_2px {
+          line-height: 9.2px !important;
+        }
+
+        .mobile-leading-41px {
+          line-height: 41px !important;
+        }
+
+        .mobile-leading-44px {
+          line-height: 44px !important;
+        }
+
+        .mobile-leading-24px {
+          line-height: 24px !important;
+        }
+
+        .mobile-leading-10px {
+          line-height: 10px !important;
+        }
+
+        .mobile-leading-21px {
+          line-height: 21px !important;
+        }
+
+        .mobile-rtl {
+          direction: rtl !important;
+        }
+      }
+
+      @media (min-width: 600px) {
+        .desktop-mr-16px {
+          margin-right: 16px !important;
+        }
+
+        .desktop-ml-auto {
+          margin-left: auto !important;
+        }
+
+        .desktop-flex {
+          display: flex !important;
+        }
+      }
+    </style> 
+<style id="datacamp-css-reset">
+      .datacamp-has-link a {
+        color: inherit !important;
+        text-decoration: none !important;
+      }
+    </style> 
+<!--[if !mso]><!--> 
+<style id="datacamp-css-fonts">
+      @font-face {
+        font-family: Studio-Feixen-Sans;
+        src: url('https://waffles.datacamp.com/fonts/StudioFeixenSans-Regular.woff2') format('woff2');
+        font-weight: 400;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: Studio-Feixen-Sans;
+        src: url('https://waffles.datacamp.com/fonts/StudioFeixenSans-Bold.woff2') format('woff2');
+        font-weight: 800;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: Studio-Feixen-Sans;
+        src: url('https://waffles.datacamp.com/fonts/StudioFeixenSans-Book.woff2') format('woff2');
+        font-weight: 100;
+        font-display: swap;
+      }
+    </style> 
+<!--<![endif]--> 
+<style id="datacamp-css-dark">
+      :root {
+        color-scheme: light dark;
+      }
+    </style> 
+<!--[if mso]>
+    <xml>
+      <o:OfficeDocumentSettings>
+        <o:PixelsPerInch>96</o:PixelsPerInch>
+      </o:OfficeDocumentSettings>
+    </xml>
+    <![endif]--> 
+</head> 
+<body class="darkmode-bg-navyLight" style="margin: 0; padding: 0; -webkit-text-size-adjust: none; text-size-adjust: none; word-break: break-word; background-color: #fff"><style type="text/css">div#emailPreHeader{ display: none !important; }</style><div id="emailPreHeader" style="mso-hide:all; visibility:hidden; opacity:0; color:transparent; mso-line-height-rule:exactly; line-height:0; font-size:0px; overflow:hidden; border-width:0; display:none !important;">Every company wants to improve its data and AI capabilities, but it's easier said than done. Learn how to assess your data and AI maturity, and how to improve it.</div> 
+<div class="darkmode-bg-navyLight" lang="en" style="background-color: #fff; font-family: Studio-Feixen-Sans, Roboto, sans-serif; color: #05192d"> 
+<div role="main"> 
+<div role="banner"> 
+<table style="margin-left: auto; margin-right: auto; width: 100%" border="0" cellspacing="0" cellpadding="0" role="presentation"> 
+<tbody> 
+<tr> 
+<td class="mobile-py-30px" style="padding-top: 36px; padding-bottom: 36px"> <h1 style="border-style: none; background-color: transparent; padding: 0; margin: 0; text-align: center; font-family: Studio-Feixen-Sans, Roboto, sans-serif; font-size: 16px; font-weight: 400"> <a href=
+"http://go2.datacamp.com/MzA3LU9BVC05NjgAAAGVpISADVEck9GM05N7Okw7z0ccfAUeQSb0015-STO32KZLU_k8H4YL3AsQSRCoC_Cy3_mYl2A=" style="color: inherit; text-decoration-line: none; text-decoration: none" target="_blank"
+> 
+<picture> 
+<source srcset="https://assets.datacamp.com/email/logos/DC-BUSINESS-LIGHT.png" media="(prefers-color-scheme:dark)"> 
+<img src="https://assets.datacamp.com/email/logos/DC-BUSINESS-DARK.png" alt="DataCamp" width="175" height="48" style="border-style: none; color: inherit; vertical-align: middle; font-family: Studio-Feixen-Sans, Roboto, sans-serif; font-size: 16px"> 
+</picture> </a> </h1> </td> 
+</tr> 
+</tbody> 
+</table> 
+</div> 
+<!-- Start MODULE 24 --> 
+<table style="width: 100%; table-layout: fixed" border="0" cellspacing="0" cellpadding="0" role="presentation"> 
+<tbody> 
+<tr> 
+<td style="padding-left: 0; padding-right: 0"> 
+<!--[if mso]>
+                <table border="0" cellpadding="0" cellspacing="0" align="center" role="presentation" style="width:602px;">
+                  <tr>
+                    <td>
+                <![endif]--> 
+<div style="max-width: 602px; margin-left: auto; margin-right: auto; width: 100%"> 
+<p style="border-style: none; background-color: transparent; padding: 0; margin: 0"><a href=
+"http://go2.datacamp.com/MzA3LU9BVC05NjgAAAGVpISADn82mzEZs_SQyG4XSYCzuG7YaO209BjfYkHx1g2tuZG4teJLwn5xmLvmFe7AheM3_Ro=" target="_blank" style="text-decoration:none; color:#ffffff;"
+> <img src="http://www2.datacamp.com/rs/307-OAT-968/images/Increasing Your Organization%27s Data %26 AI Maturity.png?version=0" alt="Increasing Your Organization's Data &amp; AI Maturity" width="602" style="border-style: none; vertical-align: middle; color: inherit; font-family: inherit; max-width: 100%"></a> </p> 
+<table style="width: 100%; table-layout: fixed" border="0" cellspacing="0" cellpadding="0" role="presentation"> 
+<tbody> 
+<tr> 
+<td class="mobile-py-24px" style="padding-top: 38px; padding-bottom: 38px; padding-left: 24px; padding-right: 24px"> 
+<!--[if mso]>
+                                <table border="0" cellpadding="0" cellspacing="0" align="center" role="presentation" style="width:532px;">
+                                  <tr>
+                                    <td>
+                                <![endif]--> 
+<div style="max-width: 532px; margin-left: auto; margin-right: auto; width: 100%"> 
+<p class="darkmode-text-white" style="border-style: none; background-color: transparent; padding: 0; margin: 0; font-family: Studio-Feixen-Sans, Roboto, sans-serif; font-weight: 400; color: #000; font-size: 16px; line-height: 24px; margin-bottom: 21px">Every company wants to improve its data and AI capabilities, but it's easier said than done. Learn how to assess your data and AI maturity, and how to improve it.<br><br> Key takeaways: </p> 
+<ul> 
+<li><p class="darkmode-text-white js-editable " style="border-style: none; background-color: transparent; padding: 0; margin: 0; font-family: Studio-Feixen-Sans, Roboto, sans-serif; font-weight: 400; color: #000; font-size: 16px; line-height: 24px; margin-bottom: 8px" data-editable="id-34" contenteditable="true" spellcheck="false" data-plaintext="false">Learn how to assess your organization's data and AI maturity</p></li> 
+<li><p class="darkmode-text-white js-editable " style="border-style: none; background-color: transparent; padding: 0; margin: 0; font-family: Studio-Feixen-Sans, Roboto, sans-serif; font-weight: 400; color: #000; font-size: 16px; line-height: 24px; margin-bottom: 8px" data-editable="id-36" contenteditable="true" spellcheck="false" data-plaintext="false">Understand the ways to improve the technology, people, and process aspects to your maturity level</p></li> 
+<li> <p class="darkmode-text-white js-editable " style="border-style: none; background-color: transparent; padding: 0; margin: 0; font-family: Studio-Feixen-Sans, Roboto, sans-serif; font-weight: 400; color: #000; font-size: 16px; line-height: 24px; margin-bottom: 36px" data-editable="id-38" contenteditable="true" spellcheck="false" data-plaintext="false">Form and execute a strategy for improving data and AI maturity</p> </li> 
+</ul> 
+<p></p> 
+<table align="center" class="gmail-green hover-bg-greenLight hover-bg-none darkmode-bg-greenLight darkmode-bg-none" style="width: 211px; margin: 0; margin-left: auto; margin-right: auto; max-width: 100%; border-collapse: separate; overflow: hidden; border-radius: 4px; background-color: #03ef62; transition-duration: 150ms" border="0" cellspacing="0" cellpadding="0" role="presentation"> 
+<tbody> 
+<tr> 
+<td height="48" style="mso-padding-alt: 0 14px; height: 48px; text-align: center"> <a href=
+"http://go2.datacamp.com/MzA3LU9BVC05NjgAAAGVpISADn82mzEZs_SQyG4XSYCzuG7YaO209BjfYkHx1g2tuZG4teJLwn5xmLvmFe7AheM3_Ro=" style="display: block; padding-left: 14px; padding-right: 14px; padding-top: 14px; padding-bottom: 14px; text-align: center; font-family: Studio-Feixen-Sans, Roboto, sans-serif; font-size: 14px; font-weight: 700; line-height: 20px; color: #05192d; text-decoration-line: none; text-decoration: none" target="_blank"
+> Register Now </a> </td> 
+</tr> 
+</tbody> 
+</table> 
+</div> 
+<!--[if mso]>
+                                    </td>
+                                  </tr>
+                                </table>
+                                <![endif]--> </td> 
+</tr> 
+</tbody> 
+</table> 
+</div> 
+<!--[if mso]>
+                    </td>
+                  </tr>
+                </table>
+                <![endif]--> </td> 
+</tr> 
+</tbody> 
+</table> 
+<!-- End MODULE 24 --> 
+<!-- Start MODULE 45 --> 
+<table style="width: 100%; table-layout: fixed" border="0" cellspacing="0" cellpadding="0" role="presentation"> 
+<tbody> 
+<tr> 
+<td style="padding-left: 0; padding-right: 0; padding-top: 22px; padding-bottom: 22px"> 
+<!--[if mso]>
+                <table border="0" cellpadding="0" cellspacing="0" align="center" role="presentation" style="width:602px;">
+                  <tr>
+                    <td>
+                <![endif]--> 
+<div style="max-width: 602px; margin-left: auto; margin-right: auto; width: 100%"> 
+<table style="width: 100%; table-layout: fixed" border="0" cellspacing="0" cellpadding="0" role="presentation"> 
+<tbody> 
+<tr> 
+<td class="mobile-pt-20px darkmode-bg-greyMedium" style="background-color: #d9d9e2; padding-left: 20px; padding-right: 20px; padding-bottom: 20px; padding-top: 38px"> 
+<!--[if mso]>
+                                <table border="0" cellpadding="0" cellspacing="0" align="center" role="presentation" style="width:500px;">
+                                  <tr>
+                                    <td>
+                                <![endif]--> 
+<div style="max-width: 500px; margin-left: auto; margin-right: auto; width: 100%"> 
+<p style="margin: 0; border-style: none; background-color: transparent; padding: 0; margin-bottom: 18px; text-align: center"> <a href=
+"http://go2.datacamp.com/MzA3LU9BVC05NjgAAAGVpISADtPfAuFriycBqe-Czab7btC3lNp4mBV7_ORzoJuNfpFEcNufdO3M08ai5gVF2wZiXMg=" style="color: inherit" target="_blank"
+><img src="https://assets.datacamp.com/email/logos/logo-outline-greyMedium.png" alt="DataCamp" width="177" height="38" class="mobile-w-106px mobile-h-auto" style="border-style: none; color: inherit; vertical-align: middle; font-family: Studio-Feixen-Sans, Roboto, sans-serif; font-size: 16px"> </a></p> 
+<table align="center" style="width: auto; margin-left: auto; margin-right: auto" border="0" cellspacing="0" cellpadding="0" role="presentation"> 
+<tbody> 
+<tr> 
+<td class="mobile-py-12px" style="padding-left: 8px; padding-right: 8px; padding-top: 24px; padding-bottom: 24px"> <a href=
+"http://go2.datacamp.com/MzA3LU9BVC05NjgAAAGVpISADtfHmRXCFmFPUrKJ-b3XhG6w9hKL90yw4T2YbxHPCQuHCKa5riZasDWxc8Sc95Wxe3M=" style="color: inherit" target="_blank"
+><img src="https://assets.datacamp.com/email/footer/social/social-facebook.png" width="32" height="32" alt="Facebook" style="border-style: none; vertical-align: middle; color: inherit; font-family: inherit; border-radius: 16px; background-color: #d9d9e2; font-size: 10px"></a> </td> 
+<td class="mobile-py-12px" style="padding-left: 8px; padding-right: 8px; padding-top: 24px; padding-bottom: 24px"> <a href=
+"http://go2.datacamp.com/MzA3LU9BVC05NjgAAAGVpISADc7BIqf04dXa1WeHndw_tTILwFTCJmod-ULggMYzSjM3MLtHsDGju18yONBwbpUC8ac=" style="color: inherit" target="_blank"
+><img src="https://assets.datacamp.com/email/footer/social/social-x.png" width="32" height="32" alt="X" style="border-style: none; vertical-align: middle; color: inherit; font-family: inherit; border-radius: 16px; background-color: #d9d9e2; font-size: 10px"></a> </td> 
+<td class="mobile-py-12px" style="padding-left: 8px; padding-right: 8px; padding-top: 24px; padding-bottom: 24px"> <a href=
+"http://go2.datacamp.com/MzA3LU9BVC05NjgAAAGVpISADh8HqUznoSRNjxfVDYT-r4-WrBSEaAf-W3XVM5M1nke7r1j62sNVmthvEEmYvAnZup0=" style="color: inherit" target="_blank"
+><img src="https://assets.datacamp.com/email/footer/social/social-linkedin.png" width="32" height="32" alt="Linkedin" style="border-style: none; vertical-align: middle; color: inherit; font-family: inherit; border-radius: 16px; background-color: #d9d9e2; font-size: 10px"></a> </td> 
+<td class="mobile-py-12px" style="padding-left: 8px; padding-right: 8px; padding-top: 24px; padding-bottom: 24px"> <a href=
+"http://go2.datacamp.com/MzA3LU9BVC05NjgAAAGVpISADgXTEX-Se9KoaCNKhdaNxDH7ER6M4KXzew5QhuTZR5lx-bhFBzBd0k182eV_hCsZ1yc=" style="color: inherit" target="_blank"
+><img src="https://assets.datacamp.com/email/footer/social/social-youtube.png" width="32" height="32" alt="Youtube" style="border-style: none; vertical-align: middle; color: inherit; font-family: inherit; border-radius: 16px; background-color: #d9d9e2; font-size: 10px"></a> </td> 
+<td class="mobile-py-12px" style="padding-left: 8px; padding-right: 8px; padding-top: 24px; padding-bottom: 24px"> <a href=
+"http://go2.datacamp.com/MzA3LU9BVC05NjgAAAGVpISADovoKHMSJwb0hYmfHjYm0dPR1utX0cEKNCT5LpyiJA8m3aP75gEowcPPkFwRzRvYSaE=" style="color: inherit" target="_blank"
+><img src="https://assets.datacamp.com/email/footer/social/social-instagram.png" width="32" height="32" alt="Instagram" style="border-style: none; vertical-align: middle; color: inherit; font-family: inherit; border-radius: 16px; background-color: #d9d9e2; font-size: 10px"></a> </td> 
+</tr> 
+</tbody> 
+</table> 
+<p class="mobile-mt-0" style="border-style: none; background-color: transparent; padding: 0; margin: 0; font-weight: 400; font-size: 14px; line-height: 24px; margin-bottom: 21px; margin-top: 4px; text-align: center; font-family: Studio-Feixen-Sans, Roboto, sans-serif; color: #05192d"> DataCamp, Inc. | 1 Pennsylvania Plaza | Suite 2014 | New York, NY&nbsp;10119 </p> 
+<table align="center" style="width: auto; margin-left: auto; margin-right: auto" border="0" cellspacing="0" cellpadding="0" role="presentation"> 
+<tbody> 
+<tr> 
+<td style="padding: 5px"> <a href=
+"http://go2.datacamp.com/MzA3LU9BVC05NjgAAAGVpISADfYAg-tJ2v9lVqAn9Ggt0pZfmfYkjhAGmxd81bp8l1FLNu4wGjKOlzjzq3icx2ZZu6o=" style="color: inherit" target="_blank"
+><img src="https://assets.datacamp.com/email/footer/apple.png" width="122" height="36" alt="Download on the App Store" style="border-style: none; vertical-align: middle; color: inherit; font-family: inherit; max-width: 100%"></a> </td> 
+<td style="padding: 5px"> <a href=
+"http://go2.datacamp.com/MzA3LU9BVC05NjgAAAGVpISADfYAg-tJ2v9lVqAn9Ggt0pZfmfYkjhAGmxd81bp8l1FLNu4wGjKOlzjzq3icx2ZZu6o=" style="color: inherit" target="_blank"
+><img src="https://assets.datacamp.com/email/footer/google.png" width="123" height="37" alt="Get it on Google Play" style="border-style: none; vertical-align: middle; color: inherit; font-family: inherit; max-width: 100%"></a> </td> 
+</tr> 
+</tbody> 
+</table> 
+<table align="center" style="width: auto; margin-left: auto; margin-right: auto" border="0" cellspacing="0" cellpadding="0" role="presentation"> 
+<tbody> 
+<tr> 
+<td style="padding-top: 12px; padding-bottom: 12px; padding-left: 16px; padding-right: 16px"> <p style="border-style: none; background-color: transparent; padding: 0; margin: 0; text-align: right; font-family: Studio-Feixen-Sans, Roboto, sans-serif; font-size: 14px; line-height: 24px; color: #5a6675"> <a href="http://www2.datacamp.com/UnsubscribePage.html?mkt_unsubscribe=1&mkt_tok=MzA3LU9BVC05NjgAAAGVpISADgGct8I5C8gH9LI4Dv1NCFLOWtdhglAiFBvI0dCoZVgeUgAQW9TViS6XjhLOlm6zF3qeoLoF33vpa4ojol3FjP9oOLsW_R0xevxWlk44" class="hover-text-navy" style="color: #5a6675; text-decoration-line: none; text-decoration: none" target="_blank">Unsubscribe</a> </p> </td> 
+<td style="padding-top: 12px; padding-bottom: 12px; padding-left: 16px; padding-right: 16px"> <p style="border-style: none; background-color: transparent; padding: 0; margin: 0; text-align: left; font-family: Studio-Feixen-Sans, Roboto, sans-serif; font-size: 14px; line-height: 24px; color: #5a6675"> <a href=
+"http://go2.datacamp.com/MzA3LU9BVC05NjgAAAGVpISADS3IBs0UJZ6S27pffw7fjX_kttun5Kyhw29ixf70L2paLv-F-fqsnKFGxuvvKisWr8g=" class="hover-text-navy" style="color: #5a6675; text-decoration-line: none; text-decoration: none" target="_blank"
+>Privacy Policy</a> </p> </td> 
+</tr> 
+</tbody> 
+</table> 
+</div> 
+<!--[if mso]>
+                                    </td>
+                                  </tr>
+                                </table>
+                                <![endif]--> </td> 
+</tr> 
+</tbody> 
+</table> 
+</div> 
+<!--[if mso]>
+                    </td>
+                  </tr>
+                </table>
+                <![endif]--> </td> 
+</tr> 
+</tbody> 
+</table> 
+<!-- End MODULE 45 --> 
+</div> 
+</div>  
+<a href=
+"http://go2.datacamp.com/MzA3LU9BVC05NjgAAAGVpISADVhkvvpYldBOMvrYpzpHlVWtcTVVH5KWsFblMqhbFZ_L_SAIiAG2DbEz4fSPrbeEOqc="
+></a>
+<img src="http://go2.datacamp.com/trk?t=1&mid=MzA3LU9BVC05NjgAAAGVpISADr1mWTluRChLsgzvFHCx3zZ6i9d8PPSyPVP3QvAjkH9gT9ArOYAmjQaUsXLt8vuBtqCVMOQqY5gmw91c-eaKOxE3yBylZ1rjtnxDXNS5IldrpzvpA2tNGhtt0Sr9dnmozqMQzzbA_YyBqgxq" width="1" height="1" style="display:none !important;" alt="" />
+</body>
+</html>
+------=_Part_606072238_1127443004.1726669901842--

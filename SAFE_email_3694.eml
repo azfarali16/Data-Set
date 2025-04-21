@@ -1,0 +1,428 @@
+X-GM-THRID: 1783797895629789160
+X-Gmail-Labels: Inbox,Category Updates,Unread
+Delivered-To: azfarali007.aa@gmail.com
+Received: by 2002:ad4:5984:0:b0:67a:2978:3ab3 with SMTP id ek4csp2285263qvb;
+        Tue, 28 Nov 2023 01:03:59 -0800 (PST)
+X-Google-Smtp-Source: AGHT+IE//+tQk+aSkVzYHtFQVlH2ukLjlH+M2Kae7bYPyQAbGdQ/wXLxnxz1vKCvq3sOakdHTCfb
+X-Received: by 2002:a05:620a:4041:b0:778:991f:2f78 with SMTP id i1-20020a05620a404100b00778991f2f78mr17101709qko.38.1701162238847;
+        Tue, 28 Nov 2023 01:03:58 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1701162238; cv=none;
+        d=google.com; s=arc-20160816;
+        b=Csz6dy+BLXQwC9PCQ8AID5adVnXaALjZZumLWtfU47bMYjU+jKP3GeFF3x1Cgcx1sK
+         plo9MZu2MtEu+O1HsnV0nVYJU+igPUu0qUocS2lJvAUdI/tT9Q/DGEGTymgDup1ZJC3e
+         HbWNV4Jb6PmrLAyOySbYeOa5u9Dqexou9u71tAXwbyJw74wvi162j0yMvRLi/f/pOjbv
+         fhecfIIjP1FkjqCfSw6v/jFHOI3j8V3UR2cNrIs5Dj3P2KzTGWBS56tYA25ybHcY1CxC
+         aAAAmBBUz1SUehV/OaykSNOLFsI+Igli2qZW+QSUtVZ/c7M0Syti4bHIIKwixmGMjpoZ
+         cUhA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=content-transfer-encoding:mime-version:subject:message-id:to
+         :reply-to:from:date:dkim-signature;
+        bh=o1CdlIW6usN94y3qh8GYLiEtMUHuOqKxNwG9ZxVLVWI=;
+        fh=1ghr3/vhIGL7+ytS5gYC2yrxOtO8q7dbhZ8cIHrxcdk=;
+        b=BkSgGUdXCK5ENhDN4WTPcuh5cZrFPYv6iRTgy8ccQ9yC7InunPWpgoT/ZHVj2OwmbR
+         qXdAkcp8F58KHZ1Da6FN82P1oBf8zH7gN2F7R0Cp3LKP3T+BWWPpFXp2ekmo6SgbR8DZ
+         xb51qw5wwQTKFCmbpsk8UyHOYGCdoRVKkzg4mOc6kYrD3QyWQV84sp0BXv0U8HyUI6OI
+         Dflx4FN4Iqwq+65L1c1VjNs0yq7lekIln0Xg6I14GRznZJDiyYo2DVoFqsSPrWrO+Zwo
+         LsR/E4vGhsb87+G4nwvQW/XqfDI9Tdn/sKsRgg2vqy5VMBBtQdSlc1dEQhZdYIaCoDuC
+         PvPA==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@fiverr.com header.s=dkim header.b=B08fM6Pk;
+       spf=pass (google.com: domain of noreply@e.fiverr.com designates 34.192.34.210 as permitted sender) smtp.mailfrom=noreply@e.fiverr.com;
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=e.fiverr.com
+Return-Path: <noreply@e.fiverr.com>
+Received: from e.fiverr.com (smtp01.fiverr.com. [34.192.34.210])
+        by mx.google.com with ESMTPS id de20-20020a05620a371400b0077d68a23dadsi11362894qkb.234.2023.11.28.01.03.58
+        for <azfarali007.aa@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Tue, 28 Nov 2023 01:03:58 -0800 (PST)
+Received-SPF: pass (google.com: domain of noreply@e.fiverr.com designates 34.192.34.210 as permitted sender) client-ip=34.192.34.210;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@fiverr.com header.s=dkim header.b=B08fM6Pk;
+       spf=pass (google.com: domain of noreply@e.fiverr.com designates 34.192.34.210 as permitted sender) smtp.mailfrom=noreply@e.fiverr.com;
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=e.fiverr.com
+Received: from fiverr.com (ip-172-16-70-45.ec2.internal [172.16.70.45])
+	(using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
+	(No client certificate requested)
+	by e.fiverr.com (Postfix) with ESMTPS id 5673481021
+	for <azfarali007.aa@gmail.com>; Tue, 28 Nov 2023 09:03:58 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=simple/simple; d=fiverr.com; s=dkim;
+	t=1701162238; bh=iC+CyQ6+wLS7P1uJnRKjd0c+wGKuXiTDf7QmekqeNAo=;
+	h=Date:From:Reply-To:To:Subject;
+	b=B08fM6PkoU76JCqCOTZ+J20VHArZ0RY1NKHECUWEoRx4rs+BYNarV05MUKKLFnmdC
+	 B+QawuKHhRN7lXaa5WZfMQ9kFBAEPKu/xbxSJA3FAd1soa71FdayfPu7PYyWuReObd
+	 TthMlBvk9cx6VJL916+56HDb1FZpulsBXX9xWtzI=
+Date: Tue, 28 Nov 2023 09:03:58 +0000
+From: Fiverr <noreply@e.fiverr.com>
+Reply-To: noreply@e.fiverr.com
+To: azfarali007.aa@gmail.com
+Message-ID: <6565acfe48118_12afe5b7aec7833846c4@emails-chimera-rabbit-worker-5856fcbf7b-9tqbl.mail>
+Subject: azfar_ali, you have less than 12 hours to deliver
+Mime-Version: 1.0
+Content-Type: multipart/mixed;
+ boundary="--==_mimepart_6565acfe47c8c_12afe5b7aec78338457e";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_6565acfe47c8c_12afe5b7aec78338457e
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www=
+.w3.org/TR/REC-html40/loose.dtd">
+<html>
+<head>
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3DUTF=
+-8">
+    <style type=3D"text/css">
+    .ReadMsgBody {
+        width: 100%;
+        background-color: #ffffff;
+    }
+
+    .ExternalClass {
+        width: 100%;
+        background-color: #ffffff;
+    }
+
+    body {
+        width: 100%;
+        background-color: #E5E5E5;
+        margin: 0;
+        padding: 0;
+        -webkit-font-smoothing: antialiased;
+        font-family: Helvetica Light, Helvetica, Arial, sans-serif;
+        -webkit-text-size-adjust: none !important;
+    }
+
+    table {
+        border-collapse: separate;
+    }
+    /* MOBILE STYLES */
+
+    @media screen and (max-width: 525px) {
+        /* ALLOWS FOR FLUID TABLES */
+        .wrapper {
+            width: 100% !important;
+            max-width: 100% !important;
+        }
+        /* ADJUSTS LAYOUT OF LOGO IMAGE */
+        .logo img {
+            margin: 0 auto !important;
+        }
+        /* USE THESE CLASSES TO HIDE CONTENT ON MOBILE */
+        .mobile-hide {
+            display: none !important;
+        }
+        .img-max {
+            max-width: 100% !important;
+            width: 100% !important;
+            height: auto !important;
+        }
+        /* FULL-WIDTH TABLES */
+        .responsive-table {
+            width: 100% !important;
+        }
+        /* UTILITY CLASSES FOR ADJUSTING PADDING ON MOBILE */
+        .padding {
+            padding: 0px 5% 0px 5% !important;
+        }
+        .padding-meta {
+            padding: 30px 5% 0px 5% !important;
+            text-align: center;
+        }
+        .no-padding {
+            padding: 0 !important;
+        }
+        .section-padding {
+            padding: 0px 15px 0px 15px !important;
+        }
+        /* ADJUST BUTTONS ON MOBILE */
+        .mobile-button-container {
+            margin: 0 auto;
+            width: 100% !important;
+        }
+        .mobile-button {
+            padding: 15px !important;
+            border: 0 !important;
+            font-size: 16px !important;
+            display: block !important;
+        }
+    }
+
+    table, td, b, a, strong, p, div {
+        font-family: 'Helvetica Neue', Arial, 'sans-serif';
+    }
+
+    td.content {
+        font: 16px/22px 'Helvetica Neue', Arial, 'sans-serif';
+        text-align: left;
+        padding: 50px 40px 0px 40px;
+        color: #555555;
+    }
+
+    a {
+        color: #1DBF73;
+        text-decoration:none;
+    }
+    /* ANDROID CENTER FIX */
+
+    div[style*=3D"margin: 16px 0;"] {
+        margin: 0 !important;
+    }
+
+    a.fiverr-social-icon {
+        display: inline-block;
+        margin: 2px 5px;
+    }
+</style>
+</head>
+    <body style=3D"margin: 0 !important; padding: 0 !important;">
+        <img style=3D"display:none !important;" src=3D"https://www.fiverr=
+.com/js_event_tracking/v1/track_email_open/1701162238?email_id=3Dc4ec90fa=
+344285f497144c5173bba18e&amp;user_id=3D78468730"><table border=3D"0" cell=
+padding=3D"0" cellspacing=3D"0" width=3D"100%">
+            <!-- Spacer -->
+            <tr><td width=3D"100%" align=3D"center" valign=3D"top" bgcolo=
+r=3D"#eeeeee" height=3D"20"></td></tr>
+            <tr>
+            <td bgcolor=3D"#eeeeee" align=3D"center" style=3D"padding: 0p=
+x 15px 0px 15px;" class=3D"section-padding">
+                <!--[if (gte mso 9)|(IE)]>
+                <table align=3D"center" border=3D"0" cellspacing=3D"0" ce=
+llpadding=3D"0" width=3D"500">
+                    <tr>
+                        <td align=3D"center" valign=3D"top" width=3D"600"=
+>
+                        <![endif]-->
+                        <table bgcolor=3D"#ffffff" border=3D"0" cellpaddi=
+ng=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"max-width: 600px;" cla=
+ss=3D"responsive-table">
+                            <tr>
+                                <td>
+                                    <!-- TITLE SECTION AND COPY -->
+                                    <table width=3D"100%" border=3D"0" ce=
+llspacing=3D"0" cellpadding=3D"0">
+                                    =
+
+<tr>
+  <td align=3D"center" style=3D"padding: 40px 40px 0px 40px;">
+    <a href=3D"https://www.fiverr.com/?utm_medium=3Demail&amp;utm_source=3D=
+system_email&amp;utm_content=3Dfiverr_logo&amp;email_id=3Dc4ec90fa344285f=
+497144c5173bba18e&amp;email_name=3Dseller_delivery_reminder" target=3D"_b=
+lank">
+        <img src=3D"https://fiverr-res.cloudinary.com/image/upload/q_auto=
+,f_auto/v1/attachments/generic_asset/asset/001eaef77ed30aa74e389914471b20=
+45-1599496478517/fiverr_logo.png" width=3D"70" border=3D"0" style=3D"vert=
+ical-align: middle;">
+    </a>
+  </td>
+</tr>
+  <tr>
+      <td align=3D"center" style=3D"font-size: 24px; color: #0e0e0f; font=
+-weight: 700;  font-family: Helvetica Neue; line-height: 28px; vertical-a=
+lign: top; text-align:center; padding: 35px 40px 0px 40px;">
+          <strong>Your delivery deadline is coming up</strong>
+      </td>
+  </tr>
+  <!-- BORDER -->
+
+                                    <tr>
+                                        <td class=3D"content" style=3D"fo=
+nt: 16px/22px 'Helvetica Neue', Arial, 'sans-serif';text-align: left;colo=
+r: #555555;padding: 40px 40px 0 40px;">
+                                            <p>
+  Hi azfar_ali,
+</p>
+
+<p>Hi azfar_ali,</p>
+<p>We wanted to remind you that your delivery deadline for order <a href=3D=
+"http://www.fiverr.com/v4/users/azfar_ali/manage_orders/FO72952541F47?utm=
+_medium=3Demail&amp;utm_source=3Dsystem_email&amp;view=3Dmanage_order&amp=
+;email_id=3Dc4ec90fa344285f497144c5173bba18e&amp;email_name=3Dseller_deli=
+very_reminder" style=3D"color:#000; text-decoration:none;">#FO72952541F47=
+</a> with vivardio is in less than 12 hours.</p>
+<p>Delivering on time is a key part in a successful collaboration. It can=
+ determine how vivardio rates the order, whether they choose to work with=
+ you again and even recommend your Gig to others.</p>
+
+<p>
+  If you still need more time to work on this order, you can ask vivardio=
+=C2=A0to extend the delivery time.
+</p>
+
+<p>
+  Thanks,<br>The Fiverr Team
+</p>
+
+                                        </td>
+                                    </tr>
+                                    <tr>
+    <td>
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" st=
+yle=3D"margin: 30px 0px;">
+    <tr>
+        <td align=3D"center" style=3D"text-align: center;">
+            <a name=3D"CTA" bgcolor=3D"#000" style=3D" color: #ffffff; ba=
+ckground-color: #000; display: inline-block; font-family: Helvetica Neue;=
+ font-size: 16px; line-height: 30px; text-align: center; font-weight:bold=
+;text-decoration: none; padding:5px 20px; -webkit-border-radius: 3px; -mo=
+z-border-radius: 3px; border-radius:3px;text-transform: none;" href=3D"ht=
+tp://www.fiverr.com/v4/users/azfar_ali/manage_orders/FO72952541F47?utm_me=
+dium=3Demail&amp;utm_source=3Dsystem_email&amp;view=3Dmanage_order&amp;em=
+ail_id=3Dc4ec90fa344285f497144c5173bba18e&amp;email_name=3Dseller_deliver=
+y_reminder" target=3D"_blank">Deliver Now</a>
+        </td>
+    </tr>
+</table>
+   </td>
+</tr>
+
+
+
+                                    </table>
+                                </td>
+                            </tr>
+                            <!-- Spacer -->
+                            <tr><td width=3D"100%" align=3D"center" valig=
+n=3D"top" bgcolor=3D"#ffffff" height=3D"45"></td></tr>
+
+                        </table>
+                        <!--[if (gte mso 9)|(IE)]>
+                        </td>
+                    </tr>
+                </table>
+                <![endif]-->
+            </td>
+            </tr>
+            <tr>
+            <td bgcolor=3D"#eeeeee" align=3D"center" style=3D"padding: 20=
+px 0px;">
+                <!--[if (gte mso 9)|(IE)]>
+                <table align=3D"center" border=3D"0" cellspacing=3D"0" ce=
+llpadding=3D"0" width=3D"500">
+                    <tr>
+                        <td align=3D"center" valign=3D"top" width=3D"500"=
+>
+                        <![endif]-->
+                        <!-- UNSUBSCRIBE COPY -->
+                        <table width=3D"100%" border=3D"0" cellspacing=3D=
+"0" cellpadding=3D"0" align=3D"center" style=3D"max-width: 600px;" class=3D=
+"responsive-table">
+                            <tr>  </tr>
+                            <tr> =
+
+<td bgcolor=3D"#eeeeee" align=3D"center">
+   <!--[if (gte mso 9)|(IE)]>
+   <table align=3D"center" border=3D"0" cellspacing=3D"0" cellpadding=3D"=
+0" width=3D"500">
+      <tr>
+         <td align=3D"center" valign=3D"top" width=3D"500">
+            <![endif]-->
+            <!-- UNSUBSCRIBE COPY -->
+            <table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadd=
+ing=3D"0" align=3D"center" style=3D"max-width: 600px;" class=3D"responsiv=
+e-table">
+               <tr>
+                  <td align=3D"center" class=3D"center" style=3D"text-ali=
+gn: center; padding:10px 10px 10px 10px;">
+                     <!--Twitter-->
+                     <a href=3D"https://twitter.com/fiverr?utm_medium=3De=
+mail&amp;utm_source=3Dsystem_email" style=3D"display: inline-block; margi=
+n: 2px"><img height=3D"40" src=3D"https://fiverr-res.cloudinary.com/q_aut=
+o,f_auto/v1/general_assets/system_emails/Twitter.png" width=3D"40"></a>
+                     <!--Facebook-->
+                     <a href=3D"https://www.facebook.com/Fiverr?utm_mediu=
+m=3Demail&amp;utm_source=3Dsystem_email" style=3D"display: inline-block; =
+margin: 2px"><img height=3D"40" src=3D"https://fiverr-res.cloudinary.com/=
+q_auto,f_auto/v1/general_assets/system_emails/Facebook.png" width=3D"40">=
+</a>
+                     <!--Pinterest-->
+                     <a href=3D"http://pinterest.com/Fiverr/?utm_medium=3D=
+email&amp;utm_source=3Dsystem_email" style=3D"display: inline-block; marg=
+in: 2px"><img height=3D"40" src=3D"https://fiverr-res.cloudinary.com/q_au=
+to,f_auto/v1/general_assets/system_emails/Pinterest.png" width=3D"40"></a=
+>
+                     <!--LinkedIn-->
+                     <a href=3D"http://www.linkedin.com/company/fiverr-co=
+m?utm_medium=3Demail&amp;utm_source=3Dsystem_email" style=3D"display: inl=
+ine-block; margin: 2px"><img height=3D"40" src=3D"https://fiverr-res.clou=
+dinary.com/q_auto,f_auto/v1/general_assets/system_emails/LinkedIn.png" wi=
+dth=3D"40"></a>
+                     <!--Instagram-->
+                     <a href=3D"http://instagram.com/Fiverr?utm_medium=3D=
+email&amp;utm_source=3Dsystem_email" style=3D"display: inline-block; marg=
+in: 2px"><img height=3D"40" src=3D"https://fiverr-res.cloudinary.com/q_au=
+to,f_auto/v1/general_assets/system_emails/Instagram.png" width=3D"40"></a=
+>
+                  </td>
+               </tr>
+               <tr>
+                  <td style=3D"color: #999999 ;font-size: 12px;line-heigh=
+t: 16px;text-align: center;">
+                     This email was intended for azfar_ali, because you s=
+igned up for Fiverr | <span style=3D"font-family:arial,helvetica neue,hel=
+vetica,sans-serif;">
+<a href=3D"http://www.fiverr.com/linker?url=3Dhttp%3A%2F%2Fwww.fiverr.com=
+%2Fsettings%2Fnotifications%2Femails%2Forder_updates%2Funsubscribe%3Femai=
+l_hash%3DeyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo3ODQ2ODczMH0=
+.2fk0EVBiiiu0NGMIwtwM_gOCgLAF8j4w3Zne3W2SWAA%26utm_medium%3Demail%26utm_s=
+ource%3Dsystem_email&amp;email_id=3Dc4ec90fa344285f497144c5173bba18e&amp;=
+email_name=3Dseller_delivery_reminder" style=3D"color:#000; text-decorati=
+on:none;">Unsubscribe</a> |
+                     The links in this email will always direct to <a hre=
+f=3D"https://www.fiverr.com/users/azfar_ali/edit/notifications?utm_medium=
+=3Demail&amp;utm_source=3Dsystem_email&amp;email_id=3Dc4ec90fa344285f4971=
+44c5173bba18e&amp;email_name=3Dseller_delivery_reminder" style=3D"color:#=
+000; text-decoration:none;">https://fiverr.com</a>.
+                     Learn about <a href=3D"https://www.fiverr.com/academ=
+y/trust-and-safety/prevent-phishing?utm_medium=3Demail&amp;utm_source=3Ds=
+ystem_email&amp;email_id=3Dc4ec90fa344285f497144c5173bba18e&amp;email_nam=
+e=3Dseller_delivery_reminder" style=3D"color:#1DBF73; text-decoration:non=
+e;">email security</a> and <a href=3D"https://www.fiverr.com/academy/gett=
+ing-started/fiverr-online-safety-tips?utm_medium=3Demail&amp;utm_source=3D=
+system_email&amp;email_id=3Dc4ec90fa344285f497144c5173bba18e&amp;email_na=
+me=3Dseller_delivery_reminder" style=3D"color:#1DBF73; text-decoration:no=
+ne;">online safety</a>.
+                     <br> =C2=A9 Fiverr International Ltd. 2023
+                     </span>
+                  </td>
+               </tr>
+               <tr>
+                  <td align=3D"center" class=3D"center" style=3D"text-ali=
+gn: center; padding:10px 10px 20px 10px;">
+                     <!--Apple Store-->
+                     <a href=3D"https://itunes.apple.com/us/app/id3460806=
+08?utm_medium=3Demail&amp;utm_source=3Dsystem_email" style=3D"display: in=
+line-block; margin: 5px"><img src=3D"https://fiverr-res.cloudinary.com/q_=
+auto,f_auto/v1/general_assets/system_emails/AppleStore.png" width=3D"135"=
+></a>
+                     <!--Google Store-->
+                     <a href=3D"https://play.google.com/store/apps/detail=
+s?id=3Dcom.fiverr.fiverr&amp;utm_medium=3Demail&amp;utm_source=3Dsystem_e=
+mail" style=3D"display: inline-block; margin: 5px"><img src=3D"https://fi=
+verr-res.cloudinary.com/q_auto,f_auto/v1/general_assets/system_emails/Goo=
+gleStore.png" width=3D"135"></a>
+                  </td>
+               </tr>
+            </table>
+            <!--[if (gte mso 9)|(IE)]>
+         </td>
+      </tr>
+   </table>
+   <![endif]-->
+</td> </tr>
+                        </table>
+                        <!--[if (gte mso 9)|(IE)]>
+                        </td>
+                    </tr>
+                </table>
+                <![endif]-->
+            </td>
+            </tr>
+        </table>
+    </body>
+</html>
+
+----==_mimepart_6565acfe47c8c_12afe5b7aec78338457e--

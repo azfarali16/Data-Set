@@ -1,0 +1,518 @@
+X-GM-THRID: 1824492211635204657
+X-Gmail-Labels: Inbox,Category Updates,Unread
+Delivered-To: azfarali007.aa@gmail.com
+Received: by 2002:a05:6f02:8512:b0:80:4243:eb69 with SMTP id e18csp1392137rch;
+        Wed, 19 Feb 2025 05:22:42 -0800 (PST)
+X-Google-Smtp-Source: AGHT+IHoB4Q+8K+iWF5KggWSnEVKl8/ZMQ1TUfvfik1iJ+mk7rLqP6b282qdb+Wq82VcStzLdKlg
+X-Received: by 2002:a5d:588d:0:b0:38f:3141:8912 with SMTP id ffacd0b85a97d-38f5879454fmr3240071f8f.24.1739971362360;
+        Wed, 19 Feb 2025 05:22:42 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1739971362; cv=none;
+        d=google.com; s=arc-20240605;
+        b=Kj6pIr3WMtjzdIVwF7bj3YpmI7AWbnrVhR5pab9LF5hiK2hpFDVuGrO/eHmgrDqum7
+         McETIiOIze8rue7wnxfLImLRMOmc6We9lYgKTYk7kaUEs29yeQlyeePhlAF/17Xs1orP
+         ejs8RmNoqF2v5Ut8JK8oaJsQ+zYzscV3yr3rTcsraq5KWQmj6dkcbRW88xklitDHUojW
+         7bCAHuVJP4naEkFsBc6y7nr4vOVT+6aMC18hcZtTLObmPcumVE7KjmgbLKT1MFZVmO+s
+         Foxll2jK1W2ct1H+UV1Y4dFROLh3EAXZeRIQ5lOm974CNyfm44tSNF5BF+ea9rZRn+P7
+         L5vA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=mime-version:subject:message-id:to:reply-to:from:dkim-signature
+         :date;
+        bh=yMTTdeKAWfMYjW/wBgNsHXx7zL5bvaxnW1pmc8ICTQc=;
+        fh=1ghr3/vhIGL7+ytS5gYC2yrxOtO8q7dbhZ8cIHrxcdk=;
+        b=NgfX4MDTO9yNB6zUWe2MW+K1YKoBrhD1OZSpjcQCvQGlrf7wGvuyfv9zkg/sFeoR68
+         GlgH+C8Jt334tV8/XXfWZZu9qFU+LZmiWlSeqbRpDozgCDDmVW2cZa2T0DlP9FRy6Ddn
+         09sHuOeKF+ALRYEcuewxcPcXNkQZVm6/Ig/VhtGP/eXTwD/Z/AgIUVRj1cwGsPsUuaSk
+         AVptn0mt8pvBb/6xbilLojIC7PdSr479NcKBy2zWgksw+1QUbu1aC5E4G7oAmv16tfho
+         wvE1AnyGMVh6mcGbrsrZksJsL07OP0LerTG17aJZvle6NFzl/nYjs1gC51wi6Ur8N9fc
+         VE5g==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@nayapay.com header.s=default header.b=FvlvtUGk;
+       spf=pass (google.com: domain of service@nayapay.com designates 103.139.62.181 as permitted sender) smtp.mailfrom=service@nayapay.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=nayapay.com
+Return-Path: <service@nayapay.com>
+Received: from smtp-gw.nayapay.com (smtp-gw.nayapay.com. [103.139.62.181])
+        by mx.google.com with ESMTPS id ffacd0b85a97d-38f258e1465si12937182f8f.56.2025.02.19.05.22.41
+        for <azfarali007.aa@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Wed, 19 Feb 2025 05:22:42 -0800 (PST)
+Received-SPF: pass (google.com: domain of service@nayapay.com designates 103.139.62.181 as permitted sender) client-ip=103.139.62.181;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@nayapay.com header.s=default header.b=FvlvtUGk;
+       spf=pass (google.com: domain of service@nayapay.com designates 103.139.62.181 as permitted sender) smtp.mailfrom=service@nayapay.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=nayapay.com
+Date: Wed, 19 Feb 2025 18:22:41 +0500 (PKT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=nayapay.com;
+	s=default; t=1739971361;
+	bh=y+Qk2dJWsyvs7jezQtTu0P6cBQ4/mwhw840weUPnPNk=;
+	h=From:Reply-To:To:Subject;
+	b=FvlvtUGkGRu5csi5MLu9awpZGvQKqEQq8zkRhKs0iYdz6t5wZFwfrsFGeEP0BazNx
+	 4Hwb6jy8dCGuWMzlqzsJg9GnFnmklfA5SB6hCIVdnm9fb57u8HxFy7/s4hQIPEdOKO
+	 rj6ChJyOayFfQyJ+U2174EoeHJXzrFX+ITUuSC69dxO4Ir69EpCwMVV9vHzhi1htAJ
+	 L3gO0+nbz62OqENJl+vwzFn+OLdKE1700qseWQ2ZJQMLzn994XgRST2T76/fxp8eZB
+	 H6gNHTKtp0WMw7vAl43laK0rlFJf+tLdgmaO64TClaGS+NwJuj4GbM/0mruPJctcl1
+	 XO5NDUEpX6efQ==
+From: NayaPay <service@nayapay.com>
+Reply-To: noreply@nayapay.com
+To: azfarali007.aa@gmail.com
+Message-ID: <939691669.3376026.1739971361083@np-pri-notification-03>
+Subject: Outgoing Fund Transfer
+MIME-Version: 1.0
+Content-Type: multipart/mixed;
+	boundary="----=_Part_3376023_971086024.1739971361029"
+
+------=_Part_3376023_971086024.1739971361029
+Content-Type: multipart/related;
+	boundary="----=_Part_3376024_1120036865.1739971361029"
+
+------=_Part_3376024_1120036865.1739971361029
+Content-Type: multipart/alternative;
+	boundary="----=_Part_3376025_32416450.1739971361029"
+
+------=_Part_3376025_32416450.1739971361029
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+There was an outgoing fund transfer of Rs. 250 from your NayaPay wallet to Raast-{accountNumber}.<br></br><br><b>If this wasn't you:</b></br> Your account may have been compromised. Please call NayaPay Customer Service at (021) 111-222-729 immediately. 
+------=_Part_3376025_32416450.1739971361029
+Content-Type: text/html;charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>NayaPay Email</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400&display=swap" rel="stylesheet">
+  <style type="text/css">
+    p{
+      font-family: 'Lato', sans-serif;
+      color:#333333;
+      margin-block-start: 0.3em;
+      margin-block-end: 0.3em;
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
+    .dot {
+          height: 5px;
+          width: 5px;
+          background-color: #333333;
+          border-radius: 50%;
+          display: inline-block;
+          font-size:16px;
+          margin-bottom:2px;
+    }
+  </style>
+</head>
+<body style="margin: 0px; padding: 0px; background-color: #e5e5e5;width: 100%" bgcolor="#e5e5e5">
+  <table bgcolor="#e5e5e5" width="100%" border="0" cellpadding="50" cellspacing="0">
+    <tr>
+      <td align="center">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr>
+            <td width="600" bgcolor="#ffffff" style="width: 600px">
+              <table border="0" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td>
+                    <table border="0" cellpadding="15" cellspacing="0">
+                      <tr>
+                        <td align="center" width="600" style="width: 600px;padding-bottom: 2px">
+                          <img src="https://attachment.nayapay.com:8443/fileUploader/download/UPLOAD_DIRECTORY/EMAILASSETS/maillogo.png" width="150" height="32" style="padding: 0">
+                        </td>
+                      </tr>
+                      <tr>
+                        <td align="center" width="600" height="1" style="width: 600px;padding: 0"></br>
+                          <img src="https://attachment.nayapay.com:8443/fileUploader/download/UPLOAD_DIRECTORY/EMAILASSETS/line.png" width="500" height="1" style="padding: 0;width: 500px;">
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding: 0px 50px 0px 50px;width: 600px" width="600">
+                    <br/>
+                    <p style="padding: 0px;font-size: 21px;font-weight: bold;">Hi, Syed!</p>
+                    <p style="padding: 0px;font-size: 16px;">You have a new transaction on NayaPay.</p>
+                    <br/>
+                  </td>
+                </tr>
+                <tr>
+                  <td align="center" style="width: 600px;padding: 0">
+                    <table border="0" cellpadding="0" cellspacing="0" bgcolor="#ffffff">
+                      <tr>
+                        <td style="width: 250px;text-align: right" align="right" width="250">
+                          <img src="https://attachment.nayapay.com:8443/fileUploader/download/UPLOAD_DIRECTORY/EMAILASSETS/line.png" width="200" height="1" style="padding: 0">
+                        </td>
+                        <td style="width: 100px;text-align: center" align="center" width="100">
+                          <p style="font-weight: bold">Sent</p>
+                        </td>
+                        <td style="width: 250px;text-align: left" align="left" width="250">
+                          <img src="https://attachment.nayapay.com:8443/fileUploader/download/UPLOAD_DIRECTORY/EMAILASSETS/line.png" width="200" height="1" style="padding: 0">
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <tr>
+                  <td align="center" style="width: 600px;padding: 0">
+                    <table border="0" cellpadding="0" cellspacing="0" bgcolor="#ffffff">
+                      <tr>
+                        <td style="width: 350px;text-align: center" align="center" width="350">
+                          <table border="0" cellpadding="0" cellspacing="0" bgcolor="#ffffff">
+                            <tr>
+                              <td style="width: 100px;text-align: right" align="right" width="100">
+                                <img src="https://attachment.nayapay.com:8443/fileUploader/get-view?fileId=UPLOAD_DIRECTORY/PAYMENTAGGREGATOR/RAAST.png" width="60" height="60" style="border-radius: 50px;">
+                              </td>
+                              <td style="width: 250px;text-align: left;padding: 0 0 0 15px" align="left" width="250">
+                                <p style="padding: 15px 0 0 0;margin:0px;font-size: 18px;font-weight: bold;">Junaid Ahmed Hussain</p>
+                                <p style="padding: 0px;font-size: 16px;"> Raast-5164</p>
+                                <br/>
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                        <td style="width: 250px; text-align: right" width="250" align="right">
+                          <table border="0" cellpadding="0" cellspacing="0" bgcolor="#ffffff">
+                            <tr>
+                              <td style="width: 200px;text-align: right;" align="right" width="200">
+                                <p style="font-size: 18px;font-weight: bold; color:red">- Rs. 250</p>
+                                <p style="font-size: 16px;">
+                                  <br>
+                                </p>
+                              </td>
+                              <td style="width: 50px;text-align: right" align="right" width="50"></td>
+                            </tr>
+                          </table>
+
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <tr>
+                  <td align="center" style="width: 600px;padding: 0">
+                    <table border="0" cellpadding="0" cellspacing="0" bgcolor="#ffffff">
+                      <tr>
+                        <td style="width: 600px;text-align: center" align="center" width="600">
+                          <img src="https://attachment.nayapay.com:8443/fileUploader/download/UPLOAD_DIRECTORY/EMAILASSETS/line.png" width="500" height="1" style="padding: 0;width: 500px;">
+                        </td>
+                    </table>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="width:600px;padding: 0">
+                    <table border="0" cellpadding="0" cellspacing="0" bgcolor="#ffffff">
+                      <tr>
+                        <td style="width: 50px;text-align: left" align="left" width="50"></td>
+                        <td style="width: 550px;text-align: left" align="left" width="550"></br>
+                          <p style="font-size: 18px;font-weight: bold;">TRANSACTION DETAILS</p>
+                        </td>
+                    </table>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="width: 600px;padding: 0">
+                    <table border="0" cellpadding="0" cellspacing="0" bgcolor="#ffffff">
+                      <tr>
+                        <td style="width: 50px;text-align: left" align="left" width="50"></td>
+                        <td style="padding: 0px;width: 250px;text-align: left" align="left" width="250">
+                          <p style="font-size: 16px;">Transaction ID</p>
+                        </td>
+                        <td style="padding: 0px;width: 250px;text-align: right" align="right" width="250">
+                          <p style="font-size: 16px;">67b5db206529cf1a7eb19099</p>
+                        </td>
+                        <td style="width: 50px;text-align: right" align="right" width="50"></td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="width: 600px;padding: 0">
+                    <table border="0" cellpadding="0" cellspacing="0" bgcolor="#ffffff">
+                      <tr>
+                        <td style="width: 50px;text-align: left" align="left" width="50"></td>
+                        <td style="padding: 0px;width: 250px;text-align: left" align="left" width="250">
+                          <p style="font-size: 16px;">Transaction Time</p>
+                        </td>
+                        <td style="padding: 0px;width: 250px;text-align: right" align="right" width="250">
+                          <p style="font-size: 16px;">19 Feb 2025, 06:22 PM</p>
+                        </td>
+                        <td style="width: 50px;text-align: right" align="right" width="50"></td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="width:600px;padding: 0">
+                    <table border="0" cellpadding="0" cellspacing="0" bgcolor="#ffffff">
+                      <tr>
+                        <td style="width: 50px;text-align: left" align="left" width="50"></td>
+                        <td style="width: 550px;text-align: left" align="left" width="550"></br>
+                          <p style="font-size: 18px;font-weight: bold;">AMOUNT DETAILS</p>
+                        </td>
+                    </table>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="width: 600px;padding: 0">
+                    <table border="0" cellpadding="0" cellspacing="0" bgcolor="#ffffff">
+                      <tr>
+                        <td style="width: 50px;text-align: left" align="left" width="50"></td>
+                        <td style="padding: 0px;width: 250px;text-align: left" align="left" width="250">
+                          <p style="font-size: 16px;">Amount Sent</p>
+                        </td>
+                        <td style="padding: 0px;width: 250px;text-align: right" align="right" width="250">
+                          <p style="font-size: 16px;">Rs. 250</p>
+                        </td>
+                        <td style="width: 50px;text-align: right" align="right" width="50"></td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="width: 600px;padding: 0">
+                    <table border="0" cellpadding="0" cellspacing="0" bgcolor="#ffffff">
+                      <tr>
+                        <td style="width: 50px;text-align: left" align="left" width="50"></td>
+                        <td style="padding: 0px;width: 250px;text-align: left" align="left" width="250">
+                          <p style="font-size: 16px;">Service Fee (Incl. Tax)</p>
+                        </td>
+                        <td style="padding: 0px;width: 250px;text-align: right" align="right" width="250">
+                          <p style="font-size: 16px;">Rs. 0</p>
+                        </td>
+                        <td style="width: 50px;text-align: right" align="right" width="50"></td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="width: 600px;padding: 0">
+                    <table border="0" cellpadding="0" cellspacing="0" bgcolor="#ffffff">
+                      <tr>
+                        <td style="width: 50px;text-align: left" align="left" width="50"></td>
+                        <td style="padding: 0px;width: 250px;text-align: left" align="left" width="250">
+                          <p style="font-size: 16px;font-weight: bold">Total Amount</p>
+                        </td>
+                        <td style="padding: 0px;width: 250px;text-align: right" align="right" width="250">
+                          <p style="font-size: 16px;font-weight: bold">Rs. 250</p>
+                        </td>
+                        <td style="width: 50px;text-align: right" align="right" width="50"></td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="width:600px;padding: 0">
+                    <table border="0" cellpadding="0" cellspacing="0" bgcolor="#ffffff">
+                      <tr>
+                        <td style="width: 50px;text-align: left" align="left" width="50"></td>
+                        <td style="width: 550px;text-align: left" align="left" width="550"></br>
+                          <p style="font-size: 18px;font-weight: bold;">ADDITIONAL INFORMATION</p>
+                        </td>
+                    </table>
+                  </td>
+                </tr>
+
+                    <tr>
+                      <td style="width: 600px;padding: 0">
+                        <table border="0" cellpadding="0" cellspacing="0" bgcolor="#ffffff">
+                         <tr>
+                            <td style="width: 50px;text-align: left" align="left" width="50"></td>
+                              <td style="padding: 0px;width: 250px;text-align: left" align="left" width="250">
+                               <p style="font-size: 16px;">Destination Acc. Title</p>
+                              </td>
+                              <td style="padding: 0px;width: 250px;text-align: right" align="right" width="250">
+                                <p style="font-size: 16px;">  Junaid Ahmed Hussain</p>
+                              </td>
+                              <td style="width: 50px;text-align: right" align="right" width="50"></td>
+                         </tr>
+                        </table>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td style="width: 600px;padding: 0">
+                        <table border="0" cellpadding="0" cellspacing="0" bgcolor="#ffffff">
+                          <tr>
+                            <td style="width: 50px;text-align: left" align="left" width="50"></td>
+                            <td style="padding: 0px;width: 250px;text-align: left" align="left" width="250">
+                              <p style="font-size: 16px;">Destination Bank</p>
+                            </td>
+                            <td style="padding: 0px;width: 250px;text-align: right" align="right" width="250">
+                              <p style="font-size: 16px;"> Bank Al Habib</p>
+                            </td>
+                            <td style="width: 50px;text-align: right" align="right" width="50"></td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td style="width: 600px;padding: 0">
+                        <table border="0" cellpadding="0" cellspacing="0" bgcolor="#ffffff">
+                          <tr>
+                            <td style="width: 50px;text-align: left" align="left" width="50"></td>
+                            <td style="padding: 0px;width: 250px;text-align: left" align="left" width="250">
+                              <p style="font-size: 16px;">Raast ID</p>
+                            </td>
+                            <td style="padding: 0px;width: 250px;text-align: right" align="right" width="250">
+                              <p style="font-size: 16px;"> 03232575164</p>
+                            </td>
+                            <td style="width: 50px;text-align: right" align="right" width="50"></td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+
+                     <tr>
+                       <td style="width: 600px;padding: 0">
+                        <table border="0" cellpadding="0" cellspacing="0" bgcolor="#ffffff">
+                          <tr>
+                            <td style="width: 50px;text-align: left" align="left" width="50"></td>
+                              <td style="padding: 0px;width: 250px;text-align: left" align="left" width="250">
+                                <p style="font-size: 16px;">Destination Acc. Number</p>
+                              </td>
+                              <td style="padding: 0px;width: 250px;text-align: right" align="right" width="250">
+                                <p style="font-size: 16px;">
+                                 <span class="dot"></span> <span class="dot"></span> <span class="dot"></span> <span class="dot"></span>
+                                 7201</p>
+                              </td>
+                              <td style="width: 50px;text-align: right" align="right" width="50"></td>
+                          </tr>
+                        </table>
+                       </td>
+                     </tr>
+
+                    <tr>
+                      <td style="width: 600px;padding: 0">
+                        <table border="0" cellpadding="0" cellspacing="0" bgcolor="#ffffff">
+                          <tr>
+                            <td style="width: 50px;text-align: left" align="left" width="50"></td>
+                            <td style="padding: 0px;width: 250px;text-align: left" align="left" width="250">
+                              <p style="font-size: 16px;">Source Acc. Title</p>
+                            </td>
+                            <td style="padding: 0px;width: 250px;text-align: right" align="right" width="250">
+                              <p style="font-size: 16px;"> Syed Azfar Ali</p>
+                            </td>
+                            <td style="width: 50px;text-align: right" align="right" width="50"></td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+
+                <tr>
+                  <td style="width: 600px;padding: 0">
+                    <table border="0" cellpadding="0" cellspacing="0" bgcolor="#ffffff">
+                      <tr>
+                        <td style="width: 50px;text-align: left" align="left" width="50"></td>
+                          <td style="padding: 0px;width: 250px;text-align: left" align="left" width="250">
+                             <p style="font-size: 16px;">Channel</p>
+                          </td>
+                            <td style="padding: 0px;width: 250px;text-align: right" align="right" width="250">
+                              <p style="font-size: 16px;"> Raast</p>
+                            </td>
+                        <td style="width: 50px;text-align: right" align="right" width="50"></td>
+                      </tr>
+                    </table>
+                    </br>
+                  </td>
+                </tr>
+                <tr>
+                  <td align="center" style="width: 600px;padding: 0">
+                    <table border="0" cellpadding="0" cellspacing="0" bgcolor="#ffffff">
+                      <tr>
+                        <td style="width: 600px;text-align: center" align="center" width="600">
+                          <img src="https://attachment.nayapay.com:8443/fileUploader/download/UPLOAD_DIRECTORY/EMAILASSETS/line.png" width="500" height="1" style="padding: 0">
+                        </td>
+                    </table>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="width:600px;padding: 0">
+                    <table border="0" cellpadding="0" cellspacing="0" bgcolor="#ffffff">
+                      <tr></br>
+                        <td style="width: 50px;text-align: left" align="left" width="50"></td>
+                        <td style="width: 500px;text-align: left" align="left" width="500">
+                          <p style="font-size: 16px;">Details of this transaction can be viewed on the NayaPay app.</p>
+                          <p style="font-size: 16px;font-weight: bold">Thank you for using NayaPay!</p>
+                          <br>
+                        </td>
+                        <td style="width: 50px;text-align: left" align="left" width="50"></td>
+                    </table>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <img src="https://attachment.nayapay.com:8443/fileUploader/download/UPLOAD_DIRECTORY/EMAILASSETS/footer.png" width="600" height="80" style="margin-bottom: -5px;">
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <tr>
+              <td style="color:#000000;font-size: 12px !important;">
+                <table border="0" cellpadding="0" cellspacing="0">
+                  <tr>
+                    <td style="padding: 0; width: 600px;" width="600">
+                      <br/>
+                      <p style="padding: 0 50px 0 50px;font-size: 12px;color:#000000; text-align: center;">NayaPay, its employees or agents will never ask you for your password, MPIN, OTP or debit card PIN, via call, email, SMS, web links or social media. For security purposes, please do not share this sensitive information with anyone.</p>
+                      <br/>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <td width="600" style="width: 600px">
+              <table border="0" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td style="padding: 0 50px 0 50px;width: 600px;font-size: 11px;" width="600">
+                    <table border="0" cellpadding="0" cellspacing="0">
+                      <tr>
+                        <td style="width: 130px;vertical-align: middle;text-align: center;font-size: 11px !important;" width="130">
+                          <img src="https://attachment.nayapay.com:8443/fileUploader/download/UPLOAD_DIRECTORY/EMAILASSETS/mobile-small.png"  style="width: 16px; height: 16px;" width="16" height="16"> (021) 111-222-729
+                        </td>
+                        <td style="width: 140px;vertical-align: middle;text-align: center;font-size: 11px !important" width="140">
+                          <img src="https://attachment.nayapay.com:8443/fileUploader/download/UPLOAD_DIRECTORY/EMAILASSETS/email-small.png"  style="width: 16px; height: 16px;" width="16" height="16"> support@nayapay.com
+                        </td>
+                        <td style="width: 130px;vertical-align: middle;text-align: center;font-size: 11px !important" width="130">
+                          <img src="https://attachment.nayapay.com:8443/fileUploader/download/UPLOAD_DIRECTORY/EMAILASSETS/website-small.png"  style="width: 16px; height: 16px;" width="16" height="16">  nayapay.com
+                        </td>
+                        <td style="width: 100px;vertical-align: middle;text-align: center" width="100">
+                          <a href="https://www.facebook.com/nayapaypk" style="text-decoration: none; color: #000000;">
+                            <img src="https://attachment.nayapay.com:8443/fileUploader/download/UPLOAD_DIRECTORY/EMAILASSETS/facebook-small.png"  style="width: 16px; height: 16px;" width="16" height="16">
+                          </a>
+                          <a href="https://twitter.com/nayapaypk" style="text-decoration: none; color: #000000;">
+                            <img src="https://attachment.nayapay.com:8443/fileUploader/download/UPLOAD_DIRECTORY/EMAILASSETS/twitter-small.png"  style="width: 16px; height: 16px;" width="16" height="16">
+                          </a>
+                          <a href="https://instagram.com/nayapay?utm_medium=copy_link" style="text-decoration: none; color: #000000;">
+                            <img src="https://attachment.nayapay.com:8443/fileUploader/download/UPLOAD_DIRECTORY/EMAILASSETS/insta-small.png"  style="width: 16px; height: 16px;" width="16" height="16">
+                          </a>
+                          <a href="https://www.linkedin.com/company/nayapay/?originalSubdomain=pk" style="text-decoration: none; color: #000000;">
+                            <img src="https://attachment.nayapay.com:8443/fileUploader/download/UPLOAD_DIRECTORY/EMAILASSETS/linkedin-small.png"  style="width: 16px; height: 16px;" width="16" height="16">
+                          </a>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding: 0; width: 600px;" width="600">
+                    <br/>
+                    <p style="padding: 0 50px 0 50px;font-size: 12px;color:#000000; text-align: center;">Please note: This email was sent to azfarali007.aa@gmail.com from a notification-only address that cannot accept incoming email. Please do not reply to this email.</p>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>
+------=_Part_3376025_32416450.1739971361029--
+
+------=_Part_3376024_1120036865.1739971361029--
+
+------=_Part_3376023_971086024.1739971361029--

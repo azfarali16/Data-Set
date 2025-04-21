@@ -1,0 +1,753 @@
+X-GM-THRID: 1723764742338629292
+X-Gmail-Labels: Inbox,Opened,Category Updates
+Delivered-To: azfarali007.aa@gmail.com
+Received: by 2002:a0c:f809:0:0:0:0:0 with SMTP id r9csp2552843qvn;
+        Thu, 3 Feb 2022 09:42:42 -0800 (PST)
+X-Google-Smtp-Source: ABdhPJxggm51PFU1GaxVaHjX9MbNvJTlpkb7svbgdU/zpqNH37IOpEBfrBPjTqreQ9ZBtheGicXv
+X-Received: by 2002:a5d:4984:: with SMTP id r4mr29977035wrq.122.1643910162436;
+        Thu, 03 Feb 2022 09:42:42 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1643910162; cv=none;
+        d=google.com; s=arc-20160816;
+        b=hkECAv1BKGgZtOyaqnv2KT0PY+firlKyiCdANFpDVOZC7FzlKTDt9EMQnUqaCEE9L6
+         m/3HqFinvTviWytgSKVWnCtzr2uXCXJ+qqlJWz9qbZN80GsnHhSWLv1YpSEIle+nhh5p
+         v4MQ/6L4NQXlDvI2zS4BMW8S6AO+kqwIqIHLkdlp2Vuogy0CMVLXHu+4i7jBunGs8bKV
+         bWVFY2SYab/UumbKzn/ehD4YAaKR8LIeQwKBW3wFYdg5Bg3qh7bWEnBxr9h8JWFLEjJT
+         UNDw937ZZuN9tivMgfyqVvLwLej9tLflrrrhXevro3E/QfkQrTOy1vLlnKkYT8zCdFvm
+         f8LA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=mime-version:feedback-id:list-unsubscribe:to:sender:reply-to
+         :message-id:subject:date:from:dkim-signature:dkim-signature;
+        bh=PXfLSq9JcxESmon2NslYIl6fl3elGPv5TcJVLvFJOuw=;
+        b=Y8Bbvqmy0U6iYR86MlHWAWHXsXaZwYP8Se+hEzbOzWkskHw0ZksySgnH56TZ9TMOa9
+         ja/5yE7aXjwd3TUa2CnR+ZVV9nrK0WmlD7HKG54CDIjmnstbdDxX5yc6sG88Eg6pTU+u
+         Gtm4h7VLFSjtnyZNeIQFKzw5pCVUFmPglio0ecLNSv1NeACu4EGOfV6FaGfQEjoP88Lx
+         kgr02HdwA8+1td4sYXvy4yohwrhK6qA5POqxgQkcE+CRL71g9iTkKyRrA1cRebJJiFKb
+         I1NuHga9nw2apglkFhMt8CzRP2HWCqAPSMAttCvNaR1gJj6TKlZaO0Djulabrf9nvuVe
+         DO+Q==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@steamshop.pk header.s=api header.b=a64jwNFt;
+       dkim=pass header.i=@elasticemail.com header.s=api header.b=Zbpmnqr8;
+       spf=pass (google.com: domain of sales@steamshop.pk designates 51.222.89.29 as permitted sender) smtp.mailfrom=sales@steamshop.pk;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=steamshop.pk
+Return-Path: <sales@steamshop.pk>
+Received: from ne29.mxout.mta3.net (ne29.mxout.mta3.net. [51.222.89.29])
+        by mx.google.com with ESMTPS id n15si5954032wmk.14.2022.02.03.09.42.42
+        for <azfarali007.aa@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Thu, 03 Feb 2022 09:42:42 -0800 (PST)
+Received-SPF: pass (google.com: domain of sales@steamshop.pk designates 51.222.89.29 as permitted sender) client-ip=51.222.89.29;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@steamshop.pk header.s=api header.b=a64jwNFt;
+       dkim=pass header.i=@elasticemail.com header.s=api header.b=Zbpmnqr8;
+       spf=pass (google.com: domain of sales@steamshop.pk designates 51.222.89.29 as permitted sender) smtp.mailfrom=sales@steamshop.pk;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=steamshop.pk
+DKIM-Signature: v=1; a=rsa-sha256; d=steamshop.pk; s=api; c=relaxed/simple;
+	t=1643910159; h=from:date:subject:reply-to:to:list-unsubscribe:mime-version;
+	bh=1JdnVFFaVqwEei/GElOWOhocWya6NGw4uiHBMe7rClA=;
+	b=a64jwNFtwjH790gyW/gEKauXn+8wBg/s4mN5PcPqdXRIxZw95rNpuZB5jZtLV8RTFYHmrgeMps1
+	I0MqsahRksssuofdgOQNA6deM3Ya4hPFqnqALR8LyHgnQAvnxZjMb1eaFI1Pvzt1/cyFQcKHt5+at
+	JIsM8SOsAU7UMsZjIi0=
+DKIM-Signature: v=1; a=rsa-sha256; d=elasticemail.com; s=api;
+	c=relaxed/simple; t=1643910159;
+	h=from:date:subject:reply-to:to:list-unsubscribe;
+	bh=1JdnVFFaVqwEei/GElOWOhocWya6NGw4uiHBMe7rClA=;
+	b=Zbpmnqr8pWAYwaBJyhp7FCDOtgkwzC//4bl//pofn1ZSRq9q2HqLIiGhqOg+jxMqpSmoLPri1rz
+	5dZGBvHt+HB+H27dkwX8tKROCDnZeHSzhDKVngqL6NJAo7RvIi4ozPhRsEkge2x5JsKE3Dn/IHjAt
+	sDXiga+DZKO5MdFcFBY=
+From: STEAMSHOP <sales@steamshop.pk>
+Date: Thu, 03 Feb 2022 17:42:39 +0000
+Subject: [STEAMSHOP] Details for Order #19000036618
+Message-Id: <4ufzhe2mhifn.ybhPKpOEdCip4kKnLZMGjw2@tracking.steamshop.pk>
+Reply-To: STEAMSHOP <sales@steamshop.pk>
+Sender: STEAMSHOP <sales@steamshop.pk>
+To: Azfar Ali <azfarali007.aa@gmail.com>
+List-Unsubscribe: 
+ =?us-ascii?q?=3Cmailto=3Aunsubscribe+ybhPKpOEdCip4kKnLZMGjw2=40bounces=2Eelasticem?=
+ =?us-ascii?q?ail=2Enet=3Fsubject=3Dunsubscribe=3E=2C?=
+ =?us-ascii?q?_=3Chttp=3A=2F=2Ftracking=2Esteamshop=2Epk=2Ftracking=2Funsubscribe=3Fmsgid=3DybhP?=
+ =?us-ascii?q?KpOEdCip4kKnLZMGjw2&c=3D1489290329281746523=3E?=
+X-Msg-EID: ybhPKpOEdCip4kKnLZMGjw2
+Feedback-ID: zhyu5s:-1z2wt011:ElasticEmailFBL
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+	boundary="=-eZCfHWDdzg7cCOKaScA/PSLq3ChY+Nkv23WKzQ=="
+
+--=-eZCfHWDdzg7cCOKaScA/PSLq3ChY+Nkv23WKzQ==
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: base64
+
+DQo8aHR0cHM6Ly9zdGVhbXNob3AucGsvPg0KDQpBemZhciBBbGksDQoNCiAgICAgICAgICAg
+ICAgICBUaGFuayB5b3UgZm9yIHlvdXIgb3JkZXIuDQogICAgICAgICAgICAgICAgWW91IGNh
+biBjaGVjayB0aGUgZGV0YWlscy9zdGF0dXMgb2YgeW91ciBvcmRlciBieSANCjxodHRwczov
+L3N0ZWFtc2hvcC5way9jdXN0b21lci9hY2NvdW50Lz4NCmxvZ2dpbmcgaW50byB5b3VyIGFj
+Y291bnQuDQogICAgICAgICAgICANCklmIHlvdSBoYXZlIHF1ZXN0aW9ucyBhYm91dCB5b3Vy
+IG9yZGVyLCB5b3UgY2FuIGNvbnRhY3QgdXMgdGhyb3VnaCBvdXIgDQo8aHR0cHM6Ly9zdGVh
+bXNob3AucGsvPg0KTGl2ZSBDaGF0IG9yIGNhbGwgdXMgYXQgDQo8dGVsOis5MjMxMTExMzMx
+NDQ+DQowMzExLTExMzMxNDQuIE91ciBUaW1pbmdzIE1vbi1TYXQgMTI6MDAgUE0gdG8gOTow
+MCBQTSBhbmQgU3VuZGF5IDM6MDAgUE0gdG8gOTowMCBQTS4gDQpZb3VyIE9yZGVyICMxOTAw
+MDAzNjYxOA0KT3JkZXIgRGF0ZTogRmViIDMsIDIwMjIsIDEwOjQyOjM1IFBNUGF5bWVudCBN
+ZXRob2RKYXp6Q2FzaCBNb2JpbGUgQWNjb3VudA0KICAgICAgICAgICAgICAgICAgICBJdGVt
+cyAgICAgICAgICAgICAgICANCiAgICAgICAgICAgICAgICAgICAgUXR5ICAgICAgICAgICAg
+ICAgIA0KICAgICAgICAgICAgICAgICAgICBQcmljZSAgICAgICAgICAgICAgICANClN0ZWFt
+IFdhbGxldCBDb2RlIChBUikNClNLVTogU00tR0MtQVItMTAwRGVub21pbmF0aW9uDQogICAg
+ICAgICAgICAgICAgICAgIEFSUyAxMDAgICAgICAgICAgICAgICAgMVJTIDI1MA0KICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgIFN1YnRvdGFsICAgICAgICAgICAgICAgICAgICBSUyAy
+NTBHcmFuZCBUb3RhbFJTIDI1MA0KPGh0dHBzOi8vd3d3LmZhY2Vib29rLmNvbS9PZmZpY2lh
+bFN0ZWFtU2hvcD4NCg0KPGh0dHBzOi8vd3d3Lmluc3RhZ3JhbS5jb20vT2ZmaWNpYWxTdGVh
+bVNob3A+DQoNCg0KPGh0dHBzOi8vc3RlYW1zaG9wLnBrPg0KVGVybXMgb2YgVXNlICYgDQo8
+aHR0cHM6Ly9zdGVhbXNob3AucGs+DQpQcml2YWN5IFBvbGljeQ0KU1RFQU1TSE9QDQoNCiAg
+ICAgICAgICAgIHd3dy5zdGVhbXNob3AucGsNCiAgICAgICAg
+
+--=-eZCfHWDdzg7cCOKaScA/PSLq3ChY+Nkv23WKzQ==
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w=
+3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns=3D"http://www.w3.org/1999/xhtml" style=3D"font-size: 62.5%=
+; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; font-siz=
+e-adjust: 100%; background-color: #ffffff;">
+<head>
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3D=
+utf-8">
+    <meta name=3D"viewport" content=3D"initial-scale=3D1.0, width=3Dde=
+vice-width">
+    <meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
+    <style type=3D"text/css">
+       =20
+
+        @import url("https://steamshop.pk/pub/static/version1642510135=
+/frontend/topico/topico_home9/en_US/css/email-fonts.css");
+html {
+  font-size: 62.5%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  font-size-adjust: 100%;
+}
+body {
+  color: #333333;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-s=
+erif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.42857143;
+  font-size: 14px;
+}
+p {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+abbr[title] {
+  border-bottom: 1px dotted #d1d1d1;
+  cursor: help;
+}
+b,
+strong {
+  font-weight: 700;
+}
+em,
+i {
+  font-style: italic;
+}
+mark {
+  background: #f0f0f0;
+  color: #000000;
+}
+small,
+.small {
+  font-size: 12px;
+}
+hr {
+  border: 0;
+  border-top: 1px solid #d1d1d1;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+sub,
+sup {
+  font-size: 71.42857143000001%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -.5em;
+}
+sub {
+  bottom: -.25em;
+}
+dfn {
+  font-style: italic;
+}
+h1 {
+  font-weight: 300;
+  line-height: 1.1;
+  font-size: 26px;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+h2 {
+  font-weight: 300;
+  line-height: 1.1;
+  font-size: 26px;
+  margin-top: 25px;
+  margin-bottom: 20px;
+}
+h3 {
+  font-weight: 300;
+  line-height: 1.1;
+  font-size: 18px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+h4 {
+  font-weight: 700;
+  line-height: 1.1;
+  font-size: 14px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+h5 {
+  font-weight: 700;
+  line-height: 1.1;
+  font-size: 12px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+h6 {
+  font-weight: 700;
+  line-height: 1.1;
+  font-size: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+h1 small,
+h2 small,
+h3 small,
+h4 small,
+h5 small,
+h6 small,
+h1 .small,
+h2 .small,
+h3 .small,
+h4 .small,
+h5 .small,
+h6 .small {
+  color: #333333;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-s=
+erif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1;
+}
+a,
+.alink {
+  color: #1979c3;
+  text-decoration: none;
+}
+a:visited,
+.alink:visited {
+  color: #1979c3;
+  text-decoration: none;
+}
+a:hover,
+.alink:hover {
+  color: #006bb4;
+  text-decoration: underline;
+}
+a:active,
+.alink:active {
+  color: #ff5501;
+  text-decoration: underline;
+}
+ul,
+ol {
+  margin-top: 0;
+  margin-bottom: 25px;
+}
+ul > li,
+ol > li {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+ul ul,
+ol ul,
+ul ol,
+ol ol {
+  margin-bottom: 0;
+}
+dl {
+  margin-bottom: 20px;
+  margin-top: 0;
+}
+dt {
+  font-weight: 700;
+  margin-bottom: 5px;
+  margin-top: 0;
+}
+dd {
+  margin-bottom: 10px;
+  margin-top: 0;
+  margin-left: 0;
+}
+code,
+kbd,
+pre,
+samp {
+  font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+code {
+  background: #f0f0f0;
+  color: #111111;
+  padding: 2px 4px;
+  font-size: 12px;
+  white-space: nowrap;
+}
+kbd {
+  background: #f0f0f0;
+  color: #111111;
+  padding: 2px 4px;
+  font-size: 12px;
+}
+pre {
+  background: #f0f0f0;
+  border: 1px solid #d1d1d1;
+  color: #111111;
+  line-height: 1.42857143;
+  margin: 0 0 10px;
+  padding: 10px;
+  font-size: 12px;
+  display: block;
+  word-wrap: break-word;
+}
+pre code {
+  background-color: transparent;
+  border-radius: 0;
+  color: inherit;
+  font-size: inherit;
+  padding: 0;
+  white-space: pre-wrap;
+}
+blockquote {
+  border-left: 0 solid #d1d1d1;
+  margin: 0 0 20px 40px;
+  padding: 0;
+  color: #333333;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-s=
+erif;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.42857143;
+  font-size: 14px;
+}
+blockquote p:last-child,
+blockquote ul:last-child,
+blockquote ol:last-child {
+  margin-bottom: 0;
+}
+blockquote footer,
+blockquote small,
+blockquote .small {
+  color: #333333;
+  line-height: 1.42857143;
+  font-size: 10px;
+  display: block;
+}
+blockquote footer:before,
+blockquote small:before,
+blockquote .small:before {
+  content: '\2014 \00A0';
+}
+blockquote cite {
+  font-style: normal;
+}
+blockquote:before,
+blockquote:after {
+  content: '';
+}
+q {
+  quotes: none;
+}
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+cite {
+  font-style: normal;
+}
+.shipment-track th {
+  text-align: left;
+}
+.shipment-track > tbody > tr > th,
+.shipment-track > tfoot > tr > th,
+.shipment-track > tbody > tr > td,
+.shipment-track > tfoot > tr > td {
+  vertical-align: top;
+}
+.shipment-track > thead > tr > th,
+.shipment-track > thead > tr > td {
+  vertical-align: bottom;
+}
+.shipment-track > thead > tr > th,
+.shipment-track > tbody > tr > th,
+.shipment-track > tfoot > tr > th,
+.shipment-track > thead > tr > td,
+.shipment-track > tbody > tr > td,
+.shipment-track > tfoot > tr > td {
+  padding: 0 10px;
+}
+.email-items th {
+  text-align: left;
+}
+.email-items > tbody > tr > th,
+.email-items > tfoot > tr > th,
+.email-items > tbody > tr > td,
+.email-items > tfoot > tr > td {
+  vertical-align: top;
+}
+.email-items > thead > tr > th,
+.email-items > thead > tr > td {
+  vertical-align: bottom;
+}
+.email-items > thead > tr > th,
+.email-items > tbody > tr > th,
+.email-items > tfoot > tr > th,
+.email-items > thead > tr > td,
+.email-items > tbody > tr > td,
+.email-items > tfoot > tr > td {
+  padding: 0 10px;
+}
+@media only screen and (max-width: 639px) {
+  html,
+  body {
+    background-color: #ffffff;
+    width: 100% !important;
+  }
+  .main {
+    max-width: 100% !important;
+    min-width: 240px;
+    width: auto !important;
+  }
+  .rma-items td,
+  .rma-items th {
+    font-size: 12px !important;
+    padding: 5px !important;
+  }
+}
+@media only screen and (max-width: 479px) {
+  .email-summary h1 {
+    font-size: 24px !important;
+  }
+  .order-details .address-details,
+  .order-details .method-info {
+    display: block;
+    padding: 10px 0 !important;
+    width: auto !important;
+  }
+  .order-details .address-details h3,
+  .order-details .method-info h3 {
+    margin-bottom: 5px !important;
+    margin-top: 0 !important;
+  }
+  .button .inner-wrapper {
+    width: 100% !important;
+  }
+  .button .inner-wrapper td a {
+    font-size: 16px;
+  }
+}
+body,
+table,
+td,
+a {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+img {
+  -ms-interpolation-mode: bicubic;
+}
+table,
+td {
+  mso-table-lspace: 0pt;
+  mso-table-rspace: 0pt;
+}
+a:visited {
+  color: #1979c3 !important;
+  text-decoration: none !important;
+}
+a:hover {
+  color: #006bb4 !important;
+  text-decoration: underline !important;
+}
+a:active {
+  color: #ff5501 !important;
+  text-decoration: underline !important;
+}
+.no-link a,
+.address-details a {
+  color: #333333 !important;
+  cursor: default !important;
+  text-decoration: none !important;
+}
+.button .inner-wrapper td:hover {
+  background-color: #006bb4 !important;
+}
+.button .inner-wrapper a:active,
+.button .inner-wrapper td:active {
+  background-color: #006bb4 !important;
+}
+.button a:active,
+.button a:hover,
+.button a:visited {
+  border: 1px solid #006bb4;
+  color: #ffffff !important;
+  text-decoration: none !important;
+}
+.email-items {
+  overflow-x: auto;
+  overflow-y: hidden;
+  width: 100%;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  -webkit-overflow-scrolling: touch;
+}
+
+    </style>
+<style type=3D"text/css">a:visited{color: #1979c3;
+  text-decoration: none;}a:hover{color: #006bb4;
+  text-decoration: underline;}a:active{color: #ff5501;
+  text-decoration: underline;}</style>
+</head>
+<body style=3D"margin: 0; padding: 0; color: #333333; font-style: norm=
+al; line-height: 1.42857143; font-size: 14px; font-family: 'Open Sans'=
+, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: normal;=
+ text-align: left; background-color: #ffffff;">
+
+
+<!-- Begin wrapper table -->
+<table class=3D"wrapper" width=3D"100%" style=3D"border-collapse: coll=
+apse; margin: 0 auto;">
+    <tr>
+        <td class=3D"wrapper-inner" align=3D"center" style=3D"font-fam=
+ily: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; vert=
+ical-align: top; padding-bottom: 30px; width: 100%;">
+            <table class=3D"main" align=3D"center" style=3D"border-col=
+lapse: collapse; margin: 0 auto; text-align: left; width: 600px;">
+                <tr>
+                    <td class=3D"header" style=3D"font-family: 'Open S=
+ans', 'Helvetica Neue', Helvetica, Arial, sans-serif; vertical-align: =
+top; padding: 10px 10px 0;">
+                        <a class=3D"logo" href=3D"https://steamshop.pk=
+/" style=3D"color: #1979c3; text-decoration: none;">
+                            <img src=3D"https://steamshop.pk/pub/media=
+/HeaderLogo.png" border=3D"0" style=3D"border: 0; height: auto; line-h=
+eight: 100%; outline: none; text-decoration: none;">
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class=3D"main-content" style=3D"font-family: '=
+Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; vertical-a=
+lign: top; background-color: #ffffff; padding: 10px;">
+                    <!-- Begin Content -->
+<table style=3D"border-collapse: collapse;">
+    <tr class=3D"email-intro">
+        <td style=3D"font-family: 'Open Sans', 'Helvetica Neue', Helve=
+tica, Arial, sans-serif; vertical-align: top;">
+            <p class=3D"greeting" style=3D"margin-top: 0; margin-botto=
+m: 10px;">Azfar Ali,</p>
+            <p style=3D"margin-top: 0; margin-bottom: 10px;">
+                Thank you for your order.
+                You can check the details/status of your order by <a h=
+ref=3D"https://steamshop.pk/customer/account/" style=3D"color: #1979c3=
+; text-decoration: none;">logging into your account</a>.
+            </p>
+            <p style=3D"margin-top: 0; margin-bottom: 10px;">If you ha=
+ve questions about your order, you can contact us through our <a href=3D=
+"https://steamshop.pk/" style=3D"color: #1979c3; text-decoration: none=
+;">Live Chat</a> or call us at <a href=3D"tel:+923111133144" style=3D"=
+color: #1979c3; text-decoration: none;">0311-1133144</a>. Our Timings =
+Mon-Sat 12:00 PM to 9:00 PM and Sunday 3:00 PM to 9:00 PM. </p>
+<br>
+        </td>
+    </tr>
+    <tr class=3D"email-summary">
+        <td style=3D"font-family: 'Open Sans', 'Helvetica Neue', Helve=
+tica, Arial, sans-serif; vertical-align: top;">
+            <h1 style=3D"font-weight: 300; line-height: 1.1; font-size=
+: 26px; margin-top: 0; margin-bottom: 5px;">Your Order <span class=3D"=
+no-link">#19000036618</span>
+</h1>
+            <p style=3D"margin-top: 0; margin-bottom: 10px;">Order Dat=
+e: <span class=3D"no-link">Feb 3, 2022, 10:42:35 PM</span></p>
+        </td>
+    </tr>
+    <tr class=3D"email-information">
+        <td style=3D"font-family: 'Open Sans', 'Helvetica Neue', Helve=
+tica, Arial, sans-serif; vertical-align: top;">
+           =20
+            <table class=3D"order-details" style=3D"border-collapse: c=
+ollapse; width: 100%;">
+                <tr>
+                   =20
+                </tr>
+                <tr>
+                    <td class=3D"method-info" style=3D"font-family: 'O=
+pen Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; vertical-al=
+ign: top; padding: 10px 10px 10px 0; width: 50%;">
+                       =20
+                        <h3 style=3D"font-weight: 300; line-height: 1.=
+1; font-size: 18px; margin-bottom: 10px; margin-top: 0;">Payment Metho=
+d</h3>
+                        <dl class=3D"payment-method" style=3D"margin-t=
+op: 0; margin-bottom: 10px;">
+    <dt class=3D"title" style=3D"margin-bottom: 5px; margin-top: 0; fo=
+nt-weight: 400;">JazzCash Mobile Account</dt>
+</dl>
+
+                       =20
+                    </td>
+                   =20
+                </tr>
+            </table>
+                    <table class=3D"email-items" style=3D"width: 100%;=
+ border-collapse: collapse; border-spacing: 0; max-width: 100%; border=
+: 1px solid #d1d1d1;">
+        <thead>
+            <tr>
+                <th class=3D"item-info" style=3D"font-family: 'Open Sa=
+ns', 'Helvetica Neue', Helvetica, Arial, sans-serif; text-align: left;=
+ vertical-align: bottom; background-color: #f2f2f2; padding: 10px;">
+                    Items                </th>
+                <th class=3D"item-qty" style=3D"font-family: 'Open San=
+s', 'Helvetica Neue', Helvetica, Arial, sans-serif; vertical-align: bo=
+ttom; background-color: #f2f2f2; padding: 10px; text-align: center;">
+                    Qty                </th>
+                <th class=3D"item-price" style=3D"font-family: 'Open S=
+ans', 'Helvetica Neue', Helvetica, Arial, sans-serif; vertical-align: =
+bottom; background-color: #f2f2f2; padding: 10px; text-align: right;">
+                    Price                </th>
+            </tr>
+        </thead>
+                                    <tbody>
+                    <tr>
+    <td class=3D"item-info has-extra" style=3D"font-family: 'Open Sans=
+', 'Helvetica Neue', Helvetica, Arial, sans-serif; vertical-align: top=
+; padding: 10px; border-top: 1px solid #d1d1d1;">
+        <p class=3D"product-name" style=3D"margin-top: 0; font-weight:=
+ 700; margin-bottom: 5px;">Steam Wallet Code (AR)</p>
+        <p class=3D"sku" style=3D"margin-top: 0; margin-bottom: 10px;"=
+>SKU: SM-GC-AR-100</p>
+                    <dl class=3D"item-options" style=3D"margin-top: 0;=
+ margin-bottom: 0; padding-left: 0px;">
+                            <dt style=3D"font-weight: 700; margin-top:=
+ 0; margin-bottom: 0; padding-bottom: 0;"><strong style=3D"font-weight=
+: 700;"><em style=3D"font-style: italic;">Denomination</em></strong></=
+dt>
+                <dd style=3D"margin-top: 0; margin-left: 0; margin-bot=
+tom: 0; padding-bottom: 0; padding-left: 0px;">
+                    ARS 100                </dd>
+                        </dl>
+                                                        </td>
+    <td class=3D"item-qty" style=3D"font-family: 'Open Sans', 'Helveti=
+ca Neue', Helvetica, Arial, sans-serif; vertical-align: top; padding: =
+10px; border-top: 1px solid #d1d1d1; text-align: center;">1</td>
+    <td class=3D"item-price" style=3D"font-family: 'Open Sans', 'Helve=
+tica Neue', Helvetica, Arial, sans-serif; vertical-align: top; padding=
+: 10px; border-top: 1px solid #d1d1d1; text-align: right;">
+       =20
+        <span class=3D"price">RS 250</span>
+   =20
+
+    </td>
+</tr>
+                </tbody>
+                                                <tfoot class=3D"order-=
+totals">
+                    <tr class=3D"subtotal">
+        <th colspan=3D"2" scope=3D"row" style=3D"font-family: 'Open Sa=
+ns', 'Helvetica Neue', Helvetica, Arial, sans-serif; vertical-align: t=
+op; background-color: #f2f2f2; border-top: 1px solid #d1d1d1; font-wei=
+ght: 400; padding: 10px; text-align: right;">
+                            Subtotal                    </th>
+        <td data-th=3D"Subtotal" style=3D"font-family: 'Open Sans', 'H=
+elvetica Neue', Helvetica, Arial, sans-serif; vertical-align: top; bac=
+kground-color: #f2f2f2; border-top: 1px solid #d1d1d1; padding: 10px; =
+text-align: right;">
+                            <span class=3D"price" style=3D"white-space=
+: nowrap;">RS 250</span>                    </td>
+    </tr>
+            <tr class=3D"grand_total">
+        <th colspan=3D"2" scope=3D"row" style=3D"font-family: 'Open Sa=
+ns', 'Helvetica Neue', Helvetica, Arial, sans-serif; vertical-align: t=
+op; background-color: #f2f2f2; border-top: 0; font-weight: 400; paddin=
+g: 10px; text-align: right; padding-top: 0;">
+                            <strong style=3D"font-weight: 700;">Grand =
+Total</strong>
+                    </th>
+        <td data-th=3D"Grand Total" style=3D"font-family: 'Open Sans',=
+ 'Helvetica Neue', Helvetica, Arial, sans-serif; vertical-align: top; =
+background-color: #f2f2f2; border-top: 0; padding: 10px; text-align: r=
+ight; padding-top: 0;">
+                            <strong style=3D"font-weight: 700;"><span =
+class=3D"price" style=3D"white-space: nowrap;">RS 250</span></strong>
+                    </td>
+    </tr>
+            </tfoot>
+    </table>
+   =20
+        </td>
+    </tr>
+    <tr>
+        <td valign=3D"middle" align=3D"center" style=3D"font-family: '=
+Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; vertical-a=
+lign: top; padding: 0; margin: 0;">
+    <div style=3D"text-align: center; margin: 24px 0; opacity: .7;">
+        <a href=3D"https://www.facebook.com/OfficialSteamShop" target=3D=
+"blank" rel=3D"nofollow" style=3D"color: #1979c3; text-decoration: non=
+e; display: inline-block; vertical-align: top; background: rgba(0,0,0,=
+.1); padding: 6px; border-radius: 12px; margin: 0 6px;">
+            <img src=3D"https://steamshop.pk/pub/media/facebook2.png" =
+style=3D"line-height: 100%; outline: none; text-decoration: none; widt=
+h: 24px; height: 24px; vertical-align: top; border: none;">
+        </a>
+        <a href=3D"https://www.instagram.com/OfficialSteamShop" target=
+=3D"blank" rel=3D"nofollow" style=3D"color: #1979c3; text-decoration: =
+none; display: inline-block; vertical-align: top; background: rgba(0,0=
+,0,.1); padding: 6px; border-radius: 12px; margin: 0 6px;">
+            <img src=3D"https://steamshop.pk/pub/media/instagram2.png"=
+ style=3D"line-height: 100%; outline: none; text-decoration: none; wid=
+th: 24px; height: 24px; vertical-align: top; border: none;">
+        </a>
+    </div>
+    <div style=3D"text-align: center; margin: 24px 0;">
+        <p style=3D"margin-top: 0; margin-bottom: 10px; font: 14px/1.5=
+ Avenir,Helvetica,Arial,sans-serif; margin: 12px 0;">
+            <a href=3D"https://steamshop.pk" target=3D"blank" rel=3D"n=
+ofollow" style=3D"color: #000; text-decoration: underline;">Terms of U=
+se</a> &amp; <a href=3D"https://steamshop.pk" target=3D"blank" rel=3D"=
+nofollow" style=3D"color: #000; text-decoration: underline;">Privacy P=
+olicy</a>
+        </p>
+        <p style=3D"margin-top: 0; margin-bottom: 10px; font: 12px/1.5=
+ Avenir,Helvetica,Arial,sans-serif; margin: 12px 0; opacity: .5;">
+           <b style=3D"font-weight: 700;">STEAMSHOP</b><br>
+            www.steamshop.pk
+        </p>
+    </div>
+</td>
+    </tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<img src=3D"http://tracking.steamshop.pk/tracking/open?msgid=3DybhPKpO=
+EdCip4kKnLZMGjw2&c=3D1489290329281746523" style=3D"width:1px;height:1p=
+x" alt=3D"" /></body>
+</html>
+
+
+--=-eZCfHWDdzg7cCOKaScA/PSLq3ChY+Nkv23WKzQ==--
