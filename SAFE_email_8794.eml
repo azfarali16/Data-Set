@@ -1,0 +1,961 @@
+X-GM-THRID: 1728277884971685891
+X-Gmail-Labels: Inbox,Opened,Category Updates
+Delivered-To: azfarali007.aa@gmail.com
+Received: by 2002:a05:6214:a6c:0:0:0:0 with SMTP id ef12csp6110751qvb;
+        Fri, 25 Mar 2022 06:17:10 -0700 (PDT)
+X-Google-Smtp-Source: ABdhPJxHW3TWNpUqGyzPYSgfJBTv5Sp5W0rrnWErEbAJ9f/gnP8VM1xjQ6T3wdLmCA5o90iuIa4v
+X-Received: by 2002:a7b:cd88:0:b0:38c:9d04:d794 with SMTP id y8-20020a7bcd88000000b0038c9d04d794mr9707426wmj.140.1648214230448;
+        Fri, 25 Mar 2022 06:17:10 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1648214230; cv=none;
+        d=google.com; s=arc-20160816;
+        b=GcZfd6gDj8XVhTd7sIRJfm111FPjib4ne/MtjgSr71ie08GnCphvqcy7ULN87TPwjK
+         7sYzIg3FClZTQdcsLYfRlTajkF3Np6injIVxijmBhEhuqu47MDAEKmBgdXqXTBywb0C/
+         YphyJIVhR6ZttCH3Ff8SJgLTsMP5L8BDZ31aD43tS2xy68qR+nZTREJC8gvCgMCxjPRX
+         Heegy04C11xVOWUx4uv5THRjVxYxfeVp6rjBl8c9EIBAjF54c7TM2ljC1Reo9rpuVfmc
+         HMhG9HCWKDBRnZm3t/dbZH2LitEH9OOKNZJ2k2LFv9oiohpSGKYG5XYWYb8uY/Bx+bJe
+         xhYA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=mime-version:list-unsubscribe:list-unsubscribe-post:sender
+         :feedback-id:precedence:message-id:subject:reply-to:from:to:date
+         :dkim-signature;
+        bh=yzqDa83/oSwFx1xnnkg4078Lp6RG4pOC23m6wDxsJdc=;
+        b=fKWPLc0chnjCOpBIdATn4wPB++aYoFhdbtFx4lKRlGereo5ZL+oUXX246+8hd/X1ga
+         ISjKIsCuyNJZL7tR6Tvz67OSVjXW1XNzjyrhT2E6PxhXkc6AQgTuCbk1Yrao+DKPU17p
+         S5SdTsSCxkZlDDtDHQXO9zm+2qMcJTYj31AOm//2SMvlPmw5mJoSRrV9iFi3DJ2/Ry0Z
+         88Mnh4QslHId/bKpCB07VKzAMmnBQ6ixNatj4RgvkLmtQrQn8U4bdFT+hpshRiymyWEm
+         r9JxfQzWrtY3Sv0JBHNra5ZVVAmWJX36mqSMwjkXV+zrOMULjPKIt3FQlzsZf9C6YIgY
+         4h8g==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@mlflow.com header.s=ml header.b=hJpB7ra+;
+       spf=pass (google.com: domain of bounce-f9j5-1913839346855712887@mlflow.com designates 185.249.220.198 as permitted sender) smtp.mailfrom=bounce-f9j5-1913839346855712887@mlflow.com
+Return-Path: <bounce-f9j5-1913839346855712887@mlflow.com>
+Received: from mail198.on.mlflow.com (mail198.on.mlflow.com. [185.249.220.198])
+        by mx.google.com with ESMTPS id a10-20020a5d6caa000000b002058df0b30esi3092680wra.310.2022.03.25.06.17.10
+        for <azfarali007.aa@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Fri, 25 Mar 2022 06:17:10 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bounce-f9j5-1913839346855712887@mlflow.com designates 185.249.220.198 as permitted sender) client-ip=185.249.220.198;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@mlflow.com header.s=ml header.b=hJpB7ra+;
+       spf=pass (google.com: domain of bounce-f9j5-1913839346855712887@mlflow.com designates 185.249.220.198 as permitted sender) smtp.mailfrom=bounce-f9j5-1913839346855712887@mlflow.com
+Received: from (127.0.0.1)
+	(using TLSv1.3 with cipher TLS_AES_256_GCM_SHA384 (256/256 bits)
+	 key-exchange ECDHE (P-256) server-signature RSA-PSS (2048 bits)
+	 client-signature RSA-PSS (2048 bits))
+	(Client CN "on.mlflow.com", Issuer "on.mlflow.com" (verified OK))
+	by mail198.on.mlflow.com (Postfix) with ESMTPS id EB69EDC0880
+	for <azfarali007.aa@gmail.com>; Fri, 25 Mar 2022 13:17:09 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=mlflow.com; s=ml;
+	t=1648214229; bh=yzqDa83/oSwFx1xnnkg4078Lp6RG4pOC23m6wDxsJdc=;
+	h=Date:To:From:Reply-To:Subject:Message-ID:List-Unsubscribe:
+	 MIME-Version:Content-Type;
+	b=hJpB7ra+9pS1H8c1K0rxdZrJHRDacHHjxVtjME0rJElO+iEdcqb32sNGL+kMxeRdu
+	 PfSEJ2IGQQ8TSYZ2jDg0ZQ6jQUMtBZ+KA04TYWSzzXyBqGMNoyUtWuDXwoLAbHT6XT
+	 cTyKvRCPZiVUbn/fnmCnA7TQ7pOIA837x+xZxlPc=
+Received: from (127.0.0.1)
+	by mail198.on.mlflow.com (Postfix) with ESMTP id E94D0DC0777
+	for <azfarali007.aa@gmail.com>; Fri, 25 Mar 2022 13:17:09 +0000 (UTC)
+Date: Fri, 25 Mar 2022 15:17:09 +0200
+To: Syed Azfar Ali <azfarali007.aa@gmail.com>
+From: Khalil Ullah Khan <hello@khalilullahkhan.com>
+Reply-To: Khalil Ullah Khan <hello@khalilullahkhan.com>
+Subject: =?utf-8?Q?You=E2=80=99re=20IN!!=20And=20this=20is=20what=20it=20says=20about=20you=E2=80=A6?=
+Message-ID: <5f4704f62ed9eb2ae4c23dd029e4756d@mlflow.com>
+X-Mailer-SubscriberID: 1913839346855712887;f9j5;b6c1fbb3deb62a5a66871ba241273727
+X-Mailru-Msgtype: b6c1fbb3deb62a5a66871ba241273727
+Precedence: bulk
+Feedback-ID: z0c1i2:b6c1fbb3deb62a5a66871ba241273727:1252904268105623731:MailerLite
+Sender: =?utf-8?Q?"Khalil=20Ullah=20Khan"?=<hello=khalilullahkhan.com@mlflow.com>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+List-Unsubscribe: <mailto:unsubscribe-1913839346855712887-f9j5-b6c1fbb3deb62a5a66871ba241273727@mlflow.com?body=unsubscribe>, <https://click.mlflow.com/link/c/YT0xOTEzODM5MzQ2ODU1NzEyODg3JmM9ZjlqNSZlPTAmYj00ODIzOTY5ODkmZD1pNGcwbDh1.B4xCvSW7P841WVRA1RYmlVA-h2uW57Z9IEX7-_Ti6Jk>
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+	boundary="b1_5f4704f62ed9eb2ae4c23dd029e4756d"
+
+
+--b1_5f4704f62ed9eb2ae4c23dd029e4756d
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+Hello,
+
+You have received a newsletter from Khalil Ullah Khan.
+
+However, your email software can't display HTML emails. You can view the =
+newsletter by clicking here:
+
+https://click.mlflow.com/link/c/YT0xOTEzODM5MzQ2ODU1NzEyODg3JmM9ZjlqNSZlP=
+TAmYj00ODIzOTY5ODMmZD1wMmQxcjR1.R0jH2FIm8P-Nq28oGTsdIX5ZBOSIIQrNxcOX-QM-l=
+b8
+
+
+
+You're receiving this newsletter because you have shown interest in Khali=
+l Ullah Khan.
+Not interested anymore? Click here to unsubscribe:
+https://click.mlflow.com/link/c/YT0xOTEzODM5MzQ2ODU1NzEyODg3JmM9ZjlqNSZlP=
+TAmYj00ODIzOTY5OTImZD1nM2E0ajZl.qBUh2JgTWG7JsQ2DUz1d4hxccV08ld5_oukdwlKYj=
+8g
+
+
+--b1_5f4704f62ed9eb2ae4c23dd029e4756d
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2//EN"> <html>      <head>     =
+<!--[if gte mso 9]>       <xml>         <o:OfficeDocumentsettings>       =
+    <o:AllowPNG/>           <o:PixelsPerInch>96</o:PixelsPerInch>        =
+ </o:OfficeDocumentsettings>       </xml>     <![endif]-->     <meta http=
+-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8">     <meta=
+ name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=3D1.0">=
+     <meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">     <met=
+a name=3D"format-detection" content=3D"address=3Dno">     <meta name=3D"f=
+ormat-detection" content=3D"telephone=3Dno">     <meta name=3D"format-det=
+ection" content=3D"email=3Dno">     <meta name=3D"x-apple-disable-message=
+-reformatting">     <!--[if !mso]>       <!-->       <style type=3D"text/=
+css">         @import url("https://static.mailerlite.com/assets/plugins/g=
+root/modules/includes/groot_fonts/import.css?version=3D1608296");       <=
+/style>     <!--<![endif]-->     <!-- RSS STYLE STARTS -->     <!--[if ms=
+o]>       <style
+type=3D"text/css">         .content-MS .content img { width: 560px; }    =
+   </style>     <![endif]-->     <!-- WINDOWS 10 HACKS FOR LINK AND BG CO=
+LOR -->     <!--[if (mso)|(mso 16)]>       <style type=3D"text/css">     =
+    .mlContentButton a { text-decoration: none; }       </style>     <![e=
+ndif]-->     <!--[if !mso]>       <!-- -->       <style type=3D"text/css"=
+>         .mlBodyBackgroundImage { background-image: url(''); }       </s=
+tyle>     <!--<![endif]-->     <!--[if (lt mso 16)]>       <style type=3D=
+"text/css">         .mlBodyBackgroundImage { background-image: url(''); }=
+       </style>     <![endif]-->     <style type=3D"text/css">       .Rea=
+dMsgBody { width: 100%; }     .ExternalClass{ width: 100%; }     .Externa=
+lClass * { line-height: 100%; }     .ExternalClass, .ExternalClass p, .Ex=
+ternalClass td, .ExternalClass div, .ExternalClass span, .ExternalClass f=
+ont { line-height:100%; }     body { margin: 0; padding: 0; }     body, t=
+able, td, p, a, li { -webkit-text-size-adjust: 100%;
+-ms-text-size-adjust: 100%; }     table td { border-collapse: collapse; }=
+     table { border-spacing: 0; border-collapse: collapse; }     p, a, li=
+, td, blockquote { mso-line-height-rule: exactly; }     p, a, li, td, bod=
+y, table, blockquote { -ms-text-size-adjust: 100%; -webkit-text-size-adju=
+st: 100%; }     img, a img { border: 0; outline: none; text-decoration: n=
+one; }     img { -ms-interpolation-mode: bicubic; }     * img[tabindex=3D=
+"0"] + div { display: none !important; }     a[href^=3Dtel],a[href^=3Dsms=
+],a[href^=3Dmailto], a[href^=3Ddate] { color: inherit; cursor: pointer; t=
+ext-decoration: none; }     a[x-apple-data-detectors]{ color: inherit!imp=
+ortant; text-decoration: none!important; font-size: inherit!important; fo=
+nt-family: inherit!important; font-weight: inherit!important; line-height=
+: inherit!important; }     #MessageViewBody a { color: inherit; text-deco=
+ration: none; font-size: inherit; font-family: inherit; font-weight: inhe=
+rit; line-height: inherit; }     #MessageViewBody { width:
+100% !important; }     #MessageWebViewDiv { width: 100% !important; }    =
+  @-moz-document url-prefix() {       .bodyText p a, .bodyTitle p a {    =
+     word-break: break-word;       }     }      @media screen {       bod=
+y {       font-family: 'Poppins', sans-serif;     }     * {     direction=
+: ltr;     }     }      @media only screen and (min-width:768px){       .=
+mlEmailContainer{         width: 640px!important;       }     }      @med=
+ia only screen and (max-width: 640px) {       .mlTemplateContainer {     =
+    padding: 10px 10px 0 10px;       }     } @media only screen and (max-=
+width: 640px) {       .mlTemplateContainer{         padding: 10px 10px 0 =
+10px;       }     } @media only screen and (max-width: 640px) {       .ml=
+ContentCenter{         min-width: 10%!important;         margin: 0!import=
+ant;         float: none!important;       }     } @media only screen and =
+(max-width: 640px) {       .mlContentTable{         width: 100%!important=
+;         min-width: 10%!important;       =20
+margin: 0!important;         float: none!important;       }     } @media =
+only screen and (max-width: 640px) {       .mlContentBlock{         displ=
+ay: block !important;         width: 100%!important;         min-width: 1=
+0%!important;         margin: 0!important;         float: none!important;=
+       }     } @media only screen and (max-width: 640px) {       .mlConte=
+ntOuter{         padding-bottom: 0px!important;         padding-left: 15p=
+x!important;         padding-right: 15px!important;         padding-top: =
+0px!important;       }     } @media only screen and (max-width: 640px) { =
+      .mlContentOuterSmall{         padding-bottom: 0px!important;       =
+  padding-left: 10px!important;         padding-right: 10px!important;   =
+      padding-top: 0px!important;       }     } @media only screen and (m=
+ax-width: 640px) {       .mlMenuOuter{         padding-bottom: 0px!import=
+ant;         padding-left: 5px!important;         padding-right: 5px!impo=
+rtant;         padding-top: 0px!important;     =20
+}     } @media only screen and (max-width: 640px) {       .mlContentOuter=
+FullBig{         padding: 30px!important;       }     } @media only scree=
+n and (max-width: 640px) {       .mlContentImage img {         height: au=
+to!important;         width: 100%!important;       }     } @media only sc=
+reen and (max-width: 640px) {       .mlContentImage160 img {         heig=
+ht: auto!important;         max-width: 160px;         width: 100%!importa=
+nt;       }     } @media only screen and (max-width: 640px) {       .mlCo=
+ntentImage260 img {         height: auto!important;         max-width: 26=
+0px;         width: 100%!important;       }     } @media only screen and =
+(max-width: 640px) {       .mlContentImage{         height: 100%!importan=
+t;         width: auto!important;       }     } @media only screen and (m=
+ax-width: 640px) {       .mlProductImage{         height: auto!important;=
+         width: 100%!important;       }     } @media only screen and (max=
+-width: 640px) {       .mlContentButton a{     =20
+  display: block!important;         width: auto!important;       }     } =
+@media only screen and (max-width: 640px) {       .spacingHeight-20{     =
+    height: 10px!important;       }     } @media only screen and (max-wid=
+th: 640px) {       .spacingHeight-30{         height: 15px!important;    =
+   }     } @media only screen and (max-width: 640px) {       .spacingHeig=
+ht-40{         height: 20px!important;       }     } @media only screen a=
+nd (max-width: 640px) {       .spacingHeight-50{         height: 25px!imp=
+ortant;       }     } @media only screen and (max-width: 640px) {       .=
+spacingHeight-60{         height: 30px!important;       }     } @media on=
+ly screen and (max-width: 640px) {       .spacingHeight-70{         heigh=
+t: 35px!important;       }     } @media only screen and (max-width: 640px=
+) {       .spacingHeight-80{         height: 40px!important;       }     =
+} @media only screen and (max-width: 640px) {       .spacingHeight-90{   =
+      height: 45px!important;       }     }
+@media only screen and (max-width: 640px) {       .spacingHeight-100{    =
+     height: 50px!important;       }     } @media only screen and (max-wi=
+dth: 640px) {       .spacingWidth-20{         width: 10px!important;     =
+  }     } @media only screen and (max-width: 640px) {       .spacingWidth=
+-30{         width: 15px!important;       }     } @media only screen and =
+(max-width: 640px) {       .spacingWidth-40{         width: 20px!importan=
+t;       }     } @media only screen and (max-width: 640px) {       .spaci=
+ngWidth-60{         width: 30px!important;       }     } @media only scre=
+en and (max-width: 640px) {       .mobileHide{         display: none!impo=
+rtant;       }     } @media only screen and (max-width: 640px) {       .m=
+obileShow{         display: block!important;       }     } @media only sc=
+reen and (max-width: 640px) {       .alignCenter{         height: auto!im=
+portant;         text-align: center!important;       }     } @media only =
+screen and (max-width: 640px) {     =20
+.alignCenter img{         display: inline !important;         text-align:=
+ center!important;       }     } @media only screen and (max-width: 640px=
+) {       .marginBottom{         margin-bottom: 15px!important;       }  =
+   } @media only screen and (max-width: 640px) {       .mlContentHeight{ =
+        height: auto!important;       }     } @media only screen and (max=
+-width: 640px) {       .mlDisplayInline {         display: inline-block!i=
+mportant;         float: none!important;       }     } @media only screen=
+ and (max-width: 640px) {       .mlNoFloat{         float: none!important=
+;         margin-left: auto!important;         margin-right: auto!importa=
+nt;       }     } @media only screen and (max-width: 640px) {       .mlCo=
+ntentSurvey{         float: none!important;         margin-bottom: 10px!i=
+mportant;         width:100%!important;       }     } @media only screen =
+and (max-width: 640px) {       .mlContentSurvey td a{         width: auto=
+!important;       }     } @media only screen and
+(max-width: 640px) {       .multiple-choice-item-table{         width: 10=
+0% !important;         margin-bottom: 20px !important;         min-width:=
+ 10% !important;         float: none !important;       }     } @media onl=
+y screen and (max-width: 640px) {       body{         margin: 0px!importa=
+nt;         padding: 0px!important;       }     } @media only screen and =
+(max-width: 640px) {       body, table, td, p, a, li, blockquote{        =
+ -webkit-text-size-adjust: none!important;       }     }     @media only =
+screen and (max-width: 480px){       .social-LinksTable{         width: 1=
+00%!important;       }     } @media only screen and (max-width: 640px) { =
+      .social-LinksTable td:first-child{         padding-left: 0px!import=
+ant;       }     } @media only screen and (max-width: 640px) {       .soc=
+ial-LinksTable td:last-child{         padding-right: 0px!important;      =
+ }     } @media only screen and (max-width: 640px) {       .social-LinksT=
+able td{         padding: 0 10px!important;    =20
+ }     } @media only screen and (max-width: 640px) {       .social-LinksT=
+able td img{         height: auto!important;         max-width: 48px;    =
+     width: 100%!important;       }     }      /* Carousel style */      =
+@media screen and (-webkit-min-device-pixel-ratio: 0) {       .webkit {  =
+       display: block !important;       }     }  @media screen and (-webk=
+it-min-device-pixel-ratio: 0) {       .non-webkit {         display: none=
+ !important;       }     }  @media screen and (-webkit-min-device-pixel-r=
+atio: 0) {       /* TARGET OUTLOOK.COM */       [class=3D"x_non-webkit"] =
+{         display: block !important;       }     }  @media screen and (-w=
+ebkit-min-device-pixel-ratio: 0) {       [class=3D"x_webkit"] {         d=
+isplay: none !important;       }     }     </style>     <!--[if mso]>    =
+   <style type=3D"text/css">         .bodyText { font-family: Arial, Helv=
+etica, sans-serif!important ; }     .bodyText * { font-family: Arial, Hel=
+vetica, sans-serif!important; }     .bodyText a {
+font-family: Arial, Helvetica, sans-serif!important; }     .bodyText a sp=
+an { font-family: Arial, Helvetica, sans-serif!important; }     .bodyText=
+ span { font-family: Arial, Helvetica, sans-serif!important; }     .bodyT=
+ext p { font-family: Arial, Helvetica, sans-serif!important; }     .bodyT=
+ext ul li { font-family: Arial, Helvetica, sans-serif!important; }     .b=
+odyTitle { font-family: Arial, Helvetica, sans-serif!important ; }     .b=
+odyTitle * { font-family: Arial, Helvetica, sans-serif!important; }     .=
+bodyTitle a { font-family: Arial, Helvetica, sans-serif!important; }     =
+.bodyTitle a span { font-family: Arial, Helvetica, sans-serif!important; =
+}     .bodyTitle span { font-family: Arial, Helvetica, sans-serif!importa=
+nt; }     .bodyTitle p { font-family: Arial, Helvetica, sans-serif!import=
+ant; }     .bodyFont { font-family: Arial, Helvetica, sans-serif!importan=
+t ; }     .bodyFont * { font-family: Arial, Helvetica, sans-serif!importa=
+nt; }     .bodyFont a { font-family: Arial,
+Helvetica, sans-serif!important; }     .bodyFont a span { font-family: Ar=
+ial, Helvetica, sans-serif!important; }     .bodyFont span { font-family:=
+ Arial, Helvetica, sans-serif!important; }     .bodyFont p { font-family:=
+ Arial, Helvetica, sans-serif!important; }     .mlContentButton { font-fa=
+mily: Arial, Helvetica, sans-serif!important; }       </style>     <![end=
+if]-->     <style>       /* Multiple Choice */    .mlBlockSurvey-6 .multi=
+ple-choice .multiple-choice-item a span.answer {     display: inline;    =
+ line-height: 20px;     min-height: 20px;     float: left;   }    .mlBloc=
+kSurvey-6 .multiple-choice .multiple-choice-item:hover,   .mlBlockSurvey-=
+6 .multiple-choice .multiple-choice-item:hover a,   .mlBlockSurvey-6 .mul=
+tiple-choice .multiple-choice-item.active,   .mlBlockSurvey-6 .multiple-c=
+hoice .multiple-choice-item.active a {      background: #007bff !importan=
+t;     color: #ffffff !important;     cursor: pointer;    }    .mlBlockSu=
+rvey-6 .multiple-choice .multiple-choice-item
+a.multiple-choice-type-radio:before,   .mlBlockSurvey-6 .multiple-choice =
+.multiple-choice-item a.multiple-choice-type-checkbox:before {      posit=
+ion: absolute;     left: 10px;     display: inline-block;     width: 14px=
+;     height: 14px;     pointer-events: none;     content: "";     -webki=
+t-user-select: none;     -moz-user-select: none;     -ms-user-select: non=
+e;     user-select: none;     background-color: #ffffff;     border: 1px =
+solid #cccccc;     top: 16px;    }    .mlBlockSurvey-6 .multiple-choice .=
+multiple-choice-item a.multiple-choice-type-radio:before {      border-ra=
+dius: 50%;    }    .mlBlockSurvey-6 .multiple-choice .multiple-choice-ite=
+m a.multiple-choice-type-checkbox:before {      border-radius: 2px;    } =
+   .mlBlockSurvey-6 .multiple-choice .multiple-choice-item.active a.multi=
+ple-choice-type-radio:before,   .mlBlockSurvey-6 .multiple-choice .multip=
+le-choice-item.active a.multiple-choice-type-checkbox:before {      backg=
+round-color: #007bff;     background-image:
+url("data:image/svg+xml;charset=3Dutf8,%3Csvg xmlns=3D'http://www.w3.org/=
+2000/svg' viewBox=3D'0 0 8 8'%3E%3Cpath fill=3D'rgb(255, 255, 255)' d=3D'=
+M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3=
+E");     border: none;    }    /* Multiple Choice images */    .mlBlockSu=
+rvey-6 .multiple-choice .multiple-choice-item-image:hover,   .mlBlockSurv=
+ey-6 .multiple-choice .multiple-choice-item-image:hover a,   .mlBlockSurv=
+ey-6 .multiple-choice .multiple-choice-item-image.active,   .mlBlockSurve=
+y-6 .multiple-choice .multiple-choice-item-image.active a {      backgrou=
+nd: #007bff !important;     color: #ffffff !important;     cursor: pointe=
+r;    }    .mlBlockSurvey-6 .multiple-choice .multiple-choice-item-image =
+a.multiple-choice-type-radio:before,   .mlBlockSurvey-6 .multiple-choice =
+.multiple-choice-item-image a.multiple-choice-type-checkbox:before {     =
+ position: absolute;     left: 10px;     display: inline-block;     width=
+: 14px;     height: 14px;     pointer-events: none;   =20
+content: "";     -webkit-user-select: none;     -moz-user-select: none;  =
+   -ms-user-select: none;     user-select: none;     background-color: #f=
+fffff;     border: 1px solid #cccccc;     top: 16px;    }    .mlBlockSurv=
+ey-6 .multiple-choice .multiple-choice-item-image a.multiple-choice-type-=
+radio:before {      border-radius: 50%;    }    .mlBlockSurvey-6 .multipl=
+e-choice .multiple-choice-item-image a.multiple-choice-type-checkbox:befo=
+re {      border-radius: 2px;    }    .mlBlockSurvey-6 .multiple-choice .=
+multiple-choice-item-image.active a.multiple-choice-type-radio:before,   =
+.mlBlockSurvey-6 .multiple-choice .multiple-choice-item-image.active a.mu=
+ltiple-choice-type-checkbox:before {      background-color: #007bff;     =
+background-image: url("data:image/svg+xml;charset=3Dutf8,%3Csvg xmlns=3D'=
+http://www.w3.org/2000/svg' viewBox=3D'0 0 8 8'%3E%3Cpath fill=3D'rgb(255=
+, 255, 255)' d=3D'M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.=
+193z'/%3E%3C/svg%3E");     border: none;    }    /* NPS */
+   .mlBlockSurvey-6 .rating-scale-icon:hover,   .mlBlockSurvey-6 .rating-=
+scale-icon:hover a {      background: #007bff !important;     border-radi=
+us: 4px !important;     color: #ffffff !important;    }    .mlBlockSurvey=
+-6 .open-question input:focus {      box-shadow: none;     outline: mediu=
+m none;    }    .mlBlockSurvey-6 .open-question input::placeholder,   .ml=
+BlockSurvey-6 .open-question textarea::placeholder{     color: rgba(0, 0,=
+ 0, 0.25);     opacity: 1;     }    .mlBlockSurvey-6 .open-question input=
+:-ms-input-placeholder,   .mlBlockSurvey-6 .open-question textarea:-ms-in=
+put-placeholder {     color: rgba(0, 0, 0, 0.25);   }    .mlBlockSurvey-6=
+ .open-question input::-ms-input-placeholder.   .mlBlockSurvey-6 .open-qu=
+estion textarea::-ms-input-placeholder {     color: rgba(0, 0, 0, 0.25); =
+  }    .ml-carousel {      display: block;     overflow: hidden;     widt=
+h: 560px;     max-width: 560px;    }    .ml-carousel-car {      margin-ri=
+ght: 0;     margin-left: 0;     transition:
+margin 700ms;    }     </style>     <style>       @media only screen and =
+(max-width: 640px) {      .blockSurveyTable {        width: 320px !import=
+ant;       margin: 0 auto !important      }      .blockSurveyTd {        =
+padding-top: 20px !important;       padding-bottom: 20px !important;     =
+ }      .ml-carousel {      width: 480px !important;   max-width: 480px !=
+important;    }    .ml-carousel-item .surveyContentTable {    width: 480p=
+x !important;   max-width: 480px !important;    }    .surveyContentBox { =
+     padding: 0 20px !important;    }    .open-question input {      widt=
+h: 100% !important;    }   .open-question textarea {      width: 100% !im=
+portant;    }    }    @media only screen and (max-width: 480px) {      .b=
+lockSurveyTable {        width: 320px !important;       margin: 0 auto !i=
+mportant      }      .ml-carousel {      width: 320px !important;   max-w=
+idth: 320px !important;    }    .ml-carousel-item .surveyContentTable {  =
+  width: 320px !important;   max-width: 320px
+!important;    }    .mlBlockSurvey-6 .satisfaction-scale-labels {        =
+                         display: none;                               }  =
+  }    @media only screen and (max-width: 370px) {      .surveyContentBox=
+ {        padding: 0 10px !important;      }      .blockSurveyTable {    =
+    width: 290px !important;       margin: 0 auto !important      }      =
+.ml-carousel {      width: 290px !important;   max-width: 290px !importan=
+t;    }    .ml-carousel-item .surveyContentTable {    width: 290px !impor=
+tant;   max-width: 290px !important;    }    }    @media only screen and =
+(max-width: 340px) {      .blockSurveyTable {        width: 250px !import=
+ant;       margin: 0 auto !important      }      .ml-carousel {      widt=
+h: 250px !important;   max-width: 250px !important;    }    .ml-carousel-=
+item .surveyContentTable {    width: 250px !important;   max-width: 250px=
+ !important;    }    .ml-carousel-item .surveyContentTable .mlContentSurv=
+ey td img {      width: 100%!important;   =20
+max-width: 48px;    }    }     </style>     <style>       .ml-survey-quiz=
+_results-item {     display: none;   }    .ml-survey-quiz_results-item.qu=
+iz_answered_item {     display: block;   }    .ml-survey-quiz_results-ite=
+m.quiz_answered_item hr {     border: 0;     border-top: 1px solid rgba(0=
+, 0, 0, .1);     margin-bottom: 20px;   }    .ml-survey-quiz_results-item=
+.quiz_answered_item td.multiple-choice-item.ml-carousel-choice-answer {  =
+   padding: 0px !important;   }    .ml-survey-quiz_results-item.quiz_answ=
+ered_item td.multiple-choice-item.ml-carousel-choice-answer > a {     pad=
+ding: 13px 10px;   }    .ml-survey-mark-correct-answers [data-correct_qui=
+z_answer=3D"true"] {     background: radial-gradient(#b4ecc5, transparent=
+);   }    .ml-carousel.hide_progress .ml-survey-progress {     visibility=
+: hidden;   }     </style>     <title>You=E2=80=99re IN!! And this is wha=
+t it says about you=E2=80=A6</title>     <meta name=3D"robots" content=3D=
+"noindex, nofollow">   </head>      <body class=3D"mlBodyBackground"
+style=3D"padding: 0; margin: 0; -webkit-font-smoothing:antialiased; backg=
+round-color:#f6f8f9; -webkit-text-size-adjust:none;">     <style>       d=
+iv.OutlookMessageHeader, table.moz-email-headers-table, blockquote #_t, #=
+MailContainerBody #_t {background-image:url("https://click.mlflow.com/lin=
+k/f/")}     </style>     <img src=3D"https://click.mlflow.com/link/o/YT0x=
+OTEzODM5MzQ2ODU1NzEyODg3JmM9ZjlqNSZlPTA=3D.dRQd4O0vDvlC3o3Ky9mKwnKyZjxouQ=
+MpXNAV--9RTQQ" class=3D"open_img" style=3D"display:block; height:0px; wid=
+th:0px; max-width:0px; max-height:0px; overflow:hidden;" width=3D"1" heig=
+ht=3D"1" border=3D"0" alt=3D"" />     <!-- Make your email an accessible =
+article. -->     <div role=3D"article" aria-roledescription=3D"email" ari=
+a-label=3D"You%E2%80%99re+IN%21%21+And+this+is+what+it+says+about+you%E2%=
+80%A6">       <!--[if !mso]>         <!-- -->         <table width=3D"100=
+%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" bgcolor=3D"#f6f8f9" c=
+lass=3D"mainTable mlBodyBackground" dir=3D"ltr" background=3D"">         =
+  <tr>        =20
+   <td class=3D"mlTemplateContainer" align=3D"center">             <!--<!=
+[endif]-->             <!--[if mso 16]>               <table width=3D"100=
+%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=3D"center">    =
+             <tr>                   <td bgcolor=3D"#f6f8f9" align=3D"cent=
+er">                   <!--<![endif]-->                   <!-- Content st=
+arts here -->                   <!-- BORDER RADIUS FOR CARDS LAYOUT -->  =
+                 <!-- BORDER RADIUS FOR DEFAULT LAYOUT -->               =
+    <table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" align=3D"cent=
+er" width=3D"640" style=3D"width: 640px; min-width: 640px;" class=3D"mobi=
+leHide">                     <tr>                       <td align=3D"cent=
+er">                         <table cellpadding=3D"0" cellspacing=3D"0" b=
+order=3D"0" align=3D"center" width=3D"640" style=3D"width: 640px; min-wid=
+th: 640px;" class=3D"mlContentTable">                           <tr>     =
+                        <td colspan=3D"2" height=3D"20"></td>            =
+               </tr>      =20
+                   <tr>                             <td align=3D"left" st=
+yle=3D"font-family: 'Poppins', sans-serif; color: #111111; font-size: 12p=
+x; line-height: 18px;"></td>                             <td align=3D"rig=
+ht" style=3D"font-family: 'Poppins', sans-serif; color: #111111; font-siz=
+e: 12px; line-height: 18px;">                               <a style=3D"c=
+olor: #111111;" href=3D"https://click.mlflow.com/link/c/YT0xOTEzODM5MzQ2O=
+DU1NzEyODg3JmM9ZjlqNSZlPTAmYj01ODU3NTY3MDkmZD1kNXAwbTR5.ZGvlUH83hRy6GUvO3=
+3d3TiQJIwFV0gVDw3xG9OHR1U4" data-link-id=3D"585756709" target=3D"_blank">=
+View in browser</a>                             </td>                    =
+       </tr>                           <tr>                             <=
+td colspan=3D"2" height=3D"20"></td>                           </tr>     =
+                    </table>                       </td>                 =
+    </tr>                   </table>                   <table align=3D"ce=
+nter" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"mlContent=
+Table
+ mlContentBorderRadius" width=3D"640" style=3D"border-radius: 5px; overfl=
+ow: hidden;">                     <tr>                       <td>        =
+                 <!--  -->                         <table align=3D"center=
+" border=3D"0" bgcolor=3D"#ffffff" class=3D"mlContentTable mlContentTable=
+Default" cellpadding=3D"0" cellspacing=3D"0" width=3D"640">              =
+             <tr>                             <td class=3D"mlContentTable=
+CardTd">                               <table align=3D"center" bgcolor=3D=
+"#ffffff" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"mlCon=
+tentTable ml-default" style=3D"width: 640px; min-width: 640px;" width=3D"=
+640">                                 <tr>                               =
+    <td>                                     <table role=3D"presentation"=
+ cellpadding=3D"0" cellspacing=3D"0" border=3D"0" align=3D"center" width=3D=
+"640" style=3D"width: 640px; min-width: 640px;" class=3D"mlContentTable">=
+                                       <tr>                              =
+           <td
+height=3D"10" class=3D"spacingHeight-10" style=3D"line-height: 10px; min-=
+height: 10px;"></td>                                       </tr>         =
+                            </table>                                     =
+<table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" border=3D=
+"0" align=3D"center" width=3D"640" style=3D"width: 640px; min-width: 640p=
+x;" class=3D"mlContentTable">                                       <tr> =
+                                        <td align=3D"center" style=3D"pad=
+ding: 0px 40px;" class=3D"mlContentOuter">                               =
+            <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D=
+"0" border=3D"0" align=3D"center" width=3D"100%">                        =
+                     <tr>                                               <=
+td class=3D"bodyTitle" id=3D"bodyText-4" style=3D"font-family: 'Poppins',=
+ sans-serif; font-size: 14px; line-height: 200%; color: #000000;">       =
+                                          <p style=3D"margin-top: 0px; ma=
+rgin-bottom: 10px;
+line-height: 200%;">Hey <span class=3D"redactor-component" data-redactor-=
+type=3D"variable-ml">Syed Azfar Ali</span>,</p>                          =
+                       <p style=3D"margin-top: 0px; margin-bottom: 10px; =
+line-height: 200%;">You=E2=80=99ve downloaded my eBook. It is on its way =
+to your inbox but let=E2=80=99s have a little serious chat first, shall w=
+e?</p>                                                 <p style=3D"margin=
+-top: 0px; margin-bottom: 10px; line-height: 200%;">On the behalf of all =
+the self-actualizing forces in the world, I want to take a moment to than=
+k you for downloading my eBook and signing up for my newsletter.</p>     =
+                                            <p style=3D"margin-top: 0px; =
+margin-bottom: 10px; line-height: 200%;">As a growing adult, I understand=
+ that things can be crazy. You want to do your best, excel at everything,=
+ get to the best university, get the best job, make your parents proud an=
+d become self-sufficient.</p>                                        =20
+       <p style=3D"margin-top: 0px; margin-bottom: 10px; line-height: 200=
+%;">You want to try your luck with content writing, yet, despite all your=
+ sincere, heartfelt efforts to do SOMETHING for yourself, you keep hittin=
+g against the wall of resistance.</p>                                    =
+             <p style=3D"margin-top: 0px; margin-bottom: 10px; line-heigh=
+t: 200%;">Either, you cannot wake up, cannot concentrate, cannot do what =
+other successful people are doing and just cannot take the first step. Yo=
+u start oversleeping, binge-watching shows and just ignore everything.</p=
+>                                                 <p style=3D"margin-top:=
+ 0px; margin-bottom: 10px; line-height: 200%;"><strong></strong>You feel =
+hopeless and lockdown is just not helping.</p>                           =
+                      <p style=3D"margin-top: 0px; margin-bottom: 10px; l=
+ine-height: 200%;"><strong>All I can tell you is that this is normal and =
+you=E2=80=99re not alone.</strong><strong><br></strong></p>  =20
+                                             <p style=3D"margin-top: 0px;=
+ margin-bottom: 10px; line-height: 200%;">You will soon learn to navigate=
+ your way through all these problems.</p>                                =
+                 <p style=3D"margin-top: 0px; margin-bottom: 10px; line-h=
+eight: 200%;">Here is why I am so hopeful for you:</p>                   =
+                              <p style=3D"margin-top: 0px; margin-bottom:=
+ 10px; line-height: 200%;">- Despite all the challenges, you watched my v=
+ideos (I=E2=80=99d assume), reached my eBook and put your name and email =
+in those tiny boxes to download it. Do you know what that means? It means=
+ that you=E2=80=99ve already taken the first step.</p>                   =
+                              <p style=3D"margin-top: 0px; margin-bottom:=
+ 10px; line-height: 200%;">- You=E2=80=99re not giving up and you=E2=80=99=
+re ready to empower yourself with all the tools and techniques to meet th=
+e challenges that a good Content Writer faces.</p>                       =
+     =20
+                   <p style=3D"margin-top: 0px; margin-bottom: 10px; line=
+-height: 200%;">- You=E2=80=99re on the right path already and I am very =
+proud to have you in my virtual family.</p>                              =
+                   <p style=3D"margin-top: 0px; margin-bottom: 10px; line=
+-height: 200%;">I cannot wait to help you transform your life with all th=
+e valuable information I have to share. There is so much more to come.</p=
+>                                                 <p style=3D"margin-top:=
+ 0px; margin-bottom: 10px; line-height: 200%;">So, keep your eyes on your=
+ inbox because, in the next few days, you're going to learn soooo much th=
+at you won't believe yourself once you're done.</p>                      =
+                           <p style=3D"margin-top: 0px; margin-bottom: 10=
+px; line-height: 200%;"><strong>BUT FIRST, </strong>please help me unders=
+tand you better so I can make sure everything you receive in your inbox i=
+s only for YOU.</p>                                          =20
+     <p style=3D"margin-top: 0px; margin-bottom: 10px; line-height: 200%;=
+">To do just that, can you please tell me which of these links describe y=
+ou the best? Click on the one that best suits you so I can send you bette=
+r emails.<br></p>                                                 <p styl=
+e=3D"margin-top: 0px; margin-bottom: 10px; line-height: 200%;">If you don=
+=E2=80=99t click on any of these links, sadly I would have to mark your c=
+ontact as "Uninterested" and you might not receive any helpful emails in =
+the future. So, help me out there, please.</p>                           =
+                      <p style=3D"margin-top: 0px; margin-bottom: 0px; li=
+ne-height: 200%;">P.S. Your eBook is COMING!!</p>                        =
+                       </td>                                             =
+</tr>                                           </table>                 =
+                        </td>                                       </tr>=
+                                     </table>              =20
+                     <table role=3D"presentation" cellpadding=3D"0" cells=
+pacing=3D"0" border=3D"0" align=3D"center" width=3D"640" style=3D"width: =
+640px; min-width: 640px;" class=3D"mlContentTable">                      =
+                 <tr>                                         <td height=3D=
+"40" class=3D"spacingHeight-40" style=3D"line-height: 40px; min-height: 4=
+0px;"></td>                                       </tr>                  =
+                   </table>                                   </td>      =
+                           </tr>                               </table>  =
+                           </td>                           </tr>         =
+                </table>                         <!--  -->               =
+          <!--  -->                         <table align=3D"center" borde=
+r=3D"0" bgcolor=3D"#ffffff" class=3D"mlContentTable mlContentTableDefault=
+" cellpadding=3D"0" cellspacing=3D"0" width=3D"640">                     =
+      <tr>                             <td class=3D"mlContentTableCardTd"=
+>         =20
+                    <table align=3D"center" bgcolor=3D"#ffffff" border=3D=
+"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"mlContentTable ml-defaul=
+t" style=3D"width: 640px; min-width: 640px;" width=3D"640">              =
+                   <tr>                                   <td> <script cl=
+ass=3D"ml-hide-mail">
+window.survey_rules =3D window.survey_rules || {};
+window.survey_rules['6'] =3D [{"$$hashKey":"object:3136","answered":"answ=
+ered_specific","collapsed":false,"question_index":0,"action":"add_to_grou=
+p","specific_answer":1,"specific_answer_value":"I'm a newbie. Teach me ev=
+erything about Content Writing and earning money online.","action_group_i=
+d":105454771},{"$$hashKey":"object:3244","answered":"answered_specific","=
+collapsed":false,"question_index":0,"specific_answer":2,"specific_answer_=
+value":"I'm a fairly good writer but I want better, high paying clients. =
+HELP ME!!!","action":"add_to_group","action_group_id":105454798},{"$$hash=
+Key":"object:3336","answered":"answered_specific","collapsed":false,"ques=
+tion_index":0,"specific_answer":3,"specific_answer_value":"I'm an aspring=
+ blogger. Teach me your secrets.","action":"add_to_group","action_group_i=
+d":105454804},{"$$hashKey":"object:3520","answered":"answered_specific","=
+collapsed":false,"question_index":0,"specific_answer":4,"specific_answer_=
+value":"I'm just here to hang out. Send me boring
+emails.","action":"add_to_group","action_group_id":105455623}];
+window.language_direction =3D "ltr";
+</script>                                      <table role=3D"presentatio=
+n" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" align=3D"center" widt=
+h=3D"640" style=3D"width: 640px; min-width: 640px;" class=3D"mlContentTab=
+le">                                       <tr>                          =
+               <td align=3D"center" style=3D"padding: 0 40px;" class=3D"m=
+lContentOuter mlBlockSurvey-6 blockSurvey-standard">                     =
+                      <table role=3D"presentation" width=3D"100%" cellpad=
+ding=3D"0" border=3D"0" cellspacing=3D"0" align=3D"center" class=3D"block=
+SurveyTable">                                             <tr>           =
+                                    <td class=3D"blockSurveyTd ml-carouse=
+l" data-survey_id=3D"6" data-quiz_mode=3D"false" id=3D"ml-survey-6">     =
+                                            <table role=3D"presentation" =
+cellpadding=3D"0" border=3D"0" cellspacing=3D"0" align=3D"center" class=3D=
+"ml-carousel-car">                                                   <tr>=
+                             =20
+                      <td class=3D"ml-carousel-item">                    =
+                                   <table role=3D"presentation" border=3D=
+"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"surveyContentTable" widt=
+h=3D"560">                                                         <tr>  =
+                                                         <td class=3D"sur=
+veyContentBox">                                                          =
+   <table role=3D"presentation" border=3D"0" class=3D"mlSurvey-7" cellpad=
+ding=3D"0" cellspacing=3D"0" width=3D"100%">                             =
+                                  <tr>                                   =
+                              <td align=3D"center" class=3D"bodyTitle sur=
+veyQuestion" style=3D"color: #111111; font-family: 'Poppins', sans-serif;=
+ font-size: 28px; font-weight: 700; line-height: 150%; text-alignment: ce=
+nter;">Which one of these describe you the best?</td>                    =
+                                           </tr>                         =
+        =20
+                            <tr>                                         =
+                        <td height=3D"40"></td>                          =
+                                     </tr>                               =
+                                <tr>                                     =
+                            <td align=3D"center" class=3D"multiple-choice=
+">                                                                   <tab=
+le role=3D"presentation" border=3D"0" cellspacing=3D"0" cellpadding=3D"0"=
+ width=3D"560" style=3D"width: 560px; min-width: 560px;" class=3D"mlConte=
+ntTable">                                                                =
+     <tr>                                                                =
+       <td valign=3D"top">                                               =
+                          <table role=3D"presentation" align=3D"left" bor=
+der=3D"0" width=3D"270" cellpadding=3D"0" cellspacing=3D"0" class=3D"mult=
+iple-choice-item-table" style=3D"border-collapse: separate; border-radius=
+: 4px; width:
+270px; min-width: 270px;">                                               =
+                            <tr>                                         =
+                                    <td align=3D"left" valign=3D"middle" =
+class=3D"multiple-choice-item ml-carousel-choice-answer" style=3D"backgro=
+und: #ffffff; border: 1px solid #007bff; border-radius: 4px; font-family:=
+ 'Poppins', sans-serif; color: #007bff; height: 48px; padding: 13px 10px;=
+ position: relative; text-align: left;">                                 =
+                                              <a href=3D"https://click.ml=
+flow.com/link/c/YT0xOTEzODM5MzQ2ODU1NzEyODg3JmM9ZjlqNSZlPTAmYj01ODU3NTY3M=
+TImZD1mN3IyYTN6.SwvsQexoSTNNDmkLAOsHoct8zBuMfR0FD2hr0cwDBYE" data-link-id=
+=3D"585756712" target=3D"_blank" class=3D"multiple-choice-type-radio ml-c=
+arousel-cta" id=3D"ml-survey-link-7-choice-1" data-question_type=3D"multi=
+ple_choice" data-question=3D"Which one of these describe you the best?" d=
+ata-question_id=3D"7" data-answer_id=3D"1"
+data-correct_quiz_answer=3D"false" data-type=3D"radio" style=3D"border-ra=
+dius: 4px; color: #007bff; display: block; font-family: 'Poppins', sans-s=
+erif; font-size: 14px; line-height: 20px; text-align: left; text-decorati=
+on: none;">                     <span class=3D"answer"><img src=3D"https:=
+//cdn.mailerlite.com/images/default/spacer.gif" width=3D"30" height=3D"1"=
+ border=3D"0" alt=3D"">I'm a newbie. Teach me everything about Content Wr=
+iting and earning money online.</span>                   </a>            =
+                                                                 </td>   =
+                                                                        <=
+/tr>                                                                     =
+    </table>                                                             =
+            <!--[if mso]>                                                =
+                       </td>                                             =
+                          <td width=3D"20"></td>                   =20
+                                                  <td valign=3D"top">    =
+                                                                   <![end=
+if]-->                                                                   =
+    <table role=3D"presentation" align=3D"right" border=3D"0" cellpadding=
+=3D"0" width=3D"270" cellspacing=3D"0" class=3D"multiple-choice-item-tabl=
+e" style=3D"border-collapse: separate; border-radius: 4px; width: 270px; =
+min-width: 270px;">                                                      =
+                   <tr>                                                  =
+                         <td align=3D"left" valign=3D"middle" class=3D"mu=
+ltiple-choice-item ml-carousel-choice-answer" style=3D"background: #fffff=
+f; border: 1px solid #007bff; border-radius: 4px; font-family: 'Poppins',=
+ sans-serif; color: #007bff; height: 48px; padding: 13px 10px; position: =
+relative; text-align: left;">                                            =
+                                 <a
+href=3D"https://click.mlflow.com/link/c/YT0xOTEzODM5MzQ2ODU1NzEyODg3JmM9Z=
+jlqNSZlPTAmYj01ODU3NTY3MTUmZD16NmIxdTJj.FSTpLpS4o65Ei8J2K-mUfgd47FMhrPUlQ=
+7fHXaxj4K0" data-link-id=3D"585756715" target=3D"_blank" class=3D"multipl=
+e-choice-type-radio ml-carousel-cta" id=3D"ml-survey-link-7-choice-2" dat=
+a-question_type=3D"multiple_choice" data-question=3D"Which one of these d=
+escribe you the best?" data-question_id=3D"7" data-answer_id=3D"2" data-c=
+orrect_quiz_answer=3D"false" data-type=3D"radio" style=3D"border-radius: =
+4px; color: #007bff; display: block; font-family: 'Poppins', sans-serif; =
+font-size: 14px; line-height: 20px; text-align: left; text-decoration: no=
+ne;">                     <span class=3D"answer"><img src=3D"https://cdn.=
+mailerlite.com/images/default/spacer.gif" width=3D"30" height=3D"1" borde=
+r=3D"0" alt=3D"">I'm a fairly good writer but I want better, high paying =
+clients. HELP ME!!!</span>                   </a>                        =
+                                                   </td>                 =
+          =20
+                                            </tr>                        =
+                                               </table>                  =
+                                                     </td>               =
+                                                      </tr>              =
+                                                       <tr>              =
+                                                         <td height=3D"20=
+" class=3D"mobileHide"></td>                                             =
+                        </tr>                                            =
+                       </table>                                          =
+                         <table role=3D"presentation" border=3D"0" cellsp=
+acing=3D"0" cellpadding=3D"0" width=3D"560" style=3D"width: 560px; min-wi=
+dth: 560px;" class=3D"mlContentTable">                                   =
+                                  <tr>                                   =
+                                    <td valign=3D"top">            =20
+                                                           <table role=3D=
+"presentation" align=3D"left" border=3D"0" cellpadding=3D"0" width=3D"270=
+" cellspacing=3D"0" class=3D"multiple-choice-item-table" style=3D"border-=
+collapse: separate; border-radius: 4px; width: 270px; min-width: 270px;">=
+                                                                         =
+  <tr>                                                                   =
+          <td align=3D"left" valign=3D"middle" class=3D"multiple-choice-i=
+tem ml-carousel-choice-answer" style=3D"background: #ffffff; border: 1px =
+solid #007bff; border-radius: 4px; font-family: 'Poppins', sans-serif; co=
+lor: #007bff; height: 48px; padding: 13px 10px; position: relative; text-=
+align: left;">                                                           =
+                    <a href=3D"https://click.mlflow.com/link/c/YT0xOTEzOD=
+M5MzQ2ODU1NzEyODg3JmM9ZjlqNSZlPTAmYj01ODU3NTY3MTgmZD1lMGQ2ZTB6.WovSdFVgj8=
+QZ5YTLWY7iz3i1vpziI_gZ8EJp3dhGq-c" data-link-id=3D"585756718"
+target=3D"_blank" class=3D"multiple-choice-type-radio ml-carousel-cta" id=
+=3D"ml-survey-link-7-choice-3" data-question_type=3D"multiple_choice" dat=
+a-question=3D"Which one of these describe you the best?" data-question_id=
+=3D"7" data-answer_id=3D"3" data-correct_quiz_answer=3D"false" data-type=3D=
+"radio" style=3D"border-radius: 4px; color: #007bff; display: block; font=
+-family: 'Poppins', sans-serif; font-size: 14px; line-height: 20px; text-=
+align: left; text-decoration: none;">                     <span class=3D"=
+answer"><img src=3D"https://cdn.mailerlite.com/images/default/spacer.gif"=
+ width=3D"30" height=3D"1" border=3D"0" alt=3D"">I'm an aspring blogger. =
+Teach me your secrets.</span>                   </a>                     =
+                                                        </td>            =
+                                                               </tr>     =
+                                                                    </tab=
+le>                                                                      =
+ =20
+<!--[if mso]>                                                            =
+           </td>                                                         =
+              <td width=3D"20"></td>                                     =
+                                  <td valign=3D"top">                    =
+                                                   <![endif]-->          =
+                                                             <table role=3D=
+"presentation" align=3D"right" border=3D"0" cellpadding=3D"0" width=3D"27=
+0" cellspacing=3D"0" class=3D"multiple-choice-item-table" style=3D"border=
+-collapse: separate; border-radius: 4px; width: 270px; min-width: 270px;"=
+>                                                                        =
+ <tr>                                                                    =
+       <td align=3D"left" valign=3D"middle" class=3D"multiple-choice-item=
+ ml-carousel-choice-answer" style=3D"background: #ffffff; border: 1px sol=
+id #007bff; border-radius: 4px; font-family: 'Poppins', sans-serif; color=
+:
+#007bff; height: 48px; padding: 13px 10px; position: relative; text-align=
+: left;">                                                                =
+             <a href=3D"https://click.mlflow.com/link/c/YT0xOTEzODM5MzQ2O=
+DU1NzEyODg3JmM9ZjlqNSZlPTAmYj01ODU3NTY3MjEmZD16MWYxZDNv.SgnXUdbJ4BZlJgLmc=
+jo4FA7TaOj1cNL8JINx0D-INWs" data-link-id=3D"585756721" target=3D"_blank" =
+class=3D"multiple-choice-type-radio ml-carousel-cta" id=3D"ml-survey-link=
+-7-choice-4" data-question_type=3D"multiple_choice" data-question=3D"Whic=
+h one of these describe you the best?" data-question_id=3D"7" data-answer=
+_id=3D"4" data-correct_quiz_answer=3D"false" data-type=3D"radio" style=3D=
+"border-radius: 4px; color: #007bff; display: block; font-family: 'Poppin=
+s', sans-serif; font-size: 14px; line-height: 20px; text-align: left; tex=
+t-decoration: none;">                     <span class=3D"answer"><img src=
+=3D"https://cdn.mailerlite.com/images/default/spacer.gif" width=3D"30" he=
+ight=3D"1" border=3D"0" alt=3D"">I'm just here to hang out. Send me borin=
+g
+emails.</span>                   </a>                                    =
+                                       </td>                             =
+                                            </tr>                        =
+                                               </table>                  =
+                                                     </td>               =
+                                                      </tr>              =
+                                                     </table>            =
+                                                     </td>               =
+                                                </tr>                    =
+                                           <tr>                          =
+                                       <td height=3D"40" class=3D"mobileH=
+ide"></td>                                                               =
+</tr>                                                               <tr> =
+                                                   =20
+           <td align=3D"center" class=3D"mlContentButton"></td>          =
+                                                     </tr>               =
+                                              </table>                   =
+                                        </td>                            =
+                             </tr>                                       =
+                </table>                                                 =
+    </td>                                                                =
+                                        </tr>                            =
+                     </table>                                            =
+   </td>                                             </tr>               =
+                            </table>                                     =
+    </td>                                       </tr>                    =
+                 </table>                                                =
+                        </td>                      =20
+         </tr>                               </table>                    =
+         </td>                           </tr>                         </=
+table>                         <!--  -->                         <!--  --=
+>                         <table align=3D"center" border=3D"0" bgcolor=3D=
+"#ffffff" class=3D"mlContentTable mlContentTableDefault" cellpadding=3D"0=
+" cellspacing=3D"0" width=3D"640">                           <tr>        =
+                     <td class=3D"mlContentTableCardTd">                 =
+              <table align=3D"center" bgcolor=3D"#ffffff" border=3D"0" ce=
+llpadding=3D"0" cellspacing=3D"0" class=3D"mlContentTable ml-default" sty=
+le=3D"width: 640px; min-width: 640px;" width=3D"640">                    =
+             <tr>                                   <td>                 =
+                    <table role=3D"presentation" cellpadding=3D"0" cellsp=
+acing=3D"0" border=3D"0" align=3D"center" width=3D"640" style=3D"width: 6=
+40px; min-width: 640px;" class=3D"mlContentTable">                       =
+                <tr>  =20
+                                     <td height=3D"20" class=3D"spacingHe=
+ight-20" style=3D"line-height: 20px; min-height: 20px;"></td>            =
+                           </tr>                                     </ta=
+ble>                                     <table role=3D"presentation" cel=
+lpadding=3D"0" cellspacing=3D"0" border=3D"0" align=3D"center" width=3D"6=
+40" style=3D"width: 640px; min-width: 640px;" class=3D"mlContentTable">  =
+                                     <tr>                                =
+         <td align=3D"center" class=3D"">                                =
+           <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"=
+0" border=3D"0" align=3D"center" width=3D"100%" style=3D"border-top: 1px =
+solid #ededf3; border-collapse: initial;" class=3D"">                    =
+                         <tr>                                            =
+   <td height=3D"20" class=3D"spacingHeight-20" style=3D"line-height: 20p=
+x; min-height: 20px;">                                                 <i=
+mg
+src=3D"https://cdn.mailerlite.com/images/default/spacer.gif" width=3D"1" =
+height=3D"1" border=3D"0" alt=3D"" style=3D"display: block;">            =
+                                   </td>                                 =
+            </tr>                                           </table>     =
+                                    </td>                                =
+       </tr>                                     </table>                =
+                   </td>                                 </tr>           =
+                    </table>                             </td>           =
+                </tr>                         </table>                   =
+      <!--  -->                         <table align=3D"center" border=3D=
+"0" bgcolor=3D"#ffffff" class=3D"mlContentTable mlContentTableFooterDefau=
+lt" cellpadding=3D"0" cellspacing=3D"0" width=3D"640">                   =
+        <tr>                             <td class=3D"mlContentTableFoote=
+rCardTd">                               <table align=3D"center"
+bgcolor=3D"#ffffff" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" clas=
+s=3D"mlContentTable ml-default" style=3D"width: 640px; min-width: 640px;"=
+ width=3D"640">                                 <tr>                     =
+              <td>                                     <table role=3D"pre=
+sentation" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" align=3D"cent=
+er" width=3D"640" style=3D"width: 640px; min-width: 640px;" class=3D"mlCo=
+ntentTable">                                       <tr>                  =
+                       <td height=3D"10" class=3D"spacingHeight-10" style=
+=3D"line-height: 10px; min-height: 10px;"></td>                          =
+             </tr>                                     </table>          =
+                           <table role=3D"presentation" cellpadding=3D"0"=
+ cellspacing=3D"0" border=3D"0" align=3D"center" width=3D"640" style=3D"w=
+idth: 640px; min-width: 640px;" class=3D"mlContentTable">                =
+                       <tr>                                         <td a=
+lign=3D"center"
+style=3D"padding: 0px 40px;" class=3D"mlContentOuter">                   =
+                        <table role=3D"presentation" cellpadding=3D"0" ce=
+llspacing=3D"0" border=3D"0" align=3D"center" width=3D"100%">            =
+                                 <tr>                                    =
+           <td align=3D"left" class=3D"bodyTitle" style=3D"font-family: '=
+Poppins', sans-serif; font-size: 14px; font-weight: 700; line-height: 150=
+%; color: #111111;">Khalil Ullah Khan</td>                               =
+              </tr>                                           </table>   =
+                                      </td>                              =
+         </tr>                                     </table>              =
+                       <table role=3D"presentation" cellpadding=3D"0" cel=
+lspacing=3D"0" border=3D"0" align=3D"center" width=3D"640" style=3D"width=
+: 640px; min-width: 640px;" class=3D"mlContentTable">                    =
+                   <tr>                                         <td heigh=
+t=3D"10"
+class=3D"spacingHeight-10"></td>                                       </=
+tr>                                     </table>                         =
+            <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D=
+"0" border=3D"0" align=3D"center" width=3D"640" style=3D"width: 640px; mi=
+n-width: 640px;" class=3D"mlContentTable">                               =
+        <tr>                                         <td align=3D"center"=
+ style=3D"padding: 0px 40px;" class=3D"mlContentOuter">                  =
+                         <table role=3D"presentation" cellpadding=3D"0" c=
+ellspacing=3D"0" border=3D"0" align=3D"center" width=3D"100%">           =
+                                  <tr>                                   =
+            <td align=3D"center">                                        =
+         <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0"=
+ border=3D"0" align=3D"left" width=3D"267" style=3D"width: 267px; min-wid=
+th: 267px;" class=3D"mlContentTable marginBottom">                       =
+                          =20
+<tr>                                                     <td align=3D"lef=
+t" class=3D"bodyTitle" id=3D"footerText-14" style=3D"font-family: 'Poppin=
+s', sans-serif; font-size: 12px; line-height: 150%; color: #111111;">    =
+                                                   <p style=3D"margin-top=
+: 0px; margin-bottom: 0px;">54000, Lahore, Lahore<br>Pakistan</p>        =
+                                             </td>                       =
+                            </tr>                                        =
+           <tr>                                                     <td h=
+eight=3D"25" class=3D"spacingHeight-20"></td>                            =
+                       </tr>                                             =
+      <tr>                                                     <td align=3D=
+"center">                                                       <table ro=
+le=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" alig=
+n=3D"left">                                                         <tr>
+                                                          <td align=3D"ce=
+nter" width=3D"24" style=3D"padding: 0px 5px;" ng-show=3D"slink.link !=3D=
+ ''">                                                             <a href=
+=3D"https://click.mlflow.com/link/c/YT0xOTEzODM5MzQ2ODU1NzEyODg3JmM9ZjlqN=
+SZlPTAmYj01ODU3NTY3MjQmZD1wMm8xeDBl.-CXpz8n-RkMeHv9yWjWBRE5kww8fP7TPA0FiE=
+4wJq_w" data-link-id=3D"585756724" target=3D"_blank"> 													<img w=
+idth=3D"24" alt=3D"facebook" src=3D"https://cdn.mailerlite.com/images/ico=
+ns/default/round/black/facebook.png" style=3D"display: block;" border=3D"=
+0"> 												</a>                                                     =
+      </td>                                                           <td=
+ align=3D"center" width=3D"24" style=3D"padding: 0px 5px;" ng-show=3D"sli=
+nk.link !=3D ''">                                                        =
+     <a
+href=3D"https://click.mlflow.com/link/c/YT0xOTEzODM5MzQ2ODU1NzEyODg3JmM9Z=
+jlqNSZlPTAmYj01ODU3NTY3MjcmZD1wOHowdDNm.i4kOIxYiytoUmju2OO2-rfD71pFRfNXOV=
+QKK-L_gZwE" data-link-id=3D"585756727" target=3D"_blank"> 													<i=
+mg width=3D"24" alt=3D"youtube" src=3D"https://cdn.mailerlite.com/images/=
+icons/default/round/black/youtube.png" style=3D"display: block;" border=3D=
+"0"> 												</a>                                                    =
+       </td>                                                           <t=
+d align=3D"center" width=3D"24" style=3D"padding: 0px 5px;" ng-show=3D"sl=
+ink.link !=3D ''">                                                       =
+      <a href=3D"https://click.mlflow.com/link/c/YT0xOTEzODM5MzQ2ODU1NzEy=
+ODg3JmM9ZjlqNSZlPTAmYj01ODU3NTY3MzAmZD16MGk4bDBq.mnmUDLjtqhtIMjFBA-AlxHAv=
+4ScxLQOoXKATPLWNczg" data-link-id=3D"585756730" target=3D"_blank"> 						=
+							<img width=3D"24" alt=3D"instagram" src=3D"https://cdn.mailerlite.=
+com/images/icons/default/round/black/instagram.png" style=3D"display: blo=
+ck;"
+border=3D"0"> 												</a>                                           =
+                </td>                                                    =
+     </tr>                                                       </table>=
+                                                     </td>               =
+                                    </tr>                                =
+                 </table>                                                =
+ <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" border=3D=
+"0" align=3D"right" width=3D"267" style=3D"width: 267px; min-width: 267px=
+;" class=3D"mlContentTable">                                             =
+      <tr>                                                     <td align=3D=
+"right" class=3D"bodyTitle" id=3D"footerUnsubscribeText-14" style=3D"font=
+-family: 'Poppins', sans-serif; font-size: 12px; line-height: 150%; color=
+: #111111;">                                                       <p sty=
+le=3D"margin-top: 0px; margin-bottom: 0px;">You received this email
+because you signed up on our website.</p>                                =
+                     </td>                                               =
+    </tr>                                                   <tr>         =
+                                            <td height=3D"10"></td>      =
+                                             </tr>                       =
+                            <tr>                                         =
+            <td align=3D"right" class=3D"bodyTitle" style=3D"font-family:=
+ 'Poppins', sans-serif; font-size: 12px; line-height: 150%; color: #11111=
+1;">                                                       <a href=3D"htt=
+ps://click.mlflow.com/link/c/YT0xOTEzODM5MzQ2ODU1NzEyODg3JmM9ZjlqNSZlPTAm=
+Yj00ODIzOTY5ODYmZD1mN2IzbDZp.PqtHBlrSDTH6kUEoEZDG4iYOwEpTDl3eR0j-LrItJzA"=
+ style=3D"color: #111111; text-decoration: underline;">           					<s=
+pan style=3D"color: #111111;">Unsubscribe</span>           					         =
+					</a>                                                   =20
+</td>                                                   </tr>            =
+                                     </table>                            =
+                   </td>                                             </tr=
+>                                           </table>                     =
+                    </td>                                       </tr>    =
+                                 </table>                                =
+     <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" bor=
+der=3D"0" align=3D"center" width=3D"640" style=3D"width: 640px; min-width=
+: 640px;" class=3D"mlContentTable">                                      =
+ <tr>                                         <td height=3D"40" class=3D"=
+spacingHeight-40" style=3D"line-height: 40px; min-height: 40px;"></td>   =
+                                    </tr>                                =
+     </table>                                   </td>                    =
+             </tr>                               </table>            =20
+               </td>                           </tr>                     =
+    </table>                       </td>                     </tr>       =
+            </table>                   <table cellpadding=3D"0" cellspaci=
+ng=3D"0" border=3D"0" align=3D"center" width=3D"640" style=3D"width: 640p=
+x; min-width: 640px;" class=3D"mlContentTable">                     <tr> =
+                      <td height=3D"40" class=3D"spacingHeight-20"></td> =
+                    </tr></table>                   <!-- Content ends her=
+e -->                   <!--[if mso 16]>                   </td>         =
+        </tr>               </table>             <!--<![endif]-->        =
+     <!--[if !mso]>               <!-- -->             </td>           </=
+tr>         </table>       <!--<![endif]-->     </div>   </body>  </html>
+
+
+
+--b1_5f4704f62ed9eb2ae4c23dd029e4756d--
+
+

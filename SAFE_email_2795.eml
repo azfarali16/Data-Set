@@ -1,0 +1,778 @@
+X-GM-THRID: 1777763211560166291
+X-Gmail-Labels: Inbox,Category Updates,Unread
+Delivered-To: azfarali007.aa@gmail.com
+Received: by 2002:a0c:fbc9:0:b0:656:3c56:17bd with SMTP id n9csp4805046qvp;
+        Fri, 22 Sep 2023 11:25:15 -0700 (PDT)
+X-Google-Smtp-Source: AGHT+IGcBjWPBrmJrvbpV48A9WxHwyGLSdfM7QT20JlsrU2A4m1pxuFJvDYwTqCsz4Pl73Sz5NOu
+X-Received: by 2002:a05:622a:14:b0:410:8afa:8787 with SMTP id x20-20020a05622a001400b004108afa8787mr268203qtw.22.1695407115564;
+        Fri, 22 Sep 2023 11:25:15 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1695407115; cv=none;
+        d=google.com; s=arc-20160816;
+        b=dHP7mWKpuhCHninC3wsX18lJa96Hk/G8FUnBNGaWyDHQ1X/HDzCrXzVAtdCMXYNtiR
+         j7NT9TYKh3iiVt6Q8litICps2ISDoYLIskBgaC8ZvYHGJS8g0vs+G/cUt4+7atn15B3a
+         Q155OkxTBdYJpKan5oj42VFeVSaJqdzB/3NY9a/sXc+J6AGcab3MEhIgvhV/A2N3mGI9
+         c8qG2I5PzaJQvrtV0PvjZduCfrXDBPrOd4uLfYj8ic5h9mlg3n0Eda5s/NteAL7wSfjN
+         rS0Xiqio0CK3ZB0PIvp7O3A5yKM0glHeY8j9bkK1ubUPrSv2yxp8K+psfzUxUrRQq6oN
+         1U+Q==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=list-unsubscribe:to:reply-to:subject:message-id:mime-version:from
+         :date:dkim-signature:dkim-signature;
+        bh=/wxwR6+LLhd3pNPV82VWz82qzNVnLbqnex+E8sKydXg=;
+        fh=1ghr3/vhIGL7+ytS5gYC2yrxOtO8q7dbhZ8cIHrxcdk=;
+        b=axr4I0CzlfJneKRoiDKLOczeY6eBs2S603NYPt5W05GwNbHIgq0vsEXdubl0kVIBnu
+         q8Es676hwz7FudRZf6kxE4zWNIOymNURqv2Xb4DvEh/qTD+vONY9Z1iHE/M0aWxzTtds
+         XmGzdViPHkJmt9vfbFT7JztNm7XmJcBsVcbQk19jpDODwJ572GQa37dl7gVgOA3TdvYl
+         OfoVmg/U4fiG1HoziydOixINe4Sg+gHeiCIdSIan38O4SE7KDf0Jnh14n3cRYIUglcms
+         sugEuwVGEQZFdMcj64L2zSyBXfqpgh5W2JLl2XRDtQ2Y44NrddN1wp1M3Gho8F1qBXbM
+         tYsg==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@unity3d.com header.s=mte header.b="QPjiw/l7";
+       dkim=pass header.i=@sendgrid.info header.s=smtpapi header.b=K2ztnlrc;
+       spf=pass (google.com: domain of bounces+29417914-6b8a-azfarali007.aa=gmail.com@em437.unity3d.com designates 167.89.92.213 as permitted sender) smtp.mailfrom="bounces+29417914-6b8a-azfarali007.aa=gmail.com@em437.unity3d.com";
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=unity3d.com
+Return-Path: <bounces+29417914-6b8a-azfarali007.aa=gmail.com@em437.unity3d.com>
+Received: from o167-89-92-213.outbound-mail.sendgrid.net (o167-89-92-213.outbound-mail.sendgrid.net. [167.89.92.213])
+        by mx.google.com with ESMTPS id u7-20020a05622a14c700b0041794642c8dsi2604453qtx.145.2023.09.22.11.25.14
+        for <azfarali007.aa@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Fri, 22 Sep 2023 11:25:15 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bounces+29417914-6b8a-azfarali007.aa=gmail.com@em437.unity3d.com designates 167.89.92.213 as permitted sender) client-ip=167.89.92.213;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@unity3d.com header.s=mte header.b="QPjiw/l7";
+       dkim=pass header.i=@sendgrid.info header.s=smtpapi header.b=K2ztnlrc;
+       spf=pass (google.com: domain of bounces+29417914-6b8a-azfarali007.aa=gmail.com@em437.unity3d.com designates 167.89.92.213 as permitted sender) smtp.mailfrom="bounces+29417914-6b8a-azfarali007.aa=gmail.com@em437.unity3d.com";
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=unity3d.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=unity3d.com;
+	h=content-type:from:mime-version:subject:reply-to:x-feedback-id:to:
+	list-unsubscribe:cc:content-type:from:subject:to;
+	s=mte; bh=/wxwR6+LLhd3pNPV82VWz82qzNVnLbqnex+E8sKydXg=;
+	b=QPjiw/l7vI2VJegXzlwfMXF1wRnbocbufEtxpSR/qKqBLFvzi2YmRUlMwip/zR/874dQ
+	FX/8txCeCg/oRV1iBjgg2KMF9XI63WoKDjKN+3SXUOSpds5oTwvVM84/bx15UpksQ3ATy1
+	7OaQBR4ejc1rYZRbWcItpPDclciIbIL8HQeellBGKlVUT3yYDtlz9/Xp7Ae46betNccAYs
+	a3RW1UgsGZo/ZC3gQfrEsfqdGHFIAb+H/H/zCnkztALqvMhY98jDlBg74EGMK7msykClfE
+	aDic8o9wrikqxpi2+wYgto2m/cgMeTM/Lhww+20PLWBIN1RNnkmQFdOy1LZ4b82g==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=sendgrid.info;
+	h=content-type:from:mime-version:subject:reply-to:x-feedback-id:to:
+	list-unsubscribe:cc:content-type:from:subject:to;
+	s=smtpapi; bh=/wxwR6+LLhd3pNPV82VWz82qzNVnLbqnex+E8sKydXg=;
+	b=K2ztnlrcKLKRH9tRXXxjq+At6Qeg+ovjs2yJR13OLGOGuws7EZsXv5QwuZUVBfMiFeq1
+	RcPnZQ/weq9w7hfZKIUZ9NB1z944tgyJ+ZsfXHLye+MvKAqxadYv9t835OZxQuGmSjnLLW
+	yqrFHzOzI+sxd2nOlJMfAAgAYYsc0uVic=
+Received: by filterdrecv-648bcdc66d-xl8ww with SMTP id filterdrecv-648bcdc66d-xl8ww-1-650DD675-A3
+        2023-09-22 18:01:25.232820731 +0000 UTC m=+11643709.373583911
+Received: from Mjk0MTc5MTQ (unknown)
+	by geopod-ismtpd-37 (SG) with HTTP
+	id pvUT-NJoRBCHA95YwK6Y7Q
+	Fri, 22 Sep 2023 18:01:25.215 +0000 (UTC)
+Content-Type: multipart/alternative; boundary=b43c343f64be1a0be1e5591f62b7138d2e91584574169cba4911848d38ac
+Date: Fri, 22 Sep 2023 18:01:26 +0000 (UTC)
+From: Unity Technologies <info@unity3d.com>
+Mime-Version: 1.0
+Message-ID: <pvUT-NJoRBCHA95YwK6Y7Q@geopod-ismtpd-37>
+Subject: Important updates to the Unity Runtime Fee policy
+Reply-To: noreply@unity3d.com
+X-Feedback-ID: 29417914:SG
+X-SG-EID: 
+ =?us-ascii?Q?Z2psxdgOyquHy07zR0rmbGrrUFtPp7nFGD05lvWSIJQkWOSvNE9BTEls8N+Lku?=
+ =?us-ascii?Q?ArMAdbVohpf26fOJhoRzdQE7fVtf+C8f6B8FfR6?=
+ =?us-ascii?Q?ATqvTmrKXA9yElVd9tV8HCpi5pqvdqrk+3hCjVt?=
+ =?us-ascii?Q?jF5EUHZd1KzJk7U0f8fXF449a+fJRlco+cnHB6f?=
+ =?us-ascii?Q?CZKxtrR9dn8tGiFgpMU5ARwsuA+R0ons2BURtfJ?=
+ =?us-ascii?Q?EIykoO5=2FuYnvf=2FDCCUEFtJSBbo0ozsXF8buSRME?=
+ =?us-ascii?Q?Pm59efmKwRwHdZ2iYsd1w=3D=3D?=
+X-SG-ID: 
+ =?us-ascii?Q?se=2F49CGmbS0sfR97ImeXvA=2FaVLOSIWlvqXDD7M5BsFtYQZ5KxM9uZKzSXxaPRo?=
+ =?us-ascii?Q?iJtPl1qL7DEhflDWXbRewepC+reFN5Tcisu+xdF?=
+ =?us-ascii?Q?v0tyhK+IZr4YGuPZrXZ7JRd367N9o8mRvwr9LOF?=
+ =?us-ascii?Q?LkD5d1uynk9DuEkzs2rN6jwD8iM8wXB07Ux02u6?=
+ =?us-ascii?Q?OM7+dQq4Ai0C1tjnvkPiiHdhqqNX5qTWOajzn=2FH?=
+ =?us-ascii?Q?G=2FiVGU7ONi6mapIhwjTjmKXov+LUZTLtXMcwms3?=
+ =?us-ascii?Q?YZT+OEUtODLs3fdC2mjgceqLH+AI8Y07JkuONSH?=
+ =?us-ascii?Q?ngPLMbkwcLzCncz6vnFu+a7xFgVjFXhlAOQBpbp?=
+ =?us-ascii?Q?87UqStvNFjwPbGdhQ5Bsv15MKSbt7R3TfruEwhI?=
+ =?us-ascii?Q?PJB9y5Y2aKeTYYxLcs=2FUSdr7Lhr=2FmUEg=2FNvcDjR?=
+ =?us-ascii?Q?s1wKlmaSEcscg3JJTpfiilFT11Wx3iI=2FH105=2FcB?=
+ =?us-ascii?Q?d0iPZtaWVDHvfD7Sl22o3dgoKkVXqza3GdGRcbv?=
+ =?us-ascii?Q?O6jI7nEITSbgQYxhb9lcJtXEl5jSL13FMZ1C3jI?=
+ =?us-ascii?Q?VMNU2WQFooSmfURtW+Qs41SxfbzNb+SeBOUiNQO?=
+ =?us-ascii?Q?=2FHC9c1RQSo95TsrBlkemQRwTJHparCEC+bU4rw6?=
+ =?us-ascii?Q?1hj8zo54wQTWCnqWLj6TVbkIlFW3V4QFu3QCw3=2F?=
+ =?us-ascii?Q?27YoW4YtUnJOpUB52uWbeMzdA0AZraCpJo=2Fs7Hs?=
+ =?us-ascii?Q?c4Wff4JEIqORUR2RgH0+2wQanEkP34XKJEVHkVS?=
+ =?us-ascii?Q?4+aI42C6EIn3vnaa4SiCwu6laMF1UpoyU9s96Kh?=
+ =?us-ascii?Q?PK5DI2k570z8kLzKFcAjhyvws299WjW+a7nPNIG?=
+ =?us-ascii?Q?GscwTq47AyaTmdQ5=2FznGTpQXNgioBM0fNrV8tvV?=
+ =?us-ascii?Q?XfRGNxp9QRJQ0S=2F3pxdUUbizb81P23EBs=3D?=
+To: azfarali007.aa@gmail.com
+X-Entity-ID: uaAeVQFTQBM0NWnAB5y01Q==
+List-Unsubscribe: 
+ =?us-ascii?Q?=3Cmailto=3Aunsubscribe=40em437=2Eunity3d=2Ecom=3Fsubject=3Dhttp=3A=2F=2Furl3090=2Eu?=
+ =?us-ascii?Q?nity3d=2Ecom=2Fwf=2Funsubscribe*q*upn=3DI2ZneDY?=
+ =?us-ascii?Q?Mm30bX-2BRxYz82EqVmWgovkXO1mHRl89j0THwc?=
+ =?us-ascii?Q?eRyLUjkC-2BOmn81oVuGznK2dF1mtOO1jqGN3SL?=
+ =?us-ascii?Q?PMhURYgUc6h65wpFd6giA7y8MLYAfnjGxoBBnr0?=
+ =?us-ascii?Q?8Odre5rziqYvezoDkAM5N-2B8-2FDlULjI7GaKP?=
+ =?us-ascii?Q?3xE-2B1lOAtvoURxiyHiKV4uXxB-2BMotfBkLMX?=
+ =?us-ascii?Q?oiYUjofDJlBTKz9PxWkqQNr-2BLpEUn59JuotWv?=
+ =?us-ascii?Q?TbxyWWNgz4OCkvIScnNr1M4ObizpHj017h3TygE?=
+ =?us-ascii?Q?L5FyJeaX4WBxbLepUqv1uJc5UL3ROIXjULHUJxF?=
+ =?us-ascii?Q?ta2M0UpAhQvZ878FkKoOS-2BOwj7HLUxqe-2FjZ?=
+ =?us-ascii?Q?1kqoKKnKyJ5Puk-2Fc6JXspIqERUDZ9mNc9psL3?=
+ =?us-ascii?Q?9cmKwvzUelqfNa42OKCb9JacRLnrWHp06XWcBUS?=
+ =?us-ascii?Q?NfFHmelB-2BKV0gHvcIx0NDfXjcRpQAtVOYwX8L?=
+ =?us-ascii?Q?kBSTWoUj0kaXBzFYTS4Kf0ryt5J-2Fx-2ForJPV?=
+ =?us-ascii?Q?Ff2FVeKF7LBd1qoSQ0z0RbSKrErEBn05UpsifRR?=
+ =?us-ascii?Q?-2ByPkQL47bGKBCuYUsDaqjX-2Fc-2B-2FWTKYc?=
+ =?us-ascii?Q?vFVeBZNcdKO1hODuFO1LYF42W-2BqlyNi9C8uQO?=
+ =?us-ascii?Q?TH-2B7i4sjnM4oFt1g1v2srdeAGHHy2iSwiWNhG?=
+ =?us-ascii?Q?bAsEalqhHyhzghg5bN-2BFX8PSbGnAMnWSmG5E3?=
+ =?us-ascii?Q?PkACYtdc67V-2Fk8uBcF-2FAE4uFT51Byzcy-2F?=
+ =?us-ascii?Q?jZie6-2FANUCEM5t5pLnR3CmEps-2B1HwpgjxBx?=
+ =?us-ascii?Q?0DmR5AZRL14Cep7Ag8-2BPirefk-2BG8sSf68Zq?=
+ =?us-ascii?Q?WttK1e3AEa4QlwmNwIKYy1kV1tg6LaWI7vwenB6?=
+ =?us-ascii?Q?gW65NPbG6Z3xoNEMSVNRtv5I5HxP2fYGr6yR1bv?=
+ =?us-ascii?Q?MwwE7zBDG9iQLpW2iiOhrnEHftKawbHGFRE8BJC?=
+ =?us-ascii?Q?VzgB550dRzfYvTO3Xr1t3O9jPeYx20u1KUUwnqe?=
+ =?us-ascii?Q?UaJ29ccsI3-2FzAMYbNCjiQka6jBUFEXGdZiMMy?=
+ =?us-ascii?Q?F0Wa-2BBwY496klZFQMf8poNbSqeem8BehD1wy4?=
+ =?us-ascii?Q?O8qMp-2FfPM0ArEBp-2FjPueJ5CWKGiPlt9k26d?=
+ =?us-ascii?Q?0Avr0byke6WrOLRs0bmhsEvq337Ggcw2mxx0KmQ?=
+ =?us-ascii?Q?YCBJ-2BtF9JJqB=3E?=
+
+--b43c343f64be1a0be1e5591f62b7138d2e91584574169cba4911848d38ac
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset=utf-8
+Mime-Version: 1.0
+
+We=E2=80=99ve heard your concerns and are making changes
+
+( https://unity.com )
+View in browser
+( https://cdn.mc-weblink.sg-mktg.com/weblink/MTY5NTQwNTY4NXxoUGdqeW1wcy1jY2=
+1JSFVRWkdSS0VDX2pSS1lDT2V0Rmp6NFRxYnVFQ2RYYzk5ZVZXQm9KbDE0NGctd3pxYWU5Q3NHZ=
+GNBTFpqRGxnUXVYaGNIV2RHbTFJMXFlR0NkTTZOSktKcFBoTFZ2cm9xTi1seGo3ZWhKNmlSTWdq=
+bEdBS0FkM3lhbzU3MXBHYWtqaG94azZzYXdVaFdxZGxWRF81ZWFlQWZVYWpVVmdSQk1NcFdiNUJ=
+zSXV2bFdLSXJsWVR3ZUVubTNWdmZZNkV5ZUVfSFdCRUtpN2U0VWJLdXlJckdTWW5HYTZBbjdnRF=
+hOWVozUjloZVJpMnk5QU9lWkFuUnY5SzJfb2Rnazl6dlpBUVVNVnM5QkhxNl9lX3pnOEtOaGdGN=
+VVVdlBVSUR3N2tyTDBvY2N3b20wNzhPOXZrbGYzTEp0QWxpLTBlb3V6c21zR3JjcGRSXzBjUVh2=
+dz09fNb197aBiolh-_xgmLWnSxWl-rP2yQH14BKnY8WYdNxK )
+
+Hello there,
+
+We just shared an open letter on our blog ( https://blog.unity.com/news/ope=
+n-letter-on-runtime-fee ) about the changes we=E2=80=99re making to the Uni=
+ty Runtime Fee pricing policy that we announced last week. These changes we=
+re made based on feedback from our community, and we want to ensure you=E2=
+=80=99re aware. We also invite you to read the FAQ ( https://unity.com/pric=
+ing-updates ) for more details.
+
+At a high level, this is what we=E2=80=99re changing:
+
+* *Unity Personal: No Runtime Fee, splash screen optional.* The Unity Perso=
+nal plan will remain free and there will be no Runtime Fees for games built=
+ with the plan. We will be increasing the revenue limit from $100,000 USD t=
+o $200,000 USD and we will remove the requirement to use the Made with Unit=
+y splash screen (starting with the LTS version releasing in 2024, currently=
+ referred to as the 2023 LTS, or later).
+* *Runtime Fee is forward-looking.* For Unity Pro & Enterprise, the Runtime=
+ Fee does not apply to any games created with any currently supported Unity=
+ versions. It only applies to games created with or upgraded to the LTS ver=
+sion releasing in 2024 (currently referred to as the 2023 LTS) or later.
+* *Editor Terms.* We will make sure that you can stay on the terms applicab=
+le for the version of Unity you are using - as long as you keep using that =
+version.
+* *Runtime Fee, self-reported.* On a monthly basis, you have a choice of th=
+e lesser of 2.5% revenue share or the calculated amount based on unique ini=
+tial engagements. Both are self-reported from data you already have availab=
+le. You will always be billed the lesser amount.
+
+We understand that you may still have questions after reading our letter an=
+d the FAQ ( https://unity.com/pricing-updates ). To get answers, we invite =
+you to join us for a live fireside chat with Marc Whitten, President of Uni=
+ty Create, hosted by Jason Weimann, industry veteran and content creator, o=
+n his YouTube channel ( https://youtube.com/live/qyLcI5O9iUY ) , today at 4=
+:00 pm ET/ 1:00 pm PT.
+
+Thanks for creating with Unity,
+
+The Unity team
+
+Unity Technologies, 30 3rd Street, San Francisco, CA 94103, United States.
+Privacy policy ( http://unity3d.com/legal/privacy-policy ) - Terms and Cond=
+itions ( http://unity3d.com/legal/terms-of-service ) - Copyright Unity Tech=
+nologies =C2=A9 2023
+--b43c343f64be1a0be1e5591f62b7138d2e91584574169cba4911848d38ac
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset=utf-8
+Mime-Version: 1.0
+
+<!DOCTYPE html><html><head>
+  <!-- template date: may 2019 -->
+  <meta charset=3D"utf-8">
+  <meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=3D=
+1">
+  <meta name=3D"MobileOptimized" content=3D"320">
+  <meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
+  <meta name=3D"color-scheme" content=3D"light dark">
+  <meta name=3D"supported-color-schemes" content=3D"light dark">
+  <title>Unity</title>
+  <link href=3D"https://fonts.googleapis.com/css?family=3DRoboto:100,300,40=
+0,700" rel=3D"stylesheet" type=3D"text/css">
+  <link href=3D"https://fonts.googleapis.com/css?family=3DRoboto+Mono:100,3=
+00,400,700" rel=3D"stylesheet" type=3D"text/css">
+
+  <!-- main -->
+  <style type=3D"text/css">
+    :root {
+      color-scheme: light dark;
+      supported-color-schemes: light dark;
+    }
+    @media (prefers-color-scheme: dark) {
+      /* Shows Dark Mode-Only Content, Like Images */
+      .dark-img { display:block !important; width: auto !important; overflo=
+w: visible !important; float: none !important; max-height:inherit !importan=
+t; max-width:inherit !important; line-height: auto !important; margin-top:0=
+px !important; visibility:inherit !important; }
+      /* Hides Light Mode-Only Content, Like Images */
+      .light-img { display:none; display:none !important; }
+      /* Custom Dark Mode Background Color */
+      .darkmode { background-color: #121212 !important; }
+      /* Custom Dark Mode Font Colors */
+      h1, h2, p, span, b, strong, td { color: #ffffff !important; }
+    }
+    /* Shows Dark Mode-Only Content, Like Images */
+    [data-ogsc] .dark-img { display:block !important; width: auto !importan=
+t; overflow: visible !important; float: none !important; max-height:inherit=
+ !important; max-width:inherit !important; line-height: auto !important; ma=
+rgin-top:0px !important; visibility:inherit !important; }
+    /* Hides Light Mode-Only Content, Like Images */
+    [data-ogsc] .light-img { display:none; display:none !important; }
+    /* Custom Dark Mode Background Color */
+    [data-ogsc] .darkmode { background-color: #121212 !important; }
+    /* Custom Dark Mode Font Colors */
+    [data-ogsc] h1, [data-ogsc] h2, [data-ogsc] p, [data-ogsc] span, [data-=
+ogsc] b, [data-ogsc] strong, [data-ogsc] td { color: #ffffff !important; }
+  </style>
+  <style type=3D"text/css">
+    @import url(https://fonts.googleapis.com/css?family=3DRoboto:100,300,40=
+0,500,700);=20
+    @import url(https://fonts.googleapis.com/css?family=3DRoboto+Mono:100,3=
+00,400,500,700);=20
+    td {
+      font-family: 'Roboto', Arial, sans-serif;=20
+    }
+    body {
+      margin: 0;=20
+      padding: 0;=20
+    }
+    img {
+      border: 0;=20
+      max-width: 100%;=20
+      height: auto;=20
+      outline: none;=20
+      text-decoration: none;=20
+    }
+    table td {
+      border-collapse: collapse;=20
+    }
+    strong, b {
+      font-weight: 500;=20
+    }
+    .appleLinksUnityBlue a {
+      color: #000000 !important;=20
+      text-decoration: none;=20
+    }
+    .appleLinksWhite a {
+      color: #ffffff !important;=20
+      text-decoration: none;=20
+    }
+  </style>
+
+  <!-- desktop -->
+  <style type=3D"text/css">
+    @media only screen and (min-width: 600px) {
+
+    }
+  </style>
+
+  <!-- mobile -->
+  <style type=3D"text/css">
+    @media only screen and (max-width: 600px) {
+      .logo-container {
+        padding: 20px 0 !important;
+      }
+     =20
+    .font14 strong,
+    .font16 strong {
+      font-weight: bold !important;
+    }
+      .browser-view {
+        padding: 32px 0 !important;
+       =20
+      }
+      .font14 {
+        font-size: 14px !important;=20
+        line-height: 22px !important;=20
+      }
+      .font16 {
+        font-size: 16px !important;=20
+        line-height: 24px !important;=20
+      }
+      .header {
+        padding: 0 0 25px !important;=20
+        font-size: 14px !important;=20
+        line-height: 22px !important;=20
+      }
+      .heading {
+        font-size: 20px !important;=20
+        line-height: 28px !important;=20
+      }
+      .descriptive-label {
+        font-size: 12px !important;=20
+        line-height: 20px !important;=20
+      }
+      img.logo {
+        width: 66px !important;=20
+      }
+      table.table {
+        width: 100% !important;=20
+      }
+      td.content,
+      table.content {
+        width: 92% !important;=20
+      }
+      td.footer {
+        font-size: 10px !important;=20
+      }
+      img {
+        display: block;=20
+        width: 100%;=20
+      }
+      .responsive {
+        display: block !important;
+        width: 100% !important;=20
+        height: auto !important;
+      }
+      .responsive-2 {
+        width: 47% !important;
+      }
+      .responsive-3 {
+        width: 96px !important;
+      }
+      .responsive-4 {
+        display: block;
+      }
+      .hide {
+        display:none;
+      }
+      .heading-gap {
+        line-height: 8px !important;=20
+        height: 8px !important;=20
+      }
+      .color-gap {
+        height: 50px !important;=20
+        line-height: 50px;
+      }
+      .block-gap {
+        line-height: 48px !important;=20
+        height: 48px !important;=20
+      }
+      .height8 {
+        height: 8px !important;
+        line-height: 8px !important;
+      }
+      .height12 {
+        height: 12px !important;
+        line-height: 12px !important;
+      }
+      .height4 {
+        height: 4px !important;
+        line-height: 4px !important;
+      }
+      .height16 {
+        height: 16px !important;
+        line-height: 16px !important;
+      }
+      .height24 {
+        height: 24px !important;
+        line-height: 24px !important;
+      }
+      .height32{
+        height: 32px !important;
+        line-height: 32px !important;
+      }
+      .height64 {
+        height: 64px !important;
+        line-height: 64px !important;
+      }
+      .width47 {
+        width: 47% !important;
+      }
+      .padding6 {
+        padding: 0 6% !important;
+      }
+      .padding24 {
+        padding: 0 24px !important;
+      }
+    =20
+    }
+  </style>
+
+  <!--[if mso]>
+    <style>
+        td {color: #212121; font-family: Arial,sans-serif !important; }
+        a {text-decoration: none !important; }
+  strong, b {font-weight: bold; }
+    </style>
+    <![endif]-->
+  </head>
+  <body class=3D"darkmode" style=3D"margin: 0; padding: 0; width: 100%; -we=
+bkit-text-size-adjust: none;" bgcolor=3D"#ffffff">
+  <div style=3D"font-size:0px;line-height:1px;mso-line-height-rule:exactly;=
+display:none;max-width:0px;max-height:0px;opacity:0;overflow:hidden;mso-hid=
+e:all;">
+We=E2=80=99ve heard your concerns and are making changes
+  </div>
+    <!-- wrapper -->
+    <table class=3D"table darkmode" style=3D"border-bottom: 1px solid #eeee=
+ee; width: 100%; min-width: 100%;" width=3D"100%" cellspacing=3D"0" cellpad=
+ding=3D"0" border=3D"0" bgcolor=3D"#ffffff">
+      <tbody>
+        <!-- header -->
+        <tr>
+          <td class=3D"" align=3D"center">
+            <table class=3D"content" width=3D"600" cellspacing=3D"0" cellpa=
+dding=3D"0" border=3D"0" align=3D"center">
+              <tbody>
+                <tr>
+                  <td class=3D"logo-container" style=3D"padding: 25px 0;" a=
+lign=3D"left">
+
+                    <a href=3D"http://url3090.unity3d.com/ls/click?upn=3DvE=
+X9nigFznyBvc0R-2FJA8pGAIW-2B90OLSSuVgf68g3mKg-3DuLsX_H65ljNg3foEJU6dJQZHMcp=
+3Zdimzb4muCFBEwI-2BtxR7aXLQexRs1laU0b9joqbG63Frx-2BUOoPb1bjgVFp6rR9Fd2yhevC=
+x73tz7diy3Od-2BautHdTGeVsVtDjo3PDj8Ws-2FWfU2Uy3HG-2BDiKieGxHTjJqe3ZuuSIKeH4=
+2x6lQQKzezDHv9Xrgl017DzV61GDx80W900hGKeRSMn6XZq9MCX3k8JQ08AoyXbunOpthNTgACI=
+QGwGZelz95ZUXYW1-2FEQni5o91vtwUSTXObN2lLC9p6thaPI19xT9o-2FDQ5ASx-2BMhnyo8Av=
+kYEjvP0IC9fIREav-2FzUAlfVeD2wPrGiiLmdeWAeFv5tBLVN3NLNJclLA25m87Rd30ctwt4UsY=
+A-2BW3dM9QyQJyUs9IpliNxx9jOrEwyQufxzKzw6BuvYSYxzf7FSHCBVc82aowJQ4Lgapp-2Bw9=
+-2FWVGJW8-2BPpepi3N0l6uzcnTzKxKaVsuYDN8hOBZ-2BA3dgM0cr-2B-2FSnS8IFtAkbKrB9J=
+pFgukQRy-2BylNk3xpuF8mHNqRLAZVXInNOV2OTGltwE1ZaXXgQKxWAU4kfM5f4bwzicRJGuzLp=
+4ztg8SoX64Lx3H2wy5C5N2yCZyb4EzrpUhO-2BynddRC2yalgaxqBrcRiQkwz-2FaWNCiXlyEEf=
+Nd7-2Fo0VduxR6rwpqTSSSk-2F0kAUj0zPPix-2Fac-2FmZEojz4hKuqUmGoUBwoFORHWJVwAeM=
+qUeZ9lLbyuNoodW-2Bz-2Fatyco3PjDtI4fo9EPkyPdC1R2mQdcbW5i5-2FArefGcBfoJMBVoNo=
+-2BZmlfaQev7IOIfVmluzpofUwfRPc8sbZyQjsqtYvgjNAqeztFBf9dA5UzoJFxypIZfqVzq7oJ=
+vUhB9spJVMTA1v25S3Mr8pfo6gXj-2Bq5-2BcflC-2FWrD5NDUGb4ENI39fvjSSsDEdNflkukFe=
+J6DmYWDSA1hhbnWT2QnNJ5lMQH6uUaLZtrhuCcN44i5AAXQXDb7FShpR7PI58lhNOrtBaKLlqy3=
+N4TLksnDCrHWc6klqP94D-2FO-2Brbu9oFZOwN-2BZ9cVYG3Z-2BvCNnFn2AyMNTBIyN-2FkeDu=
+weHbRCXSZds" target=3D"_blank">
+
+                      <img class=3D"light-img" src=3D"https://img06.en25.co=
+m/EloquaImages/clients/Unity/%7B79c9d159-7ce7-4102-890d-ec2d92c486f8%7D_uni=
+ty-logo-lightmode.png" alt=3D"Unity" style=3D"border: 0 none; width: 77px; =
+height: auto;" width=3D"77" border=3D"0">
+
+                      <!-- The following Dark Mode logo image is hidden=20
+    with MSO conditional code and inline CSS, but will be        =20
+    revealed once Dark Mode is triggered -->
+
+                      <!--[if !mso]><! -->
+                      <div class=3D"dark-img" style=3D"display:none; overfl=
+ow:hidden; width:0px; max-height:0px; max-width:0px; line-height:0px; visib=
+ility:hidden;">
+                        <img src=3D"https://img06.en25.com/EloquaImages/cli=
+ents/Unity/%7B5da7222a-6e8b-40ab-8daa-ed74896c54b0%7D_unity-master-white.pn=
+g" alt=3D"Unity" style=3D"border: 0 none; width: 77px; height: auto;" width=
+=3D"77" border=3D"0">
+                      </div>
+                      <!--<![endif]-->
+
+                    </a>
+                  </td>
+                  <td class=3D"browser-view" style=3D"color: #757575; font-=
+family: 'Roboto', Arial, ans-serif; font-weight: 400; font-size: 12px; line=
+-height: 14px;" align=3D"right">
+                    <a href=3D"http://url3090.unity3d.com/ls/click?upn=3DvE=
+X9nigFznyBvc0R-2FJA8pMLCGSXtdRUYuQO-2Ff6t0ULGV83bKWng4kD-2FiT4j1PnEknmPwkN1=
+gCBibO73Cz5CB1N6FqF5uT3N7osx4WsXoR6k4rUs9KWgknesZmAvf3L8GPq-2BdM-2BDzVAnUIh=
+SoVv9IBvdwasTKjDhExV70Mc7PGKElxOITmiE0z7JeXyR-2BJjPGysEyxqs3inWLOeMdb2noNEJ=
+ti2ttAn4FFs1nqWixJS969Jg0uItrrcvQf96ZekIeQAdfgfRhsR3IY-2BH-2B4God10hIh7D-2B=
+S7w9qLRy-2BOknjOGJpOmUB9AT-2FSkbHNMgKE-2FLM8AvjkPqE3963apLiq19SBk5QJYCq9E5Y=
+QmbQP6fxrLEbDFJBSDe0krORGVxSRINng4oefgwA4nXr5cIF6rBUYQ4kcBzsrvQyxUUguu6yQWg=
+mnDFdisLyu21WJnHC0EaUq3kti56LoMNJ8cJJq76VThP1h0SK5N0kgrRd8WysQ8gpxBvfsGDQr3=
+seDHAUeM0-2BOjcAn5Ow41SSdkf4abgD7hk-2BQWqEKct40lMZ8rldA-2BBf13fW3Lca3XJy-2B=
+Kr9O-2FOZ2XaOUFG-2FYH2MuXQNgG9HHwVQdx3YRC-2BSnNthv69C1sYoCVtZMaEY8HYfOYweMw=
+H-2FfTVBmRhKaIJuRsQZKH13j67pmhel4kUjeXJA15Y2SHeDGh6LBJPe8fNDhfw5u5-2BwBBohs=
+7U-2FbiQZ1wEqvS5KlmnOqCK95H7pj1j8Zk2zAJt7blklH7E-2FQK7ceI-2BT66bqojhTKtpaEe=
+6JwtavgBQ1w-3D-3Dl6kt_H65ljNg3foEJU6dJQZHMcp3Zdimzb4muCFBEwI-2BtxR7aXLQexRs=
+1laU0b9joqbG63Frx-2BUOoPb1bjgVFp6rR9Fd2yhevCx73tz7diy3Od-2BautHdTGeVsVtDjo3=
+PDj8Ws-2FWfU2Uy3HG-2BDiKieGxHTjJqe3ZuuSIKeH42x6lQQKzezDHv9Xrgl017DzV61GDx80=
+W900hGKeRSMn6XZq9MCX3k8JQ08AoyXbunOpthNTgACIQGwGZelz95ZUXYW1-2FEQni5o91vtwU=
+STXObN2lLC9p6thaPI19xT9o-2FDQ5ASx-2BMhnyo8AvkYEjvP0IC9fIREav-2FzUAlfVeD2wPr=
+GiiLmdeWAeFv5tBLVN3NLNJclLA25m87Rd30ctwt4UsYA-2BW3dM9QyQJyUs9IpliNxx9jOrEwy=
+QufxzKzw6BuvYSYxzf7FSHCBVc82aowJQ4Lgapp-2Bw9-2FWVGJW8-2BPpepi3N0l6uzcnTzKxK=
+aVsuYDN8hOBZ-2BA3dgM0cr-2B-2FSnS8IFtAkbKrB9JpFgukQRy-2BylNk3xpuF8mHNqRLAZVX=
+InNOV2OTGltwE1ZaXXgQKxWAU4kfM5f4bwzicRJGuzLp4ztg8SoX64Lx3H2wy5C5N2yCZyb4Ezr=
+pUhO-2BynddRC2yalgaxqBrcRiQkwz-2FaWNCiXlyEEfNd7-2Fo0VduxR6rwpqTSSSk-2F0kAUj=
+0zPPix-2Fac-2FmZEojz4hKuqUmGoUBwoFORHWJVwAeMqUeZ9lLbyuNoodW-2Bz-2Fatyco3PjD=
+tI4fo9EPkyPdC1R2mQdcbW5i5-2FArefGcBfoJMBVoNo-2BZmlfaQev7IOIfVmluzpofUwfRPc8=
+sbZyQjsqtYvgjNAqeztFBf9dA5UzoJFxypIZfqVzq7oJvUhB9sq3jtJA3RBdkVFz1SVFW7MGe2h=
+IVPBXyP04ukoLV8mXzz-2B2qtbnlUbpXvnCAdIW02XK0vuSBvaU76kdEWHWkTBhNNRixKus2mFo=
+kIDqaLy8j-2BIgv0-2BlJIJgXfDiKIWWAXZ0A4eKuurYZZGb32g-2BGYD8fjew9bsr2GvAew3ej=
+ZkGU-2BQtLmIeoUtClEshEhOufhEMtlzmalvS-2BqlnEa0fm2CU" style=3D"color: #75757=
+5; text-decoration: none;">
+                      <div class=3D"">View in browser</div>
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>             =20
+               =20
+
+        <!-- body -->
+        <tr>
+          <td align=3D"center">
+            <table class=3D"content" width=3D"600" cellspacing=3D"0" cellpa=
+dding=3D"0" border=3D"0" align=3D"center">
+              <tbody>
+                <tr>
+                  <td class=3D"font14" style=3D"color: #212121; font-family=
+: 'Roboto', Arial, sans-serif; font-weight: 400; font-size: 16px; line-heig=
+ht: 24px;" align=3D"left">
+
+
+
+
+
+                    <!-- block 1 -->
+
+<div class=3D"heading" style=3D"font-size: 24px; font-weight: 500; line-hei=
+ght: 32px;">
+  Hello there,
+</div>
+
+<div class=3D"height8" style=3D"line-height: 16px; height: 16px;">&nbsp;</d=
+iv>
+
+We just shared an <a href=3D"http://url3090.unity3d.com/ls/click?upn=3DvEX9=
+nigFznyBvc0R-2FJA8pJRAj-2BE0n6m2ezSghJ9Xxwc4bODT27GalOHcNg5ew3nUuquw49ghGMb=
+JmF-2FG957pHA-3D-3D93uw_H65ljNg3foEJU6dJQZHMcp3Zdimzb4muCFBEwI-2BtxR7aXLQex=
+Rs1laU0b9joqbG63Frx-2BUOoPb1bjgVFp6rR9Fd2yhevCx73tz7diy3Od-2BautHdTGeVsVtDj=
+o3PDj8Ws-2FWfU2Uy3HG-2BDiKieGxHTjJqe3ZuuSIKeH42x6lQQKzezDHv9Xrgl017DzV61GDx=
+80W900hGKeRSMn6XZq9MCX3k8JQ08AoyXbunOpthNTgACIQGwGZelz95ZUXYW1-2FEQni5o91vt=
+wUSTXObN2lLC9p6thaPI19xT9o-2FDQ5ASx-2BMhnyo8AvkYEjvP0IC9fIREav-2FzUAlfVeD2w=
+PrGiiLmdeWAeFv5tBLVN3NLNJclLA25m87Rd30ctwt4UsYA-2BW3dM9QyQJyUs9IpliNxx9jOrE=
+wyQufxzKzw6BuvYSYxzf7FSHCBVc82aowJQ4Lgapp-2Bw9-2FWVGJW8-2BPpepi3N0l6uzcnTzK=
+xKaVsuYDN8hOBZ-2BA3dgM0cr-2B-2FSnS8IFtAkbKrB9JpFgukQRy-2BylNk3xpuF8mHNqRLAZ=
+VXInNOV2OTGltwE1ZaXXgQKxWAU4kfM5f4bwzicRJGuzLp4ztg8SoX64Lx3H2wy5C5N2yCZyb4E=
+zrpUhO-2BynddRC2yalgaxqBrcRiQkwz-2FaWNCiXlyEEfNd7-2Fo0VduxR6rwpqTSSSk-2F0kA=
+Uj0zPPix-2Fac-2FmZEojz4hKuqUmGoUBwoFORHWJVwAeMqUeZ9lLbyuNoodW-2Bz-2Fatyco3P=
+jDtI4fo9EPkyPdC1R2mQdcbW5i5-2FArefGcBfoJMBVoNo-2BZmlfaQev7IOIfVmluzpofUwfRP=
+c8sbZyQjsqtYvgjNAqeztFBf9dA5UzoJFxypIZfqVzq7oJvUhB9so-2Fod5vzLZ36cV4zRFb2dX=
+IkqbXRGXmh1OJxFuwVF0yu3lJ89PMKcThhlfr-2BvOYub6GPJ7oTDnSi8DPXpvk9Iqdn4XUEG3J=
+xJuj-2BF0Yjo2yEaSl4oQKQdxJiJqOWdLsX7l6QebkM1cXReLJkH1Vk9GkLynOoKce8Ojd30TkI=
+2-2BVOUNqZ6-2FBnSwXdqMvw77qvVbrJESM-2BANZT-2FxTZLg-2FQuWj" style=3D"color: =
+#2196f3; text-decoration: none;">open letter on our blog</a> about the chan=
+ges we=E2=80=99re making to the Unity Runtime Fee pricing policy that we an=
+nounced last week. These changes were made based on feedback from our commu=
+nity, and we want to ensure you=E2=80=99re aware. We also invite you to rea=
+d the <a href=3D"http://url3090.unity3d.com/ls/click?upn=3DvEX9nigFznyBvc0R=
+-2FJA8pMddUo9hcDxptZVjKjzyVNhj3WivkjaxFCU63WOIglS-2FIUvy_H65ljNg3foEJU6dJQZ=
+HMcp3Zdimzb4muCFBEwI-2BtxR7aXLQexRs1laU0b9joqbG63Frx-2BUOoPb1bjgVFp6rR9Fd2y=
+hevCx73tz7diy3Od-2BautHdTGeVsVtDjo3PDj8Ws-2FWfU2Uy3HG-2BDiKieGxHTjJqe3ZuuSI=
+KeH42x6lQQKzezDHv9Xrgl017DzV61GDx80W900hGKeRSMn6XZq9MCX3k8JQ08AoyXbunOpthNT=
+gACIQGwGZelz95ZUXYW1-2FEQni5o91vtwUSTXObN2lLC9p6thaPI19xT9o-2FDQ5ASx-2BMhny=
+o8AvkYEjvP0IC9fIREav-2FzUAlfVeD2wPrGiiLmdeWAeFv5tBLVN3NLNJclLA25m87Rd30ctwt=
+4UsYA-2BW3dM9QyQJyUs9IpliNxx9jOrEwyQufxzKzw6BuvYSYxzf7FSHCBVc82aowJQ4Lgapp-=
+2Bw9-2FWVGJW8-2BPpepi3N0l6uzcnTzKxKaVsuYDN8hOBZ-2BA3dgM0cr-2B-2FSnS8IFtAkbK=
+rB9JpFgukQRy-2BylNk3xpuF8mHNqRLAZVXInNOV2OTGltwE1ZaXXgQKxWAU4kfM5f4bwzicRJG=
+uzLp4ztg8SoX64Lx3H2wy5C5N2yCZyb4EzrpUhO-2BynddRC2yalgaxqBrcRiQkwz-2FaWNCiXl=
+yEEfNd7-2Fo0VduxR6rwpqTSSSk-2F0kAUj0zPPix-2Fac-2FmZEojz4hKuqUmGoUBwoFORHWJV=
+wAeMqUeZ9lLbyuNoodW-2Bz-2Fatyco3PjDtI4fo9EPkyPdC1R2mQdcbW5i5-2FArefGcBfoJMB=
+VoNo-2BZmlfaQev7IOIfVmluzpofUwfRPc8sbZyQjsqtYvgjNAqeztFBf9dA5UzoJFxypIZfqVz=
+q7oJvUhB9so7t6XTcjX0HcwmcEMdGBIUVo-2Bc4f77StDO8P9kTeT1kBQiU6fod0c0mlYLiaiJs=
+tOC0Z-2FJhotiMeqCrtYjD3-2FR2xMcyyOf4jm9tK7lcR0zSuz9wbFzsl-2Fjk8C2tzXPgv7JoF=
+Tyz85y96sEkUrwAwh7a4rcIr2geA0221VohLL-2BBhY4tGhY6v4VJlW-2FfN-2BvpCep7o2ThKW=
+9lh-2BSraN4XAvW" style=3D"color: #2196f3; text-decoration: none;">FAQ</a> f=
+or more details.
+                      <div style=3D"line-height: 16px; height: 16px;">&nbsp=
+;</div>
+                     =20
+At a high level, this is what we=E2=80=99re changing:
+               =20
+<ul>
+  <li><strong style=3D"font-weight: bold;">Unity Personal: No Runtime Fee, =
+splash screen optional.</strong> The Unity Personal plan will remain free a=
+nd there will be no Runtime Fees for games built with the plan. We will be =
+increasing the revenue limit from $100,000 USD to $200,000 USD and we will =
+remove the requirement to use the <i>Made with Unity</i> splash screen (sta=
+rting with the LTS version releasing in 2024, currently referred to as the =
+2023 LTS, or later).
+</li>
+  <li><strong style=3D"font-weight: bold;">Runtime Fee is forward-looking.<=
+/strong> For Unity Pro & Enterprise, the Runtime Fee does not apply to any =
+games created with any currently supported Unity versions. It only applies =
+to games created with or upgraded to the LTS version releasing in 2024 (cur=
+rently referred to as the 2023 LTS) or later.</li>
+                  =20
+                        <li><strong style=3D"font-weight: bold;">Editor Ter=
+ms.</strong> We will make sure that you can stay on the terms applicable fo=
+r the version of Unity you are using  - as long as you keep using that vers=
+ion.
+</li>
+                        <li><strong style=3D"font-weight: bold;">Runtime Fe=
+e, self-reported.</strong> On a monthly basis, you have a choice of the les=
+ser of 2.5% revenue share or the calculated amount based on unique initial =
+engagements. Both are self-reported from data you already have available. Y=
+ou will always be billed the lesser amount.</li>
+                      </ul>
+
+                     =20
+
+                        <div style=3D"line-height: 16px; height: 16px;">&nb=
+sp;</div>
+                     =20
+We understand that you may still have questions after reading our letter an=
+d the <a href=3D"http://url3090.unity3d.com/ls/click?upn=3DvEX9nigFznyBvc0R=
+-2FJA8pMddUo9hcDxptZVjKjzyVNhj3WivkjaxFCU63WOIglS-2F78N-_H65ljNg3foEJU6dJQZ=
+HMcp3Zdimzb4muCFBEwI-2BtxR7aXLQexRs1laU0b9joqbG63Frx-2BUOoPb1bjgVFp6rR9Fd2y=
+hevCx73tz7diy3Od-2BautHdTGeVsVtDjo3PDj8Ws-2FWfU2Uy3HG-2BDiKieGxHTjJqe3ZuuSI=
+KeH42x6lQQKzezDHv9Xrgl017DzV61GDx80W900hGKeRSMn6XZq9MCX3k8JQ08AoyXbunOpthNT=
+gACIQGwGZelz95ZUXYW1-2FEQni5o91vtwUSTXObN2lLC9p6thaPI19xT9o-2FDQ5ASx-2BMhny=
+o8AvkYEjvP0IC9fIREav-2FzUAlfVeD2wPrGiiLmdeWAeFv5tBLVN3NLNJclLA25m87Rd30ctwt=
+4UsYA-2BW3dM9QyQJyUs9IpliNxx9jOrEwyQufxzKzw6BuvYSYxzf7FSHCBVc82aowJQ4Lgapp-=
+2Bw9-2FWVGJW8-2BPpepi3N0l6uzcnTzKxKaVsuYDN8hOBZ-2BA3dgM0cr-2B-2FSnS8IFtAkbK=
+rB9JpFgukQRy-2BylNk3xpuF8mHNqRLAZVXInNOV2OTGltwE1ZaXXgQKxWAU4kfM5f4bwzicRJG=
+uzLp4ztg8SoX64Lx3H2wy5C5N2yCZyb4EzrpUhO-2BynddRC2yalgaxqBrcRiQkwz-2FaWNCiXl=
+yEEfNd7-2Fo0VduxR6rwpqTSSSk-2F0kAUj0zPPix-2Fac-2FmZEojz4hKuqUmGoUBwoFORHWJV=
+wAeMqUeZ9lLbyuNoodW-2Bz-2Fatyco3PjDtI4fo9EPkyPdC1R2mQdcbW5i5-2FArefGcBfoJMB=
+VoNo-2BZmlfaQev7IOIfVmluzpofUwfRPc8sbZyQjsqtYvgjNAqeztFBf9dA5UzoJFxypIZfqVz=
+q7oJvUhB9spP7Pv5bDypkmCis17Um0WKtj-2FQQwYBE2I3OCW4nhHJYeEF4D2PwBajNcSAkiGNe=
+bxF3gSjTt4Xvq4kGycBfj23dnChqhKO-2BkOb3W6GmPIuWSujDLx6ikp3zeOK7-2FxC1SvoYWC9=
+YCujDkeCpIdSHc4L7MRBHZIBcHyN8iO2CE45SLq5oIgfsDH1MAYMA-2FCtSnrKv9Wsoh9rOP7sF=
+v0Cq4SB" style=3D"color: #2196f3; text-decoration: none;">FAQ</a>. To get a=
+nswers, we invite you to join us for a live fireside chat with Marc Whitten=
+, President of Unity Create, hosted by Jason Weimann, industry veteran and =
+content creator, on his <a href=3D"http://url3090.unity3d.com/ls/click?upn=
+=3DvEX9nigFznyBvc0R-2FJA8pFm2cZQXp3PNvZXT0diHz7sSQUWlj2K59EyDelytAhKK3Xpn_H=
+65ljNg3foEJU6dJQZHMcp3Zdimzb4muCFBEwI-2BtxR7aXLQexRs1laU0b9joqbG63Frx-2BUOo=
+Pb1bjgVFp6rR9Fd2yhevCx73tz7diy3Od-2BautHdTGeVsVtDjo3PDj8Ws-2FWfU2Uy3HG-2BDi=
+KieGxHTjJqe3ZuuSIKeH42x6lQQKzezDHv9Xrgl017DzV61GDx80W900hGKeRSMn6XZq9MCX3k8=
+JQ08AoyXbunOpthNTgACIQGwGZelz95ZUXYW1-2FEQni5o91vtwUSTXObN2lLC9p6thaPI19xT9=
+o-2FDQ5ASx-2BMhnyo8AvkYEjvP0IC9fIREav-2FzUAlfVeD2wPrGiiLmdeWAeFv5tBLVN3NLNJ=
+clLA25m87Rd30ctwt4UsYA-2BW3dM9QyQJyUs9IpliNxx9jOrEwyQufxzKzw6BuvYSYxzf7FSHC=
+BVc82aowJQ4Lgapp-2Bw9-2FWVGJW8-2BPpepi3N0l6uzcnTzKxKaVsuYDN8hOBZ-2BA3dgM0cr=
+-2B-2FSnS8IFtAkbKrB9JpFgukQRy-2BylNk3xpuF8mHNqRLAZVXInNOV2OTGltwE1ZaXXgQKxW=
+AU4kfM5f4bwzicRJGuzLp4ztg8SoX64Lx3H2wy5C5N2yCZyb4EzrpUhO-2BynddRC2yalgaxqBr=
+cRiQkwz-2FaWNCiXlyEEfNd7-2Fo0VduxR6rwpqTSSSk-2F0kAUj0zPPix-2Fac-2FmZEojz4hK=
+uqUmGoUBwoFORHWJVwAeMqUeZ9lLbyuNoodW-2Bz-2Fatyco3PjDtI4fo9EPkyPdC1R2mQdcbW5=
+i5-2FArefGcBfoJMBVoNo-2BZmlfaQev7IOIfVmluzpofUwfRPc8sbZyQjsqtYvgjNAqeztFBf9=
+dA5UzoJFxypIZfqVzq7oJvUhB9sozKgAmZOugJnSpGuhgIs6DaM2CBN48-2FXSAqhVkM4ghVOpK=
+N6KYkOF4SdP9tc7-2Bs-2BQJWDaxYO1p9DlMjt1S7o4n8plzZQoATOGlyY1clMIZcmSMyq039h9=
+zP6SqakQMLuAo524zNwWzSgKGfefEwS4sXvm5nk6GL1WZdXhSiRLqVwYA2Jl9eFsOr-2ByJsWU1=
+e1syAN7WLUKK828CQMfEGTV1" style=3D"color: #2196f3; text-decoration: none;">=
+YouTube channel</a>, today at 4:00 pm ET/ 1:00 pm PT.        =20
+                      <div style=3D"line-height: 32px; height: 32px;">&nbsp=
+;</div>
+                     =20
+                     =20
+                     =20
+                     =20
+                     =20
+                     =20
+                     =20
+                     =20
+
+
+Thanks for creating with Unity,
+<div class=3D"height8" style=3D"line-height: 8px; height: 8px;">&nbsp;</div=
+>
+
+The Unity team =20
+
+
+                    <div class=3D"block-gap" style=3D"line-height: 56px; he=
+ight: 56px;">&nbsp;</div>
+                    <!-- /block 1 -->
+<table align=3D"center">
+                  <tr>
+                    <td align=3D"center" class=3D"footer" style=3D"color: #=
+A5A5A5; font-family: 'Roboto', Arial, sans-serif; font-weight: 300; font-si=
+ze: 11px; line-height: 20px; margin: 0; padding: 24px 0 50px 0;">
+                      <a style=3D"color: inherit; text-decoration: none">Un=
+ity Technologies, 30 3rd Street, San Francisco, CA 94103, United States.</a=
+><br />
+                      <a href=3D"http://url3090.unity3d.com/ls/click?upn=3D=
+A9uiGOpHRihwdZwmfolhr20s3NZ24QXlSbLTMi8YvkA73lbV-2BxEfgzYtrAWDX4OTZ-2FB5u96=
+VPULu9oXOaXa4Xg-3D-3DT1u7_H65ljNg3foEJU6dJQZHMcp3Zdimzb4muCFBEwI-2BtxR7aXLQ=
+exRs1laU0b9joqbG63Frx-2BUOoPb1bjgVFp6rR9Fd2yhevCx73tz7diy3Od-2BautHdTGeVsVt=
+Djo3PDj8Ws-2FWfU2Uy3HG-2BDiKieGxHTjJqe3ZuuSIKeH42x6lQQKzezDHv9Xrgl017DzV61G=
+Dx80W900hGKeRSMn6XZq9MCX3k8JQ08AoyXbunOpthNTgACIQGwGZelz95ZUXYW1-2FEQni5o91=
+vtwUSTXObN2lLC9p6thaPI19xT9o-2FDQ5ASx-2BMhnyo8AvkYEjvP0IC9fIREav-2FzUAlfVeD=
+2wPrGiiLmdeWAeFv5tBLVN3NLNJclLA25m87Rd30ctwt4UsYA-2BW3dM9QyQJyUs9IpliNxx9jO=
+rEwyQufxzKzw6BuvYSYxzf7FSHCBVc82aowJQ4Lgapp-2Bw9-2FWVGJW8-2BPpepi3N0l6uzcnT=
+zKxKaVsuYDN8hOBZ-2BA3dgM0cr-2B-2FSnS8IFtAkbKrB9JpFgukQRy-2BylNk3xpuF8mHNqRL=
+AZVXInNOV2OTGltwE1ZaXXgQKxWAU4kfM5f4bwzicRJGuzLp4ztg8SoX64Lx3H2wy5C5N2yCZyb=
+4EzrpUhO-2BynddRC2yalgaxqBrcRiQkwz-2FaWNCiXlyEEfNd7-2Fo0VduxR6rwpqTSSSk-2F0=
+kAUj0zPPix-2Fac-2FmZEojz4hKuqUmGoUBwoFORHWJVwAeMqUeZ9lLbyuNoodW-2Bz-2Fatyco=
+3PjDtI4fo9EPkyPdC1R2mQdcbW5i5-2FArefGcBfoJMBVoNo-2BZmlfaQev7IOIfVmluzpofUwf=
+RPc8sbZyQjsqtYvgjNAqeztFBf9dA5UzoJFxypIZfqVzq7oJvUhB9sp42bQrY85BJarhzKDMixq=
+qwwHY97SgYNfVsep4Voex9EgSYt452YDfP9Fij-2BvFNReWsXS-2FwdHK37BE-2FPLk5lzjTqm4=
+z4MnIO7BnVBjF2uFr8Pz0wNKPRfL03M86l-2BzH06NsLchp4wWBzwqn3tpyJYRtqeUqBUL81xK4=
+BtR6g8ArTx6b-2BKxISorjMKTWuUCBnz4qU8a65-2B96T-2BY3ALPPIfe" style=3D"color: =
+#606060; text-decoration: none;">Privacy policy</a> - <a href=3D"http://url=
+3090.unity3d.com/ls/click?upn=3DA9uiGOpHRihwdZwmfolhr20s3NZ24QXlSbLTMi8YvkD=
+huYNvbpoxCuLoq1uKCjq5kQBXQ8Q9nPKd6Gh4nWtOuA-3D-3DjC06_H65ljNg3foEJU6dJQZHMc=
+p3Zdimzb4muCFBEwI-2BtxR7aXLQexRs1laU0b9joqbG63Frx-2BUOoPb1bjgVFp6rR9Fd2yhev=
+Cx73tz7diy3Od-2BautHdTGeVsVtDjo3PDj8Ws-2FWfU2Uy3HG-2BDiKieGxHTjJqe3ZuuSIKeH=
+42x6lQQKzezDHv9Xrgl017DzV61GDx80W900hGKeRSMn6XZq9MCX3k8JQ08AoyXbunOpthNTgAC=
+IQGwGZelz95ZUXYW1-2FEQni5o91vtwUSTXObN2lLC9p6thaPI19xT9o-2FDQ5ASx-2BMhnyo8A=
+vkYEjvP0IC9fIREav-2FzUAlfVeD2wPrGiiLmdeWAeFv5tBLVN3NLNJclLA25m87Rd30ctwt4Us=
+YA-2BW3dM9QyQJyUs9IpliNxx9jOrEwyQufxzKzw6BuvYSYxzf7FSHCBVc82aowJQ4Lgapp-2Bw=
+9-2FWVGJW8-2BPpepi3N0l6uzcnTzKxKaVsuYDN8hOBZ-2BA3dgM0cr-2B-2FSnS8IFtAkbKrB9=
+JpFgukQRy-2BylNk3xpuF8mHNqRLAZVXInNOV2OTGltwE1ZaXXgQKxWAU4kfM5f4bwzicRJGuzL=
+p4ztg8SoX64Lx3H2wy5C5N2yCZyb4EzrpUhO-2BynddRC2yalgaxqBrcRiQkwz-2FaWNCiXlyEE=
+fNd7-2Fo0VduxR6rwpqTSSSk-2F0kAUj0zPPix-2Fac-2FmZEojz4hKuqUmGoUBwoFORHWJVwAe=
+MqUeZ9lLbyuNoodW-2Bz-2Fatyco3PjDtI4fo9EPkyPdC1R2mQdcbW5i5-2FArefGcBfoJMBVoN=
+o-2BZmlfaQev7IOIfVmluzpofUwfRPc8sbZyQjsqtYvgjNAqeztFBf9dA5UzoJFxypIZfqVzq7o=
+JvUhB9soSCFzcyCqseo5FBBGYSGTyDXUQhifZMmsatAdVxzB9rTHU6f-2B4XSfMMirsyMmCiFG1=
+6TJtxRC1heri44tXNbJRJz5Q3DxUF4jSpNimuyHDnEDvDlgXJGrCkm-2FVLP-2Fdd75EWJo7xCn=
+F3jwB1m922iXzAGBpxBxZM3H5DgBSljfU2hKqiTfJ2RQ7e6fkV1wXazRdLhQRr6rdP5JJYdzF3e=
+Sb" style=3D"color: #606060; text-decoration: none;">Terms and Conditions</=
+a> - Copyright Unity Technologies &copy; 2023
+                    </td>
+                  </tr>
+                </table>
+
+
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+      </tbody>
+    </table><img src=3D"http://url3090.unity3d.com/wf/open?upn=3DI2ZneDYMm3=
+0bX-2BRxYz82EqVmWgovkXO1mHRl89j0THwceRyLUjkC-2BOmn81oVuGznK2dF1mtOO1jqGN3SL=
+PMhURYgUc6h65wpFd6giA7y8MLYAfnjGxoBBnr08Odre5rziqYvezoDkAM5N-2B8-2FDlULjI7G=
+aKP3xE-2B1lOAtvoURxiyHiKV4uXxB-2BMotfBkLMXoiYUjofDJlBTKz9PxWkqQNr-2BLpEUn59=
+JuotWvTbxyWWNgz4OCkvIScnNr1M4ObizpHj017h3TygEL5FyJeaX4WBxbLepUqv1uJc5UL3ROI=
+XjULHUJxFta2M0UpAhQvZ878FkKoOS-2BOwj7HLUxqe-2FjZ1kqoKKnKyJ5Puk-2Fc6JXspIqER=
+UDZ9mNc9psL39cmKwvzUelqfNa42OKCb9JacRLnrWHp06XWcBUSNfFHmelB-2BKV0gHvcIx0NDf=
+XjcRpQAtVOYwX8LkBSTWoUj0kaXBzFYTS4Kf0ryt5J-2Fx-2ForJPVFf2FVeKF7LBd1qoSQ0z0R=
+bSKrErEBn05UpsifRR-2ByPkQL47bGKBCuYUsDaqjX-2Fc-2B-2FWTKYcvFVeBZNcdKO1hODuFO=
+1LYF42W-2BqlyNi9C8uQOTH-2B7i4sjnM4oFt1g1v2srdeAGHHy2iSwiWNhGbAsEalqhHyhzghg=
+5bN-2BFX8PSbGnAMnWSmG5E3PkACYtdc67V-2Fk8uBcF-2FAE4uFT51Byzcy-2FjZie6-2FANUC=
+EM5t5pLnR3CmEps-2B1HwpgjxBx0DmR5AZRL14Cep7Ag8-2BPirefk-2BG8sSf68ZqWttK1e3AE=
+a4QlwmNwIKYy1kV1tg6LaWI7vwenB6gW65NPbG6Z3xoNEMSVNRtv5I5HxP2fYGr6yR1bvMwwE7z=
+BDG9iQLpW2iiOhrnEHeV4C4RLbH7DnPWNEG5hdZeFi9-2FpQihu6XRzpL1OSAq4l4t8LZlkgq5g=
+2QrP1LljWMPItx-2FIFGNkJee-2FtR82Kv2NSS51b5otdAWxQBQ286VQH6PpfYxj0oYQjO24neN=
+6bw0cbwbKfJ0s5q3lJXmZJEbKKieQppw9-2F9ji3bsiPRAMLRiFt9ndIbNRQO-2FFAJgFBsyVok=
+TKGjsGLYhgRWSaoS6" alt=3D"" width=3D"1" height=3D"1" border=3D"0" style=3D"=
+height:1px !important;width:1px !important;border-width:0 !important;margin=
+-top:0 !important;margin-bottom:0 !important;margin-right:0 !important;marg=
+in-left:0 !important;padding-top:0 !important;padding-bottom:0 !important;p=
+adding-right:0 !important;padding-left:0 !important;"/></body></html>
+--b43c343f64be1a0be1e5591f62b7138d2e91584574169cba4911848d38ac--

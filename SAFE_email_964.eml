@@ -1,0 +1,1926 @@
+X-GM-THRID: 1817436508666961329
+X-Gmail-Labels: Inbox,Category Promotions,Unread
+Delivered-To: azfarali007.aa@gmail.com
+Received: by 2002:ad4:4103:0:b0:6d4:2160:7508 with SMTP id i3csp3912633qvp;
+        Tue, 3 Dec 2024 08:15:20 -0800 (PST)
+X-Google-Smtp-Source: AGHT+IEGT4gw3ENMz60Yp5DDGYcjMabvbhKE1z1AgZ4iHQGJqSmbJDqlAYC+DXsN6rUOsiyu2bgW
+X-Received: by 2002:a05:6a21:6da6:b0:1d8:f62d:3585 with SMTP id adf61e73a8af0-1e16539f794mr3890724637.5.1733242519810;
+        Tue, 03 Dec 2024 08:15:19 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1733242519; cv=none;
+        d=google.com; s=arc-20240605;
+        b=fTCREIiaQ9CQdE2E0+hnEbijqLZjjDCVhJTuKJ+i7hXYwUIlKoCWaD4o6qGILqPXjA
+         GBz6SB+RaG0dpLfGFWy2MfCFDtxAObzsOqtWpFX7+yt+9/5kuKFXNaeEttehONATLUGV
+         3wTOCdnJCeW6k3EP24HA75rIx9G+BNIsZ9C9i5mgTtNsB+YM5etx39SaWGyoTHZaShMm
+         dApOXTJSkxR7ArN7FQu41qlZfzWICsZm5M1iLgO6so/fPSOKB5sfbLAhSNYiYV0GdUpn
+         a76fzIMHOoxnYTx+Cpp6Q1vYBjXNdN9blPKFH6vEmXzy6PYNmJ/EXlHE2/9rUYfqEBM2
+         VPjA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=message-id:feedback-id:to:from:subject:mime-version:date
+         :dkim-signature:dkim-signature;
+        bh=Eycl/Msw3HHIOjfSJabeQ8eWjWms+2SA1tJKq2M5HBs=;
+        fh=1ghr3/vhIGL7+ytS5gYC2yrxOtO8q7dbhZ8cIHrxcdk=;
+        b=KlPbBI0GP5yA9XwtjTrqX97V8yB/AByOVTVXTFUWOe0g3g2iW+wOEOtU4S72dqkfnT
+         234ZvpEFufKMYzK+Ffvfa1PrUVItPFybFlYdUX/hY3zYoya290X19tnqJ5iMx6wibqLC
+         0MRl23BkLXXmFcfBc8uUS3gspB5p1U2fgvd7+i4g/rz9ouggc8aDWTTDue4WaUYzKr2E
+         ji06zr9gSYLnWQqkDXFfG4V7lLNJp07uosT95k1CgXf9PsFLNs7SrhyEH+PakK2bCRRa
+         QkNaZb5JQthx3VlIA0goaRYOoBTpup//lcJ+ZrM+pZ9s3tj6rq11UoX52BwpbiXat2TY
+         5V9A==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@cio33540.datacamp.com header.s=pic header.b=gdBDNkC7;
+       dkim=pass header.i=@mailgun.org header.s=mg header.b=uHqm8Iwr;
+       spf=pass (google.com: domain of postmaster@cio33540.datacamp.com designates 69.72.44.9 as permitted sender) smtp.mailfrom=postmaster@cio33540.datacamp.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=datacamp.com
+Return-Path: <postmaster@cio33540.datacamp.com>
+Received: from m44-9.mailgun.net (m44-9.mailgun.net. [69.72.44.9])
+        by mx.google.com with UTF8SMTPS id d2e1a72fcca58-725418047b8si14102582b3a.187.2024.12.03.08.15.18
+        for <azfarali007.aa@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Tue, 03 Dec 2024 08:15:19 -0800 (PST)
+Received-SPF: pass (google.com: domain of postmaster@cio33540.datacamp.com designates 69.72.44.9 as permitted sender) client-ip=69.72.44.9;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@cio33540.datacamp.com header.s=pic header.b=gdBDNkC7;
+       dkim=pass header.i=@mailgun.org header.s=mg header.b=uHqm8Iwr;
+       spf=pass (google.com: domain of postmaster@cio33540.datacamp.com designates 69.72.44.9 as permitted sender) smtp.mailfrom=postmaster@cio33540.datacamp.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=datacamp.com
+DKIM-Signature: a=rsa-sha256; v=1; c=relaxed/relaxed; d=cio33540.datacamp.com; q=dns/txt; s=pic; t=1733242518; x=1733249718;
+ h=Message-Id: To: To: From: From: Subject: Subject: Content-Type: Mime-Version: Date: X-Feedback-Id: Sender;
+ bh=Eycl/Msw3HHIOjfSJabeQ8eWjWms+2SA1tJKq2M5HBs=;
+ b=gdBDNkC7jhJ273rnWljFw5scu4/zhnr/MTXx4OizmprZ6oacz86XqmF47bPHVIDJ/FTiXOc2TsKaL4atby/l+MTZr5ZoujaklBYljPftRAtc2/3NDooTRanN5YQ+n2OKNGVF3Yuo/iRneLoQSHrrLEa7Qq+0ke2MnREC63+zXy8=
+DKIM-Signature: a=rsa-sha256; v=1; c=relaxed/relaxed; d=mailgun.org; q=dns/txt; s=mg; t=1733242518; x=1733249718;
+ h=Message-Id: To: To: From: From: Subject: Subject: Content-Type: Mime-Version: Date: X-Feedback-Id: Sender;
+ bh=Eycl/Msw3HHIOjfSJabeQ8eWjWms+2SA1tJKq2M5HBs=;
+ b=uHqm8IwrRrD7Puw3XRXqo7U0h2QqQg+MTMRsR5fZr8H9HrBq6z3cvpHER/M9Ae1kKf/CRzz28MD8hsdhcXtQDl9XRyEYPdknfEuKfqK6/BNrUccuNpkiFfSuv2t3j2SnP1tfZGdRyOXOUW7vw2/fDbNHcM8aSJ0dPjJiq6Zkk7Y=
+X-Feedback-Id: postmaster@cio33540.datacamp.com::5ddd74a2f4ee83003eecbcb5:mailgun
+X-Mailgun-Sending-Ip: 69.72.44.9
+X-Mailgun-Sending-Ip-Pool-Name: 
+X-Mailgun-Sending-Ip-Pool: 
+X-Mailgun-Sid: WyJkNmExNiIsImF6ZmFyYWxpMDA3LmFhQGdtYWlsLmNvbSIsIjIzNDhjNSJd
+Received: by bb46ffef8728 with HTTP id 674f2e8f7117bd054ce85370; Tue, 03 Dec 2024
+ 16:15:11 GMT
+Date: Tue, 03 Dec 2024 16:15:11 +0000
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="073ce020e793459b60b26705fe95ff9549a139d8c9b21859dde12477b019"
+Subject: New Course: Intermediate GitHub Concepts
+From: DataCamp Insights <team@datacamp.com>
+To: azfarali007.aa@gmail.com
+X-Mailgun-Dkim: true
+X-Mailgun-Native-Send: true
+X-Mailgun-Track-Clicks: false
+X-Mailgun-Track-Opens: false
+Feedback-Id: 241203_1-newsletter-academic_2-b2c_3-all_4-na_5-na_6-dc-insights_7-na_8-emal-ci_9-na_10-bau_11-email:customerio
+X-Mailer: Customer.io (dgTdhwQDAJiu2AaWrtgGAZONTcq4qZnv7X9ZvCb84Q==;
+ +https://whatis.customeriomail.com)
+X-Report-Abuse-To: badactor@customer.io
+X-Mailgun-Variables: {"email_id": "dgTdhwQDAJiu2AaWrtgGAZONTcq4qZnv7X9ZvCb84Q=="}
+Message-Id: <20241203161511.9f50fac413cf67ce@cio33540.datacamp.com>
+
+--073ce020e793459b60b26705fe95ff9549a139d8c9b21859dde12477b019
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset="utf-8"
+
+Take your GitHub skills to the next level with this new course. Plus, don't=
+ miss our upcoming
+events!=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=
+=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=
+=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=
+=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=
+=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=
+=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=
+=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C
+DataCamp ( https://learn.datacamp.com?utm_source=3Dcustomerio&utm_medium=3D=
+email&utm_campaign=3D241203_1-newsletter-academic_3-all_4-na_5-na_6-dc-insi=
+ghts_7-na_8-emal-ci_9-na_10-bau_11-email&utm_content=3Dblast&utm_term=3Dlog=
+o&dc_euid=3D14105168 )
+
+***************
+Weekly Progress
+***************
+
+NOV 25 - DEC 01
+
+"Whether you think you can or think you can't, you're right"
+
+Henry
+Ford
+
+------------------
+Goal for this Week
+------------------
+
+Complete 5 exercises
+
+Learn Now ( https://www.datacamp.com/courses/16719/continue?utm_source=3Dcu=
+stomerio&utm_medium=3Demail&utm_campaign=3D241203_1-newsletter-academic_3-a=
+ll_4-na_5-na_6-dc-insights_7-na_8-emal-ci_9-na_10-bau_11-email&utm_content=
+=3Dblast&utm_term=3Dstartnow&dc_euid=3D14105168 ) Schedule Time to Learn ( =
+https://calendly.com/data-camp/datacamp-learning-session?name=3DAzfar&email=
+=3Dazfarali007.aa@gmail.com )
+
+---------------
+Track Spotlight
+---------------
+
+----------------------
+Data Analyst in Python
+---------------------- ( https://www.datacamp.com/tracks/data-analyst-with-=
+python?utm_source=3Dcustomerio&utm_medium=3Demail&utm_campaign=3D241203_1-n=
+ewsletter-academic_3-all_4-na_5-na_6-dc-insights_7-na_8-emal-ci_9-na_10-bau=
+_11-email&utm_content=3Dblast&utm_term=3Dspotlight&dc_euid=3D14105168 )cour=
+sesStart your
+journey to ace the Data Analyst Certification and build confidence as a ski=
+lled data analyst. ( https://www.datacamp.com/tracks/data-analyst-with-pyth=
+on?utm_source=3Dcustomerio&utm_medium=3Demail&utm_campaign=3D241203_1-newsl=
+etter-academic_3-all_4-na_5-na_6-dc-insights_7-na_8-emal-ci_9-na_10-bau_11-=
+email&utm_content=3Dblast&utm_term=3Dspotlight&dc_euid=3D14105168 )Learn Mo=
+re
+=E2=86=92 ( https://www.datacamp.com/tracks/data-analyst-with-python?utm_so=
+urce=3Dcustomerio&utm_medium=3Demail&utm_campaign=3D241203_1-newsletter-aca=
+demic_3-all_4-na_5-na_6-dc-insights_7-na_8-emal-ci_9-na_10-bau_11-email&utm=
+_content=3Dblast&utm_term=3Dspotlight&dc_euid=3D14105168 )
+
+-----------
+New Courses
+-----------
+
+courses ( https://www.datacamp.com/courses/intermediate-github-concepts?utm=
+_source=3Dcustomerio&utm_medium=3Demail&utm_campaign=3D241203_1-newsletter-=
+academic_3-all_4-na_5-na_6-dc-insights_7-na_8-emal-ci_9-1_10-bau_11-email&u=
+tm_content=3Dblast&utm_term=3Dnewcourse&dc_euid=3D14105168 )
+
+---------------------------------------------------------------------------=
+---------------------------------------------------------------------------=
+---------------------------------------------------------------------------=
+---------------------------------------------------------------------
+Intermediate GitHub Concepts ( https://www.datacamp.com/courses/intermediat=
+e-github-concepts?utm_source=3Dcustomerio&utm_medium=3Demail&utm_campaign=
+=3D241203_1-newsletter-academic_3-all_4-na_5-na_6-dc-insights_7-na_8-emal-c=
+i_9-1_10-bau_11-email&utm_content=3Dblast&utm_term=3Dnewcourse&dc_euid=3D14=
+105168 )
+---------------------------------------------------------------------------=
+---------------------------------------------------------------------------=
+---------------------------------------------------------------------------=
+---------------------------------------------------------------------
+
+> ( https://www.datacamp.com/courses/intermediate-github-concepts?utm_sourc=
+e=3Dcustomerio&utm_medium=3Demail&utm_campaign=3D241203_1-newsletter-academ=
+ic_3-all_4-na_5-na_6-dc-insights_7-na_8-emal-ci_9-1_10-bau_11-email&utm_con=
+tent=3Dblast&utm_term=3Dnewcourse&dc_euid=3D14105168 )courses ( https://www=
+=2Edatacamp.com/courses/explainable-ai=
+-in-python?utm_source=3Dcustomerio&utm_=
+medium=3Demail&utm_campaign=3D241203_1-newsletter-academic_3-all_4-na_5-na_=
+6-dc-insights_7-na_8-emal-ci_9-2_10-bau_11-email&utm_content=3Dblast&utm_te=
+rm=3Dnewcourse&dc_euid=3D14105168 )
+
+---------------------------------------------------------------------------=
+---------------------------------------------------------------------------=
+---------------------------------------------------------------------------=
+-------------------------------------------------------------
+Explainable AI in Python ( https://www.datacamp.com/courses/explainable-ai-=
+in-python?utm_source=3Dcustomerio&utm_medium=3Demail&utm_campaign=3D241203_=
+1-newsletter-academic_3-all_4-na_5-na_6-dc-insights_7-na_8-emal-ci_9-2_10-b=
+au_11-email&utm_content=3Dblast&utm_term=3Dnewcourse&dc_euid=3D14105168 )
+---------------------------------------------------------------------------=
+---------------------------------------------------------------------------=
+---------------------------------------------------------------------------=
+-------------------------------------------------------------
+
+> ( https://www.datacamp.com/courses/explainable-ai-in-python?utm_source=3D=
+customerio&utm_medium=3Demail&utm_campaign=3D241203_1-newsletter-academic_3=
+-all_4-na_5-na_6-dc-insights_7-na_8-emal-ci_9-2_10-bau_11-email&utm_content=
+=3Dblast&utm_term=3Dnewcourse&dc_euid=3D14105168 )
+
+-----------
+Code-Alongs
+-----------
+
+---------------------------------------------------------------------------=
+---------------------------------------------------------------------------=
+---------------------------------------------------------------------------=
+---------------------------------------------------------------------------=
+----------------------------
+Evaluating LLM Performance with AWS Bedrock ( https://www.datacamp.com/webi=
+nars/evaluating-llm-performance-with-aws-bedrock?utm_source=3Dcustomerio&ut=
+m_medium=3Demail&utm_campaign=3D241203_1-newsletter-academic_3-all_4-na_5-n=
+a_6-dc-insights_7-na_8-emal-ci_9-1_10-bau_11-email&utm_content=3Dblast&utm_=
+term=3Dlivetraining&dc_euid=3D14105168 )
+---------------------------------------------------------------------------=
+---------------------------------------------------------------------------=
+---------------------------------------------------------------------------=
+---------------------------------------------------------------------------=
+----------------------------
+
+> ( https://www.datacamp.com/webinars/evaluating-llm-performance-with-aws-b=
+edrock?utm_source=3Dcustomerio&utm_medium=3Demail&utm_campaign=3D241203_1-n=
+ewsletter-academic_3-all_4-na_5-na_6-dc-insights_7-na_8-emal-ci_9-1_10-bau_=
+11-email&utm_content=3Dblast&utm_term=3Dlivetraining&dc_euid=3D14105168 )
+
+---------------------------------------------------------------------------=
+---------------------------------------------------------------------------=
+---------------------------------------------------------------------------=
+---------------------------------------------------------------------------=
+--
+Introducci=C3=B3n a SQL en Espa=C3=B1ol ( https://www.datacamp.com/webinars=
+/introduccion-a-sql-en-espanol?utm_source=3Dcustomerio&utm_medium=3Demail&u=
+tm_campaign=3D241203_1-newsletter-academic_3-all_4-na_5-na_6-dc-insights_7-=
+na_8-emal-ci_9-2_10-bau_11-email&utm_content=3Dblast&utm_term=3Dlivetrainin=
+g&dc_euid=3D14105168 )
+---------------------------------------------------------------------------=
+---------------------------------------------------------------------------=
+---------------------------------------------------------------------------=
+---------------------------------------------------------------------------=
+--
+
+> ( https://www.datacamp.com/webinars/introduccion-a-sql-en-espanol?utm_sou=
+rce=3Dcustomerio&utm_medium=3Demail&utm_campaign=3D241203_1-newsletter-acad=
+emic_3-all_4-na_5-na_6-dc-insights_7-na_8-emal-ci_9-2_10-bau_11-email&utm_c=
+ontent=3Dblast&utm_term=3Dlivetraining&dc_euid=3D14105168 )
+
+--------
+Webinars
+--------
+
+---------------------------------------------------------------------------=
+---------------------------------------------------------------------------=
+---------------------------------------------------------------------------=
+---------------------------------------------------------------------------=
+-------------
+Running a Cloud Transformation Program ( https://www.datacamp.com/webinars/=
+running-a-cloud-transformation-program?utm_source=3Dcustomerio&utm_medium=
+=3Demail&utm_campaign=3D241203_1-newsletter-academic_3-all_4-na_5-na_6-dc-i=
+nsights_7-na_8-emal-ci_9-1_10-bau_11-email&utm_content=3Dblast&utm_term=3Dw=
+ebinar&dc_euid=3D14105168 )
+---------------------------------------------------------------------------=
+---------------------------------------------------------------------------=
+---------------------------------------------------------------------------=
+---------------------------------------------------------------------------=
+-------------
+
+> ( https://www.datacamp.com/webinars/running-a-cloud-transformation-progra=
+m?utm_source=3Dcustomerio&utm_medium=3Demail&utm_campaign=3D241203_1-newsle=
+tter-academic_3-all_4-na_5-na_6-dc-insights_7-na_8-emal-ci_9-1_10-bau_11-em=
+ail&utm_content=3Dblast&utm_term=3Dwebinar&dc_euid=3D14105168 )
+
+---------------------------------------------------------------------------=
+---------------------------------------------------------------------------=
+---------------------------------------------------------------------------=
+---------------------------------------------------------------------------=
+-------------------------------
+The EU AI Act: How Will It Affect Your Business? ( https://www.datacamp.com=
+/webinars/the-eu-ai-act-how-will-it-affect-your-business?utm_source=3Dcusto=
+merio&utm_medium=3Demail&utm_campaign=3D241203_1-newsletter-academic_3-all_=
+4-na_5-na_6-dc-insights_7-na_8-emal-ci_9-2_10-bau_11-email&utm_content=3Dbl=
+ast&utm_term=3Dwebinar&dc_euid=3D14105168 )
+---------------------------------------------------------------------------=
+---------------------------------------------------------------------------=
+---------------------------------------------------------------------------=
+---------------------------------------------------------------------------=
+-------------------------------
+
+> ( https://www.datacamp.com/webinars/the-eu-ai-act-how-will-it-affect-your=
+-business?utm_source=3Dcustomerio&utm_medium=3Demail&utm_campaign=3D241203_=
+1-newsletter-academic_3-all_4-na_5-na_6-dc-insights_7-na_8-emal-ci_9-2_10-b=
+au_11-email&utm_content=3Dblast&utm_term=3Dwebinar&dc_euid=3D14105168 )
+
+---------------------------------------------------------------------------=
+---------------------------------------------------------------------------=
+---------------------------------------------------------------------------=
+---------------------------------------------------------------------------=
+-------------------------------------------------------------------
+Preparing for the GitHub Foundations Certification Program ( https://www.da=
+tacamp.com/webinars/preparing-for-the-github-foundations-certification-prog=
+ram-with-datacamp?utm_source=3Dcustomerio&utm_medium=3Demail&utm_campaign=
+=3D241203_1-newsletter-academic_3-all_4-na_5-na_6-dc-insights_7-na_8-emal-c=
+i_9-3_10-bau_11-email&utm_content=3Dblast&utm_term=3Dwebinar&dc_euid=3D1410=
+5168 )
+---------------------------------------------------------------------------=
+---------------------------------------------------------------------------=
+---------------------------------------------------------------------------=
+---------------------------------------------------------------------------=
+-------------------------------------------------------------------
+
+> ( https://www.datacamp.com/webinars/preparing-for-the-github-foundations-=
+certification-program-with-datacamp?utm_source=3Dcustomerio&utm_medium=3Dem=
+ail&utm_campaign=3D241203_1-newsletter-academic_3-all_4-na_5-na_6-dc-insigh=
+ts_7-na_8-emal-ci_9-3_10-bau_11-email&utm_content=3Dblast&utm_term=3Dwebina=
+r&dc_euid=3D14105168 )
+
+------------
+Top Articles
+------------
+
+---------------------------------------------------------------------------=
+---------------------------------------------------------------------------=
+---------------------------------------------------------------------------=
+------------------------------------------------------
+Learn Data Engineering
+from Scratch in 2025 ( https://www.datacamp.com/blog/how-to-learn-data-engi=
+neering?utm_source=3Dcustomerio&utm_medium=3Demail&utm_campaign=3D241203_1-=
+newsletter-academic_3-all_4-na_5-na_6-dc-insights_7-na_8-emal-ci_9-1_10-bau=
+_11-email&utm_content=3Dblast&utm_term=3Dblog&dc_euid=3D14105168 )
+---------------------------------------------------------------------------=
+---------------------------------------------------------------------------=
+---------------------------------------------------------------------------=
+------------------------------------------------------
+
+> ( https://www.datacamp.com/blog/how-to-learn-data-engineering?utm_source=
+=3Dcustomerio&utm_medium=3Demail&utm_campaign=3D241203_1-newsletter-academi=
+c_3-all_4-na_5-na_6-dc-insights_7-na_8-emal-ci_9-1_10-bau_11-email&utm_cont=
+ent=3Dblast&utm_term=3Dblog&dc_euid=3D14105168 ) Your complete guide to lea=
+rning data engineering, whether starting from scratch or transitioning from=
+ another field. ( https://www.datacamp.com/blog/how-to-learn-data-engineeri=
+ng?utm_source=3Dcustomerio&utm_medium=3Demail&utm_campaign=3D241203_1-newsl=
+etter-academic_3-all_4-na_5-na_6-dc-insights_7-na_8-emal-ci_9-1_10-bau_11-e=
+mail&utm_content=3Dblast&utm_term=3Dblog&dc_euid=3D14105168 )
+
+---------------------------------------------------------------------------=
+---------------------------------------------------------------------------=
+---------------------------------------------------------------------------=
+---------------------------------------------------------------------------=
+-------------
+How to Use ChatGPT for Excel: Tips, Tricks, and Best Practices ( https://ww=
+w.datacamp.com/tutorial/chatgpt-for-excel?utm_source=3Dcustomerio&utm_mediu=
+m=3Demail&utm_campaign=3D241203_1-newsletter-academic_3-all_4-na_5-na_6-dc-=
+insights_7-na_8-emal-ci_9-2_10-bau_11-email&utm_content=3Dblast&utm_term=3D=
+blog&dc_euid=3D14105168 )
+---------------------------------------------------------------------------=
+---------------------------------------------------------------------------=
+---------------------------------------------------------------------------=
+---------------------------------------------------------------------------=
+-------------
+
+> ( https://www.datacamp.com/tutorial/chatgpt-for-excel?utm_source=3Dcustom=
+erio&utm_medium=3Demail&utm_campaign=3D241203_1-newsletter-academic_3-all_4=
+-na_5-na_6-dc-insights_7-na_8-emal-ci_9-2_10-bau_11-email&utm_content=3Dbla=
+st&utm_term=3Dblog&dc_euid=3D14105168 ) Leverage the power of ChatGPT for E=
+xcel to boost your productivity and unlock the full potential of Excel. ( h=
+ttps://www.datacamp.com/tutorial/chatgpt-for-excel?utm_source=3Dcustomerio&=
+utm_medium=3Demail&utm_campaign=3D241203_1-newsletter-academic_3-all_4-na_5=
+-na_6-dc-insights_7-na_8-emal-ci_9-2_10-bau_11-email&utm_content=3Dblast&ut=
+m_term=3Dblog&dc_euid=3D14105168 )
+
+-------
+Podcast
+-------
+
+---------------------------------------------------------------------------=
+---------------------------------------------------------------------------=
+---------------------------------------------------------------------------=
+---------------------------------------------------------------------------=
+-------------------
+What You Need to Know About the EU AI Act ( https://www.datacamp.com/podcas=
+t/what-you-need-to-know-about-the-eu-ai-act?utm_source=3Dcustomerio&utm_med=
+ium=3Demail&utm_campaign=3D241203_1-newsletter-academic_3-all_4-na_5-na_6-d=
+c-insights_7-na_8-emal-ci_9-na_10-bau_11-email&utm_content=3Dblast&utm_term=
+=3Dpodcast&dc_euid=3D14105168 )
+---------------------------------------------------------------------------=
+---------------------------------------------------------------------------=
+---------------------------------------------------------------------------=
+---------------------------------------------------------------------------=
+-------------------
+
+> ( https://www.datacamp.com/podcast/what-you-need-to-know-about-the-eu-ai-=
+act?utm_source=3Dcustomerio&utm_medium=3Demail&utm_campaign=3D241203_1-news=
+letter-academic_3-all_4-na_5-na_6-dc-insights_7-na_8-emal-ci_9-na_10-bau_11=
+-email&utm_content=3Dblast&utm_term=3Dpodcast&dc_euid=3D14105168 )
+clear as data ( https://learn.datacamp.com?utm_source=3Dcustomerio&utm_medi=
+um=3Demail&utm_campaign=3D241203_1-newsletter-academic_3-all_4-na_5-na_6-dc=
+-insights_7-na_8-emal-ci_9-na_10-bau_11-email&utm_content=3Dblast&utm_term=
+=3Dlogo&dc_euid=3D14105168 )Upskill Your Organization ( https://www.datacam=
+p.com/business/demo?utm_source=3Dcustomerio&utm_medium=3Demail&utm_campaign=
+=3D241203_1-newsletter-academic_3-all_4-na_5-na_6-dc-insights_7-na_8-emal-c=
+i_9-na_10-bau_11-email&utm_content=3Dblast&utm_term=3Dteams&dc_euid=3D14105=
+168 )DataCamp, Inc. | 1 Pennsylvania Plaza | Suite 2014 | New York, NY 1011=
+9
+
+Facebook ( https://www.facebook.com/datacampinc/ )X ( https://twitter.com/d=
+atacamp )LinkedIn ( https://www.linkedin.com/company/datacampinc/ )Youtube =
+( https://www.youtube.com/channel/UC79Gv3mYp6zKiSwYemEik9A )Instagram ( htt=
+ps://www.instagram.com/datacamp/?hl=3Den )Apple Store ( https://datacamp.on=
+elink.me/xztQ/p8wathi7 )Google Play ( https://datacamp.onelink.me/xztQ/czaw=
+6r7q )Unsubscribe ( https://www.datacamp.com/mail_preferences/2ffd40a5-ce85=
+-445f-aa59-cd9a8ab7c9d6 )=C2=A0=C2=A0 =C2=A0=C2=A0Privacy Policy ( https://=
+www.datacamp.com/privacy-policy/ )=E2=80=8B ( https://datacamp.com?utm_sour=
+ce=3Dcustomerio&utm_medium=3Demail&utm_term=3Dbot&dc_euid=3D14105168 )
+--073ce020e793459b60b26705fe95ff9549a139d8c9b21859dde12477b019
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset="utf-8"
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.=
+w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns=3D"http://www.w3.=
+org/1999/xhtml" lang=3D"en"><head><meta http-equiv=3D"Content-Type" content=
+=3D"text/html; charset=3Dutf-8"/><meta content=3D"IE=3Dedge" http-equiv=3D"=
+X-UA-Compatible"/><meta name=3D"viewport" content=3D"width=3Ddevice-width, =
+initial-scale=3D1.0"/><meta name=3D"color-scheme" content=3D"light dark"/><=
+meta name=3D"supported-color-schemes" content=3D"light dark"/><title></titl=
+e><style type=3D"text/css">:root{color-scheme: light dark; supported-color-=
+schemes: light dark;}</style><title></title><style type=3D"text/css">/* htt=
+p://meyerweb.com/eric/tools/css/reset/ v2.0 | 20110126 License: none (publi=
+c domain) */html, body, div, span, applet, object, iframe, h1, h2, h3, h4, =
+h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del=
+, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, =
+var, b, u, i, center, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th,=
+ td, article, aside, canvas, details, embed, figure, figcaption, footer, he=
+ader, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio,=
+ video{margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; ve=
+rtical-align: baseline;}/* HTML5 display-role reset for older browsers */ar=
+ticle, aside, details, figcaption, figure, footer, header, hgroup, menu, na=
+v, section{display: block;}body{line-height: 1;}ol, ul{list-style: none;}bl=
+ockquote, q{quotes: none;}blockquote:before, blockquote:after, q:before, q:=
+after{content: ''; content: none;}table{border-collapse: collapse; border-s=
+pacing: 0;}</style><style type=3D"text/css">/* CLIENT-SPECIFIC STYLES */img=
+{-ms-interpolation-mode: bicubic;}/* Force IE to smoothly render resized im=
+ages. */#outlook a{padding: 0;}/* Remove spacing between tables in Outlook =
+2007 and up. */.ReadMsgBody{width: 100%;}.ExternalClass{width: 100%;}/* For=
+ce Outlook.com
+to display emails at full width. */p, a, td{mso-line-height-rule: exactly;}=
+/* Force Outlook to render line heights as they're originally set. */p, a, =
+td, body, table{-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;=
+}/* Prevent Windows- and Webkit-based mobile platforms from changing declar=
+ed text sizes. */.ExternalClass, .ExternalClass p, .ExternalClass td, .Exte=
+rnalClass div, .ExternalClass span, .ExternalClass font{line-height: 100%;}=
+#MessageViewBody a{color: inherit; text-decoration: none; font-size: inheri=
+t; font-family: inherit; font-weight: inherit; line-height: inherit;}/* For=
+ce Outlook.com to display line heights normally. */a[x-apple-data-detectors=
+]{color: inherit !important; text-decoration: none !important; font-size: i=
+nherit !important; font-family: inherit !important; font-weight: inherit !i=
+mportant; line-height: inherit !important;}span.MsoHyperlink{mso-style-prio=
+rity: 99; color: inherit;}span.MsoHyperlinkFollowed{mso-style-priority: 99;=
+ color:
+inherit;}</style><style type=3D"text/css">body{margin: 0; padding: 0;}table=
+{border-spacing: 0;}td{padding: 0;}img{border: 0;}.wrapper{width: 100%; tab=
+le-layout: fixed; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100=
+%;}.webkit{max-width: 600px; margin: 0 auto;}.outer{Margin: 0 auto; width: =
+100%; max-width: 600px;}.full-width-image img{width: 100%; max-width: 600px=
+; height: auto;}.inner{padding: 0px;}.one-column .contents{text-align: left=
+;}.two-column{text-align: center; font-size: 0;}.two-column .column{width: =
+100%; max-width: 300px; display: inline-block; vertical-align: top;}.conten=
+ts{width: 100%;}.two-column img{width: 100%; max-width: 300px; height: auto=
+;}.three-column{text-align: center; font-size: 0; padding-top: 10px; paddin=
+g-bottom: 10px;}.three-column .column{width: 100%; max-width: 200px; displa=
+y: inline-block; vertical-align: top;}.three-column img{width: 100%; max-wi=
+dth: 380px; height: auto;}.icon img{width: 100%; max-width: 100px; height:
+auto;}.three-column .text{padding-top: 10px;}.left-sidebar{text-align: cent=
+er; font-size: 0;}.left-sidebar .column{width: 100%; display: inline-block;=
+ vertical-align: middle;}.left-sidebar .left{max-width: 300px;}.left-sideba=
+r .right{max-width: 300px;}.left-sidebar .img{width: 100%; max-width: 300px=
+; height: auto;}.left-sidebar .contents{text-align: center;}.left-sidebar a=
+{color: #85ab70;}.right-sidebar{text-align: center; font-size: 0;}.right-si=
+debar .column{width: 100%; display: inline-block; vertical-align: middle;}.=
+right-sidebar .left{max-width: 300px;}.right-sidebar .right{max-width: 300p=
+x;}.right-sidebar .img{width: 100%; max-width: 300px; height: auto;}.right-=
+sidebar .contents{font-size: 14px; text-align: center;}.right-sidebar a{col=
+or: #70bbd9;}</style><style type=3D"text/css">@media screen and (-webkit-mi=
+n-device-pixel-ratio:0){.webkit-hide{display: none !important}.webkit-show{=
+display: block !important; max-height: none !important}}</style><style type=
+=3D"text/css">@media screen and (min-width: 401px) and (max-width: 600px){.=
+two-column .column, .two-column img{max-width: 100% !important;}.three-colu=
+mn .column, .three-column img, .six-column .column{max-width: 100% !importa=
+nt;}.three-column .column{max-width: 33% !important;}.two-column .column{ma=
+x-width: 50% !important;}}@media screen and (max-width: 480px){.two-column =
+=2Ecolumn, .two-column img{max-width: 1=
+00% !important;}.three-column .column,=
+ .three-column img, .six-column .column{max-width: 100% !important;}.full{w=
+idth: 100% !important; max-width: none !important;}}</style><style type=3D"=
+text/css">@media (prefers-color-scheme: dark ){/* Shows Dark Mode-Only Cont=
+ent, Like Images */.dark-img{display: block !important; width: auto !import=
+ant; overflow: visible !important; float: none !important; max-height: inhe=
+rit !important; max-width: inherit !important; line-height: auto !important=
+; margin-top: 0px !important; visibility: inherit !important;}/* Hides Ligh=
+t Mode-Only
+Content, Like Images */.light-img{display: none; display: none !important;}=
+/* Custom Dark Mode Background Color */.darkmode{background-color: #ffffff =
+!important; background-image: linear-gradient(#ffffff, #ffffff) !important;=
+}.darkcard{background-color: #05192d !important; background-image: linear-g=
+radient(#05192d, #05192d) !important;}.dark{color: #ffffff !important;}.lig=
+ht{color: #000000 !important;}</style><style type=3D"text/css">/* Shows Dar=
+k Mode-Only Content, Like Images */[data-ogsc] .dark-img{display: block !im=
+portant; width: auto !important; overflow: visible !important; float: none =
+!important; max-height: inherit !important; max-width: inherit !important; =
+line-height: auto !important; margin-top: 0px !important; visibility: inher=
+it !important;}/* Hides Light Mode-Only Content, Like Images */[data-ogsc] =
+=2Elight-img{display: none; display: no=
+ne !important;}[data-ogsc] .dark{color=
+: #ffffff !important;}/* Custom Dark Mode Text Link Color */[data-ogsc] .li=
+ght{color:
+#000000 !important;}/* Custom Dark Mode Font Colors */[data-ogsc] h1, [data=
+-ogsc] h2, [data-ogsc] p, [data-ogsc] span, [data-ogsc] a, [data-ogsc] b{co=
+lor: #ffffff !important;}</style><style type=3D"text/css">/* Shows Dark Mod=
+e-Only Content, Like Images */[data-ogsc] .dark-img{display: block !importa=
+nt; width: auto !important; overflow: visible !important; float: none !impo=
+rtant; max-height: inherit !important; max-width: inherit !important; line-=
+height: auto !important; margin-top: 0px !important; visibility: inherit !i=
+mportant;}/* Hides Light Mode-Only Content, Like Images */[data-ogsc] .ligh=
+t-img{display: none; display: none !important;}[data-ogsc] .dark{color: #ff=
+ffff !important;}/* Custom Dark Mode Text Link Color */[data-ogsc] .light{c=
+olor: #000000 !important;}/* Custom Dark Mode Font Colors */[data-ogsc] h1,=
+ [data-ogsc] h2, [data-ogsc] p, [data-ogsc] span, [data-ogsc] a, [data-ogsc=
+] b{color: #ffffff !important;}</style><style type=3D"text/css">@media
+screen{@font-face{font-family: "StudioFeixenSans"; src: url("https://waffle=
+s.datacamp.com/fonts/StudioFeixenSans-Regular.woff2") format("woff2"); font=
+-weight: normal; font-style: normal;}@font-face{font-family: "StudioFeixenS=
+ans"; src: url("https://waffles.datacamp.com/fonts/StudioFeixenSans-Bold.wo=
+ff2") format("woff2"); font-weight: bold; font-style: normal;}}</style><sty=
+le type=3D"text/css">body, table, td, a{-webkit-text-size-adjust: 100%; -ms=
+-text-size-adjust: 100%;}</style><style type=3D"text/css">/* ANDROID CENTER=
+ FIX */div[style*=3D"margin: 16px 0"]{margin: 0 !important;}</style><style =
+type=3D"text/css">/*Fixing gap on th right in Gmail*/ u + .body .gwfw{width=
+: 100% !important;}</style><style type=3D"text/css">MessageViewBody, #Messa=
+geWebViewDiv{width: 100% !important;}</style><style type=3D"text/css">div >=
+ u + .body .gmail{display: block !important;}</style><style>
+@media screen and (max-width: 820px) {
+  u + .body .gmail-blend-screen { background:#000; mix-blend-mode:screen; }
+  u + .body .gmail-blend-difference { background:#000; mix-blend-mode:diffe=
+rence;  }
+}
+</style><!--[if true]><style type=3D"text/css">table{border-collapse: colla=
+pse !important;}</style><![endif]--></head><body class=3D"body" style=3D"ma=
+rgin:0;padding:0;min-width:100%; background:#05192d; background-image:linea=
+r-gradient(#05192d,#05192d);" bgcolor=3D"#05192d"><div class=3D"tripane con=
+tent"> <div class=3D"msg-body inner undoreset"> <div style=3D"background:#0=
+5192d; background-image:linear-gradient(#05192d,#05192d);"><!-- Preheader.S=
+hows up on iPhone / Gmail.--><div style=3D"display: none; max-height: 0px; =
+overflow: hidden;">Take your GitHub skills to the next level with this new =
+course. Plus, don&#39;t miss our upcoming
+events!=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=
+=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=
+=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=
+=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=
+=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=
+=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=
+=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C </div><!--[if true]><style type=3D"text/c=
+ss">body, table, td, div, a, p{font-family: Arial, Helvetica, sans-serif !i=
+mportant;}</style><![endif]--><custom name=3D"opencounter" type=3D"tracking=
+"> <center class=3D"wrapper" style=3D"width:100%;table-layout:fixed;-webkit=
+-text-size-adjust:100%;-ms-text-size-adjust:100%;"> <div style=3D"display: =
+none; max-height: 0px; overflow: hidden;"> </div><table cellspacing=3D"0" c=
+ellpadding=3D"0" border=3D"0" width=3D"100%" class=3D"gwfw" role=3D"present=
+ation" style=3D"min-width: 100%;" align=3D"center"> <tbody> <tr> <td style=
+=3D"padding-top:0;padding-bottom:0;padding-right:10px;padding-left:10px;"><=
+div class=3D"webkit" style=3D"max-width:600px;margin-top:0;margin-bottom:0;=
+margin-right:auto;margin-left:auto;"><!--[if true]><table role=3D"presentat=
+ion" width=3D"600" align=3D"center" cellpadding=3D"0" cellspacing=3D"0" bor=
+der=3D"0"><tr><td align=3D"center"><![endif]-->
+<table role=3D"presentation" class=3D"outer" align=3D"center" style=3D"bord=
+er-spacing:0; Margin: 0 auto;width:100%; max-width:600px;"><tbody><!-- ////=
+///////////////////////// MODULE: NEWSLETTER HEADERSTARTS /////////////////=
+//////////// --><tr><td class=3D"one-column" align=3D"center" style=3D"padd=
+ing-top:0; padding-bottom:0; padding-right:20px; padding-left:20px;"><!--[i=
+f true]><table role=3D"presentation" width=3D"600" align=3D"center" cellpad=
+ding=3D"0" cellspacing=3D"0" border=3D"0"><tr><td align=3D"center" width=3D=
+"600"><![endif]--><table role=3D"presentation" align=3D"center" border=3D"0=
+" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%"><tbody><!-- Spacer beg=
+ins --><tr><td width=3D"0" height=3D"32" style=3D"font-size:1px; line-heigh=
+t:1px; mso-line-height-rule: exactly;"></td></tr><!-- Spacer ends --><tr> <=
+td align=3D"left" valign=3D"top"><a target=3D"_blank" href=3D"https://links=
+=2Edatacamp.com/e/c/eyJlbWFpbF9pZCI6ImR=
+nVGRod1FEQUppdTJBYVdydGdHQVpPTlRjcTRxW=
+m52N1g5WnZDYjg0UT09IiwiaHJlZiI6Imh0dHBzOi8vbGVhcm4uZGF0YWNhbXAuY29tP3V0bV9z=
+b3VyY2U9Y3VzdG9tZXJpb1x1MDAyNnV0bV9tZWRpdW09ZW1haWxcdTAwMjZ1dG1fY2FtcGFpZ24=
+9MjQxMjAzXzEtbmV3c2xldHRlci1hY2FkZW1pY18zLWFsbF80LW5hXzUtbmFfNi1kYy1pbnNpZ2=
+h0c183LW5hXzgtZW1hbC1jaV85LW5hXzEwLWJhdV8xMS1lbWFpbFx1MDAyNnV0bV9jb250ZW50P=
+WJsYXN0XHUwMDI2dXRtX3Rlcm09bG9nb1x1MDAyNmRjX2V1aWQ9MTQxMDUxNjgiLCJpbnRlcm5h=
+bCI6ImRkODcwNGQzMDM4NmExMDE5OGFlZDgwNiIsImxpbmtfaWQiOjMyODYzMjU3NH0/70841cd=
+327fc6dabbdb7ee728a35e174bb0c7c1ba2f3307ddc030ba42ba5e06b"><img alt=3D"Data=
+Camp" title=3D"" border=3D"0" align=3D"center" style=3D"border: 0; display:=
+ block; color: #8a8a8d; font-family: StudioFeixenSans, &#39;StudioFeixenSan=
+s&#39;, Arial, sans-serif; font-size: 14px; font-size: 22px; font-weight: b=
+old; height: auto; outline: 0; padding: 0; width: 100%; max-width: 180px; d=
+isplay: block;" width=3D"180" src=3D"https://assets.datacamp.com/email/rebr=
+and/full-logo-regular-inverted.png"/></a></td></tr><!--
+Spacer begins --><tr><td width=3D"0" height=3D"32" style=3D"font-size:1px; =
+line-height:1px; mso-line-height-rule: exactly;"></td></tr><!-- Spacer ends=
+ --><tr><td align=3D"left" style=3D"padding-top:0px; padding-left:0px; padd=
+ing-bottom:0px; padding-right: 0px;"><div class=3D"gmail-blend-screen"><div=
+ class=3D"gmail-blend-difference"><h1 style=3D"color:#05192d; font-family: =
+StudioFeixenSans, &#39;StudioFeixenSans&#39;, Arial, sans-serif; font-size:=
+ 32px; font-weight: bold; font-stretch: normal; font-style: normal;line-hei=
+ght: 1.05; letter-spacing: -1px; color: #f4f4f4;" class=3D"dark">Weekly Pro=
+gress</h1></div></div></td></tr><!-- Spacer begins --><tr> <td width=3D"0" =
+height=3D"22" style=3D"font-size:1px; line-height:1px; mso-line-height-rule=
+: exactly;"></td></tr><!-- Spacer ends --><tr><td style=3D"border-collapse:=
+collapse;"><!-- CTA BUTTON --><table role=3D"presentation" class=3D"darkcar=
+d" align=3D"left" style=3D"border-collapse:collapse;margin:0 auto;padding:0=
+;border-spacing:0;border-radius:20px;
+background-color:#384757; background-image: linear-gradient(#384757,#384757=
+);" bgcolor=3D"#384757" cellpadding=3D"0" cellspacing=3D"0" border=3D"0"> <=
+tbody> <tr> <td class=3D"darkcard" style=3D"border-collapse:collapse;font-f=
+amily: StudioFeixenSans, &#39;StudioFeixenSans&#39;, Arial, sans-serif; fon=
+t-size:16px; font-weight: bold; padding:0;border:0; text-align:center; bord=
+er-radius:20px; color:#ffffff; mso-padding-alt:9px 19px; background-color:#=
+384757; background-image: linear-gradient(#384757,#384757);" bgcolor=3D"#38=
+4757" align=3D"center"><p style=3D"text-decoration:none;color:#ffffff; font=
+-family: StudioFeixenSans, &#39;StudioFeixenSans&#39;, Arial, sans-serif; f=
+ont-size:16px; font-weight: bold; text-align:center;border-radius:20px; fon=
+t-size:14px; line-height:30px; text-transform: uppercase" class=3D"dark"> <=
+span style=3D"padding:9px 19px;border-radius:4px;display:block">NOV 25 - DE=
+C 01</span> </p></td></tr></tbody> </table><!-- /CTA BUTTON --></td></tr><!=
+-- Spacer begins --><tr><td width=3D"0" height=3D"22" style=3D"font-size:1p=
+x; line-height:1px; mso-line-height-rule: exactly;"></td></tr><!-- Spacer e=
+nds --></tbody></table><!--[if true]></td></tr></table><![endif]--></td></t=
+r><!-- ///////////////////////////// MODULE: NEWSLETTER HEADER ENDS ///////=
+////////////////////// --><!-- ///////////////////////////// MODULE: TEXT B=
+LOCK STARTS ///////////////////////////// --><tr> <td class=3D"one-column" =
+align=3D"center" style=3D" padding-left: 10px; padding-right: 10px;"><!--[i=
+f true]><table role=3D"presentation" width=3D"600" align=3D"center" cellpad=
+ding=3D"0" cellspacing=3D"0" border=3D"0"><tr><td align=3D"center" width=3D=
+"600"><![endif]--> <table role=3D"presentation" class=3D"darkcard" align=3D=
+"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" st=
+yle=3D"border-radius: 4px;" class=3D"darkcard" bgcolor=3D"#ffffff"> <tbody>=
+ <tr> <td align=3D"center" class=3D"darkcard" style=3D"padding-top:20px;pad=
+ding-bottom:0px;padding-right:20px; padding-left:20px;vertical-align: middl=
+e;border-top-left-radius: 4px;
+border-top-right-radius: 4px; background-color:#7933ff; background-image: l=
+inear-gradient(#7933ff,#7933ff);" bgcolor=3D"#7933ff" height=3D"50"><p styl=
+e=3D"color:#ffffff; font-family: StudioFeixenSans, &#39;StudioFeixenSans&#3=
+9;, Arial, sans-serif; font-size: 28px; font-weight: bold; font-stretch: no=
+rmal; font-style: normal; line-height: 38px; letter-spacing: -0.5px;" class=
+=3D"dark; darkcard">&#34;Whether you think you can or think you can&#39;t, =
+you&#39;re right&#34;</p></td></tr><tr> <td class=3D"darkcard" align=3D"cen=
+ter" style=3D"padding-top:0px;padding-bottom:10px;padding-right:20px; paddi=
+ng-left:20px;vertical-align: middle; background-color:#7933ff; background-i=
+mage: linear-gradient(#7933ff,#7933ff);" bgcolor=3D"#7933ff" height=3D"50">=
+<p style=3D"color:#ffffff; font-family: StudioFeixenSans, &#39;StudioFeixen=
+Sans&#39;, Arial, sans-serif; font-size: 14px; font-weight: bold; font-stre=
+tch: normal; font-style: normal; line-height: 38px; letter-spacing: -0.5px;=
+ text-transform: uppercase;" class=3D"dark">Henry
+Ford</p></td></tr><tr> <td width=3D"0" height=3D"22" style=3D"font-size:1px=
+; line-height:1px; mso-line-height-rule: exactly;"></td></tr><tr> <td align=
+=3D"center" style=3D"padding-top:0px; padding-left:20px; padding-right: 20p=
+x;"><h2 style=3D"color:#05192d; font-family: StudioFeixenSans, &#39;StudioF=
+eixenSans&#39;, Arial, sans-serif; font-size: 24px; font-weight: bold; font=
+-stretch: normal; font-style: normal; line-height: 28px; letter-spacing: -0=
+=2E5px; " class=3D"dark">Goal for this=20=
+Week</h2></td></tr><tr> <td width=3D"0=
+" height=3D"22" style=3D"font-size:1px; line-height:1px; mso-line-height-ru=
+le: exactly;"></td></tr><tr> <td align=3D"center" style=3D"padding-top:0px;=
+ padding-left:20px; padding-bottom:0px; padding-right: 20px;"><p style=3D"c=
+olor:#05192d; font-family: StudioFeixenSans, &#39;StudioFeixenSans&#39;, Ar=
+ial, sans-serif; font-size: 16px; line-height: 26px; font-weight: normal;" =
+class=3D"dark">Complete 5 exercises</p></td></tr><tr> <td width=3D"0" heigh=
+t=3D"22" style=3D"font-size:1px; line-height:1px;
+mso-line-height-rule: exactly;"></td></tr><tr> <td class=3D"two-column" sty=
+le=3D"padding-top:0; padding-bottom:0; padding-right:10px; padding-left:10p=
+x; text-align:center;font-size:0;"><!--[if true]><table role=3D"presentatio=
+n" width=3D"540" align=3D"center" cellpadding=3D"0" cellspacing=3D"0" borde=
+r=3D"0"><tr><td width=3D"270" align=3D"center"><![endif]--><div class=3D"co=
+lumn" style=3D"width:100%;max-width:240px;display:inline-block;vertical-ali=
+gn:top;"><table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" role=3D"presentation" style=3D"border: none; border-collapse: collap=
+se; border-spacing: 0; margin: auto; mso-table-lspace: 0; mso-table-rspace:=
+ 0;" width=3D"100%"> <tbody> <tr> <td style=3D"border-collapse:collapse; pa=
+dding-left: 10px; padding-right: 10px;"><!-- CTA BUTTON --><table role=3D"p=
+resentation" align=3D"center" class=3D"darkcard" bgcolor=3D"#02ee61" style=
+=3D"border-collapse:collapse;margin:0 auto;padding:0;border-spacing:0;borde=
+r-radius:4px; background-color:#02ee61; background-image:
+linear-gradient(#02ee61,#02ee61); border: solid #02ee61 2px;" cellpadding=
+=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%"> <tbody> <tr> <td styl=
+e=3D"border-collapse:collapse;font-family: StudioFeixenSans, &#39;StudioFei=
+xenSans&#39;, Arial, sans-serif; font-size:16px; font-weight: bold; padding=
+:0;border:0; text-align:center; border-radius:4px; color:#05192d; mso-paddi=
+ng-alt:9px 19px; background-color:#02ee61; background-image: linear-gradien=
+t(#02ee61,#02ee61);" align=3D"center"><a target=3D"_blank" style=3D"text-de=
+coration:none;color:#05192d; font-family: StudioFeixenSans, &#39;StudioFeix=
+enSans&#39;, Arial, sans-serif; font-size:16px; font-weight: bold; text-ali=
+gn:center;border-radius:4px; font-size:16px; line-height:30px;" href=3D"htt=
+ps://links.datacamp.com/e/c/eyJlbWFpbF9pZCI6ImRnVGRod1FEQUppdTJBYVdydGdHQVp=
+PTlRjcTRxWm52N1g5WnZDYjg0UT09IiwiaHJlZiI6Imh0dHBzOi8vd3d3LmRhdGFjYW1wLmNvbS=
+9jb3Vyc2VzLzE2NzE5L2NvbnRpbnVlP3V0bV9zb3VyY2U9Y3VzdG9tZXJpb1x1MDAyNnV0bV9tZ=
+WRpdW09ZW1haWxcdTAwMjZ1dG1fY2FtcGFpZ249MjQxMjAzXzEtbmV3c2xldHRlci1hY2FkZW1p=
+Y18zLWFsbF80LW5hXzUtbmFfNi1kYy1pbnNpZ2h0c183LW5hXzgtZW1hbC1jaV85LW5hXzEwLWJ=
+hdV8xMS1lbWFpbFx1MDAyNnV0bV9jb250ZW50PWJsYXN0XHUwMDI2dXRtX3Rlcm09c3RhcnRub3=
+dcdTAwMjZkY19ldWlkPTE0MTA1MTY4IiwiaW50ZXJuYWwiOiJkZDg3MDRkMzAzODZhMTAxOThhZ=
+WQ4MDYiLCJsaW5rX2lkIjozMjg2MzI1NzV9/ed251765b7f9f721d0a1963c230d58172d58545=
+62c2a4b114376d4a26e1c77e0"><!--[if !gte mso 9]><!----><span style=3D"paddin=
+g:9px 19px;border-radius:4px;display:block"><!--<![endif]--> Learn Now <!--=
+[if !gte mso 9]><!----> </span><!--<![endif]--> </a></td></tr></tbody></tab=
+le><!-- /CTA BUTTON --></td></tr><!-- Spacer begins --><tr><td width=3D"0" =
+height=3D"12" style=3D"font-size:1px; line-height:1px; mso-line-height-rule=
+: exactly;  border-bottom-left-radius: 4px; border-bottom-right-radius: 4px=
+;"></td></tr><!-- Spacer ends --></tbody></table></div><!--[if true]></td><=
+td width=3D"270" valign=3D"top"
+style=3D"padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;"><!=
+[endif]--><div class=3D"column" style=3D"width:100%;max-width:270px;display=
+:inline-block;vertical-align:top;"> <table align=3D"center" border=3D"0" ce=
+llpadding=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"border: no=
+ne; border-collapse: collapse; border-spacing: 0; margin: auto; mso-table-l=
+space: 0; mso-table-rspace: 0; padding-left: 10px; padding-right: 10px;" wi=
+dth=3D"100%"> <tbody> <tr> <td style=3D"border-collapse:collapse; padding-l=
+eft: 10px; padding-right: 10px;"><!-- CTA BUTTON --><table role=3D"presenta=
+tion" class=3D"darkcard" align=3D"center" style=3D"border-collapse:collapse=
+;margin:0 auto;padding:0;border-spacing:0;border-radius:4px; border: solid =
+#02ee61 2px; background-color:#f4f4f4; background-image: linear-gradient(#f=
+4f4f4,#f4f4f4);" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"=
+100%"> <tbody> <tr> <td style=3D"border-collapse:collapse;font-family: Stud=
+ioFeixenSans, &#39;StudioFeixenSans&#39;, Arial, sans-serif;
+font-size:16px; font-weight: bold; padding:0;border:0; text-align:center; b=
+order-radius:4px; color:#05192d; mso-padding-alt:9px 19px; background-color=
+:#ffffff;" class=3D"darkcard" align=3D"center"><a target=3D"_blank" style=
+=3D"text-decoration:none; color:#05192d; font-family: StudioFeixenSans, &#3=
+9;StudioFeixenSans&#39;, Arial, sans-serif; font-size:16px; font-weight: bo=
+ld; text-align:center;border-radius:4px; font-size:16px; line-height:30px;"=
+ href=3D"https://links.datacamp.com/e/c/eyJlbWFpbF9pZCI6ImRnVGRod1FEQUppdTJ=
+BYVdydGdHQVpPTlRjcTRxWm52N1g5WnZDYjg0UT09IiwiaHJlZiI6Imh0dHBzOi8vY2FsZW5kbH=
+kuY29tL2RhdGEtY2FtcC9kYXRhY2FtcC1sZWFybmluZy1zZXNzaW9uP25hbWU9QXpmYXJcdTAwM=
+jZlbWFpbD1hemZhcmFsaTAwNy5hYUBnbWFpbC5jb20iLCJpbnRlcm5hbCI6ImRkODcwNGQzMDM4=
+NmExMDE5OGFlZDgwNiIsImxpbmtfaWQiOjMyODU0ODU5NH0/b16d293c0d81a99ceed67f381a0=
+35b90d593c2883dddb43fade29a08d873a2c6" class=3D"dark"><!--[if !gte mso 9]><=
+!----><span style=3D"padding:9px 19px;border-radius:4px;display:block"><!--=
+<![endif]-->Schedule Time to Learn <!--[if !gte mso 9]><!----> </span><!--<=
+![endif]--></a></td></tr></tbody></table><!-- /CTA BUTTON --></td></tr><!--=
+ Spacer begins
+--><tr><td width=3D"0" height=3D"12" style=3D"font-size:1px; line-height:1p=
+x; mso-line-height-rule: exactly;  border-bottom-left-radius: 4px; border-b=
+ottom-right-radius: 4px;"></td></tr><!-- Spacer ends --></tbody></table></d=
+iv><!--[if true]></td></tr></table><![endif]--></td></tr><!-- Spacer begins=
+ --><tr> <td width=3D"0" height=3D"32" style=3D"font-size:1px; line-height:=
+1px; mso-line-height-rule: exactly; border-bottom-left-radius: 4px; border-=
+bottom-right-radius: 4px;"></td></tr><!-- Spacer ends --></tbody></table><!=
+--[if true]></td></tr></table><![endif]--></td></tr><!-- Spacer begins --><=
+tr><td width=3D"0" height=3D"32" style=3D"font-size:1px; line-height:1px; m=
+so-line-height-rule: exactly;"></td></tr><!-- Spacer ends --> <!-- ////////=
+///////////////////// MODULE: TEXT BLOCK ENDS /////////////////////////////=
+ -->
+<!-- ///////////////////////////// MODULE: SPOTLIGHT STARTS ///////////////=
+////////////// --><!-- Spacer begins --><tr><td width=3D"0" height=3D"22" s=
+tyle=3D"font-size:1px; line-height:1px; mso-line-height-rule: exactly;"></t=
+d></tr><!-- Spacer ends --><tr><td class=3D"one-column" align=3D"left" styl=
+e=3D"padding-top:0px; padding-left:10px; padding-right: 10px;"><!--[if true=
+]><table role=3D"presentation" width=3D"600" align=3D"center" cellpadding=
+=3D"0" cellspacing=3D"0" border=3D"0"><tr><td align=3D"center" width=3D"600=
+"><![endif]--><table role=3D"presentation" align=3D"center" border=3D"0" ce=
+llpadding=3D"0" cellspacing=3D"0" width=3D"100%"><tbody><tr><td align=3D"le=
+ft" width=3D"40" style=3D"vertical-align: middle;"><img alt=3D"" border=3D"=
+0" src=3D"https://assets.datacamp.com/email/rebrand/icon-eye-yellow.png" st=
+yle=3D"border: 0; display: block; color:#414345; font-family: Karla, &#39;K=
+arla&#39;, sans-serif;  font-size: 14px; height: auto; max-width: 30px; out=
+line: 0; padding: 0; width: 100%; display: block; color: #414345" width=3D"=
+30"/></td><td align=3D"left" style=3D"vertical-align: middle;"><div class=
+=3D"gmail-blend-screen"><div class=3D"gmail-blend-difference"><h2 style=3D"=
+color:#ffffff; font-family: StudioFeixenSans, &#39;StudioFeixenSans&#39;, A=
+rial, sans-serif; font-size: 32px; font-weight: bold; font-stretch: normal;=
+ font-style: normal; line-height: 38px; letter-spacing: -0.5px;" class=3D"d=
+ark">Track Spotlight</h2></div></div></td></tr></tbody></table><!--[if true=
+]></td></tr></table><![endif]--></td></tr><!-- Spacer begins --><tr><td wid=
+th=3D"0" height=3D"22" style=3D"font-size:1px; line-height:1px; mso-line-he=
+ight-rule: exactly;"></td></tr><!-- Spacer ends --><tr><td class=3D"one-col=
+umn" align=3D"center" style=3D" padding-left: 10px; padding-right: 10px;"><=
+!--[if true]><table role=3D"presentation" width=3D"600" align=3D"center" ce=
+llpadding=3D"0" cellspacing=3D"0" border=3D"0"><tr><td align=3D"center" wid=
+th=3D"600"><![endif]--><table role=3D"presentation" class=3D"darkcard" alig=
+n=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%=
+" style=3D"border-radius: 4px; background-color:#fcce0d; background-image: =
+linear-gradient(#fcce0d,#fcce0d);" bgcolor=3D"#fcce0d"><tbody><tr><td align=
+=3D"center" style=3D"padding-top:20px; padding-left:20px; padding-bottom:0p=
+x; padding-right: 20px;"><table align=3D"center" border=3D"0" cellpadding=
+=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"margin: 0 auto; max=
+-width: 540px; width: 100%;"><tbody><tr><td align=3D"center"><table align=
+=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presen=
+tation" style=3D"margin: 0 auto; max-width: 540px; width: 100%;"><tbody><tr=
+><td align=3D"left" style=3D"padding-top:0px; padding-left:0px; padding-rig=
+ht: 0px;"><a style=3D"text-decoration: none;" href=3D"https://links.datacam=
+p.com/e/c/eyJlbWFpbF9pZCI6ImRnVGRod1FEQUppdTJBYVdydGdHQVpPTlRjcTRxWm52N1g5W=
+nZDYjg0UT09IiwiaHJlZiI6Imh0dHBzOi8vd3d3LmRhdGFjYW1wLmNvbS90cmFja3MvZGF0YS1h=
+bmFseXN0LXdpdGgtcHl0aG9uP3V0bV9zb3VyY2U9Y3VzdG9tZXJpb1x1MDAyNnV0bV9tZWRpdW0=
+9ZW1haWxcdTAwMjZ1dG1fY2FtcGFpZ249MjQxMjAzXzEtbmV3c2xldHRlci1hY2FkZW1pY18zLW=
+FsbF80LW5hXzUtbmFfNi1kYy1pbnNpZ2h0c183LW5hXzgtZW1hbC1jaV85LW5hXzEwLWJhdV8xM=
+S1lbWFpbFx1MDAyNnV0bV9jb250ZW50PWJsYXN0XHUwMDI2dXRtX3Rlcm09c3BvdGxpZ2h0XHUw=
+MDI2ZGNfZXVpZD0xNDEwNTE2OCIsImludGVybmFsIjoiZGQ4NzA0ZDMwMzg2YTEwMTk4YWVkODA=
+2IiwibGlua19pZCI6MzI4NjMyNTc2fQ/b31ca85149d672f68120884c6741ee6329469b5839a=
+f72463e6ffc1f361bbbbc"><h2 style=3D"color:#05192d; font-family: StudioFeixe=
+nSans, &#39;StudioFeixenSans&#39;, Arial, sans-serif; font-size: 24px; font=
+-weight: bold; font-stretch: normal; font-style: normal; line-height: 28px;=
+ letter-spacing: -0.5px;" class=3D"dark">Data Analyst in Python</h2></a></t=
+d><td align=3D"right"><img width=3D"40" style=3D"margin-right:auto;margin-l=
+eft:auto;border-radius:100%;" align=3D"center" alt=3D"courses" src=3D"https=
+://assets.datacamp.com/email/rebrand/python_3x.png"/></td></tr></tbody></ta=
+ble></td></tr><!-- Spacer begins --><tr><td width=3D"0" height=3D"14" style=
+=3D"font-size:1px; line-height:1px; mso-line-height-rule:
+exactly;"></td></tr><!-- Spacer ends --><tr><td align=3D"left"><a href=3D"h=
+ttps://links.datacamp.com/e/c/eyJlbWFpbF9pZCI6ImRnVGRod1FEQUppdTJBYVdydGdHQ=
+VpPTlRjcTRxWm52N1g5WnZDYjg0UT09IiwiaHJlZiI6Imh0dHBzOi8vd3d3LmRhdGFjYW1wLmNv=
+bS90cmFja3MvZGF0YS1hbmFseXN0LXdpdGgtcHl0aG9uP3V0bV9zb3VyY2U9Y3VzdG9tZXJpb1x=
+1MDAyNnV0bV9tZWRpdW09ZW1haWxcdTAwMjZ1dG1fY2FtcGFpZ249MjQxMjAzXzEtbmV3c2xldH=
+Rlci1hY2FkZW1pY18zLWFsbF80LW5hXzUtbmFfNi1kYy1pbnNpZ2h0c183LW5hXzgtZW1hbC1ja=
+V85LW5hXzEwLWJhdV8xMS1lbWFpbFx1MDAyNnV0bV9jb250ZW50PWJsYXN0XHUwMDI2dXRtX3Rl=
+cm09c3BvdGxpZ2h0XHUwMDI2ZGNfZXVpZD0xNDEwNTE2OCIsImludGVybmFsIjoiZGQ4NzA0ZDM=
+wMzg2YTEwMTk4YWVkODA2IiwibGlua19pZCI6MzI4NjMyNTc2fQ/b31ca85149d672f68120884=
+c6741ee6329469b5839af72463e6ffc1f361bbbbc" style=3D"color:#05192d; font-fam=
+ily: StudioFeixenSans, &#39;StudioFeixenSans&#39;, Arial, sans-serif; font-=
+size: 18px; font-weight: normal; font-stretch: normal; font-style: normal; =
+line-height: 1.33; letter-spacing: normal; color: #05192d; text-decoration:=
+ none;" class=3D"dark">Start your
+journey to ace the Data Analyst Certification and build confidence as a ski=
+lled data analyst.</a></td></tr><!-- Spacer begins --><tr><td width=3D"0" h=
+eight=3D"14" style=3D"font-size:1px; line-height:1px; mso-line-height-rule:=
+ exactly;"></td></tr><!-- Spacer ends --></tbody></table></td></tr><tr><td =
+class=3D"darkcard" style=3D"border-collapse:collapse; padding-left:10px; pa=
+dding-right: 10px; border-bottom-left-radius: 4px; border-bottom-right-radi=
+us: 4px;" bgcolor=3D"#ffffff"><!-- CTA BUTTON --><table role=3D"presentatio=
+n" align=3D"left" style=3D"border-collapse:collapse;margin:0 auto;padding:0=
+;border-spacing:0;border-radius:0px;" cellpadding=3D"0" cellspacing=3D"0" b=
+order=3D"0" width=3D"100%"><tbody><tr><td style=3D"border-collapse:collapse=
+;font-family: StudioFeixenSans, &#39;StudioFeixenSans&#39;, Arial, sans-ser=
+if; font-size: 18px; font-weight: bold; padding:0;border:0;text-align:left;=
+border-radius:0px;color:#05192d;mso-padding-alt:20px 10px;" align=3D"left">=
+<a class=3D"dark" target=3D"_blank" style=3D"text-decoration:none;color:#05=
+192d; font-family: StudioFeixenSans, &#39;StudioFeixenSans&#39;, Arial, san=
+s-serif; font-size: 18px; font-weight: bold; text-align:left;border-radius:=
+0px; font-size:18px; line-height:30px;" href=3D"https://links.datacamp.com/=
+e/c/eyJlbWFpbF9pZCI6ImRnVGRod1FEQUppdTJBYVdydGdHQVpPTlRjcTRxWm52N1g5WnZDYjg=
+0UT09IiwiaHJlZiI6Imh0dHBzOi8vd3d3LmRhdGFjYW1wLmNvbS90cmFja3MvZGF0YS1hbmFseX=
+N0LXdpdGgtcHl0aG9uP3V0bV9zb3VyY2U9Y3VzdG9tZXJpb1x1MDAyNnV0bV9tZWRpdW09ZW1ha=
+WxcdTAwMjZ1dG1fY2FtcGFpZ249MjQxMjAzXzEtbmV3c2xldHRlci1hY2FkZW1pY18zLWFsbF80=
+LW5hXzUtbmFfNi1kYy1pbnNpZ2h0c183LW5hXzgtZW1hbC1jaV85LW5hXzEwLWJhdV8xMS1lbWF=
+pbFx1MDAyNnV0bV9jb250ZW50PWJsYXN0XHUwMDI2dXRtX3Rlcm09c3BvdGxpZ2h0XHUwMDI2ZG=
+NfZXVpZD0xNDEwNTE2OCIsImludGVybmFsIjoiZGQ4NzA0ZDMwMzg2YTEwMTk4YWVkODA2Iiwib=
+Glua19pZCI6MzI4NjMyNTc2fQ/b31ca85149d672f68120884c6741ee6329469b5839af72463=
+e6ffc1f361bbbbc"><!--[if !gte mso 9]><!----><span style=3D"padding:20px 10p=
+x;border-radius:0px;display:block"><!--<![endif]-->Learn More
+=E2=86=92<!--[if !gte mso 9]><!----> </span><!--<![endif]--></a></td></tr><=
+/tbody></table><!-- /CTA BUTTON --></td></tr></tbody></table><!--[if true]>=
+</td></tr></table><![endif]--></td></tr><!-- ///////////////////////////// =
+MODULE: SPOTLIGHT ENDS ///////////////////////////// -->
+<!-- ///////////////////////////// MODULE: NEW COURSE STARTS //////////////=
+/////////////// --><!-- Spacer begins --><tr><td width=3D"0" height=3D"22" =
+style=3D"font-size:1px; line-height:1px; mso-line-height-rule: exactly;"></=
+td></tr><!-- Spacer ends --><!-- Spacer begins --><tr><td width=3D"0" heigh=
+t=3D"32" style=3D"font-size:1px; line-height:1px; mso-line-height-rule: exa=
+ctly;"></td></tr><!-- Spacer ends --><tr><td class=3D"one-column" align=3D"=
+left" style=3D"padding-top:0px; padding-left:10px; padding-right: 10px;"><!=
+--[if true]><table role=3D"presentation" width=3D"600" align=3D"center" cel=
+lpadding=3D"0" cellspacing=3D"0" border=3D"0"><tr><td align=3D"center" widt=
+h=3D"600"><![endif]--><table role=3D"presentation" align=3D"center" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%"><tbody><tr><td al=
+ign=3D"left" width=3D"50" style=3D"vertical-align: middle;"><img alt=3D"" b=
+order=3D"0" src=3D"https://assets.datacamp.com/email/rebrand/icon-course-re=
+d.png" style=3D"border: 0; display: block; color:#414345; font-family:
+Karla, &#39;Karla&#39;, sans-serif;  font-size: 14px; height: auto; max-wid=
+th: 30px; outline: 0; padding: 0; width: 100%; display: block; color: #4143=
+45" width=3D"30"/></td><td align=3D"left" style=3D"vertical-align: middle;"=
+><div class=3D"gmail-blend-screen"><div class=3D"gmail-blend-difference"><h=
+2 style=3D"color:#ffffff; font-family: StudioFeixenSans, &#39;StudioFeixenS=
+ans&#39;, Arial, sans-serif; font-size: 32px; font-weight: bold; font-stret=
+ch: normal; font-style: normal; line-height: 38px; letter-spacing: -0.5px;"=
+ class=3D"dark">New Courses</h2></div></div></td></tr></tbody></table><!--[=
+if true]></td></tr></table><![endif]--></td></tr><!-- /////////////////////=
+//////// MODULE: NEWSLETTER BLOCK STARTS ///////////////////////////// --><=
+!-- Spacer begins --><tr><td width=3D"0" height=3D"22" style=3D"font-size:1=
+px; line-height:1px; mso-line-height-rule: exactly;"></td></tr><!-- Spacer =
+ends --><tr><td class=3D"one-column" align=3D"center" style=3D" padding-lef=
+t: 10px; padding-right: 10px;"><!--[if true]><table
+role=3D"presentation" width=3D"600" align=3D"center" cellpadding=3D"0" cell=
+spacing=3D"0" border=3D"0"><tr><td align=3D"center" width=3D"600"><![endif]=
+--><table class=3D"darkcard" role=3D"presentation" align=3D"center" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"border-t=
+op-left-radius: 4px; border-top-right-radius: 4px;" bgcolor=3D"#ffffff"><tb=
+ody><tr><td align=3D"center" style=3D"padding-top:20px; padding-left:20px; =
+padding-bottom:0px; padding-right: 20px;"><table align=3D"center" border=3D=
+"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"marg=
+in: 0 auto; max-width: 540px; width: 100%;"><tbody><tr><td align=3D"center"=
+><table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" r=
+ole=3D"presentation" style=3D"margin: 0 auto; max-width: 540px; width: 100%=
+;"><tbody><tr><td align=3D"left" width=3D"56" style=3D"vertical-align: midd=
+le;"><a target=3D"_blank" style=3D"text-decoration:none;color:#9ba3ab; font=
+-family: StudioFeixenSans, &#39;StudioFeixenSans&#39;, Arial, sans-serif; f=
+ont-size: 14px;
+font-weight: normal; color: #f4f4f4;" href=3D"https://links.datacamp.com/e/=
+c/eyJlbWFpbF9pZCI6ImRnVGRod1FEQUppdTJBYVdydGdHQVpPTlRjcTRxWm52N1g5WnZDYjg0U=
+T09IiwiaHJlZiI6Imh0dHBzOi8vd3d3LmRhdGFjYW1wLmNvbS9jb3Vyc2VzL2ludGVybWVkaWF0=
+ZS1naXRodWItY29uY2VwdHM_dXRtX3NvdXJjZT1jdXN0b21lcmlvXHUwMDI2dXRtX21lZGl1bT1=
+lbWFpbFx1MDAyNnV0bV9jYW1wYWlnbj0yNDEyMDNfMS1uZXdzbGV0dGVyLWFjYWRlbWljXzMtYW=
+xsXzQtbmFfNS1uYV82LWRjLWluc2lnaHRzXzctbmFfOC1lbWFsLWNpXzktMV8xMC1iYXVfMTEtZ=
+W1haWxcdTAwMjZ1dG1fY29udGVudD1ibGFzdFx1MDAyNnV0bV90ZXJtPW5ld2NvdXJzZVx1MDAy=
+NmRjX2V1aWQ9MTQxMDUxNjgiLCJpbnRlcm5hbCI6ImRkODcwNGQzMDM4NmExMDE5OGFlZDgwNiI=
+sImxpbmtfaWQiOjMyODYzMjU3N30/f6382b840f0c8fda913b1cf3eeffa96f523e8210e9f455=
+3c020401b1443e8e63"><img width=3D"40" style=3D"margin-right:auto;margin-lef=
+t:auto;border-radius:100%;" align=3D"center" alt=3D"courses" src=3D"https:/=
+/assets.datacamp.com/email/rebrand/git_3x.png"/></a></td><td align=3D"left"=
+ style=3D"vertical-align: middle;"><h2 style=3D"color:#05192d; font-family:=
+ StudioFeixenSans,
+&#39;StudioFeixenSans&#39;, Arial, sans-serif; font-size: 24px; font-weight=
+: bold; font-stretch: normal; font-style: normal; line-height: 32px; letter=
+-spacing: -0.5px;"><a target=3D"_blank" style=3D"color:#05192d; font-family=
+: StudioFeixenSans, &#39;StudioFeixenSans&#39;, Arial, sans-serif; font-siz=
+e: 24px; font-weight: bold; font-stretch: normal; font-style: normal; line-=
+height: 32px; letter-spacing: -0.5px; text-decoration: none;" href=3D"https=
+://links.datacamp.com/e/c/eyJlbWFpbF9pZCI6ImRnVGRod1FEQUppdTJBYVdydGdHQVpPT=
+lRjcTRxWm52N1g5WnZDYjg0UT09IiwiaHJlZiI6Imh0dHBzOi8vd3d3LmRhdGFjYW1wLmNvbS9j=
+b3Vyc2VzL2ludGVybWVkaWF0ZS1naXRodWItY29uY2VwdHM_dXRtX3NvdXJjZT1jdXN0b21lcml=
+vXHUwMDI2dXRtX21lZGl1bT1lbWFpbFx1MDAyNnV0bV9jYW1wYWlnbj0yNDEyMDNfMS1uZXdzbG=
+V0dGVyLWFjYWRlbWljXzMtYWxsXzQtbmFfNS1uYV82LWRjLWluc2lnaHRzXzctbmFfOC1lbWFsL=
+WNpXzktMV8xMC1iYXVfMTEtZW1haWxcdTAwMjZ1dG1fY29udGVudD1ibGFzdFx1MDAyNnV0bV90=
+ZXJtPW5ld2NvdXJzZVx1MDAyNmRjX2V1aWQ9MTQxMDUxNjgiLCJpbnRlcm5hbCI6ImRkODcwNGQ=
+zMDM4NmExMDE5OGFlZDgwNiIsImxpbmtfaWQiOjMyODYzMjU3N30/f6382b840f0c8fda913b1c=
+f3eeffa96f523e8210e9f4553c020401b1443e8e63" class=3D"dark">Intermediate Git=
+Hub Concepts</a></h2></td><td align=3D"right" style=3D"vertical-align: midd=
+le; color:#05192d; font-family: StudioFeixenSans, &#39;StudioFeixenSans&#39=
+;, Arial, sans-serif; font-size: 24px; font-weight: bold; font-stretch: nor=
+mal; font-style: normal; line-height: 32px; letter-spacing: -0.5px;"><a tar=
+get=3D"_blank" style=3D"color:#05192d; font-family: StudioFeixenSans, &#39;=
+StudioFeixenSans&#39;, Arial, sans-serif; font-size: 24px; font-weight: bol=
+d; font-stretch: normal; font-style: normal; line-height: 32px; letter-spac=
+ing: -0.5px; text-decoration: none;" href=3D"https://links.datacamp.com/e/c=
+/eyJlbWFpbF9pZCI6ImRnVGRod1FEQUppdTJBYVdydGdHQVpPTlRjcTRxWm52N1g5WnZDYjg0UT=
+09IiwiaHJlZiI6Imh0dHBzOi8vd3d3LmRhdGFjYW1wLmNvbS9jb3Vyc2VzL2ludGVybWVkaWF0Z=
+S1naXRodWItY29uY2VwdHM_dXRtX3NvdXJjZT1jdXN0b21lcmlvXHUwMDI2dXRtX21lZGl1bT1l=
+bWFpbFx1MDAyNnV0bV9jYW1wYWlnbj0yNDEyMDNfMS1uZXdzbGV0dGVyLWFjYWRlbWljXzMtYWx=
+sXzQtbmFfNS1uYV82LWRjLWluc2lnaHRzXzctbmFfOC1lbWFsLWNpXzktMV8xMC1iYXVfMTEtZW=
+1haWxcdTAwMjZ1dG1fY29udGVudD1ibGFzdFx1MDAyNnV0bV90ZXJtPW5ld2NvdXJzZVx1MDAyN=
+mRjX2V1aWQ9MTQxMDUxNjgiLCJpbnRlcm5hbCI6ImRkODcwNGQzMDM4NmExMDE5OGFlZDgwNiIs=
+ImxpbmtfaWQiOjMyODYzMjU3N30/f6382b840f0c8fda913b1cf3eeffa96f523e8210e9f4553=
+c020401b1443e8e63" class=3D"dark">&gt;</a></td></tr></tbody></table></td></=
+tr><!-- Spacer begins --><tr><td width=3D"0" height=3D"14" style=3D"font-si=
+ze:1px; line-height:1px; mso-line-height-rule: exactly;"></td></tr><!-- Spa=
+cer ends --></tbody></table></td></tr></tbody></table><table role=3D"presen=
+tation" class=3D"darkcard" align=3D"center" border=3D"0" cellpadding=3D"0" =
+cellspacing=3D"0" width=3D"100%" style=3D"border-bottom-left-radius: 4px; b=
+order-bottom-right-radius: 4px;" bgcolor=3D"#ff5400"><!-- Spacer begins -->=
+<tbody><tr><td width=3D"0" height=3D"6" style=3D"font-size:1px; line-height=
+:1px; mso-line-height-rule: exactly; border-bottom-left-radius: 4px; border=
+-bottom-right-radius: 4px;"></td></tr><!-- Spacer ends --></tbody></table><=
+!--[if true]></td></tr></table><![endif]--></td></tr><!-- /////////////////=
+//////////// MODULE: NEWSLETTER BLOCK ENDS ///////////////////////////// --=
+><!-- ///////////////////////////// MODULE: NEWSLETTER BLOCK STARTS ///////=
+////////////////////// --><!-- Spacer begins --><tr><td width=3D"0" height=
+=3D"22" style=3D"font-size:1px; line-height:1px; mso-line-height-rule: exac=
+tly;"></td></tr><!-- Spacer ends --><tr><td class=3D"one-column" align=3D"c=
+enter" style=3D" padding-left: 10px; padding-right: 10px;"><!--[if true]><t=
+able role=3D"presentation" width=3D"600" align=3D"center" cellpadding=3D"0"=
+ cellspacing=3D"0" border=3D"0"><tr><td
+align=3D"center" width=3D"600"><![endif]--><table class=3D"darkcard" role=
+=3D"presentation" align=3D"center" border=3D"0" cellpadding=3D"0" cellspaci=
+ng=3D"0" width=3D"100%" style=3D"border-top-left-radius: 4px; border-top-ri=
+ght-radius: 4px;" bgcolor=3D"#ffffff"><tbody><tr><td align=3D"center" style=
+=3D"padding-top:20px; padding-left:20px; padding-bottom:0px; padding-right:=
+ 20px;"><table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" role=3D"presentation" style=3D"margin: 0 auto; max-width: 540px; wid=
+th: 100%;"><tbody><tr><td align=3D"center"><table align=3D"center" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"m=
+argin: 0 auto; max-width: 540px; width: 100%;"><tbody><tr><td align=3D"left=
+" width=3D"56" style=3D"vertical-align: middle;"><a target=3D"_blank" style=
+=3D"text-decoration:none;color:#9ba3ab; font-family: StudioFeixenSans, &#39=
+;StudioFeixenSans&#39;, Arial, sans-serif; font-size: 14px; font-weight: no=
+rmal; color: #f4f4f4;" href=3D"https://links.datacamp.com/e/c/eyJlbWFpbF9pZ=
+CI6ImRnVGRod1FEQUppdTJBYVdydGdHQVpPTlRjcTRxWm52N1g5WnZDYjg0UT09IiwiaHJlZiI6=
+Imh0dHBzOi8vd3d3LmRhdGFjYW1wLmNvbS9jb3Vyc2VzL2V4cGxhaW5hYmxlLWFpLWluLXB5dGh=
+vbj91dG1fc291cmNlPWN1c3RvbWVyaW9cdTAwMjZ1dG1fbWVkaXVtPWVtYWlsXHUwMDI2dXRtX2=
+NhbXBhaWduPTI0MTIwM18xLW5ld3NsZXR0ZXItYWNhZGVtaWNfMy1hbGxfNC1uYV81LW5hXzYtZ=
+GMtaW5zaWdodHNfNy1uYV84LWVtYWwtY2lfOS0yXzEwLWJhdV8xMS1lbWFpbFx1MDAyNnV0bV9j=
+b250ZW50PWJsYXN0XHUwMDI2dXRtX3Rlcm09bmV3Y291cnNlXHUwMDI2ZGNfZXVpZD0xNDEwNTE=
+2OCIsImludGVybmFsIjoiZGQ4NzA0ZDMwMzg2YTEwMTk4YWVkODA2IiwibGlua19pZCI6MzI4Nj=
+MyNTc4fQ/3c0b9732a82a66e438c0ca75e083b97dd55de64fdfb7d3e46585013920351b57">=
+<img width=3D"40" style=3D"margin-right:auto;margin-left:auto;border-radius=
+:100%;" align=3D"center" alt=3D"courses" src=3D"https://assets.datacamp.com=
+/email/rebrand/python_3x.png"/></a></td><td align=3D"left" style=3D"vertica=
+l-align: middle;"><h2 style=3D"color:#05192d; font-family: StudioFeixenSans=
+, &#39;StudioFeixenSans&#39;, Arial, sans-serif; font-size: 24px;
+font-weight: bold; font-stretch: normal; font-style: normal; line-height: 3=
+2px; letter-spacing: -0.5px;"><a target=3D"_blank" style=3D"color:#05192d; =
+font-family: StudioFeixenSans, &#39;StudioFeixenSans&#39;, Arial, sans-seri=
+f; font-size: 24px; font-weight: bold; font-stretch: normal; font-style: no=
+rmal; line-height: 32px; letter-spacing: -0.5px; text-decoration: none;" hr=
+ef=3D"https://links.datacamp.com/e/c/eyJlbWFpbF9pZCI6ImRnVGRod1FEQUppdTJBYV=
+dydGdHQVpPTlRjcTRxWm52N1g5WnZDYjg0UT09IiwiaHJlZiI6Imh0dHBzOi8vd3d3LmRhdGFjY=
+W1wLmNvbS9jb3Vyc2VzL2V4cGxhaW5hYmxlLWFpLWluLXB5dGhvbj91dG1fc291cmNlPWN1c3Rv=
+bWVyaW9cdTAwMjZ1dG1fbWVkaXVtPWVtYWlsXHUwMDI2dXRtX2NhbXBhaWduPTI0MTIwM18xLW5=
+ld3NsZXR0ZXItYWNhZGVtaWNfMy1hbGxfNC1uYV81LW5hXzYtZGMtaW5zaWdodHNfNy1uYV84LW=
+VtYWwtY2lfOS0yXzEwLWJhdV8xMS1lbWFpbFx1MDAyNnV0bV9jb250ZW50PWJsYXN0XHUwMDI2d=
+XRtX3Rlcm09bmV3Y291cnNlXHUwMDI2ZGNfZXVpZD0xNDEwNTE2OCIsImludGVybmFsIjoiZGQ4=
+NzA0ZDMwMzg2YTEwMTk4YWVkODA2IiwibGlua19pZCI6MzI4NjMyNTc4fQ/3c0b9732a82a66e4=
+38c0ca75e083b97dd55de64fdfb7d3e46585013920351b57" class=3D"dark">Explainabl=
+e AI in Python</a></h2></td><td align=3D"right" style=3D"vertical-align: mi=
+ddle; color:#05192d; font-family: StudioFeixenSans, &#39;StudioFeixenSans&#=
+39;, Arial, sans-serif; font-size: 24px; font-weight: bold; font-stretch: n=
+ormal; font-style: normal; line-height: 32px; letter-spacing: -0.5px;"><a t=
+arget=3D"_blank" style=3D"color:#05192d; font-family: StudioFeixenSans, &#3=
+9;StudioFeixenSans&#39;, Arial, sans-serif; font-size: 24px; font-weight: b=
+old; font-stretch: normal; font-style: normal; line-height: 32px; letter-sp=
+acing: -0.5px; text-decoration: none;" href=3D"https://links.datacamp.com/e=
+/c/eyJlbWFpbF9pZCI6ImRnVGRod1FEQUppdTJBYVdydGdHQVpPTlRjcTRxWm52N1g5WnZDYjg0=
+UT09IiwiaHJlZiI6Imh0dHBzOi8vd3d3LmRhdGFjYW1wLmNvbS9jb3Vyc2VzL2V4cGxhaW5hYmx=
+lLWFpLWluLXB5dGhvbj91dG1fc291cmNlPWN1c3RvbWVyaW9cdTAwMjZ1dG1fbWVkaXVtPWVtYW=
+lsXHUwMDI2dXRtX2NhbXBhaWduPTI0MTIwM18xLW5ld3NsZXR0ZXItYWNhZGVtaWNfMy1hbGxfN=
+C1uYV81LW5hXzYtZGMtaW5zaWdodHNfNy1uYV84LWVtYWwtY2lfOS0yXzEwLWJhdV8xMS1lbWFp=
+bFx1MDAyNnV0bV9jb250ZW50PWJsYXN0XHUwMDI2dXRtX3Rlcm09bmV3Y291cnNlXHUwMDI2ZGN=
+fZXVpZD0xNDEwNTE2OCIsImludGVybmFsIjoiZGQ4NzA0ZDMwMzg2YTEwMTk4YWVkODA2IiwibG=
+lua19pZCI6MzI4NjMyNTc4fQ/3c0b9732a82a66e438c0ca75e083b97dd55de64fdfb7d3e465=
+85013920351b57" class=3D"dark">&gt;</a></td></tr></tbody></table></td></tr>=
+<!-- Spacer begins --><tr><td width=3D"0" height=3D"14" style=3D"font-size:=
+1px; line-height:1px; mso-line-height-rule: exactly;"></td></tr><!-- Spacer=
+ ends --></tbody></table></td></tr></tbody></table><table role=3D"presentat=
+ion" class=3D"darkcard" align=3D"center" border=3D"0" cellpadding=3D"0" cel=
+lspacing=3D"0" width=3D"100%" style=3D"border-bottom-left-radius: 4px; bord=
+er-bottom-right-radius: 4px;" bgcolor=3D"#ff5400"><!-- Spacer begins --><tb=
+ody><tr><td width=3D"0" height=3D"6" style=3D"font-size:1px; line-height:1p=
+x; mso-line-height-rule: exactly; border-bottom-left-radius: 4px; border-bo=
+ttom-right-radius: 4px;"></td></tr><!-- Spacer ends --></tbody></table><!--=
+[if true]></td></tr></table><![endif]--></td></tr><!-- ////////////////////=
+///////// MODULE: NEWSLETTER BLOCK ENDS ///////////////////////////// --><!=
+-- ///////////////////////////// MODULE: NEW COURSE ENDS //////////////////=
+/////////// -->
+
+
+<!-- ///////////////////////////// MODULE: CODE ALONG STARTS //////////////=
+/////////////// --><tr><td width=3D"0" height=3D"22" style=3D"font-size:1px=
+; line-height:1px; mso-line-height-rule: exactly;"></td></tr><!-- Spacer en=
+ds --><!-- Spacer begins --><!-- Spacer begins --><tr><td width=3D"0" heigh=
+t=3D"32" style=3D"font-size:1px; line-height:1px; mso-line-height-rule: exa=
+ctly;"></td></tr><!-- Spacer ends --><tr><td align=3D"left" style=3D"paddin=
+g-top:0px; padding-left:10px; padding-right: 10px;"><!--[if true]><table ro=
+le=3D"presentation" width=3D"600" align=3D"center" cellpadding=3D"0" cellsp=
+acing=3D"0" border=3D"0"><tr><td align=3D"center" width=3D"600"><![endif]--=
+><table role=3D"presentation" align=3D"center" border=3D"0" cellpadding=3D"=
+0" cellspacing=3D"0" width=3D"100%"><tbody><tr><td align=3D"left" width=3D"=
+50" style=3D"vertical-align: middle;"><img alt=3D"" border=3D"0" src=3D"htt=
+ps://assets.datacamp.com/email/rebrand/icon-videocamera-blue.png" style=3D"=
+border: 0; display: block; color:#414345; font-family: Karla, &#39;Karla&#3=
+9;,
+sans-serif;  font-size: 14px; height: auto; max-width: 30px; outline: 0; pa=
+dding: 0; width: 100%; display: block; color: #414345" width=3D"30"/></td><=
+td align=3D"left" style=3D"vertical-align: middle;"><div class=3D"gmail-ble=
+nd-screen"><div class=3D"gmail-blend-difference"><h2 style=3D"color:#ffffff=
+; font-family: StudioFeixenSans, &#39;StudioFeixenSans&#39;, Arial, sans-se=
+rif; font-size: 32px; font-weight: bold; font-stretch: normal; font-style: =
+normal; line-height: 38px; letter-spacing: -0.5px;" class=3D"dark">Code-Alo=
+ngs</h2></div></div></td></tr></tbody></table><!--[if true]></td></tr></tab=
+le><![endif]--></td></tr><!-- ///////////////////////////// MODULE: NEWSLET=
+TER BLOCK ENDS ///////////////////////////// --><!-- //////////////////////=
+/////// MODULE: NEWSLETTER BLOCK STARTS ///////////////////////////// --><!=
+-- Spacer begins --><tr><td width=3D"0" height=3D"22" style=3D"font-size:1p=
+x; line-height:1px; mso-line-height-rule: exactly;"></td></tr><!-- Spacer e=
+nds --><tr><td class=3D"one-column" align=3D"center" style=3D" padding-left=
+: 10px; padding-right: 10px;"><!--[if true]><table role=3D"presentation" wi=
+dth=3D"600" align=3D"center" cellpadding=3D"0" cellspacing=3D"0" border=3D"=
+0"><tr><td align=3D"center" width=3D"600"><![endif]--><table role=3D"presen=
+tation" align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" w=
+idth=3D"100%" style=3D"border-top-left-radius: 4px; border-top-right-radius=
+: 4px;" bgcolor=3D"#ffffff"><tbody><tr><td align=3D"center" style=3D"paddin=
+g-top:20px; padding-left:20px; padding-bottom:0px; padding-right: 20px;"><t=
+able align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=
+=3D"presentation" style=3D"margin: 0 auto; max-width: 540px; width: 100%;">=
+<tbody><tr><td align=3D"center"><table align=3D"center" border=3D"0" cellpa=
+dding=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"margin: 0 auto=
+; max-width: 540px; width: 100%;"><tbody><tr><td align=3D"left" style=3D"ve=
+rtical-align: middle;"><h2 style=3D"color:#05192d; font-family: StudioFeixe=
+nSans, &#39;StudioFeixenSans&#39;, Arial, sans-serif;
+font-size: 24px; font-weight: bold; font-stretch: normal; font-style: norma=
+l; line-height: 32px; letter-spacing: -0.5px;"><a target=3D"_blank" style=
+=3D"color:#05192d; font-family: StudioFeixenSans, &#39;StudioFeixenSans&#39=
+;, Arial, sans-serif; font-size: 24px; font-weight: bold; font-stretch: nor=
+mal; font-style: normal; line-height: 32px; letter-spacing: -0.5px; text-de=
+coration: none;" href=3D"https://links.datacamp.com/e/c/eyJlbWFpbF9pZCI6ImR=
+nVGRod1FEQUppdTJBYVdydGdHQVpPTlRjcTRxWm52N1g5WnZDYjg0UT09IiwiaHJlZiI6Imh0dH=
+BzOi8vd3d3LmRhdGFjYW1wLmNvbS93ZWJpbmFycy9ldmFsdWF0aW5nLWxsbS1wZXJmb3JtYW5jZ=
+S13aXRoLWF3cy1iZWRyb2NrP3V0bV9zb3VyY2U9Y3VzdG9tZXJpb1x1MDAyNnV0bV9tZWRpdW09=
+ZW1haWxcdTAwMjZ1dG1fY2FtcGFpZ249MjQxMjAzXzEtbmV3c2xldHRlci1hY2FkZW1pY18zLWF=
+sbF80LW5hXzUtbmFfNi1kYy1pbnNpZ2h0c183LW5hXzgtZW1hbC1jaV85LTFfMTAtYmF1XzExLW=
+VtYWlsXHUwMDI2dXRtX2NvbnRlbnQ9Ymxhc3RcdTAwMjZ1dG1fdGVybT1saXZldHJhaW5pbmdcd=
+TAwMjZkY19ldWlkPTE0MTA1MTY4IiwiaW50ZXJuYWwiOiJkZDg3MDRkMzAzODZhMTAxOThhZWQ4=
+MDYiLCJsaW5rX2lkIjozMjg2MzI1Nzl9/13fc3c9e01cfaaa1ab7d4c39f7e79b9fdc80096d41=
+e8729a78ae608537c60874" class=3D"dark">Evaluating LLM Performance with AWS =
+Bedrock</a></h2></td><td align=3D"right" style=3D"vertical-align: middle; c=
+olor:#05192d; font-family: StudioFeixenSans, &#39;StudioFeixenSans&#39;, Ar=
+ial, sans-serif; font-size: 24px; font-weight: bold; font-stretch: normal; =
+font-style: normal; line-height: 32px; letter-spacing: -0.5px;"><a target=
+=3D"_blank" style=3D"color:#05192d; font-family: StudioFeixenSans, &#39;Stu=
+dioFeixenSans&#39;, Arial, sans-serif; font-size: 24px; font-weight: bold; =
+font-stretch: normal; font-style: normal; line-height: 32px; letter-spacing=
+: -0.5px; padding-left: 8px; text-decoration:
+none;" href=3D"https://links.datacamp.com/e/c/eyJlbWFpbF9pZCI6ImRnVGRod1FEQ=
+UppdTJBYVdydGdHQVpPTlRjcTRxWm52N1g5WnZDYjg0UT09IiwiaHJlZiI6Imh0dHBzOi8vd3d3=
+LmRhdGFjYW1wLmNvbS93ZWJpbmFycy9ldmFsdWF0aW5nLWxsbS1wZXJmb3JtYW5jZS13aXRoLWF=
+3cy1iZWRyb2NrP3V0bV9zb3VyY2U9Y3VzdG9tZXJpb1x1MDAyNnV0bV9tZWRpdW09ZW1haWxcdT=
+AwMjZ1dG1fY2FtcGFpZ249MjQxMjAzXzEtbmV3c2xldHRlci1hY2FkZW1pY18zLWFsbF80LW5hX=
+zUtbmFfNi1kYy1pbnNpZ2h0c183LW5hXzgtZW1hbC1jaV85LTFfMTAtYmF1XzExLWVtYWlsXHUw=
+MDI2dXRtX2NvbnRlbnQ9Ymxhc3RcdTAwMjZ1dG1fdGVybT1saXZldHJhaW5pbmdcdTAwMjZkY19=
+ldWlkPTE0MTA1MTY4IiwiaW50ZXJuYWwiOiJkZDg3MDRkMzAzODZhMTAxOThhZWQ4MDYiLCJsaW=
+5rX2lkIjozMjg2MzI1Nzl9/13fc3c9e01cfaaa1ab7d4c39f7e79b9fdc80096d41e8729a78ae=
+608537c60874" class=3D"dark">&gt;</a></td></tr></tbody></table></td></tr><!=
+-- Spacer begins --><tr><td width=3D"0" height=3D"14" style=3D"font-size:1p=
+x; line-height:1px; mso-line-height-rule: exactly;"></td></tr><!-- Spacer e=
+nds --></tbody></table></td></tr></tbody></table><table role=3D"presentatio=
+n" class=3D"darkcard" align=3D"center" border=3D"0" cellpadding=3D"0" cells=
+pacing=3D"0" width=3D"100%" style=3D"border-bottom-left-radius: 4px; border=
+-bottom-right-radius: 4px;" bgcolor=3D"#06bdfc"><!-- Spacer begins --><tbod=
+y><tr><td width=3D"0" height=3D"6" style=3D"font-size:1px; line-height:1px;=
+ mso-line-height-rule: exactly; border-bottom-left-radius: 4px; border-bott=
+om-right-radius: 4px;"></td></tr><!-- Spacer ends --></tbody></table><!--[i=
+f true]></td></tr></table><![endif]--></td></tr><!-- //////////////////////=
+/////// MODULE: NEWSLETTER BLOCK ENDS ///////////////////////////// --><!--=
+ ///////////////////////////// MODULE: NEWSLETTER BLOCK STARTS ////////////=
+///////////////// --><!-- Spacer begins --><tr><td width=3D"0" height=3D"22=
+" style=3D"font-size:1px; line-height:1px; mso-line-height-rule: exactly;">=
+</td></tr><!-- Spacer ends --><tr><td class=3D"one-column" align=3D"center"=
+ style=3D" padding-left: 10px; padding-right: 10px;"><!--[if true]><table r=
+ole=3D"presentation" width=3D"600" align=3D"center" cellpadding=3D"0"
+cellspacing=3D"0" border=3D"0"><tr><td align=3D"center" width=3D"600"><![en=
+dif]--><table role=3D"presentation" align=3D"center" border=3D"0" cellpaddi=
+ng=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"border-top-left-radius: =
+4px; border-top-right-radius: 4px;" bgcolor=3D"#ffffff"><tbody><tr><td alig=
+n=3D"center" style=3D"padding-top:20px; padding-left:20px; padding-bottom:0=
+px; padding-right: 20px;"><table align=3D"center" border=3D"0" cellpadding=
+=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"margin: 0 auto; max=
+-width: 540px; width: 100%;"><tbody><tr><td align=3D"center"><table align=
+=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presen=
+tation" style=3D"margin: 0 auto; max-width: 540px; width: 100%;"><tbody><tr=
+><td align=3D"left" style=3D"vertical-align: middle;"><h2 style=3D"color:#0=
+5192d; font-family: StudioFeixenSans, &#39;StudioFeixenSans&#39;, Arial, sa=
+ns-serif; font-size: 24px; font-weight: bold; font-stretch: normal; font-st=
+yle: normal; line-height: 32px; letter-spacing: -0.5px;"><a target=3D"_blan=
+k" style=3D"color:#05192d; font-family: StudioFeixenSans, &#39;StudioFeixen=
+Sans&#39;, Arial, sans-serif; font-size: 24px; font-weight: bold; font-stre=
+tch: normal; font-style: normal; line-height: 32px; letter-spacing: -0.5px;=
+ text-decoration: none;" href=3D"https://links.datacamp.com/e/c/eyJlbWFpbF9=
+pZCI6ImRnVGRod1FEQUppdTJBYVdydGdHQVpPTlRjcTRxWm52N1g5WnZDYjg0UT09IiwiaHJlZi=
+I6Imh0dHBzOi8vd3d3LmRhdGFjYW1wLmNvbS93ZWJpbmFycy9pbnRyb2R1Y2Npb24tYS1zcWwtZ=
+W4tZXNwYW5vbD91dG1fc291cmNlPWN1c3RvbWVyaW9cdTAwMjZ1dG1fbWVkaXVtPWVtYWlsXHUw=
+MDI2dXRtX2NhbXBhaWduPTI0MTIwM18xLW5ld3NsZXR0ZXItYWNhZGVtaWNfMy1hbGxfNC1uYV8=
+1LW5hXzYtZGMtaW5zaWdodHNfNy1uYV84LWVtYWwtY2lfOS0yXzEwLWJhdV8xMS1lbWFpbFx1MD=
+AyNnV0bV9jb250ZW50PWJsYXN0XHUwMDI2dXRtX3Rlcm09bGl2ZXRyYWluaW5nXHUwMDI2ZGNfZ=
+XVpZD0xNDEwNTE2OCIsImludGVybmFsIjoiZGQ4NzA0ZDMwMzg2YTEwMTk4YWVkODA2IiwibGlu=
+a19pZCI6MzI4NjMyNTgwfQ/933c5786670d8476713092ddc92f70ca0187e9edeebd387c00b0=
+ef255dc6005e" class=3D"dark">Introducci=C3=B3n a SQL en Espa=C3=B1ol</a></h=
+2></td><td align=3D"right" style=3D"vertical-align: middle; color:#05192d; =
+font-family: StudioFeixenSans, &#39;StudioFeixenSans&#39;, Arial, sans-seri=
+f; font-size: 24px; font-weight: bold; font-stretch: normal; font-style: no=
+rmal; line-height: 32px; letter-spacing: -0.5px;"><a target=3D"_blank" styl=
+e=3D"color:#05192d; font-family: StudioFeixenSans, &#39;StudioFeixenSans&#3=
+9;, Arial, sans-serif; font-size: 24px; font-weight: bold; font-stretch: no=
+rmal; font-style: normal; line-height: 32px; letter-spacing: -0.5px; paddin=
+g-left: 8px; text-decoration: none;" href=3D"https://links.datacamp.com/e/c=
+/eyJlbWFpbF9pZCI6ImRnVGRod1FEQUppdTJBYVdydGdHQVpPTlRjcTRxWm52N1g5WnZDYjg0UT=
+09IiwiaHJlZiI6Imh0dHBzOi8vd3d3LmRhdGFjYW1wLmNvbS93ZWJpbmFycy9pbnRyb2R1Y2Npb=
+24tYS1zcWwtZW4tZXNwYW5vbD91dG1fc291cmNlPWN1c3RvbWVyaW9cdTAwMjZ1dG1fbWVkaXVt=
+PWVtYWlsXHUwMDI2dXRtX2NhbXBhaWduPTI0MTIwM18xLW5ld3NsZXR0ZXItYWNhZGVtaWNfMy1=
+hbGxfNC1uYV81LW5hXzYtZGMtaW5zaWdodHNfNy1uYV84LWVtYWwtY2lfOS0yXzEwLWJhdV8xMS=
+1lbWFpbFx1MDAyNnV0bV9jb250ZW50PWJsYXN0XHUwMDI2dXRtX3Rlcm09bGl2ZXRyYWluaW5nX=
+HUwMDI2ZGNfZXVpZD0xNDEwNTE2OCIsImludGVybmFsIjoiZGQ4NzA0ZDMwMzg2YTEwMTk4YWVk=
+ODA2IiwibGlua19pZCI6MzI4NjMyNTgwfQ/933c5786670d8476713092ddc92f70ca0187e9ed=
+eebd387c00b0ef255dc6005e" class=3D"dark">&gt;</a></td></tr></tbody></table>=
+</td></tr><!-- Spacer begins --><tr><td width=3D"0" height=3D"14" style=3D"=
+font-size:1px; line-height:1px; mso-line-height-rule: exactly;"></td></tr><=
+!-- Spacer ends --></tbody></table></td></tr></tbody></table><table role=3D=
+"presentation" class=3D"darkcard" align=3D"center" border=3D"0" cellpadding=
+=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"border-bottom-left-radius:=
+ 4px; border-bottom-right-radius: 4px;" bgcolor=3D"#06bdfc"><!-- Spacer beg=
+ins --><tbody><tr><td width=3D"0" height=3D"6" style=3D"font-size:1px; line=
+-height:1px; mso-line-height-rule: exactly; border-bottom-left-radius: 4px;
+border-bottom-right-radius: 4px;"></td></tr><!-- Spacer ends --></tbody></t=
+able><!--[if true]></td></tr></table><![endif]--></td></tr><!-- ///////////=
+////////////////// MODULE: NEWSLETTER BLOCK ENDS //////////////////////////=
+/// --><!-- ///////////////////////////// MODULE: CODE ALONG ENDS /////////=
+//////////////////// -->
+<!-- ///////////////////////////// MODULE: WEBINAR STARTS /////////////////=
+//////////// --><tr><td width=3D"0" height=3D"22" style=3D"font-size:1px; l=
+ine-height:1px; mso-line-height-rule: exactly;"></td></tr><!-- Spacer ends =
+--><!-- Spacer begins --><!-- Spacer begins --><tr><td width=3D"0" height=
+=3D"32" style=3D"font-size:1px; line-height:1px; mso-line-height-rule: exac=
+tly;"></td></tr><!-- Spacer ends --><tr><td align=3D"left" style=3D"padding=
+-top:0px; padding-left:10px; padding-right: 10px;"><!--[if true]><table rol=
+e=3D"presentation" width=3D"600" align=3D"center" cellpadding=3D"0" cellspa=
+cing=3D"0" border=3D"0"><tr><td align=3D"center" width=3D"600"><![endif]-->=
+<table role=3D"presentation" align=3D"center" border=3D"0" cellpadding=3D"0=
+" cellspacing=3D"0" width=3D"100%"><tbody><tr><td align=3D"left" width=3D"5=
+0" style=3D"vertical-align: middle;"><img alt=3D"" border=3D"0" src=3D"http=
+s://assets.datacamp.com/email/icons/webinar.png" style=3D"border: 0; displa=
+y: block; color:#414345; font-family: Karla, &#39;Karla&#39;, sans-serif;=
+=20
+font-size: 14px; height: auto; max-width: 30px; outline: 0; padding: 0; wid=
+th: 100%; display: block; color: #414345" width=3D"30"/></td><td align=3D"l=
+eft" style=3D"vertical-align: middle;"><div class=3D"gmail-blend-screen"><d=
+iv class=3D"gmail-blend-difference"><h2 style=3D"color:#ffffff; font-family=
+: StudioFeixenSans, &#39;StudioFeixenSans&#39;, Arial, sans-serif; font-siz=
+e: 32px; font-weight: bold; font-stretch: normal; font-style: normal; line-=
+height: 38px; letter-spacing: -0.5px;" class=3D"dark">Webinars</h2></div></=
+div></td></tr></tbody></table><!--[if true]></td></tr></table><![endif]--><=
+/td></tr><!-- ///////////////////////////// MODULE: NEWSLETTER BLOCK ENDS /=
+//////////////////////////// --><!-- ///////////////////////////// MODULE: =
+NEWSLETTER BLOCK STARTS ///////////////////////////// --><!-- Spacer begins=
+ --><tr><td width=3D"0" height=3D"22" style=3D"font-size:1px; line-height:1=
+px; mso-line-height-rule: exactly;"></td></tr><!-- Spacer ends --><tr><td c=
+lass=3D"one-column" align=3D"center" style=3D"
+padding-left: 10px; padding-right: 10px;"><!--[if true]><table role=3D"pres=
+entation" width=3D"600" align=3D"center" cellpadding=3D"0" cellspacing=3D"0=
+" border=3D"0"><tr><td align=3D"center" width=3D"600"><![endif]--><table ro=
+le=3D"presentation" align=3D"center" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%" style=3D"border-top-left-radius: 4px; border-top-=
+right-radius: 4px;" bgcolor=3D"#ffffff"><tbody><tr><td align=3D"center" sty=
+le=3D"padding-top:20px; padding-left:20px; padding-bottom:0px; padding-righ=
+t: 20px;"><table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacin=
+g=3D"0" role=3D"presentation" style=3D"margin: 0 auto; max-width: 540px; wi=
+dth: 100%;"><tbody><tr><td align=3D"center"><table align=3D"center" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"m=
+argin: 0 auto; max-width: 540px; width: 100%;"><tbody><tr><td align=3D"left=
+" style=3D"vertical-align: middle;"><h2 style=3D"color:#05192d; font-family=
+: StudioFeixenSans, &#39;StudioFeixenSans&#39;, Arial, sans-serif; font-siz=
+e: 24px;
+font-weight: bold; font-stretch: normal; font-style: normal; line-height: 3=
+2px; letter-spacing: -0.5px;"><a target=3D"_blank" style=3D"color:#05192d; =
+font-family: StudioFeixenSans, &#39;StudioFeixenSans&#39;, Arial, sans-seri=
+f; font-size: 24px; font-weight: bold; font-stretch: normal; font-style: no=
+rmal; line-height: 32px; letter-spacing: -0.5px; text-decoration: none;" hr=
+ef=3D"https://links.datacamp.com/e/c/eyJlbWFpbF9pZCI6ImRnVGRod1FEQUppdTJBYV=
+dydGdHQVpPTlRjcTRxWm52N1g5WnZDYjg0UT09IiwiaHJlZiI6Imh0dHBzOi8vd3d3LmRhdGFjY=
+W1wLmNvbS93ZWJpbmFycy9ydW5uaW5nLWEtY2xvdWQtdHJhbnNmb3JtYXRpb24tcHJvZ3JhbT91=
+dG1fc291cmNlPWN1c3RvbWVyaW9cdTAwMjZ1dG1fbWVkaXVtPWVtYWlsXHUwMDI2dXRtX2NhbXB=
+haWduPTI0MTIwM18xLW5ld3NsZXR0ZXItYWNhZGVtaWNfMy1hbGxfNC1uYV81LW5hXzYtZGMtaW=
+5zaWdodHNfNy1uYV84LWVtYWwtY2lfOS0xXzEwLWJhdV8xMS1lbWFpbFx1MDAyNnV0bV9jb250Z=
+W50PWJsYXN0XHUwMDI2dXRtX3Rlcm09d2ViaW5hclx1MDAyNmRjX2V1aWQ9MTQxMDUxNjgiLCJp=
+bnRlcm5hbCI6ImRkODcwNGQzMDM4NmExMDE5OGFlZDgwNiIsImxpbmtfaWQiOjMyODYzMjU4MX0=
+/e4601759109ee2827b170e81a5ef135db0472254374a7ad6a83738245f0575f0" class=3D=
+"dark">Running a Cloud Transformation Program</a></h2></td><td align=3D"rig=
+ht" style=3D"vertical-align: middle; color:#05192d; font-family: StudioFeix=
+enSans, &#39;StudioFeixenSans&#39;, Arial, sans-serif; font-size: 24px; fon=
+t-weight: bold; font-stretch: normal; font-style: normal; line-height: 32px=
+; letter-spacing: -0.5px;"><a target=3D"_blank" style=3D"color:#05192d; fon=
+t-family: StudioFeixenSans, &#39;StudioFeixenSans&#39;, Arial, sans-serif; =
+font-size: 24px; font-weight: bold; font-stretch: normal; font-style: norma=
+l; line-height: 32px; letter-spacing: -0.5px; padding-left: 8px; text-decor=
+ation: none;" href=3D"https://links.datacamp.com/e/c/eyJlbWFpbF9pZCI6ImRnVG=
+Rod1FEQUppdTJBYVdydGdHQVpPTlRjcTRxWm52N1g5WnZDYjg0UT09IiwiaHJlZiI6Imh0dHBzO=
+i8vd3d3LmRhdGFjYW1wLmNvbS93ZWJpbmFycy9ydW5uaW5nLWEtY2xvdWQtdHJhbnNmb3JtYXRp=
+b24tcHJvZ3JhbT91dG1fc291cmNlPWN1c3RvbWVyaW9cdTAwMjZ1dG1fbWVkaXVtPWVtYWlsXHU=
+wMDI2dXRtX2NhbXBhaWduPTI0MTIwM18xLW5ld3NsZXR0ZXItYWNhZGVtaWNfMy1hbGxfNC1uYV=
+81LW5hXzYtZGMtaW5zaWdodHNfNy1uYV84LWVtYWwtY2lfOS0xXzEwLWJhdV8xMS1lbWFpbFx1M=
+DAyNnV0bV9jb250ZW50PWJsYXN0XHUwMDI2dXRtX3Rlcm09d2ViaW5hclx1MDAyNmRjX2V1aWQ9=
+MTQxMDUxNjgiLCJpbnRlcm5hbCI6ImRkODcwNGQzMDM4NmExMDE5OGFlZDgwNiIsImxpbmtfaWQ=
+iOjMyODYzMjU4MX0/e4601759109ee2827b170e81a5ef135db0472254374a7ad6a83738245f=
+0575f0" class=3D"dark">&gt;</a></td></tr></tbody></table></td></tr><!-- Spa=
+cer begins --><tr><td width=3D"0" height=3D"14" style=3D"font-size:1px; lin=
+e-height:1px; mso-line-height-rule: exactly;"></td></tr><!-- Spacer ends --=
+></tbody></table></td></tr></tbody></table><table role=3D"presentation" cla=
+ss=3D"darkcard" align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" width=3D"100%" style=3D"border-bottom-left-radius: 4px; border-botto=
+m-right-radius: 4px;" bgcolor=3D"#974DFF"><!-- Spacer begins --><tbody><tr>=
+<td width=3D"0" height=3D"6" style=3D"font-size:1px; line-height:1px; mso-l=
+ine-height-rule: exactly; border-bottom-left-radius: 4px; border-bottom-rig=
+ht-radius: 4px;"></td></tr><!-- Spacer ends --></tbody></table><!--[if true=
+]></td></tr></table><![endif]--></td></tr><!-- ////////////////////////////=
+/ MODULE: NEWSLETTER BLOCK ENDS ///////////////////////////// --><!-- /////=
+//////////////////////// MODULE: NEWSLETTER BLOCK STARTS //////////////////=
+/////////// --><!-- Spacer begins --><tr><td width=3D"0" height=3D"22" styl=
+e=3D"font-size:1px; line-height:1px; mso-line-height-rule: exactly;"></td><=
+/tr><!-- Spacer ends --><tr><td class=3D"one-column" align=3D"center" style=
+=3D" padding-left: 10px; padding-right: 10px;"><!--[if true]><table role=3D=
+"presentation" width=3D"600" align=3D"center" cellpadding=3D"0" cellspacing=
+=3D"0" border=3D"0"><tr><td
+align=3D"center" width=3D"600"><![endif]--><table role=3D"presentation" ali=
+gn=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100=
+%" style=3D"border-top-left-radius: 4px; border-top-right-radius: 4px;" bgc=
+olor=3D"#ffffff"><tbody><tr><td align=3D"center" style=3D"padding-top:20px;=
+ padding-left:20px; padding-bottom:0px; padding-right: 20px;"><table align=
+=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presen=
+tation" style=3D"margin: 0 auto; max-width: 540px; width: 100%;"><tbody><tr=
+><td align=3D"center"><table align=3D"center" border=3D"0" cellpadding=3D"0=
+" cellspacing=3D"0" role=3D"presentation" style=3D"margin: 0 auto; max-widt=
+h: 540px; width: 100%;"><tbody><tr><td align=3D"left" style=3D"vertical-ali=
+gn: middle;"><h2 style=3D"color:#05192d; font-family: StudioFeixenSans, &#3=
+9;StudioFeixenSans&#39;, Arial, sans-serif; font-size: 24px; font-weight: b=
+old; font-stretch: normal; font-style: normal; line-height: 32px; letter-sp=
+acing: -0.5px;"><a target=3D"_blank" style=3D"color:#05192d; font-family:
+StudioFeixenSans, &#39;StudioFeixenSans&#39;, Arial, sans-serif; font-size:=
+ 24px; font-weight: bold; font-stretch: normal; font-style: normal; line-he=
+ight: 32px; letter-spacing: -0.5px; text-decoration: none;" href=3D"https:/=
+/links.datacamp.com/e/c/eyJlbWFpbF9pZCI6ImRnVGRod1FEQUppdTJBYVdydGdHQVpPTlR=
+jcTRxWm52N1g5WnZDYjg0UT09IiwiaHJlZiI6Imh0dHBzOi8vd3d3LmRhdGFjYW1wLmNvbS93ZW=
+JpbmFycy90aGUtZXUtYWktYWN0LWhvdy13aWxsLWl0LWFmZmVjdC15b3VyLWJ1c2luZXNzP3V0b=
+V9zb3VyY2U9Y3VzdG9tZXJpb1x1MDAyNnV0bV9tZWRpdW09ZW1haWxcdTAwMjZ1dG1fY2FtcGFp=
+Z249MjQxMjAzXzEtbmV3c2xldHRlci1hY2FkZW1pY18zLWFsbF80LW5hXzUtbmFfNi1kYy1pbnN=
+pZ2h0c183LW5hXzgtZW1hbC1jaV85LTJfMTAtYmF1XzExLWVtYWlsXHUwMDI2dXRtX2NvbnRlbn=
+Q9Ymxhc3RcdTAwMjZ1dG1fdGVybT13ZWJpbmFyXHUwMDI2ZGNfZXVpZD0xNDEwNTE2OCIsImlud=
+GVybmFsIjoiZGQ4NzA0ZDMwMzg2YTEwMTk4YWVkODA2IiwibGlua19pZCI6MzI4NjMyNTgyfQ/9=
+c6b4a442ca00929eb9f423a05fcefc508aa2acb1acb8a7723d5ac5ff4654828" class=3D"d=
+ark">The EU AI Act: How Will It Affect Your Business?</a></h2></td><td alig=
+n=3D"right" style=3D"vertical-align: middle; color:#05192d; font-family: St=
+udioFeixenSans, &#39;StudioFeixenSans&#39;, Arial, sans-serif; font-size: 2=
+4px; font-weight: bold; font-stretch: normal; font-style: normal; line-heig=
+ht: 32px; letter-spacing: -0.5px;"><a target=3D"_blank" style=3D"color:#051=
+92d; font-family: StudioFeixenSans, &#39;StudioFeixenSans&#39;, Arial, sans=
+-serif; font-size: 24px; font-weight: bold; font-stretch: normal; font-styl=
+e: normal; line-height: 32px; letter-spacing: -0.5px; padding-left: 8px; te=
+xt-decoration: none;" href=3D"https://links.datacamp.com/e/c/eyJlbWFpbF9pZC=
+I6ImRnVGRod1FEQUppdTJBYVdydGdHQVpPTlRjcTRxWm52N1g5WnZDYjg0UT09IiwiaHJlZiI6I=
+mh0dHBzOi8vd3d3LmRhdGFjYW1wLmNvbS93ZWJpbmFycy90aGUtZXUtYWktYWN0LWhvdy13aWxs=
+LWl0LWFmZmVjdC15b3VyLWJ1c2luZXNzP3V0bV9zb3VyY2U9Y3VzdG9tZXJpb1x1MDAyNnV0bV9=
+tZWRpdW09ZW1haWxcdTAwMjZ1dG1fY2FtcGFpZ249MjQxMjAzXzEtbmV3c2xldHRlci1hY2FkZW=
+1pY18zLWFsbF80LW5hXzUtbmFfNi1kYy1pbnNpZ2h0c183LW5hXzgtZW1hbC1jaV85LTJfMTAtY=
+mF1XzExLWVtYWlsXHUwMDI2dXRtX2NvbnRlbnQ9Ymxhc3RcdTAwMjZ1dG1fdGVybT13ZWJpbmFy=
+XHUwMDI2ZGNfZXVpZD0xNDEwNTE2OCIsImludGVybmFsIjoiZGQ4NzA0ZDMwMzg2YTEwMTk4YWV=
+kODA2IiwibGlua19pZCI6MzI4NjMyNTgyfQ/9c6b4a442ca00929eb9f423a05fcefc508aa2ac=
+b1acb8a7723d5ac5ff4654828" class=3D"dark">&gt;</a></td></tr></tbody></table=
+></td></tr><!-- Spacer begins --><tr><td width=3D"0" height=3D"14" style=3D=
+"font-size:1px; line-height:1px; mso-line-height-rule: exactly;"></td></tr>=
+<!-- Spacer ends --></tbody></table></td></tr></tbody></table><table role=
+=3D"presentation" class=3D"darkcard" align=3D"center" border=3D"0" cellpadd=
+ing=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"border-bottom-left-radi=
+us: 4px; border-bottom-right-radius: 4px;" bgcolor=3D"#974DFF"><!-- Spacer =
+begins --><tbody><tr><td width=3D"0" height=3D"6" style=3D"font-size:1px; l=
+ine-height:1px; mso-line-height-rule: exactly;
+border-bottom-left-radius: 4px; border-bottom-right-radius: 4px;"></td></tr=
+><!-- Spacer ends --></tbody></table><!--[if true]></td></tr></table><![end=
+if]--></td></tr><!-- ///////////////////////////// MODULE: NEWSLETTER BLOCK=
+ ENDS ///////////////////////////// --><!-- ///////////////////////////// M=
+ODULE: NEWSLETTER BLOCK STARTS ///////////////////////////// --><!-- Spacer=
+ begins --><tr><td width=3D"0" height=3D"22" style=3D"font-size:1px; line-h=
+eight:1px; mso-line-height-rule: exactly;"></td></tr><!-- Spacer ends --><t=
+r><td class=3D"one-column" align=3D"center" style=3D" padding-left: 10px; p=
+adding-right: 10px;"><!--[if true]><table role=3D"presentation" width=3D"60=
+0" align=3D"center" cellpadding=3D"0" cellspacing=3D"0" border=3D"0"><tr><t=
+d align=3D"center" width=3D"600"><![endif]--><table role=3D"presentation" a=
+lign=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"1=
+00%" style=3D"border-top-left-radius: 4px; border-top-right-radius: 4px;" b=
+gcolor=3D"#ffffff"><tbody><tr><td align=3D"center" style=3D"padding-top:20p=
+x; padding-left:20px; padding-bottom:0px; padding-right: 20px;"><table alig=
+n=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"prese=
+ntation" style=3D"margin: 0 auto; max-width: 540px; width: 100%;"><tbody><t=
+r><td align=3D"center"><table align=3D"center" border=3D"0" cellpadding=3D"=
+0" cellspacing=3D"0" role=3D"presentation" style=3D"margin: 0 auto; max-wid=
+th: 540px; width: 100%;"><tbody><tr><td align=3D"left" style=3D"vertical-al=
+ign: middle;"><h2 style=3D"color:#05192d; font-family: StudioFeixenSans, &#=
+39;StudioFeixenSans&#39;, Arial, sans-serif; font-size: 24px; font-weight: =
+bold; font-stretch: normal; font-style: normal; line-height: 32px; letter-s=
+pacing: -0.5px;"><a target=3D"_blank" style=3D"color:#05192d; font-family: =
+StudioFeixenSans, &#39;StudioFeixenSans&#39;, Arial, sans-serif; font-size:=
+ 24px; font-weight: bold; font-stretch: normal; font-style: normal; line-he=
+ight: 32px; letter-spacing: -0.5px; text-decoration: none;" href=3D"https:/=
+/links.datacamp.com/e/c/eyJlbWFpbF9pZCI6ImRnVGRod1FEQUppdTJBYVdydGdHQVpPTlR=
+jcTRxWm52N1g5WnZDYjg0UT09IiwiaHJlZiI6Imh0dHBzOi8vd3d3LmRhdGFjYW1wLmNvbS93ZW=
+JpbmFycy9wcmVwYXJpbmctZm9yLXRoZS1naXRodWItZm91bmRhdGlvbnMtY2VydGlmaWNhdGlvb=
+i1wcm9ncmFtLXdpdGgtZGF0YWNhbXA_dXRtX3NvdXJjZT1jdXN0b21lcmlvXHUwMDI2dXRtX21l=
+ZGl1bT1lbWFpbFx1MDAyNnV0bV9jYW1wYWlnbj0yNDEyMDNfMS1uZXdzbGV0dGVyLWFjYWRlbWl=
+jXzMtYWxsXzQtbmFfNS1uYV82LWRjLWluc2lnaHRzXzctbmFfOC1lbWFsLWNpXzktM18xMC1iYX=
+VfMTEtZW1haWxcdTAwMjZ1dG1fY29udGVudD1ibGFzdFx1MDAyNnV0bV90ZXJtPXdlYmluYXJcd=
+TAwMjZkY19ldWlkPTE0MTA1MTY4IiwiaW50ZXJuYWwiOiJkZDg3MDRkMzAzODZhMTAxOThhZWQ4=
+MDYiLCJsaW5rX2lkIjozMjg2MzI1ODN9/f18d754fe54db7f497fdd7741af0ef20fe038a9877=
+b33ed403620b2afbac9567" class=3D"dark">Preparing for the GitHub Foundations=
+ Certification Program</a></h2></td><td align=3D"right" style=3D"vertical-a=
+lign: middle; color:#05192d; font-family: StudioFeixenSans, &#39;StudioFeix=
+enSans&#39;, Arial, sans-serif; font-size: 24px;
+font-weight: bold; font-stretch: normal; font-style: normal; line-height: 3=
+2px; letter-spacing: -0.5px;"><a target=3D"_blank" style=3D"color:#05192d; =
+font-family: StudioFeixenSans, &#39;StudioFeixenSans&#39;, Arial, sans-seri=
+f; font-size: 24px; font-weight: bold; font-stretch: normal; font-style: no=
+rmal; line-height: 32px; letter-spacing: -0.5px; padding-left: 8px; text-de=
+coration: none;" href=3D"https://links.datacamp.com/e/c/eyJlbWFpbF9pZCI6ImR=
+nVGRod1FEQUppdTJBYVdydGdHQVpPTlRjcTRxWm52N1g5WnZDYjg0UT09IiwiaHJlZiI6Imh0dH=
+BzOi8vd3d3LmRhdGFjYW1wLmNvbS93ZWJpbmFycy9wcmVwYXJpbmctZm9yLXRoZS1naXRodWItZ=
+m91bmRhdGlvbnMtY2VydGlmaWNhdGlvbi1wcm9ncmFtLXdpdGgtZGF0YWNhbXA_dXRtX3NvdXJj=
+ZT1jdXN0b21lcmlvXHUwMDI2dXRtX21lZGl1bT1lbWFpbFx1MDAyNnV0bV9jYW1wYWlnbj0yNDE=
+yMDNfMS1uZXdzbGV0dGVyLWFjYWRlbWljXzMtYWxsXzQtbmFfNS1uYV82LWRjLWluc2lnaHRzXz=
+ctbmFfOC1lbWFsLWNpXzktM18xMC1iYXVfMTEtZW1haWxcdTAwMjZ1dG1fY29udGVudD1ibGFzd=
+Fx1MDAyNnV0bV90ZXJtPXdlYmluYXJcdTAwMjZkY19ldWlkPTE0MTA1MTY4IiwiaW50ZXJuYWwi=
+OiJkZDg3MDRkMzAzODZhMTAxOThhZWQ4MDYiLCJsaW5rX2lkIjozMjg2MzI1ODN9/f18d754fe5=
+4db7f497fdd7741af0ef20fe038a9877b33ed403620b2afbac9567" class=3D"dark">&gt;=
+</a></td></tr></tbody></table></td></tr><!-- Spacer begins --><tr><td width=
+=3D"0" height=3D"14" style=3D"font-size:1px; line-height:1px; mso-line-heig=
+ht-rule: exactly;"></td></tr><!-- Spacer ends --></tbody></table></td></tr>=
+</tbody></table><table role=3D"presentation" class=3D"darkcard" align=3D"ce=
+nter" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" style=
+=3D"border-bottom-left-radius: 4px; border-bottom-right-radius: 4px;" bgcol=
+or=3D"#974DFF"><!-- Spacer begins --><tbody><tr><td width=3D"0" height=3D"6=
+" style=3D"font-size:1px; line-height:1px;
+mso-line-height-rule: exactly; border-bottom-left-radius: 4px; border-botto=
+m-right-radius: 4px;"></td></tr><!-- Spacer ends --></tbody></table><!--[if=
+ true]></td></tr></table><![endif]--></td></tr><!-- ///////////////////////=
+////// MODULE: NEWSLETTER BLOCK ENDS ///////////////////////////// --><!-- =
+///////////////////////////// MODULE: WEBINARS ENDS ///////////////////////=
+////// -->
+<!-- ///////////////////////////// MODULE: BLOGS START ////////////////////=
+///////// --> <!-- Spacer begins --><tr><td width=3D"0" height=3D"22" style=
+=3D"font-size:1px; line-height:1px; mso-line-height-rule: exactly;"></td></=
+tr><!-- Spacer ends --><!-- Spacer begins --><tr><td width=3D"0" height=3D"=
+32" style=3D"font-size:1px; line-height:1px; mso-line-height-rule: exactly;=
+"></td></tr><!-- Spacer ends --><tr><td align=3D"left" style=3D"padding-top=
+:0px; padding-left:10px; padding-right: 10px;"><!--[if true]><table role=3D=
+"presentation" width=3D"600" align=3D"center" cellpadding=3D"0" cellspacing=
+=3D"0" border=3D"0"><tr><td align=3D"center" width=3D"600"><![endif]--><tab=
+le role=3D"presentation" align=3D"center" border=3D"0" cellpadding=3D"0" ce=
+llspacing=3D"0" width=3D"100%"> <tbody> <tr> <td align=3D"left" width=3D"50=
+" style=3D"vertical-align: middle;"><img alt=3D"" border=3D"0" src=3D"https=
+://assets.datacamp.com/email/rebrand/icon-assignment-pink.png" style=3D"bor=
+der: 0; display: block; color:#414345; font-family: Karla, &#39;Karla&#39;,
+sans-serif; font-size: 14px; height: auto; max-width: 30px; outline: 0; pad=
+ding: 0; width: 100%; display: block; color: #414345" width=3D"30"/></td><t=
+d align=3D"left" style=3D"vertical-align: middle;"><div class=3D"gmail-blen=
+d-screen"><div class=3D"gmail-blend-difference"><h2 style=3D"color:#ffffff;=
+ font-family: StudioFeixenSans, &#39;StudioFeixenSans&#39;, Arial, sans-ser=
+if; font-size: 32px; font-weight: bold; font-stretch: normal; font-style: n=
+ormal; line-height: 38px; letter-spacing: -0.5px;" class=3D"dark">Top Artic=
+les</h2></div></div></td></tr></tbody> </table><!--[if true]></td></tr></ta=
+ble><![endif]--></td></tr><!-- ///////////////////////////// MODULE: NEWSLE=
+TTER ARTICLE STARTS ///////////////////////////// --><!-- Spacer begins -->=
+<tr><td width=3D"0" height=3D"22" style=3D"font-size:1px; line-height:1px; =
+mso-line-height-rule: exactly;"></td></tr><!-- Spacer ends --><tr><td class=
+=3D"one-column" align=3D"center" style=3D" padding-left: 10px; padding-righ=
+t: 10px;"><!--[if true]><table
+role=3D"presentation" width=3D"600" align=3D"center" cellpadding=3D"0" cell=
+spacing=3D"0" border=3D"0"><tr><td align=3D"center" width=3D"600"><![endif]=
+--><table role=3D"presentation" align=3D"center" border=3D"0" cellpadding=
+=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"border-top-left-radius: 4p=
+x; border-top-right-radius: 4px;" class=3D"darkcard" bgcolor=3D"#ffffff"> <=
+tbody> <tr> <td align=3D"center" style=3D"padding-top:20px; padding-left:20=
+px; padding-bottom:0px; padding-right: 20px;"><table align=3D"center" borde=
+r=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"=
+margin: 0 auto; max-width: 540px; width: 100%;"> <tbody> <tr> <td align=3D"=
+center"><table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" role=3D"presentation" style=3D"margin: 0 auto; max-width: 540px; wid=
+th: 100%;"> <tbody> <tr> <td align=3D"left" style=3D"vertical-align: middle=
+;"><h2 style=3D"color:#05192d; font-family: StudioFeixenSans, &#39;StudioFe=
+ixenSans&#39;, Arial, sans-serif; font-size: 24px; font-weight: bold; font-=
+stretch: normal;
+font-style: normal; line-height: 32px; letter-spacing: -0.5px;"><a target=
+=3D"_blank" style=3D"color:#05192d; font-family: StudioFeixenSans, &#39;Stu=
+dioFeixenSans&#39;, Arial, sans-serif; font-size: 24px; font-weight: bold; =
+font-stretch: normal; font-style: normal; line-height: 32px; letter-spacing=
+: -0.5px; text-decoration: none;" href=3D"https://links.datacamp.com/e/c/ey=
+JlbWFpbF9pZCI6ImRnVGRod1FEQUppdTJBYVdydGdHQVpPTlRjcTRxWm52N1g5WnZDYjg0UT09I=
+iwiaHJlZiI6Imh0dHBzOi8vd3d3LmRhdGFjYW1wLmNvbS9ibG9nL2hvdy10by1sZWFybi1kYXRh=
+LWVuZ2luZWVyaW5nP3V0bV9zb3VyY2U9Y3VzdG9tZXJpb1x1MDAyNnV0bV9tZWRpdW09ZW1haWx=
+cdTAwMjZ1dG1fY2FtcGFpZ249MjQxMjAzXzEtbmV3c2xldHRlci1hY2FkZW1pY18zLWFsbF80LW=
+5hXzUtbmFfNi1kYy1pbnNpZ2h0c183LW5hXzgtZW1hbC1jaV85LTFfMTAtYmF1XzExLWVtYWlsX=
+HUwMDI2dXRtX2NvbnRlbnQ9Ymxhc3RcdTAwMjZ1dG1fdGVybT1ibG9nXHUwMDI2ZGNfZXVpZD0x=
+NDEwNTE2OCIsImludGVybmFsIjoiZGQ4NzA0ZDMwMzg2YTEwMTk4YWVkODA2IiwibGlua19pZCI=
+6MzI4NjMyNTg0fQ/892d86225e679f70c39c9468cbfb63dbbdb26ddaef914f4ab1ae2a75ca6=
+22aef" class=3D"dark">Learn Data Engineering
+from Scratch in 2025</a></h2></td><td align=3D"right" style=3D"vertical-ali=
+gn: middle; color:#05192d; font-family: StudioFeixenSans, &#39;StudioFeixen=
+Sans&#39;, Arial, sans-serif; font-size: 24px; font-weight: bold; font-stre=
+tch: normal; font-style: normal; line-height: 32px; letter-spacing: -0.5px;=
+ padding-left: 8px;"><a target=3D"_blank" style=3D"color:#05192d; font-fami=
+ly: StudioFeixenSans, &#39;StudioFeixenSans&#39;, Arial, sans-serif; font-s=
+ize: 24px; font-weight: bold; font-stretch: normal; font-style: normal; lin=
+e-height: 32px; letter-spacing: -0.5px; text-decoration: none;" href=3D"htt=
+ps://links.datacamp.com/e/c/eyJlbWFpbF9pZCI6ImRnVGRod1FEQUppdTJBYVdydGdHQVp=
+PTlRjcTRxWm52N1g5WnZDYjg0UT09IiwiaHJlZiI6Imh0dHBzOi8vd3d3LmRhdGFjYW1wLmNvbS=
+9ibG9nL2hvdy10by1sZWFybi1kYXRhLWVuZ2luZWVyaW5nP3V0bV9zb3VyY2U9Y3VzdG9tZXJpb=
+1x1MDAyNnV0bV9tZWRpdW09ZW1haWxcdTAwMjZ1dG1fY2FtcGFpZ249MjQxMjAzXzEtbmV3c2xl=
+dHRlci1hY2FkZW1pY18zLWFsbF80LW5hXzUtbmFfNi1kYy1pbnNpZ2h0c183LW5hXzgtZW1hbC1=
+jaV85LTFfMTAtYmF1XzExLWVtYWlsXHUwMDI2dXRtX2NvbnRlbnQ9Ymxhc3RcdTAwMjZ1dG1fdG=
+VybT1ibG9nXHUwMDI2ZGNfZXVpZD0xNDEwNTE2OCIsImludGVybmFsIjoiZGQ4NzA0ZDMwMzg2Y=
+TEwMTk4YWVkODA2IiwibGlua19pZCI6MzI4NjMyNTg0fQ/892d86225e679f70c39c9468cbfb6=
+3dbbdb26ddaef914f4ab1ae2a75ca622aef" class=3D"dark">&gt;</a></td></tr></tbo=
+dy> </table></td></tr><!-- Spacer begins --><tr><td width=3D"0" height=3D"1=
+4" style=3D"font-size:1px; line-height:1px; mso-line-height-rule: exactly;"=
+></td></tr><!-- Spacer ends --><tr> <td align=3D"left"><a href=3D"https://l=
+inks.datacamp.com/e/c/eyJlbWFpbF9pZCI6ImRnVGRod1FEQUppdTJBYVdydGdHQVpPTlRjc=
+TRxWm52N1g5WnZDYjg0UT09IiwiaHJlZiI6Imh0dHBzOi8vd3d3LmRhdGFjYW1wLmNvbS9ibG9n=
+L2hvdy10by1sZWFybi1kYXRhLWVuZ2luZWVyaW5nP3V0bV9zb3VyY2U9Y3VzdG9tZXJpb1x1MDA=
+yNnV0bV9tZWRpdW09ZW1haWxcdTAwMjZ1dG1fY2FtcGFpZ249MjQxMjAzXzEtbmV3c2xldHRlci=
+1hY2FkZW1pY18zLWFsbF80LW5hXzUtbmFfNi1kYy1pbnNpZ2h0c183LW5hXzgtZW1hbC1jaV85L=
+TFfMTAtYmF1XzExLWVtYWlsXHUwMDI2dXRtX2NvbnRlbnQ9Ymxhc3RcdTAwMjZ1dG1fdGVybT1i=
+bG9nXHUwMDI2ZGNfZXVpZD0xNDEwNTE2OCIsImludGVybmFsIjoiZGQ4NzA0ZDMwMzg2YTEwMTk=
+4YWVkODA2IiwibGlua19pZCI6MzI4NjMyNTg0fQ/892d86225e679f70c39c9468cbfb63dbbdb=
+26ddaef914f4ab1ae2a75ca622aef" style=3D"color:#05192d; font-family: StudioF=
+eixenSans, &#39;StudioFeixenSans&#39;, Arial, sans-serif; font-size: 18px; =
+font-weight: normal;
+font-stretch: normal; font-style: normal; line-height: 1.33; letter-spacing=
+: normal; color: #05192d; text-decoration: none;" class=3D"dark">Your compl=
+ete guide to learning data engineering, whether starting from scratch or tr=
+ansitioning from another field.</a></td></tr><!-- Spacer begins --><tr><td =
+width=3D"0" height=3D"22" style=3D"font-size:1px; line-height:1px; mso-line=
+-height-rule: exactly;"></td></tr><!-- Spacer ends --></tbody></table></td>=
+</tr></tbody></table><table role=3D"presentation" class=3D"darkcard" align=
+=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%"=
+ style=3D"border-bottom-left-radius: 4px;
+border-bottom-right-radius: 4px;" bgcolor=3D"#ff6ea9"><!-- Spacer begins --=
+><tbody><tr><td width=3D"0" height=3D"6" style=3D"font-size:1px; line-heigh=
+t:1px; mso-line-height-rule: exactly; border-bottom-left-radius: 4px; borde=
+r-bottom-right-radius: 16px;"></td></tr><!-- Spacer ends --></tbody></table=
+><!--[if true]></td></tr></table><![endif]--></td></tr><!-- ///////////////=
+////////////// MODULE: NEWSLETTER ARTICLE ENDS ////////////////////////////=
+/ --><!-- ///////////////////////////// MODULE: NEWSLETTER ARTICLE STARTS /=
+//////////////////////////// --><!-- Spacer begins --><tr><td width=3D"0" h=
+eight=3D"22" style=3D"font-size:1px; line-height:1px; mso-line-height-rule:=
+ exactly;"></td></tr><!-- Spacer ends --><tr><td class=3D"one-column" align=
+=3D"center" style=3D" padding-left: 10px; padding-right: 10px;"><!--[if tru=
+e]><table role=3D"presentation" width=3D"600" align=3D"center" cellpadding=
+=3D"0" cellspacing=3D"0" border=3D"0"><tr><td align=3D"center" width=3D"600=
+"><![endif]--><table role=3D"presentation" align=3D"center" border=3D"0" ce=
+llpadding=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"border-top-left-r=
+adius: 4px; border-top-right-radius: 4px;" class=3D"darkcard" bgcolor=3D"#f=
+fffff"> <tbody> <tr> <td align=3D"center" style=3D"padding-top:20px; paddin=
+g-left:20px; padding-bottom:0px; padding-right: 20px;"><table align=3D"cent=
+er" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" =
+style=3D"margin: 0 auto; max-width: 540px; width: 100%;"> <tbody> <tr> <td =
+align=3D"center"><table align=3D"center" border=3D"0" cellpadding=3D"0" cel=
+lspacing=3D"0" role=3D"presentation" style=3D"margin: 0 auto; max-width: 54=
+0px; width: 100%;"> <tbody> <tr> <td align=3D"left" style=3D"vertical-align=
+: middle;"><h2 style=3D"color:#05192d; font-family: StudioFeixenSans, &#39;=
+StudioFeixenSans&#39;, Arial, sans-serif; font-size: 24px; font-weight: bol=
+d; font-stretch: normal; font-style: normal; line-height: 32px; letter-spac=
+ing: -0.5px;"><a target=3D"_blank" style=3D"color:#05192d; font-family: Stu=
+dioFeixenSans, &#39;StudioFeixenSans&#39;, Arial, sans-serif; font-size: 24=
+px;
+font-weight: bold; font-stretch: normal; font-style: normal; line-height: 3=
+2px; letter-spacing: -0.5px; text-decoration: none;" href=3D"https://links.=
+datacamp.com/e/c/eyJlbWFpbF9pZCI6ImRnVGRod1FEQUppdTJBYVdydGdHQVpPTlRjcTRxWm=
+52N1g5WnZDYjg0UT09IiwiaHJlZiI6Imh0dHBzOi8vd3d3LmRhdGFjYW1wLmNvbS90dXRvcmlhb=
+C9jaGF0Z3B0LWZvci1leGNlbD91dG1fc291cmNlPWN1c3RvbWVyaW9cdTAwMjZ1dG1fbWVkaXVt=
+PWVtYWlsXHUwMDI2dXRtX2NhbXBhaWduPTI0MTIwM18xLW5ld3NsZXR0ZXItYWNhZGVtaWNfMy1=
+hbGxfNC1uYV81LW5hXzYtZGMtaW5zaWdodHNfNy1uYV84LWVtYWwtY2lfOS0yXzEwLWJhdV8xMS=
+1lbWFpbFx1MDAyNnV0bV9jb250ZW50PWJsYXN0XHUwMDI2dXRtX3Rlcm09YmxvZ1x1MDAyNmRjX=
+2V1aWQ9MTQxMDUxNjgiLCJpbnRlcm5hbCI6ImRkODcwNGQzMDM4NmExMDE5OGFlZDgwNiIsImxp=
+bmtfaWQiOjMyODYzMjU4NX0/ca1362e2953bac1182479c8dbd72450ad49f55e7cc6002c83ca=
+ce53254ec09f9" class=3D"dark">How to Use ChatGPT for Excel: Tips, Tricks, a=
+nd Best Practices</a></h2></td><td align=3D"right" style=3D"vertical-align:=
+ middle; color:#05192d; font-family: StudioFeixenSans, &#39;StudioFeixenSan=
+s&#39;, Arial, sans-serif; font-size: 24px;
+font-weight: bold; font-stretch: normal; font-style: normal; line-height: 3=
+2px; letter-spacing: -0.5px;"><a target=3D"_blank" style=3D"color:#05192d; =
+font-family: StudioFeixenSans, &#39;StudioFeixenSans&#39;, Arial, sans-seri=
+f; font-size: 24px; font-weight: bold; font-stretch: normal; font-style: no=
+rmal; line-height: 32px; letter-spacing: -0.5px; padding-left: 8px; text-de=
+coration: none;" href=3D"https://links.datacamp.com/e/c/eyJlbWFpbF9pZCI6ImR=
+nVGRod1FEQUppdTJBYVdydGdHQVpPTlRjcTRxWm52N1g5WnZDYjg0UT09IiwiaHJlZiI6Imh0dH=
+BzOi8vd3d3LmRhdGFjYW1wLmNvbS90dXRvcmlhbC9jaGF0Z3B0LWZvci1leGNlbD91dG1fc291c=
+mNlPWN1c3RvbWVyaW9cdTAwMjZ1dG1fbWVkaXVtPWVtYWlsXHUwMDI2dXRtX2NhbXBhaWduPTI0=
+MTIwM18xLW5ld3NsZXR0ZXItYWNhZGVtaWNfMy1hbGxfNC1uYV81LW5hXzYtZGMtaW5zaWdodHN=
+fNy1uYV84LWVtYWwtY2lfOS0yXzEwLWJhdV8xMS1lbWFpbFx1MDAyNnV0bV9jb250ZW50PWJsYX=
+N0XHUwMDI2dXRtX3Rlcm09YmxvZ1x1MDAyNmRjX2V1aWQ9MTQxMDUxNjgiLCJpbnRlcm5hbCI6I=
+mRkODcwNGQzMDM4NmExMDE5OGFlZDgwNiIsImxpbmtfaWQiOjMyODYzMjU4NX0/ca1362e2953b=
+ac1182479c8dbd72450ad49f55e7cc6002c83cace53254ec09f9" class=3D"dark">&gt;</=
+a></td></tr></tbody> </table></td></tr><!-- Spacer begins --><tr><td width=
+=3D"0" height=3D"14" style=3D"font-size:1px; line-height:1px; mso-line-heig=
+ht-rule: exactly;"></td></tr><!-- Spacer ends --><tr> <td align=3D"left"><a=
+ href=3D"https://links.datacamp.com/e/c/eyJlbWFpbF9pZCI6ImRnVGRod1FEQUppdTJ=
+BYVdydGdHQVpPTlRjcTRxWm52N1g5WnZDYjg0UT09IiwiaHJlZiI6Imh0dHBzOi8vd3d3LmRhdG=
+FjYW1wLmNvbS90dXRvcmlhbC9jaGF0Z3B0LWZvci1leGNlbD91dG1fc291cmNlPWN1c3RvbWVya=
+W9cdTAwMjZ1dG1fbWVkaXVtPWVtYWlsXHUwMDI2dXRtX2NhbXBhaWduPTI0MTIwM18xLW5ld3Ns=
+ZXR0ZXItYWNhZGVtaWNfMy1hbGxfNC1uYV81LW5hXzYtZGMtaW5zaWdodHNfNy1uYV84LWVtYWw=
+tY2lfOS0yXzEwLWJhdV8xMS1lbWFpbFx1MDAyNnV0bV9jb250ZW50PWJsYXN0XHUwMDI2dXRtX3=
+Rlcm09YmxvZ1x1MDAyNmRjX2V1aWQ9MTQxMDUxNjgiLCJpbnRlcm5hbCI6ImRkODcwNGQzMDM4N=
+mExMDE5OGFlZDgwNiIsImxpbmtfaWQiOjMyODYzMjU4NX0/ca1362e2953bac1182479c8dbd72=
+450ad49f55e7cc6002c83cace53254ec09f9" style=3D"color:#05192d; font-family: =
+StudioFeixenSans, &#39;StudioFeixenSans&#39;, Arial, sans-serif; font-size:=
+ 18px; font-weight: normal; font-stretch:
+normal; font-style: normal; line-height: 1.33; letter-spacing: normal; colo=
+r: #05192d; text-decoration: none;" class=3D"dark">Leverage the power of Ch=
+atGPT for Excel to boost your productivity and unlock the full potential of=
+ Excel.</a></td></tr><!-- Spacer begins --><tr><td width=3D"0" height=3D"22=
+" style=3D"font-size:1px; line-height:1px; mso-line-height-rule: exactly;">=
+</td></tr><!-- Spacer ends --></tbody></table></td></tr></tbody></table><ta=
+ble role=3D"presentation" class=3D"darkcard" align=3D"center" border=3D"0" =
+cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"border-bottom-l=
+eft-radius: 4px; border-bottom-right-radius: 4px;" bgcolor=3D"#ff6ea9"><!--=
+ Spacer begins --><tbody><tr><td width=3D"0" height=3D"6" style=3D"font-siz=
+e:1px; line-height:1px; mso-line-height-rule: exactly; border-bottom-left-r=
+adius: 4px; border-bottom-right-radius: 16px;"></td></tr><!-- Spacer ends -=
+-></tbody></table><!--[if true]></td></tr></table><![endif]--></td></tr><!-=
+- ///////////////////////////// MODULE: NEWSLETTER ARTICLE ENDS ///////////=
+////////////////// --><!-- ///////////////////////////// MODULE: BLOGS END =
+///////////////////////////// -->
+<!-- ///////////////////////////// MODULE: PODCAST STARTS /////////////////=
+//////////// --> <!-- Spacer begins --><tr><td width=3D"0" height=3D"22" st=
+yle=3D"font-size:1px; line-height:1px; mso-line-height-rule: exactly;"></td=
+></tr><!-- Spacer ends --><!-- Spacer begins --><tr><td width=3D"0" height=
+=3D"32" style=3D"font-size:1px; line-height:1px; mso-line-height-rule: exac=
+tly;"></td></tr><!-- Spacer ends --><tr><td align=3D"left" style=3D"padding=
+-top:0px; padding-left:10px; padding-right: 10px;"><!--[if true]><table rol=
+e=3D"presentation" width=3D"600" align=3D"center" cellpadding=3D"0" cellspa=
+cing=3D"0" border=3D"0"><tr><td align=3D"center" width=3D"600"><![endif]-->=
+<table role=3D"presentation" align=3D"center" border=3D"0" cellpadding=3D"0=
+" cellspacing=3D"0" width=3D"100%"> <tbody> <tr> <td align=3D"left" width=
+=3D"50" style=3D"vertical-align: middle;"><img alt=3D"" border=3D"0" src=3D=
+"https://assets.datacamp.com/email/other/ff931e-podcasticon.png" style=3D"b=
+order: 0; display: block; color:#414345; font-family: Karla, &#39;Karla&#39=
+;,
+sans-serif; font-size: 14px; height: auto; max-width: 30px; outline: 0; pad=
+ding: 0; width: 100%; display: block; color: #414345" width=3D"30"/></td><t=
+d align=3D"left" style=3D"vertical-align: middle;"><div class=3D"gmail-blen=
+d-screen"><div class=3D"gmail-blend-difference"><h2 style=3D"color:#ffffff;=
+ font-family: StudioFeixenSans, &#39;StudioFeixenSans&#39;, Arial, sans-ser=
+if; font-size: 32px; font-weight: bold; font-stretch: normal; font-style: n=
+ormal; line-height: 38px; letter-spacing: -0.5px;" class=3D"dark">Podcast</=
+h2></div></div></td></tr></tbody> </table><!--[if true]></td></tr></table><=
+![endif]--></td></tr><!-- ///////////////////////////// MODULE: NEWSLETTER =
+BLOCK STARTS ///////////////////////////// --><!-- Spacer begins --><tr><td=
+ width=3D"0" height=3D"22" style=3D"font-size:1px; line-height:1px; mso-lin=
+e-height-rule: exactly;"></td></tr><!-- Spacer ends --><tr><td class=3D"one=
+-column" align=3D"center" style=3D" padding-left: 10px; padding-right: 10px=
+;"><!--[if true]><table role=3D"presentation"
+width=3D"600" align=3D"center" cellpadding=3D"0" cellspacing=3D"0" border=
+=3D"0"><tr><td align=3D"center" width=3D"600"><![endif]--><table role=3D"pr=
+esentation" align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"=
+0" width=3D"100%" style=3D"border-top-left-radius: 4px; border-top-right-ra=
+dius: 4px;" bgcolor=3D"#ffffff"><tbody><tr><td align=3D"center" style=3D"pa=
+dding-top:20px; padding-left:20px; padding-bottom:0px; padding-right: 20px;=
+"><table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" =
+role=3D"presentation" style=3D"margin: 0 auto; max-width: 540px; width: 100=
+%;"><tbody><tr><td align=3D"center"><table align=3D"center" border=3D"0" ce=
+llpadding=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"margin: 0 =
+auto; max-width: 540px; width: 100%;"><tbody><tr><td align=3D"left" style=
+=3D"vertical-align: middle;"><h2 style=3D"color:#05192d; font-family: Studi=
+oFeixenSans, &#39;StudioFeixenSans&#39;, Arial, sans-serif; font-size: 24px=
+; font-weight: bold; font-stretch: normal; font-style: normal; line-height:=
+ 32px;
+letter-spacing: -0.5px; padding-right: 3px;"><a target=3D"_blank" style=3D"=
+color:#05192d; font-family: StudioFeixenSans, &#39;StudioFeixenSans&#39;, A=
+rial, sans-serif; font-size: 24px; font-weight: bold; font-stretch: normal;=
+ font-style: normal; line-height: 32px; letter-spacing: -0.5px; text-decora=
+tion: none;" href=3D"https://links.datacamp.com/e/c/eyJlbWFpbF9pZCI6ImRnVGR=
+od1FEQUppdTJBYVdydGdHQVpPTlRjcTRxWm52N1g5WnZDYjg0UT09IiwiaHJlZiI6Imh0dHBzOi=
+8vd3d3LmRhdGFjYW1wLmNvbS9wb2RjYXN0L3doYXQteW91LW5lZWQtdG8ta25vdy1hYm91dC10a=
+GUtZXUtYWktYWN0P3V0bV9zb3VyY2U9Y3VzdG9tZXJpb1x1MDAyNnV0bV9tZWRpdW09ZW1haWxc=
+dTAwMjZ1dG1fY2FtcGFpZ249MjQxMjAzXzEtbmV3c2xldHRlci1hY2FkZW1pY18zLWFsbF80LW5=
+hXzUtbmFfNi1kYy1pbnNpZ2h0c183LW5hXzgtZW1hbC1jaV85LW5hXzEwLWJhdV8xMS1lbWFpbF=
+x1MDAyNnV0bV9jb250ZW50PWJsYXN0XHUwMDI2dXRtX3Rlcm09cG9kY2FzdFx1MDAyNmRjX2V1a=
+WQ9MTQxMDUxNjgiLCJpbnRlcm5hbCI6ImRkODcwNGQzMDM4NmExMDE5OGFlZDgwNiIsImxpbmtf=
+aWQiOjMyODYzMjU4Nn0/17424bbfc155c137b54b39ac5534d51398de5b8e294b1bafcbb62c9=
+415791bb9" class=3D"dark">What You Need to Know About the EU AI Act</a></h2=
+></td><td align=3D"right" style=3D"vertical-align: middle; color:#05192d; f=
+ont-family: StudioFeixenSans, &#39;StudioFeixenSans&#39;, Arial, sans-serif=
+; font-size: 24px; font-weight: bold; font-stretch: normal; font-style: nor=
+mal; line-height: 32px; letter-spacing: -0.5px;"><a target=3D"_blank" style=
+=3D"color:#05192d; font-family: StudioFeixenSans, &#39;StudioFeixenSans&#39=
+;, Arial, sans-serif; font-size: 24px; font-weight: bold; font-stretch: nor=
+mal; font-style: normal; line-height: 32px; letter-spacing: -0.5px; text-de=
+coration: none;" href=3D"https://links.datacamp.com/e/c/eyJlbWFpbF9pZCI6ImR=
+nVGRod1FEQUppdTJBYVdydGdHQVpPTlRjcTRxWm52N1g5WnZDYjg0UT09IiwiaHJlZiI6Imh0dH=
+BzOi8vd3d3LmRhdGFjYW1wLmNvbS9wb2RjYXN0L3doYXQteW91LW5lZWQtdG8ta25vdy1hYm91d=
+C10aGUtZXUtYWktYWN0P3V0bV9zb3VyY2U9Y3VzdG9tZXJpb1x1MDAyNnV0bV9tZWRpdW09ZW1h=
+aWxcdTAwMjZ1dG1fY2FtcGFpZ249MjQxMjAzXzEtbmV3c2xldHRlci1hY2FkZW1pY18zLWFsbF8=
+0LW5hXzUtbmFfNi1kYy1pbnNpZ2h0c183LW5hXzgtZW1hbC1jaV85LW5hXzEwLWJhdV8xMS1lbW=
+FpbFx1MDAyNnV0bV9jb250ZW50PWJsYXN0XHUwMDI2dXRtX3Rlcm09cG9kY2FzdFx1MDAyNmRjX=
+2V1aWQ9MTQxMDUxNjgiLCJpbnRlcm5hbCI6ImRkODcwNGQzMDM4NmExMDE5OGFlZDgwNiIsImxp=
+bmtfaWQiOjMyODYzMjU4Nn0/17424bbfc155c137b54b39ac5534d51398de5b8e294b1bafcbb=
+62c9415791bb9" class=3D"dark">&gt;</a></td></tr></tbody></table></td></tr><=
+!-- Spacer begins --><tr><td width=3D"0" height=3D"14" style=3D"font-size:1=
+px; line-height:1px; mso-line-height-rule: exactly;"></td></tr><!-- Spacer =
+ends --></tbody></table></td></tr></tbody></table><table role=3D"presentati=
+on" class=3D"darkcard" align=3D"center" border=3D"0" cellpadding=3D"0" cell=
+spacing=3D"0" width=3D"100%" style=3D"border-bottom-left-radius: 4px; borde=
+r-bottom-right-radius: 4px;" bgcolor=3D"#ff931e"><!-- Spacer begins --><tbo=
+dy><tr><td width=3D"0" height=3D"6" style=3D"font-size:1px; line-height:1px=
+; mso-line-height-rule: exactly; border-bottom-left-radius: 4px; border-bot=
+tom-right-radius: 4px;"></td></tr><!-- Spacer ends --></tbody></table><!--[=
+if true]></td></tr></table><![endif]--></td></tr><!-- /////////////////////=
+//////// MODULE: NEWSLETTER BLOCK ENDS ///////////////////////////// --><!-=
+- ///////////////////////////// MODULE: PODCAST ENDS //////////////////////=
+/////// -->
+<!-- ///////////////////////////// MODULE: FOOTER STARTS //////////////////=
+/////////// --><tr><td class=3D"one-column" align=3D"center" style=3D"paddi=
+ng-top:20px; padding-left:10px; padding-bottom:0px; padding-right: 10px;"><=
+!--[if true]><table role=3D"presentation" width=3D"600" align=3D"center" ce=
+llpadding=3D"0" cellspacing=3D"0" border=3D"0"><tr><td align=3D"center" wid=
+th=3D"600"><![endif]--><table align=3D"center" border=3D"0" cellpadding=3D"=
+0" cellspacing=3D"0" role=3D"presentation" style=3D"border: none; border-co=
+llapse: collapse; border-spacing: 0; margin: auto; mso-table-lspace: 0; mso=
+-table-rspace: 0; width:100%;"><!-- Spacer begins --><tbody><tr><td class=
+=3D"one-column" style=3D"padding-left: 20px; padding-right: 20px;" align=3D=
+"center"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"1=
+00%" role=3D"presentation" style=3D"border-collapse: collapse; padding: 0; =
+margin: 0; width:100%;"><tbody><!-- Spacer begins --><tr><td width=3D"0" he=
+ight=3D"72" style=3D"font-size:1px; line-height:1px; mso-line-height-rule:
+exactly;"></td></tr><!-- Spacer ends --><tr><td align=3D"center" valign=3D"=
+top"><a target=3D"_blank" href=3D"https://links.datacamp.com/e/c/eyJlbWFpbF=
+9pZCI6ImRnVGRod1FEQUppdTJBYVdydGdHQVpPTlRjcTRxWm52N1g5WnZDYjg0UT09IiwiaHJlZ=
+iI6Imh0dHBzOi8vbGVhcm4uZGF0YWNhbXAuY29tP3V0bV9zb3VyY2U9Y3VzdG9tZXJpb1x1MDAy=
+NnV0bV9tZWRpdW09ZW1haWxcdTAwMjZ1dG1fY2FtcGFpZ249MjQxMjAzXzEtbmV3c2xldHRlci1=
+hY2FkZW1pY18zLWFsbF80LW5hXzUtbmFfNi1kYy1pbnNpZ2h0c183LW5hXzgtZW1hbC1jaV85LW=
+5hXzEwLWJhdV8xMS1lbWFpbFx1MDAyNnV0bV9jb250ZW50PWJsYXN0XHUwMDI2dXRtX3Rlcm09b=
+G9nb1x1MDAyNmRjX2V1aWQ9MTQxMDUxNjgiLCJpbnRlcm5hbCI6ImRkODcwNGQzMDM4NmExMDE5=
+OGFlZDgwNiIsImxpbmtfaWQiOjMyODYzMjU3NH0/70841cd327fc6dabbdb7ee728a35e174bb0=
+c7c1ba2f3307ddc030ba42ba5e06b"><img alt=3D"clear as data" title=3D"" border=
+=3D"0" align=3D"center" style=3D"border: 0; display: block; color: #8a8a8d;=
+ font-family: StudioFeixenSans, &#39;StudioFeixenSans&#39;, Arial, sans-ser=
+if; font-size: 14px; font-size: 22px; font-weight: bold; height: auto; outl=
+ine: 0; padding: 0; width: 100%; max-width: 90px; display: block;" width=3D=
+"90" src=3D"https://assets.datacamp.com/email/rebrand/tagline.png"/></a></t=
+d></tr><!-- Spacer begins --><tr><td width=3D"0" height=3D"24" style=3D"fon=
+t-size:1px; line-height:1px; mso-line-height-rule: exactly;"></td></tr><!--=
+ Spacer ends --><tr><td align=3D"center" valign=3D"top"><div><!--[if mso]><=
+v:roundrect xmlns:v=3D"urn:schemas-microsoft-com:vml" xmlns:w=3D"urn:schema=
+s-microsoft-com:office:word" href=3D"https://links.datacamp.com/e/c/eyJlbWF=
+pbF9pZCI6ImRnVGRod1FEQUppdTJBYVdydGdHQVpPTlRjcTRxWm52N1g5WnZDYjg0UT09IiwiaH=
+JlZiI6Imh0dHBzOi8vd3d3LmRhdGFjYW1wLmNvbS9idXNpbmVzcy9kZW1vP3V0bV9zb3VyY2U9Y=
+3VzdG9tZXJpb1x1MDAyNnV0bV9tZWRpdW09ZW1haWxcdTAwMjZ1dG1fY2FtcGFpZ249MjQxMjAz=
+XzEtbmV3c2xldHRlci1hY2FkZW1pY18zLWFsbF80LW5hXzUtbmFfNi1kYy1pbnNpZ2h0c183LW5=
+hXzgtZW1hbC1jaV85LW5hXzEwLWJhdV8xMS1lbWFpbFx1MDAyNnV0bV9jb250ZW50PWJsYXN0XH=
+UwMDI2dXRtX3Rlcm09dGVhbXNcdTAwMjZkY19ldWlkPTE0MTA1MTY4IiwiaW50ZXJuYWwiOiJkZ=
+Dg3MDRkMzAzODZhMTAxOThhZWQ4MDYiLCJsaW5rX2lkIjozMjg2MzI1ODd9/80fbeca1cf0ed22=
+387677c13c4719041fe4e21133f6c9f3379b112a5f9f6a7f0" style=3D"height:40px;v-t=
+ext-anchor:middle;width:220px;" arcsize=3D"10%" strokecolor=3D"#ffffff" fil=
+lcolor=3D"#05192d"><w:anchorlock/><center style=3D"color:#ffffff;font-famil=
+y:sans-serif;font-size:16px;font-weight:bold;">Upskill Your Organization</c=
+enter></v:roundrect><![endif]--><a href=3D"https://links.datacamp.com/e/c/e=
+yJlbWFpbF9pZCI6ImRnVGRod1FEQUppdTJBYVdydGdHQVpPTlRjcTRxWm52N1g5WnZDYjg0UT09=
+IiwiaHJlZiI6Imh0dHBzOi8vd3d3LmRhdGFjYW1wLmNvbS9idXNpbmVzcy9kZW1vP3V0bV9zb3V=
+yY2U9Y3VzdG9tZXJpb1x1MDAyNnV0bV9tZWRpdW09ZW1haWxcdTAwMjZ1dG1fY2FtcGFpZ249Mj=
+QxMjAzXzEtbmV3c2xldHRlci1hY2FkZW1pY18zLWFsbF80LW5hXzUtbmFfNi1kYy1pbnNpZ2h0c=
+183LW5hXzgtZW1hbC1jaV85LW5hXzEwLWJhdV8xMS1lbWFpbFx1MDAyNnV0bV9jb250ZW50PWJs=
+YXN0XHUwMDI2dXRtX3Rlcm09dGVhbXNcdTAwMjZkY19ldWlkPTE0MTA1MTY4IiwiaW50ZXJuYWw=
+iOiJkZDg3MDRkMzAzODZhMTAxOThhZWQ4MDYiLCJsaW5rX2lkIjozMjg2MzI1ODd9/80fbeca1c=
+f0ed22387677c13c4719041fe4e21133f6c9f3379b112a5f9f6a7f0" style=3D"backgroun=
+d-color:#05192d;border:2px solid #ffffff;border-radius:4px;color:#ffffff;di=
+splay:inline-block;font-family: StudioFeixenSans, &#39;StudioFeixenSans&#39=
+;, Arial,
+sans-serif;font-size:16px;font-weight:bold;line-height:40px;text-align:cent=
+er;text-decoration:none;width:220px;-webkit-text-size-adjust:none;mso-hide:=
+all;">Upskill Your Organization</a></div></td></tr><!-- Spacer begins --><t=
+r><td width=3D"0" height=3D"24" style=3D"font-size:1px; line-height:1px; ms=
+o-line-height-rule: exactly;"></td></tr><!-- Spacer ends --><tr><td align=
+=3D"center" style=3D"padding-top:10px; padding-right:10px; padding-bottom:1=
+0px; padding-left:10px;"><div class=3D"gmail-blend-screen"><div class=3D"gm=
+ail-blend-difference"><p style=3D" color: #f4f4f4; font-family: StudioFeixe=
+nSans, &#39;StudioFeixenSans&#39;, Arial, sans-serif; font-size:
+14px; line-height: 26px; letter-spacing: 1px; font-weight: normal; color: #=
+f4f4f4;" class=3D"dark">DataCamp, Inc. | 1 Pennsylvania Plaza | Suite 2014 =
+| New York, NY 10119</p></div></div></td></tr><!-- Spacer begins --><tr><td=
+ width=3D"0" height=3D"24" style=3D"font-size:1px; line-height:1px; mso-lin=
+e-height-rule: exactly;"></td></tr><!-- Spacer ends --><tr><td align=3D"cen=
+ter" style=3D"padding-top:0; padding-right:20px; padding-bottom:0; padding-=
+left:20px;"><!--[if true]><table role=3D"presentation" width=3D"200" align=
+=3D"center" cellpadding=3D"0" cellspacing=3D"0" border=3D"0"><tr><td align=
+=3D"center"><![endif]--><table align=3D"center" border=3D"0" cellpadding=3D=
+"0" cellspacing=3D"0" role=3D"presentation" style=3D"margin: 0 auto; max-wi=
+dth: 220px; width: 100%;"><tbody><tr><td align=3D"center"><a target=3D"_bla=
+nk" href=3D"https://links.datacamp.com/e/c/eyJlbWFpbF9pZCI6ImRnVGRod1FEQUpp=
+dTJBYVdydGdHQVpPTlRjcTRxWm52N1g5WnZDYjg0UT09IiwiaHJlZiI6Imh0dHBzOi8vd3d3LmZ=
+hY2Vib29rLmNvbS9kYXRhY2FtcGluYy8iLCJpbnRlcm5hbCI6ImRkODcwNGQzMDM4NmExMDE5OG=
+FlZDgwNiIsImxpbmtfaWQiOjMyODU1MDgxN30/b7cfe70d85a43c0653813aac85be495f7f218=
+6fda9766034bb764d78443cb99b"><img height=3D"15" border=3D"0" alt=3D"Faceboo=
+k" style=3D"padding-left: 8px; padding-right:
+8px; color: #8a8a8d; font-family: StudioFeixenSans, &#39;StudioFeixenSans&#=
+39;, Arial, sans-serif;" src=3D"https://assets.datacamp.com/email/rebrand/f=
+acebook3x.png"/></a></td><td align=3D"center"><a target=3D"_blank" href=3D"=
+https://links.datacamp.com/e/c/eyJlbWFpbF9pZCI6ImRnVGRod1FEQUppdTJBYVdydGdH=
+QVpPTlRjcTRxWm52N1g5WnZDYjg0UT09IiwiaHJlZiI6Imh0dHBzOi8vdHdpdHRlci5jb20vZGF=
+0YWNhbXAiLCJpbnRlcm5hbCI6ImRkODcwNGQzMDM4NmExMDE5OGFlZDgwNiIsImxpbmtfaWQiOj=
+MyODU1MDgxOH0/777f65b8e020840b69609d473d0cad0b3d2cd120e20e5fbd19942c3db1220=
+8c6"><img width=3D"15" border=3D"0" alt=3D"X" style=3D"padding-left: 8px; p=
+adding-right: 8px; color: #8a8a8d; font-family: StudioFeixenSans, &#39;Stud=
+ioFeixenSans&#39;, Arial, sans-serif;" src=3D"https://assets.datacamp.com/e=
+mail/rebrand/x3x.png"/></a></td><td align=3D"center"><a target=3D"_blank" h=
+ref=3D"https://links.datacamp.com/e/c/eyJlbWFpbF9pZCI6ImRnVGRod1FEQUppdTJBY=
+VdydGdHQVpPTlRjcTRxWm52N1g5WnZDYjg0UT09IiwiaHJlZiI6Imh0dHBzOi8vd3d3Lmxpbmtl=
+ZGluLmNvbS9jb21wYW55L2RhdGFjYW1waW5jLyIsImludGVybmFsIjoiZGQ4NzA0ZDMwMzg2YTE=
+wMTk4YWVkODA2IiwibGlua19pZCI6MzI4NTUwODE5fQ/a2cde6373c6e6be70fb076b34529125=
+1847f61a41457a9078c68d13928fd7407"><img width=3D"15" border=3D"0" alt=3D"Li=
+nkedIn" style=3D"padding-left: 8px; padding-right: 8px; color: #8a8a8d; fon=
+t-family: StudioFeixenSans, &#39;StudioFeixenSans&#39;, Arial, sans-serif;"=
+ src=3D"https://assets.datacamp.com/email/rebrand/linkedin3x.png"/></a></td=
+><td align=3D"center"><a target=3D"_blank" href=3D"https://links.datacamp.c=
+om/e/c/eyJlbWFpbF9pZCI6ImRnVGRod1FEQUppdTJBYVdydGdHQVpPTlRjcTRxWm52N1g5WnZD=
+Yjg0UT09IiwiaHJlZiI6Imh0dHBzOi8vd3d3LnlvdXR1YmUuY29tL2NoYW5uZWwvVUM3OUd2M21=
+ZcDZ6S2lTd1llbUVpazlBIiwiaW50ZXJuYWwiOiJkZDg3MDRkMzAzODZhMTAxOThhZWQ4MDYiLC=
+JsaW5rX2lkIjo1fQ/555c78e13ca475ecffc52e0519632738fe4867a06d267d3a7c4263d007=
+1568a4"><img width=3D"15" border=3D"0" alt=3D"Youtube" style=3D"padding-lef=
+t: 8px; padding-right: 8px; color: #8a8a8d; font-family: StudioFeixenSans, =
+&#39;StudioFeixenSans&#39;, Arial, sans-serif;" src=3D"https://assets.datac=
+amp.com/email/rebrand/youtube3x.png"/></a></td><td align=3D"center"><a targ=
+et=3D"_blank" href=3D"https://links.datacamp.com/e/c/eyJlbWFpbF9pZCI6ImRnVG=
+Rod1FEQUppdTJBYVdydGdHQVpPTlRjcTRxWm52N1g5WnZDYjg0UT09IiwiaHJlZiI6Imh0dHBzO=
+i8vd3d3Lmluc3RhZ3JhbS5jb20vZGF0YWNhbXAvP2hsPWVuIiwiaW50ZXJuYWwiOiJkZDg3MDRk=
+MzAzODZhMTAxOThhZWQ4MDYiLCJsaW5rX2lkIjozMjg1NTA4MjB9/85f9febcea3710a0e926d0=
+d6516f9442158df7ebf73431b993270e705c1fdd5d"><img width=3D"15" border=3D"0" =
+alt=3D"Instagram" style=3D"padding-left: 8px; padding-right: 8px; color: #8=
+a8a8d; font-family: StudioFeixenSans, &#39;StudioFeixenSans&#39;, Arial, sa=
+ns-serif;" src=3D"https://assets.datacamp.com/email/rebrand/insta3x.png"/><=
+/a></td></tr></tbody></table><!--[if true]></td></tr></table><![endif]--></=
+td></tr><!-- Spacer begins --><tr><td width=3D"0" height=3D"24" style=3D"fo=
+nt-size:1px;
+line-height:1px; mso-line-height-rule: exactly;"></td></tr><!-- Spacer ends=
+ --></tbody></table></td></tr><tr><td class=3D"one-column" style=3D"padding=
+-left: 20px; padding-right: 20px;" align=3D"center"><!--[if true]><table ro=
+le=3D"presentation" width=3D"268" align=3D"center" cellpadding=3D"0" cellsp=
+acing=3D"0" border=3D"0"><tr><td align=3D"center"><![endif]--><table align=
+=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presen=
+tation" style=3D"border: none; border-collapse: collapse; border-spacing: 0=
+; margin: auto; mso-table-lspace: 0; mso-table-rspace: 0;"><tbody><tr><td a=
+lign=3D"center" style=3D"padding-left: 5px; padding-right: 5px;"><a target=
+=3D"_blank" href=3D"https://links.datacamp.com/e/c/eyJlbWFpbF9pZCI6ImRnVGRo=
+d1FEQUppdTJBYVdydGdHQVpPTlRjcTRxWm52N1g5WnZDYjg0UT09IiwiaHJlZiI6Imh0dHBzOi8=
+vZGF0YWNhbXAub25lbGluay5tZS94enRRL3A4d2F0aGk3IiwiaW50ZXJuYWwiOiJkZDg3MDRkMz=
+AzODZhMTAxOThhZWQ4MDYiLCJsaW5rX2lkIjozMjg2MTI3Nzh9/a23cf7df788e5c73ecf3a861=
+4f51c06a1ecfd4a79ed6e8d8070400c948cd741d"><img alt=3D"Apple Store" border=
+=3D"0" style=3D"border: 0; display: block; color:#05192d; font-family: Stud=
+ioFeixenSans, &#39;StudioFeixenSans&#39;, Arial, sans-serif; font-size: 24p=
+x; font-weight: 400; height: auto; max-width:
+124px; outline: 0; padding: 0; width: 100%; display: block;" width=3D"124" =
+src=3D"https://assets.datacamp.com/email/rebrand/apple2x.png"/></a></td><td=
+ align=3D"center" style=3D"padding-left: 5px; padding-right: 5px;"><a targe=
+t=3D"_blank" href=3D"https://links.datacamp.com/e/c/eyJlbWFpbF9pZCI6ImRnVGR=
+od1FEQUppdTJBYVdydGdHQVpPTlRjcTRxWm52N1g5WnZDYjg0UT09IiwiaHJlZiI6Imh0dHBzOi=
+8vZGF0YWNhbXAub25lbGluay5tZS94enRRL2N6YXc2cjdxIiwiaW50ZXJuYWwiOiJkZDg3MDRkM=
+zAzODZhMTAxOThhZWQ4MDYiLCJsaW5rX2lkIjozMjg2MTI3Nzl9/75b7278471283bda2e0b968=
+98bc523daab3fc533d12c0e81dcc00252ccc56fb9"><img alt=3D"Google Play" border=
+=3D"0" style=3D"border: 0; display: block; color:#05192d; font-family: Stud=
+ioFeixenSans, &#39;StudioFeixenSans&#39;, Arial, sans-serif; font-size: 24p=
+x; font-weight: 400; height: auto; max-width: 124px; outline: 0; padding: 0=
+; width: 100%; display: block;" width=3D"124" src=3D"https://assets.datacam=
+p.com/email/rebrand/google2x.png"/> </a></td></tr></tbody></table><!--[if t=
+rue]></td></tr></table><![endif]--></td></tr><!-- Spacer begins --><tr><td =
+width=3D"0" height=3D"24" style=3D"font-size:1px; line-height:1px; mso-line=
+-height-rule: exactly;"></td></tr><!-- Spacer ends --><tr><td class=3D"one-=
+column" style=3D"padding-left: 20px; padding-right: 20px; padding-bottom: 1=
+0px; padding-top: 10px;" align=3D"center"><div class=3D"gmail-blend-screen"=
+><div class=3D"gmail-blend-difference"><a target=3D"_blank" style=3D"text-d=
+ecoration:none;color:#9ba3ab; font-family: StudioFeixenSans, &#39;StudioFei=
+xenSans&#39;, Arial, sans-serif; font-size: 14px; font-weight: normal; colo=
+r: #f4f4f4;" href=3D"https://links.datacamp.com/e/c/eyJlbWFpbF9pZCI6ImRnVGR=
+od1FEQUppdTJBYVdydGdHQVpPTlRjcTRxWm52N1g5WnZDYjg0UT09IiwiaHJlZiI6Imh0dHBzOi=
+8vd3d3LmRhdGFjYW1wLmNvbS9tYWlsX3ByZWZlcmVuY2VzLzJmZmQ0MGE1LWNlODUtNDQ1Zi1hY=
+TU5LWNkOWE4YWI3YzlkNiIsImludGVybmFsIjoiZGQ4NzA0ZDMwMzg2YTEwMTk4YWVkODA2Iiwi=
+bGlua19pZCI6OTQ2Mn0/555f700905af63b0072e6ffeb68e7ab1533f36bbbefbb360a309588=
+1231718e1">Unsubscribe</a>=C2=A0=C2=A0 =C2=A0=C2=A0<a target=3D"_blank" sty=
+le=3D"text-decoration:none;color:#9ba3ab; font-family: StudioFeixenSans, &#=
+39;StudioFeixenSans&#39;, Arial, sans-serif; font-size: 14px; font-weight: =
+normal; color: #f4f4f4;" href=3D"https://links.datacamp.com/e/c/eyJlbWFpbF9=
+pZCI6ImRnVGRod1FEQUppdTJBYVdydGdHQVpPTlRjcTRxWm52N1g5WnZDYjg0UT09IiwiaHJlZi=
+I6Imh0dHBzOi8vd3d3LmRhdGFjYW1wLmNvbS9wcml2YWN5LXBvbGljeS8iLCJpbnRlcm5hbCI6I=
+mRkODcwNGQzMDM4NmExMDE5OGFlZDgwNiIsImxpbmtfaWQiOjMyODU0ODIzN30/d8d643f5b89b=
+7b659675622089e126d919252e80cb7690547aeb8c798c94f50c">Privacy Policy</a><a =
+href=3D"https://links.datacamp.com/e/c/eyJlbWFpbF9pZCI6ImRnVGRod1FEQUppdTJB=
+YVdydGdHQVpPTlRjcTRxWm52N1g5WnZDYjg0UT09IiwiaHJlZiI6Imh0dHBzOi8vZGF0YWNhbXA=
+uY29tP3V0bV9zb3VyY2U9Y3VzdG9tZXJpb1x1MDAyNnV0bV9tZWRpdW09ZW1haWxcdTAwMjZ1dG=
+1fdGVybT1ib3RcdTAwMjZkY19ldWlkPTE0MTA1MTY4IiwiaW50ZXJuYWwiOiJkZDg3MDRkMzAzO=
+DZhMTAxOThhZWQ4MDYiLCJsaW5rX2lkIjozMjg2MDM4MzZ9/7ad2a660bbc02367962e432cac5=
+92b98e798af994961f0c7d87b96c40eeee93d">=E2=80=8B</a></div></div></td></tr><=
+!-- Spacer begins --><tr><td width=3D"0" height=3D"24" style=3D"font-size:1=
+px; line-height:1px; mso-line-height-rule: exactly;"></td></tr><!-- Spacer =
+ends --></tbody></table><!--[if true]></td></tr></table><![endif]--></td></=
+tr><!-- ///////////////////////////// FOOTER ENDS /////////////////////////=
+//// --></tbody></table><!--[if true]></td></tr></table><![endif]--> </div>=
+</td></tr></tbody></table></center></custom></div></div></div>
+<img src=3D"https://links.datacamp.com/e/o/eyJlbWFpbF9pZCI6ImRnVGRod1FEQUpp=
+dTJBYVdydGdHQVpPTlRjcTRxWm52N1g5WnZDYjg0UT09In0=3D" style=3D"height: 1px !i=
+mportant; max-height: 1px !important; max-width: 1px !important; width: 1px=
+ !important; display: none !important;" alt=3D""/></body></html>
+--073ce020e793459b60b26705fe95ff9549a139d8c9b21859dde12477b019--

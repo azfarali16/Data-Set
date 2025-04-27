@@ -1,0 +1,133 @@
+X-GM-THRID: 1727755894498411894
+X-Gmail-Labels: Inbox,Opened,Category Personal
+Delivered-To: azfarali007.aa@gmail.com
+Received: by 2002:a05:6214:a6c:0:0:0:0 with SMTP id ef12csp858955qvb;
+        Sat, 19 Mar 2022 12:00:21 -0700 (PDT)
+X-Received: by 2002:a05:6512:3f0d:b0:448:2ef2:ebe2 with SMTP id y13-20020a0565123f0d00b004482ef2ebe2mr10004971lfa.128.1647716421488;
+        Sat, 19 Mar 2022 12:00:21 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1647716421; cv=none;
+        d=google.com; s=arc-20160816;
+        b=sB/wlv0EshkjgGkA3CexZ1tA+3QoRUkQkaEY/GChwww2QyP4HTOOz+CoFwaWrJvoP7
+         tqqZsjpvW3VpjN7wCeaBjG8P/rEbX9+gfe6NAw0msxC4SI6+ig7Nt5I6c/7MPMZ347Pn
+         zE/mpAEXEB2lk4UV+ZhCq+ZctZ1wi2naUWbo/vuWnrmdMrUPq1VJbq8bQlfr5+CqGuM/
+         B0Z2ijRET72+/jsoR7KQ6O2QwYpoTX3hrcMkWGugiKA+c0CEZYP/Fxuf7yiyz4weW3yj
+         T3i4dC5OSB1fDlL6VGD/IB3vj/x0eRRx6vDvysFKZvaVGDYpdNZlFEOf7AIP/Vp0oqYL
+         7xgg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:subject:message-id:date:from:mime-version:dkim-signature;
+        bh=a7QomYn5vBbDPl0sdS6yHisCscXliXpBxlaoa2odcJs=;
+        b=pAvAGEuFkbDEu7//Y19m6Hh/At6GLfku3NW7JM7CKfn69JS7g2jWvoxq/sgbiIBHKV
+         F7FjkX0xVW2iiQvpKHsDEtNbt9MyS0zUxghedPDcav5Ctwn7Em2NMVpn1uDDLeBpWVSB
+         Eo3H5O9dhzQ5et77+Ed2iMj6AZuGrJ4LB4SxdllUhL2+BbuSBhcCpzvnXYShEQo9DSSi
+         mCb2rUdQfbaYrQyX44hjkePMgFms5GcHptoRmIh39pA0BHqwIy/0y/9pv7flkAdrgs1X
+         //GYZTTGlicKq0/B/n3gsY6yyZ1qTzjPOi/d/GQyEMyMq+zzwm2WpjjsNN7xFqHYCzxj
+         HzkQ==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@apimatic.io header.s=google header.b=B8LfLhXz;
+       spf=pass (google.com: domain of abdul.hannan@apimatic.io designates 209.85.220.65 as permitted sender) smtp.mailfrom=abdul.hannan@apimatic.io;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=apimatic.io
+Return-Path: <abdul.hannan@apimatic.io>
+Received: from mail-sor-f65.google.com (mail-sor-f65.google.com. [209.85.220.65])
+        by mx.google.com with SMTPS id c5-20020a2ea785000000b002496911eba6sor2757170ljf.73.2022.03.19.12.00.21
+        for <azfarali007.aa@gmail.com>
+        (Google Transport Security);
+        Sat, 19 Mar 2022 12:00:21 -0700 (PDT)
+Received-SPF: pass (google.com: domain of abdul.hannan@apimatic.io designates 209.85.220.65 as permitted sender) client-ip=209.85.220.65;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@apimatic.io header.s=google header.b=B8LfLhXz;
+       spf=pass (google.com: domain of abdul.hannan@apimatic.io designates 209.85.220.65 as permitted sender) smtp.mailfrom=abdul.hannan@apimatic.io;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=apimatic.io
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=apimatic.io; s=google;
+        h=mime-version:from:date:message-id:subject:to;
+        bh=a7QomYn5vBbDPl0sdS6yHisCscXliXpBxlaoa2odcJs=;
+        b=B8LfLhXze4CsiWzTD8nSizKSMkcEbZpv9mMed+V4db/ihQtFtlphv8kIj8jkWrEDa1
+         eRgyKV9pOyI1nHIJMsN6PtbVjSgCoTPZDazc1IkLGezRs94QXi8RSrQ2Yw1PthmE21cN
+         vX59SuY1ZPaR6vdbsl073lTwXa9i9kWzXlAuM=
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20210112;
+        h=x-gm-message-state:mime-version:from:date:message-id:subject:to;
+        bh=a7QomYn5vBbDPl0sdS6yHisCscXliXpBxlaoa2odcJs=;
+        b=deF1isCjo5ZVeMyQ1F8iz4Ofl2Z/DWhTekmUaxIge0yJxRiXP8pLFyX0+gKkh4ic8V
+         BU63tF8UOTmIdzR5lGgLA8ZxgwVruLDBBE2rEEQBT25k1NIBqWQ8ptjMqVvbcgkjchRH
+         OCR/GcnoWhoK2PW9lmmsspOQ2YJ6999RH8egDkaCsHokUkEwUCzQt3wPdqQy4mU90HNR
+         NlAAHBYHpG0k/43t2VwQkwADXoY5x62RkqQv1CxSuQTPo+q+ySGxjKlq3kJu4QX0Atig
+         9GnRGSC7JM5jEgwOx23O08GOBRpJb2gDMY9dlOOpIU3NfWRFc+SS9rWYqP1LlX9ZfvBp
+         ZLRA==
+X-Gm-Message-State: AOAM533h1CEj33BbC5HGb+48sinxxp+2MLs6K/6ocubYB0/Mi4cjs2cK
+	HdOOk2sBSAGmy5sZUtRg9/55nf2qPIVcJEE8iVHRcw==
+X-Google-Smtp-Source: ABdhPJw0uN8ri3LmF88I0b1sm70H66P+R+os+qr/PoE6xzODbl8Vl6OGoGNFSIsnAP/anqxyq9798WtNraXsZn7Qgfw=
+X-Received: by 2002:a05:651c:1781:b0:247:daa7:4358 with SMTP id
+ bn1-20020a05651c178100b00247daa74358mr9918706ljb.477.1647716420967; Sat, 19
+ Mar 2022 12:00:20 -0700 (PDT)
+MIME-Version: 1.0
+From: Abdul Hannan <abdul.hannan@apimatic.io>
+Date: Sun, 20 Mar 2022 00:00:00 +0500
+Message-ID: <CAMyhqZhfi3KaWoCCZR68+U7BopPkMd=pcMMFbau63xBRzOb=fQ@mail.gmail.com>
+Subject: APIMatic Hackathon | Submission Reminder
+To: undisclosed-recipients:;
+Content-Type: multipart/alternative; boundary="000000000000f6700e05da96dfd5"
+Bcc: azfarali007.aa@gmail.com
+
+--000000000000f6700e05da96dfd5
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Dear Participants,
+
+I hope you are doing well. *Your solution submission is due in 24 hours*.
+
+Best of luck!
+
+
+Regards,
+
+*Abdul Hannan Shaikh*
+
+Product Manager =E2=80=93 APIMatic <https://apimatic.io/>
+
+E: abdul.hannan@apimatic.io
+
+M: +92 331 5377 531 | LinkedIn <http://www.linkedin.com/in/ahshaikh>
+
+--000000000000f6700e05da96dfd5
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">Dear Participants,<div><br></div><div>I hope you are doing=
+ well.=C2=A0<b>Your solution submission is due in 24 hours</b>.</div><div><=
+br></div><div>Best of luck!=C2=A0<br clear=3D"all"><div><div dir=3D"ltr" cl=
+ass=3D"gmail_signature" data-smartmail=3D"gmail_signature"><div dir=3D"ltr"=
+><table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" style=3D"border-co=
+llapse:collapse;border:none">
+ <tbody><tr>
+  <td width=3D"102" valign=3D"top" style=3D"width:76.25pt;padding:0in 5.4pt=
+ 0in 5.4pt">
+  <p class=3D"MsoNormal" style=3D"margin-bottom:0in;line-height:normal"><im=
+g src=3D"https://docs.google.com/uc?export=3Ddownload&amp;id=3D1wOy2YeX9-aH=
+gDDNKJEKi7k56l-4b9bay&amp;revid=3D0B81NG5Am98_HcEltRU1Dd3NaQVRmTDRFR0RtYzdi=
+ZDhXVkswPQ" width=3D"96" height=3D"96"></p></td><td></td><td></td><td><br><=
+/td>
+  <td width=3D"216" style=3D"width:2.25in;padding:0in 5.4pt 0in 5.4pt">
+  <p class=3D"MsoNormal" style=3D"margin-bottom:0in;line-height:normal"><sp=
+an style=3D"font-family:arial,sans-serif">Regards,</span><font face=3D"aria=
+l, sans-serif"><b><br></b></font></p><p class=3D"MsoNormal" style=3D"margin=
+-bottom:0in;line-height:normal"><font face=3D"arial, sans-serif"><b>Abdul
+  Hannan Shaikh</b><b></b></font></p>
+  <p class=3D"MsoNormal" style=3D"margin-bottom:0in;line-height:normal"><fo=
+nt face=3D"arial, sans-serif">Product
+  Manager =E2=80=93 <a href=3D"https://apimatic.io/" target=3D"_blank">APIM=
+atic</a></font></p>
+  <p class=3D"MsoNormal" style=3D"margin-bottom:0in;line-height:normal"><fo=
+nt face=3D"arial, sans-serif">E: <a href=3D"mailto:abdul.hannan@apimatic.io=
+" target=3D"_blank">abdul.hannan@apimatic.io</a></font></p>
+  <p class=3D"MsoNormal" style=3D"margin-bottom:0in;line-height:normal"><fo=
+nt face=3D"arial, sans-serif">M: +92
+  331 5377 531 | <a href=3D"http://www.linkedin.com/in/ahshaikh" target=3D"=
+_blank">LinkedIn</a></font><span style=3D"font-family:&quot;HP Simplified L=
+ight&quot;,sans-serif"></span></p>
+  </td>
+ </tr>
+</tbody></table></div></div></div></div></div>
+
+--000000000000f6700e05da96dfd5--

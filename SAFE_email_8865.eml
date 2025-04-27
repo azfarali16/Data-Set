@@ -1,0 +1,1612 @@
+X-GM-THRID: 1705766083756212963
+X-Gmail-Labels: Inbox,Category Updates
+Delivered-To: azfarali007.aa@gmail.com
+Received: by 2002:a05:6a11:4021:0:0:0:0 with SMTP id ky33csp4895240pxb;
+        Mon, 19 Jul 2021 18:41:44 -0700 (PDT)
+X-Google-Smtp-Source: ABdhPJzrbYvNfoGcIhLar3cKORWoF1isZm/xJziunKGPkgQqUhAWJd8wTfoLDE/1oHnr23yWfy5O
+X-Received: by 2002:a37:91c7:: with SMTP id t190mr26740749qkd.282.1626745303789;
+        Mon, 19 Jul 2021 18:41:43 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1626745303; cv=none;
+        d=google.com; s=arc-20160816;
+        b=wOY5bBfLxDKXW7wERqtSGjlADOt2FDIgvvuP5xauAGBuOEWOE/usVN1Xhg6yWxQ0rW
+         0v4Cj84mP8taGCmvJd3XUHznURQ0nQFBJIbA64t2/pe+nCjLbuYETvjXdomlybU2zvX3
+         n4KUuoh69Bwsbwx2+vlzgTBFAoYb1Zp6vIzq0IDKXJqljeRBP3hY10BgnDis3k+HnZON
+         Dj9OT4XNNBtOA/5J/O+vbHRaK59jXpRtfH+P3KVkduso0Q8ndNBsITr8V6nuX9DWAMIH
+         JEWIDBZEaO2vt1O+/lDmkLKPk6MPm600VP4V3qb021bSQp+qVeQFeXoDpTYpKgFCqGVL
+         VrbQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=message-id:date:list-unsubscribe:subject:to:from:mime-version
+         :dkim-signature;
+        bh=RCoedX0JSdi5TOeaFVTtgVAgF/9wu2xwMKhNfh+sWtI=;
+        b=OqnXL0vV9pR2b814VD3+2IZySv0xVSerJYC1yINata+couIuF3FcRwSWIlHiVKdSg1
+         GPk8kYbAIBc+9eQB3R4jFZ5NSOCV/LOpWwWc7rz/9je06LFCDFPzU7lBs+W5jt0kmLQT
+         RqE5PEuqz3tIZ1/gKX268xl0QbV+fiURV2JfaeO4DInBSVvql0P4YaP6eSvop+myDoc/
+         cdOlwitp4BLdzWpz4L5KmMouHEyaZpxLfdmTHB1mkr7lkDZkjJ+2Tq4hiICyFUn9sNK/
+         HAegbY44EuJ6/IidGT4JwAvtMMQCxCdqUNzeaxVR0N3fXqsDWtY8Bc1KDqLTUErrsyH/
+         V0dQ==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@quora.com header.s=pigeon header.b=X98QejVx;
+       spf=pass (google.com: domain of noreply@quora.com designates 18.214.110.135 as permitted sender) smtp.mailfrom=noreply@quora.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=quora.com
+Return-Path: <noreply@quora.com>
+Received: from o40.pigeon.quora.com (o40.pigeon.quora.com. [18.214.110.135])
+        by mx.google.com with ESMTPS id o8si3980703qtk.140.2021.07.19.18.41.43
+        for <azfarali007.aa@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Mon, 19 Jul 2021 18:41:43 -0700 (PDT)
+Received-SPF: pass (google.com: domain of noreply@quora.com designates 18.214.110.135 as permitted sender) client-ip=18.214.110.135;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@quora.com header.s=pigeon header.b=X98QejVx;
+       spf=pass (google.com: domain of noreply@quora.com designates 18.214.110.135 as permitted sender) smtp.mailfrom=noreply@quora.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=quora.com
+Received: 
+	by pigeon-at-10052 (OpenSMTPD) with ESMTP id 6cb9b553
+	for <azfarali007.aa@gmail.com>;
+	Tue, 20 Jul 2021 01:41:42 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; d=quora.com; h=
+	content-type:mime-version:from:to:subject:list-unsubscribe:date
+	:message-id; s=pigeon; bh=Qs7nCu5FsFOo7j5uZaK0BEaNKHc=; b=X98Qej
+	VxWjTNdE/0qvN/0u3wtyRF0sMkq6+SDgD2JqNDoA0LJK8Xxhr9+EFE71W086ByaY
+	O5OaMJ5yKoQqNtNpXmLzp6BclcavQxmAqIo2QCKvkh4GcuXCuLhJgQLtZZIF36GE
+	UtHu8V9/EoKrQZRklFscxQ5CU/uzzA0oTbKg8YAvKwNF+pxL0LQJYE2nAZxuNaUI
+	eSmI/KAHLImSusPvUW/Bf5cR2nDmuBIfuexFp+yLaaHu/dowj4tgs3BigV2UZqg7
+	I+1zMtzO1QHo2cwbV+kgx1s9hCePdMx9gnYZ+TDvxBG/Hs8obT55D3LpF2xKd12x
+	VoKaRy8/FWHiIEsw==
+Content-Type: multipart/alternative;
+ boundary="===============1275811600554156926=="
+MIME-Version: 1.0
+From: Quora <curiosity-noreply@quora.com>
+To: azfarali007.aa@gmail.com
+Subject: =?utf-8?q?More_related_to_=22If_X_is_an_element_from_group_2A_and_Y_is_an_el?=
+ =?utf-8?q?ement_from_group_5A=2C_what_is_the_possi=2E=2E=2E=3F=22?=
+List-Unsubscribe: <https://www.quora.com/email_optout/qemail_unsubscribe?email_track_id=25d7907cb43e42c393047c8967058472&ish=1&t=1626745302137727&token=2253cd3d062aa33b19fe3e43f4b748d304869243570c32e73c6f4b877520f9398b4a44e90523a06eaf8c1f733598396f54a236b4d31e647a2086d74064f8d69b&type=130&uid=905486825>
+X-CID: WqLXaCdtr7Z3CyMb248vGBYFP1TJ98uB78CyvoXz8k8f3x5KZUwYTMS9GgQRwKjrfTIPBWGq6hhT9TvGRFVTNnM-1e2DqlphroYF9gi4NqvyUSto-NdBo_pFjA3ZrTeHgqdZAAECAA==
+Date: Tue, 20 Jul 2021 01:41:42 +0000
+Message-ID: <WqLXaCdtr7Z3CyMb248vGBYFP1TJ98uB78CyvoXz8k8f3x5KZUwYTMS9GgQRwKjrfTIPBWGq6hhT9TvGRFVTNnM-1e2DqlphroYF9gi4NqvyUSto-NdBo_pFjA3ZrTeHgqdZAAECAA==@t1.msgid.quoramail.com>
+X-SMTPAPI: =?utf-8?q?=7B=22unique=5Fargs=22=3A_=7B=22Message-ID=22=3A_=22=3CWqLXaCdtr7Z?=
+ =?utf-8?q?3CyMb248vGBYFP1TJ98uB78CyvoXz8k8f3x5KZUwYTMS9GgQRwKjrfTIPBWGq6hhT?=
+ =?utf-8?q?9TvGRFVTNnM-1e2DqlphroYF9gi4NqvyUSto-NdBo=5FpFjA3ZrTeHgqdZAAECAA?=
+ =?utf-8?q?=3D=3D=40t1=2Emsgid=2Equoramail=2Ecom=3E=22=2C_=22account=22=3A_?=
+ =?utf-8?q?=22main=22=2C_=22email=5Ftype=22=3A_130=2C_=22ip=5Fpool=22=3A_=22?=
+ =?utf-8?q?main=22=2C_=22X-QMSG=22=3A_=22SYJpLtx-ji5J3C4G5SijlfV5tHYkO4YTBPd?=
+ =?utf-8?q?=5FIBHSBUZt9KG7vYV=5FS180giFZB8ZeKSSdcI=5FQ0dVpuKNyieUrHWqRbR-FXT?=
+ =?utf-8?q?GXSWalQtoLMVHLN5Qbnt=5FcSKvHShi9mPk=5FBN6MOGt3GlIa3z7EIHqMqvdbjUQ?=
+ =?utf-8?q?X=5F6tDEUNjMR6Q34cnGamo30hVeU0kmsloeMGNiP45qTA946Y7cAnXSYGh3L=5FV?=
+ =?utf-8?q?wmNbPonYUOtbreYzkmaytj8ys7cvg7T46gaRGRECXKWFRoLMxrGPTow4RuBY8zGTY?=
+ =?utf-8?q?O0IuN1fVqWlJylcwW-F3-bLlZWsmC=5FGAaC33fvx1y0ZGfL3Mnmb8v204HVCzAl0?=
+ =?utf-8?q?eprQIZyDUJrX5n4Y3aOpu0hctTLPibH6Nilj6NCeanq9o=5FxPyRXvPaR8CiYjhlb?=
+ =?utf-8?q?OPF7yjH=5F7bWhalxowvhYzjQXeYvx9wPtOlPagjjmqYMCTMOld5gYQbFU7-V4cST?=
+ =?utf-8?q?MyJEAZjSIUSmCqX8ErObpY-Udv7ASHBwQfuuPdnBuJ6V8ClPHmmtDA82Qm9snjc1p?=
+ =?utf-8?q?8NEddhBxPtYDCeqdVh5BrQwPiI1AClY7uX8S8b5PRAAECAA=3D=3D=22=7D=2C_?=
+ =?utf-8?q?=22category=22=3A_=5B=22account=5Fmain=22=2C_=22email=5Ftype=5F13?=
+ =?utf-8?q?0=22=2C_=22ip=5Fpool=5Fmain=22=5D=2C_=22filters=22=3A_=7B=22bypas?=
+ =?utf-8?q?s=5Flist=5Fmanagement=22=3A_=7B=22settings=22=3A_=7B=22enable=22?=
+ =?utf-8?q?=3A_1=7D=7D=7D=2C_=22ip=5Fpool=22=3A_=22main=22=7D?=
+X-QMSG: =?utf-8?q?SYJpLtx-ji5J3C4G5SijlfV5tHYkO4YTBPd=5FIBHSBUZt9KG7vYV=5FS180giFZB8?=
+ =?utf-8?q?ZeKSSdcI=5FQ0dVpuKNyieUrHWqRbR-FXTGXSWalQtoLMVHLN5Qbnt=5FcSKvHShi?=
+ =?utf-8?q?9mPk=5FBN6MOGt3GlIa3z7EIHqMqvdbjUQX=5F6tDEUNjMR6Q34cnGamo30hVeU0k?=
+ =?utf-8?q?msloeMGNiP45qTA946Y7cAnXSYGh3L=5FVwmNbPonYUOtbreYzkmaytj8ys7cvg7T?=
+ =?utf-8?q?46gaRGRECXKWFRoLMxrGPTow4RuBY8zGTYO0IuN1fVqWlJylcwW-F3-bLlZWsmC?=
+ =?utf-8?q?=5FGAaC33fvx1y0ZGfL3Mnmb8v204HVCzAl0eprQIZyDUJrX5n4Y3aOpu0hctTLPi?=
+ =?utf-8?q?bH6Nilj6NCeanq9o=5FxPyRXvPaR8CiYjhlbOPF7yjH=5F7bWhalxowvhYzjQXeYv?=
+ =?utf-8?q?x9wPtOlPagjjmqYMCTMOld5gYQbFU7-V4cSTMyJEAZjSIUSmCqX8ErObpY-Udv7AS?=
+ =?utf-8?q?HBwQfuuPdnBuJ6V8ClPHmmtDA82Qm9snjc1p8NEddhBxPtYDCeqdVh5BrQwPiI1AC?=
+ =?utf-8?q?lY7uX8S8b5PRAAECAA=3D=3D?=
+
+--===============1275811600554156926==
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: quoted-printable
+
+Stories from your activity
+
+-----
+
+
+Question: If the molecular formula of a compound is (CO) x and its vapour d=
+ensity is 70, then what is the possible value of x?
+
+Answer from Sudhansu Bhusan Mishra
+
+I=E2=80=99m going to do this using approximate values, but I do not think y=
+ou need to be doing it with better approximations, since the vapour density=
+ given is a whole number.
+
+What i
+Read More: https://www.quora.com/If-the-molecular-formula-of-a-compound-is-=
+CO-x-and-its-vapour-density-is-70-then-what-is-the-possible-value-of-x?top_=
+ans=3D37909871
+-----
+Question: How do you actually prove PV=3DRT?
+
+Answer from Abhishek Soi
+
+According to the kinetic theory of gas,
+
+- Gases are composed of very small molecules and their number of molecules =
+is very large.
+ - These molecules are elastic.
+ - They are=20
+Read More: https://www.quora.com/How-do-you-actually-prove-PV-RT?top_ans=3D=
+42993746
+-----
+Question: A compound formed from two of the elements in period 2 of the per=
+iodic tale have the formula X3 Y2. To what groups do X and Y belong?
+
+Answer from Ritika Jaiswal
+
+Period 2 consists of Li,Be,B,C,N,O,F and Ne.
+
+To have a formula X3Y2,
+
+Valency of X should be +2 while that of Y should be -3.
+
+Thus,X belongs to the group 2 and Y belongs to=20
+Read More: https://www.quora.com/A-compound-formed-from-two-of-the-elements=
+-in-period-2-of-the-periodic-tale-have-the-formula-X3-Y2-To-what-groups-do-=
+X-and-Y-belong?top_ans=3D83752441
+-----
+Question: What is the chemical formula for the compound formed between Al a=
+nd O: Al3O2, AlO, Al2O, Al2O3, or AlO2?
+
+Answer from Dolores C Aquino
+
+To answer this type of question about elements your best resource is a peri=
+odic table.
+
+Aluminum, Al, is a metal in Group 3A of the periodic table . Main group met=
+als lose ele
+Read More: https://www.quora.com/What-is-the-chemical-formula-for-the-compo=
+und-formed-between-Al-and-O-Al3O2-AlO-Al2O-Al2O3-or-AlO2?top_ans=3D252212825
+-----
+Question: What are the basic compound in cement?
+
+Answer from Shubham Kohli
+
+Cement is manufactured when raw materials such as lime,silica,alumina & iro=
+n oxide are heated at high temperature in kiln.
+
+Cement is mainly composed of Bogue=E2=80=99s compounds & mi
+Read More: https://www.quora.com/What-are-the-basic-compound-in-cement?top_=
+ans=3D50650840
+-----
+Question: In a reaction 2A+B-> A2B , if the concentration  of A is doubled =
+and B is halved what is change in rate?
+
+Answer from Sankarshana Acharia
+
+It depends on the rate equation ie. how the rate of the reaction depends on=
+ the concentration of the reactants.
+
+If it is first order wrt A, doubling the concentration increas
+Read More: https://www.quora.com/In-a-reaction-2A+B-A2B-if-the-concentratio=
+n-of-A-is-doubled-and-B-is-halved-what-is-change-in-rate?top_ans=3D83206528
+-----
+Question: Why is graphite not an organic compound?
+
+Answer from Matthew Baker
+
+Simply because it is NOT a compound.
+
+It is an allotrope of carbon, just like diamond, buckminsterfullerene and g=
+raphene. Allotropes are different physical structures of an el
+Read More: https://www.quora.com/Why-is-graphite-not-an-organic-compound?to=
+p_ans=3D71082853
+-----
+Question: 300 cm=C2=B3 of water is added to a solution of 200 cm=C2=B3 of 0=
+.5 mol dm=E2=80=933 sodium chloride. What is the concentration of sodium ch=
+loride in the new solution?
+
+Answer from Devender Singh
+
+When water is added to the solution concentration decrease but number of mo=
+le of solute remain same .
+
+Number of mole solute before dilution=3DM1V1
+
+M1=3D.5 mol/dm3
+
+V1=3D300cc
+
+Num
+Read More: https://www.quora.com/300-cm=C2=B3-of-water-is-added-to-a-soluti=
+on-of-200-cm=C2=B3-of-0-5-mol-dm-3-sodium-chloride-What-is-the-concentratio=
+n-of-sodium-chloride-in-the-new-solution?top_ans=3D75483701
+-----
+Question: What happens to pH on dilution?
+
+Answer from Ajay Shukla
+
+When you dilute an acid then it=E2=80=99s pH will increase towards 7 (which=
+ is neutral, like
+
+water) while when you dilute a base it=E2=80=99s pH will decrease towards 7=
+ again.
+
+One thing to=20
+Read More: https://www.quora.com/What-happens-to-pH-on-dilution?top_ans=3D5=
+5436231
+-----
+Question: What is the pH of a solution with an oh of 1.0 x 10-10 m?
+
+Answer from Travis Nebeker
+
+Granted, I haven=E2=80=99t taken fluid mechanics yet, but I=E2=80=99ll take=
+ a crack at this. So our Ohnesorge number [math]O_h[/math] is 1.0E-10 mete-=
+ oh but wait, the Ohneorge number is dime
+Read More: https://www.quora.com/What-is-the-pH-of-a-solution-with-an-oh-of=
+-1-0-x-10-10-m?top_ans=3D193893066
+-----
+
+-----
+To control which emails we send you, visit: https://www.quora.com/qemail/tr=
+ack_click?aoid&aoty=3D14&aty=3D4&cp=3D0&ct=3D1626745302122057&et=3D130&id=
+=3D25d7907cb43e42c393047c8967058472&source&src=3D1&st=3D1626745302132604&st=
+ories=3D1_M5LlzbRSwz7%7C1_9jf3dfYnKxa%7C1_VZwqqldMMnQ%7C1_9W1VOIeVTj1%7C1_Y=
+6psy9LOAJ7%7C1_bjtvfDfgJn6%7C1_aEAhfrpJe6B%7C1_F6mVEK3bIDH%7C1_LMnhQGevxAS%=
+7C1_LDLlIRHSIGK&ty&ty_data&uid=3Dm36BZ4XFnST&v=3D0
+
+To unsubscribe from this type of email, visit: https://www.quora.com/email_=
+optout/qemail_unsubscribe?email_track_id=3D25d7907cb43e42c393047c8967058472=
+&t=3D1626745302275436&token=3D6a5c5601247e372450d53b6aabc715661031a95c758ed=
+e94fb180adf04f2096997ca4ed5e32a5b27aa0863d5fb914876ff844d559bbb7fb984aff3b1=
+82c87135&type=3D130&uid=3D905486825
+--===============1275811600554156926==
+Content-Type: text/html; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: quoted-printable
+
+<html><head><style type=3D"text/css">
+@media screen and (max-width:480px) {
+  .background_inner {
+    padding: 0!important;
+    background: #fff!important;
+  }
+
+  .container {
+    padding: 0 8px 16px!important;
+  }
+
+  .footer_container {
+    border-top: 1px solid #e2e2e2!important;
+  }
+
+  .AnnualThankYouEmail .background_inner {
+    padding: 10px 0!important;
+  }
+
+  .polish_background_inner {
+    padding: 10px 0!important;
+  }
+
+  .polish_header_logo img.header_logo_img {
+    width: 118px!important;
+    height: 40px!important;
+  }
+
+  .polish_header_title {
+    font-size: 16px!important;
+    padding-top: 0!important;
+    padding-bottom: 5px!important;
+  }
+
+  .polish_question_text {
+    line-height: 1.3!important;
+  }
+
+  .polish_story .voters_list,
+.polish_story .user_link {
+    line-height: 1.5!important;
+  }
+
+  .polish_story .truncated_q_text,
+.polish_story .qtext_para {
+    line-height: 1.5!important;
+  }
+
+  .polish_story .content_header {
+    padding: 6px 0!important;
+  }
+
+  .EndOfYearLookbackEmail .stat_large {
+    font-size: 28px!important;
+  }
+
+  .EndOfYearLookbackEmail .content_text {
+    text-align: center!important;
+  }
+
+  .EndOfYearLookbackEmail .half_column {
+    width: 100%!important;
+  }
+
+  .EndOfYearLookbackEmail .img_wrapper {
+    margin: 10px auto!important;
+  }
+
+  .TopicDigestEmail .topic_digest_header_logo img.polish_header_logo_img {
+    width: 89px!important;
+    height: 30px!important;
+  }
+
+  .TopicDigestEmail .topic_digest_header_title {
+    font-size: 16px!important;
+    padding-top: 0!important;
+    padding-bottom: 5px!important;
+  }
+
+  .WriteDigestEmail .question_text .rendered_qtext {
+    font-size: 16px!important;
+  }
+
+  .email_app_link-content {
+    display: block!important;
+    text-align: center!important;
+  }
+
+  .email_app_link-text,
+.email_app_link-badges_wrapper {
+    display: block!important;
+  }
+
+  .email_app_link-text {
+    padding-bottom: 0!important;
+    box-sizing: border-box!important;
+  }
+
+  .email_app_link-badges_wrapper {
+    padding-left: 10px!important;
+  }
+}
+@media screen and (max-width:600px) {
+  .DigestEmail .mobile_image.digest_ad {
+    display: table!important;
+    width: 92vw;
+  }
+
+  .DigestEmail .desktop_image.digest_ad {
+    display: none!important;
+  }
+}
+</style><style type=3D"text/css">
+@media (max-width:812px) {
+  .ad_email_background .ad_table {
+    margin: 0;
+  }
+}
+@media (max-width:812px) {
+  .ad_email_background .ad_table {
+    margin: 0;
+  }
+}
+</style></head><body class=3D"email_body" style=3D"-webkit-text-size-adjust=
+:100%;-ms-text-size-adjust:100%;margin:0;padding:0;width:100%"><div class=
+=3D"q_ltr u-ltr lang_en" dir=3D"ltr" lang=3D"en"><table class=3D"EmailCompo=
+nent Email SearchEngagementEmail background" cellpadding=3D"0" border=3D"0"=
+ style=3D"border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;ba=
+ckground:#eee;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Robot=
+o,Oxygen-Sans,Ubuntu,Cantarell,'Helvetica Neue',sans-serif;font-size:13px;w=
+idth:100%;height:100%;text-align:left" width=3D"100%" height=3D"100%" align=
+=3D"left"><tbody><tr><td class=3D"polish_background_inner" align=3D"center"=
+ valign=3D"top" style=3D"border-collapse:collapse;padding:0;background:#fff=
+"><table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"border-c=
+ollapse:collapse;mso-table-lspace:0;mso-table-rspace:0"><tbody><tr><td clas=
+s=3D"container" align=3D"left" style=3D"border-collapse:collapse;background=
+:#fff;padding:32px;width:525px;height:100%;border-radius:3px" width=3D"525"=
+ height=3D"100%"><table class=3D"polish_container_inner" style=3D"border-co=
+llapse:collapse;mso-table-lspace:0;mso-table-rspace:0;width:100%;cellpaddin=
+g:0;cellspacing:0;border:0" width=3D"100%"><tbody><tr><td class=3D"polish_h=
+eader" style=3D"border-collapse:collapse"><span style=3D"display:none;font-=
+size:1px;color:white;line-height:1px;max-height:0px;max-width:0px;opacity:0=
+;overflow:hidden">Answer: I=E2=80=99m going to do this using approximate va=
+lues, but I do not think you.=E2=80=8B.=E2=80=8B.=E2=80=8B</span><table cel=
+lpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" style=3D"borde=
+r-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0"><tbody><tr><td c=
+lass=3D"polish_header_logo" style=3D"border-collapse:collapse;text-align:ce=
+nter" align=3D"center"><a href=3D"https://www.quora.com/qemail/track_click?=
+aoid&amp;aoty=3D7&amp;aty=3D4&amp;cp=3D0&amp;ct=3D1626745302122057&amp;et=
+=3D130&amp;id=3D25d7907cb43e42c393047c8967058472&amp;source&amp;src=3D1&amp=
+;st=3D1626745302132604&amp;stories=3D1_M5LlzbRSwz7%7C1_9jf3dfYnKxa%7C1_VZwq=
+qldMMnQ%7C1_9W1VOIeVTj1%7C1_Y6psy9LOAJ7%7C1_bjtvfDfgJn6%7C1_aEAhfrpJe6B%7C1=
+_F6mVEK3bIDH%7C1_LMnhQGevxAS%7C1_LDLlIRHSIGK&amp;ty&amp;ty_data&amp;uid=3Dm=
+36BZ4XFnST&amp;v=3D0" style=3D"text-decoration:none;color:#2b6dad"><img cla=
+ss=3D"header_logo_img" src=3D"https://qsf.fs.quoracdn.net/-4-images.logo.Wo=
+rdmarkLogo_592x200_4x.png-26-b469cd653dba282b.png" alt=3D"Quora" style=3D"o=
+utline:0;text-decoration:none;-ms-interpolation-mode:bicubic;border:0;width=
+:148px;height:50px" width=3D"148" height=3D"50" /><img class=3D"tracking_im=
+g" style=3D"outline:0;text-decoration:none;-ms-interpolation-mode:bicubic;b=
+order:0;display:none" width=3D"1" height=3D"1" src=3D"https://www.quora.com=
+/qemail/mark_read?ct=3D1626745302122057&amp;et=3D130&amp;id=3D25d7907cb43e4=
+2c393047c8967058472&amp;src=3D1&amp;st=3D1626745302132604&amp;stories=3D1_M=
+5LlzbRSwz7%7C1_9jf3dfYnKxa%7C1_VZwqqldMMnQ%7C1_9W1VOIeVTj1%7C1_Y6psy9LOAJ7%=
+7C1_bjtvfDfgJn6%7C1_aEAhfrpJe6B%7C1_F6mVEK3bIDH%7C1_LMnhQGevxAS%7C1_LDLlIRH=
+SIGK&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" /></a></td></tr><tr><td class=3D"poli=
+sh_header_title" style=3D"border-collapse:collapse;text-align:center;font-s=
+ize:19px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxy=
+gen-Sans,Ubuntu,Cantarell,'Helvetica Neue',sans-serif;color:#333;font-weigh=
+t:400;padding-bottom:20px" align=3D"center">Stories from your activity</td>=
+</tr><tr><td style=3D"border-collapse:collapse"><table class=3D"polish_head=
+er_wrapper" style=3D"border-collapse:collapse;mso-table-lspace:0;mso-table-=
+rspace:0;margin-bottom:20px;cellpadding:0;border:0;width:100%" width=3D"100=
+%"><tbody><tr><td style=3D"border-collapse:collapse"></td><td class=3D"poli=
+sh_header_line" style=3D"border-collapse:collapse;border-bottom:1px solid #=
+b92b27;height:1px;width:198px" width=3D"198" height=3D"1"></td><td style=3D=
+"border-collapse:collapse"></td></tr></tbody></table></td></tr></tbody></ta=
+ble></td></tr><tr class=3D"body_container" id=3D"simple-content-row"><td cl=
+ass=3D"body_content" bgcolor=3D"#ffffff" style=3D"border-collapse:collapse"=
+><table style=3D"border-collapse:collapse;mso-table-lspace:0;mso-table-rspa=
+ce:0;width:100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"=
+100%"><tbody><tr><td style=3D"border-collapse:collapse"><table style=3D"bor=
+der-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;width:100%" cel=
+lpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%"><tbody><tr><td=
+ style=3D"border-collapse:collapse"><div class=3D"no_para_breaks"><div><tab=
+le class=3D"story_wrapper" cellspacing=3D"0" border=3D"0" style=3D"border-c=
+ollapse:collapse;mso-table-lspace:0;mso-table-rspace:0;width:100%" width=3D=
+"100%"><tbody><tr><td class=3D"story  first_story" style=3D"border-collapse=
+:collapse;padding-top:15px;padding:20px 0;border-bottom:0"><table class=3D"=
+digest_story_wrapper" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" styl=
+e=3D"border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;width:1=
+00%" width=3D"100%"><tbody><tr><td class=3D"reason" style=3D"border-collaps=
+e:collapse;padding-bottom:4px"><table class=3D"digest_reason" cellpadding=
+=3D"0" cellspacing=3D"0" border=3D"0" style=3D"border-collapse:collapse;mso=
+-table-lspace:0;mso-table-rspace:0"><tbody><tr><td valign=3D"top" style=3D"=
+border-collapse:collapse"></td></tr></tbody></table></td></tr><tr><td style=
+=3D"border-collapse:collapse"><a class=3D"question_text" href=3D"https://ww=
+w.quora.com/qemail/track_click?al_imp=3DeyJ0eXBlIjogMzMsICJoYXNoIjogIjB8MXw=
+xfDM3OTA5ODcxIn0%3D&amp;al_pri=3D1&amp;aoid=3DX2BAFGiQOX4&amp;aoty=3D2&amp;=
+aty=3D4&amp;cp=3D1&amp;ct=3D1626745302122057&amp;et=3D130&amp;id=3D25d7907c=
+b43e42c393047c8967058472&amp;source=3D7&amp;src=3D1&amp;st=3D16267453021326=
+04&amp;stories=3D1_M5LlzbRSwz7%7C1_9jf3dfYnKxa%7C1_VZwqqldMMnQ%7C1_9W1VOIeV=
+Tj1%7C1_Y6psy9LOAJ7%7C1_bjtvfDfgJn6%7C1_aEAhfrpJe6B%7C1_F6mVEK3bIDH%7C1_LMn=
+hQGevxAS%7C1_LDLlIRHSIGK&amp;ty=3D1&amp;ty_data=3DM5LlzbRSwz7&amp;uid=3Dm36=
+BZ4XFnST&amp;v=3D0" style=3D"text-decoration:none;display:block;font-size:1=
+9px;letter-spacing:-0.5px;font-weight:bold;color:#333;line-height:1.4"><spa=
+n class=3D"rendered_qtext" style=3D"word-break:break-word">If the molecular=
+ formula of a compound is (CO) x and its vapour density is 70, then what is=
+ the possible value of x?</span></a></td></tr><tr><td style=3D"border-colla=
+pse:collapse"><table class=3D"item_content_wrapper" cellpadding=3D"0" cells=
+pacing=3D"0" border=3D"0" style=3D"border-collapse:collapse;mso-table-lspac=
+e:0;mso-table-rspace:0;width:100%" width=3D"100%"><tbody><tr><td class=3D"c=
+ontent_header metadata" style=3D"border-collapse:collapse;padding:8px 0"><t=
+able cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"border-colla=
+pse:collapse;mso-table-lspace:0;mso-table-rspace:0"><tbody><tr><td class=3D=
+"content_header_photo" style=3D"border-collapse:collapse;vertical-align:top=
+" valign=3D"top"><a href=3D"https://www.quora.com/qemail/track_click?aoid=
+=3DtYnKolaEC2&amp;aoty=3D3&amp;aty=3D4&amp;cp=3D1&amp;ct=3D1626745302122057=
+&amp;et=3D130&amp;id=3D25d7907cb43e42c393047c8967058472&amp;source=3D7&amp;=
+src=3D1&amp;st=3D1626745302132604&amp;stories=3D1_M5LlzbRSwz7%7C1_9jf3dfYnK=
+xa%7C1_VZwqqldMMnQ%7C1_9W1VOIeVTj1%7C1_Y6psy9LOAJ7%7C1_bjtvfDfgJn6%7C1_aEAh=
+frpJe6B%7C1_F6mVEK3bIDH%7C1_LMnhQGevxAS%7C1_LDLlIRHSIGK&amp;ty=3D1&amp;ty_d=
+ata=3DM5LlzbRSwz7&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"text-decoration=
+:none;color:#2b6dad"><div><div class=3D"hover_menu hidden white_bg show_nub=
+"><div class=3D"hover_menu_contents"> </div></div><span class=3D"photo_tool=
+tip IdentityPhoto Photo HoverMenu"><img class=3D"profile_photo_img" src=3D"=
+https://qsf.fs.quoracdn.net/-4-images.new_grid.profile_default.png-26-688c7=
+9556f251aa0.png" alt=3D"Sudhansu Bhusan Mishra" style=3D"outline:0;text-dec=
+oration:none;-ms-interpolation-mode:bicubic;border:0;display:block;height:4=
+0px;width:40px;border-radius:100px;border-style:none" height=3D"40" width=
+=3D"40" /></span></div></a></td><td class=3D"content_header_text" style=3D"=
+border-collapse:collapse;padding-left:8px;color:#333"><table cellpadding=3D=
+"0" cellspacing=3D"0" border=3D"0" style=3D"border-collapse:collapse;mso-ta=
+ble-lspace:0;mso-table-rspace:0"><tbody><tr><td style=3D"border-collapse:co=
+llapse"><a class=3D"user_link" href=3D"https://www.quora.com/qemail/track_c=
+lick?aoid=3DtYnKolaEC2&amp;aoty=3D3&amp;aty=3D4&amp;cp=3D1&amp;ct=3D1626745=
+302122057&amp;et=3D130&amp;id=3D25d7907cb43e42c393047c8967058472&amp;source=
+=3D7&amp;src=3D1&amp;st=3D1626745302132604&amp;stories=3D1_M5LlzbRSwz7%7C1_=
+9jf3dfYnKxa%7C1_VZwqqldMMnQ%7C1_9W1VOIeVTj1%7C1_Y6psy9LOAJ7%7C1_bjtvfDfgJn6=
+%7C1_aEAhfrpJe6B%7C1_F6mVEK3bIDH%7C1_LMnhQGevxAS%7C1_LDLlIRHSIGK&amp;ty=3D1=
+&amp;ty_data=3DM5LlzbRSwz7&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"text-d=
+ecoration:none;color:#333;font-weight:bold;font-size:15px;line-height:1.4">=
+Sudhansu Bhusan Mishra</a><span style=3D"font-size:15px;line-height:1.4">, =
+Interested in Mathematics</span></td></tr><tr><td class=3D"answer_details" =
+style=3D"border-collapse:collapse;color:#999;font-size:13px"><a href=3D"htt=
+ps://www.quora.com/qemail/track_click?aoid=3DM5LlzbRSwz7&amp;aoty=3D1&amp;a=
+ty=3D4&amp;cp=3D1&amp;ct=3D1626745302122057&amp;et=3D130&amp;id=3D25d7907cb=
+43e42c393047c8967058472&amp;source=3D7&amp;src=3D1&amp;st=3D162674530213260=
+4&amp;stories=3D1_M5LlzbRSwz7%7C1_9jf3dfYnKxa%7C1_VZwqqldMMnQ%7C1_9W1VOIeVT=
+j1%7C1_Y6psy9LOAJ7%7C1_bjtvfDfgJn6%7C1_aEAhfrpJe6B%7C1_F6mVEK3bIDH%7C1_LMnh=
+QGevxAS%7C1_LDLlIRHSIGK&amp;ty=3D1&amp;ty_data=3DM5LlzbRSwz7&amp;uid=3Dm36B=
+Z4XFnST&amp;v=3D0" style=3D"text-decoration:none;color:#999">Written Feb 28=
+, 2017</a></td></tr></tbody></table></td></tr></tbody></table></td></tr><tr=
+><td class=3D"item_content" style=3D"border-collapse:collapse;display:block=
+;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen-Sans=
+,Ubuntu,Cantarell,'Helvetica Neue',sans-serif;color:#333;font-size:15px;lin=
+e-height:1.4"><a href=3D"https://www.quora.com/qemail/track_click?al_imp=3D=
+eyJ0eXBlIjogMzMsICJoYXNoIjogIjB8MXwxfDM3OTA5ODcxIn0%3D&amp;al_pri=3D0&amp;a=
+oid=3DM5LlzbRSwz7&amp;aoty=3D1&amp;aty=3D4&amp;cp=3D1&amp;ct=3D162674530212=
+2057&amp;et=3D130&amp;id=3D25d7907cb43e42c393047c8967058472&amp;source=3D7&=
+amp;src=3D1&amp;st=3D1626745302132604&amp;stories=3D1_M5LlzbRSwz7%7C1_9jf3d=
+fYnKxa%7C1_VZwqqldMMnQ%7C1_9W1VOIeVTj1%7C1_Y6psy9LOAJ7%7C1_bjtvfDfgJn6%7C1_=
+aEAhfrpJe6B%7C1_F6mVEK3bIDH%7C1_LMnhQGevxAS%7C1_LDLlIRHSIGK&amp;ty=3D1&amp;=
+ty_data=3DM5LlzbRSwz7&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"text-decora=
+tion:none;color:#333333"><div><div class=3D"truncated_q_text truncated_para=
+_breaks TruncatedAnswerForEmail TruncatedAnswer TruncatedAnswerForDigestEma=
+il TruncatedQText" style=3D"line-height:1.6"><span class=3D"rendered_qtext"=
+ style=3D"word-break:break-word"><p class=3D"qtext_para u-ltr u-text-align-=
+-start" style=3D"margin:1em 0;line-height:1.6"><i>I=E2=80=99m going to do t=
+his using approximate values, </i><b>but I do not think you need to be doin=
+g it with better approximations, since the </b><b><i>vapour density given i=
+s a whole number.</i></b></p><p class=3D"qtext_para u-ltr u-text-align--sta=
+rt" style=3D"margin:1em 0;line-height:1.6">What <i>...</i></p></span> <a cl=
+ass=3D"read_more_blue" href=3D"https://www.quora.com/qemail/track_click?al_=
+imp=3DeyJ0eXBlIjogMzMsICJoYXNoIjogIjB8MXwxfDM3OTA5ODcxIn0%3D&amp;al_pri=3D8=
+&amp;aoid=3DM5LlzbRSwz7&amp;aoty=3D1&amp;aty=3D4&amp;cp=3D1&amp;ct=3D162674=
+5302122057&amp;et=3D130&amp;id=3D25d7907cb43e42c393047c8967058472&amp;sourc=
+e=3D7&amp;src=3D1&amp;st=3D1626745302132604&amp;stories=3D1_M5LlzbRSwz7%7C1=
+_9jf3dfYnKxa%7C1_VZwqqldMMnQ%7C1_9W1VOIeVTj1%7C1_Y6psy9LOAJ7%7C1_bjtvfDfgJn=
+6%7C1_aEAhfrpJe6B%7C1_F6mVEK3bIDH%7C1_LMnhQGevxAS%7C1_LDLlIRHSIGK&amp;ty=3D=
+1&amp;ty_data=3DM5LlzbRSwz7&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"text-=
+decoration:none;color:#168de9">Read More =C2=BB</a></div></div><div class=
+=3D"non_quora_share_embed_wrapper"><div class=3D"item_metadata"><a href=3D"=
+https://www.quora.com/qemail/track_click?al_imp=3DeyJ0eXBlIjogMzMsICJoYXNoI=
+jogIjB8MXwxfDM3OTA5ODcxIn0%3D&amp;al_pri=3D0&amp;aoid=3DM5LlzbRSwz7&amp;aot=
+y=3D1&amp;aty=3D4&amp;cp=3D1&amp;ct=3D1626745302122057&amp;et=3D130&amp;id=
+=3D25d7907cb43e42c393047c8967058472&amp;source=3D7&amp;src=3D1&amp;st=3D162=
+6745302132604&amp;stories=3D1_M5LlzbRSwz7%7C1_9jf3dfYnKxa%7C1_VZwqqldMMnQ%7=
+C1_9W1VOIeVTj1%7C1_Y6psy9LOAJ7%7C1_bjtvfDfgJn6%7C1_aEAhfrpJe6B%7C1_F6mVEK3b=
+IDH%7C1_LMnhQGevxAS%7C1_LDLlIRHSIGK&amp;ty=3D1&amp;ty_data=3DM5LlzbRSwz7&am=
+p;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"text-decoration:none;color:#2b6dad"=
+></a></div></div></a></td></tr></tbody></table></td></tr></tbody></table></=
+td></tr></tbody></table></div></div><div class=3D"no_para_breaks"><div><tab=
+le class=3D"polish_separator_wrapper" style=3D"border-collapse:collapse;mso=
+-table-lspace:0;mso-table-rspace:0;cellpadding:0;border:0;width:100%" width=
+=3D"100%"><tbody><tr><td style=3D"border-collapse:collapse"></td><td class=
+=3D"polish_separator" style=3D"border-collapse:collapse;border-bottom:1px s=
+olid #eee;height:1px;width:140px" width=3D"140" height=3D"1"></td><td style=
+=3D"border-collapse:collapse"></td></tr></tbody></table><table class=3D"sto=
+ry_wrapper" cellspacing=3D"0" border=3D"0" style=3D"border-collapse:collaps=
+e;mso-table-lspace:0;mso-table-rspace:0;width:100%" width=3D"100%"><tbody><=
+tr><td class=3D"story " style=3D"border-collapse:collapse;padding:20px 0;bo=
+rder-bottom:0"><table class=3D"digest_story_wrapper" cellpadding=3D"0" cell=
+spacing=3D"0" border=3D"0" style=3D"border-collapse:collapse;mso-table-lspa=
+ce:0;mso-table-rspace:0;width:100%" width=3D"100%"><tbody><tr><td class=3D"=
+reason" style=3D"border-collapse:collapse;padding-bottom:4px"><table class=
+=3D"digest_reason" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=
+=3D"border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0"><tbody>=
+<tr><td valign=3D"top" style=3D"border-collapse:collapse"></td></tr></tbody=
+></table></td></tr><tr><td style=3D"border-collapse:collapse"><a class=3D"q=
+uestion_text" href=3D"https://www.quora.com/qemail/track_click?al_imp=3DeyJ=
+0eXBlIjogMzMsICJoYXNoIjogIjB8MnwxfDQyOTkzNzQ2In0%3D&amp;al_pri=3D1&amp;aoid=
+=3DXPSsY7vCiA8&amp;aoty=3D2&amp;aty=3D4&amp;cp=3D2&amp;ct=3D162674530212205=
+7&amp;et=3D130&amp;id=3D25d7907cb43e42c393047c8967058472&amp;source=3D7&amp=
+;src=3D1&amp;st=3D1626745302132604&amp;stories=3D1_M5LlzbRSwz7%7C1_9jf3dfYn=
+Kxa%7C1_VZwqqldMMnQ%7C1_9W1VOIeVTj1%7C1_Y6psy9LOAJ7%7C1_bjtvfDfgJn6%7C1_aEA=
+hfrpJe6B%7C1_F6mVEK3bIDH%7C1_LMnhQGevxAS%7C1_LDLlIRHSIGK&amp;ty=3D1&amp;ty_=
+data=3D9jf3dfYnKxa&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"text-decoratio=
+n:none;display:block;font-size:19px;letter-spacing:-0.5px;font-weight:bold;=
+color:#333;line-height:1.4"><span class=3D"rendered_qtext" style=3D"word-br=
+eak:break-word">How do you actually prove PV=3DRT?</span></a></td></tr><tr>=
+<td style=3D"border-collapse:collapse"><table class=3D"item_content_wrapper=
+" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"border-collapse=
+:collapse;mso-table-lspace:0;mso-table-rspace:0;width:100%" width=3D"100%">=
+<tbody><tr><td class=3D"content_header metadata" style=3D"border-collapse:c=
+ollapse;padding:8px 0"><table cellpadding=3D"0" cellspacing=3D"0" border=3D=
+"0" style=3D"border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0=
+"><tbody><tr><td class=3D"content_header_photo" style=3D"border-collapse:co=
+llapse;vertical-align:top" valign=3D"top"><a href=3D"https://www.quora.com/=
+qemail/track_click?aoid=3D3CfQH1nF2MU&amp;aoty=3D3&amp;aty=3D4&amp;cp=3D2&a=
+mp;ct=3D1626745302122057&amp;et=3D130&amp;id=3D25d7907cb43e42c393047c896705=
+8472&amp;source=3D7&amp;src=3D1&amp;st=3D1626745302132604&amp;stories=3D1_M=
+5LlzbRSwz7%7C1_9jf3dfYnKxa%7C1_VZwqqldMMnQ%7C1_9W1VOIeVTj1%7C1_Y6psy9LOAJ7%=
+7C1_bjtvfDfgJn6%7C1_aEAhfrpJe6B%7C1_F6mVEK3bIDH%7C1_LMnhQGevxAS%7C1_LDLlIRH=
+SIGK&amp;ty=3D1&amp;ty_data=3D9jf3dfYnKxa&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" =
+style=3D"text-decoration:none;color:#2b6dad"><div><div class=3D"hover_menu =
+hidden white_bg show_nub"><div class=3D"hover_menu_contents"> </div></div><=
+span class=3D"photo_tooltip IdentityPhoto Photo HoverMenu"><img class=3D"pr=
+ofile_photo_img" src=3D"https://qph.fs.quoracdn.net/main-thumb-72525356-50-=
+qslfqomdkynpkktmdyprrrfrffpsdcqp.jpeg" alt=3D"Abhishek Soi" style=3D"outlin=
+e:0;text-decoration:none;-ms-interpolation-mode:bicubic;border:0;display:bl=
+ock;height:40px;width:40px;border-radius:100px;border-style:none" height=3D=
+"40" width=3D"40" /></span></div></a></td><td class=3D"content_header_text"=
+ style=3D"border-collapse:collapse;padding-left:8px;color:#333"><table cell=
+padding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"border-collapse:colla=
+pse;mso-table-lspace:0;mso-table-rspace:0"><tbody><tr><td style=3D"border-c=
+ollapse:collapse"><a class=3D"user_link" href=3D"https://www.quora.com/qema=
+il/track_click?aoid=3D3CfQH1nF2MU&amp;aoty=3D3&amp;aty=3D4&amp;cp=3D2&amp;c=
+t=3D1626745302122057&amp;et=3D130&amp;id=3D25d7907cb43e42c393047c8967058472=
+&amp;source=3D7&amp;src=3D1&amp;st=3D1626745302132604&amp;stories=3D1_M5Llz=
+bRSwz7%7C1_9jf3dfYnKxa%7C1_VZwqqldMMnQ%7C1_9W1VOIeVTj1%7C1_Y6psy9LOAJ7%7C1_=
+bjtvfDfgJn6%7C1_aEAhfrpJe6B%7C1_F6mVEK3bIDH%7C1_LMnhQGevxAS%7C1_LDLlIRHSIGK=
+&amp;ty=3D1&amp;ty_data=3D9jf3dfYnKxa&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" styl=
+e=3D"text-decoration:none;color:#333;font-weight:bold;font-size:15px;line-h=
+eight:1.4">Abhishek Soi</a><span style=3D"font-size:15px;line-height:1.4">,=
+ Product Engineer @ Schlumberger|In Pursuit of Knowledge|</span></td></tr><=
+tr><td class=3D"answer_details" style=3D"border-collapse:collapse;color:#99=
+9;font-size:13px"><a href=3D"https://www.quora.com/qemail/track_click?aoid=
+=3D9jf3dfYnKxa&amp;aoty=3D1&amp;aty=3D4&amp;cp=3D2&amp;ct=3D162674530212205=
+7&amp;et=3D130&amp;id=3D25d7907cb43e42c393047c8967058472&amp;source=3D7&amp=
+;src=3D1&amp;st=3D1626745302132604&amp;stories=3D1_M5LlzbRSwz7%7C1_9jf3dfYn=
+Kxa%7C1_VZwqqldMMnQ%7C1_9W1VOIeVTj1%7C1_Y6psy9LOAJ7%7C1_bjtvfDfgJn6%7C1_aEA=
+hfrpJe6B%7C1_F6mVEK3bIDH%7C1_LMnhQGevxAS%7C1_LDLlIRHSIGK&amp;ty=3D1&amp;ty_=
+data=3D9jf3dfYnKxa&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"text-decoratio=
+n:none;color:#999">Written Apr 28, 2017</a></td></tr></tbody></table></td><=
+/tr></tbody></table></td></tr><tr><td class=3D"item_content" style=3D"borde=
+r-collapse:collapse;display:block;font-family:-apple-system,BlinkMacSystemF=
+ont,'Segoe UI',Roboto,Oxygen-Sans,Ubuntu,Cantarell,'Helvetica Neue',sans-se=
+rif;color:#333;font-size:15px;line-height:1.4"><a href=3D"https://www.quora=
+.com/qemail/track_click?al_imp=3DeyJ0eXBlIjogMzMsICJoYXNoIjogIjB8MnwxfDQyOT=
+kzNzQ2In0%3D&amp;al_pri=3D0&amp;aoid=3D9jf3dfYnKxa&amp;aoty=3D1&amp;aty=3D4=
+&amp;cp=3D2&amp;ct=3D1626745302122057&amp;et=3D130&amp;id=3D25d7907cb43e42c=
+393047c8967058472&amp;source=3D7&amp;src=3D1&amp;st=3D1626745302132604&amp;=
+stories=3D1_M5LlzbRSwz7%7C1_9jf3dfYnKxa%7C1_VZwqqldMMnQ%7C1_9W1VOIeVTj1%7C1=
+_Y6psy9LOAJ7%7C1_bjtvfDfgJn6%7C1_aEAhfrpJe6B%7C1_F6mVEK3bIDH%7C1_LMnhQGevxA=
+S%7C1_LDLlIRHSIGK&amp;ty=3D1&amp;ty_data=3D9jf3dfYnKxa&amp;uid=3Dm36BZ4XFnS=
+T&amp;v=3D0" style=3D"text-decoration:none;color:#333333"><div><div class=
+=3D"truncated_q_text truncated_para_breaks TruncatedAnswerForEmail Truncate=
+dAnswer TruncatedAnswerForDigestEmail TruncatedQText" style=3D"line-height:=
+1.6"><div class=3D"truncated_thumbnail_holder thumbnail_small thumbnail_fea=
+tured_image" style=3D"display:inline;float:right"><span class=3D"rendered_q=
+text" style=3D"word-break:break-word"><div class=3D"ui_qtext_image_outer"><=
+div class=3D"qtext_image_wrapper"><img class=3D"landscape qtext_image zooma=
+ble_in_feed" src=3D"https://qph.fs.quoracdn.net/main-qimg-117c03eccc3c05fd3=
+e5f40f65e376c8c" style=3D"outline:0;text-decoration:none;-ms-interpolation-=
+mode:bicubic;border:0;margin-left:10px;max-width:200px;max-height:100px;flo=
+at:left;border-style:none" /></div></div></span></div><span class=3D"render=
+ed_qtext" style=3D"word-break:break-word"><p class=3D"qtext_para u-ltr u-te=
+xt-align--start" style=3D"margin:1em 0;line-height:1.6">According to the ki=
+netic theory of gas,</p><p class=3D"qtext_para u-ltr u-text-align--start" s=
+tyle=3D"margin:1em 0;line-height:1.6">- Gases are composed of very small mo=
+lecules and their number of molecules is very large. - These molecules are =
+elastic. - They are...</p></span> <a class=3D"read_more_blue" href=3D"https=
+://www.quora.com/qemail/track_click?al_imp=3DeyJ0eXBlIjogMzMsICJoYXNoIjogIj=
+B8MnwxfDQyOTkzNzQ2In0%3D&amp;al_pri=3D8&amp;aoid=3D9jf3dfYnKxa&amp;aoty=3D1=
+&amp;aty=3D4&amp;cp=3D2&amp;ct=3D1626745302122057&amp;et=3D130&amp;id=3D25d=
+7907cb43e42c393047c8967058472&amp;source=3D7&amp;src=3D1&amp;st=3D162674530=
+2132604&amp;stories=3D1_M5LlzbRSwz7%7C1_9jf3dfYnKxa%7C1_VZwqqldMMnQ%7C1_9W1=
+VOIeVTj1%7C1_Y6psy9LOAJ7%7C1_bjtvfDfgJn6%7C1_aEAhfrpJe6B%7C1_F6mVEK3bIDH%7C=
+1_LMnhQGevxAS%7C1_LDLlIRHSIGK&amp;ty=3D1&amp;ty_data=3D9jf3dfYnKxa&amp;uid=
+=3Dm36BZ4XFnST&amp;v=3D0" style=3D"text-decoration:none;color:#168de9">Read=
+ More =C2=BB</a></div></div><div class=3D"non_quora_share_embed_wrapper"><d=
+iv class=3D"item_metadata"><a href=3D"https://www.quora.com/qemail/track_cl=
+ick?al_imp=3DeyJ0eXBlIjogMzMsICJoYXNoIjogIjB8MnwxfDQyOTkzNzQ2In0%3D&amp;al_=
+pri=3D0&amp;aoid=3D9jf3dfYnKxa&amp;aoty=3D1&amp;aty=3D4&amp;cp=3D2&amp;ct=
+=3D1626745302122057&amp;et=3D130&amp;id=3D25d7907cb43e42c393047c8967058472&=
+amp;source=3D7&amp;src=3D1&amp;st=3D1626745302132604&amp;stories=3D1_M5Llzb=
+RSwz7%7C1_9jf3dfYnKxa%7C1_VZwqqldMMnQ%7C1_9W1VOIeVTj1%7C1_Y6psy9LOAJ7%7C1_b=
+jtvfDfgJn6%7C1_aEAhfrpJe6B%7C1_F6mVEK3bIDH%7C1_LMnhQGevxAS%7C1_LDLlIRHSIGK&=
+amp;ty=3D1&amp;ty_data=3D9jf3dfYnKxa&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=
+=3D"text-decoration:none;color:#2b6dad"></a></div></div></a></td></tr></tbo=
+dy></table></td></tr></tbody></table></td></tr></tbody></table></div></div>=
+<div class=3D"no_para_breaks"><div><table class=3D"polish_separator_wrapper=
+" style=3D"border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;c=
+ellpadding:0;border:0;width:100%" width=3D"100%"><tbody><tr><td style=3D"bo=
+rder-collapse:collapse"></td><td class=3D"polish_separator" style=3D"border=
+-collapse:collapse;border-bottom:1px solid #eee;height:1px;width:140px" wid=
+th=3D"140" height=3D"1"></td><td style=3D"border-collapse:collapse"></td></=
+tr></tbody></table><table class=3D"story_wrapper" cellspacing=3D"0" border=
+=3D"0" style=3D"border-collapse:collapse;mso-table-lspace:0;mso-table-rspac=
+e:0;width:100%" width=3D"100%"><tbody><tr><td class=3D"story " style=3D"bor=
+der-collapse:collapse;padding:20px 0;border-bottom:0"><table class=3D"diges=
+t_story_wrapper" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"=
+border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;width:100%" =
+width=3D"100%"><tbody><tr><td class=3D"reason" style=3D"border-collapse:col=
+lapse;padding-bottom:4px"><table class=3D"digest_reason" cellpadding=3D"0" =
+cellspacing=3D"0" border=3D"0" style=3D"border-collapse:collapse;mso-table-=
+lspace:0;mso-table-rspace:0"><tbody><tr><td valign=3D"top" style=3D"border-=
+collapse:collapse"></td></tr></tbody></table></td></tr><tr><td style=3D"bor=
+der-collapse:collapse"><a class=3D"question_text" href=3D"https://www.quora=
+.com/qemail/track_click?al_imp=3DeyJ0eXBlIjogMzMsICJoYXNoIjogIjB8M3wxfDgzNz=
+UyNDQxIn0%3D&amp;al_pri=3D1&amp;aoid=3D3NbRSwOE5uT&amp;aoty=3D2&amp;aty=3D4=
+&amp;cp=3D3&amp;ct=3D1626745302122057&amp;et=3D130&amp;id=3D25d7907cb43e42c=
+393047c8967058472&amp;source=3D7&amp;src=3D1&amp;st=3D1626745302132604&amp;=
+stories=3D1_M5LlzbRSwz7%7C1_9jf3dfYnKxa%7C1_VZwqqldMMnQ%7C1_9W1VOIeVTj1%7C1=
+_Y6psy9LOAJ7%7C1_bjtvfDfgJn6%7C1_aEAhfrpJe6B%7C1_F6mVEK3bIDH%7C1_LMnhQGevxA=
+S%7C1_LDLlIRHSIGK&amp;ty=3D1&amp;ty_data=3DVZwqqldMMnQ&amp;uid=3Dm36BZ4XFnS=
+T&amp;v=3D0" style=3D"text-decoration:none;display:block;font-size:19px;let=
+ter-spacing:-0.5px;font-weight:bold;color:#333;line-height:1.4"><span class=
+=3D"rendered_qtext" style=3D"word-break:break-word">A compound formed from =
+two of the elements in period 2 of the periodic tale have the formula X3 Y2=
+. To what groups do X and Y belong?</span></a></td></tr><tr><td style=3D"bo=
+rder-collapse:collapse"><table class=3D"item_content_wrapper" cellpadding=
+=3D"0" cellspacing=3D"0" border=3D"0" style=3D"border-collapse:collapse;mso=
+-table-lspace:0;mso-table-rspace:0;width:100%" width=3D"100%"><tbody><tr><t=
+d class=3D"content_header metadata" style=3D"border-collapse:collapse;paddi=
+ng:8px 0"><table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"=
+border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0"><tbody><tr>=
+<td class=3D"content_header_photo" style=3D"border-collapse:collapse;vertic=
+al-align:top" valign=3D"top"><a href=3D"https://www.quora.com/qemail/track_=
+click?aoid=3DIEY65JF9yi1&amp;aoty=3D3&amp;aty=3D4&amp;cp=3D3&amp;ct=3D16267=
+45302122057&amp;et=3D130&amp;id=3D25d7907cb43e42c393047c8967058472&amp;sour=
+ce=3D7&amp;src=3D1&amp;st=3D1626745302132604&amp;stories=3D1_M5LlzbRSwz7%7C=
+1_9jf3dfYnKxa%7C1_VZwqqldMMnQ%7C1_9W1VOIeVTj1%7C1_Y6psy9LOAJ7%7C1_bjtvfDfgJ=
+n6%7C1_aEAhfrpJe6B%7C1_F6mVEK3bIDH%7C1_LMnhQGevxAS%7C1_LDLlIRHSIGK&amp;ty=
+=3D1&amp;ty_data=3DVZwqqldMMnQ&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"te=
+xt-decoration:none;color:#2b6dad"><div><div class=3D"hover_menu hidden whit=
+e_bg show_nub"><div class=3D"hover_menu_contents"> </div></div><span class=
+=3D"photo_tooltip IdentityPhoto Photo HoverMenu"><img class=3D"profile_phot=
+o_img" src=3D"https://qph.fs.quoracdn.net/main-thumb-451734943-50-pfcisiyqg=
+pkjbpynrbeghgmxwznfqaji.jpeg" alt=3D"Ritika Jaiswal" style=3D"outline:0;tex=
+t-decoration:none;-ms-interpolation-mode:bicubic;border:0;display:block;hei=
+ght:40px;width:40px;border-radius:100px;border-style:none" height=3D"40" wi=
+dth=3D"40" /></span></div></a></td><td class=3D"content_header_text" style=
+=3D"border-collapse:collapse;padding-left:8px;color:#333"><table cellpaddin=
+g=3D"0" cellspacing=3D"0" border=3D"0" style=3D"border-collapse:collapse;ms=
+o-table-lspace:0;mso-table-rspace:0"><tbody><tr><td style=3D"border-collaps=
+e:collapse"><a class=3D"user_link" href=3D"https://www.quora.com/qemail/tra=
+ck_click?aoid=3DIEY65JF9yi1&amp;aoty=3D3&amp;aty=3D4&amp;cp=3D3&amp;ct=3D16=
+26745302122057&amp;et=3D130&amp;id=3D25d7907cb43e42c393047c8967058472&amp;s=
+ource=3D7&amp;src=3D1&amp;st=3D1626745302132604&amp;stories=3D1_M5LlzbRSwz7=
+%7C1_9jf3dfYnKxa%7C1_VZwqqldMMnQ%7C1_9W1VOIeVTj1%7C1_Y6psy9LOAJ7%7C1_bjtvfD=
+fgJn6%7C1_aEAhfrpJe6B%7C1_F6mVEK3bIDH%7C1_LMnhQGevxAS%7C1_LDLlIRHSIGK&amp;t=
+y=3D1&amp;ty_data=3DVZwqqldMMnQ&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"t=
+ext-decoration:none;color:#333;font-weight:bold;font-size:15px;line-height:=
+1.4">Ritika Jaiswal</a><span style=3D"font-size:15px;line-height:1.4">, stu=
+died at Kamla Nehru Institute Of Technology</span></td></tr><tr><td class=
+=3D"answer_details" style=3D"border-collapse:collapse;color:#999;font-size:=
+13px"><a href=3D"https://www.quora.com/qemail/track_click?aoid=3DVZwqqldMMn=
+Q&amp;aoty=3D1&amp;aty=3D4&amp;cp=3D3&amp;ct=3D1626745302122057&amp;et=3D13=
+0&amp;id=3D25d7907cb43e42c393047c8967058472&amp;source=3D7&amp;src=3D1&amp;=
+st=3D1626745302132604&amp;stories=3D1_M5LlzbRSwz7%7C1_9jf3dfYnKxa%7C1_VZwqq=
+ldMMnQ%7C1_9W1VOIeVTj1%7C1_Y6psy9LOAJ7%7C1_bjtvfDfgJn6%7C1_aEAhfrpJe6B%7C1_=
+F6mVEK3bIDH%7C1_LMnhQGevxAS%7C1_LDLlIRHSIGK&amp;ty=3D1&amp;ty_data=3DVZwqql=
+dMMnQ&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"text-decoration:none;color:=
+#999">Written May 17, 2018</a></td></tr></tbody></table></td></tr></tbody><=
+/table></td></tr><tr><td class=3D"item_content" style=3D"border-collapse:co=
+llapse;display:block;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI=
+',Roboto,Oxygen-Sans,Ubuntu,Cantarell,'Helvetica Neue',sans-serif;color:#33=
+3;font-size:15px;line-height:1.4"><a href=3D"https://www.quora.com/qemail/t=
+rack_click?al_imp=3DeyJ0eXBlIjogMzMsICJoYXNoIjogIjB8M3wxfDgzNzUyNDQxIn0%3D&=
+amp;al_pri=3D0&amp;aoid=3DVZwqqldMMnQ&amp;aoty=3D1&amp;aty=3D4&amp;cp=3D3&a=
+mp;ct=3D1626745302122057&amp;et=3D130&amp;id=3D25d7907cb43e42c393047c896705=
+8472&amp;source=3D7&amp;src=3D1&amp;st=3D1626745302132604&amp;stories=3D1_M=
+5LlzbRSwz7%7C1_9jf3dfYnKxa%7C1_VZwqqldMMnQ%7C1_9W1VOIeVTj1%7C1_Y6psy9LOAJ7%=
+7C1_bjtvfDfgJn6%7C1_aEAhfrpJe6B%7C1_F6mVEK3bIDH%7C1_LMnhQGevxAS%7C1_LDLlIRH=
+SIGK&amp;ty=3D1&amp;ty_data=3DVZwqqldMMnQ&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" =
+style=3D"text-decoration:none;color:#333333"><div><div class=3D"truncated_q=
+_text truncated_para_breaks TruncatedAnswerForEmail TruncatedAnswer Truncat=
+edAnswerForDigestEmail TruncatedQText" style=3D"line-height:1.6"><span clas=
+s=3D"rendered_qtext" style=3D"word-break:break-word"><p class=3D"qtext_para=
+ u-ltr u-text-align--start" style=3D"margin:1em 0;line-height:1.6">Period 2=
+ consists of Li,Be,B,C,N,O,F and Ne.</p><p class=3D"qtext_para u-ltr u-text=
+-align--start" style=3D"margin:1em 0;line-height:1.6">To have a formula X3Y=
+2,</p><p class=3D"qtext_para u-ltr u-text-align--start" style=3D"margin:1em=
+ 0;line-height:1.6">Valency of X should be +2 while that of Y should be -3.=
+</p><p class=3D"qtext_para u-ltr u-text-align--start" style=3D"margin:1em 0=
+;line-height:1.6">Thus,X belongs to the group 2 and Y belongs to the group =
+15.</p>...</span> <a class=3D"read_more_blue" href=3D"https://www.quora.com=
+/qemail/track_click?al_imp=3DeyJ0eXBlIjogMzMsICJoYXNoIjogIjB8M3wxfDgzNzUyND=
+QxIn0%3D&amp;al_pri=3D8&amp;aoid=3DVZwqqldMMnQ&amp;aoty=3D1&amp;aty=3D4&amp=
+;cp=3D3&amp;ct=3D1626745302122057&amp;et=3D130&amp;id=3D25d7907cb43e42c3930=
+47c8967058472&amp;source=3D7&amp;src=3D1&amp;st=3D1626745302132604&amp;stor=
+ies=3D1_M5LlzbRSwz7%7C1_9jf3dfYnKxa%7C1_VZwqqldMMnQ%7C1_9W1VOIeVTj1%7C1_Y6p=
+sy9LOAJ7%7C1_bjtvfDfgJn6%7C1_aEAhfrpJe6B%7C1_F6mVEK3bIDH%7C1_LMnhQGevxAS%7C=
+1_LDLlIRHSIGK&amp;ty=3D1&amp;ty_data=3DVZwqqldMMnQ&amp;uid=3Dm36BZ4XFnST&am=
+p;v=3D0" style=3D"text-decoration:none;color:#168de9">Read More =C2=BB</a><=
+/div></div><div class=3D"non_quora_share_embed_wrapper"><div class=3D"item_=
+metadata"><a href=3D"https://www.quora.com/qemail/track_click?al_imp=3DeyJ0=
+eXBlIjogMzMsICJoYXNoIjogIjB8M3wxfDgzNzUyNDQxIn0%3D&amp;al_pri=3D0&amp;aoid=
+=3DVZwqqldMMnQ&amp;aoty=3D1&amp;aty=3D4&amp;cp=3D3&amp;ct=3D162674530212205=
+7&amp;et=3D130&amp;id=3D25d7907cb43e42c393047c8967058472&amp;source=3D7&amp=
+;src=3D1&amp;st=3D1626745302132604&amp;stories=3D1_M5LlzbRSwz7%7C1_9jf3dfYn=
+Kxa%7C1_VZwqqldMMnQ%7C1_9W1VOIeVTj1%7C1_Y6psy9LOAJ7%7C1_bjtvfDfgJn6%7C1_aEA=
+hfrpJe6B%7C1_F6mVEK3bIDH%7C1_LMnhQGevxAS%7C1_LDLlIRHSIGK&amp;ty=3D1&amp;ty_=
+data=3DVZwqqldMMnQ&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"text-decoratio=
+n:none;color:#2b6dad"></a></div></div></a></td></tr></tbody></table></td></=
+tr></tbody></table></td></tr></tbody></table></div></div><div class=3D"no_p=
+ara_breaks"><div><table class=3D"polish_separator_wrapper" style=3D"border-=
+collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;cellpadding:0;borde=
+r:0;width:100%" width=3D"100%"><tbody><tr><td style=3D"border-collapse:coll=
+apse"></td><td class=3D"polish_separator" style=3D"border-collapse:collapse=
+;border-bottom:1px solid #eee;height:1px;width:140px" width=3D"140" height=
+=3D"1"></td><td style=3D"border-collapse:collapse"></td></tr></tbody></tabl=
+e><table class=3D"story_wrapper" cellspacing=3D"0" border=3D"0" style=3D"bo=
+rder-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;width:100%" wi=
+dth=3D"100%"><tbody><tr><td class=3D"story " style=3D"border-collapse:colla=
+pse;padding:20px 0;border-bottom:0"><table class=3D"digest_story_wrapper" c=
+ellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"border-collapse:co=
+llapse;mso-table-lspace:0;mso-table-rspace:0;width:100%" width=3D"100%"><tb=
+ody><tr><td class=3D"reason" style=3D"border-collapse:collapse;padding-bott=
+om:4px"><table class=3D"digest_reason" cellpadding=3D"0" cellspacing=3D"0" =
+border=3D"0" style=3D"border-collapse:collapse;mso-table-lspace:0;mso-table=
+-rspace:0"><tbody><tr><td valign=3D"top" style=3D"border-collapse:collapse"=
+></td></tr></tbody></table></td></tr><tr><td style=3D"border-collapse:colla=
+pse"><a class=3D"question_text" href=3D"https://www.quora.com/qemail/track_=
+click?al_imp=3DeyJ0eXBlIjogMzMsICJoYXNoIjogIjB8NHwxfDI1MjIxMjgyNSJ9&amp;al_=
+pri=3D1&amp;aoid=3DLzCwPFlriY1&amp;aoty=3D2&amp;aty=3D4&amp;cp=3D4&amp;ct=
+=3D1626745302122057&amp;et=3D130&amp;id=3D25d7907cb43e42c393047c8967058472&=
+amp;source=3D7&amp;src=3D1&amp;st=3D1626745302132604&amp;stories=3D1_M5Llzb=
+RSwz7%7C1_9jf3dfYnKxa%7C1_VZwqqldMMnQ%7C1_9W1VOIeVTj1%7C1_Y6psy9LOAJ7%7C1_b=
+jtvfDfgJn6%7C1_aEAhfrpJe6B%7C1_F6mVEK3bIDH%7C1_LMnhQGevxAS%7C1_LDLlIRHSIGK&=
+amp;ty=3D1&amp;ty_data=3D9W1VOIeVTj1&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=
+=3D"text-decoration:none;display:block;font-size:19px;letter-spacing:-0.5px=
+;font-weight:bold;color:#333;line-height:1.4"><span class=3D"rendered_qtext=
+" style=3D"word-break:break-word">What is the chemical formula for the comp=
+ound formed between Al and O: Al3O2, AlO, Al2O, Al2O3, or AlO2?</span></a><=
+/td></tr><tr><td style=3D"border-collapse:collapse"><table class=3D"item_co=
+ntent_wrapper" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"bo=
+rder-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;width:100%" wi=
+dth=3D"100%"><tbody><tr><td class=3D"content_header metadata" style=3D"bord=
+er-collapse:collapse;padding:8px 0"><table cellpadding=3D"0" cellspacing=3D=
+"0" border=3D"0" style=3D"border-collapse:collapse;mso-table-lspace:0;mso-t=
+able-rspace:0"><tbody><tr><td class=3D"content_header_photo" style=3D"borde=
+r-collapse:collapse;vertical-align:top" valign=3D"top"><a href=3D"https://w=
+ww.quora.com/qemail/track_click?aoid=3DVoDcbFfxsFZ&amp;aoty=3D3&amp;aty=3D4=
+&amp;cp=3D4&amp;ct=3D1626745302122057&amp;et=3D130&amp;id=3D25d7907cb43e42c=
+393047c8967058472&amp;source=3D7&amp;src=3D1&amp;st=3D1626745302132604&amp;=
+stories=3D1_M5LlzbRSwz7%7C1_9jf3dfYnKxa%7C1_VZwqqldMMnQ%7C1_9W1VOIeVTj1%7C1=
+_Y6psy9LOAJ7%7C1_bjtvfDfgJn6%7C1_aEAhfrpJe6B%7C1_F6mVEK3bIDH%7C1_LMnhQGevxA=
+S%7C1_LDLlIRHSIGK&amp;ty=3D1&amp;ty_data=3D9W1VOIeVTj1&amp;uid=3Dm36BZ4XFnS=
+T&amp;v=3D0" style=3D"text-decoration:none;color:#2b6dad"><div><div class=
+=3D"hover_menu hidden white_bg show_nub"><div class=3D"hover_menu_contents"=
+> </div></div><span class=3D"photo_tooltip IdentityPhoto Photo HoverMenu"><=
+img class=3D"profile_photo_img" src=3D"https://qph.fs.quoracdn.net/main-thu=
+mb-546586360-50-hxaoatpdqnawyokmxdzazfsnbzvmkvnz.jpeg" alt=3D"Dolores C Aqu=
+ino" style=3D"outline:0;text-decoration:none;-ms-interpolation-mode:bicubic=
+;border:0;display:block;height:40px;width:40px;border-radius:100px;border-s=
+tyle:none" height=3D"40" width=3D"40" /></span></div></a></td><td class=3D"=
+content_header_text" style=3D"border-collapse:collapse;padding-left:8px;col=
+or:#333"><table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"b=
+order-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0"><tbody><tr><=
+td style=3D"border-collapse:collapse"><a class=3D"user_link" href=3D"https:=
+//www.quora.com/qemail/track_click?aoid=3DVoDcbFfxsFZ&amp;aoty=3D3&amp;aty=
+=3D4&amp;cp=3D4&amp;ct=3D1626745302122057&amp;et=3D130&amp;id=3D25d7907cb43=
+e42c393047c8967058472&amp;source=3D7&amp;src=3D1&amp;st=3D1626745302132604&=
+amp;stories=3D1_M5LlzbRSwz7%7C1_9jf3dfYnKxa%7C1_VZwqqldMMnQ%7C1_9W1VOIeVTj1=
+%7C1_Y6psy9LOAJ7%7C1_bjtvfDfgJn6%7C1_aEAhfrpJe6B%7C1_F6mVEK3bIDH%7C1_LMnhQG=
+evxAS%7C1_LDLlIRHSIGK&amp;ty=3D1&amp;ty_data=3D9W1VOIeVTj1&amp;uid=3Dm36BZ4=
+XFnST&amp;v=3D0" style=3D"text-decoration:none;color:#333;font-weight:bold;=
+font-size:15px;line-height:1.4">Dolores C Aquino</a><span style=3D"font-siz=
+e:15px;line-height:1.4">, Ph.D Chemistry, The Ohio State University</span><=
+/td></tr><tr><td class=3D"answer_details" style=3D"border-collapse:collapse=
+;color:#999;font-size:13px"><a href=3D"https://www.quora.com/qemail/track_c=
+lick?aoid=3D9W1VOIeVTj1&amp;aoty=3D1&amp;aty=3D4&amp;cp=3D4&amp;ct=3D162674=
+5302122057&amp;et=3D130&amp;id=3D25d7907cb43e42c393047c8967058472&amp;sourc=
+e=3D7&amp;src=3D1&amp;st=3D1626745302132604&amp;stories=3D1_M5LlzbRSwz7%7C1=
+_9jf3dfYnKxa%7C1_VZwqqldMMnQ%7C1_9W1VOIeVTj1%7C1_Y6psy9LOAJ7%7C1_bjtvfDfgJn=
+6%7C1_aEAhfrpJe6B%7C1_F6mVEK3bIDH%7C1_LMnhQGevxAS%7C1_LDLlIRHSIGK&amp;ty=3D=
+1&amp;ty_data=3D9W1VOIeVTj1&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"text-=
+decoration:none;color:#999">Written Nov 30, 2020</a></td></tr></tbody></tab=
+le></td></tr></tbody></table></td></tr><tr><td class=3D"item_content" style=
+=3D"border-collapse:collapse;display:block;font-family:-apple-system,BlinkM=
+acSystemFont,'Segoe UI',Roboto,Oxygen-Sans,Ubuntu,Cantarell,'Helvetica Neue=
+',sans-serif;color:#333;font-size:15px;line-height:1.4"><a href=3D"https://=
+www.quora.com/qemail/track_click?al_imp=3DeyJ0eXBlIjogMzMsICJoYXNoIjogIjB8N=
+HwxfDI1MjIxMjgyNSJ9&amp;al_pri=3D0&amp;aoid=3D9W1VOIeVTj1&amp;aoty=3D1&amp;=
+aty=3D4&amp;cp=3D4&amp;ct=3D1626745302122057&amp;et=3D130&amp;id=3D25d7907c=
+b43e42c393047c8967058472&amp;source=3D7&amp;src=3D1&amp;st=3D16267453021326=
+04&amp;stories=3D1_M5LlzbRSwz7%7C1_9jf3dfYnKxa%7C1_VZwqqldMMnQ%7C1_9W1VOIeV=
+Tj1%7C1_Y6psy9LOAJ7%7C1_bjtvfDfgJn6%7C1_aEAhfrpJe6B%7C1_F6mVEK3bIDH%7C1_LMn=
+hQGevxAS%7C1_LDLlIRHSIGK&amp;ty=3D1&amp;ty_data=3D9W1VOIeVTj1&amp;uid=3Dm36=
+BZ4XFnST&amp;v=3D0" style=3D"text-decoration:none;color:#333333"><div><div =
+class=3D"truncated_q_text truncated_para_breaks TruncatedAnswerForEmail Tru=
+ncatedAnswer TruncatedAnswerForDigestEmail TruncatedQText" style=3D"line-he=
+ight:1.6"><span class=3D"rendered_qtext" style=3D"word-break:break-word"><p=
+ class=3D"qtext_para u-ltr u-text-align--start" style=3D"margin:1em 0;line-=
+height:1.6">To answer this type of question about elements your best resour=
+ce is a periodic table.</p><p class=3D"qtext_para u-ltr u-text-align--start=
+" style=3D"margin:1em 0;line-height:1.6">Aluminum, Al, is a metal in Group =
+3A of the periodic table . Main group metals lose el...</p></span> <a class=
+=3D"read_more_blue" href=3D"https://www.quora.com/qemail/track_click?al_imp=
+=3DeyJ0eXBlIjogMzMsICJoYXNoIjogIjB8NHwxfDI1MjIxMjgyNSJ9&amp;al_pri=3D8&amp;=
+aoid=3D9W1VOIeVTj1&amp;aoty=3D1&amp;aty=3D4&amp;cp=3D4&amp;ct=3D16267453021=
+22057&amp;et=3D130&amp;id=3D25d7907cb43e42c393047c8967058472&amp;source=3D7=
+&amp;src=3D1&amp;st=3D1626745302132604&amp;stories=3D1_M5LlzbRSwz7%7C1_9jf3=
+dfYnKxa%7C1_VZwqqldMMnQ%7C1_9W1VOIeVTj1%7C1_Y6psy9LOAJ7%7C1_bjtvfDfgJn6%7C1=
+_aEAhfrpJe6B%7C1_F6mVEK3bIDH%7C1_LMnhQGevxAS%7C1_LDLlIRHSIGK&amp;ty=3D1&amp=
+;ty_data=3D9W1VOIeVTj1&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"text-decor=
+ation:none;color:#168de9">Read More =C2=BB</a></div></div><div class=3D"non=
+_quora_share_embed_wrapper"><div class=3D"item_metadata"><a href=3D"https:/=
+/www.quora.com/qemail/track_click?al_imp=3DeyJ0eXBlIjogMzMsICJoYXNoIjogIjB8=
+NHwxfDI1MjIxMjgyNSJ9&amp;al_pri=3D0&amp;aoid=3D9W1VOIeVTj1&amp;aoty=3D1&amp=
+;aty=3D4&amp;cp=3D4&amp;ct=3D1626745302122057&amp;et=3D130&amp;id=3D25d7907=
+cb43e42c393047c8967058472&amp;source=3D7&amp;src=3D1&amp;st=3D1626745302132=
+604&amp;stories=3D1_M5LlzbRSwz7%7C1_9jf3dfYnKxa%7C1_VZwqqldMMnQ%7C1_9W1VOIe=
+VTj1%7C1_Y6psy9LOAJ7%7C1_bjtvfDfgJn6%7C1_aEAhfrpJe6B%7C1_F6mVEK3bIDH%7C1_LM=
+nhQGevxAS%7C1_LDLlIRHSIGK&amp;ty=3D1&amp;ty_data=3D9W1VOIeVTj1&amp;uid=3Dm3=
+6BZ4XFnST&amp;v=3D0" style=3D"text-decoration:none;color:#2b6dad"></a></div=
+></div></a></td></tr></tbody></table></td></tr></tbody></table></td></tr></=
+tbody></table></div></div><div class=3D"no_para_breaks"><div><table class=
+=3D"polish_separator_wrapper" style=3D"border-collapse:collapse;mso-table-l=
+space:0;mso-table-rspace:0;cellpadding:0;border:0;width:100%" width=3D"100%=
+"><tbody><tr><td style=3D"border-collapse:collapse"></td><td class=3D"polis=
+h_separator" style=3D"border-collapse:collapse;border-bottom:1px solid #eee=
+;height:1px;width:140px" width=3D"140" height=3D"1"></td><td style=3D"borde=
+r-collapse:collapse"></td></tr></tbody></table><table class=3D"story_wrappe=
+r" cellspacing=3D"0" border=3D"0" style=3D"border-collapse:collapse;mso-tab=
+le-lspace:0;mso-table-rspace:0;width:100%" width=3D"100%"><tbody><tr><td cl=
+ass=3D"story " style=3D"border-collapse:collapse;padding:20px 0;border-bott=
+om:0"><table class=3D"digest_story_wrapper" cellpadding=3D"0" cellspacing=
+=3D"0" border=3D"0" style=3D"border-collapse:collapse;mso-table-lspace:0;ms=
+o-table-rspace:0;width:100%" width=3D"100%"><tbody><tr><td class=3D"reason"=
+ style=3D"border-collapse:collapse;padding-bottom:4px"><table class=3D"dige=
+st_reason" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"border=
+-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0"><tbody><tr><td va=
+lign=3D"top" style=3D"border-collapse:collapse"></td></tr></tbody></table><=
+/td></tr><tr><td style=3D"border-collapse:collapse"><a class=3D"question_te=
+xt" href=3D"https://www.quora.com/qemail/track_click?al_imp=3DeyJ0eXBlIjogM=
+zMsICJoYXNoIjogIjB8NXwxfDUwNjUwODQwIn0%3D&amp;al_pri=3D1&amp;aoid=3DbeaBhvU=
+NWzW&amp;aoty=3D2&amp;aty=3D4&amp;cp=3D5&amp;ct=3D1626745302122057&amp;et=
+=3D130&amp;id=3D25d7907cb43e42c393047c8967058472&amp;source=3D7&amp;src=3D1=
+&amp;st=3D1626745302132604&amp;stories=3D1_M5LlzbRSwz7%7C1_9jf3dfYnKxa%7C1_=
+VZwqqldMMnQ%7C1_9W1VOIeVTj1%7C1_Y6psy9LOAJ7%7C1_bjtvfDfgJn6%7C1_aEAhfrpJe6B=
+%7C1_F6mVEK3bIDH%7C1_LMnhQGevxAS%7C1_LDLlIRHSIGK&amp;ty=3D1&amp;ty_data=3DY=
+6psy9LOAJ7&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"text-decoration:none;d=
+isplay:block;font-size:19px;letter-spacing:-0.5px;font-weight:bold;color:#3=
+33;line-height:1.4"><span class=3D"rendered_qtext" style=3D"word-break:brea=
+k-word">What are the basic compound in cement?</span></a></td></tr><tr><td =
+style=3D"border-collapse:collapse"><table class=3D"item_content_wrapper" ce=
+llpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"border-collapse:col=
+lapse;mso-table-lspace:0;mso-table-rspace:0;width:100%" width=3D"100%"><tbo=
+dy><tr><td class=3D"content_header metadata" style=3D"border-collapse:colla=
+pse;padding:8px 0"><table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" =
+style=3D"border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0"><t=
+body><tr><td class=3D"content_header_photo" style=3D"border-collapse:collap=
+se;vertical-align:top" valign=3D"top"><a href=3D"https://www.quora.com/qema=
+il/track_click?aoid=3D9PcLlzC2CUS&amp;aoty=3D3&amp;aty=3D4&amp;cp=3D5&amp;c=
+t=3D1626745302122057&amp;et=3D130&amp;id=3D25d7907cb43e42c393047c8967058472=
+&amp;source=3D7&amp;src=3D1&amp;st=3D1626745302132604&amp;stories=3D1_M5Llz=
+bRSwz7%7C1_9jf3dfYnKxa%7C1_VZwqqldMMnQ%7C1_9W1VOIeVTj1%7C1_Y6psy9LOAJ7%7C1_=
+bjtvfDfgJn6%7C1_aEAhfrpJe6B%7C1_F6mVEK3bIDH%7C1_LMnhQGevxAS%7C1_LDLlIRHSIGK=
+&amp;ty=3D1&amp;ty_data=3DY6psy9LOAJ7&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" styl=
+e=3D"text-decoration:none;color:#2b6dad"><div><div class=3D"hover_menu hidd=
+en white_bg show_nub"><div class=3D"hover_menu_contents"> </div></div><span=
+ class=3D"photo_tooltip IdentityPhoto Photo HoverMenu"><img class=3D"profil=
+e_photo_img" src=3D"https://qph.fs.quoracdn.net/main-thumb-185758299-50-hno=
+tdyxojhfjfluatmknwwxnzbgiinoy.jpeg" alt=3D"Shubham Kohli" style=3D"outline:=
+0;text-decoration:none;-ms-interpolation-mode:bicubic;border:0;display:bloc=
+k;height:40px;width:40px;border-radius:100px;border-style:none" height=3D"4=
+0" width=3D"40" /></span></div></a></td><td class=3D"content_header_text" s=
+tyle=3D"border-collapse:collapse;padding-left:8px;color:#333"><table cellpa=
+dding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"border-collapse:collaps=
+e;mso-table-lspace:0;mso-table-rspace:0"><tbody><tr><td style=3D"border-col=
+lapse:collapse"><a class=3D"user_link" href=3D"https://www.quora.com/qemail=
+/track_click?aoid=3D9PcLlzC2CUS&amp;aoty=3D3&amp;aty=3D4&amp;cp=3D5&amp;ct=
+=3D1626745302122057&amp;et=3D130&amp;id=3D25d7907cb43e42c393047c8967058472&=
+amp;source=3D7&amp;src=3D1&amp;st=3D1626745302132604&amp;stories=3D1_M5Llzb=
+RSwz7%7C1_9jf3dfYnKxa%7C1_VZwqqldMMnQ%7C1_9W1VOIeVTj1%7C1_Y6psy9LOAJ7%7C1_b=
+jtvfDfgJn6%7C1_aEAhfrpJe6B%7C1_F6mVEK3bIDH%7C1_LMnhQGevxAS%7C1_LDLlIRHSIGK&=
+amp;ty=3D1&amp;ty_data=3DY6psy9LOAJ7&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=
+=3D"text-decoration:none;color:#333;font-weight:bold;font-size:15px;line-he=
+ight:1.4">Shubham Kohli</a><span style=3D"font-size:15px;line-height:1.4">,=
+ Freelance writer (2017-present)</span></td></tr><tr><td class=3D"answer_de=
+tails" style=3D"border-collapse:collapse;color:#999;font-size:13px"><a href=
+=3D"https://www.quora.com/qemail/track_click?aoid=3DY6psy9LOAJ7&amp;aoty=3D=
+1&amp;aty=3D4&amp;cp=3D5&amp;ct=3D1626745302122057&amp;et=3D130&amp;id=3D25=
+d7907cb43e42c393047c8967058472&amp;source=3D7&amp;src=3D1&amp;st=3D16267453=
+02132604&amp;stories=3D1_M5LlzbRSwz7%7C1_9jf3dfYnKxa%7C1_VZwqqldMMnQ%7C1_9W=
+1VOIeVTj1%7C1_Y6psy9LOAJ7%7C1_bjtvfDfgJn6%7C1_aEAhfrpJe6B%7C1_F6mVEK3bIDH%7=
+C1_LMnhQGevxAS%7C1_LDLlIRHSIGK&amp;ty=3D1&amp;ty_data=3DY6psy9LOAJ7&amp;uid=
+=3Dm36BZ4XFnST&amp;v=3D0" style=3D"text-decoration:none;color:#999">Written=
+ Jul 17, 2017</a></td></tr></tbody></table></td></tr></tbody></table></td><=
+/tr><tr><td class=3D"item_content" style=3D"border-collapse:collapse;displa=
+y:block;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxyg=
+en-Sans,Ubuntu,Cantarell,'Helvetica Neue',sans-serif;color:#333;font-size:1=
+5px;line-height:1.4"><a href=3D"https://www.quora.com/qemail/track_click?al=
+_imp=3DeyJ0eXBlIjogMzMsICJoYXNoIjogIjB8NXwxfDUwNjUwODQwIn0%3D&amp;al_pri=3D=
+0&amp;aoid=3DY6psy9LOAJ7&amp;aoty=3D1&amp;aty=3D4&amp;cp=3D5&amp;ct=3D16267=
+45302122057&amp;et=3D130&amp;id=3D25d7907cb43e42c393047c8967058472&amp;sour=
+ce=3D7&amp;src=3D1&amp;st=3D1626745302132604&amp;stories=3D1_M5LlzbRSwz7%7C=
+1_9jf3dfYnKxa%7C1_VZwqqldMMnQ%7C1_9W1VOIeVTj1%7C1_Y6psy9LOAJ7%7C1_bjtvfDfgJ=
+n6%7C1_aEAhfrpJe6B%7C1_F6mVEK3bIDH%7C1_LMnhQGevxAS%7C1_LDLlIRHSIGK&amp;ty=
+=3D1&amp;ty_data=3DY6psy9LOAJ7&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"te=
+xt-decoration:none;color:#333333"><div><div class=3D"truncated_q_text trunc=
+ated_para_breaks TruncatedAnswerForEmail TruncatedAnswer TruncatedAnswerFor=
+DigestEmail TruncatedQText" style=3D"line-height:1.6"><span class=3D"render=
+ed_qtext" style=3D"word-break:break-word"><p class=3D"qtext_para u-ltr u-te=
+xt-align--start" style=3D"margin:1em 0;line-height:1.6">Cement is manufactu=
+red when raw materials such as lime,silica,alumina &amp; iron oxide are hea=
+ted at high temperature in kiln.</p><p class=3D"qtext_para u-ltr u-text-ali=
+gn--start" style=3D"margin:1em 0;line-height:1.6">Cement is mainly composed=
+ of <b>Bogue=E2=80=99s compounds </b>&amp; m...</p></span> <a class=3D"read=
+_more_blue" href=3D"https://www.quora.com/qemail/track_click?al_imp=3DeyJ0e=
+XBlIjogMzMsICJoYXNoIjogIjB8NXwxfDUwNjUwODQwIn0%3D&amp;al_pri=3D8&amp;aoid=
+=3DY6psy9LOAJ7&amp;aoty=3D1&amp;aty=3D4&amp;cp=3D5&amp;ct=3D162674530212205=
+7&amp;et=3D130&amp;id=3D25d7907cb43e42c393047c8967058472&amp;source=3D7&amp=
+;src=3D1&amp;st=3D1626745302132604&amp;stories=3D1_M5LlzbRSwz7%7C1_9jf3dfYn=
+Kxa%7C1_VZwqqldMMnQ%7C1_9W1VOIeVTj1%7C1_Y6psy9LOAJ7%7C1_bjtvfDfgJn6%7C1_aEA=
+hfrpJe6B%7C1_F6mVEK3bIDH%7C1_LMnhQGevxAS%7C1_LDLlIRHSIGK&amp;ty=3D1&amp;ty_=
+data=3DY6psy9LOAJ7&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"text-decoratio=
+n:none;color:#168de9">Read More =C2=BB</a></div></div><div class=3D"non_quo=
+ra_share_embed_wrapper"><div class=3D"item_metadata"><a href=3D"https://www=
+.quora.com/qemail/track_click?al_imp=3DeyJ0eXBlIjogMzMsICJoYXNoIjogIjB8NXwx=
+fDUwNjUwODQwIn0%3D&amp;al_pri=3D0&amp;aoid=3DY6psy9LOAJ7&amp;aoty=3D1&amp;a=
+ty=3D4&amp;cp=3D5&amp;ct=3D1626745302122057&amp;et=3D130&amp;id=3D25d7907cb=
+43e42c393047c8967058472&amp;source=3D7&amp;src=3D1&amp;st=3D162674530213260=
+4&amp;stories=3D1_M5LlzbRSwz7%7C1_9jf3dfYnKxa%7C1_VZwqqldMMnQ%7C1_9W1VOIeVT=
+j1%7C1_Y6psy9LOAJ7%7C1_bjtvfDfgJn6%7C1_aEAhfrpJe6B%7C1_F6mVEK3bIDH%7C1_LMnh=
+QGevxAS%7C1_LDLlIRHSIGK&amp;ty=3D1&amp;ty_data=3DY6psy9LOAJ7&amp;uid=3Dm36B=
+Z4XFnST&amp;v=3D0" style=3D"text-decoration:none;color:#2b6dad"></a></div><=
+/div></a></td></tr></tbody></table></td></tr></tbody></table></td></tr></tb=
+ody></table></div></div><div class=3D"no_para_breaks"><div><table class=3D"=
+polish_separator_wrapper" style=3D"border-collapse:collapse;mso-table-lspac=
+e:0;mso-table-rspace:0;cellpadding:0;border:0;width:100%" width=3D"100%"><t=
+body><tr><td style=3D"border-collapse:collapse"></td><td class=3D"polish_se=
+parator" style=3D"border-collapse:collapse;border-bottom:1px solid #eee;hei=
+ght:1px;width:140px" width=3D"140" height=3D"1"></td><td style=3D"border-co=
+llapse:collapse"></td></tr></tbody></table><table class=3D"story_wrapper" c=
+ellspacing=3D"0" border=3D"0" style=3D"border-collapse:collapse;mso-table-l=
+space:0;mso-table-rspace:0;width:100%" width=3D"100%"><tbody><tr><td class=
+=3D"story " style=3D"border-collapse:collapse;padding:20px 0;border-bottom:=
+0"><table class=3D"digest_story_wrapper" cellpadding=3D"0" cellspacing=3D"0=
+" border=3D"0" style=3D"border-collapse:collapse;mso-table-lspace:0;mso-tab=
+le-rspace:0;width:100%" width=3D"100%"><tbody><tr><td class=3D"reason" styl=
+e=3D"border-collapse:collapse;padding-bottom:4px"><table class=3D"digest_re=
+ason" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"border-coll=
+apse:collapse;mso-table-lspace:0;mso-table-rspace:0"><tbody><tr><td valign=
+=3D"top" style=3D"border-collapse:collapse"></td></tr></tbody></table></td>=
+</tr><tr><td style=3D"border-collapse:collapse"><a class=3D"question_text" =
+href=3D"https://www.quora.com/qemail/track_click?al_imp=3DeyJ0eXBlIjogMzMsI=
+CJoYXNoIjogIjB8NnwxfDgzMjA2NTI4In0%3D&amp;al_pri=3D1&amp;aoid=3Dd8nxP1SrII7=
+&amp;aoty=3D2&amp;aty=3D4&amp;cp=3D6&amp;ct=3D1626745302122057&amp;et=3D130=
+&amp;id=3D25d7907cb43e42c393047c8967058472&amp;source=3D7&amp;src=3D1&amp;s=
+t=3D1626745302132604&amp;stories=3D1_M5LlzbRSwz7%7C1_9jf3dfYnKxa%7C1_VZwqql=
+dMMnQ%7C1_9W1VOIeVTj1%7C1_Y6psy9LOAJ7%7C1_bjtvfDfgJn6%7C1_aEAhfrpJe6B%7C1_F=
+6mVEK3bIDH%7C1_LMnhQGevxAS%7C1_LDLlIRHSIGK&amp;ty=3D1&amp;ty_data=3DbjtvfDf=
+gJn6&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"text-decoration:none;display=
+:block;font-size:19px;letter-spacing:-0.5px;font-weight:bold;color:#333;lin=
+e-height:1.4"><span class=3D"rendered_qtext" style=3D"word-break:break-word=
+">In a reaction 2A+B-&gt; A2B , if the concentration  of A is doubled and B=
+ is halved what is change in rate?</span></a></td></tr><tr><td style=3D"bor=
+der-collapse:collapse"><table class=3D"item_content_wrapper" cellpadding=3D=
+"0" cellspacing=3D"0" border=3D"0" style=3D"border-collapse:collapse;mso-ta=
+ble-lspace:0;mso-table-rspace:0;width:100%" width=3D"100%"><tbody><tr><td c=
+lass=3D"content_header metadata" style=3D"border-collapse:collapse;padding:=
+8px 0"><table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"bor=
+der-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0"><tbody><tr><td=
+ class=3D"content_header_photo" style=3D"border-collapse:collapse;vertical-=
+align:top" valign=3D"top"><a href=3D"https://www.quora.com/qemail/track_cli=
+ck?aoid=3Dbvt20zTx1UF&amp;aoty=3D3&amp;aty=3D4&amp;cp=3D6&amp;ct=3D16267453=
+02122057&amp;et=3D130&amp;id=3D25d7907cb43e42c393047c8967058472&amp;source=
+=3D7&amp;src=3D1&amp;st=3D1626745302132604&amp;stories=3D1_M5LlzbRSwz7%7C1_=
+9jf3dfYnKxa%7C1_VZwqqldMMnQ%7C1_9W1VOIeVTj1%7C1_Y6psy9LOAJ7%7C1_bjtvfDfgJn6=
+%7C1_aEAhfrpJe6B%7C1_F6mVEK3bIDH%7C1_LMnhQGevxAS%7C1_LDLlIRHSIGK&amp;ty=3D1=
+&amp;ty_data=3DbjtvfDfgJn6&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"text-d=
+ecoration:none;color:#2b6dad"><div><div class=3D"hover_menu hidden white_bg=
+ show_nub"><div class=3D"hover_menu_contents"> </div></div><span class=3D"p=
+hoto_tooltip IdentityPhoto Photo HoverMenu"><img class=3D"profile_photo_img=
+" src=3D"https://qph.fs.quoracdn.net/main-thumb-416216714-50-osubkxucqrldab=
+ljckhtfwzcxvunqhmv.jpeg" alt=3D"Sankarshana Acharia" style=3D"outline:0;tex=
+t-decoration:none;-ms-interpolation-mode:bicubic;border:0;display:block;hei=
+ght:40px;width:40px;border-radius:100px;border-style:none" height=3D"40" wi=
+dth=3D"40" /></span></div></a></td><td class=3D"content_header_text" style=
+=3D"border-collapse:collapse;padding-left:8px;color:#333"><table cellpaddin=
+g=3D"0" cellspacing=3D"0" border=3D"0" style=3D"border-collapse:collapse;ms=
+o-table-lspace:0;mso-table-rspace:0"><tbody><tr><td style=3D"border-collaps=
+e:collapse"><a class=3D"user_link" href=3D"https://www.quora.com/qemail/tra=
+ck_click?aoid=3Dbvt20zTx1UF&amp;aoty=3D3&amp;aty=3D4&amp;cp=3D6&amp;ct=3D16=
+26745302122057&amp;et=3D130&amp;id=3D25d7907cb43e42c393047c8967058472&amp;s=
+ource=3D7&amp;src=3D1&amp;st=3D1626745302132604&amp;stories=3D1_M5LlzbRSwz7=
+%7C1_9jf3dfYnKxa%7C1_VZwqqldMMnQ%7C1_9W1VOIeVTj1%7C1_Y6psy9LOAJ7%7C1_bjtvfD=
+fgJn6%7C1_aEAhfrpJe6B%7C1_F6mVEK3bIDH%7C1_LMnhQGevxAS%7C1_LDLlIRHSIGK&amp;t=
+y=3D1&amp;ty_data=3DbjtvfDfgJn6&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"t=
+ext-decoration:none;color:#333;font-weight:bold;font-size:15px;line-height:=
+1.4">Sankarshana Acharia</a></td></tr><tr><td class=3D"answer_details" styl=
+e=3D"border-collapse:collapse;color:#999;font-size:13px"><a href=3D"https:/=
+/www.quora.com/qemail/track_click?aoid=3DbjtvfDfgJn6&amp;aoty=3D1&amp;aty=
+=3D4&amp;cp=3D6&amp;ct=3D1626745302122057&amp;et=3D130&amp;id=3D25d7907cb43=
+e42c393047c8967058472&amp;source=3D7&amp;src=3D1&amp;st=3D1626745302132604&=
+amp;stories=3D1_M5LlzbRSwz7%7C1_9jf3dfYnKxa%7C1_VZwqqldMMnQ%7C1_9W1VOIeVTj1=
+%7C1_Y6psy9LOAJ7%7C1_bjtvfDfgJn6%7C1_aEAhfrpJe6B%7C1_F6mVEK3bIDH%7C1_LMnhQG=
+evxAS%7C1_LDLlIRHSIGK&amp;ty=3D1&amp;ty_data=3DbjtvfDfgJn6&amp;uid=3Dm36BZ4=
+XFnST&amp;v=3D0" style=3D"text-decoration:none;color:#999">Written May 13, =
+2018</a></td></tr></tbody></table></td></tr></tbody></table></td></tr><tr><=
+td class=3D"item_content" style=3D"border-collapse:collapse;display:block;f=
+ont-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen-Sans,U=
+buntu,Cantarell,'Helvetica Neue',sans-serif;color:#333;font-size:15px;line-=
+height:1.4"><a href=3D"https://www.quora.com/qemail/track_click?al_imp=3Dey=
+J0eXBlIjogMzMsICJoYXNoIjogIjB8NnwxfDgzMjA2NTI4In0%3D&amp;al_pri=3D0&amp;aoi=
+d=3DbjtvfDfgJn6&amp;aoty=3D1&amp;aty=3D4&amp;cp=3D6&amp;ct=3D16267453021220=
+57&amp;et=3D130&amp;id=3D25d7907cb43e42c393047c8967058472&amp;source=3D7&am=
+p;src=3D1&amp;st=3D1626745302132604&amp;stories=3D1_M5LlzbRSwz7%7C1_9jf3dfY=
+nKxa%7C1_VZwqqldMMnQ%7C1_9W1VOIeVTj1%7C1_Y6psy9LOAJ7%7C1_bjtvfDfgJn6%7C1_aE=
+AhfrpJe6B%7C1_F6mVEK3bIDH%7C1_LMnhQGevxAS%7C1_LDLlIRHSIGK&amp;ty=3D1&amp;ty=
+_data=3DbjtvfDfgJn6&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"text-decorati=
+on:none;color:#333333"><div><div class=3D"truncated_q_text truncated_para_b=
+reaks TruncatedAnswerForEmail TruncatedAnswer TruncatedAnswerForDigestEmail=
+ TruncatedQText" style=3D"line-height:1.6"><span class=3D"rendered_qtext" s=
+tyle=3D"word-break:break-word"><p class=3D"qtext_para u-ltr u-text-align--s=
+tart" style=3D"margin:1em 0;line-height:1.6">It depends on the rate equatio=
+n ie. how the rate of the reaction depends on the concentration of the reac=
+tants.</p><p class=3D"qtext_para u-ltr u-text-align--start" style=3D"margin=
+:1em 0;line-height:1.6">If it is first order wrt A, doubling the concentrat=
+ion increa...</p></span> <a class=3D"read_more_blue" href=3D"https://www.qu=
+ora.com/qemail/track_click?al_imp=3DeyJ0eXBlIjogMzMsICJoYXNoIjogIjB8NnwxfDg=
+zMjA2NTI4In0%3D&amp;al_pri=3D8&amp;aoid=3DbjtvfDfgJn6&amp;aoty=3D1&amp;aty=
+=3D4&amp;cp=3D6&amp;ct=3D1626745302122057&amp;et=3D130&amp;id=3D25d7907cb43=
+e42c393047c8967058472&amp;source=3D7&amp;src=3D1&amp;st=3D1626745302132604&=
+amp;stories=3D1_M5LlzbRSwz7%7C1_9jf3dfYnKxa%7C1_VZwqqldMMnQ%7C1_9W1VOIeVTj1=
+%7C1_Y6psy9LOAJ7%7C1_bjtvfDfgJn6%7C1_aEAhfrpJe6B%7C1_F6mVEK3bIDH%7C1_LMnhQG=
+evxAS%7C1_LDLlIRHSIGK&amp;ty=3D1&amp;ty_data=3DbjtvfDfgJn6&amp;uid=3Dm36BZ4=
+XFnST&amp;v=3D0" style=3D"text-decoration:none;color:#168de9">Read More =C2=
+=BB</a></div></div><div class=3D"non_quora_share_embed_wrapper"><div class=
+=3D"item_metadata"><a href=3D"https://www.quora.com/qemail/track_click?al_i=
+mp=3DeyJ0eXBlIjogMzMsICJoYXNoIjogIjB8NnwxfDgzMjA2NTI4In0%3D&amp;al_pri=3D0&=
+amp;aoid=3DbjtvfDfgJn6&amp;aoty=3D1&amp;aty=3D4&amp;cp=3D6&amp;ct=3D1626745=
+302122057&amp;et=3D130&amp;id=3D25d7907cb43e42c393047c8967058472&amp;source=
+=3D7&amp;src=3D1&amp;st=3D1626745302132604&amp;stories=3D1_M5LlzbRSwz7%7C1_=
+9jf3dfYnKxa%7C1_VZwqqldMMnQ%7C1_9W1VOIeVTj1%7C1_Y6psy9LOAJ7%7C1_bjtvfDfgJn6=
+%7C1_aEAhfrpJe6B%7C1_F6mVEK3bIDH%7C1_LMnhQGevxAS%7C1_LDLlIRHSIGK&amp;ty=3D1=
+&amp;ty_data=3DbjtvfDfgJn6&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"text-d=
+ecoration:none;color:#2b6dad"></a></div></div></a></td></tr></tbody></table=
+></td></tr></tbody></table></td></tr></tbody></table></div></div><div class=
+=3D"no_para_breaks"><div><table class=3D"polish_separator_wrapper" style=3D=
+"border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;cellpadding=
+:0;border:0;width:100%" width=3D"100%"><tbody><tr><td style=3D"border-colla=
+pse:collapse"></td><td class=3D"polish_separator" style=3D"border-collapse:=
+collapse;border-bottom:1px solid #eee;height:1px;width:140px" width=3D"140"=
+ height=3D"1"></td><td style=3D"border-collapse:collapse"></td></tr></tbody=
+></table><table class=3D"story_wrapper" cellspacing=3D"0" border=3D"0" styl=
+e=3D"border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;width:1=
+00%" width=3D"100%"><tbody><tr><td class=3D"story " style=3D"border-collaps=
+e:collapse;padding:20px 0;border-bottom:0"><table class=3D"digest_story_wra=
+pper" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"border-coll=
+apse:collapse;mso-table-lspace:0;mso-table-rspace:0;width:100%" width=3D"10=
+0%"><tbody><tr><td class=3D"reason" style=3D"border-collapse:collapse;paddi=
+ng-bottom:4px"><table class=3D"digest_reason" cellpadding=3D"0" cellspacing=
+=3D"0" border=3D"0" style=3D"border-collapse:collapse;mso-table-lspace:0;ms=
+o-table-rspace:0"><tbody><tr><td valign=3D"top" style=3D"border-collapse:co=
+llapse"></td></tr></tbody></table></td></tr><tr><td style=3D"border-collaps=
+e:collapse"><a class=3D"question_text" href=3D"https://www.quora.com/qemail=
+/track_click?al_imp=3DeyJ0eXBlIjogMzMsICJoYXNoIjogIjB8N3wxfDcxMDgyODUzIn0%3=
+D&amp;al_pri=3D1&amp;aoid=3DVEqyUhZp08F&amp;aoty=3D2&amp;aty=3D4&amp;cp=3D7=
+&amp;ct=3D1626745302122057&amp;et=3D130&amp;id=3D25d7907cb43e42c393047c8967=
+058472&amp;source=3D7&amp;src=3D1&amp;st=3D1626745302132604&amp;stories=3D1=
+_M5LlzbRSwz7%7C1_9jf3dfYnKxa%7C1_VZwqqldMMnQ%7C1_9W1VOIeVTj1%7C1_Y6psy9LOAJ=
+7%7C1_bjtvfDfgJn6%7C1_aEAhfrpJe6B%7C1_F6mVEK3bIDH%7C1_LMnhQGevxAS%7C1_LDLlI=
+RHSIGK&amp;ty=3D1&amp;ty_data=3DaEAhfrpJe6B&amp;uid=3Dm36BZ4XFnST&amp;v=3D0=
+" style=3D"text-decoration:none;display:block;font-size:19px;letter-spacing=
+:-0.5px;font-weight:bold;color:#333;line-height:1.4"><span class=3D"rendere=
+d_qtext" style=3D"word-break:break-word">Why is graphite not an organic com=
+pound?</span></a></td></tr><tr><td style=3D"border-collapse:collapse"><tabl=
+e class=3D"item_content_wrapper" cellpadding=3D"0" cellspacing=3D"0" border=
+=3D"0" style=3D"border-collapse:collapse;mso-table-lspace:0;mso-table-rspac=
+e:0;width:100%" width=3D"100%"><tbody><tr><td class=3D"content_header metad=
+ata" style=3D"border-collapse:collapse;padding:8px 0"><table cellpadding=3D=
+"0" cellspacing=3D"0" border=3D"0" style=3D"border-collapse:collapse;mso-ta=
+ble-lspace:0;mso-table-rspace:0"><tbody><tr><td class=3D"content_header_pho=
+to" style=3D"border-collapse:collapse;vertical-align:top" valign=3D"top"><a=
+ href=3D"https://www.quora.com/qemail/track_click?aoid=3DXo0kv2mcLcY&amp;ao=
+ty=3D3&amp;aty=3D4&amp;cp=3D7&amp;ct=3D1626745302122057&amp;et=3D130&amp;id=
+=3D25d7907cb43e42c393047c8967058472&amp;source=3D7&amp;src=3D1&amp;st=3D162=
+6745302132604&amp;stories=3D1_M5LlzbRSwz7%7C1_9jf3dfYnKxa%7C1_VZwqqldMMnQ%7=
+C1_9W1VOIeVTj1%7C1_Y6psy9LOAJ7%7C1_bjtvfDfgJn6%7C1_aEAhfrpJe6B%7C1_F6mVEK3b=
+IDH%7C1_LMnhQGevxAS%7C1_LDLlIRHSIGK&amp;ty=3D1&amp;ty_data=3DaEAhfrpJe6B&am=
+p;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"text-decoration:none;color:#2b6dad"=
+><div><div class=3D"hover_menu hidden white_bg show_nub"><div class=3D"hove=
+r_menu_contents"> </div></div><span class=3D"photo_tooltip IdentityPhoto Ph=
+oto HoverMenu"><img class=3D"profile_photo_img" src=3D"https://qph.fs.quora=
+cdn.net/main-thumb-278352911-50-pnvfznzncbkixdzplmtkvijavfcadkon.jpeg" alt=
+=3D"Matthew Baker" style=3D"outline:0;text-decoration:none;-ms-interpolatio=
+n-mode:bicubic;border:0;display:block;height:40px;width:40px;border-radius:=
+100px;border-style:none" height=3D"40" width=3D"40" /></span></div></a></td=
+><td class=3D"content_header_text" style=3D"border-collapse:collapse;paddin=
+g-left:8px;color:#333"><table cellpadding=3D"0" cellspacing=3D"0" border=3D=
+"0" style=3D"border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0=
+"><tbody><tr><td style=3D"border-collapse:collapse"><a class=3D"user_link" =
+href=3D"https://www.quora.com/qemail/track_click?aoid=3DXo0kv2mcLcY&amp;aot=
+y=3D3&amp;aty=3D4&amp;cp=3D7&amp;ct=3D1626745302122057&amp;et=3D130&amp;id=
+=3D25d7907cb43e42c393047c8967058472&amp;source=3D7&amp;src=3D1&amp;st=3D162=
+6745302132604&amp;stories=3D1_M5LlzbRSwz7%7C1_9jf3dfYnKxa%7C1_VZwqqldMMnQ%7=
+C1_9W1VOIeVTj1%7C1_Y6psy9LOAJ7%7C1_bjtvfDfgJn6%7C1_aEAhfrpJe6B%7C1_F6mVEK3b=
+IDH%7C1_LMnhQGevxAS%7C1_LDLlIRHSIGK&amp;ty=3D1&amp;ty_data=3DaEAhfrpJe6B&am=
+p;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"text-decoration:none;color:#333;fon=
+t-weight:bold;font-size:15px;line-height:1.4">Matthew Baker</a><span style=
+=3D"font-size:15px;line-height:1.4">, BSc Chemistry &amp; Master of Busines=
+s Administration Degrees</span></td></tr><tr><td class=3D"answer_details" s=
+tyle=3D"border-collapse:collapse;color:#999;font-size:13px"><a href=3D"http=
+s://www.quora.com/qemail/track_click?aoid=3DaEAhfrpJe6B&amp;aoty=3D1&amp;at=
+y=3D4&amp;cp=3D7&amp;ct=3D1626745302122057&amp;et=3D130&amp;id=3D25d7907cb4=
+3e42c393047c8967058472&amp;source=3D7&amp;src=3D1&amp;st=3D1626745302132604=
+&amp;stories=3D1_M5LlzbRSwz7%7C1_9jf3dfYnKxa%7C1_VZwqqldMMnQ%7C1_9W1VOIeVTj=
+1%7C1_Y6psy9LOAJ7%7C1_bjtvfDfgJn6%7C1_aEAhfrpJe6B%7C1_F6mVEK3bIDH%7C1_LMnhQ=
+GevxAS%7C1_LDLlIRHSIGK&amp;ty=3D1&amp;ty_data=3DaEAhfrpJe6B&amp;uid=3Dm36BZ=
+4XFnST&amp;v=3D0" style=3D"text-decoration:none;color:#999">Written Jan 26,=
+ 2018</a></td></tr></tbody></table></td></tr></tbody></table></td></tr><tr>=
+<td class=3D"item_content" style=3D"border-collapse:collapse;display:block;=
+font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen-Sans,=
+Ubuntu,Cantarell,'Helvetica Neue',sans-serif;color:#333;font-size:15px;line=
+-height:1.4"><a href=3D"https://www.quora.com/qemail/track_click?al_imp=3De=
+yJ0eXBlIjogMzMsICJoYXNoIjogIjB8N3wxfDcxMDgyODUzIn0%3D&amp;al_pri=3D0&amp;ao=
+id=3DaEAhfrpJe6B&amp;aoty=3D1&amp;aty=3D4&amp;cp=3D7&amp;ct=3D1626745302122=
+057&amp;et=3D130&amp;id=3D25d7907cb43e42c393047c8967058472&amp;source=3D7&a=
+mp;src=3D1&amp;st=3D1626745302132604&amp;stories=3D1_M5LlzbRSwz7%7C1_9jf3df=
+YnKxa%7C1_VZwqqldMMnQ%7C1_9W1VOIeVTj1%7C1_Y6psy9LOAJ7%7C1_bjtvfDfgJn6%7C1_a=
+EAhfrpJe6B%7C1_F6mVEK3bIDH%7C1_LMnhQGevxAS%7C1_LDLlIRHSIGK&amp;ty=3D1&amp;t=
+y_data=3DaEAhfrpJe6B&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"text-decorat=
+ion:none;color:#333333"><div><div class=3D"truncated_q_text truncated_para_=
+breaks TruncatedAnswerForEmail TruncatedAnswer TruncatedAnswerForDigestEmai=
+l TruncatedQText" style=3D"line-height:1.6"><span class=3D"rendered_qtext" =
+style=3D"word-break:break-word"><p class=3D"qtext_para u-ltr u-text-align--=
+start" style=3D"margin:1em 0;line-height:1.6">Simply because it is NOT a co=
+mpound.</p><p class=3D"qtext_para u-ltr u-text-align--start" style=3D"margi=
+n:1em 0;line-height:1.6">It is an allotrope of carbon, just like diamond, b=
+uckminsterfullerene and graphene. Allotropes are different physical structu=
+res of an element.</p><p class=3D"qtext_para u-ltr u-text-align--start" sty=
+le=3D"margin:1em 0;line-height:1.6">...</p></span> <a class=3D"read_more_bl=
+ue" href=3D"https://www.quora.com/qemail/track_click?al_imp=3DeyJ0eXBlIjogM=
+zMsICJoYXNoIjogIjB8N3wxfDcxMDgyODUzIn0%3D&amp;al_pri=3D8&amp;aoid=3DaEAhfrp=
+Je6B&amp;aoty=3D1&amp;aty=3D4&amp;cp=3D7&amp;ct=3D1626745302122057&amp;et=
+=3D130&amp;id=3D25d7907cb43e42c393047c8967058472&amp;source=3D7&amp;src=3D1=
+&amp;st=3D1626745302132604&amp;stories=3D1_M5LlzbRSwz7%7C1_9jf3dfYnKxa%7C1_=
+VZwqqldMMnQ%7C1_9W1VOIeVTj1%7C1_Y6psy9LOAJ7%7C1_bjtvfDfgJn6%7C1_aEAhfrpJe6B=
+%7C1_F6mVEK3bIDH%7C1_LMnhQGevxAS%7C1_LDLlIRHSIGK&amp;ty=3D1&amp;ty_data=3Da=
+EAhfrpJe6B&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"text-decoration:none;c=
+olor:#168de9">Read More =C2=BB</a></div></div><div class=3D"non_quora_share=
+_embed_wrapper"><div class=3D"item_metadata"><a href=3D"https://www.quora.c=
+om/qemail/track_click?al_imp=3DeyJ0eXBlIjogMzMsICJoYXNoIjogIjB8N3wxfDcxMDgy=
+ODUzIn0%3D&amp;al_pri=3D0&amp;aoid=3DaEAhfrpJe6B&amp;aoty=3D1&amp;aty=3D4&a=
+mp;cp=3D7&amp;ct=3D1626745302122057&amp;et=3D130&amp;id=3D25d7907cb43e42c39=
+3047c8967058472&amp;source=3D7&amp;src=3D1&amp;st=3D1626745302132604&amp;st=
+ories=3D1_M5LlzbRSwz7%7C1_9jf3dfYnKxa%7C1_VZwqqldMMnQ%7C1_9W1VOIeVTj1%7C1_Y=
+6psy9LOAJ7%7C1_bjtvfDfgJn6%7C1_aEAhfrpJe6B%7C1_F6mVEK3bIDH%7C1_LMnhQGevxAS%=
+7C1_LDLlIRHSIGK&amp;ty=3D1&amp;ty_data=3DaEAhfrpJe6B&amp;uid=3Dm36BZ4XFnST&=
+amp;v=3D0" style=3D"text-decoration:none;color:#2b6dad"></a></div></div></a=
+></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></ta=
+ble></div></div><div class=3D"no_para_breaks"><div><table class=3D"polish_s=
+eparator_wrapper" style=3D"border-collapse:collapse;mso-table-lspace:0;mso-=
+table-rspace:0;cellpadding:0;border:0;width:100%" width=3D"100%"><tbody><tr=
+><td style=3D"border-collapse:collapse"></td><td class=3D"polish_separator"=
+ style=3D"border-collapse:collapse;border-bottom:1px solid #eee;height:1px;=
+width:140px" width=3D"140" height=3D"1"></td><td style=3D"border-collapse:c=
+ollapse"></td></tr></tbody></table><table class=3D"story_wrapper" cellspaci=
+ng=3D"0" border=3D"0" style=3D"border-collapse:collapse;mso-table-lspace:0;=
+mso-table-rspace:0;width:100%" width=3D"100%"><tbody><tr><td class=3D"story=
+ " style=3D"border-collapse:collapse;padding:20px 0;border-bottom:0"><table=
+ class=3D"digest_story_wrapper" cellpadding=3D"0" cellspacing=3D"0" border=
+=3D"0" style=3D"border-collapse:collapse;mso-table-lspace:0;mso-table-rspac=
+e:0;width:100%" width=3D"100%"><tbody><tr><td class=3D"reason" style=3D"bor=
+der-collapse:collapse;padding-bottom:4px"><table class=3D"digest_reason" ce=
+llpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"border-collapse:col=
+lapse;mso-table-lspace:0;mso-table-rspace:0"><tbody><tr><td valign=3D"top" =
+style=3D"border-collapse:collapse"></td></tr></tbody></table></td></tr><tr>=
+<td style=3D"border-collapse:collapse"><a class=3D"question_text" href=3D"h=
+ttps://www.quora.com/qemail/track_click?al_imp=3DeyJ0eXBlIjogMzMsICJoYXNoIj=
+ogIjB8OHwxfDc1NDgzNzAxIn0%3D&amp;al_pri=3D1&amp;aoid=3D3IzbgfJZbyD&amp;aoty=
+=3D2&amp;aty=3D4&amp;cp=3D8&amp;ct=3D1626745302122057&amp;et=3D130&amp;id=
+=3D25d7907cb43e42c393047c8967058472&amp;source=3D7&amp;src=3D1&amp;st=3D162=
+6745302132604&amp;stories=3D1_M5LlzbRSwz7%7C1_9jf3dfYnKxa%7C1_VZwqqldMMnQ%7=
+C1_9W1VOIeVTj1%7C1_Y6psy9LOAJ7%7C1_bjtvfDfgJn6%7C1_aEAhfrpJe6B%7C1_F6mVEK3b=
+IDH%7C1_LMnhQGevxAS%7C1_LDLlIRHSIGK&amp;ty=3D1&amp;ty_data=3DF6mVEK3bIDH&am=
+p;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"text-decoration:none;display:block;=
+font-size:19px;letter-spacing:-0.5px;font-weight:bold;color:#333;line-heigh=
+t:1.4"><span class=3D"rendered_qtext" style=3D"word-break:break-word">300 c=
+m=C2=B3 of water is added to a solution of 200 cm=C2=B3 of 0.5 mol dm=E2=80=
+=933 sodium chloride. What is the concentration of sodium chloride in the n=
+ew solution?</span></a></td></tr><tr><td style=3D"border-collapse:collapse"=
+><table class=3D"item_content_wrapper" cellpadding=3D"0" cellspacing=3D"0" =
+border=3D"0" style=3D"border-collapse:collapse;mso-table-lspace:0;mso-table=
+-rspace:0;width:100%" width=3D"100%"><tbody><tr><td class=3D"content_header=
+ metadata" style=3D"border-collapse:collapse;padding:8px 0"><table cellpadd=
+ing=3D"0" cellspacing=3D"0" border=3D"0" style=3D"border-collapse:collapse;=
+mso-table-lspace:0;mso-table-rspace:0"><tbody><tr><td class=3D"content_head=
+er_photo" style=3D"border-collapse:collapse;vertical-align:top" valign=3D"t=
+op"><a href=3D"https://www.quora.com/qemail/track_click?aoid=3DdGeiuqOf8kd&=
+amp;aoty=3D3&amp;aty=3D4&amp;cp=3D8&amp;ct=3D1626745302122057&amp;et=3D130&=
+amp;id=3D25d7907cb43e42c393047c8967058472&amp;source=3D7&amp;src=3D1&amp;st=
+=3D1626745302132604&amp;stories=3D1_M5LlzbRSwz7%7C1_9jf3dfYnKxa%7C1_VZwqqld=
+MMnQ%7C1_9W1VOIeVTj1%7C1_Y6psy9LOAJ7%7C1_bjtvfDfgJn6%7C1_aEAhfrpJe6B%7C1_F6=
+mVEK3bIDH%7C1_LMnhQGevxAS%7C1_LDLlIRHSIGK&amp;ty=3D1&amp;ty_data=3DF6mVEK3b=
+IDH&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"text-decoration:none;color:#2=
+b6dad"><div><div class=3D"hover_menu hidden white_bg show_nub"><div class=
+=3D"hover_menu_contents"> </div></div><span class=3D"photo_tooltip Identity=
+Photo Photo HoverMenu"><img class=3D"profile_photo_img" src=3D"https://qph.=
+fs.quoracdn.net/main-thumb-166692222-50-ygvrcxtpmoduledgnsehmnuowmteytfg.jp=
+eg" alt=3D"Devender Singh" style=3D"outline:0;text-decoration:none;-ms-inte=
+rpolation-mode:bicubic;border:0;display:block;height:40px;width:40px;border=
+-radius:100px;border-style:none" height=3D"40" width=3D"40" /></span></div>=
+</a></td><td class=3D"content_header_text" style=3D"border-collapse:collaps=
+e;padding-left:8px;color:#333"><table cellpadding=3D"0" cellspacing=3D"0" b=
+order=3D"0" style=3D"border-collapse:collapse;mso-table-lspace:0;mso-table-=
+rspace:0"><tbody><tr><td style=3D"border-collapse:collapse"><a class=3D"use=
+r_link" href=3D"https://www.quora.com/qemail/track_click?aoid=3DdGeiuqOf8kd=
+&amp;aoty=3D3&amp;aty=3D4&amp;cp=3D8&amp;ct=3D1626745302122057&amp;et=3D130=
+&amp;id=3D25d7907cb43e42c393047c8967058472&amp;source=3D7&amp;src=3D1&amp;s=
+t=3D1626745302132604&amp;stories=3D1_M5LlzbRSwz7%7C1_9jf3dfYnKxa%7C1_VZwqql=
+dMMnQ%7C1_9W1VOIeVTj1%7C1_Y6psy9LOAJ7%7C1_bjtvfDfgJn6%7C1_aEAhfrpJe6B%7C1_F=
+6mVEK3bIDH%7C1_LMnhQGevxAS%7C1_LDLlIRHSIGK&amp;ty=3D1&amp;ty_data=3DF6mVEK3=
+bIDH&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"text-decoration:none;color:#=
+333;font-weight:bold;font-size:15px;line-height:1.4">Devender Singh</a><spa=
+n style=3D"font-size:15px;line-height:1.4">, MSc Chemistry &amp; Board of H=
+igh School and Intermediate Education, Uttar Pradesh, ...</span></td></tr><=
+tr><td class=3D"answer_details" style=3D"border-collapse:collapse;color:#99=
+9;font-size:13px"><a href=3D"https://www.quora.com/qemail/track_click?aoid=
+=3DF6mVEK3bIDH&amp;aoty=3D1&amp;aty=3D4&amp;cp=3D8&amp;ct=3D162674530212205=
+7&amp;et=3D130&amp;id=3D25d7907cb43e42c393047c8967058472&amp;source=3D7&amp=
+;src=3D1&amp;st=3D1626745302132604&amp;stories=3D1_M5LlzbRSwz7%7C1_9jf3dfYn=
+Kxa%7C1_VZwqqldMMnQ%7C1_9W1VOIeVTj1%7C1_Y6psy9LOAJ7%7C1_bjtvfDfgJn6%7C1_aEA=
+hfrpJe6B%7C1_F6mVEK3bIDH%7C1_LMnhQGevxAS%7C1_LDLlIRHSIGK&amp;ty=3D1&amp;ty_=
+data=3DF6mVEK3bIDH&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"text-decoratio=
+n:none;color:#999">Written Mar 8, 2018</a></td></tr></tbody></table></td></=
+tr></tbody></table></td></tr><tr><td class=3D"item_content" style=3D"border=
+-collapse:collapse;display:block;font-family:-apple-system,BlinkMacSystemFo=
+nt,'Segoe UI',Roboto,Oxygen-Sans,Ubuntu,Cantarell,'Helvetica Neue',sans-ser=
+if;color:#333;font-size:15px;line-height:1.4"><a href=3D"https://www.quora.=
+com/qemail/track_click?al_imp=3DeyJ0eXBlIjogMzMsICJoYXNoIjogIjB8OHwxfDc1NDg=
+zNzAxIn0%3D&amp;al_pri=3D0&amp;aoid=3DF6mVEK3bIDH&amp;aoty=3D1&amp;aty=3D4&=
+amp;cp=3D8&amp;ct=3D1626745302122057&amp;et=3D130&amp;id=3D25d7907cb43e42c3=
+93047c8967058472&amp;source=3D7&amp;src=3D1&amp;st=3D1626745302132604&amp;s=
+tories=3D1_M5LlzbRSwz7%7C1_9jf3dfYnKxa%7C1_VZwqqldMMnQ%7C1_9W1VOIeVTj1%7C1_=
+Y6psy9LOAJ7%7C1_bjtvfDfgJn6%7C1_aEAhfrpJe6B%7C1_F6mVEK3bIDH%7C1_LMnhQGevxAS=
+%7C1_LDLlIRHSIGK&amp;ty=3D1&amp;ty_data=3DF6mVEK3bIDH&amp;uid=3Dm36BZ4XFnST=
+&amp;v=3D0" style=3D"text-decoration:none;color:#333333"><div><div class=3D=
+"truncated_q_text truncated_para_breaks TruncatedAnswerForEmail TruncatedAn=
+swer TruncatedAnswerForDigestEmail TruncatedQText" style=3D"line-height:1.6=
+"><span class=3D"rendered_qtext" style=3D"word-break:break-word"><p class=
+=3D"qtext_para u-ltr u-text-align--start" style=3D"margin:1em 0;line-height=
+:1.6">When water is added to the solution concentration decrease but number=
+ of mole of solute remain same .</p><p class=3D"qtext_para u-ltr u-text-ali=
+gn--start" style=3D"margin:1em 0;line-height:1.6">Number of mole solute bef=
+ore dilution=3DM1V1</p><p class=3D"qtext_para u-ltr u-text-align--start" st=
+yle=3D"margin:1em 0;line-height:1.6">M1=3D.5 mol/dm3</p><p class=3D"qtext_p=
+ara u-ltr u-text-align--start" style=3D"margin:1em 0;line-height:1.6">V1=3D=
+300cc</p>...</span> <a class=3D"read_more_blue" href=3D"https://www.quora.c=
+om/qemail/track_click?al_imp=3DeyJ0eXBlIjogMzMsICJoYXNoIjogIjB8OHwxfDc1NDgz=
+NzAxIn0%3D&amp;al_pri=3D8&amp;aoid=3DF6mVEK3bIDH&amp;aoty=3D1&amp;aty=3D4&a=
+mp;cp=3D8&amp;ct=3D1626745302122057&amp;et=3D130&amp;id=3D25d7907cb43e42c39=
+3047c8967058472&amp;source=3D7&amp;src=3D1&amp;st=3D1626745302132604&amp;st=
+ories=3D1_M5LlzbRSwz7%7C1_9jf3dfYnKxa%7C1_VZwqqldMMnQ%7C1_9W1VOIeVTj1%7C1_Y=
+6psy9LOAJ7%7C1_bjtvfDfgJn6%7C1_aEAhfrpJe6B%7C1_F6mVEK3bIDH%7C1_LMnhQGevxAS%=
+7C1_LDLlIRHSIGK&amp;ty=3D1&amp;ty_data=3DF6mVEK3bIDH&amp;uid=3Dm36BZ4XFnST&=
+amp;v=3D0" style=3D"text-decoration:none;color:#168de9">Read More =C2=BB</a=
+></div></div><div class=3D"non_quora_share_embed_wrapper"><div class=3D"ite=
+m_metadata"><a href=3D"https://www.quora.com/qemail/track_click?al_imp=3Dey=
+J0eXBlIjogMzMsICJoYXNoIjogIjB8OHwxfDc1NDgzNzAxIn0%3D&amp;al_pri=3D0&amp;aoi=
+d=3DF6mVEK3bIDH&amp;aoty=3D1&amp;aty=3D4&amp;cp=3D8&amp;ct=3D16267453021220=
+57&amp;et=3D130&amp;id=3D25d7907cb43e42c393047c8967058472&amp;source=3D7&am=
+p;src=3D1&amp;st=3D1626745302132604&amp;stories=3D1_M5LlzbRSwz7%7C1_9jf3dfY=
+nKxa%7C1_VZwqqldMMnQ%7C1_9W1VOIeVTj1%7C1_Y6psy9LOAJ7%7C1_bjtvfDfgJn6%7C1_aE=
+AhfrpJe6B%7C1_F6mVEK3bIDH%7C1_LMnhQGevxAS%7C1_LDLlIRHSIGK&amp;ty=3D1&amp;ty=
+_data=3DF6mVEK3bIDH&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"text-decorati=
+on:none;color:#2b6dad"></a></div></div></a></td></tr></tbody></table></td><=
+/tr></tbody></table></td></tr></tbody></table></div></div><div class=3D"no_=
+para_breaks"><div><table class=3D"polish_separator_wrapper" style=3D"border=
+-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;cellpadding:0;bord=
+er:0;width:100%" width=3D"100%"><tbody><tr><td style=3D"border-collapse:col=
+lapse"></td><td class=3D"polish_separator" style=3D"border-collapse:collaps=
+e;border-bottom:1px solid #eee;height:1px;width:140px" width=3D"140" height=
+=3D"1"></td><td style=3D"border-collapse:collapse"></td></tr></tbody></tabl=
+e><table class=3D"story_wrapper" cellspacing=3D"0" border=3D"0" style=3D"bo=
+rder-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;width:100%" wi=
+dth=3D"100%"><tbody><tr><td class=3D"story " style=3D"border-collapse:colla=
+pse;padding:20px 0;border-bottom:0"><table class=3D"digest_story_wrapper" c=
+ellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"border-collapse:co=
+llapse;mso-table-lspace:0;mso-table-rspace:0;width:100%" width=3D"100%"><tb=
+ody><tr><td class=3D"reason" style=3D"border-collapse:collapse;padding-bott=
+om:4px"><table class=3D"digest_reason" cellpadding=3D"0" cellspacing=3D"0" =
+border=3D"0" style=3D"border-collapse:collapse;mso-table-lspace:0;mso-table=
+-rspace:0"><tbody><tr><td valign=3D"top" style=3D"border-collapse:collapse"=
+></td></tr></tbody></table></td></tr><tr><td style=3D"border-collapse:colla=
+pse"><a class=3D"question_text" href=3D"https://www.quora.com/qemail/track_=
+click?al_imp=3DeyJ0eXBlIjogMzMsICJoYXNoIjogIjB8OXwxfDU1NDM2MjMxIn0%3D&amp;a=
+l_pri=3D1&amp;aoid=3D1UXnusyfmRK&amp;aoty=3D2&amp;aty=3D4&amp;cp=3D9&amp;ct=
+=3D1626745302122057&amp;et=3D130&amp;id=3D25d7907cb43e42c393047c8967058472&=
+amp;source=3D7&amp;src=3D1&amp;st=3D1626745302132604&amp;stories=3D1_M5Llzb=
+RSwz7%7C1_9jf3dfYnKxa%7C1_VZwqqldMMnQ%7C1_9W1VOIeVTj1%7C1_Y6psy9LOAJ7%7C1_b=
+jtvfDfgJn6%7C1_aEAhfrpJe6B%7C1_F6mVEK3bIDH%7C1_LMnhQGevxAS%7C1_LDLlIRHSIGK&=
+amp;ty=3D1&amp;ty_data=3DLMnhQGevxAS&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=
+=3D"text-decoration:none;display:block;font-size:19px;letter-spacing:-0.5px=
+;font-weight:bold;color:#333;line-height:1.4"><span class=3D"rendered_qtext=
+" style=3D"word-break:break-word">What happens to pH on dilution?</span></a=
+></td></tr><tr><td style=3D"border-collapse:collapse"><table class=3D"item_=
+content_wrapper" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"=
+border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;width:100%" =
+width=3D"100%"><tbody><tr><td class=3D"content_header metadata" style=3D"bo=
+rder-collapse:collapse;padding:8px 0"><table cellpadding=3D"0" cellspacing=
+=3D"0" border=3D"0" style=3D"border-collapse:collapse;mso-table-lspace:0;ms=
+o-table-rspace:0"><tbody><tr><td class=3D"content_header_photo" style=3D"bo=
+rder-collapse:collapse;vertical-align:top" valign=3D"top"><a href=3D"https:=
+//www.quora.com/qemail/track_click?aoid=3DzFKMtOmrbL6&amp;aoty=3D3&amp;aty=
+=3D4&amp;cp=3D9&amp;ct=3D1626745302122057&amp;et=3D130&amp;id=3D25d7907cb43=
+e42c393047c8967058472&amp;source=3D7&amp;src=3D1&amp;st=3D1626745302132604&=
+amp;stories=3D1_M5LlzbRSwz7%7C1_9jf3dfYnKxa%7C1_VZwqqldMMnQ%7C1_9W1VOIeVTj1=
+%7C1_Y6psy9LOAJ7%7C1_bjtvfDfgJn6%7C1_aEAhfrpJe6B%7C1_F6mVEK3bIDH%7C1_LMnhQG=
+evxAS%7C1_LDLlIRHSIGK&amp;ty=3D1&amp;ty_data=3DLMnhQGevxAS&amp;uid=3Dm36BZ4=
+XFnST&amp;v=3D0" style=3D"text-decoration:none;color:#2b6dad"><div><div cla=
+ss=3D"hover_menu hidden white_bg show_nub"><div class=3D"hover_menu_content=
+s"> </div></div><span class=3D"photo_tooltip IdentityPhoto Photo HoverMenu"=
+><img class=3D"profile_photo_img" src=3D"https://qph.fs.quoracdn.net/main-t=
+humb-344133179-50-scbdqjfoiuszyaezngfhlvplctkoepzc.jpeg" alt=3D"Ajay Shukla=
+" style=3D"outline:0;text-decoration:none;-ms-interpolation-mode:bicubic;bo=
+rder:0;display:block;height:40px;width:40px;border-radius:100px;border-styl=
+e:none" height=3D"40" width=3D"40" /></span></div></a></td><td class=3D"con=
+tent_header_text" style=3D"border-collapse:collapse;padding-left:8px;color:=
+#333"><table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"bord=
+er-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0"><tbody><tr><td =
+style=3D"border-collapse:collapse"><a class=3D"user_link" href=3D"https://w=
+ww.quora.com/qemail/track_click?aoid=3DzFKMtOmrbL6&amp;aoty=3D3&amp;aty=3D4=
+&amp;cp=3D9&amp;ct=3D1626745302122057&amp;et=3D130&amp;id=3D25d7907cb43e42c=
+393047c8967058472&amp;source=3D7&amp;src=3D1&amp;st=3D1626745302132604&amp;=
+stories=3D1_M5LlzbRSwz7%7C1_9jf3dfYnKxa%7C1_VZwqqldMMnQ%7C1_9W1VOIeVTj1%7C1=
+_Y6psy9LOAJ7%7C1_bjtvfDfgJn6%7C1_aEAhfrpJe6B%7C1_F6mVEK3bIDH%7C1_LMnhQGevxA=
+S%7C1_LDLlIRHSIGK&amp;ty=3D1&amp;ty_data=3DLMnhQGevxAS&amp;uid=3Dm36BZ4XFnS=
+T&amp;v=3D0" style=3D"text-decoration:none;color:#333;font-weight:bold;font=
+-size:15px;line-height:1.4">Ajay Shukla</a><span style=3D"font-size:15px;li=
+ne-height:1.4">, Everything at Self Job (2011-present)</span></td></tr><tr>=
+<td class=3D"answer_details" style=3D"border-collapse:collapse;color:#999;f=
+ont-size:13px"><a href=3D"https://www.quora.com/qemail/track_click?aoid=3DL=
+MnhQGevxAS&amp;aoty=3D1&amp;aty=3D4&amp;cp=3D9&amp;ct=3D1626745302122057&am=
+p;et=3D130&amp;id=3D25d7907cb43e42c393047c8967058472&amp;source=3D7&amp;src=
+=3D1&amp;st=3D1626745302132604&amp;stories=3D1_M5LlzbRSwz7%7C1_9jf3dfYnKxa%=
+7C1_VZwqqldMMnQ%7C1_9W1VOIeVTj1%7C1_Y6psy9LOAJ7%7C1_bjtvfDfgJn6%7C1_aEAhfrp=
+Je6B%7C1_F6mVEK3bIDH%7C1_LMnhQGevxAS%7C1_LDLlIRHSIGK&amp;ty=3D1&amp;ty_data=
+=3DLMnhQGevxAS&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"text-decoration:no=
+ne;color:#999">Written Sep 1, 2017</a></td></tr></tbody></table></td></tr><=
+/tbody></table></td></tr><tr><td class=3D"item_content" style=3D"border-col=
+lapse:collapse;display:block;font-family:-apple-system,BlinkMacSystemFont,'=
+Segoe UI',Roboto,Oxygen-Sans,Ubuntu,Cantarell,'Helvetica Neue',sans-serif;c=
+olor:#333;font-size:15px;line-height:1.4"><a href=3D"https://www.quora.com/=
+qemail/track_click?al_imp=3DeyJ0eXBlIjogMzMsICJoYXNoIjogIjB8OXwxfDU1NDM2MjM=
+xIn0%3D&amp;al_pri=3D0&amp;aoid=3DLMnhQGevxAS&amp;aoty=3D1&amp;aty=3D4&amp;=
+cp=3D9&amp;ct=3D1626745302122057&amp;et=3D130&amp;id=3D25d7907cb43e42c39304=
+7c8967058472&amp;source=3D7&amp;src=3D1&amp;st=3D1626745302132604&amp;stori=
+es=3D1_M5LlzbRSwz7%7C1_9jf3dfYnKxa%7C1_VZwqqldMMnQ%7C1_9W1VOIeVTj1%7C1_Y6ps=
+y9LOAJ7%7C1_bjtvfDfgJn6%7C1_aEAhfrpJe6B%7C1_F6mVEK3bIDH%7C1_LMnhQGevxAS%7C1=
+_LDLlIRHSIGK&amp;ty=3D1&amp;ty_data=3DLMnhQGevxAS&amp;uid=3Dm36BZ4XFnST&amp=
+;v=3D0" style=3D"text-decoration:none;color:#333333"><div><div class=3D"tru=
+ncated_q_text truncated_para_breaks TruncatedAnswerForEmail TruncatedAnswer=
+ TruncatedAnswerForDigestEmail TruncatedQText" style=3D"line-height:1.6"><s=
+pan class=3D"rendered_qtext" style=3D"word-break:break-word"><p class=3D"qt=
+ext_para u-ltr u-text-align--start" style=3D"margin:1em 0;line-height:1.6">=
+When you dilute an acid then it=E2=80=99s pH will increase towards 7 (which=
+ is neutral, like</p><p class=3D"qtext_para u-ltr u-text-align--start" styl=
+e=3D"margin:1em 0;line-height:1.6">water) while when you dilute a base it=
+=E2=80=99s pH will decrease towards 7 again.</p><p class=3D"qtext_para u-lt=
+r u-text-align--start" style=3D"margin:1em 0;line-height:1.6">One thing to =
+b...</p></span> <a class=3D"read_more_blue" href=3D"https://www.quora.com/q=
+email/track_click?al_imp=3DeyJ0eXBlIjogMzMsICJoYXNoIjogIjB8OXwxfDU1NDM2MjMx=
+In0%3D&amp;al_pri=3D8&amp;aoid=3DLMnhQGevxAS&amp;aoty=3D1&amp;aty=3D4&amp;c=
+p=3D9&amp;ct=3D1626745302122057&amp;et=3D130&amp;id=3D25d7907cb43e42c393047=
+c8967058472&amp;source=3D7&amp;src=3D1&amp;st=3D1626745302132604&amp;storie=
+s=3D1_M5LlzbRSwz7%7C1_9jf3dfYnKxa%7C1_VZwqqldMMnQ%7C1_9W1VOIeVTj1%7C1_Y6psy=
+9LOAJ7%7C1_bjtvfDfgJn6%7C1_aEAhfrpJe6B%7C1_F6mVEK3bIDH%7C1_LMnhQGevxAS%7C1_=
+LDLlIRHSIGK&amp;ty=3D1&amp;ty_data=3DLMnhQGevxAS&amp;uid=3Dm36BZ4XFnST&amp;=
+v=3D0" style=3D"text-decoration:none;color:#168de9">Read More =C2=BB</a></d=
+iv></div><div class=3D"non_quora_share_embed_wrapper"><div class=3D"item_me=
+tadata"><a href=3D"https://www.quora.com/qemail/track_click?al_imp=3DeyJ0eX=
+BlIjogMzMsICJoYXNoIjogIjB8OXwxfDU1NDM2MjMxIn0%3D&amp;al_pri=3D0&amp;aoid=3D=
+LMnhQGevxAS&amp;aoty=3D1&amp;aty=3D4&amp;cp=3D9&amp;ct=3D1626745302122057&a=
+mp;et=3D130&amp;id=3D25d7907cb43e42c393047c8967058472&amp;source=3D7&amp;sr=
+c=3D1&amp;st=3D1626745302132604&amp;stories=3D1_M5LlzbRSwz7%7C1_9jf3dfYnKxa=
+%7C1_VZwqqldMMnQ%7C1_9W1VOIeVTj1%7C1_Y6psy9LOAJ7%7C1_bjtvfDfgJn6%7C1_aEAhfr=
+pJe6B%7C1_F6mVEK3bIDH%7C1_LMnhQGevxAS%7C1_LDLlIRHSIGK&amp;ty=3D1&amp;ty_dat=
+a=3DLMnhQGevxAS&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"text-decoration:n=
+one;color:#2b6dad"></a></div></div></a></td></tr></tbody></table></td></tr>=
+</tbody></table></td></tr></tbody></table></div></div><div class=3D"no_para=
+_breaks"><div><table class=3D"polish_separator_wrapper" style=3D"border-col=
+lapse:collapse;mso-table-lspace:0;mso-table-rspace:0;cellpadding:0;border:0=
+;width:100%" width=3D"100%"><tbody><tr><td style=3D"border-collapse:collaps=
+e"></td><td class=3D"polish_separator" style=3D"border-collapse:collapse;bo=
+rder-bottom:1px solid #eee;height:1px;width:140px" width=3D"140" height=3D"=
+1"></td><td style=3D"border-collapse:collapse"></td></tr></tbody></table><t=
+able class=3D"story_wrapper" cellspacing=3D"0" border=3D"0" style=3D"border=
+-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;width:100%" width=
+=3D"100%"><tbody><tr><td class=3D"story " style=3D"border-collapse:collapse=
+;padding:20px 0;border-bottom:0"><table class=3D"digest_story_wrapper" cell=
+padding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"border-collapse:colla=
+pse;mso-table-lspace:0;mso-table-rspace:0;width:100%" width=3D"100%"><tbody=
+><tr><td class=3D"reason" style=3D"border-collapse:collapse;padding-bottom:=
+4px"><table class=3D"digest_reason" cellpadding=3D"0" cellspacing=3D"0" bor=
+der=3D"0" style=3D"border-collapse:collapse;mso-table-lspace:0;mso-table-rs=
+pace:0"><tbody><tr><td valign=3D"top" style=3D"border-collapse:collapse"></=
+td></tr></tbody></table></td></tr><tr><td style=3D"border-collapse:collapse=
+"><a class=3D"question_text" href=3D"https://www.quora.com/qemail/track_cli=
+ck?al_imp=3DeyJ0eXBlIjogMzMsICJoYXNoIjogIjB8MTB8MXwxOTM4OTMwNjYifQ%3D%3D&am=
+p;al_pri=3D1&amp;aoid=3DXHteWUMWzBT&amp;aoty=3D2&amp;aty=3D4&amp;cp=3D10&am=
+p;ct=3D1626745302122057&amp;et=3D130&amp;id=3D25d7907cb43e42c393047c8967058=
+472&amp;source=3D7&amp;src=3D1&amp;st=3D1626745302132604&amp;stories=3D1_M5=
+LlzbRSwz7%7C1_9jf3dfYnKxa%7C1_VZwqqldMMnQ%7C1_9W1VOIeVTj1%7C1_Y6psy9LOAJ7%7=
+C1_bjtvfDfgJn6%7C1_aEAhfrpJe6B%7C1_F6mVEK3bIDH%7C1_LMnhQGevxAS%7C1_LDLlIRHS=
+IGK&amp;ty=3D1&amp;ty_data=3DLDLlIRHSIGK&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" s=
+tyle=3D"text-decoration:none;display:block;font-size:19px;letter-spacing:-0=
+.5px;font-weight:bold;color:#333;line-height:1.4"><span class=3D"rendered_q=
+text" style=3D"word-break:break-word">What is the pH of a solution with an =
+oh of 1.0 x 10-10 m?</span></a></td></tr><tr><td style=3D"border-collapse:c=
+ollapse"><table class=3D"item_content_wrapper" cellpadding=3D"0" cellspacin=
+g=3D"0" border=3D"0" style=3D"border-collapse:collapse;mso-table-lspace:0;m=
+so-table-rspace:0;width:100%" width=3D"100%"><tbody><tr><td class=3D"conten=
+t_header metadata" style=3D"border-collapse:collapse;padding:8px 0"><table =
+cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"border-collapse:c=
+ollapse;mso-table-lspace:0;mso-table-rspace:0"><tbody><tr><td class=3D"cont=
+ent_header_photo" style=3D"border-collapse:collapse;vertical-align:top" val=
+ign=3D"top"><a href=3D"https://www.quora.com/qemail/track_click?aoid=3Ddmd9=
+cxrDFnd&amp;aoty=3D3&amp;aty=3D4&amp;cp=3D10&amp;ct=3D1626745302122057&amp;=
+et=3D130&amp;id=3D25d7907cb43e42c393047c8967058472&amp;source=3D7&amp;src=
+=3D1&amp;st=3D1626745302132604&amp;stories=3D1_M5LlzbRSwz7%7C1_9jf3dfYnKxa%=
+7C1_VZwqqldMMnQ%7C1_9W1VOIeVTj1%7C1_Y6psy9LOAJ7%7C1_bjtvfDfgJn6%7C1_aEAhfrp=
+Je6B%7C1_F6mVEK3bIDH%7C1_LMnhQGevxAS%7C1_LDLlIRHSIGK&amp;ty=3D1&amp;ty_data=
+=3DLDLlIRHSIGK&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"text-decoration:no=
+ne;color:#2b6dad"><div><div class=3D"hover_menu hidden white_bg show_nub"><=
+div class=3D"hover_menu_contents"> </div></div><span class=3D"photo_tooltip=
+ IdentityPhoto Photo HoverMenu"><img class=3D"profile_photo_img" src=3D"htt=
+ps://qsf.fs.quoracdn.net/-4-images.new_grid.profile_default.png-26-688c7955=
+6f251aa0.png" alt=3D"Travis Nebeker" style=3D"outline:0;text-decoration:non=
+e;-ms-interpolation-mode:bicubic;border:0;display:block;height:40px;width:4=
+0px;border-radius:100px;border-style:none" height=3D"40" width=3D"40" /></s=
+pan></div></a></td><td class=3D"content_header_text" style=3D"border-collap=
+se:collapse;padding-left:8px;color:#333"><table cellpadding=3D"0" cellspaci=
+ng=3D"0" border=3D"0" style=3D"border-collapse:collapse;mso-table-lspace:0;=
+mso-table-rspace:0"><tbody><tr><td style=3D"border-collapse:collapse"><a cl=
+ass=3D"user_link" href=3D"https://www.quora.com/qemail/track_click?aoid=3Dd=
+md9cxrDFnd&amp;aoty=3D3&amp;aty=3D4&amp;cp=3D10&amp;ct=3D1626745302122057&a=
+mp;et=3D130&amp;id=3D25d7907cb43e42c393047c8967058472&amp;source=3D7&amp;sr=
+c=3D1&amp;st=3D1626745302132604&amp;stories=3D1_M5LlzbRSwz7%7C1_9jf3dfYnKxa=
+%7C1_VZwqqldMMnQ%7C1_9W1VOIeVTj1%7C1_Y6psy9LOAJ7%7C1_bjtvfDfgJn6%7C1_aEAhfr=
+pJe6B%7C1_F6mVEK3bIDH%7C1_LMnhQGevxAS%7C1_LDLlIRHSIGK&amp;ty=3D1&amp;ty_dat=
+a=3DLDLlIRHSIGK&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"text-decoration:n=
+one;color:#333;font-weight:bold;font-size:15px;line-height:1.4">Travis Nebe=
+ker</a><span style=3D"font-size:15px;line-height:1.4">, B.S. Chemical Engin=
+eering, Brigham Young University (2024)</span></td></tr><tr><td class=3D"an=
+swer_details" style=3D"border-collapse:collapse;color:#999;font-size:13px">=
+<a href=3D"https://www.quora.com/qemail/track_click?aoid=3DLDLlIRHSIGK&amp;=
+aoty=3D1&amp;aty=3D4&amp;cp=3D10&amp;ct=3D1626745302122057&amp;et=3D130&amp=
+;id=3D25d7907cb43e42c393047c8967058472&amp;source=3D7&amp;src=3D1&amp;st=3D=
+1626745302132604&amp;stories=3D1_M5LlzbRSwz7%7C1_9jf3dfYnKxa%7C1_VZwqqldMMn=
+Q%7C1_9W1VOIeVTj1%7C1_Y6psy9LOAJ7%7C1_bjtvfDfgJn6%7C1_aEAhfrpJe6B%7C1_F6mVE=
+K3bIDH%7C1_LMnhQGevxAS%7C1_LDLlIRHSIGK&amp;ty=3D1&amp;ty_data=3DLDLlIRHSIGK=
+&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"text-decoration:none;color:#999"=
+>Written Jan 23, 2020</a></td></tr></tbody></table></td></tr></tbody></tabl=
+e></td></tr><tr><td class=3D"item_content" style=3D"border-collapse:collaps=
+e;display:block;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Rob=
+oto,Oxygen-Sans,Ubuntu,Cantarell,'Helvetica Neue',sans-serif;color:#333;fon=
+t-size:15px;line-height:1.4"><a href=3D"https://www.quora.com/qemail/track_=
+click?al_imp=3DeyJ0eXBlIjogMzMsICJoYXNoIjogIjB8MTB8MXwxOTM4OTMwNjYifQ%3D%3D=
+&amp;al_pri=3D0&amp;aoid=3DLDLlIRHSIGK&amp;aoty=3D1&amp;aty=3D4&amp;cp=3D10=
+&amp;ct=3D1626745302122057&amp;et=3D130&amp;id=3D25d7907cb43e42c393047c8967=
+058472&amp;source=3D7&amp;src=3D1&amp;st=3D1626745302132604&amp;stories=3D1=
+_M5LlzbRSwz7%7C1_9jf3dfYnKxa%7C1_VZwqqldMMnQ%7C1_9W1VOIeVTj1%7C1_Y6psy9LOAJ=
+7%7C1_bjtvfDfgJn6%7C1_aEAhfrpJe6B%7C1_F6mVEK3bIDH%7C1_LMnhQGevxAS%7C1_LDLlI=
+RHSIGK&amp;ty=3D1&amp;ty_data=3DLDLlIRHSIGK&amp;uid=3Dm36BZ4XFnST&amp;v=3D0=
+" style=3D"text-decoration:none;color:#333333"><div><div class=3D"truncated=
+_q_text truncated_para_breaks TruncatedAnswerForEmail TruncatedAnswer Trunc=
+atedAnswerForDigestEmail TruncatedQText" style=3D"line-height:1.6"><span cl=
+ass=3D"rendered_qtext" style=3D"word-break:break-word"><p class=3D"qtext_pa=
+ra u-ltr u-text-align--start" style=3D"margin:1em 0;line-height:1.6">Grante=
+d, I haven=E2=80=99t taken fluid mechanics yet, but I=E2=80=99ll take a cra=
+ck at this. So our Ohnesorge number <span class=3D"render_latex">[math]O_h[=
+/math]</span> is 1.0E-10 mete- oh but wait, the Ohneorge number is dimensio=
+nless. Ts...</p></span> <a class=3D"read_more_blue" href=3D"https://www.quo=
+ra.com/qemail/track_click?al_imp=3DeyJ0eXBlIjogMzMsICJoYXNoIjogIjB8MTB8MXwx=
+OTM4OTMwNjYifQ%3D%3D&amp;al_pri=3D8&amp;aoid=3DLDLlIRHSIGK&amp;aoty=3D1&amp=
+;aty=3D4&amp;cp=3D10&amp;ct=3D1626745302122057&amp;et=3D130&amp;id=3D25d790=
+7cb43e42c393047c8967058472&amp;source=3D7&amp;src=3D1&amp;st=3D162674530213=
+2604&amp;stories=3D1_M5LlzbRSwz7%7C1_9jf3dfYnKxa%7C1_VZwqqldMMnQ%7C1_9W1VOI=
+eVTj1%7C1_Y6psy9LOAJ7%7C1_bjtvfDfgJn6%7C1_aEAhfrpJe6B%7C1_F6mVEK3bIDH%7C1_L=
+MnhQGevxAS%7C1_LDLlIRHSIGK&amp;ty=3D1&amp;ty_data=3DLDLlIRHSIGK&amp;uid=3Dm=
+36BZ4XFnST&amp;v=3D0" style=3D"text-decoration:none;color:#168de9">Read Mor=
+e =C2=BB</a></div></div><div class=3D"non_quora_share_embed_wrapper"><div c=
+lass=3D"item_metadata"><a href=3D"https://www.quora.com/qemail/track_click?=
+al_imp=3DeyJ0eXBlIjogMzMsICJoYXNoIjogIjB8MTB8MXwxOTM4OTMwNjYifQ%3D%3D&amp;a=
+l_pri=3D0&amp;aoid=3DLDLlIRHSIGK&amp;aoty=3D1&amp;aty=3D4&amp;cp=3D10&amp;c=
+t=3D1626745302122057&amp;et=3D130&amp;id=3D25d7907cb43e42c393047c8967058472=
+&amp;source=3D7&amp;src=3D1&amp;st=3D1626745302132604&amp;stories=3D1_M5Llz=
+bRSwz7%7C1_9jf3dfYnKxa%7C1_VZwqqldMMnQ%7C1_9W1VOIeVTj1%7C1_Y6psy9LOAJ7%7C1_=
+bjtvfDfgJn6%7C1_aEAhfrpJe6B%7C1_F6mVEK3bIDH%7C1_LMnhQGevxAS%7C1_LDLlIRHSIGK=
+&amp;ty=3D1&amp;ty_data=3DLDLlIRHSIGK&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" styl=
+e=3D"text-decoration:none;color:#2b6dad"></a></div></div></a></td></tr></tb=
+ody></table></td></tr></tbody></table></td></tr></tbody></table></div></div=
+></td></tr></tbody></table></td><td class=3D"w30" style=3D"border-collapse:=
+collapse"> </td></tr></tbody></table></td></tr><tr><td style=3D"border-coll=
+apse:collapse"><div class=3D"polish_button_wrapper" style=3D"text-align:cen=
+ter;margin-bottom:25px"><a class=3D"polish_action_button" href=3D"https://w=
+ww.quora.com/qemail/track_click?aoid&amp;aoty=3D7&amp;aty=3D4&amp;cp=3D0&am=
+p;ct=3D1626745302122057&amp;et=3D130&amp;id=3D25d7907cb43e42c393047c8967058=
+472&amp;source&amp;src=3D1&amp;st=3D1626745302132604&amp;stories=3D1_M5Llzb=
+RSwz7%7C1_9jf3dfYnKxa%7C1_VZwqqldMMnQ%7C1_9W1VOIeVTj1%7C1_Y6psy9LOAJ7%7C1_b=
+jtvfDfgJn6%7C1_aEAhfrpJe6B%7C1_F6mVEK3bIDH%7C1_LMnhQGevxAS%7C1_LDLlIRHSIGK&=
+amp;ty&amp;ty_data&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"font-size:15px=
+;line-height:1.4;border-radius:3px;box-shadow:0 1px 1px 0 rgba(200,200,200,=
+0.2);display:inline-block;outline:0;padding:15px 20px;text-align:center;tex=
+t-decoration:none;cursor:pointer;background-color:#168de9;color:#fff;paddin=
+g:15px 25px">Search More on Quora</a></div></td></tr><tr><td style=3D"borde=
+r-collapse:collapse"></td></tr></tbody></table></td></tr><tr><td class=3D"p=
+olish_footer_section footer_container_wrapper" align=3D"center" style=3D"bo=
+rder-collapse:collapse;max-width:525px;margin-top:16px"><table class=3D"foo=
+ter_container" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"bo=
+rder-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;font-size:11px=
+;color:#999;padding-top:16px;width:100%;text-align:center" width=3D"100%" a=
+lign=3D"center"><tr><td style=3D"border-collapse:collapse"><div class=3D"fo=
+oter_text_wrapper" style=3D"padding:25px 20px"><div><span style=3D"display:=
+block;padding-bottom:8px;color:#999">This email was sent by Quora (605 Cast=
+ro Street, Mountain View, CA 94041). </span><span style=3D"display:block;pa=
+dding-bottom:8px;color:#999">If you don't want to receive this type of emai=
+l in the future, please <a class=3D"unsubscribe_link" href=3D"https://www.q=
+uora.com/email_optout/qemail_unsubscribe?email_track_id=3D25d7907cb43e42c39=
+3047c8967058472&amp;t=3D1626745302300207&amp;token=3D24feedf44dbffd85f95c9f=
+51cd02222b6a3d925f26599db0c9a40be00aab7670f9b72a9c4e0da5004ef0b5440b793d560=
+d7e9b8a77caa72e776ad16881f82351&amp;type=3D130&amp;uid=3D905486825" style=
+=3D"color:#999;text-decoration:underline">unsubscribe</a>.</span><span styl=
+e=3D"display:block;padding-bottom:8px;color:#999"><a href=3D"https://www.qu=
+ora.com/" style=3D"color:#999;text-decoration:underline">https://www.quora.=
+com/</a></span></div></div></td></tr></table></td></tr></tbody></table></td=
+></tr></tbody></table></div></body></html>
+--===============1275811600554156926==--

@@ -1,0 +1,877 @@
+X-GM-THRID: 1704018646031338722
+X-Gmail-Labels: Inbox,Category Updates,Unread
+Delivered-To: azfarali007.aa@gmail.com
+Received: by 2002:a05:6a10:9849:0:0:0:0 with SMTP id x9csp587137pxf;
+        Wed, 30 Jun 2021 11:46:57 -0700 (PDT)
+X-Google-Smtp-Source: ABdhPJwINrJ7zwWAepd4j1QG5G+pRLOBkXMaOinBLjWkntEDUeGyo6SIE4T/9I6bYCRZabOfxYTP
+X-Received: by 2002:ab0:25c6:: with SMTP id y6mr36195770uan.62.1625078817551;
+        Wed, 30 Jun 2021 11:46:57 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1625078817; cv=none;
+        d=google.com; s=arc-20160816;
+        b=sYf7I/ykMNP9vZyfSNbF7F/uRLVu4aBL0X/3SNU0yhtjPowFIBIIzyrB4EwWHRIWed
+         P5bus34XtJlu2CV2MCZC1PTIcci01KB2XqkIJVwgoMLZXcVYa6GMBBOB7XVIXWnG5q3a
+         BfrMXa+udGeK+/osiSU96r9VeQHijMMjT8NeD2TK1idzeN2lYZA3pssoh3EEHof6w9af
+         KPyBN1TDQ3Kp6hzH2sbRp/PhDFMs1bzfN3gIu/H4xR6pbVhw0HFrKnLfZS9HAmPiUgH2
+         Wv3vKSaw+0SY2znpfZhOG5UrR8vVEOiK+btDl9Yz1frYAiH/uetdWgZSLLYaSNsIIxBt
+         xlSg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=list-unsubscribe:message-id:to:subject:reply-to:mime-version:from
+         :date:dkim-signature:dkim-signature;
+        bh=fW8HMr18QpARANux+4wOHKGHrLu4t5ng8ykg7yIZlqE=;
+        b=nMSXpbxDpB1ZtkYecKNPA73WRDJMhsKQh+Jbo1HYJZ3HSUvVzRFYwfc47AkIy9kNDk
+         eG7UA92dJIKqIpchZiMYXQfw/pT/FSr/b1P5MIQvAfCoyNdfZdVV576BLz8wYDYLgf+0
+         TPchvruuvKm1jqmvc4CkD69kX5h970wV6XObUFbCJsJOwi/x6dfAw/Wnz2XUEDk8kUBi
+         tVyX4OKzcW3/L81M5zXu4wKMHQNRoq0d4yw135wvcGZ4nn/ufttY1bNtRoaWkQXOOon4
+         Gcvm3T+AAz7lcpr4bykrSej/EALUUt9MrFa/aeEstrw/Dr2Hb0xuHzSmepHM7za0xsA8
+         jh3A==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@discord.com header.s=s1 header.b=c4ElBOYJ;
+       dkim=pass header.i=@sendgrid.info header.s=smtpapi header.b=fjMwoSD3;
+       spf=pass (google.com: domain of bounces+16027542-a532-azfarali007.aa=gmail.com@mail.discord.com designates 149.72.150.171 as permitted sender) smtp.mailfrom="bounces+16027542-a532-azfarali007.aa=gmail.com@mail.discord.com";
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=discord.com
+Return-Path: <bounces+16027542-a532-azfarali007.aa=gmail.com@mail.discord.com>
+Received: from o13.ptr7216.discord.com (o13.ptr7216.discord.com. [149.72.150.171])
+        by mx.google.com with ESMTPS id g14si13583272vss.320.2021.06.30.11.46.57
+        for <azfarali007.aa@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Wed, 30 Jun 2021 11:46:57 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bounces+16027542-a532-azfarali007.aa=gmail.com@mail.discord.com designates 149.72.150.171 as permitted sender) client-ip=149.72.150.171;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@discord.com header.s=s1 header.b=c4ElBOYJ;
+       dkim=pass header.i=@sendgrid.info header.s=smtpapi header.b=fjMwoSD3;
+       spf=pass (google.com: domain of bounces+16027542-a532-azfarali007.aa=gmail.com@mail.discord.com designates 149.72.150.171 as permitted sender) smtp.mailfrom="bounces+16027542-a532-azfarali007.aa=gmail.com@mail.discord.com";
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=discord.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=discord.com;
+	h=content-type:from:mime-version:reply-to:subject:to:list-unsubscribe;
+	s=s1; bh=fW8HMr18QpARANux+4wOHKGHrLu4t5ng8ykg7yIZlqE=; b=c4ElBOY
+	JCi+z9ByOg2TL954i1Ae/j4Qq9AP8sdI9lAbHtXJspG3LU7tKWtVpNt+8zx8UPTY
+	Tnqv42Ezn7WLIXrB+IVyJW/TGmi8Nzed6FXtQonGLI5vK4Sd5VQQjYEMWxY25p3W
+	pKsfDNh2w6xtx1tXIeSQsADn1aTjk1RGy/JQ=
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+	d=sendgrid.info;
+	h=content-type:from:mime-version:reply-to:subject:to:list-unsubscribe:x-feedback-id;
+	s=smtpapi; bh=fW8HMr18QpARANux+4wOHKGHrLu4t5ng8ykg7yIZlqE=; b=fj
+	MwoSD3qJSA/WRFBpyPLsBmykcA815jJ+8XJ1axWAR/OLY9CcHQfvRnscxXzcaNjb
+	uTWnS9Btxs8oO5dLt15nSrXoGBoMk/x5hj6mTbbMA7FXYCpC2snFZy/AEb3uuuq/
+	Zqn/WAk/HOGtrxfqDFxVkSzgsPkWPxG/Nrn6N/xEE=
+Content-Type: multipart/alternative; boundary=726e58830254ef34350ce97869b93a4eb4443f1481adfd95707a2a0af35f
+Date: Wed, 30 Jun 2021 18:46:57 +0000 (UTC)
+From: "Discord" <noreply@discord.com>
+Mime-Version: 1.0
+Reply-To: noreply@discord.com
+Subject: Hey HypeSquad! Bring Personality with Stickers in Nitro & Boosting
+To: azfarali007.aa@gmail.com
+Message-ID: <hpXL4_0IRCu4GhGeL6R_jg@geopod-ismtpd-6-2>
+List-Unsubscribe: =?UTF-8?B?PG1haWx0bzp1bnN1YnNjcmliZUBtYWlsLmRpc2NvcmQuY29tP3N1YmplY3Q9?=
+ =?UTF-8?B?aHR0cHM6Ly9jbGljay5kaXNjb3JkLmNvbS9hc20vdW5zdWJzY3JpYmUvKnEq?=
+ =?UTF-8?B?dXNlcl9pZD0xNjAyNzU0MiphKmRhdGE9VmRWTEc0a1JYZ1FhRHhFUkVWbGpm?=
+ =?UTF-8?B?ODdlY1p0NThaS0NVWXpqSkZJZ2d1RHFKVmdydFhPLTcwcjN6OEFSdXQwN2Fj?=
+ =?UTF-8?B?WnByQmxabng2Y016QTNtYnVmUkF6MDdFNzNqaEhWZ1hod2lHYkRtX2JsUDFn?=
+ =?UTF-8?B?V0k1U3RrTUJvdnd6YkM0TE4tZE94RlJzMkRLWG5RcDgyWlR6cHRsa1ZmTkVG?=
+ =?UTF-8?B?ampWUTM4SFFTbXFudHFsaWE4TzVoUDRXM0ZDS0tDdTZieldOU09lN3VHZ3hP?=
+ =?UTF-8?B?OFJNQW5Lc3JxSUUtNnJfdks3NkRqTG5ubTg5Y3ZWWWhyNWpuZTBwVWRMaXoz?=
+ =?UTF-8?B?NFc3LVUxYkI1S0hDY3I1TnUwYzd0Z3FnYUF5VGk4M0JLZUY3MThzSkdZS2tL?=
+ =?UTF-8?B?TFNnelc2eGJYMnBiTXpfVEpDSlhDX2tlN2h0Sm44ZFRtMnk4NW5GazZWY3k3?=
+ =?UTF-8?B?dzltZGtWaTRvTUR2RzVHOVZfazVXNldZdGZyM1lJeFc1Z2M0aFF6S29tV0NZ?=
+ =?UTF-8?B?MU14Vm5aZDBDLW5FeEJKV2RCZkQ2YWlhdDhITmhMTEd5cVBPOFNMOGcycWp5?=
+ =?UTF-8?B?cUFJSTlTMGQxelN0NUp2TW9LQXNFeGp0enlLTHhkTmRiaFFOQWxjTTZpaU9Q?=
+ =?UTF-8?B?MHl1TFRtaGkzUDliOHBTd0dvM2dTcXVrSG8wWjQ1em14WGxfandUZmpYcWdQ?=
+ =?UTF-8?B?UHhhX1ptMTBQdlYtRmE0NWNSQXNkdUR0b0o4LWhUYnJONVdjYW9QamVZemR1?=
+ =?UTF-8?B?eGFNem01MnVlYUR2cXRTbHF0MGIyQUhoQm9SbWFBOEMta2NVdz09Pg==?=
+X-SG-EID: gk7L11b9FMaEZX29Ep5ZBstLXoPcDgeMaH5tuXhd6f9jRsShHCIWFkKnbk97K7s0eN2qlREb31Fs+V
+ YMjpcnoqZa1SvMjY1Azwa/XxGlDdWyOreyjEIRdjAiVyl45QFS/NoYuRBqyBiU9nmE7ktviiyDnoZp
+ RoWneO2Qv7Oi8zzObHxm/2kTEb+Lqkz7aFp1ztS9KzkceSJbmdOn72BYAqPuli7GGou4JDmuGH0Qje
+ M=
+X-SG-ID: Z2FxZazunBjVeNuNdzHDqrF8mxuCpi0krmont6YQrP01NSfvy8UnypdXjdQ0TipKFdgHcVStc5VEft
+ wm/v+Utuci9a6OFkDxA+0HsB+BuYsBkhiu/F9yd7wGbs/Qs/DmO0PbmBuwQw3DF+DJF8hGxol3CTFZ
+ lw9eKBuYKqUDnqmhH4PHBd+dJpZrxWesdGxkhayL7zGB7mG+zefsqHZ20g==
+X-Entity-ID: eLbusQHBuwqp4yokk70sFw==
+X-Feedback-ID: 16027542:rfIvBK5aqpbrIn4xZ1L6BOn2jFE0Omr/45uXqiTUVDs=:2LwYg5E8Ua1nussjIOxgDw==:SG
+
+--726e58830254ef34350ce97869b93a4eb4443f1481adfd95707a2a0af35f
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset=UTF-8
+Mime-Version: 1.0
+
+Expressing yourself on Discord keeps getting better and better!
+
+What=E2=80=99s up, HypeSquad,=C2=A0
+
+With the first half of 2021 nearly over, we just wanted to say thank you. F=
+rom joining in hundreds of new Stage events to record support for Pride Mon=
+th, we=E2=80=99re so proud of all the Houses of Hype. <3
+
+And today, we=E2=80=99re announcing a much-requested feature coming to Disc=
+ord: Stickers!=C2=A0
+
+Take customizing your experience on Discord to the next level with Stickers=
+: a new way to make our servers even more unique and representative of the =
+community within them.
+
+Once you boost your server to at least Level 1, you=E2=80=99ll be able to u=
+pload homemade stickers and use them anywhere within your server. If you ha=
+ve Discord Nitro, you=E2=80=99ll even be able to use your stickers in other=
+ servers and DMs, just like custom emojis.=C2=A0
+
+But wait, there=E2=80=99s more! To help you get into the groove of using st=
+ickers within your conversations, Nitro subscribers will be able to access =
+300 Discord-crafted stickers they can use in any conversation, anywhere.
+
+Check out our blog post https://blog.discord.com/unleash-your-creativity-wi=
+th-stickers-on-discord-99363194871=C2=A0to learn how you can get started to=
+day.=C2=A0=F0=9F=8E=A8
+
+With over $113,000 raised for GLSEN and support for Stage events from LGBTQ=
+IA+ communities, you=E2=80=99ve blown us away with a tremendous show of sup=
+port and community.=C2=A0
+
+But celebrating who you are doesn=E2=80=99t end on June 30th. Keep an eye o=
+ut on our blog https://blog.discord.com/pride-month-activities-around-disco=
+rd-and-the-world-fc0eed930a in July to hear from Discord=E2=80=99s own Prid=
+e Employee Resource Group on supporting LGBTQIA+ communities all year long.
+
+Didn=E2=80=99t get a pin yet? There=E2=80=99s just over a day left in June,=
+ so head on over to our Tiltify page https://tiltify.com/+discord-x-glsen-2=
+021-pride-celebrations/stronger-together-discord-2021-pride-celebrations/ t=
+o get a last-minute pin or sticker order in!=20
+
+AMAs, talent shows, open mics, jam sessions=E2=80=A6 Stage channels hold mo=
+re than just audio events. They=E2=80=99re another way to connect and disco=
+ver new communities.
+
+These four communities are already planning their next stage events =E2=80=
+=94 find them on Stage Discovery https://support.discord.com/hc/en-us/artic=
+les/1500011599542-Stage-Discovery-FAQ and learn what they=E2=80=99re all ab=
+out!=C2=A0
+
+Flex those brain muscles with a trivia night hosted by Gay Geeks on June 29=
+th
+	Join VTuber girl_dm_ for a story-time event about Japan and learning Japan=
+ese on July 4th
+	Bust out the s=E2=80=99mores with the But Why Tho? A Geek Community crew i=
+n their We Love Horror roundtable on July 8th
+	Bump along with Trap Nation at their festival celebrating the unique and d=
+iverse taste of trap music on July 9th
+
+There=E2=80=99s a Stage for everyone, so don=E2=80=99t be shy =E2=80=94 tun=
+e in and make a new buddy or hop on mic with your own Stage https://discord=
+.com/stages! (If anyone makes a Stage about Shoebills, please let us know.)=
+=20
+
+That=E2=80=99s a wrap for now, HypeSquaders. But stick with us for the late=
+st on new features, events, and chances to hang out together and bring the =
+hype to servers all over Discord!
+
+Stay Hype,
+
+Discord Community Team
+
+Discord
+
+444 De Haro Street, Suite 200, San Francisco, CA 94107=20
+
+Unsubscribe https://click.discord.com/asm/unsubscribe/?user_id=3D16027542&d=
+ata=3DVdVLG4kRXgQaDxEREVljf87ecZt58ZKCUYzjJFIgguDqJVgrtXO-70r3z8ARut07acZpr=
+BlZnx6cMzA3mbufRAz07E73jhHVgXhwiGbDm_blP1gWI5StkMBovwzbC4LN-dOxFRs2DKXnQp82=
+ZTzptlkVfNEFjjVQ38HQSmqntqlia8O5hP4W3FCKKCu6bzWNSOe7uGgxO8RMAnKsrqIE-6r_vK7=
+6DjLnnm89cvVYhr5jne0pUdLiz34W7-U1bB5KHCcr5Nu0c7tgqgaAyTi83BKeF718sJGYKkKLSg=
+zW6xbX2pbMz_TJCJXC_ke7htJn8dTm2y85nFk6Vcy7w9mdkVi4oMDvG5G9V_k5W6WYtfr3YIxW5=
+gc4hQzKomWCY1MxVnZd0C-nExBJWdBfD6aiat8HNhLLGyqPO8SL8g2qjyqAII9S0d1zSt5JvMoK=
+AsExjtzyKLxdNdbhQNAlcM6iiOP0yuLTmhi3P9b8pSwGo3gSqukHo0Z45zmxXl_jwTfjXqgPPxa=
+_Zm10PvV-Fa45cRAsduDtoJ8-hTbrN5WcaoPjeYzduxaMzm52ueaDvqtSlqt0b2AHhBoRmaA8C-=
+kcUw=3D=3D=
+
+--726e58830254ef34350ce97869b93a4eb4443f1481adfd95707a2a0af35f
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset=UTF-8
+Mime-Version: 1.0
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org=
+/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html data-editor-version=3D"2" class=3D"sg-campaigns" xmlns=3D"http://www.=
+w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8=
+" />
+    <meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=
+=3D1, minimum-scale=3D1, maximum-scale=3D1" /><!--[if !mso]><!-->
+    <meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3DEdge" /><!--<![end=
+if]-->
+    <!--[if (gte mso 9)|(IE)]>
+    <xml>
+    <o:OfficeDocumentSettings>
+    <o:AllowPNG/>
+    <o:PixelsPerInch>96</o:PixelsPerInch>
+    </o:OfficeDocumentSettings>
+    </xml>
+    <![endif]-->
+    <!--[if (gte mso 9)|(IE)]>
+    <style type=3D"text/css">
+      body {width: 600px;margin: 0 auto;}
+      table {border-collapse: collapse;}
+      table, td {mso-table-lspace: 0pt;mso-table-rspace: 0pt;}
+      img {-ms-interpolation-mode: bicubic;}
+    </style>
+    <![endif]-->
+
+    <style type=3D"text/css">
+      body, p, div {
+        font-family: arial;
+        font-size: 14px;
+      }
+      body {
+        color: #000000;
+      }
+      body a {
+        color: #1188E6;
+        text-decoration: none;
+      }
+      p { margin: 0; padding: 0; }
+      table.wrapper {
+        width:100% !important;
+        table-layout: fixed;
+        -webkit-font-smoothing: antialiased;
+        -webkit-text-size-adjust: 100%;
+        -moz-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+      }
+      img.max-width {
+        max-width: 100% !important;
+      }
+      .column.of-2 {
+        width: 50%;
+      }
+      .column.of-3 {
+        width: 33.333%;
+      }
+      .column.of-4 {
+        width: 25%;
+      }
+      @media screen and (max-width:480px) {
+        .preheader .rightColumnContent,
+        .footer .rightColumnContent {
+            text-align: left !important;
+        }
+        .preheader .rightColumnContent div,
+        .preheader .rightColumnContent span,
+        .footer .rightColumnContent div,
+        .footer .rightColumnContent span {
+          text-align: left !important;
+        }
+        .preheader .rightColumnContent,
+        .preheader .leftColumnContent {
+          font-size: 80% !important;
+          padding: 5px 0;
+        }
+        table.wrapper-mobile {
+          width: 100% !important;
+          table-layout: fixed;
+        }
+        img.max-width {
+          height: auto !important;
+          max-width: 480px !important;
+        }
+        a.bulletproof-button {
+          display: block !important;
+          width: auto !important;
+          font-size: 80%;
+          padding-left: 0 !important;
+          padding-right: 0 !important;
+        }
+        .columns {
+          width: 100% !important;
+        }
+        .column {
+          display: block !important;
+          width: 100% !important;
+          padding-left: 0 !important;
+          padding-right: 0 !important;
+          margin-left: 0 !important;
+          margin-right: 0 !important;
+        }
+      }
+    </style>
+    <!--user entered Head Start-->
+=20=20=20=20
+     <!--End Head user entered-->
+  </head>
+  <body>
+    <center class=3D"wrapper" data-link-color=3D"#1188E6" data-body-style=
+=3D"font-size: 14px; font-family: arial; color: #000000; background-color: =
+#e6e2e2;">
+      <div class=3D"webkit">
+        <table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"10=
+0%" class=3D"wrapper" bgcolor=3D"#e6e2e2">
+          <tr>
+            <td valign=3D"top" bgcolor=3D"#e6e2e2" width=3D"100%">
+              <table width=3D"100%" role=3D"content-container" class=3D"out=
+er" align=3D"center" cellpadding=3D"0" cellspacing=3D"0" border=3D"0">
+                <tr>
+                  <td width=3D"100%">
+                    <table width=3D"100%" cellpadding=3D"0" cellspacing=3D"=
+0" border=3D"0">
+                      <tr>
+                        <td>
+                          <!--[if mso]>
+                          <center>
+                          <table><tr><td width=3D"600">
+                          <![endif]-->
+                          <table width=3D"100%" cellpadding=3D"0" cellspaci=
+ng=3D"0" border=3D"0" style=3D"width: 100%; max-width:600px;" align=3D"cent=
+er">
+                            <tr>
+                              <td role=3D"modules-container" style=3D"paddi=
+ng: 0px 25px 0px 25px; color: #000000; text-align: left;" bgcolor=3D"#FFFFF=
+F" width=3D"100%" align=3D"left">
+=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=
+=20=20=20=20=20=20=20
+    <table class=3D"module preheader preheader-hide" role=3D"module" data-t=
+ype=3D"preheader" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D=
+"100%"
+           style=3D"display: none !important; mso-hide: all; visibility: hi=
+dden; opacity: 0; color: transparent; height: 0; width: 0;">
+      <tr>
+        <td role=3D"module-content">
+          <p>Expressing yourself on Discord keeps getting better and better=
+!</p>
+        </td>
+      </tr>
+    </table>
+=20=20
+    <table class=3D"wrapper" role=3D"module" data-type=3D"image" border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"table-layout=
+: fixed;">
+      <tr>
+        <td style=3D"font-size:6px;line-height:10px;padding:0px 0px 0px 0px=
+;" valign=3D"top" align=3D"center">
+          <img class=3D"max-width" border=3D"0" style=3D"display:block;colo=
+r:#000000;text-decoration:none;font-family:Helvetica, arial, sans-serif;fon=
+t-size:16px;max-width:100% !important;width:100%;height:auto !important;" w=
+idth=3D"550" src=3D"https://marketing-image-production.s3.amazonaws.com/upl=
+oads/b18825346d59da8139e8199d26ab24c09c1d87b889b73ac9b2d548397eb84c4ef2beee=
+0a8c1e536cf082e89f70225f6fa5de10954f75611c567cf57e7e54c4dd.png" alt=3D"">
+        </td>
+      </tr>
+    </table>
+=20=20
+    <table class=3D"module" role=3D"module" data-type=3D"text" border=3D"0"=
+ cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"table-layout: =
+fixed;">
+      <tr>
+        <td style=3D"padding:18px 0px 18px 0px;line-height:22px;text-align:=
+inherit;"
+            height=3D"100%"
+            valign=3D"top"
+            bgcolor=3D"">
+            <div>
+<div>
+<div>What=E2=80=99s up, HypeSquad,&nbsp;</div>
+
+<div>&nbsp;</div>
+
+<div>With the first half of 2021 nearly over, we just wanted to say thank y=
+ou. From joining in hundreds of new Stage events to record support for Prid=
+e Month, we=E2=80=99re so proud of all the Houses of Hype. &lt;3<br>
+&nbsp;<br>
+And today, we=E2=80=99re announcing a much-requested feature coming to Disc=
+ord: <strong>Stickers</strong>!&nbsp;</div>
+</div>
+</div>
+        </td>
+      </tr>
+    </table>
+=20=20
+    <table class=3D"wrapper" role=3D"module" data-type=3D"image" border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"table-layout=
+: fixed;">
+      <tr>
+        <td style=3D"font-size:6px;line-height:10px;padding:0px 0px 0px 0px=
+;" valign=3D"top" align=3D"center">
+          <img class=3D"max-width" border=3D"0" style=3D"display:block;colo=
+r:#000000;text-decoration:none;font-family:Helvetica, arial, sans-serif;fon=
+t-size:16px;max-width:100% !important;width:100%;height:auto !important;" w=
+idth=3D"550" src=3D"https://marketing-image-production.s3.amazonaws.com/upl=
+oads/42c3d24938ca101392f1ba9e37fdee0393dbe74482fdd49204db25b26f8b0a0cf6bbcc=
+5039f4ecf406c4716b6bc0206f719bb5a97cf8249dc353cd51e7c8e596.png" alt=3D"">
+        </td>
+      </tr>
+    </table>
+=20=20
+    <table class=3D"module" role=3D"module" data-type=3D"text" border=3D"0"=
+ cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"table-layout: =
+fixed;">
+      <tr>
+        <td style=3D"padding:18px 0px 18px 0px;line-height:22px;text-align:=
+inherit;"
+            height=3D"100%"
+            valign=3D"top"
+            bgcolor=3D"">
+            <div>
+<div><span style=3D"font-family:arial,helvetica,sans-serif;">Take customizi=
+ng your experience on Discord to the next level with <strong>Stickers</stro=
+ng>: a new way to make our servers even more unique and representative of t=
+he community within them.</span></div>
+
+<div><br>
+<span style=3D"font-family:arial,helvetica,sans-serif;">Once you boost your=
+ server to at least Level 1, you=E2=80=99ll be able to upload homemade stic=
+kers and use them anywhere within your server. If you have Discord Nitro, y=
+ou=E2=80=99ll even be able to use your stickers in other servers and DMs, j=
+ust like custom emojis.&nbsp;</span></div>
+</div>
+        </td>
+      </tr>
+    </table>
+=20=20
+    <table class=3D"wrapper" role=3D"module" data-type=3D"image" border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"table-layout=
+: fixed;">
+      <tr>
+        <td style=3D"font-size:6px;line-height:10px;padding:0px 0px 0px 0px=
+;" valign=3D"top" align=3D"center">
+          <img class=3D"max-width" border=3D"0" style=3D"display:block;colo=
+r:#000000;text-decoration:none;font-family:Helvetica, arial, sans-serif;fon=
+t-size:16px;max-width:100% !important;width:100%;height:auto !important;" s=
+rc=3D"https://marketing-image-production.s3.amazonaws.com/uploads/151de074c=
+87e74c05b0bb97b88cfc2cc475758a0d509b87852419f18fffe89cd551fddf3f771a6f88c5d=
+d58ea4282efc6fcdb86d8978fa3f3a34c6ed99d8631c.png" alt=3D"" width=3D"550">
+        </td>
+      </tr>
+    </table>
+=20=20
+    <table class=3D"module" role=3D"module" data-type=3D"text" border=3D"0"=
+ cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"table-layout: =
+fixed;">
+      <tr>
+        <td style=3D"padding:18px 0px 18px 0px;line-height:22px;text-align:=
+inherit;"
+            height=3D"100%"
+            valign=3D"top"
+            bgcolor=3D"">
+            <div><span id=3D"docs-internal-guid-668e94cc-7fff-b427-3a06-cd4=
+2a960168d" style=3D"font-weight:normal;"><span style=3D"font-size: 11pt; co=
+lor: rgb(0, 0, 0); background-color: transparent; font-weight: 400; font-st=
+yle: normal; font-variant: normal; white-space: pre-wrap;">But wait, there=
+=E2=80=99s more! To help you get into the groove of using stickers within y=
+our conversations, Nitro subscribers will be able to access 300 Discord-cra=
+fted stickers they can use in any conversation, anywhere.</span></span></di=
+v>
+
+<div>&nbsp;</div>
+
+<div>Check out our <a href=3D"https://click.discord.com/ls/click?upn=3DpcQw=
+pP5nImXcVmlvgZvdjj9xf7X6W-2BkCNz-2F52JclNfruehgFBLLE7KV-2B7pCghiV-2B4XiVSSO=
+bd4yzl1ig0WKS1DFKkCTt2jjQC8x5VIpLZMm-2FXl34r5RJXfV0mpgTvl9-2BEgrb_H65ljNg3f=
+oEJU6dJQZHMcp3Zdimzb4muCFBEwI-2BtxR4akWW0CqADBPTe1eyvWIIDX-2B7EYJNOJgVjIyIT=
+JPUDsdqXFqK7w-2BUcZUjW-2B97G-2BqEt0j7ji-2FNKqHqhNoORCsmyrKgEInTLEX0MoMkPKTt=
+8g198mO-2FOSoSHaSJNWi8AaNkmyvy0EBsxG6DqRh4OTpPopYQenxystJcYFn6FuW5uFgcE72oA=
+DLin67ZQljyNgedBCh-2FOBEFC6LvjyXOxEczgcaoq7WVuWfhmKPR5QMbLcl6C0bi3RTcNOxGfz=
+o5HB9XhYhYRLlWMhsQHvWAdom3jtD04dnKiVY0lt0QL6lyQ4Vp4gYUCDGMARPpNYujq5Zd-2BgR=
+qambWvjHVhj-2FQW140pCvdDgy4Go7cYqOUSaQYMtR7Ak-2FTphWbPb0KaUN-2BoE8FwYA21CpK=
+-2FI5tMGRQruUImFoO0o-2FaQPQdxmMwaXkeA4w-3D-3D">blog post</a>&nbsp;to learn =
+how you can get started today.&nbsp;<span id=3D"docs-internal-guid-4acd2fa2=
+-7fff-f1c8-d452-27415388823d" style=3D"font-weight:normal;"><span style=3D"=
+font-size: 15pt; font-family: Roboto, sans-serif; color: rgb(15, 20, 25); f=
+ont-weight: 400; font-style: normal; font-variant: normal; white-space: pre=
+-wrap;">=F0=9F=8E=A8</span></span></div>
+        </td>
+      </tr>
+    </table>
+=20=20
+    <table class=3D"wrapper" role=3D"module" data-type=3D"image" border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"table-layout=
+: fixed;">
+      <tr>
+        <td style=3D"font-size:6px;line-height:10px;padding:0px 0px 0px 0px=
+;" valign=3D"top" align=3D"center">
+          <img class=3D"max-width" border=3D"0" style=3D"display:block;colo=
+r:#000000;text-decoration:none;font-family:Helvetica, arial, sans-serif;fon=
+t-size:16px;max-width:100% !important;width:100%;height:auto !important;" w=
+idth=3D"550" src=3D"https://marketing-image-production.s3.amazonaws.com/upl=
+oads/4b667cdf8446e38b9854b33f4b70b2ca499d3f9a86b40f4ec893aa53f5a9be8ca74e30=
+51b0e3b62e8c1fe48cfa2cd3d3c045985fdb8493b070abcbf9fc8e3e69.png" alt=3D"">
+        </td>
+      </tr>
+    </table>
+=20=20
+    <table class=3D"wrapper" role=3D"module" data-type=3D"image" border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"table-layout=
+: fixed;">
+      <tr>
+        <td style=3D"font-size:6px;line-height:10px;padding:0px 0px 0px 0px=
+;" valign=3D"top" align=3D"center">
+          <img class=3D"max-width" border=3D"0" style=3D"display:block;colo=
+r:#000000;text-decoration:none;font-family:Helvetica, arial, sans-serif;fon=
+t-size:16px;max-width:100% !important;width:100%;height:auto !important;" s=
+rc=3D"https://marketing-image-production.s3.amazonaws.com/uploads/6f225e4c1=
+d234c4d1054de0cc93ad26aaf346337e1aee287445e3d1081eb1ef9390cbb34a91a03cebbc1=
+da9385c5c4c3d58fcd27a38c4e1deb4a34fbf3645a5d.png" alt=3D"" width=3D"550">
+        </td>
+      </tr>
+    </table>
+=20=20
+    <table class=3D"module" role=3D"module" data-type=3D"text" border=3D"0"=
+ cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"table-layout: =
+fixed;">
+      <tr>
+        <td style=3D"padding:18px 0px 0px 0px;line-height:22px;text-align:i=
+nherit;"
+            height=3D"100%"
+            valign=3D"top"
+            bgcolor=3D"">
+            <p dir=3D"ltr" style=3D"line-height:1.38;margin-top:0pt;margin-=
+bottom:0pt;"><span style=3D"font-family:arial,helvetica,sans-serif;"><span =
+id=3D"docs-internal-guid-7380ac63-7fff-5c21-a1f1-c51c2e6d2a0a" style=3D"fon=
+t-weight:normal;"><span style=3D"font-size: 11pt; color: rgb(0, 0, 0); back=
+ground-color: transparent; font-weight: 400; font-style: normal; font-varia=
+nt: normal; white-space: pre-wrap;">With </span><span style=3D"font-size: 1=
+1pt; color: rgb(0, 0, 0); background-color: transparent; font-weight: 700; =
+font-style: normal; font-variant: normal; white-space: pre-wrap;">over $113=
+,000</span><span style=3D"font-size: 11pt; color: rgb(0, 0, 0); background-=
+color: transparent; font-weight: 400; font-style: normal; font-variant: nor=
+mal; white-space: pre-wrap;"> raised for GLSEN and support for Stage events=
+ from LGBTQIA+ communities, you=E2=80=99ve blown us away with a tremendous =
+show of support and community.&nbsp;</span></span></span></p>
+
+<div>&nbsp;
+<p dir=3D"ltr" style=3D"line-height:1.38;margin-top:0pt;margin-bottom:0pt;"=
+><span style=3D"font-family:arial,helvetica,sans-serif;"><span id=3D"docs-i=
+nternal-guid-7380ac63-7fff-5c21-a1f1-c51c2e6d2a0a" style=3D"font-weight:nor=
+mal;"><span style=3D"font-size: 11pt; color: rgb(0, 0, 0); background-color=
+: transparent; font-weight: 400; font-style: normal; font-variant: normal; =
+white-space: pre-wrap;">But celebrating who you are doesn=E2=80=99t end on =
+June 30th. Keep an eye out on <a href=3D"https://click.discord.com/ls/click=
+?upn=3DpcQwpP5nImXcVmlvgZvdjj9xf7X6W-2BkCNz-2F52JclNfqPtD8zEC9ctek69rM7Oril=
+NI9CpQcPKv-2Bj-2BTmeGqUscjI0uymoPMKkqUZUZppYg3l4EKK3kt5bLXLTJSHZKKzvReHW_H6=
+5ljNg3foEJU6dJQZHMcp3Zdimzb4muCFBEwI-2BtxR4akWW0CqADBPTe1eyvWIIDX-2B7EYJNOJ=
+gVjIyITJPUDsdqXFqK7w-2BUcZUjW-2B97G-2BqEt0j7ji-2FNKqHqhNoORCsmyrKgEInTLEX0M=
+oMkPKTt8g198mO-2FOSoSHaSJNWi8AaNkmyvy0EBsxG6DqRh4OTpPopYQenxystJcYFn6FuW5uF=
+gcE72oADLin67ZQljyNgedBCh-2FOBEFC6LvjyXOxEczgc9i8mO15KM4c5x8H-2B-2B8AkiPfcB=
+NNUyt2zIdpAtKVN9qKJMCVRc4bH6yT7GhGD4K7OOmLoB4KIH-2FaTRPDJiVDN8Dz88nWq5S42Xz=
+5xBZS-2BhO20yjDCZ5z7mwEqS6m6PmBJeyOmwVUe076DZ3QuV1QiVk5iF7Xfn-2B7SJsQ-2Ff-2=
+BR-2BRoQlc16ybNLi9wi23362m-2Fa-2B9GcVme2jJkS0qD-2B503ycA-3D-3D">our blog</a=
+></span><span style=3D"font-size: 11pt; color: rgb(0, 0, 0); background-col=
+or: transparent; font-weight: 400; font-style: normal; font-variant: normal=
+; white-space: pre-wrap;"> in July to hear from Discord=E2=80=99s own Pride=
+ Employee Resource Group on supporting LGBTQIA+ communities all year long.<=
+/span></span></span></p>
+</div>
+
+<p dir=3D"ltr" style=3D"line-height:1.38;margin-top:0pt;margin-bottom:0pt;"=
+><br>
+<span style=3D"font-family:arial,helvetica,sans-serif;"><span id=3D"docs-in=
+ternal-guid-7380ac63-7fff-5c21-a1f1-c51c2e6d2a0a" style=3D"font-weight:norm=
+al;"><span style=3D"font-size: 11pt; color: rgb(0, 0, 0); background-color:=
+ transparent; font-weight: 400; font-style: normal; font-variant: normal; w=
+hite-space: pre-wrap;">Didn=E2=80=99t get a pin yet? There=E2=80=99s just o=
+ver a day left in June, so head on over to our <a href=3D"https://click.dis=
+cord.com/ls/click?upn=3DpcQwpP5nImXcVmlvgZvdjnHcIZZfpqFa7vdTus00-2BXc5oXTDo=
+Ro-2FCBWPyszMYnThZhuTj3hBt7epVv2w3Cc8Fiolx3x68prYjirjC0nUiOcgTmBVTwyionUK0h=
+4AO-2BMPc-2FE6n00BAe5SoU0SfJtFwqvzouszLWDlocKN0i6e-2FJ4-3D9Gqw_H65ljNg3foEJ=
+U6dJQZHMcp3Zdimzb4muCFBEwI-2BtxR4akWW0CqADBPTe1eyvWIIDX-2B7EYJNOJgVjIyITJPU=
+DsdqXFqK7w-2BUcZUjW-2B97G-2BqEt0j7ji-2FNKqHqhNoORCsmyrKgEInTLEX0MoMkPKTt8g1=
+98mO-2FOSoSHaSJNWi8AaNkmyvy0EBsxG6DqRh4OTpPopYQenxystJcYFn6FuW5uFgcE72oADLi=
+n67ZQljyNgedBCh-2FOBEFC6LvjyXOxEczggv0HkYKbBHMiuZYu8vnredIoQilo2bG9Aul6QM-2=
+F1Uf-2FwqtAmDB68tFLDPRd-2Ffwbzp8g1hzoenwnYM26AmcKBaM1-2F1kqd0dpEedrJzkQdIV5=
+u-2B9hwB-2FYa-2FK6PeLl-2BJJ6-2B05-2Bc3I89oLZ0EkNZvhNzablguKqqbMYBqAxh64-2FL=
+Fv4SPM0BRknJJUcwbstQ9prIu13FERefNIGTJmwODj767g-3D-3D">Tiltify page</a></spa=
+n><span style=3D"font-size: 11pt; color: rgb(0, 0, 0); background-color: tr=
+ansparent; font-weight: 400; font-style: normal; font-variant: normal; whit=
+e-space: pre-wrap;"> to get a last-minute pin or sticker order in! </span><=
+/span></span></p>
+
+<p dir=3D"ltr" style=3D"line-height:1.38;margin-top:0pt;margin-bottom:0pt;"=
+>&nbsp;</p>
+        </td>
+      </tr>
+    </table>
+=20=20
+    <table class=3D"wrapper" role=3D"module" data-type=3D"image" border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"table-layout=
+: fixed;">
+      <tr>
+        <td style=3D"font-size:6px;line-height:10px;padding:0px 0px 0px 0px=
+;" valign=3D"top" align=3D"center">
+          <img class=3D"max-width" border=3D"0" style=3D"display:block;colo=
+r:#000000;text-decoration:none;font-family:Helvetica, arial, sans-serif;fon=
+t-size:16px;max-width:100% !important;width:100%;height:auto !important;" s=
+rc=3D"https://marketing-image-production.s3.amazonaws.com/uploads/1df78dbd0=
+d003e71c196ddb6abaacd37c5e860b0e1a5bd732b7a2c33f1d74c0c1c700460101ab9cec220=
+f7fd4baa7635c19080d2079bcccb9729687228dd744f.png" alt=3D"" width=3D"550">
+        </td>
+      </tr>
+    </table>
+=20=20
+    <table class=3D"module" role=3D"module" data-type=3D"text" border=3D"0"=
+ cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"table-layout: =
+fixed;">
+      <tr>
+        <td style=3D"padding:18px 0px 18px 0px;line-height:22px;text-align:=
+inherit;"
+            height=3D"100%"
+            valign=3D"top"
+            bgcolor=3D"">
+            <div><span style=3D"font-family:arial,helvetica,sans-serif;"><s=
+pan id=3D"docs-internal-guid-72ac3402-7fff-c975-c472-aef4a2c1aa6b" style=3D=
+"font-weight:normal;"><span style=3D"font-size: 11.5pt; color: rgb(0, 0, 0)=
+; background-color: transparent; font-weight: 400; font-style: normal; font=
+-variant: normal; white-space: pre-wrap;">AMAs, talent shows, open mics, ja=
+m sessions=E2=80=A6 Stage channels hold more than just audio events. They=
+=E2=80=99re another way to connect and discover new communities.</span></sp=
+an></span></div>
+        </td>
+      </tr>
+    </table>
+=20=20
+    <table class=3D"wrapper" role=3D"module" data-type=3D"image" border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"table-layout=
+: fixed;">
+      <tr>
+        <td style=3D"font-size:6px;line-height:10px;padding:0px 0px 0px 0px=
+;" valign=3D"top" align=3D"center">
+          <img class=3D"max-width" border=3D"0" style=3D"display:block;colo=
+r:#000000;text-decoration:none;font-family:Helvetica, arial, sans-serif;fon=
+t-size:16px;max-width:100% !important;width:100%;height:auto !important;" s=
+rc=3D"https://marketing-image-production.s3.amazonaws.com/uploads/89169b894=
+cc6796789fe437c1f493b54bd9a83f969db0116f4eb8620fc5e926f61f4e65dc57029f79771=
+114410a5ab847b9f45b5411fd4f122c3bd56d02fabb5.png" alt=3D"" width=3D"550">
+        </td>
+      </tr>
+    </table>
+=20=20
+    <table class=3D"module" role=3D"module" data-type=3D"text" border=3D"0"=
+ cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"table-layout: =
+fixed;">
+      <tr>
+        <td style=3D"padding:18px 0px 18px 0px;line-height:22px;text-align:=
+inherit;"
+            height=3D"100%"
+            valign=3D"top"
+            bgcolor=3D"">
+            <div>
+<p dir=3D"ltr" style=3D"line-height:1.38;margin-top:0pt;margin-bottom:0pt;"=
+><span style=3D"font-family:arial,helvetica,sans-serif;"><span id=3D"docs-i=
+nternal-guid-71ceaac3-7fff-ca90-9119-f8e8891e2851" style=3D"font-weight:nor=
+mal;"><span style=3D"font-size: 11.5pt; color: rgb(0, 0, 0); background-col=
+or: transparent; font-weight: 400; font-style: normal; font-variant: normal=
+; white-space: pre-wrap;">These four communities are already planning their=
+ next stage events =E2=80=94 find them on <a href=3D"https://click.discord.=
+com/ls/click?upn=3DpcQwpP5nImXcVmlvgZvdjl6eJMN1B06ReJQ2qCvh4kND38uYxpg0DG-2=
+FHwpSJg9Y4-2Fm42tYAh12Vc-2B2yVxqZX6AjaPcWTNwssRX5eT-2FM1mrsyug9a4uFRjZJnl5n=
+sWVFa5kMc_H65ljNg3foEJU6dJQZHMcp3Zdimzb4muCFBEwI-2BtxR4akWW0CqADBPTe1eyvWII=
+DX-2B7EYJNOJgVjIyITJPUDsdqXFqK7w-2BUcZUjW-2B97G-2BqEt0j7ji-2FNKqHqhNoORCsmy=
+rKgEInTLEX0MoMkPKTt8g198mO-2FOSoSHaSJNWi8AaNkmyvy0EBsxG6DqRh4OTpPopYQenxyst=
+JcYFn6FuW5uFgcE72oADLin67ZQljyNgedBCh-2FOBEFC6LvjyXOxEczgVutQHzA4XXSKujArvs=
+raxeIJLnrW-2Bka76NZKy9Peg22DzRl7K9uQayqXl1XWXvWKj5iK6wrs-2BZTigdPXc0oueDzeo=
+umX6QCB3Tab-2BiolyoqSIBWHQ4ZICH33SGHJibECgpJJKOBDZE8T-2F7AWKdB6KFgkFr8I9Z7o=
+Ockl761i57jZQcIPnx6FUTqKsdv7DqxkZPNZ5HY50NFkw2zxv0yB3A-3D-3D">Stage Discove=
+ry</a> and learn what they=E2=80=99re all about!&nbsp;</span></span></span>=
+</p>
+&nbsp;
+
+<ul dir=3D"ltr">
+	<li role=3D"presentation" style=3D"list-style-type: disc; font-size: 11.5p=
+t; font-family: Poppins, sans-serif; color: rgb(0, 0, 0); background-color:=
+ transparent; font-weight: 400; font-style: normal; font-variant: normal; w=
+hite-space: pre; line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><=
+span style=3D"font-family:arial,helvetica,sans-serif;"><span id=3D"docs-int=
+ernal-guid-71ceaac3-7fff-ca90-9119-f8e8891e2851" style=3D"font-weight:norma=
+l;"><span style=3D"font-size: 11.5pt; background-color: transparent; font-w=
+eight: 400; font-style: normal; font-variant: normal; white-space: pre-wrap=
+;">Flex those brain muscles with a trivia night hosted by </span><span styl=
+e=3D"font-size: 11.5pt; background-color: transparent; font-weight: 700; fo=
+nt-style: normal; font-variant: normal; white-space: pre-wrap;">Gay Geeks <=
+/span><span style=3D"font-size: 11.5pt; background-color: transparent; font=
+-weight: 400; font-style: normal; font-variant: normal; white-space: pre-wr=
+ap;">on June 29th</span></span></span></li>
+	<li role=3D"presentation" style=3D"list-style-type: disc; font-size: 11.5p=
+t; font-family: Poppins, sans-serif; color: rgb(0, 0, 0); background-color:=
+ transparent; font-weight: 400; font-style: normal; font-variant: normal; w=
+hite-space: pre; line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><=
+span style=3D"font-family:arial,helvetica,sans-serif;"><span id=3D"docs-int=
+ernal-guid-71ceaac3-7fff-ca90-9119-f8e8891e2851" style=3D"font-weight:norma=
+l;"><span style=3D"font-size: 11.5pt; background-color: transparent; font-w=
+eight: 400; font-style: normal; font-variant: normal; white-space: pre-wrap=
+;">Join VTuber </span><span style=3D"font-size: 11.5pt; background-color: t=
+ransparent; font-weight: 700; font-style: normal; font-variant: normal; whi=
+te-space: pre-wrap;">girl_dm_ </span><span style=3D"font-size: 11.5pt; back=
+ground-color: transparent; font-weight: 400; font-style: normal; font-varia=
+nt: normal; white-space: pre-wrap;">for a story-time event about Japan and =
+learning Japanese on July 4th</span></span></span></li>
+	<li role=3D"presentation" style=3D"list-style-type: disc; font-size: 11.5p=
+t; font-family: Poppins, sans-serif; color: rgb(0, 0, 0); background-color:=
+ transparent; font-weight: 400; font-style: normal; font-variant: normal; w=
+hite-space: pre; line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><=
+span style=3D"font-family:arial,helvetica,sans-serif;"><span id=3D"docs-int=
+ernal-guid-71ceaac3-7fff-ca90-9119-f8e8891e2851" style=3D"font-weight:norma=
+l;"><span style=3D"font-size: 11.5pt; background-color: transparent; font-w=
+eight: 400; font-style: normal; font-variant: normal; white-space: pre-wrap=
+;">Bust out the s=E2=80=99mores with the </span><span style=3D"font-size: 1=
+1.5pt; background-color: transparent; font-weight: 700; font-style: normal;=
+ font-variant: normal; white-space: pre-wrap;">But Why Tho? A Geek Communit=
+y</span><span style=3D"font-size: 11.5pt; background-color: transparent; fo=
+nt-weight: 400; font-style: normal; font-variant: normal; white-space: pre-=
+wrap;"> crew in their We Love Horror roundtable on July 8th</span></span></=
+span></li>
+	<li role=3D"presentation" style=3D"list-style-type: disc; font-size: 11.5p=
+t; font-family: Poppins, sans-serif; color: rgb(0, 0, 0); background-color:=
+ transparent; font-weight: 400; font-style: normal; font-variant: normal; w=
+hite-space: pre; line-height: 1.38; margin-top: 0pt; margin-bottom: 0pt;"><=
+span style=3D"font-family:arial,helvetica,sans-serif;"><span style=3D"font-=
+weight:normal;"><span style=3D"font-size: 11.5pt; background-color: transpa=
+rent; font-weight: 400; font-style: normal; font-variant: normal; white-spa=
+ce: pre-wrap;"><span id=3D"docs-internal-guid-71ceaac3-7fff-ca90-9119-f8e88=
+91e2851" style=3D"font-weight:normal;"><span style=3D"font-size: 11.5pt; ba=
+ckground-color: transparent; font-weight: 400; font-style: normal; font-var=
+iant: normal; white-space: pre-wrap;">Bump along with </span><span style=3D=
+"font-size: 11.5pt; background-color: transparent; font-weight: 700; font-s=
+tyle: normal; font-variant: normal; white-space: pre-wrap;">Trap Nation </s=
+pan><span style=3D"font-size: 11.5pt; background-color: transparent; font-w=
+eight: 400; font-style: normal; font-variant: normal; white-space: pre-wrap=
+;">at their festival celebrating the unique and diverse taste of trap music=
+ on July 9th</span></span></span></span></span></li>
+</ul>
+
+<div dir=3D"ltr" style=3D"line-height: 1.38; margin-top: 0pt; margin-bottom=
+: 0pt;"><br>
+<span style=3D"font-family:arial,helvetica,sans-serif;"><span id=3D"docs-in=
+ternal-guid-71ceaac3-7fff-ca90-9119-f8e8891e2851" style=3D"font-weight:norm=
+al;"><span style=3D"font-size: 11pt; color: rgb(0, 0, 0); background-color:=
+ transparent; font-weight: 400; font-style: normal; font-variant: normal; w=
+hite-space: pre-wrap;">There=E2=80=99s a Stage for everyone, so don=E2=80=
+=99t be shy =E2=80=94 tune in and make a new buddy or <a href=3D"https://cl=
+ick.discord.com/ls/click?upn=3DpcQwpP5nImXcVmlvgZvdjkEWe3C-2FaYnmcbxaRl0VD6=
+7WSJPz5m0kyfRBWFXfxyqm9jbj_H65ljNg3foEJU6dJQZHMcp3Zdimzb4muCFBEwI-2BtxR4akW=
+W0CqADBPTe1eyvWIIDX-2B7EYJNOJgVjIyITJPUDsdqXFqK7w-2BUcZUjW-2B97G-2BqEt0j7ji=
+-2FNKqHqhNoORCsmyrKgEInTLEX0MoMkPKTt8g198mO-2FOSoSHaSJNWi8AaNkmyvy0EBsxG6Dq=
+Rh4OTpPopYQenxystJcYFn6FuW5uFgcE72oADLin67ZQljyNgedBCh-2FOBEFC6LvjyXOxEczgP=
+56ad-2Bp-2F74JDHRA8vUG1gaMTuDzeaEZDeCJtv4oQhqZ3yrDX0H4SWI66yG7yIEJa4Z0n0PHN=
+UDBIv8E6yoxMTT6P5nBYRs8Sh-2BWYXCUCH4H2FAqziVz8sZN97q9ebFoc0JLSedr2GJWyMtv1x=
+AuDRtp8yw-2Bnw8k-2Fjpi9CQqnKQGIj12tVhIRDYwm-2Fu74ZCfMXSKdEpdcX-2FsZqOuBoDmm=
+kQ-3D-3D">hop on mic with your own Stage</a></span><span style=3D"font-size=
+: 11pt; color: rgb(0, 0, 0); font-weight: 400; font-style: normal; font-var=
+iant: normal; white-space: pre-wrap;">! (If anyone makes a Stage about Shoe=
+bills, please let us know.) </span></span></span></div>
+</div>
+        </td>
+      </tr>
+    </table>
+=20=20
+    <table class=3D"wrapper" role=3D"module" data-type=3D"image" border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"table-layout=
+: fixed;">
+      <tr>
+        <td style=3D"font-size:6px;line-height:10px;padding:0px 0px 0px 0px=
+;" valign=3D"top" align=3D"center">
+          <img class=3D"max-width" border=3D"0" style=3D"display:block;colo=
+r:#000000;text-decoration:none;font-family:Helvetica, arial, sans-serif;fon=
+t-size:16px;max-width:100% !important;width:100%;height:auto !important;" w=
+idth=3D"550" src=3D"https://marketing-image-production.s3.amazonaws.com/upl=
+oads/42c3d24938ca101392f1ba9e37fdee0393dbe74482fdd49204db25b26f8b0a0cf6bbcc=
+5039f4ecf406c4716b6bc0206f719bb5a97cf8249dc353cd51e7c8e596.png" alt=3D"">
+        </td>
+      </tr>
+    </table>
+=20=20
+    <table class=3D"module" role=3D"module" data-type=3D"text" border=3D"0"=
+ cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"table-layout: =
+fixed;">
+      <tr>
+        <td style=3D"padding:18px 0px 18px 0px;line-height:22px;text-align:=
+inherit;"
+            height=3D"100%"
+            valign=3D"top"
+            bgcolor=3D"">
+            <div>
+<p dir=3D"ltr" style=3D"line-height:1.38;margin-top:0pt;margin-bottom:0pt;"=
+><span id=3D"docs-internal-guid-ae9a9e44-7fff-8f22-7dea-f5bcf8afbd16" style=
+=3D"font-weight:normal;"><span style=3D"font-size: 11pt; font-family: Poppi=
+ns, sans-serif; color: rgb(41, 41, 41); background-color: transparent; font=
+-weight: 400; font-style: normal; font-variant: normal; white-space: pre-wr=
+ap;">That=E2=80=99s a wrap for now, HypeSquaders. But </span><span style=3D=
+"font-size: 11pt; font-family: Poppins, sans-serif; color: rgb(41, 41, 41);=
+ background-color: transparent; font-weight: 400; font-style: italic; font-=
+variant: normal; white-space: pre-wrap;">stick</span><span style=3D"font-si=
+ze: 11pt; font-family: Poppins, sans-serif; color: rgb(41, 41, 41); backgro=
+und-color: transparent; font-weight: 400; font-style: normal; font-variant:=
+ normal; white-space: pre-wrap;"> with us for the latest on new features, e=
+vents, and chances to hang out together and bring the hype to servers all o=
+ver Discord!</span></span></p>
+&nbsp;
+
+<p dir=3D"ltr" style=3D"line-height:1.38;margin-top:0pt;margin-bottom:0pt;"=
+><span id=3D"docs-internal-guid-ae9a9e44-7fff-8f22-7dea-f5bcf8afbd16" style=
+=3D"font-weight:normal;"><span style=3D"font-size: 11pt; font-family: Poppi=
+ns, sans-serif; color: rgb(41, 41, 41); background-color: transparent; font=
+-weight: 400; font-style: normal; font-variant: normal; white-space: pre-wr=
+ap;">Stay Hype,</span></span></p>
+
+<p dir=3D"ltr" style=3D"line-height:1.38;margin-top:0pt;margin-bottom:0pt;"=
+><span id=3D"docs-internal-guid-ae9a9e44-7fff-8f22-7dea-f5bcf8afbd16" style=
+=3D"font-weight:normal;"><span style=3D"font-size: 11pt; font-family: Poppi=
+ns, sans-serif; color: rgb(41, 41, 41); background-color: transparent; font=
+-weight: 400; font-style: normal; font-variant: normal; white-space: pre-wr=
+ap;">Discord Community Team</span></span></p>
+
+<div>&nbsp;</div>
+</div>
+        </td>
+      </tr>
+    </table>
+  <div data-role=3D"module-unsubscribe" class=3D"module unsubscribe-css__un=
+subscribe___2CDlR" role=3D"module" data-type=3D"unsubscribe" style=3D"backg=
+round-color:#ffffff;color:#444444;font-size:12px;line-height:20px;padding:1=
+6px 16px 16px 16px;text-align:center"><div class=3D"Unsubscribe--addressLin=
+e"><p class=3D"Unsubscribe--senderName" style=3D"font-family:arial,helvetic=
+a, sans-serif;font-size:12px;line-height:20px">Discord</p><p style=3D"font-=
+family:arial,helvetica, sans-serif;font-size:12px;line-height:20px"><span c=
+lass=3D"Unsubscribe--senderAddress">444 De Haro Street, Suite 200</span>, <=
+span class=3D"Unsubscribe--senderCity">San Francisco</span>, <span class=3D=
+"Unsubscribe--senderState">CA</span> <span class=3D"Unsubscribe--senderZip"=
+>94107</span> </p></div><p style=3D"font-family:arial,helvetica, sans-serif=
+;font-size:12px;line-height:20px"><a class=3D"Unsubscribe--unsubscribeLink"=
+ href=3D"https://click.discord.com/asm/unsubscribe/?user_id=3D16027542&data=
+=3DVdVLG4kRXgQaDxEREVljf87ecZt58ZKCUYzjJFIgguDqJVgrtXO-70r3z8ARut07acZprBlZ=
+nx6cMzA3mbufRAz07E73jhHVgXhwiGbDm_blP1gWI5StkMBovwzbC4LN-dOxFRs2DKXnQp82ZTz=
+ptlkVfNEFjjVQ38HQSmqntqlia8O5hP4W3FCKKCu6bzWNSOe7uGgxO8RMAnKsrqIE-6r_vK76Dj=
+Lnnm89cvVYhr5jne0pUdLiz34W7-U1bB5KHCcr5Nu0c7tgqgaAyTi83BKeF718sJGYKkKLSgzW6=
+xbX2pbMz_TJCJXC_ke7htJn8dTm2y85nFk6Vcy7w9mdkVi4oMDvG5G9V_k5W6WYtfr3YIxW5gc4=
+hQzKomWCY1MxVnZd0C-nExBJWdBfD6aiat8HNhLLGyqPO8SL8g2qjyqAII9S0d1zSt5JvMoKAsE=
+xjtzyKLxdNdbhQNAlcM6iiOP0yuLTmhi3P9b8pSwGo3gSqukHo0Z45zmxXl_jwTfjXqgPPxa_Zm=
+10PvV-Fa45cRAsduDtoJ8-hTbrN5WcaoPjeYzduxaMzm52ueaDvqtSlqt0b2AHhBoRmaA8C-kcU=
+w=3D=3D">Unsubscribe</a></p></div>
+                              </td>
+                            </tr>
+                          </table>
+                          <!--[if mso]>
+                          </td></tr></table>
+                          </center>
+                          <![endif]-->
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </center>
+=20=20
+<img src=3D"https://click.discord.com/wf/open?upn=3DI2ZneDYMm30bX-2BRxYz82E=
+qVmWgovkXO1mHRl89j0THzVh7hYHSJGCHaaYQScOorzr55BTQGnh64MsIKsHktsAvRijiEXT2kN=
+op-2FiJGqw6oN6kS30ULtKHkiwHYN3YOn7GBXMhI871DsisgYowl3e9Lsl6CV-2FWXx1-2FHVw3=
+yGsLUAhmeSU-2BNYQ9vyMtmPuBPAkBd4iSzd-2B7Qu-2FEj6KedOF8Kn9jXpZEJw8Mv1m2A27zr=
+OR-2B7SajrUrdu2W711v8NNPjWG8RMFX0O8De-2Bb6MX7Eq8ohxOLONUoppDf1WFUyoxI7ZWklo=
+OKGE8slib0ZjiZ45AarhXp40eWK3fIle-2FB6BmCRwBkcjm-2B7Kc-2Fo495F6JWhbhSy0qlr1C=
+spSXZEgg01evzS3eu-2FXPby0Pz9Ow0nj5NvLb-2BF8rY3WqTSiOrX4p0wQJ-2FkFA47jvAfrvc=
+zX3d8XYyfdnO-2Fhw497n0LmG3rRQ-3D-3D" alt=3D"" width=3D"1" height=3D"1" bord=
+er=3D"0" style=3D"height:1px !important;width:1px !important;border-width:0=
+ !important;margin-top:0 !important;margin-bottom:0 !important;margin-right=
+:0 !important;margin-left:0 !important;padding-top:0 !important;padding-bot=
+tom:0 !important;padding-right:0 !important;padding-left:0 !important;"/>
+</body>
+</html>
+
+--726e58830254ef34350ce97869b93a4eb4443f1481adfd95707a2a0af35f--

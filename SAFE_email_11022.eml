@@ -1,0 +1,1419 @@
+X-GM-THRID: 1724460966573368061
+X-Gmail-Labels: Inbox,Important,Category Updates
+Delivered-To: azfarali007.aa@gmail.com
+Received: by 2002:ad4:498b:0:0:0:0:0 with SMTP id t11csp3388289qvx;
+        Fri, 11 Feb 2022 02:08:53 -0800 (PST)
+X-Google-Smtp-Source: ABdhPJyRNQEF3pmwhkxeRparjCA+y2/RgNtn0Bq/tQ3lbnYkOWiF5sXb1SJkzwKq0nn8Ys9r3JFQ
+X-Received: by 2002:a25:c00d:: with SMTP id c13mr577312ybf.591.1644574133276;
+        Fri, 11 Feb 2022 02:08:53 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1644574133; cv=none;
+        d=google.com; s=arc-20160816;
+        b=dgraN7OekmVGLwJyg7fymX/zg6vSg69qw3kP+1yGOQm9/p9kEA4ss05Ps16K8QYOFa
+         iNuIVKSVbw+M11Dc15tkRPGYZ4i/PxHCjuQImmG/KkjBA8spgOI6sAdIsPchAP/KwQzA
+         +cZL1lbmETmH8Mx2x9CNQVeXQec86dFUlpH57oeywo7dm2ga/HDFMey7HvZih25fW5Xv
+         ZD7QZvk57VB+HxAfAl0FYjnKtioV2MHn93+uYUxeZofInkZqNDQ76pfMELXHfBAtnfxL
+         P9eZz4S/B53cADXZIk6NwEJ5KKdBfy5Fc8K2F8eeWtgQtvTiyJkR7wnS8khu7xqNR8cc
+         VoXg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:subject:message-id:mime-version:from:date:dkim-signature
+         :dkim-signature;
+        bh=AWHWlW09tAcESFkabrwU30ykmjjXq6J2+fzAgWIt8tg=;
+        b=Mi5C7ZKJkR1jckrDNAgwXn1dEt31GRmAnn+g/IyJRIKX48RRqX0Sk1nh9Xm5kpYPfC
+         3wT5s1Y/H2/hVKwjng0Q42UIlo1JDpkWOxR4tDYPvWu7Q/SREWlYpf8TefUEfAEurpJ+
+         aHy/oF1ob9a8RyoIytjRhks775knxMZeL+CiQqCHFXGo4yDf32pmD+MHrniUhSVeZbVR
+         WgZh99dm+zKTjbiLuehO6hemxO/Wb/Rml7y6undpD0Z+pCPzBH2PLN64W2Qxf8TNtaID
+         +YVaUxL2F7+wRQCf9mVeF4R8vUCRQpjtcxs6KswTeNy4W8X7m8gqwLpL+ueMzvdyAZfW
+         rnAg==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@umail.accounts.riotgames.com header.s=s1 header.b="u1C/aRBg";
+       dkim=pass header.i=@sendgrid.info header.s=smtpapi header.b=cSh++i2U;
+       spf=pass (google.com: domain of bounces+7529547-4230-azfarali007.aa=gmail.com@sg.umail.accounts.riotgames.com designates 168.245.76.228 as permitted sender) smtp.mailfrom="bounces+7529547-4230-azfarali007.aa=gmail.com@sg.umail.accounts.riotgames.com";
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=riotgames.com
+Return-Path: <bounces+7529547-4230-azfarali007.aa=gmail.com@sg.umail.accounts.riotgames.com>
+Received: from o7.w.umail.accounts.riotgames.com (o7.w.umail.accounts.riotgames.com. [168.245.76.228])
+        by mx.google.com with ESMTPS id 7si15718272ybz.400.2022.02.11.02.08.52
+        for <azfarali007.aa@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Fri, 11 Feb 2022 02:08:53 -0800 (PST)
+Received-SPF: pass (google.com: domain of bounces+7529547-4230-azfarali007.aa=gmail.com@sg.umail.accounts.riotgames.com designates 168.245.76.228 as permitted sender) client-ip=168.245.76.228;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@umail.accounts.riotgames.com header.s=s1 header.b="u1C/aRBg";
+       dkim=pass header.i=@sendgrid.info header.s=smtpapi header.b=cSh++i2U;
+       spf=pass (google.com: domain of bounces+7529547-4230-azfarali007.aa=gmail.com@sg.umail.accounts.riotgames.com designates 168.245.76.228 as permitted sender) smtp.mailfrom="bounces+7529547-4230-azfarali007.aa=gmail.com@sg.umail.accounts.riotgames.com";
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=riotgames.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=umail.accounts.riotgames.com;
+	h=content-type:from:mime-version:subject:x-feedback-id:to;
+	s=s1; bh=AWHWlW09tAcESFkabrwU30ykmjjXq6J2+fzAgWIt8tg=;
+	b=u1C/aRBgJqFbWzcKSW0mKFlb/dInA8IkW9j38Mc4/5VzMEBKVhw6tw1/JFmeP2mJ87AK
+	N2fHbXXIQRvg6SApypQ9IgJqrY1ptlu4rDAQmc1WW1i25D9X2lz7fuUCsHlEhG/NeD/qJT
+	5zkrbugVEVmGjhaU6R3mspKj7TnKDc+le+wYGYGDp4B7cdoVcYaOg75g6MBDaXDlp+G4b0
+	I7GG/nLRuJJR/16xZhvfBY8uQJFB6ybEuYY/kRPgQC6b8XeUsymM8hG8HKiJw7OL9Uz0ix
+	/2U3jjCyG+ySSLS7Y+J0DLLYsC2sUnEw305FOCEa/CKVmJ9Ku8c0EaYdDV/nrPCQ==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=sendgrid.info;
+	h=content-type:from:mime-version:subject:x-feedback-id:to;
+	s=smtpapi; bh=AWHWlW09tAcESFkabrwU30ykmjjXq6J2+fzAgWIt8tg=;
+	b=cSh++i2UzpE0Pddo9HVuseN4xeOs7hxR9a3Qk+s2ubdqRLNIxlqLexH9wCtasO4i0BCK
+	kZkBJq7Bu+mIgnCO9AF0iraRWR8xwIN07sSh3gYaLJ8tRDyQKHcuba13IuaeVmViGzWYYM
+	gN6oBHwnWkCNw2Sz4dVsUPudixj08X3Kk=
+Received: by filterdrecv-7b5d7dc7c5-4nwfk with SMTP id filterdrecv-7b5d7dc7c5-4nwfk-1-620635B3-2D
+        2022-02-11 10:08:51.49139128 +0000 UTC m=+12996652.374419321
+Received: from NzUyOTU0Nw (unknown)
+	by geopod-ismtpd-4-1 (SG) with HTTP
+	id 4DcCtMNuQha4bXfstMqOqg
+	Fri, 11 Feb 2022 10:08:51.371 +0000 (UTC)
+Content-Type: multipart/alternative; boundary=99b5caa2ef4654198626b56e15cf708cb5f78292b0adfaf6690cd1b21e3e
+Date: Fri, 11 Feb 2022 10:08:51 +0000 (UTC)
+From: Riot Games <noreply@umail.accounts.riotgames.com>
+Mime-Version: 1.0
+Message-ID: <4DcCtMNuQha4bXfstMqOqg@geopod-ismtpd-4-1>
+Subject: spionixofficial, welcome to League of Legends!
+X-Riot-Language: en_GB
+X-Riot-Email-Name: new-user
+X-Riot-Sub: 7b1fd7d3-a3d0-5c11-a96e-ea8096ce3c16
+X-Riot-Message-Id: 320a4d1a-7153-4a5e-9c90-9f7709811967
+X-Feedback-ID: 7529547:SG
+X-SG-EID: 
+ =?us-ascii?Q?cKrNJugPp5L1aQHD04UD34ayVOT0SCa05WoLwxbzTz4pOp6dA=2FeC236Dc2e4a0?=
+ =?us-ascii?Q?EXNxUN01qzefFO4tx5YBxeULzTybN4HmEKzbxRr?=
+ =?us-ascii?Q?+dkFFgy5CXL9lGL1fD6MzlMB=2FumDcKjrtlhuw2i?=
+ =?us-ascii?Q?Yqp9O3Jxa1I8q22nXfu2tH98Kfm8dljE9A7Mkci?=
+ =?us-ascii?Q?Ig1aKZ=2FdYo6L1xY6teijqgKdIrz=2FeoRAlDqfAMF?=
+ =?us-ascii?Q?BrW=2F9JyVUV9M9bOEyxHlJ5ZzyCbAcPhjUTYgld8?=
+ =?us-ascii?Q?3QdVt9Lve2wGJjHz24OJg=3D=3D?=
+X-SG-ID: 
+ =?us-ascii?Q?N2C25iY2uzGMFz6rgvQsb8raWjw0ZPf1VmjsCkspi=2FLGnAhZsKaNTDtz5V8zq1?=
+ =?us-ascii?Q?HcnKoM26c7XPli9REN2Gu=2FwZf1j44ivDQLTpVJ0?=
+ =?us-ascii?Q?2t45k=2F09gVqTAmOYa9mlzyRcKKelFiQcuD1RoGp?=
+ =?us-ascii?Q?w1q7kmy=2FiBv4zz9L=2F9FvPwIWhV4VvUXER8cl8RQ?=
+ =?us-ascii?Q?d=2F+oKTG8FqYbovNh6lRl0kNw5p0UR81rqPohx1I?=
+ =?us-ascii?Q?P0nQJO5lkoiKjzODHd8T6y8VVUGAKw1ZHyHritA?=
+ =?us-ascii?Q?mK24g4+PtDnRkzBaRQjAZu5SU=2FYrvzRhfZJFdal?=
+ =?us-ascii?Q?xAeaB47fr4txmM4gXi057iSlRdbSWXd0dpbd9RW?=
+ =?us-ascii?Q?uBcIk=2FLs0KZWuk5k=2FAE5dGUKCXvznVrEeQWXATY?=
+ =?us-ascii?Q?k3c=2Fc0GTSg=2FpGiUwKaFMSpZwf=2FjKK2=2F9OrKOFdt?=
+ =?us-ascii?Q?p75Db0khxT=2FOHrhRCI1y=2FqSpfO6ATZRmM=2FQxQOk?=
+ =?us-ascii?Q?kveS=2FtAQxVw4hQyeG5EsRYbqA02xWSiJm+UlJEI?=
+ =?us-ascii?Q?NOCcysv3WTTKZGUBqTbrfabz3bmjc4KMYzDy+0U?=
+ =?us-ascii?Q?75nOCxB80Hb9hzwxWzYFU3zgN8w30n1C29kGh8n?=
+ =?us-ascii?Q?3eW4IGiigN5Wov2P86em6bhpfDaVwF8ln5JYJ3e?=
+ =?us-ascii?Q?VHxqHw=2F2V9vxTOHZ4+bRjqYTBFb208r1E+Ndbye?=
+ =?us-ascii?Q?Xp6iB82Tva+8jFyB2woF0O0f6AeiZfAQmn0WRK0?=
+ =?us-ascii?Q?5zxnIs68vCClxT5lCITeNiY+AqPjvG4zjRDtsz7?=
+ =?us-ascii?Q?XAY0B5XKw6gi7nxAwFwX4uq7=2FmqoXZ=2FN2CJet0o?=
+ =?us-ascii?Q?c7f+dt3YMs786Z=2Fja9EZw5sVoA=3D=3D?=
+To: azfarali007.aa@gmail.com
+X-Entity-ID: HK5K7HuWHF1NE0o/wDdseg==
+
+--99b5caa2ef4654198626b56e15cf708cb5f78292b0adfaf6690cd1b21e3e
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset=iso-8859-1
+Mime-Version: 1.0
+
+
+
+The Fields of Justice Await
+Congratulations on your acceptance into the League of Legends! The time has=
+ come to prove yourself in battle! Summon powerful champions, hone your ski=
+ll, and go head to head with other summoners in the greatest competition in=
+ Valoran.
+
+Want to learn the basics of being a summoner? Check out our new user guide =
+[https://links.riotgames.com/ls/click?upn=3DYjt6zeV-2B-2BLaZEWP-2BW7PlFSrSU=
+vCNDEUIpoocrAlsJ-2FpuWTg7ITCS3A6LVvGa2aeNZsT9urvEvHPJ5V9moyVtZet2Kc1vtcOh5C=
+2fJypJmwkprIaUnGpi4A-2FujOM6GCUMX2WH_H65ljNg3foEJU6dJQZHMcp3Zdimzb4muCFBEwI=
+-2BtxR5NHK6uZ9CEatgDkqWlAllrot7R-2B9dkloCX-2BA-2FZupEXLuGP88yhAE-2Biol-2BLp=
+ea0VraV0OIEJA2TAi-2FjJ-2FQA8chnKfKtB71wZb4JzxxGgrD8dmDCvds3zuxbct8qSXnZiaOy=
+2-2FWXOeEkgKParBJl3P1kV-2F42YHMCpakG3BB7U6UiqXTruar1m2XCpkJCIl5p189ijSUOxvY=
+Gz1V7b4b-2Fgt0McWYrZ9oBzeFZRAww1ZkmFqkOdKLEtDnbPHGY7kc-2FF-2F5zIthzzoB11TSq=
+c2b65HeFnmfvBc0a4ixq-2FOtytpOfyPn3xjWgfxooLjeuZcNeWZM7VFDnBXkYmBWcc4ZgGvZ8D=
+kGRYL08HTgh8iKeyiV3Kr-2FBpA-2F0-2FvSgk8iJ9ZhKeKM-2F9oPJwJnSJZ-2BqlW3QIrh6fB=
+iqQllCIQTumbstnzQk-2FVSBTEhT4Y1G6Rhj-2FGTGhBVwL2lTBVFQ552alwQkXihSFWiPVwjg9=
+SvEQiEpppjOI6D0OQRAUR8maZchIRv5s7fLSanw0bW-2Fz8gGF-2FPHhVwC8Gj9eNKJ9pjm66uD=
+zDZJCaDYLgfCHW2GH5IdExHdeJZmrXZYdHaHpr9iJSnFrXNf5ofqvfFLnEshM3QhXvoeEdHfad3=
+xuHwogp2jVmOJbu5k5Lf4LFwUOJ-2FAOqA2SWxx8-2FRAw-2FyGit2ydTM7VyZdfU-2BjoOEE22=
+pOjj8qjodnTgi3tmb223D-2F1eF4m15Vjl7B27JWfGz3dIZiZSVxIEMWCfLW6Ie2ygo8xygslzz=
+Nlt0K-2B97lZ27MMCBebqqhHzhVX35u344IazmcNw07LUf9RXMfqzVMZr9KcNetDbciOpnbR-2B=
+mYPp-2BYdPUgs9HCBXSzOwzb0TKsi8r61ML8exAsLDAR4adOY5feBxfwM3q-2Fx9BBHAAz4lvXN=
+Vz4TkY0OGgS]=20
+
+Username:
+spionixofficial
+
+Download the game! [https://links.riotgames.com/ls/click?upn=3DfrHghcUMWgUZ=
+9OUHJJkDdajHx6U86Svh31pZQWdqSVi-2FXKOP3CfeuGcTKYnAao4UfAyrX0SLlN30ptU4F81Q3=
+QgIrpj8NGhKCMS8nlD5A88-3DZ14y_H65ljNg3foEJU6dJQZHMcp3Zdimzb4muCFBEwI-2BtxR5=
+NHK6uZ9CEatgDkqWlAllrot7R-2B9dkloCX-2BA-2FZupEXLuGP88yhAE-2Biol-2BLpea0VraV=
+0OIEJA2TAi-2FjJ-2FQA8chnKfKtB71wZb4JzxxGgrD8dmDCvds3zuxbct8qSXnZiaOy2-2FWXO=
+eEkgKParBJl3P1kV-2F42YHMCpakG3BB7U6UiqXTruar1m2XCpkJCIl5p189ijSUOxvYGz1V7b4=
+b-2Fgt0McWYrZ9oBzeFZRAww1ZkmFqkOdKLEtDnbPHGY7kc-2FF-2F5zIthzzoB11TSqc2b65He=
+FnmfvBc0a4ixq-2FOtytpOfyPn3xjWgfxooLjeuZcNeWZM7VFDnBXkYmBWcc4ZgGvZ8DkGRYL08=
+HTgh8iKeyiV3Kr-2FBpA-2F0-2FvSgk8iJ9ZhKeKM-2F9oPJwJnSJZ-2BqlW3QIrh6fBiqQllCI=
+QTumbstnzQk-2FVSBTEhT4Y1G6Rhj-2FGTGhBVwL2lTBVFQ552alwQkXihSFWiPVwjg9SvEQiEp=
+ppjOI6D0OQRAUR8maZchIRv5s7fLSanw0bW-2Fz8gGF-2FPHhVwC8Gj9eNKJ9pjm66uDzDZJCaD=
+YLgfCHW2GH5IdExHdeJZmrXZYdHaHpr9iJSnFrXNf5ofqvfFLnEshM3QhXvoeEdHfad3xuHwogp=
+2jVmOJbu5k5Lf4LFwUOJ-2FAOqA2SWxx8-2FRAw-2FyGit2ydTM7VyZdfU-2BjoOEE22pOjj8qj=
+odnTgi3tmb223D-2F1eF4m15Vjl7B27JWfGz3dIZiZSVxIEMWCfLW6Ie2ygo8xygslzzNlt3qLL=
+i7WBR6QC62aAhuTrYvRkZN9yJZqUjOlhqjWHq9s-2BOD9D8F75DVTQ-2FeabkceWxKs3I4PyqqM=
+t-2B6KgeCA5UltFNH-2BTAae14GXWtZJvxOEGO0n71CDUJfjMLd7-2BlMXa-2F1RJQP1hFrv2TF=
+mYcMb5LZ]
+
+FORGOT PASSWORD? [https://links.riotgames.com/ls/click?upn=3Dg5C7488IQMTKgB=
+7yJy5bzD1YScXqpOwBJ9uB8IxprbrLrk2FIel0E3-2Bu-2FOgZLdvmcBH6pgDbJPs2arMbd9Ih4=
+oW9NPPEZxGJ198DRAzDEfY-3DEtj5_H65ljNg3foEJU6dJQZHMcp3Zdimzb4muCFBEwI-2BtxR5=
+NHK6uZ9CEatgDkqWlAllrot7R-2B9dkloCX-2BA-2FZupEXLuGP88yhAE-2Biol-2BLpea0VraV=
+0OIEJA2TAi-2FjJ-2FQA8chnKfKtB71wZb4JzxxGgrD8dmDCvds3zuxbct8qSXnZiaOy2-2FWXO=
+eEkgKParBJl3P1kV-2F42YHMCpakG3BB7U6UiqXTruar1m2XCpkJCIl5p189ijSUOxvYGz1V7b4=
+b-2Fgt0McWYrZ9oBzeFZRAww1ZkmFqkOdKLEtDnbPHGY7kc-2FF-2F5zIthzzoB11TSqc2b65He=
+FnmfvBc0a4ixq-2FOtytpOfyPn3xjWgfxooLjeuZcNeWZM7VFDnBXkYmBWcc4ZgGvZ8DkGRYL08=
+HTgh8iKeyiV3Kr-2FBpA-2F0-2FvSgk8iJ9ZhKeKM-2F9oPJwJnSJZ-2BqlW3QIrh6fBiqQllCI=
+QTumbstnzQk-2FVSBTEhT4Y1G6Rhj-2FGTGhBVwL2lTBVFQ552alwQkXihSFWiPVwjg9SvEQiEp=
+ppjOI6D0OQRAUR8maZchIRv5s7fLSanw0bW-2Fz8gGF-2FPHhVwC8Gj9eNKJ9pjm66uDzDZJCaD=
+YLgfCHW2GH5IdExHdeJZmrXZYdHaHpr9iJSnFrXNf5ofqvfFLnEshM3QhXvoeEdHfad3xuHwogp=
+2jVmOJbu5k5Lf4LFwUOJ-2FAOqA2SWxx8-2FRAw-2FyGit2ydTM7VyZdfU-2BjoOEE22pOjj8qj=
+odnTgi3tmb223D-2F1eF4m15Vjl7B27JWfGz3dIZiZSVxIEMWCfLW6Ie2ygo8xygslzzNlt3bKj=
+cBOCdzTvh6mElIJaiB2p46tsr85V73h7tNe0jXrooiLgZfTuPrNHfTfwG50eIUQIlN0PclOun3g=
+MT5vy16oBOPxF-2Fnuw9MgJZuqgGYd3GDYs9sogzhwWfOmwSHWMETHSQptitiHNN3gxw-2FnOe9=
+] Good luck, Summoner! [https://links.riotgames.com/ls/click?upn=3Dvv0pA-2F=
+WxASzuOz3e-2Fz-2BpVH8yrmP1PzUWv6-2FMAw5C-2B4yvSvHJTd14wpHYQzdWT6GZOm8Y_H65l=
+jNg3foEJU6dJQZHMcp3Zdimzb4muCFBEwI-2BtxR5NHK6uZ9CEatgDkqWlAllrot7R-2B9dkloC=
+X-2BA-2FZupEXLuGP88yhAE-2Biol-2BLpea0VraV0OIEJA2TAi-2FjJ-2FQA8chnKfKtB71wZb=
+4JzxxGgrD8dmDCvds3zuxbct8qSXnZiaOy2-2FWXOeEkgKParBJl3P1kV-2F42YHMCpakG3BB7U=
+6UiqXTruar1m2XCpkJCIl5p189ijSUOxvYGz1V7b4b-2Fgt0McWYrZ9oBzeFZRAww1ZkmFqkOdK=
+LEtDnbPHGY7kc-2FF-2F5zIthzzoB11TSqc2b65HeFnmfvBc0a4ixq-2FOtytpOfyPn3xjWgfxo=
+oLjeuZcNeWZM7VFDnBXkYmBWcc4ZgGvZ8DkGRYL08HTgh8iKeyiV3Kr-2FBpA-2F0-2FvSgk8iJ=
+9ZhKeKM-2F9oPJwJnSJZ-2BqlW3QIrh6fBiqQllCIQTumbstnzQk-2FVSBTEhT4Y1G6Rhj-2FGT=
+GhBVwL2lTBVFQ552alwQkXihSFWiPVwjg9SvEQiEpppjOI6D0OQRAUR8maZchIRv5s7fLSanw0b=
+W-2Fz8gGF-2FPHhVwC8Gj9eNKJ9pjm66uDzDZJCaDYLgfCHW2GH5IdExHdeJZmrXZYdHaHpr9iJ=
+SnFrXNf5ofqvfFLnEshM3QhXvoeEdHfad3xuHwogp2jVmOJbu5k5Lf4LFwUOJ-2FAOqA2SWxx8-=
+2FRAw-2FyGit2ydTM7VyZdfU-2BjoOEE22pOjj8qjodnTgi3tmb223D-2F1eF4m15Vjl7B27JWf=
+Gz3dIZiZSVxIEMWCfLW6Ie2ygo8xygslzzNlt2aveX1LFQVi7ECSw9s8j3AFw-2F3J5uGoTBc0w=
+ddpkI-2Fan37ZhnBAK88JHW9hDzawMDQqQ26Zz96tRBgm7zAbNDVNDdG85wvrlbBeBwN1TyVmxm=
+8p4V79-2Fbc4lotnY3v-2FEJc8h7m6edUDl8FhdKS5dD3] [https://links.riotgames.com=
+/ls/click?upn=3DfrHghcUMWgUZ9OUHJJkDdWcKZDM57kpBql7-2Fw1LzrEodSJ3AkJvmhsiXw=
+ygwHDw7I1Dd43BaSPTreo7MUKYIAA-3D-3DvFlf_H65ljNg3foEJU6dJQZHMcp3Zdimzb4muCFB=
+EwI-2BtxR5NHK6uZ9CEatgDkqWlAllrot7R-2B9dkloCX-2BA-2FZupEXLuGP88yhAE-2Biol-2=
+BLpea0VraV0OIEJA2TAi-2FjJ-2FQA8chnKfKtB71wZb4JzxxGgrD8dmDCvds3zuxbct8qSXnZi=
+aOy2-2FWXOeEkgKParBJl3P1kV-2F42YHMCpakG3BB7U6UiqXTruar1m2XCpkJCIl5p189ijSUO=
+xvYGz1V7b4b-2Fgt0McWYrZ9oBzeFZRAww1ZkmFqkOdKLEtDnbPHGY7kc-2FF-2F5zIthzzoB11=
+TSqc2b65HeFnmfvBc0a4ixq-2FOtytpOfyPn3xjWgfxooLjeuZcNeWZM7VFDnBXkYmBWcc4ZgGv=
+Z8DkGRYL08HTgh8iKeyiV3Kr-2FBpA-2F0-2FvSgk8iJ9ZhKeKM-2F9oPJwJnSJZ-2BqlW3QIrh=
+6fBiqQllCIQTumbstnzQk-2FVSBTEhT4Y1G6Rhj-2FGTGhBVwL2lTBVFQ552alwQkXihSFWiPVw=
+jg9SvEQiEpppjOI6D0OQRAUR8maZchIRv5s7fLSanw0bW-2Fz8gGF-2FPHhVwC8Gj9eNKJ9pjm6=
+6uDzDZJCaDYLgfCHW2GH5IdExHdeJZmrXZYdHaHpr9iJSnFrXNf5ofqvfFLnEshM3QhXvoeEdHf=
+ad3xuHwogp2jVmOJbu5k5Lf4LFwUOJ-2FAOqA2SWxx8-2FRAw-2FyGit2ydTM7VyZdfU-2BjoOE=
+E22pOjj8qjodnTgi3tmb223D-2F1eF4m15Vjl7B27JWfGz3dIZiZSVxIEMWCfLW6Ie2ygo8xygs=
+lzzNlt39kqswam6bewnKOkUc5mOlR8-2Bs2a5oj7-2BwP3Oh0AbFtEIkjKcruJK1lWhXdE-2BaY=
+kP4qYxhqQM12acwESOzJJRKB-2F-2BcbTRH8qyWTVpT9r0fHWTPWGxMygrXKiZZSGCdduoL8JQX=
+O0E6lM69R8GQnmlG] [https://links.riotgames.com/ls/click?upn=3DfrHghcUMWgUZ9=
+OUHJJkDddt-2FoB8L3cswOQa1NUmmpU0YPF87pbbdMbw2MegPCaYYUO9q_H65ljNg3foEJU6dJQ=
+ZHMcp3Zdimzb4muCFBEwI-2BtxR5NHK6uZ9CEatgDkqWlAllrot7R-2B9dkloCX-2BA-2FZupEX=
+LuGP88yhAE-2Biol-2BLpea0VraV0OIEJA2TAi-2FjJ-2FQA8chnKfKtB71wZb4JzxxGgrD8dmD=
+Cvds3zuxbct8qSXnZiaOy2-2FWXOeEkgKParBJl3P1kV-2F42YHMCpakG3BB7U6UiqXTruar1m2=
+XCpkJCIl5p189ijSUOxvYGz1V7b4b-2Fgt0McWYrZ9oBzeFZRAww1ZkmFqkOdKLEtDnbPHGY7kc=
+-2FF-2F5zIthzzoB11TSqc2b65HeFnmfvBc0a4ixq-2FOtytpOfyPn3xjWgfxooLjeuZcNeWZM7=
+VFDnBXkYmBWcc4ZgGvZ8DkGRYL08HTgh8iKeyiV3Kr-2FBpA-2F0-2FvSgk8iJ9ZhKeKM-2F9oP=
+JwJnSJZ-2BqlW3QIrh6fBiqQllCIQTumbstnzQk-2FVSBTEhT4Y1G6Rhj-2FGTGhBVwL2lTBVFQ=
+552alwQkXihSFWiPVwjg9SvEQiEpppjOI6D0OQRAUR8maZchIRv5s7fLSanw0bW-2Fz8gGF-2FP=
+HhVwC8Gj9eNKJ9pjm66uDzDZJCaDYLgfCHW2GH5IdExHdeJZmrXZYdHaHpr9iJSnFrXNf5ofqvf=
+FLnEshM3QhXvoeEdHfad3xuHwogp2jVmOJbu5k5Lf4LFwUOJ-2FAOqA2SWxx8-2FRAw-2FyGit2=
+ydTM7VyZdfU-2BjoOEE22pOjj8qjodnTgi3tmb223D-2F1eF4m15Vjl7B27JWfGz3dIZiZSVxIE=
+MWCfLW6Ie2ygo8xygslzzNlt2U6vVQ3uYlXgXQSohhWNGXdljGS51VzxxPhQCMEzwezGHqFB54Y=
+SNbxq9vnLmnWZquVeHf5wvkatpA-2FoCIa6CqXlErInG-2FyEDX1k4g8wRZhcj1Ojhyz1CR5GIC=
+RVrW6FhvW7XPGWzvCpjiEvuKd5Jo] [https://links.riotgames.com/ls/click?upn=3Df=
+rHghcUMWgUZ9OUHJJkDdeW1wDDOuxHE5MPT4mYfE7Km-2BIj-2FqoBYtvnclS9XtHHOwLcjQMrl=
+zXYJXs9WVzguNw-3D-3D6iyO_H65ljNg3foEJU6dJQZHMcp3Zdimzb4muCFBEwI-2BtxR5NHK6u=
+Z9CEatgDkqWlAllrot7R-2B9dkloCX-2BA-2FZupEXLuGP88yhAE-2Biol-2BLpea0VraV0OIEJ=
+A2TAi-2FjJ-2FQA8chnKfKtB71wZb4JzxxGgrD8dmDCvds3zuxbct8qSXnZiaOy2-2FWXOeEkgK=
+ParBJl3P1kV-2F42YHMCpakG3BB7U6UiqXTruar1m2XCpkJCIl5p189ijSUOxvYGz1V7b4b-2Fg=
+t0McWYrZ9oBzeFZRAww1ZkmFqkOdKLEtDnbPHGY7kc-2FF-2F5zIthzzoB11TSqc2b65HeFnmfv=
+Bc0a4ixq-2FOtytpOfyPn3xjWgfxooLjeuZcNeWZM7VFDnBXkYmBWcc4ZgGvZ8DkGRYL08HTgh8=
+iKeyiV3Kr-2FBpA-2F0-2FvSgk8iJ9ZhKeKM-2F9oPJwJnSJZ-2BqlW3QIrh6fBiqQllCIQTumb=
+stnzQk-2FVSBTEhT4Y1G6Rhj-2FGTGhBVwL2lTBVFQ552alwQkXihSFWiPVwjg9SvEQiEpppjOI=
+6D0OQRAUR8maZchIRv5s7fLSanw0bW-2Fz8gGF-2FPHhVwC8Gj9eNKJ9pjm66uDzDZJCaDYLgfC=
+HW2GH5IdExHdeJZmrXZYdHaHpr9iJSnFrXNf5ofqvfFLnEshM3QhXvoeEdHfad3xuHwogp2jVmO=
+Jbu5k5Lf4LFwUOJ-2FAOqA2SWxx8-2FRAw-2FyGit2ydTM7VyZdfU-2BjoOEE22pOjj8qjodnTg=
+i3tmb223D-2F1eF4m15Vjl7B27JWfGz3dIZiZSVxIEMWCfLW6Ie2ygo8xygslzzNlt2uSkpXOtA=
+8UGuIWg-2BfV31RQ6tSd-2FmxWTZwEqLL1fu3lTYA3nQsfxlByzMqunBTLa5-2BaPJ3cl3x3QY8=
+KT-2FJUeDaVB3Gc-2FJRksaECXw0oSgZws6PsAJKJybyCOSNQ0LnJyp8T-2BjGfeusmN4ynZf2t=
+FF7] [https://links.riotgames.com/ls/click?upn=3DfrHghcUMWgUZ9OUHJJkDdYacmf=
+72C0xFkCmZFR1-2FMJCXifdsHXfEeSFBaqQR7FP1vdH-_H65ljNg3foEJU6dJQZHMcp3Zdimzb4=
+muCFBEwI-2BtxR5NHK6uZ9CEatgDkqWlAllrot7R-2B9dkloCX-2BA-2FZupEXLuGP88yhAE-2B=
+iol-2BLpea0VraV0OIEJA2TAi-2FjJ-2FQA8chnKfKtB71wZb4JzxxGgrD8dmDCvds3zuxbct8q=
+SXnZiaOy2-2FWXOeEkgKParBJl3P1kV-2F42YHMCpakG3BB7U6UiqXTruar1m2XCpkJCIl5p189=
+ijSUOxvYGz1V7b4b-2Fgt0McWYrZ9oBzeFZRAww1ZkmFqkOdKLEtDnbPHGY7kc-2FF-2F5zIthz=
+zoB11TSqc2b65HeFnmfvBc0a4ixq-2FOtytpOfyPn3xjWgfxooLjeuZcNeWZM7VFDnBXkYmBWcc=
+4ZgGvZ8DkGRYL08HTgh8iKeyiV3Kr-2FBpA-2F0-2FvSgk8iJ9ZhKeKM-2F9oPJwJnSJZ-2BqlW=
+3QIrh6fBiqQllCIQTumbstnzQk-2FVSBTEhT4Y1G6Rhj-2FGTGhBVwL2lTBVFQ552alwQkXihSF=
+WiPVwjg9SvEQiEpppjOI6D0OQRAUR8maZchIRv5s7fLSanw0bW-2Fz8gGF-2FPHhVwC8Gj9eNKJ=
+9pjm66uDzDZJCaDYLgfCHW2GH5IdExHdeJZmrXZYdHaHpr9iJSnFrXNf5ofqvfFLnEshM3QhXvo=
+eEdHfad3xuHwogp2jVmOJbu5k5Lf4LFwUOJ-2FAOqA2SWxx8-2FRAw-2FyGit2ydTM7VyZdfU-2=
+BjoOEE22pOjj8qjodnTgi3tmb223D-2F1eF4m15Vjl7B27JWfGz3dIZiZSVxIEMWCfLW6Ie2ygo=
+8xygslzzNlt1q7SF-2FzTTB-2BlIEvSrf4TSPKS-2FK2AMQ7eusyutY7MQvv-2B-2Fs9LUMggUW=
+6tliErVzHBoBqUzpKslR0wC4j8g4c7YPbgC9km62jmx6iG-2BkNbzw29SXUF57tqYVG6cFLHY1Y=
+hprt9kmBX9U1tTVKKrzYzGu] Privacy Notice [https://links.riotgames.com/ls/cli=
+ck?upn=3DfrHghcUMWgUZ9OUHJJkDdaslin-2FqpxTNhpsWvP-2FdJrJu1AH764uHBgIyBk-2F4=
+Tmkwoq4jnWoTputx43iIxRguuw-3D-3DOY06_H65ljNg3foEJU6dJQZHMcp3Zdimzb4muCFBEwI=
+-2BtxR5NHK6uZ9CEatgDkqWlAllrot7R-2B9dkloCX-2BA-2FZupEXLuGP88yhAE-2Biol-2BLp=
+ea0VraV0OIEJA2TAi-2FjJ-2FQA8chnKfKtB71wZb4JzxxGgrD8dmDCvds3zuxbct8qSXnZiaOy=
+2-2FWXOeEkgKParBJl3P1kV-2F42YHMCpakG3BB7U6UiqXTruar1m2XCpkJCIl5p189ijSUOxvY=
+Gz1V7b4b-2Fgt0McWYrZ9oBzeFZRAww1ZkmFqkOdKLEtDnbPHGY7kc-2FF-2F5zIthzzoB11TSq=
+c2b65HeFnmfvBc0a4ixq-2FOtytpOfyPn3xjWgfxooLjeuZcNeWZM7VFDnBXkYmBWcc4ZgGvZ8D=
+kGRYL08HTgh8iKeyiV3Kr-2FBpA-2F0-2FvSgk8iJ9ZhKeKM-2F9oPJwJnSJZ-2BqlW3QIrh6fB=
+iqQllCIQTumbstnzQk-2FVSBTEhT4Y1G6Rhj-2FGTGhBVwL2lTBVFQ552alwQkXihSFWiPVwjg9=
+SvEQiEpppjOI6D0OQRAUR8maZchIRv5s7fLSanw0bW-2Fz8gGF-2FPHhVwC8Gj9eNKJ9pjm66uD=
+zDZJCaDYLgfCHW2GH5IdExHdeJZmrXZYdHaHpr9iJSnFrXNf5ofqvfFLnEshM3QhXvoeEdHfad3=
+xuHwogp2jVmOJbu5k5Lf4LFwUOJ-2FAOqA2SWxx8-2FRAw-2FyGit2ydTM7VyZdfU-2BjoOEE22=
+pOjj8qjodnTgi3tmb223D-2F1eF4m15Vjl7B27JWfGz3dIZiZSVxIEMWCfLW6Ie2ygo8xygslzz=
+Nlt1DWX9cAfaSJ2YUHARvR-2FNVCGXirloO5sNpaouND4oUmnCDcLfGpPDCzaEHtMwou09MSh64=
+5-2BRjInS3iSfHaxoQBPERb8YRKLvsUvlgmWGxXH27HGTo2gtBK0O4wktzv8euPNw-2BmAGuPkZ=
+AF5-2BOAG2X] Support [https://links.riotgames.com/ls/click?upn=3DfrHghcUMWg=
+UZ9OUHJJkDdV7REMamLoc-2FhRJgb3oH2J-2BSyEvX9mRy-2FdzNqE-2Bkmy1p6A5o_H65ljNg3=
+foEJU6dJQZHMcp3Zdimzb4muCFBEwI-2BtxR5NHK6uZ9CEatgDkqWlAllrot7R-2B9dkloCX-2B=
+A-2FZupEXLuGP88yhAE-2Biol-2BLpea0VraV0OIEJA2TAi-2FjJ-2FQA8chnKfKtB71wZb4Jzx=
+xGgrD8dmDCvds3zuxbct8qSXnZiaOy2-2FWXOeEkgKParBJl3P1kV-2F42YHMCpakG3BB7U6Uiq=
+XTruar1m2XCpkJCIl5p189ijSUOxvYGz1V7b4b-2Fgt0McWYrZ9oBzeFZRAww1ZkmFqkOdKLEtD=
+nbPHGY7kc-2FF-2F5zIthzzoB11TSqc2b65HeFnmfvBc0a4ixq-2FOtytpOfyPn3xjWgfxooLje=
+uZcNeWZM7VFDnBXkYmBWcc4ZgGvZ8DkGRYL08HTgh8iKeyiV3Kr-2FBpA-2F0-2FvSgk8iJ9ZhK=
+eKM-2F9oPJwJnSJZ-2BqlW3QIrh6fBiqQllCIQTumbstnzQk-2FVSBTEhT4Y1G6Rhj-2FGTGhBV=
+wL2lTBVFQ552alwQkXihSFWiPVwjg9SvEQiEpppjOI6D0OQRAUR8maZchIRv5s7fLSanw0bW-2F=
+z8gGF-2FPHhVwC8Gj9eNKJ9pjm66uDzDZJCaDYLgfCHW2GH5IdExHdeJZmrXZYdHaHpr9iJSnFr=
+XNf5ofqvfFLnEshM3QhXvoeEdHfad3xuHwogp2jVmOJbu5k5Lf4LFwUOJ-2FAOqA2SWxx8-2FRA=
+w-2FyGit2ydTM7VyZdfU-2BjoOEE22pOjj8qjodnTgi3tmb223D-2F1eF4m15Vjl7B27JWfGz3d=
+IZiZSVxIEMWCfLW6Ie2ygo8xygslzzNlt0cAbTtlTMT9inqZHEwV-2FUjj7oSRSo9qL-2BcZzr-=
+2BkGaexCOoN02viwF1Wvf3bhEXd-2BgTMlSEDGNKEDu-2FLWcOwYKxTxFWGNY4G7ejQDT8Gwu2c=
+7-2Fk6lJQxvUTF5KjcJ1Kzyt41zk6hWNFGf753rutzvfh] Terms of Service [https://li=
+nks.riotgames.com/ls/click?upn=3DfrHghcUMWgUZ9OUHJJkDdaslin-2FqpxTNhpsWvP-2=
+FdJrLts833jmlXiJdeJNj30GTQzR8dmhyHA0Y8gnrJ6Hj03w-3D-3D_Yyw_H65ljNg3foEJU6dJ=
+QZHMcp3Zdimzb4muCFBEwI-2BtxR5NHK6uZ9CEatgDkqWlAllrot7R-2B9dkloCX-2BA-2FZupE=
+XLuGP88yhAE-2Biol-2BLpea0VraV0OIEJA2TAi-2FjJ-2FQA8chnKfKtB71wZb4JzxxGgrD8dm=
+DCvds3zuxbct8qSXnZiaOy2-2FWXOeEkgKParBJl3P1kV-2F42YHMCpakG3BB7U6UiqXTruar1m=
+2XCpkJCIl5p189ijSUOxvYGz1V7b4b-2Fgt0McWYrZ9oBzeFZRAww1ZkmFqkOdKLEtDnbPHGY7k=
+c-2FF-2F5zIthzzoB11TSqc2b65HeFnmfvBc0a4ixq-2FOtytpOfyPn3xjWgfxooLjeuZcNeWZM=
+7VFDnBXkYmBWcc4ZgGvZ8DkGRYL08HTgh8iKeyiV3Kr-2FBpA-2F0-2FvSgk8iJ9ZhKeKM-2F9o=
+PJwJnSJZ-2BqlW3QIrh6fBiqQllCIQTumbstnzQk-2FVSBTEhT4Y1G6Rhj-2FGTGhBVwL2lTBVF=
+Q552alwQkXihSFWiPVwjg9SvEQiEpppjOI6D0OQRAUR8maZchIRv5s7fLSanw0bW-2Fz8gGF-2F=
+PHhVwC8Gj9eNKJ9pjm66uDzDZJCaDYLgfCHW2GH5IdExHdeJZmrXZYdHaHpr9iJSnFrXNf5ofqv=
+fFLnEshM3QhXvoeEdHfad3xuHwogp2jVmOJbu5k5Lf4LFwUOJ-2FAOqA2SWxx8-2FRAw-2FyGit=
+2ydTM7VyZdfU-2BjoOEE22pOjj8qjodnTgi3tmb223D-2F1eF4m15Vjl7B27JWfGz3dIZiZSVxI=
+EMWCfLW6Ie2ygo8xygslzzNlt3-2Bztd-2FcvDmpHa8v8EKx-2BAM61Ervt2rmqWP6jp4i7XvRM=
+SJfyfyR6U7x90BL4pJtOc-2B50fQDaqvSVXHo-2B62qcDA-2FXSADVIVcUJbZPIX4gQx1tmfTUa=
+r6tk7K5XAv8Hd60ph-2FRz42FF1sPsmQ-2BRm9O-2BO] This is a service notification=
+ mailing.Riot=A0Games,=A0Inc. 12333=A0West=A0Olympic=A0Blvd. Los=A0Angeles,=
+ CA=A090064, United=A0States =A9=A02021=A0Riot=A0Games.=A0All=A0rights=A0re=
+served=A9 2021 Riot Games, Inc. Riot Games, League of Legends, Teamfight Ta=
+ctics, League of Legends: Wild Rift, Legends of Runeterra, Valorant, Riot F=
+orge and any associated logos are trademarks, service marks, and/or registe=
+red trademarks of Riot Games, Inc.
+--99b5caa2ef4654198626b56e15cf708cb5f78292b0adfaf6690cd1b21e3e
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset=iso-8859-1
+Mime-Version: 1.0
+
+
+<!DOCTYPE html>
+  <html>
+    <head>
+      <title>spionixofficial, welcome to League of Legends!</title>
+      <style data-styled=3D"gRRrok letYoj iesLdg bKWdgW  dbHDoR fjjgmj cUDB=
+YI gTyoqp jXKNAd ihxxaV leYtTP igPnID hsGnrv hekDfj fwSRlA khUSez daVAfG hT=
+fFsy gkvQUv kETegz fDKKAz EYjjH bcylrB fWRTYy kaZjNq dyzKQB fMLpJh hBMtUu h=
+npSdY dkrsEk hepoDg jJkpob edJNlL iGdrIq btmaIR llBlRx dkAtAn kGiYgn hEnxyo=
+ kikspt efrndc gbFAPr fjokmi kmRvY" data-styled-version=3D"4.4.1">
+@media (max-width:480px) {
+  .hTfFsy {
+    width: 8px !important;
+  }
+}
+@media (max-width:480px) {
+  .gkvQUv {
+    width: 40px !important;
+  }
+}
+@media (max-width:480px) {
+  .kETegz {
+    width: 16px !important;
+  }
+}
+@media (max-width:480px) {
+  .fDKKAz {
+    width: 16px !important;
+  }
+}
+@media (max-width:480px) {
+  .gbFAPr {
+    font-size: 11.24px !important;
+  }
+}
+@media (max-width:360px) {
+  .gbFAPr {
+    white-space: normal !important;
+  }
+}
+@media (max-width:480px) {
+  .kmRvY {
+    margin: 4px 8px !important;
+  }
+}
+@media (max-width:480px) {
+  .kikspt {
+    height: 24px !important;
+    width: 24px !important;
+  }
+}
+@media (max-width:480px) {
+  .dkrsEk {
+    font-size: 9px !important;
+  }
+}
+@media (max-width:480px) {
+  .iGdrIq {
+    width: 100px !important;
+  }
+}
+@media (max-width:480px) {
+  .gRRrok {
+    width: 408px !important;
+    background-image: url(http://cdn.mcauto-images-production.sendgrid.net/=
+6c20475da3226ec8/6b2a91b6-3a13-42fe-8d21-8cf47fb75255/1224x516.png) !import=
+ant;
+  }
+}
+@media (max-width:360px) {
+  .gRRrok {
+    min-height: 100px;
+    height: 128px !important;
+    background-image: url(http://cdn.mcauto-images-production.sendgrid.net/=
+6c20475da3226ec8/6b2a91b6-3a13-42fe-8d21-8cf47fb75255/1224x516.png) !import=
+ant;
+  }
+}
+.letYoj:hover {
+  background: #BD2629 !important;
+}
+@media (max-width:480px) {
+  .letYoj {
+    min-width: 200px !important;
+  }
+}
+@media (max-width:360px) {
+  .letYoj {
+    min-width: 170px !important;
+  }
+}
+@font-face {
+  font-family: "FF Mark W05";
+  src: url(https://lolstatic-a.akamaihd.net/accounts-fonts/FFMarkW05-Medium=
+.662fbc7901e31d6bee9c91d5f2cf42a1.woff2) format("woff2"),url(https://lolsta=
+tic-a.akamaihd.net/accounts-fonts/FFMarkW05-Medium.ef7af500d9837d3d390db15c=
+32e93167.woff) format("woff"),url(https://lolstatic-a.akamaihd.net/accounts=
+-fonts/FFMarkW05-Medium.e857052c6a4c940090ac8470ecdaf9be.ttf) format("truet=
+ype");
+  font-weight: 500;
+  font-style: normal;}
+@font-face {
+  font-family: "FF Mark W05";
+  src: url(https://lolstatic-a.akamaihd.net/accounts-fonts/FFMarkW05-Bold.8=
+e5368c00aa72d1e1b19d7b437c375f4.woff2) format("woff2"),url(https://lolstati=
+c-a.akamaihd.net/accounts-fonts/FFMarkW05-Bold.c3b94209b88cdd5dd4831d6e6db1=
+d723.woff) format("woff"),url(https://lolstatic-a.akamaihd.net/accounts-fon=
+ts/FFMarkW05-Bold.376df397fa3385ce08264528d21520a2.ttf) format("truetype");
+  font-weight: 700;
+  font-style: normal;}
+@font-face {
+  font-family: "FF Mark W05";
+  src: url(https://lolstatic-a.akamaihd.net/accounts-fonts/FFMarkW05-Heavy.=
+1de8fa6eb6e45628ebb3edd635462180.woff2) format("woff2"),url(https://lolstat=
+ic-a.akamaihd.net/accounts-fonts/FFMarkW05-Heavy.00ba90c112c9a1241e19f78688=
+edbd98.woff) format("woff"),url(https://lolstatic-a.akamaihd.net/accounts-f=
+onts/FFMarkW05-Heavy.db74b2aba5f0dbdca5c076d4a32318c2.ttf) format("truetype=
+");
+  font-weight: 800;
+  font-style: normal;}
+@font-face {
+  font-family: "FF Mark W05";
+  src: url(https://lolstatic-a.akamaihd.net/accounts-fonts/FFMarkW05-Ultra.=
+f4c089710fab9b5bf7a12703bed83b8a.woff2) format("woff2"),url(https://lolstat=
+ic-a.akamaihd.net/accounts-fonts/FFMarkW05-Ultra.720bdcb352f14de2f474315da5=
+9a20c5.woff) format("woff"),url(https://lolstatic-a.akamaihd.net/accounts-f=
+onts/FFMarkW05-Ultra.91a91bc3cd2163aae787cc4d4f955c7f.ttf) format("truetype=
+");
+  font-weight: 900;
+  font-style: normal;}
+@media (max-width:480px) {
+  body,
+table,
+td,
+p,
+a,
+li,
+blockquote {
+    -webkit-text-size-adjust: none !important;
+  }
+
+  body {
+    width: 100% !important;
+    min-width: 100% !important;
+  }
+}
+.reset__links a {
+  color: #999 !important;
+  -webkit-text-decoration: none !important;
+  text-decoration: none !important;
+}
+</style>
+    </head>
+      <body style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: =
+100%; padding: 0; margin: 0; height: 100%; width: 100%; font-family: 'FF Ma=
+rk W05',Arial,sans-serif;">
+     =20
+  <!--[if mso | IE]>
+  <style type=3D"text/css">
+    html, body, table, td, h1, h2, p, span { font-family: Arial, Helvetica,=
+ sans-serif !important; }
+    body > * { width: 600px !important; margin: 0 auto !important;}
+  </style>
+  <table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"padding:=
+0;margin:0;width:100%;">
+    <tr>
+      <td style=3D"padding:0;margin:0;">&nbsp;</td>
+      <td style=3D"padding:0;margin:0;" width=3D"600">
+  <![endif]-->
+  <div class=3D"sc-hSdWYo iesLdg" style=3D"margin: 0 auto; max-width: 600px=
+; display: block; font-family: inherit;"><table cellpadding=3D"0" cellspaci=
+ng=3D"0" class=3D"sc-eHgmQL bKWdgW" style=3D"-webkit-text-size-adjust: 100%=
+; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt;=
+ padding: 0; border-spacing: 0; -webkit-border-horizontal-spacing: 0; -webk=
+it-border-vertical-spacing: 0; background: #F0F0F0; border: 0; margin: 0; t=
+ext-align: center; vertical-align: middle; font-weight: 500; table-layout: =
+fixed; border-collapse: collapse; height: 100%; width: 100%; line-height: 1=
+00%;" width=3D"100%" height=3D"100%" align=3D"center" valign=3D"middle"><tr=
+ class=3D"sc-cvbbAY dbHDoR" style=3D"margin: 0; padding: 0; border: none; b=
+order-spacing: 0; -webkit-border-horizontal-spacing: 0; -webkit-border-vert=
+ical-spacing: 0; border-collapse: collapse; font-family: inherit;"><td clas=
+s=3D"sc-jWBwVP fjjgmj" style=3D"-webkit-text-size-adjust: 100%; -ms-text-si=
+ze-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; margin: 0; p=
+adding: 0; border: none; border-spacing: 0; -webkit-border-horizontal-spaci=
+ng: 0; -webkit-border-vertical-spacing: 0; background: #F0F0F0; border-coll=
+apse: collapse; font-family: inherit;"><table class=3D"sc-bwzfXH cUDBYI" ce=
+llpadding=3D"0" cellspacing=3D"0" style=3D"-webkit-text-size-adjust: 100%; =
+-ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; m=
+argin: 0; border-spacing: 0; -webkit-border-horizontal-spacing: 0; -webkit-=
+border-vertical-spacing: 0; border: 0; padding: 0; width: 100%; border-coll=
+apse: collapse;" width=3D"100%"><tr style=3D"margin: 0; padding: 0; border:=
+ none; border-spacing: 0; -webkit-border-horizontal-spacing: 0; -webkit-bor=
+der-vertical-spacing: 0; border-collapse: collapse; font-family: inherit;">=
+<td style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; ms=
+o-table-lspace: 0pt; mso-table-rspace: 0pt; margin: 0; padding: 0; border: =
+none; border-spacing: 0; -webkit-border-horizontal-spacing: 0; -webkit-bord=
+er-vertical-spacing: 0; border-collapse: collapse; font-family: inherit;">
+<!--[if !(mso | IE)]><!-- -->
+  <table cellpadding=3D"0" cellspacing=3D"0" style=3D"-webkit-text-size-adj=
+ust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rsp=
+ace: 0pt; margin: 0; padding: 0; border: none; border-spacing: 0; -webkit-b=
+order-horizontal-spacing: 0; -webkit-border-vertical-spacing: 0; width: 100=
+%; border-collapse: collapse;" width=3D"100%"><tr style=3D"margin: 0; paddi=
+ng: 0; border: none; border-spacing: 0; -webkit-border-horizontal-spacing: =
+0; -webkit-border-vertical-spacing: 0; border-collapse: collapse; font-fami=
+ly: inherit;"><td class=3D"sc-kGXeez gRRrok" style=3D"-webkit-text-size-adj=
+ust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rsp=
+ace: 0pt; margin: 0; padding: 0; border: none; border-spacing: 0; -webkit-b=
+order-horizontal-spacing: 0; -webkit-border-vertical-spacing: 0; background=
+-image: url(http://cdn.mcauto-images-production.sendgrid.net/6c20475da3226e=
+c8/3246920f-64cf-4140-95f3-08191995a744/1836x516.png); background-size: cov=
+er; width: 612px; height: 146px; text-align: center; border-collapse: colla=
+pse; font-family: inherit;" width=3D"612" height=3D"146" background=3D"http=
+://cdn.mcauto-images-production.sendgrid.net/6c20475da3226ec8/3246920f-64cf=
+-4140-95f3-08191995a744/1836x516.png" align=3D"center"></td></tr></table>
+<!--<![endif]-->
+<!--[if mso | IE]>
+  <img width=3D"612" src=3D"http://cdn.mcauto-images-production.sendgrid.ne=
+t/6c20475da3226ec8/3246920f-64cf-4140-95f3-08191995a744/1836x516.png" alt=
+=3D"Riot Games logo" />
+<![endif]-->
+</td></tr><tr style=3D"margin: 0; padding: 0; border: none; border-spacing:=
+ 0; -webkit-border-horizontal-spacing: 0; -webkit-border-vertical-spacing: =
+0; border-collapse: collapse; font-family: inherit;"><td colspan=3D"1" clas=
+s=3D"sc-EHOje gTyoqp" style=3D"-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; margin: 0; pa=
+dding: 0; border: none; border-spacing: 0; -webkit-border-horizontal-spacin=
+g: 0; -webkit-border-vertical-spacing: 0; height: 24px; border-collapse: co=
+llapse; font-family: inherit;" height=3D"24"><table style=3D"-webkit-text-s=
+ize-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-ta=
+ble-rspace: 0pt; margin: 0; padding: 0; border: none; border-spacing: 0; -w=
+ebkit-border-horizontal-spacing: 0; -webkit-border-vertical-spacing: 0; wid=
+th: 100%; border-collapse: collapse;" width=3D"100%"></table></td></tr><tr =
+style=3D"margin: 0; padding: 0; border: none; border-spacing: 0; -webkit-bo=
+rder-horizontal-spacing: 0; -webkit-border-vertical-spacing: 0; border-coll=
+apse: collapse; font-family: inherit;"><td class=3D"sc-bdVaJa khUSez" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-l=
+space: 0pt; mso-table-rspace: 0pt; margin: 0; padding: 0; border: none; bor=
+der-spacing: 0; -webkit-border-horizontal-spacing: 0; -webkit-border-vertic=
+al-spacing: 0; text-align: center; border-collapse: collapse; font-family: =
+inherit;" align=3D"center"><table cellpadding=3D"0" cellspacing=3D"0" class=
+=3D"sc-htpNat daVAfG" style=3D"-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; margin: 0; pa=
+dding: 0; border: none; border-spacing: 0; -webkit-border-horizontal-spacin=
+g: 0; -webkit-border-vertical-spacing: 0; width: 100%; border-collapse: col=
+lapse;" width=3D"100%"><tr style=3D"margin: 0; padding: 0; border: none; bo=
+rder-spacing: 0; -webkit-border-horizontal-spacing: 0; -webkit-border-verti=
+cal-spacing: 0; border-collapse: collapse; font-family: inherit;"><td class=
+=3D"sc-ifAKCX hTfFsy" style=3D"-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; margin: 0; pa=
+dding: 0; border: none; border-spacing: 0; -webkit-border-horizontal-spacin=
+g: 0; -webkit-border-vertical-spacing: 0; height: 100%; overflow: hidden; w=
+idth: 72px; border-collapse: collapse; font-family: inherit;" width=3D"72" =
+height=3D"100%"><div class=3D"sc-ifAKCX hTfFsy" style=3D"height: 100%; over=
+flow: hidden; width: 72px; font-family: inherit;"></div></td><td class=3D"s=
+c-bxivhb EYjjH" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adju=
+st: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; margin: 0; padding:=
+ 0; border: none; border-spacing: 0; -webkit-border-horizontal-spacing: 0; =
+-webkit-border-vertical-spacing: 0; text-align: center; border-collapse: co=
+llapse; font-family: inherit;" align=3D"center"><h1 class=3D"sc-cMljjf bcyl=
+rB" style=3D"font-size: 32px; font-weight: 500; -webkit-letter-spacing: 0.0=
+1em; -moz-letter-spacing: 0.01em; -ms-letter-spacing: 0.01em; letter-spacin=
+g: 0.01em; color: #141212; text-align: center; line-height: 39px; margin: 0=
+; font-family: inherit;">The Fields of Justice Await</h1></td><td class=3D"=
+sc-ifAKCX hTfFsy" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-ad=
+just: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; margin: 0; paddin=
+g: 0; border: none; border-spacing: 0; -webkit-border-horizontal-spacing: 0=
+; -webkit-border-vertical-spacing: 0; height: 100%; overflow: hidden; width=
+: 72px; border-collapse: collapse; font-family: inherit;" width=3D"72" heig=
+ht=3D"100%"><div class=3D"sc-ifAKCX hTfFsy" style=3D"height: 100%; overflow=
+: hidden; width: 72px; font-family: inherit;"></div></td></tr></table></td>=
+</tr><tr style=3D"margin: 0; padding: 0; border: none; border-spacing: 0; -=
+webkit-border-horizontal-spacing: 0; -webkit-border-vertical-spacing: 0; bo=
+rder-collapse: collapse; font-family: inherit;"><td class=3D"sc-bdVaJa khUS=
+ez" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; ms=
+o-table-lspace: 0pt; mso-table-rspace: 0pt; margin: 0; padding: 0; border: =
+none; border-spacing: 0; -webkit-border-horizontal-spacing: 0; -webkit-bord=
+er-vertical-spacing: 0; text-align: center; border-collapse: collapse; font=
+-family: inherit;" align=3D"center"><table cellpadding=3D"0" cellspacing=3D=
+"0" class=3D"sc-htpNat daVAfG" style=3D"-webkit-text-size-adjust: 100%; -ms=
+-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; marg=
+in: 0; padding: 0; border: none; border-spacing: 0; -webkit-border-horizont=
+al-spacing: 0; -webkit-border-vertical-spacing: 0; width: 100%; border-coll=
+apse: collapse;" width=3D"100%"><tr style=3D"margin: 0; padding: 0; border:=
+ none; border-spacing: 0; -webkit-border-horizontal-spacing: 0; -webkit-bor=
+der-vertical-spacing: 0; border-collapse: collapse; font-family: inherit;">=
+<td colspan=3D"3" class=3D"sc-EHOje jXKNAd" style=3D"-webkit-text-size-adju=
+st: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspa=
+ce: 0pt; margin: 0; padding: 0; border: none; border-spacing: 0; -webkit-bo=
+rder-horizontal-spacing: 0; -webkit-border-vertical-spacing: 0; height: 64p=
+x; border-collapse: collapse; font-family: inherit;" height=3D"64"><table s=
+tyle=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-tab=
+le-lspace: 0pt; mso-table-rspace: 0pt; margin: 0; padding: 0; border: none;=
+ border-spacing: 0; -webkit-border-horizontal-spacing: 0; -webkit-border-ve=
+rtical-spacing: 0; width: 100%; border-collapse: collapse;" width=3D"100%">=
+</table></td></tr><tr style=3D"margin: 0; padding: 0; border: none; border-=
+spacing: 0; -webkit-border-horizontal-spacing: 0; -webkit-border-vertical-s=
+pacing: 0; border-collapse: collapse; font-family: inherit;"><td class=3D"s=
+c-ifAKCX hTfFsy" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adj=
+ust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; margin: 0; padding=
+: 0; border: none; border-spacing: 0; -webkit-border-horizontal-spacing: 0;=
+ -webkit-border-vertical-spacing: 0; height: 100%; overflow: hidden; width:=
+ 72px; border-collapse: collapse; font-family: inherit;" width=3D"72" heigh=
+t=3D"100%"><div class=3D"sc-ifAKCX hTfFsy" style=3D"height: 100%; overflow:=
+ hidden; width: 72px; font-family: inherit;"></div></td><td class=3D"sc-bxi=
+vhb EYjjH" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 1=
+00%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; margin: 0; padding: 0; b=
+order: none; border-spacing: 0; -webkit-border-horizontal-spacing: 0; -webk=
+it-border-vertical-spacing: 0; text-align: center; border-collapse: collaps=
+e; font-family: inherit;" align=3D"center"><table cellpadding=3D"0" cellspa=
+cing=3D"0" class=3D"sc-htpNat daVAfG sc-ckVGcZ fWRTYy" style=3D"-webkit-tex=
+t-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso=
+-table-rspace: 0pt; margin: 0; padding: 0; border: none; border-spacing: 0;=
+ -webkit-border-horizontal-spacing: 0; -webkit-border-vertical-spacing: 0; =
+width: 100%; background-color: #F9F9F9; border-collapse: collapse;" width=
+=3D"100%" bgcolor=3D"#F9F9F9"><tr style=3D"margin: 0; padding: 0; border: n=
+one; border-spacing: 0; -webkit-border-horizontal-spacing: 0; -webkit-borde=
+r-vertical-spacing: 0; border-collapse: collapse; font-family: inherit;"><t=
+d colspan=3D"3" class=3D"sc-EHOje ihxxaV" style=3D"-webkit-text-size-adjust=
+: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace=
+: 0pt; margin: 0; padding: 0; border: none; border-spacing: 0; -webkit-bord=
+er-horizontal-spacing: 0; -webkit-border-vertical-spacing: 0; height: 40px;=
+ border-collapse: collapse; font-family: inherit;" height=3D"40"><table sty=
+le=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table=
+-lspace: 0pt; mso-table-rspace: 0pt; margin: 0; padding: 0; border: none; b=
+order-spacing: 0; -webkit-border-horizontal-spacing: 0; -webkit-border-vert=
+ical-spacing: 0; width: 100%; border-collapse: collapse;" width=3D"100%"></=
+table></td></tr><tr style=3D"margin: 0; padding: 0; border: none; border-sp=
+acing: 0; -webkit-border-horizontal-spacing: 0; -webkit-border-vertical-spa=
+cing: 0; border-collapse: collapse; font-family: inherit;"><td class=3D"sc-=
+ifAKCX gkvQUv" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjus=
+t: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; margin: 0; padding: =
+0; border: none; border-spacing: 0; -webkit-border-horizontal-spacing: 0; -=
+webkit-border-vertical-spacing: 0; height: 100%; overflow: hidden; width: 3=
+8px; border-collapse: collapse; font-family: inherit;" width=3D"38" height=
+=3D"100%"><div class=3D"sc-ifAKCX gkvQUv" style=3D"height: 100%; overflow: =
+hidden; width: 38px; font-family: inherit;"></div></td><td class=3D"sc-bxiv=
+hb EYjjH" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 10=
+0%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; margin: 0; padding: 0; bo=
+rder: none; border-spacing: 0; -webkit-border-horizontal-spacing: 0; -webki=
+t-border-vertical-spacing: 0; text-align: center; border-collapse: collapse=
+; font-family: inherit;" align=3D"center"><table class=3D"sc-jKJlTe kaZjNq"=
+ style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-t=
+able-lspace: 0pt; mso-table-rspace: 0pt; margin: 0; padding: 0; border: non=
+e; border-spacing: 0; -webkit-border-horizontal-spacing: 0; -webkit-border-=
+vertical-spacing: 0; width: 100%; table-layout: fixed; border-collapse: col=
+lapse;" width=3D"100%"><tr style=3D"margin: 0; padding: 0; border: none; bo=
+rder-spacing: 0; -webkit-border-horizontal-spacing: 0; -webkit-border-verti=
+cal-spacing: 0; border-collapse: collapse; font-family: inherit;"><td colsp=
+an=3D"1" class=3D"sc-EHOje leYtTP" style=3D"-webkit-text-size-adjust: 100%;=
+ -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; =
+margin: 0; padding: 0; border: none; border-spacing: 0; -webkit-border-hori=
+zontal-spacing: 0; -webkit-border-vertical-spacing: 0; height: 8px; border-=
+collapse: collapse; font-family: inherit;" height=3D"8"><table style=3D"-we=
+bkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: =
+0pt; mso-table-rspace: 0pt; margin: 0; padding: 0; border: none; border-spa=
+cing: 0; -webkit-border-horizontal-spacing: 0; -webkit-border-vertical-spac=
+ing: 0; width: 100%; border-collapse: collapse;" width=3D"100%"></table></t=
+d></tr><tr style=3D"margin: 0; padding: 0; border: none; border-spacing: 0;=
+ -webkit-border-horizontal-spacing: 0; -webkit-border-vertical-spacing: 0; =
+border-collapse: collapse; font-family: inherit;"><td class=3D"sc-bxivhb EY=
+jjH" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; m=
+so-table-lspace: 0pt; mso-table-rspace: 0pt; margin: 0; padding: 0; border:=
+ none; border-spacing: 0; -webkit-border-horizontal-spacing: 0; -webkit-bor=
+der-vertical-spacing: 0; text-align: center; border-collapse: collapse; fon=
+t-family: inherit;" align=3D"center"><p class=3D"sc-kEYyzF dyzKQB" style=3D=
+"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; margin: 0; pad=
+ding: 0; font-weight: 500; font-size: 18px; line-height: 140%; -webkit-lett=
+er-spacing: -0.01em; -moz-letter-spacing: -0.01em; -ms-letter-spacing: -0.0=
+1em; letter-spacing: -0.01em; color: #666; font-family: inherit;">Congratul=
+ations on your acceptance into the League of Legends! The time has come to =
+prove yourself in battle! Summon powerful champions, hone your skill, and g=
+o head to head with other summoners in the greatest competition in Valoran.=
+</p></td></tr><tr style=3D"margin: 0; padding: 0; border: none; border-spac=
+ing: 0; -webkit-border-horizontal-spacing: 0; -webkit-border-vertical-spaci=
+ng: 0; border-collapse: collapse; font-family: inherit;"><td colspan=3D"1" =
+class=3D"sc-EHOje ihxxaV" style=3D"-webkit-text-size-adjust: 100%; -ms-text=
+-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; margin: 0=
+; padding: 0; border: none; border-spacing: 0; -webkit-border-horizontal-sp=
+acing: 0; -webkit-border-vertical-spacing: 0; height: 40px; border-collapse=
+: collapse; font-family: inherit;" height=3D"40"><table style=3D"-webkit-te=
+xt-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; ms=
+o-table-rspace: 0pt; margin: 0; padding: 0; border: none; border-spacing: 0=
+; -webkit-border-horizontal-spacing: 0; -webkit-border-vertical-spacing: 0;=
+ width: 100%; border-collapse: collapse;" width=3D"100%"></table></td></tr>=
+<tr style=3D"margin: 0; padding: 0; border: none; border-spacing: 0; -webki=
+t-border-horizontal-spacing: 0; -webkit-border-vertical-spacing: 0; border-=
+collapse: collapse; font-family: inherit;"><td class=3D"sc-bxivhb EYjjH" st=
+yle=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-tabl=
+e-lspace: 0pt; mso-table-rspace: 0pt; margin: 0; padding: 0; border: none; =
+border-spacing: 0; -webkit-border-horizontal-spacing: 0; -webkit-border-ver=
+tical-spacing: 0; text-align: center; border-collapse: collapse; font-famil=
+y: inherit;" align=3D"center"><p class=3D"sc-kEYyzF dyzKQB" style=3D"-webki=
+t-text-size-adjust: 100%; -ms-text-size-adjust: 100%; margin: 0; padding: 0=
+; font-weight: 500; font-size: 18px; line-height: 140%; -webkit-letter-spac=
+ing: -0.01em; -moz-letter-spacing: -0.01em; -ms-letter-spacing: -0.01em; le=
+tter-spacing: -0.01em; color: #666; font-family: inherit;">Want to learn th=
+e basics of being a summoner? Check out our <a href=3D"https://links.riotga=
+mes.com/ls/click?upn=3DYjt6zeV-2B-2BLaZEWP-2BW7PlFSrSUvCNDEUIpoocrAlsJ-2Fpu=
+WTg7ITCS3A6LVvGa2aeNZsT9urvEvHPJ5V9moyVtZet2Kc1vtcOh5C2fJypJmwkprIaUnGpi4A-=
+2FujOM6GCUMBZER_H65ljNg3foEJU6dJQZHMcp3Zdimzb4muCFBEwI-2BtxR5NHK6uZ9CEatgDk=
+qWlAllrot7R-2B9dkloCX-2BA-2FZupEXLuGP88yhAE-2Biol-2BLpea0VraV0OIEJA2TAi-2Fj=
+J-2FQA8chnKfKtB71wZb4JzxxGgrD8dmDCvds3zuxbct8qSXnZiaOy2-2FWXOeEkgKParBJl3P1=
+kV-2F42YHMCpakG3BB7U6UiqXTruar1m2XCpkJCIl5p189ijSUOxvYGz1V7b4b-2Fgt0McWYrZ9=
+oBzeFZRAww1ZkmFqkOdKLEtDnbPHGY7kc-2FF-2F5zIthzzoB11TSqc2b65HeFnmfvBc0a4ixq-=
+2FOtytpOfyPn3xjWgfxooLjeuZcNeWZM7VFDnBXkYmBWcc4ZgGvZ8DkGRYL08HTgh8iKeyiV3Kr=
+-2FBpA-2F0-2FvSgk8iJ9ZhKeKM-2F9oPJwJnSJZ-2BqlW3QIrh6fBiqQllCIQTumbstnzQk-2F=
+VSBTEhT4Y1G6Rhj-2FGTGhBVwL2lTBVFQ552alwQkXihSFWiPVwjg9SvEQiEpppjOI6D0OQRAUR=
+8maZchIRv5s7fLSanw0bW-2Fz8gGF-2FPHhVwC8Gj9eNKJ9pjm66uDzDZJCaDYLgfCHW2GH5IdE=
+xHdeJZmrXZYdHaHpr9iJSnFrXNf5ofqvfFLnEshM3QhXvoeEdHfad3xuHwogp2jVmOJbu5k5Lf4=
+LFwUOJ-2FAOqA2SWxx8-2FRAw-2FyGit2ydTM7VyZdfU-2BjoOEE22pOjj8qjodnTgi3tmb223D=
+-2F1eF4m15Vjl7B27JWfGz3dIZiZSVxIEMWCfLW6Ie2ygo8xygslzzNlt0qGktqdEyGTyvDXouQ=
+SKbjO8wl1w7m3npxZ0W5va6fWzGJHdRDcif0IXRWw46DgZjsKWCVKfuvZkg8POCKbGJQulDIoJt=
+Z6-2Fq8h9aMVoKGx4qKsuj4WC2OmlfYrj43JSeC0cKPHI7VOjv1p-2FS1-2FpxT" style=3D"-=
+webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; color: #BD2225; =
+-webkit-text-decoration: underline; text-decoration: underline;">new user g=
+uide</a></p></td></tr><tr style=3D"margin: 0; padding: 0; border: none; bor=
+der-spacing: 0; -webkit-border-horizontal-spacing: 0; -webkit-border-vertic=
+al-spacing: 0; border-collapse: collapse; font-family: inherit;"><td colspa=
+n=3D"1" class=3D"sc-EHOje ihxxaV" style=3D"-webkit-text-size-adjust: 100%; =
+-ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; m=
+argin: 0; padding: 0; border: none; border-spacing: 0; -webkit-border-horiz=
+ontal-spacing: 0; -webkit-border-vertical-spacing: 0; height: 40px; border-=
+collapse: collapse; font-family: inherit;" height=3D"40"><table style=3D"-w=
+ebkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace:=
+ 0pt; mso-table-rspace: 0pt; margin: 0; padding: 0; border: none; border-sp=
+acing: 0; -webkit-border-horizontal-spacing: 0; -webkit-border-vertical-spa=
+cing: 0; width: 100%; border-collapse: collapse;" width=3D"100%"></table></=
+td></tr><tr style=3D"margin: 0; padding: 0; border: none; border-spacing: 0=
+; -webkit-border-horizontal-spacing: 0; -webkit-border-vertical-spacing: 0;=
+ border-collapse: collapse; font-family: inherit;"><td class=3D"sc-bxivhb E=
+YjjH" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; =
+mso-table-lspace: 0pt; mso-table-rspace: 0pt; margin: 0; padding: 0; border=
+: none; border-spacing: 0; -webkit-border-horizontal-spacing: 0; -webkit-bo=
+rder-vertical-spacing: 0; text-align: center; border-collapse: collapse; fo=
+nt-family: inherit;" align=3D"center"><p class=3D"sc-kEYyzF dyzKQB" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; margin: 0; =
+padding: 0; font-weight: 500; font-size: 18px; line-height: 140%; -webkit-l=
+etter-spacing: -0.01em; -moz-letter-spacing: -0.01em; -ms-letter-spacing: -=
+0.01em; letter-spacing: -0.01em; color: #666; font-family: inherit;">Userna=
+me:</p><h2 style=3D"font-size: 25.63px; font-weight: 700; line-height: 100%=
+; color: #333; margin: 0; text-align: center; margin-top: 8px; font-family:=
+ inherit;" class=3D"sc-eNQAEJ fMLpJh">spionixofficial</h2></td></tr><tr sty=
+le=3D"margin: 0; padding: 0; border: none; border-spacing: 0; -webkit-borde=
+r-horizontal-spacing: 0; -webkit-border-vertical-spacing: 0; border-collaps=
+e: collapse; font-family: inherit;"><td colspan=3D"1" class=3D"sc-EHOje ihx=
+xaV" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; m=
+so-table-lspace: 0pt; mso-table-rspace: 0pt; margin: 0; padding: 0; border:=
+ none; border-spacing: 0; -webkit-border-horizontal-spacing: 0; -webkit-bor=
+der-vertical-spacing: 0; height: 40px; border-collapse: collapse; font-fami=
+ly: inherit;" height=3D"40"><table style=3D"-webkit-text-size-adjust: 100%;=
+ -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; =
+margin: 0; padding: 0; border: none; border-spacing: 0; -webkit-border-hori=
+zontal-spacing: 0; -webkit-border-vertical-spacing: 0; width: 100%; border-=
+collapse: collapse;" width=3D"100%"></table></td></tr><tr style=3D"margin: =
+0; padding: 0; border: none; border-spacing: 0; -webkit-border-horizontal-s=
+pacing: 0; -webkit-border-vertical-spacing: 0; border-collapse: collapse; f=
+ont-family: inherit;"><td class=3D"sc-bxivhb EYjjH" style=3D"-webkit-text-s=
+ize-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-ta=
+ble-rspace: 0pt; margin: 0; padding: 0; border: none; border-spacing: 0; -w=
+ebkit-border-horizontal-spacing: 0; -webkit-border-vertical-spacing: 0; tex=
+t-align: center; border-collapse: collapse; font-family: inherit;" align=3D=
+"center"><div style=3D"font-family: inherit;">
+    <!--[if mso | IE]>
+      <v:roundrect
+        xmlns:v=3D"urn:schemas-microsoft-com:vml"
+        xmlns:w=3D"urn:schemas-microsoft-com:office:word"
+        href=3D"https://signup.euw.leagueoflegends.com/en/signup/redownload=
+"
+        style=3D"width:300px;height:68px;v-text-anchor:middle;"
+        arcsize=3D"19%"
+        fillcolor=3D"#D13639"
+        stroke=3D"f"
+      >
+        <w:anchorlock />
+        <center style=3D"color:#F9F9F9;font-weight:700;font-size:18px;font-=
+family:sans-serif;">
+    <![endif]-->
+      <a href=3D"https://links.riotgames.com/ls/click?upn=3DfrHghcUMWgUZ9OU=
+HJJkDdajHx6U86Svh31pZQWdqSVi-2FXKOP3CfeuGcTKYnAao4UfAyrX0SLlN30ptU4F81Q3QgI=
+rpj8NGhKCMS8nlD5A88-3DR-eg_H65ljNg3foEJU6dJQZHMcp3Zdimzb4muCFBEwI-2BtxR5NHK=
+6uZ9CEatgDkqWlAllrot7R-2B9dkloCX-2BA-2FZupEXLuGP88yhAE-2Biol-2BLpea0VraV0OI=
+EJA2TAi-2FjJ-2FQA8chnKfKtB71wZb4JzxxGgrD8dmDCvds3zuxbct8qSXnZiaOy2-2FWXOeEk=
+gKParBJl3P1kV-2F42YHMCpakG3BB7U6UiqXTruar1m2XCpkJCIl5p189ijSUOxvYGz1V7b4b-2=
+Fgt0McWYrZ9oBzeFZRAww1ZkmFqkOdKLEtDnbPHGY7kc-2FF-2F5zIthzzoB11TSqc2b65HeFnm=
+fvBc0a4ixq-2FOtytpOfyPn3xjWgfxooLjeuZcNeWZM7VFDnBXkYmBWcc4ZgGvZ8DkGRYL08HTg=
+h8iKeyiV3Kr-2FBpA-2F0-2FvSgk8iJ9ZhKeKM-2F9oPJwJnSJZ-2BqlW3QIrh6fBiqQllCIQTu=
+mbstnzQk-2FVSBTEhT4Y1G6Rhj-2FGTGhBVwL2lTBVFQ552alwQkXihSFWiPVwjg9SvEQiEpppj=
+OI6D0OQRAUR8maZchIRv5s7fLSanw0bW-2Fz8gGF-2FPHhVwC8Gj9eNKJ9pjm66uDzDZJCaDYLg=
+fCHW2GH5IdExHdeJZmrXZYdHaHpr9iJSnFrXNf5ofqvfFLnEshM3QhXvoeEdHfad3xuHwogp2jV=
+mOJbu5k5Lf4LFwUOJ-2FAOqA2SWxx8-2FRAw-2FyGit2ydTM7VyZdfU-2BjoOEE22pOjj8qjodn=
+Tgi3tmb223D-2F1eF4m15Vjl7B27JWfGz3dIZiZSVxIEMWCfLW6Ie2ygo8xygslzzNlt11HYrAG=
+jhBCorQ82-2FH5qjZOhTnDkRDOfyM3qp3urYDBz6EKSjE5VwLrh263tvrS6Ae-2Fpo2o8XQsWLe=
+PE0PscceGOqV1eM6MclhmLmxCfv870BsC0dEI7yUtiKKvwA6z8g9XvkYaOJ7ytsevf5qG3j8" t=
+arget=3D"_blank" class=3D"sc-iAyFgw letYoj" style=3D"-webkit-text-size-adju=
+st: 100%; -ms-text-size-adjust: 100%; min-width: 300px; background: #D13639=
+; border-radius: 12.8px; padding: 25.5px 19px 26.5px 19px; text-align: cent=
+er; font-size: 18px; font-weight: 700; color: #F9F9F9; display: inline-bloc=
+k; -webkit-text-decoration: none; text-decoration: none; line-height: 120%;=
+">Download the game!</a>
+    <!--[if mso | IE]>
+        </center>
+      </v:roundrect>
+    <![endif]-->
+  </div></td></tr><tr style=3D"margin: 0; padding: 0; border: none; border-=
+spacing: 0; -webkit-border-horizontal-spacing: 0; -webkit-border-vertical-s=
+pacing: 0; border-collapse: collapse; font-family: inherit;"><td colspan=3D=
+"1" class=3D"sc-EHOje gTyoqp" style=3D"-webkit-text-size-adjust: 100%; -ms-=
+text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; margi=
+n: 0; padding: 0; border: none; border-spacing: 0; -webkit-border-horizonta=
+l-spacing: 0; -webkit-border-vertical-spacing: 0; height: 24px; border-coll=
+apse: collapse; font-family: inherit;" height=3D"24"><table style=3D"-webki=
+t-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt=
+; mso-table-rspace: 0pt; margin: 0; padding: 0; border: none; border-spacin=
+g: 0; -webkit-border-horizontal-spacing: 0; -webkit-border-vertical-spacing=
+: 0; width: 100%; border-collapse: collapse;" width=3D"100%"></table></td><=
+/tr><tr style=3D"margin: 0; padding: 0; border: none; border-spacing: 0; -w=
+ebkit-border-horizontal-spacing: 0; -webkit-border-vertical-spacing: 0; bor=
+der-collapse: collapse; font-family: inherit;"><td class=3D"sc-bxivhb EYjjH=
+" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-=
+table-lspace: 0pt; mso-table-rspace: 0pt; margin: 0; padding: 0; border: no=
+ne; border-spacing: 0; -webkit-border-horizontal-spacing: 0; -webkit-border=
+-vertical-spacing: 0; text-align: center; border-collapse: collapse; font-f=
+amily: inherit;" align=3D"center"><a href=3D"https://links.riotgames.com/ls=
+/click?upn=3Dg5C7488IQMTKgB7yJy5bzD1YScXqpOwBJ9uB8IxprbrLrk2FIel0E3-2Bu-2FO=
+gZLdvmcBH6pgDbJPs2arMbd9Ih4oW9NPPEZxGJ198DRAzDEfY-3Dh71M_H65ljNg3foEJU6dJQZ=
+HMcp3Zdimzb4muCFBEwI-2BtxR5NHK6uZ9CEatgDkqWlAllrot7R-2B9dkloCX-2BA-2FZupEXL=
+uGP88yhAE-2Biol-2BLpea0VraV0OIEJA2TAi-2FjJ-2FQA8chnKfKtB71wZb4JzxxGgrD8dmDC=
+vds3zuxbct8qSXnZiaOy2-2FWXOeEkgKParBJl3P1kV-2F42YHMCpakG3BB7U6UiqXTruar1m2X=
+CpkJCIl5p189ijSUOxvYGz1V7b4b-2Fgt0McWYrZ9oBzeFZRAww1ZkmFqkOdKLEtDnbPHGY7kc-=
+2FF-2F5zIthzzoB11TSqc2b65HeFnmfvBc0a4ixq-2FOtytpOfyPn3xjWgfxooLjeuZcNeWZM7V=
+FDnBXkYmBWcc4ZgGvZ8DkGRYL08HTgh8iKeyiV3Kr-2FBpA-2F0-2FvSgk8iJ9ZhKeKM-2F9oPJ=
+wJnSJZ-2BqlW3QIrh6fBiqQllCIQTumbstnzQk-2FVSBTEhT4Y1G6Rhj-2FGTGhBVwL2lTBVFQ5=
+52alwQkXihSFWiPVwjg9SvEQiEpppjOI6D0OQRAUR8maZchIRv5s7fLSanw0bW-2Fz8gGF-2FPH=
+hVwC8Gj9eNKJ9pjm66uDzDZJCaDYLgfCHW2GH5IdExHdeJZmrXZYdHaHpr9iJSnFrXNf5ofqvfF=
+LnEshM3QhXvoeEdHfad3xuHwogp2jVmOJbu5k5Lf4LFwUOJ-2FAOqA2SWxx8-2FRAw-2FyGit2y=
+dTM7VyZdfU-2BjoOEE22pOjj8qjodnTgi3tmb223D-2F1eF4m15Vjl7B27JWfGz3dIZiZSVxIEM=
+WCfLW6Ie2ygo8xygslzzNlt3iPzw3U0dF2sfQXtzs8fsITkWv9t-2FruVLOrYOet5wWhCaPmLwo=
+8eIy8QUca7U3uSDRT-2FQ5hgvT-2FEBJSKKz8UP2lgi7IYLjTyhJY17EnmrL52JEcNbxQr0xKM2=
+-2Bf-2Fh6-2BAv3ogZvQit7xAqT6udqSsMp" class=3D"sc-kkGfuU hBMtUu" style=3D"-w=
+ebkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; color: #7E7E7E; f=
+ont-weight: 800; font-size: 12.64px; -webkit-letter-spacing: 0.08em; -moz-l=
+etter-spacing: 0.08em; -ms-letter-spacing: 0.08em; letter-spacing: 0.08em; =
+text-align: center; display: block; -webkit-text-decoration: none; text-dec=
+oration: none; line-height: 140%;">FORGOT PASSWORD?</a></td></tr></table></=
+td><td class=3D"sc-ifAKCX gkvQUv" style=3D"-webkit-text-size-adjust: 100%; =
+-ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; m=
+argin: 0; padding: 0; border: none; border-spacing: 0; -webkit-border-horiz=
+ontal-spacing: 0; -webkit-border-vertical-spacing: 0; height: 100%; overflo=
+w: hidden; width: 38px; border-collapse: collapse; font-family: inherit;" w=
+idth=3D"38" height=3D"100%"><div class=3D"sc-ifAKCX gkvQUv" style=3D"height=
+: 100%; overflow: hidden; width: 38px; font-family: inherit;"></div></td></=
+tr><tr style=3D"margin: 0; padding: 0; border: none; border-spacing: 0; -we=
+bkit-border-horizontal-spacing: 0; -webkit-border-vertical-spacing: 0; bord=
+er-collapse: collapse; font-family: inherit;"><td colspan=3D"3" class=3D"sc=
+-EHOje gTyoqp" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjus=
+t: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; margin: 0; padding: =
+0; border: none; border-spacing: 0; -webkit-border-horizontal-spacing: 0; -=
+webkit-border-vertical-spacing: 0; height: 24px; border-collapse: collapse;=
+ font-family: inherit;" height=3D"24"><table style=3D"-webkit-text-size-adj=
+ust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rsp=
+ace: 0pt; margin: 0; padding: 0; border: none; border-spacing: 0; -webkit-b=
+order-horizontal-spacing: 0; -webkit-border-vertical-spacing: 0; width: 100=
+%; border-collapse: collapse;" width=3D"100%"></table></td></tr></table></t=
+d><td class=3D"sc-ifAKCX hTfFsy" style=3D"-webkit-text-size-adjust: 100%; -=
+ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; ma=
+rgin: 0; padding: 0; border: none; border-spacing: 0; -webkit-border-horizo=
+ntal-spacing: 0; -webkit-border-vertical-spacing: 0; height: 100%; overflow=
+: hidden; width: 72px; border-collapse: collapse; font-family: inherit;" wi=
+dth=3D"72" height=3D"100%"><div class=3D"sc-ifAKCX hTfFsy" style=3D"height:=
+ 100%; overflow: hidden; width: 72px; font-family: inherit;"></div></td></t=
+r><tr style=3D"margin: 0; padding: 0; border: none; border-spacing: 0; -web=
+kit-border-horizontal-spacing: 0; -webkit-border-vertical-spacing: 0; borde=
+r-collapse: collapse; font-family: inherit;"><td colspan=3D"3" class=3D"sc-=
+EHOje igPnID" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust=
+: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; margin: 0; padding: 0=
+; border: none; border-spacing: 0; -webkit-border-horizontal-spacing: 0; -w=
+ebkit-border-vertical-spacing: 0; height: 48px; border-collapse: collapse; =
+font-family: inherit;" height=3D"48"><table style=3D"-webkit-text-size-adju=
+st: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspa=
+ce: 0pt; margin: 0; padding: 0; border: none; border-spacing: 0; -webkit-bo=
+rder-horizontal-spacing: 0; -webkit-border-vertical-spacing: 0; width: 100%=
+; border-collapse: collapse;" width=3D"100%"></table></td></tr></table></td=
+></tr><tr style=3D"margin: 0; padding: 0; border: none; border-spacing: 0; =
+-webkit-border-horizontal-spacing: 0; -webkit-border-vertical-spacing: 0; b=
+order-collapse: collapse; font-family: inherit;"><td class=3D"sc-bdVaJa khU=
+Sez" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; m=
+so-table-lspace: 0pt; mso-table-rspace: 0pt; margin: 0; padding: 0; border:=
+ none; border-spacing: 0; -webkit-border-horizontal-spacing: 0; -webkit-bor=
+der-vertical-spacing: 0; text-align: center; border-collapse: collapse; fon=
+t-family: inherit;" align=3D"center"><table cellpadding=3D"0" cellspacing=
+=3D"0" class=3D"sc-htpNat daVAfG sc-brqgnP hnpSdY" style=3D"-webkit-text-si=
+ze-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-tab=
+le-rspace: 0pt; margin: 0; padding: 0; border: none; border-spacing: 0; -we=
+bkit-border-horizontal-spacing: 0; -webkit-border-vertical-spacing: 0; widt=
+h: 100%; font-size: 16px; text-align: center; line-height: 140%; -webkit-le=
+tter-spacing: -0.01em; -moz-letter-spacing: -0.01em; -ms-letter-spacing: -0=
+.01em; letter-spacing: -0.01em; color: #666; border-collapse: collapse;" wi=
+dth=3D"100%" align=3D"center"><tr style=3D"margin: 0; padding: 0; border: n=
+one; border-spacing: 0; -webkit-border-horizontal-spacing: 0; -webkit-borde=
+r-vertical-spacing: 0; border-collapse: collapse; font-family: inherit;"><t=
+d class=3D"sc-ifAKCX kETegz" style=3D"-webkit-text-size-adjust: 100%; -ms-t=
+ext-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; margin=
+: 0; padding: 0; border: none; border-spacing: 0; -webkit-border-horizontal=
+-spacing: 0; -webkit-border-vertical-spacing: 0; height: 100%; overflow: hi=
+dden; width: 100px; border-collapse: collapse; font-family: inherit;" width=
+=3D"100" height=3D"100%"><div class=3D"sc-ifAKCX kETegz" style=3D"height: 1=
+00%; overflow: hidden; width: 100px; font-family: inherit;"></div></td><td =
+class=3D"sc-bxivhb EYjjH" style=3D"-webkit-text-size-adjust: 100%; -ms-text=
+-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; margin: 0=
+; padding: 0; border: none; border-spacing: 0; -webkit-border-horizontal-sp=
+acing: 0; -webkit-border-vertical-spacing: 0; text-align: center; border-co=
+llapse: collapse; font-family: inherit;" align=3D"center">Good luck, Summon=
+er!</td><td class=3D"sc-ifAKCX kETegz" style=3D"-webkit-text-size-adjust: 1=
+00%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0=
+pt; margin: 0; padding: 0; border: none; border-spacing: 0; -webkit-border-=
+horizontal-spacing: 0; -webkit-border-vertical-spacing: 0; height: 100%; ov=
+erflow: hidden; width: 100px; border-collapse: collapse; font-family: inher=
+it;" width=3D"100" height=3D"100%"><div class=3D"sc-ifAKCX kETegz" style=3D=
+"height: 100%; overflow: hidden; width: 100px; font-family: inherit;"></div=
+></td></tr><tr style=3D"margin: 0; padding: 0; border: none; border-spacing=
+: 0; -webkit-border-horizontal-spacing: 0; -webkit-border-vertical-spacing:=
+ 0; border-collapse: collapse; font-family: inherit;"><td colspan=3D"3" cla=
+ss=3D"sc-EHOje hsGnrv" style=3D"-webkit-text-size-adjust: 100%; -ms-text-si=
+ze-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; margin: 0; p=
+adding: 0; border: none; border-spacing: 0; -webkit-border-horizontal-spaci=
+ng: 0; -webkit-border-vertical-spacing: 0; height: 80px; border-collapse: c=
+ollapse; font-family: inherit;" height=3D"80"><table style=3D"-webkit-text-=
+size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-t=
+able-rspace: 0pt; margin: 0; padding: 0; border: none; border-spacing: 0; -=
+webkit-border-horizontal-spacing: 0; -webkit-border-vertical-spacing: 0; wi=
+dth: 100%; border-collapse: collapse;" width=3D"100%"></table></td></tr></t=
+able></td></tr><tr style=3D"margin: 0; padding: 0; border: none; border-spa=
+cing: 0; -webkit-border-horizontal-spacing: 0; -webkit-border-vertical-spac=
+ing: 0; border-collapse: collapse; font-family: inherit;"><td class=3D"sc-b=
+dVaJa khUSez" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust=
+: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; margin: 0; padding: 0=
+; border: none; border-spacing: 0; -webkit-border-horizontal-spacing: 0; -w=
+ebkit-border-vertical-spacing: 0; text-align: center; border-collapse: coll=
+apse; font-family: inherit;" align=3D"center"><table cellpadding=3D"0" cell=
+spacing=3D"0" class=3D"sc-htpNat daVAfG" style=3D"-webkit-text-size-adjust:=
+ 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace:=
+ 0pt; margin: 0; padding: 0; border: none; border-spacing: 0; -webkit-borde=
+r-horizontal-spacing: 0; -webkit-border-vertical-spacing: 0; width: 100%; b=
+order-collapse: collapse;" width=3D"100%"><tr style=3D"margin: 0; padding: =
+0; border: none; border-spacing: 0; -webkit-border-horizontal-spacing: 0; -=
+webkit-border-vertical-spacing: 0; border-collapse: collapse; font-family: =
+inherit;"><td class=3D"sc-ifAKCX fDKKAz" style=3D"-webkit-text-size-adjust:=
+ 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace:=
+ 0pt; margin: 0; padding: 0; border: none; border-spacing: 0; -webkit-borde=
+r-horizontal-spacing: 0; -webkit-border-vertical-spacing: 0; height: 100%; =
+overflow: hidden; width: 72px; border-collapse: collapse; font-family: inhe=
+rit;" width=3D"72" height=3D"100%"><div class=3D"sc-ifAKCX fDKKAz" style=3D=
+"height: 100%; overflow: hidden; width: 72px; font-family: inherit;"></div>=
+</td><td class=3D"sc-bxivhb EYjjH" style=3D"-webkit-text-size-adjust: 100%;=
+ -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; =
+margin: 0; padding: 0; border: none; border-spacing: 0; -webkit-border-hori=
+zontal-spacing: 0; -webkit-border-vertical-spacing: 0; text-align: center; =
+border-collapse: collapse; font-family: inherit;" align=3D"center"><table c=
+ellpadding=3D"0" cellspacing=3D"0" class=3D"sc-jzJRlG dkrsEk" style=3D"-web=
+kit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0=
+pt; mso-table-rspace: 0pt; margin: 0; padding: 0; border: none; border-spac=
+ing: 0; -webkit-border-horizontal-spacing: 0; -webkit-border-vertical-spaci=
+ng: 0; width: 100%; font-size: 11.24px; line-height: 140%; -webkit-letter-s=
+pacing: -0.01em; -moz-letter-spacing: -0.01em; -ms-letter-spacing: -0.01em;=
+ letter-spacing: -0.01em; color: #999; table-layout: fixed; border-collapse=
+: collapse;" width=3D"100%"><tr style=3D"margin: 0; padding: 0; border: non=
+e; border-spacing: 0; -webkit-border-horizontal-spacing: 0; -webkit-border-=
+vertical-spacing: 0; border-collapse: collapse; font-family: inherit;"><td =
+class=3D"sc-bdVaJa khUSez" style=3D"-webkit-text-size-adjust: 100%; -ms-tex=
+t-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; margin: =
+0; padding: 0; border: none; border-spacing: 0; -webkit-border-horizontal-s=
+pacing: 0; -webkit-border-vertical-spacing: 0; text-align: center; border-c=
+ollapse: collapse; font-family: inherit;" align=3D"center"><table class=3D"=
+sc-kgoBCf hepoDg" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-ad=
+just: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; margin: 0; paddin=
+g: 0; border: none; border-spacing: 0; -webkit-border-horizontal-spacing: 0=
+; -webkit-border-vertical-spacing: 0; display: inline-table; width: auto; b=
+order-collapse: collapse;"><tr style=3D"margin: 0; padding: 0; border: none=
+; border-spacing: 0; -webkit-border-horizontal-spacing: 0; -webkit-border-v=
+ertical-spacing: 0; border-collapse: collapse; font-family: inherit;"><td c=
+lass=3D"sc-bdVaJa khUSez" style=3D"-webkit-text-size-adjust: 100%; -ms-text=
+-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; margin: 0=
+; padding: 0; border: none; border-spacing: 0; -webkit-border-horizontal-sp=
+acing: 0; -webkit-border-vertical-spacing: 0; text-align: center; border-co=
+llapse: collapse; font-family: inherit;" align=3D"center"><a href=3D"https:=
+//links.riotgames.com/ls/click?upn=3Dvv0pA-2FWxASzuOz3e-2Fz-2BpVH8yrmP1PzUW=
+v6-2FMAw5C-2B4yvSvHJTd14wpHYQzdWT6GZco2U_H65ljNg3foEJU6dJQZHMcp3Zdimzb4muCF=
+BEwI-2BtxR5NHK6uZ9CEatgDkqWlAllrot7R-2B9dkloCX-2BA-2FZupEXLuGP88yhAE-2Biol-=
+2BLpea0VraV0OIEJA2TAi-2FjJ-2FQA8chnKfKtB71wZb4JzxxGgrD8dmDCvds3zuxbct8qSXnZ=
+iaOy2-2FWXOeEkgKParBJl3P1kV-2F42YHMCpakG3BB7U6UiqXTruar1m2XCpkJCIl5p189ijSU=
+OxvYGz1V7b4b-2Fgt0McWYrZ9oBzeFZRAww1ZkmFqkOdKLEtDnbPHGY7kc-2FF-2F5zIthzzoB1=
+1TSqc2b65HeFnmfvBc0a4ixq-2FOtytpOfyPn3xjWgfxooLjeuZcNeWZM7VFDnBXkYmBWcc4ZgG=
+vZ8DkGRYL08HTgh8iKeyiV3Kr-2FBpA-2F0-2FvSgk8iJ9ZhKeKM-2F9oPJwJnSJZ-2BqlW3QIr=
+h6fBiqQllCIQTumbstnzQk-2FVSBTEhT4Y1G6Rhj-2FGTGhBVwL2lTBVFQ552alwQkXihSFWiPV=
+wjg9SvEQiEpppjOI6D0OQRAUR8maZchIRv5s7fLSanw0bW-2Fz8gGF-2FPHhVwC8Gj9eNKJ9pjm=
+66uDzDZJCaDYLgfCHW2GH5IdExHdeJZmrXZYdHaHpr9iJSnFrXNf5ofqvfFLnEshM3QhXvoeEdH=
+fad3xuHwogp2jVmOJbu5k5Lf4LFwUOJ-2FAOqA2SWxx8-2FRAw-2FyGit2ydTM7VyZdfU-2BjoO=
+EE22pOjj8qjodnTgi3tmb223D-2F1eF4m15Vjl7B27JWfGz3dIZiZSVxIEMWCfLW6Ie2ygo8xyg=
+slzzNlt22GnWqXXNVD6T-2FrGVJgmErpTH3rx8T5DRxUoZhHMccVXcXiNl2zyKLIpV0LmbisjBZ=
+QFOJ6CGNqN8kzsnYwm5qmFSrejV4-2B1cUJABW8XCUqn4ez6NS-2FDApi8NGzkW-2Fi1wkBsHzq=
+yZtRZDBP9J8yMQx" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adj=
+ust: 100%; color: #BD2225; -webkit-text-decoration: underline; text-decorat=
+ion: underline;"><img src=3D"https://lolstatic-a.akamaihd.net/email-marketi=
+ng/betabuddies/riot-logo.png" alt=3D"Riot Games logo" class=3D"sc-cSHVUG jJ=
+kpob" style=3D"-ms-interpolation-mode: bicubic; border: 0; height: auto; li=
+ne-height: 100%; outline: none; -webkit-text-decoration: none; text-decorat=
+ion: none; width: 142px;" width=3D"142"></a></td></tr></table></td></tr><tr=
+ style=3D"margin: 0; padding: 0; border: none; border-spacing: 0; -webkit-b=
+order-horizontal-spacing: 0; -webkit-border-vertical-spacing: 0; border-col=
+lapse: collapse; font-family: inherit;"><td class=3D"sc-bdVaJa khUSez" styl=
+e=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-=
+lspace: 0pt; mso-table-rspace: 0pt; margin: 0; padding: 0; border: none; bo=
+rder-spacing: 0; -webkit-border-horizontal-spacing: 0; -webkit-border-verti=
+cal-spacing: 0; text-align: center; border-collapse: collapse; font-family:=
+ inherit;" align=3D"center"><table cellpadding=3D"0" cellspacing=3D"0" clas=
+s=3D"sc-htpNat daVAfG sc-iwsKbI btmaIR" style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: =
+0pt; margin: 0; padding: 0; border: none; border-spacing: 0; -webkit-border=
+-horizontal-spacing: 0; -webkit-border-vertical-spacing: 0; width: 100%; bo=
+rder-collapse: collapse;" width=3D"100%"><tr style=3D"margin: 0; padding: 0=
+; border: none; border-spacing: 0; -webkit-border-horizontal-spacing: 0; -w=
+ebkit-border-vertical-spacing: 0; border-collapse: collapse; font-family: i=
+nherit;"><td colspan=3D"1" class=3D"sc-EHOje igPnID" style=3D"-webkit-text-=
+size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-t=
+able-rspace: 0pt; margin: 0; padding: 0; border: none; border-spacing: 0; -=
+webkit-border-horizontal-spacing: 0; -webkit-border-vertical-spacing: 0; he=
+ight: 48px; border-collapse: collapse; font-family: inherit;" height=3D"48"=
+><table style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%=
+; mso-table-lspace: 0pt; mso-table-rspace: 0pt; margin: 0; padding: 0; bord=
+er: none; border-spacing: 0; -webkit-border-horizontal-spacing: 0; -webkit-=
+border-vertical-spacing: 0; width: 100%; border-collapse: collapse;" width=
+=3D"100%"></table></td></tr><tr style=3D"margin: 0; padding: 0; border: non=
+e; border-spacing: 0; -webkit-border-horizontal-spacing: 0; -webkit-border-=
+vertical-spacing: 0; border-collapse: collapse; font-family: inherit;"><td =
+class=3D"sc-bxivhb EYjjH" style=3D"-webkit-text-size-adjust: 100%; -ms-text=
+-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; margin: 0=
+; padding: 0; border: none; border-spacing: 0; -webkit-border-horizontal-sp=
+acing: 0; -webkit-border-vertical-spacing: 0; text-align: center; border-co=
+llapse: collapse; font-family: inherit;" align=3D"center"><table cellpaddin=
+g=3D"0" cellspacing=3D"0" class=3D"sc-gZMcBi llBlRx" style=3D"-webkit-text-=
+size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-t=
+able-rspace: 0pt; margin: 0; padding: 0; border: none; border-spacing: 0; -=
+webkit-border-horizontal-spacing: 0; -webkit-border-vertical-spacing: 0; wi=
+dth: 100%; table-layout: fixed; border-collapse: collapse;" width=3D"100%">=
+<tr class=3D"sc-gqjmRU dkAtAn" style=3D"margin: 0; padding: 0; border: none=
+; border-spacing: 0; -webkit-border-horizontal-spacing: 0; -webkit-border-v=
+ertical-spacing: 0; height: 44px; width: 100%; border-collapse: collapse; f=
+ont-family: inherit;"><td style=3D"-webkit-text-size-adjust: 100%; -ms-text=
+-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; margin: 0=
+; padding: 0; border: none; border-spacing: 0; -webkit-border-horizontal-sp=
+acing: 0; -webkit-border-vertical-spacing: 0; border-collapse: collapse; fo=
+nt-family: inherit;"></td><td class=3D"sc-jTzLTM kGiYgn" style=3D"-webkit-t=
+ext-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; m=
+so-table-rspace: 0pt; margin: 0; padding: 0; border: none; border-spacing: =
+0; -webkit-border-horizontal-spacing: 0; -webkit-border-vertical-spacing: 0=
+; width: 44px; height: 44px; border-collapse: collapse; font-family: inheri=
+t;" width=3D"44" height=3D"44"><a href=3D"https://links.riotgames.com/ls/cl=
+ick?upn=3DfrHghcUMWgUZ9OUHJJkDdWcKZDM57kpBql7-2Fw1LzrEodSJ3AkJvmhsiXwygwHDw=
+7I1Dd43BaSPTreo7MUKYIAA-3D-3Da4h2_H65ljNg3foEJU6dJQZHMcp3Zdimzb4muCFBEwI-2B=
+txR5NHK6uZ9CEatgDkqWlAllrot7R-2B9dkloCX-2BA-2FZupEXLuGP88yhAE-2Biol-2BLpea0=
+VraV0OIEJA2TAi-2FjJ-2FQA8chnKfKtB71wZb4JzxxGgrD8dmDCvds3zuxbct8qSXnZiaOy2-2=
+FWXOeEkgKParBJl3P1kV-2F42YHMCpakG3BB7U6UiqXTruar1m2XCpkJCIl5p189ijSUOxvYGz1=
+V7b4b-2Fgt0McWYrZ9oBzeFZRAww1ZkmFqkOdKLEtDnbPHGY7kc-2FF-2F5zIthzzoB11TSqc2b=
+65HeFnmfvBc0a4ixq-2FOtytpOfyPn3xjWgfxooLjeuZcNeWZM7VFDnBXkYmBWcc4ZgGvZ8DkGR=
+YL08HTgh8iKeyiV3Kr-2FBpA-2F0-2FvSgk8iJ9ZhKeKM-2F9oPJwJnSJZ-2BqlW3QIrh6fBiqQ=
+llCIQTumbstnzQk-2FVSBTEhT4Y1G6Rhj-2FGTGhBVwL2lTBVFQ552alwQkXihSFWiPVwjg9SvE=
+QiEpppjOI6D0OQRAUR8maZchIRv5s7fLSanw0bW-2Fz8gGF-2FPHhVwC8Gj9eNKJ9pjm66uDzDZ=
+JCaDYLgfCHW2GH5IdExHdeJZmrXZYdHaHpr9iJSnFrXNf5ofqvfFLnEshM3QhXvoeEdHfad3xuH=
+wogp2jVmOJbu5k5Lf4LFwUOJ-2FAOqA2SWxx8-2FRAw-2FyGit2ydTM7VyZdfU-2BjoOEE22pOj=
+j8qjodnTgi3tmb223D-2F1eF4m15Vjl7B27JWfGz3dIZiZSVxIEMWCfLW6Ie2ygo8xygslzzNlt=
+1Bv0NVSZXr5CVuMn6P1Tf-2B22Bs7RkNTW6vT33iwbQblYAfy8MbJWpC46EIq2l4qpdO7b-2FBg=
+sB2I6rTTRrjaBhjE-2FridHPYhKcDtFLNYA8XrUxSp0WpnQLJ32B4OySkZI74snNqqA-2BChpCI=
+HY7gKOl-2F" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: =
+100%; color: #BD2225; -webkit-text-decoration: underline; text-decoration: =
+underline;"><img alt=3D"Facebook icon" src=3D"https://lolstatic-a.akamaihd.=
+net/email-marketing/betabuddies/facebook-logo.png" class=3D"sc-fjdhpX hEnxy=
+o" style=3D"-ms-interpolation-mode: bicubic; border: 0; line-height: 100%; =
+outline: none; -webkit-text-decoration: none; text-decoration: none; width:=
+ 44px; height: 44px;" width=3D"44" height=3D"44"></a></td><td class=3D"sc-V=
+igVT kikspt" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust:=
+ 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; margin: 0; padding: 0;=
+ border: none; border-spacing: 0; -webkit-border-horizontal-spacing: 0; -we=
+bkit-border-vertical-spacing: 0; width: 24px; height: 44px; border-collapse=
+: collapse; font-family: inherit;" width=3D"24" height=3D"44"></td><td clas=
+s=3D"sc-jTzLTM kGiYgn" style=3D"-webkit-text-size-adjust: 100%; -ms-text-si=
+ze-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; margin: 0; p=
+adding: 0; border: none; border-spacing: 0; -webkit-border-horizontal-spaci=
+ng: 0; -webkit-border-vertical-spacing: 0; width: 44px; height: 44px; borde=
+r-collapse: collapse; font-family: inherit;" width=3D"44" height=3D"44"><a =
+href=3D"https://links.riotgames.com/ls/click?upn=3DfrHghcUMWgUZ9OUHJJkDddt-=
+2FoB8L3cswOQa1NUmmpU0YPF87pbbdMbw2MegPCaYY03v0_H65ljNg3foEJU6dJQZHMcp3Zdimz=
+b4muCFBEwI-2BtxR5NHK6uZ9CEatgDkqWlAllrot7R-2B9dkloCX-2BA-2FZupEXLuGP88yhAE-=
+2Biol-2BLpea0VraV0OIEJA2TAi-2FjJ-2FQA8chnKfKtB71wZb4JzxxGgrD8dmDCvds3zuxbct=
+8qSXnZiaOy2-2FWXOeEkgKParBJl3P1kV-2F42YHMCpakG3BB7U6UiqXTruar1m2XCpkJCIl5p1=
+89ijSUOxvYGz1V7b4b-2Fgt0McWYrZ9oBzeFZRAww1ZkmFqkOdKLEtDnbPHGY7kc-2FF-2F5zIt=
+hzzoB11TSqc2b65HeFnmfvBc0a4ixq-2FOtytpOfyPn3xjWgfxooLjeuZcNeWZM7VFDnBXkYmBW=
+cc4ZgGvZ8DkGRYL08HTgh8iKeyiV3Kr-2FBpA-2F0-2FvSgk8iJ9ZhKeKM-2F9oPJwJnSJZ-2Bq=
+lW3QIrh6fBiqQllCIQTumbstnzQk-2FVSBTEhT4Y1G6Rhj-2FGTGhBVwL2lTBVFQ552alwQkXih=
+SFWiPVwjg9SvEQiEpppjOI6D0OQRAUR8maZchIRv5s7fLSanw0bW-2Fz8gGF-2FPHhVwC8Gj9eN=
+KJ9pjm66uDzDZJCaDYLgfCHW2GH5IdExHdeJZmrXZYdHaHpr9iJSnFrXNf5ofqvfFLnEshM3QhX=
+voeEdHfad3xuHwogp2jVmOJbu5k5Lf4LFwUOJ-2FAOqA2SWxx8-2FRAw-2FyGit2ydTM7VyZdfU=
+-2BjoOEE22pOjj8qjodnTgi3tmb223D-2F1eF4m15Vjl7B27JWfGz3dIZiZSVxIEMWCfLW6Ie2y=
+go8xygslzzNlt072HdK-2FJyKQ6tapUykEXNMjxd9tEIr2uoQJqZwwh7qJBybsVcDmPkg05rBOl=
+sS7vDZLEcILpZhLMJNj77ieaedY82an50eZTnG2reAMTF2MB-2Ffv-2FFWJTS-2BI4etgA3WWNf=
+Z9ZhjS1NQYZRmasiQQGDT" style=3D"-webkit-text-size-adjust: 100%; -ms-text-si=
+ze-adjust: 100%; color: #BD2225; -webkit-text-decoration: underline; text-d=
+ecoration: underline;"><img alt=3D"Instagram icon" src=3D"https://lolstatic=
+-a.akamaihd.net/email-marketing/betabuddies/instagram-logo.png" class=3D"sc=
+-fjdhpX hEnxyo" style=3D"-ms-interpolation-mode: bicubic; border: 0; line-h=
+eight: 100%; outline: none; -webkit-text-decoration: none; text-decoration:=
+ none; width: 44px; height: 44px;" width=3D"44" height=3D"44"></a></td><td =
+class=3D"sc-VigVT kikspt" style=3D"-webkit-text-size-adjust: 100%; -ms-text=
+-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; margin: 0=
+; padding: 0; border: none; border-spacing: 0; -webkit-border-horizontal-sp=
+acing: 0; -webkit-border-vertical-spacing: 0; width: 24px; height: 44px; bo=
+rder-collapse: collapse; font-family: inherit;" width=3D"24" height=3D"44">=
+</td><td class=3D"sc-jTzLTM kGiYgn" style=3D"-webkit-text-size-adjust: 100%=
+; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt;=
+ margin: 0; padding: 0; border: none; border-spacing: 0; -webkit-border-hor=
+izontal-spacing: 0; -webkit-border-vertical-spacing: 0; width: 44px; height=
+: 44px; border-collapse: collapse; font-family: inherit;" width=3D"44" heig=
+ht=3D"44"><a href=3D"https://links.riotgames.com/ls/click?upn=3DfrHghcUMWgU=
+Z9OUHJJkDdeW1wDDOuxHE5MPT4mYfE7Km-2BIj-2FqoBYtvnclS9XtHHOwLcjQMrlzXYJXs9WVz=
+guNw-3D-3DrWes_H65ljNg3foEJU6dJQZHMcp3Zdimzb4muCFBEwI-2BtxR5NHK6uZ9CEatgDkq=
+WlAllrot7R-2B9dkloCX-2BA-2FZupEXLuGP88yhAE-2Biol-2BLpea0VraV0OIEJA2TAi-2FjJ=
+-2FQA8chnKfKtB71wZb4JzxxGgrD8dmDCvds3zuxbct8qSXnZiaOy2-2FWXOeEkgKParBJl3P1k=
+V-2F42YHMCpakG3BB7U6UiqXTruar1m2XCpkJCIl5p189ijSUOxvYGz1V7b4b-2Fgt0McWYrZ9o=
+BzeFZRAww1ZkmFqkOdKLEtDnbPHGY7kc-2FF-2F5zIthzzoB11TSqc2b65HeFnmfvBc0a4ixq-2=
+FOtytpOfyPn3xjWgfxooLjeuZcNeWZM7VFDnBXkYmBWcc4ZgGvZ8DkGRYL08HTgh8iKeyiV3Kr-=
+2FBpA-2F0-2FvSgk8iJ9ZhKeKM-2F9oPJwJnSJZ-2BqlW3QIrh6fBiqQllCIQTumbstnzQk-2FV=
+SBTEhT4Y1G6Rhj-2FGTGhBVwL2lTBVFQ552alwQkXihSFWiPVwjg9SvEQiEpppjOI6D0OQRAUR8=
+maZchIRv5s7fLSanw0bW-2Fz8gGF-2FPHhVwC8Gj9eNKJ9pjm66uDzDZJCaDYLgfCHW2GH5IdEx=
+HdeJZmrXZYdHaHpr9iJSnFrXNf5ofqvfFLnEshM3QhXvoeEdHfad3xuHwogp2jVmOJbu5k5Lf4L=
+FwUOJ-2FAOqA2SWxx8-2FRAw-2FyGit2ydTM7VyZdfU-2BjoOEE22pOjj8qjodnTgi3tmb223D-=
+2F1eF4m15Vjl7B27JWfGz3dIZiZSVxIEMWCfLW6Ie2ygo8xygslzzNlt1X8hgjHnTjFxF666d2x=
+ID98GWcBr4G5dX5MaFiyIuhjIzlbnyGTUu5Sto9S9h23pNc60s7oWcSbKNV9t3Wt3xm8TqDJH1x=
+1wGTJayT-2FfGSQP21p2W9DkrZapeZme6hp2wiYEf1DbvsUW6uhQugbBT0" style=3D"-webki=
+t-text-size-adjust: 100%; -ms-text-size-adjust: 100%; color: #BD2225; -webk=
+it-text-decoration: underline; text-decoration: underline;"><img alt=3D"You=
+Tube icon" src=3D"https://lolstatic-a.akamaihd.net/email-marketing/betabudd=
+ies/youtube-logo.png" class=3D"sc-fjdhpX hEnxyo" style=3D"-ms-interpolation=
+-mode: bicubic; border: 0; line-height: 100%; outline: none; -webkit-text-d=
+ecoration: none; text-decoration: none; width: 44px; height: 44px;" width=
+=3D"44" height=3D"44"></a></td><td class=3D"sc-VigVT kikspt" style=3D"-webk=
+it-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0p=
+t; mso-table-rspace: 0pt; margin: 0; padding: 0; border: none; border-spaci=
+ng: 0; -webkit-border-horizontal-spacing: 0; -webkit-border-vertical-spacin=
+g: 0; width: 24px; height: 44px; border-collapse: collapse; font-family: in=
+herit;" width=3D"24" height=3D"44"></td><td class=3D"sc-jTzLTM kGiYgn" styl=
+e=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-=
+lspace: 0pt; mso-table-rspace: 0pt; margin: 0; padding: 0; border: none; bo=
+rder-spacing: 0; -webkit-border-horizontal-spacing: 0; -webkit-border-verti=
+cal-spacing: 0; width: 44px; height: 44px; border-collapse: collapse; font-=
+family: inherit;" width=3D"44" height=3D"44"><a href=3D"https://links.riotg=
+ames.com/ls/click?upn=3DfrHghcUMWgUZ9OUHJJkDdYacmf72C0xFkCmZFR1-2FMJCXifdsH=
+XfEeSFBaqQR7FP1uhQe_H65ljNg3foEJU6dJQZHMcp3Zdimzb4muCFBEwI-2BtxR5NHK6uZ9CEa=
+tgDkqWlAllrot7R-2B9dkloCX-2BA-2FZupEXLuGP88yhAE-2Biol-2BLpea0VraV0OIEJA2TAi=
+-2FjJ-2FQA8chnKfKtB71wZb4JzxxGgrD8dmDCvds3zuxbct8qSXnZiaOy2-2FWXOeEkgKParBJ=
+l3P1kV-2F42YHMCpakG3BB7U6UiqXTruar1m2XCpkJCIl5p189ijSUOxvYGz1V7b4b-2Fgt0McW=
+YrZ9oBzeFZRAww1ZkmFqkOdKLEtDnbPHGY7kc-2FF-2F5zIthzzoB11TSqc2b65HeFnmfvBc0a4=
+ixq-2FOtytpOfyPn3xjWgfxooLjeuZcNeWZM7VFDnBXkYmBWcc4ZgGvZ8DkGRYL08HTgh8iKeyi=
+V3Kr-2FBpA-2F0-2FvSgk8iJ9ZhKeKM-2F9oPJwJnSJZ-2BqlW3QIrh6fBiqQllCIQTumbstnzQ=
+k-2FVSBTEhT4Y1G6Rhj-2FGTGhBVwL2lTBVFQ552alwQkXihSFWiPVwjg9SvEQiEpppjOI6D0OQ=
+RAUR8maZchIRv5s7fLSanw0bW-2Fz8gGF-2FPHhVwC8Gj9eNKJ9pjm66uDzDZJCaDYLgfCHW2GH=
+5IdExHdeJZmrXZYdHaHpr9iJSnFrXNf5ofqvfFLnEshM3QhXvoeEdHfad3xuHwogp2jVmOJbu5k=
+5Lf4LFwUOJ-2FAOqA2SWxx8-2FRAw-2FyGit2ydTM7VyZdfU-2BjoOEE22pOjj8qjodnTgi3tmb=
+223D-2F1eF4m15Vjl7B27JWfGz3dIZiZSVxIEMWCfLW6Ie2ygo8xygslzzNlt0jUAVbhsTKFsBA=
+zypALdi13NXfVZF0GoXQDm7DtgSJLMW8WWq3NIkD2udzx1dT5WkCCtrXL-2FqmgccPuNhq0PGWW=
+W3yhJ59N4ec1gSNiFxxI2YJW8Ifq425AkUk6bKBQE1s0vhxGFIV3LKpiZUy3zR8" style=3D"-=
+webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; color: #BD2225; =
+-webkit-text-decoration: underline; text-decoration: underline;"><img alt=
+=3D"Twitter icon" src=3D"https://lolstatic-a.akamaihd.net/email-marketing/b=
+etabuddies/twitter-logo.png" class=3D"sc-fjdhpX hEnxyo" style=3D"-ms-interp=
+olation-mode: bicubic; border: 0; line-height: 100%; outline: none; -webkit=
+-text-decoration: none; text-decoration: none; width: 44px; height: 44px;" =
+width=3D"44" height=3D"44"></a></td><td style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: =
+0pt; margin: 0; padding: 0; border: none; border-spacing: 0; -webkit-border=
+-horizontal-spacing: 0; -webkit-border-vertical-spacing: 0; border-collapse=
+: collapse; font-family: inherit;"></td></tr></table></td></tr><tr style=3D=
+"margin: 0; padding: 0; border: none; border-spacing: 0; -webkit-border-hor=
+izontal-spacing: 0; -webkit-border-vertical-spacing: 0; border-collapse: co=
+llapse; font-family: inherit;"><td colspan=3D"1" class=3D"sc-EHOje hekDfj" =
+style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-ta=
+ble-lspace: 0pt; mso-table-rspace: 0pt; margin: 0; padding: 0; border: none=
+; border-spacing: 0; -webkit-border-horizontal-spacing: 0; -webkit-border-v=
+ertical-spacing: 0; height: 32px; border-collapse: collapse; font-family: i=
+nherit;" height=3D"32"><table style=3D"-webkit-text-size-adjust: 100%; -ms-=
+text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; margi=
+n: 0; padding: 0; border: none; border-spacing: 0; -webkit-border-horizonta=
+l-spacing: 0; -webkit-border-vertical-spacing: 0; width: 100%; border-colla=
+pse: collapse;" width=3D"100%"></table></td></tr></table></td></tr><tr styl=
+e=3D"margin: 0; padding: 0; border: none; border-spacing: 0; -webkit-border=
+-horizontal-spacing: 0; -webkit-border-vertical-spacing: 0; border-collapse=
+: collapse; font-family: inherit;"><td class=3D"sc-bdVaJa khUSez" style=3D"=
+-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspac=
+e: 0pt; mso-table-rspace: 0pt; margin: 0; padding: 0; border: none; border-=
+spacing: 0; -webkit-border-horizontal-spacing: 0; -webkit-border-vertical-s=
+pacing: 0; text-align: center; border-collapse: collapse; font-family: inhe=
+rit;" align=3D"center"><table cellpadding=3D"0" cellspacing=3D"0" class=3D"=
+sc-htpNat daVAfG sc-bZQynM efrndc" style=3D"-webkit-text-size-adjust: 100%;=
+ -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; =
+padding: 0; border: none; border-spacing: 0; -webkit-border-horizontal-spac=
+ing: 0; -webkit-border-vertical-spacing: 0; width: 100%; margin: 0 auto; bo=
+rder-collapse: collapse;" width=3D"100%"><tr style=3D"margin: 0; padding: 0=
+; border: none; border-spacing: 0; -webkit-border-horizontal-spacing: 0; -w=
+ebkit-border-vertical-spacing: 0; border-collapse: collapse; font-family: i=
+nherit;"><td class=3D"sc-bxivhb EYjjH" style=3D"-webkit-text-size-adjust: 1=
+00%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0=
+pt; margin: 0; padding: 0; border: none; border-spacing: 0; -webkit-border-=
+horizontal-spacing: 0; -webkit-border-vertical-spacing: 0; text-align: cent=
+er; border-collapse: collapse; font-family: inherit;" align=3D"center"><spa=
+n class=3D"sc-htoDjs gbFAPr" style=3D"display: inline; vertical-align: midd=
+le; font-weight: 800; font-size: 12.64px; -webkit-letter-spacing: 0.08em; -=
+moz-letter-spacing: 0.08em; -ms-letter-spacing: 0.08em; letter-spacing: 0.0=
+8em; white-space: nowrap; font-family: inherit;"><a href=3D"https://links.r=
+iotgames.com/ls/click?upn=3DfrHghcUMWgUZ9OUHJJkDdaslin-2FqpxTNhpsWvP-2FdJrJ=
+u1AH764uHBgIyBk-2F4Tmkwoq4jnWoTputx43iIxRguuw-3D-3DSLgU_H65ljNg3foEJU6dJQZH=
+Mcp3Zdimzb4muCFBEwI-2BtxR5NHK6uZ9CEatgDkqWlAllrot7R-2B9dkloCX-2BA-2FZupEXLu=
+GP88yhAE-2Biol-2BLpea0VraV0OIEJA2TAi-2FjJ-2FQA8chnKfKtB71wZb4JzxxGgrD8dmDCv=
+ds3zuxbct8qSXnZiaOy2-2FWXOeEkgKParBJl3P1kV-2F42YHMCpakG3BB7U6UiqXTruar1m2XC=
+pkJCIl5p189ijSUOxvYGz1V7b4b-2Fgt0McWYrZ9oBzeFZRAww1ZkmFqkOdKLEtDnbPHGY7kc-2=
+FF-2F5zIthzzoB11TSqc2b65HeFnmfvBc0a4ixq-2FOtytpOfyPn3xjWgfxooLjeuZcNeWZM7VF=
+DnBXkYmBWcc4ZgGvZ8DkGRYL08HTgh8iKeyiV3Kr-2FBpA-2F0-2FvSgk8iJ9ZhKeKM-2F9oPJw=
+JnSJZ-2BqlW3QIrh6fBiqQllCIQTumbstnzQk-2FVSBTEhT4Y1G6Rhj-2FGTGhBVwL2lTBVFQ55=
+2alwQkXihSFWiPVwjg9SvEQiEpppjOI6D0OQRAUR8maZchIRv5s7fLSanw0bW-2Fz8gGF-2FPHh=
+VwC8Gj9eNKJ9pjm66uDzDZJCaDYLgfCHW2GH5IdExHdeJZmrXZYdHaHpr9iJSnFrXNf5ofqvfFL=
+nEshM3QhXvoeEdHfad3xuHwogp2jVmOJbu5k5Lf4LFwUOJ-2FAOqA2SWxx8-2FRAw-2FyGit2yd=
+TM7VyZdfU-2BjoOEE22pOjj8qjodnTgi3tmb223D-2F1eF4m15Vjl7B27JWfGz3dIZiZSVxIEMW=
+CfLW6Ie2ygo8xygslzzNlt1zbTrPveWfftKfvOM3QRkD4267t6vetX5ce15JGxLcoWRZds5kNqW=
+ATnXeeM0KHn367wvzc2WEGfvbIJcxDpJj0blFZsbE7qF-2FZXUj-2B4ZBykEK-2F2RpW7yvGsRG=
+SnRGBm6cVuByS1tcZj-2B26I1eJ4OW" class=3D"sc-gzVnrw fjokmi" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%; -webkit-text-decoratio=
+n: none; text-decoration: none; text-transform: uppercase; color: #999; ver=
+tical-align: middle;">Privacy Notice</a></span><span class=3D"sc-htoDjs gbF=
+APr" style=3D"display: inline; vertical-align: middle; font-weight: 800; fo=
+nt-size: 12.64px; -webkit-letter-spacing: 0.08em; -moz-letter-spacing: 0.08=
+em; -ms-letter-spacing: 0.08em; letter-spacing: 0.08em; white-space: nowrap=
+; font-family: inherit;"><img src=3D"http://cdn.mcauto-images-production.se=
+ndgrid.net/6c20475da3226ec8/e457af8c-5531-4df1-a265-127217b6d80a/8x8.png" c=
+lass=3D"sc-dnqmqq kmRvY" style=3D"-ms-interpolation-mode: bicubic; border: =
+0; height: auto; line-height: 100%; outline: none; -webkit-text-decoration:=
+ none; text-decoration: none; width: 4px; vertical-align: middle; margin: 4=
+px 16px;" width=3D"4"><a href=3D"https://links.riotgames.com/ls/click?upn=
+=3DfrHghcUMWgUZ9OUHJJkDdV7REMamLoc-2FhRJgb3oH2J-2BSyEvX9mRy-2FdzNqE-2Bkmy1p=
+KSuY_H65ljNg3foEJU6dJQZHMcp3Zdimzb4muCFBEwI-2BtxR5NHK6uZ9CEatgDkqWlAllrot7R=
+-2B9dkloCX-2BA-2FZupEXLuGP88yhAE-2Biol-2BLpea0VraV0OIEJA2TAi-2FjJ-2FQA8chnK=
+fKtB71wZb4JzxxGgrD8dmDCvds3zuxbct8qSXnZiaOy2-2FWXOeEkgKParBJl3P1kV-2F42YHMC=
+pakG3BB7U6UiqXTruar1m2XCpkJCIl5p189ijSUOxvYGz1V7b4b-2Fgt0McWYrZ9oBzeFZRAww1=
+ZkmFqkOdKLEtDnbPHGY7kc-2FF-2F5zIthzzoB11TSqc2b65HeFnmfvBc0a4ixq-2FOtytpOfyP=
+n3xjWgfxooLjeuZcNeWZM7VFDnBXkYmBWcc4ZgGvZ8DkGRYL08HTgh8iKeyiV3Kr-2FBpA-2F0-=
+2FvSgk8iJ9ZhKeKM-2F9oPJwJnSJZ-2BqlW3QIrh6fBiqQllCIQTumbstnzQk-2FVSBTEhT4Y1G=
+6Rhj-2FGTGhBVwL2lTBVFQ552alwQkXihSFWiPVwjg9SvEQiEpppjOI6D0OQRAUR8maZchIRv5s=
+7fLSanw0bW-2Fz8gGF-2FPHhVwC8Gj9eNKJ9pjm66uDzDZJCaDYLgfCHW2GH5IdExHdeJZmrXZY=
+dHaHpr9iJSnFrXNf5ofqvfFLnEshM3QhXvoeEdHfad3xuHwogp2jVmOJbu5k5Lf4LFwUOJ-2FAO=
+qA2SWxx8-2FRAw-2FyGit2ydTM7VyZdfU-2BjoOEE22pOjj8qjodnTgi3tmb223D-2F1eF4m15V=
+jl7B27JWfGz3dIZiZSVxIEMWCfLW6Ie2ygo8xygslzzNlt2dQS4VjNz3uhRszdWE8hulqWoJ2Qn=
+4DaN6qiBWxrXLlfqiil8uQxaW-2FGcU-2Fa8p7knkEfb39AO98jFvbn99xyzbPl-2BGeLF44VY6=
+YxMSd8VWDO8fHhuOESf-2BaqPnOHX3N9pRnSIf85Dq1351k3IphLG5" class=3D"sc-gzVnrw =
+fjokmi" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%=
+; -webkit-text-decoration: none; text-decoration: none; text-transform: upp=
+ercase; color: #999; vertical-align: middle;">Support</a></span><span class=
+=3D"sc-htoDjs gbFAPr" style=3D"display: inline; vertical-align: middle; fon=
+t-weight: 800; font-size: 12.64px; -webkit-letter-spacing: 0.08em; -moz-let=
+ter-spacing: 0.08em; -ms-letter-spacing: 0.08em; letter-spacing: 0.08em; wh=
+ite-space: nowrap; font-family: inherit;"><img src=3D"http://cdn.mcauto-ima=
+ges-production.sendgrid.net/6c20475da3226ec8/e457af8c-5531-4df1-a265-127217=
+b6d80a/8x8.png" class=3D"sc-dnqmqq kmRvY" style=3D"-ms-interpolation-mode: =
+bicubic; border: 0; height: auto; line-height: 100%; outline: none; -webkit=
+-text-decoration: none; text-decoration: none; width: 4px; vertical-align: =
+middle; margin: 4px 16px;" width=3D"4"><a href=3D"https://links.riotgames.c=
+om/ls/click?upn=3DfrHghcUMWgUZ9OUHJJkDdaslin-2FqpxTNhpsWvP-2FdJrLts833jmlXi=
+JdeJNj30GTQzR8dmhyHA0Y8gnrJ6Hj03w-3D-3DNHpU_H65ljNg3foEJU6dJQZHMcp3Zdimzb4m=
+uCFBEwI-2BtxR5NHK6uZ9CEatgDkqWlAllrot7R-2B9dkloCX-2BA-2FZupEXLuGP88yhAE-2Bi=
+ol-2BLpea0VraV0OIEJA2TAi-2FjJ-2FQA8chnKfKtB71wZb4JzxxGgrD8dmDCvds3zuxbct8qS=
+XnZiaOy2-2FWXOeEkgKParBJl3P1kV-2F42YHMCpakG3BB7U6UiqXTruar1m2XCpkJCIl5p189i=
+jSUOxvYGz1V7b4b-2Fgt0McWYrZ9oBzeFZRAww1ZkmFqkOdKLEtDnbPHGY7kc-2FF-2F5zIthzz=
+oB11TSqc2b65HeFnmfvBc0a4ixq-2FOtytpOfyPn3xjWgfxooLjeuZcNeWZM7VFDnBXkYmBWcc4=
+ZgGvZ8DkGRYL08HTgh8iKeyiV3Kr-2FBpA-2F0-2FvSgk8iJ9ZhKeKM-2F9oPJwJnSJZ-2BqlW3=
+QIrh6fBiqQllCIQTumbstnzQk-2FVSBTEhT4Y1G6Rhj-2FGTGhBVwL2lTBVFQ552alwQkXihSFW=
+iPVwjg9SvEQiEpppjOI6D0OQRAUR8maZchIRv5s7fLSanw0bW-2Fz8gGF-2FPHhVwC8Gj9eNKJ9=
+pjm66uDzDZJCaDYLgfCHW2GH5IdExHdeJZmrXZYdHaHpr9iJSnFrXNf5ofqvfFLnEshM3QhXvoe=
+EdHfad3xuHwogp2jVmOJbu5k5Lf4LFwUOJ-2FAOqA2SWxx8-2FRAw-2FyGit2ydTM7VyZdfU-2B=
+joOEE22pOjj8qjodnTgi3tmb223D-2F1eF4m15Vjl7B27JWfGz3dIZiZSVxIEMWCfLW6Ie2ygo8=
+xygslzzNlt1-2FrBmIVgOV5Q1LKXas6kZQx3VihXVF1u-2BG5m-2BBfQsyAHD8pCFxm-2F-2FsD=
+lLlxqp8DaAYQ5E-2FLUZsN5mkjBftgx9vbi0ViRLT-2BWgLfsnnK8z-2F-2Ffdauvs9JIlc3UX4=
+MAHzwKZ-2FomHHHBjzud51cEjb6gBJ" class=3D"sc-gzVnrw fjokmi" style=3D"-webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%; -webkit-text-decoratio=
+n: none; text-decoration: none; text-transform: uppercase; color: #999; ver=
+tical-align: middle;">Terms of Service</a></span></td></tr><tr style=3D"mar=
+gin: 0; padding: 0; border: none; border-spacing: 0; -webkit-border-horizon=
+tal-spacing: 0; -webkit-border-vertical-spacing: 0; border-collapse: collap=
+se; font-family: inherit;"><td colspan=3D"1" class=3D"sc-EHOje fwSRlA" styl=
+e=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-=
+lspace: 0pt; mso-table-rspace: 0pt; margin: 0; padding: 0; border: none; bo=
+rder-spacing: 0; -webkit-border-horizontal-spacing: 0; -webkit-border-verti=
+cal-spacing: 0; height: 16px; border-collapse: collapse; font-family: inher=
+it;" height=3D"16"><table style=3D"-webkit-text-size-adjust: 100%; -ms-text=
+-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; margin: 0=
+; padding: 0; border: none; border-spacing: 0; -webkit-border-horizontal-sp=
+acing: 0; -webkit-border-vertical-spacing: 0; width: 100%; border-collapse:=
+ collapse;" width=3D"100%"></table></td></tr></table></td></tr><tr style=3D=
+"margin: 0; padding: 0; border: none; border-spacing: 0; -webkit-border-hor=
+izontal-spacing: 0; -webkit-border-vertical-spacing: 0; border-collapse: co=
+llapse; font-family: inherit;"><td class=3D"sc-bxivhb EYjjH" style=3D"-webk=
+it-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0p=
+t; mso-table-rspace: 0pt; margin: 0; padding: 0; border: none; border-spaci=
+ng: 0; -webkit-border-horizontal-spacing: 0; -webkit-border-vertical-spacin=
+g: 0; text-align: center; border-collapse: collapse; font-family: inherit;"=
+ align=3D"center"><span style=3D"font-family: inherit;">This is a service n=
+otification mailing.</span></td></tr><tr style=3D"margin: 0; padding: 0; bo=
+rder: none; border-spacing: 0; -webkit-border-horizontal-spacing: 0; -webki=
+t-border-vertical-spacing: 0; border-collapse: collapse; font-family: inher=
+it;"><td colspan=3D"1" class=3D"sc-EHOje fwSRlA" style=3D"-webkit-text-size=
+-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table=
+-rspace: 0pt; margin: 0; padding: 0; border: none; border-spacing: 0; -webk=
+it-border-horizontal-spacing: 0; -webkit-border-vertical-spacing: 0; height=
+: 16px; border-collapse: collapse; font-family: inherit;" height=3D"16"><ta=
+ble style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; ms=
+o-table-lspace: 0pt; mso-table-rspace: 0pt; margin: 0; padding: 0; border: =
+none; border-spacing: 0; -webkit-border-horizontal-spacing: 0; -webkit-bord=
+er-vertical-spacing: 0; width: 100%; border-collapse: collapse;" width=3D"1=
+00%"></table></td></tr><tr style=3D"margin: 0; padding: 0; border: none; bo=
+rder-spacing: 0; -webkit-border-horizontal-spacing: 0; -webkit-border-verti=
+cal-spacing: 0; border-collapse: collapse; font-family: inherit;"><td class=
+=3D"sc-bxivhb EYjjH" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size=
+-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; margin: 0; pad=
+ding: 0; border: none; border-spacing: 0; -webkit-border-horizontal-spacing=
+: 0; -webkit-border-vertical-spacing: 0; text-align: center; border-collaps=
+e: collapse; font-family: inherit;" align=3D"center"><span class=3D"reset__=
+links" style=3D"font-family: inherit;">Riot&nbsp;Games,&nbsp;Inc. 12333&nbs=
+p;West&nbsp;Olympic&nbsp;Blvd. Los&nbsp;Angeles, CA&nbsp;90064, United&nbsp=
+;States &copy;&nbsp;2021&nbsp;Riot&nbsp;Games.&nbsp;All&nbsp;rights&nbsp;re=
+served</span></td></tr><tr style=3D"margin: 0; padding: 0; border: none; bo=
+rder-spacing: 0; -webkit-border-horizontal-spacing: 0; -webkit-border-verti=
+cal-spacing: 0; border-collapse: collapse; font-family: inherit;"><td colsp=
+an=3D"1" class=3D"sc-EHOje fwSRlA" style=3D"-webkit-text-size-adjust: 100%;=
+ -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; =
+margin: 0; padding: 0; border: none; border-spacing: 0; -webkit-border-hori=
+zontal-spacing: 0; -webkit-border-vertical-spacing: 0; height: 16px; border=
+-collapse: collapse; font-family: inherit;" height=3D"16"><table style=3D"-=
+webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace=
+: 0pt; mso-table-rspace: 0pt; margin: 0; padding: 0; border: none; border-s=
+pacing: 0; -webkit-border-horizontal-spacing: 0; -webkit-border-vertical-sp=
+acing: 0; width: 100%; border-collapse: collapse;" width=3D"100%"></table><=
+/td></tr><tr style=3D"margin: 0; padding: 0; border: none; border-spacing: =
+0; -webkit-border-horizontal-spacing: 0; -webkit-border-vertical-spacing: 0=
+; border-collapse: collapse; font-family: inherit;"><td class=3D"sc-bdVaJa =
+khUSez" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%=
+; mso-table-lspace: 0pt; mso-table-rspace: 0pt; margin: 0; padding: 0; bord=
+er: none; border-spacing: 0; -webkit-border-horizontal-spacing: 0; -webkit-=
+border-vertical-spacing: 0; text-align: center; border-collapse: collapse; =
+font-family: inherit;" align=3D"center"><span class=3D"reset__links" style=
+=3D"font-family: inherit;">=A9 2021 Riot Games, Inc. Riot Games, League of =
+Legends, Teamfight Tactics, League of Legends: Wild Rift, Legends of Runete=
+rra, Valorant, Riot Forge and any associated logos are trademarks, service =
+marks, and/or registered trademarks of Riot Games, Inc.</span></td></tr></t=
+able></td><td class=3D"sc-ifAKCX fDKKAz" style=3D"-webkit-text-size-adjust:=
+ 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace:=
+ 0pt; margin: 0; padding: 0; border: none; border-spacing: 0; -webkit-borde=
+r-horizontal-spacing: 0; -webkit-border-vertical-spacing: 0; height: 100%; =
+overflow: hidden; width: 72px; border-collapse: collapse; font-family: inhe=
+rit;" width=3D"72" height=3D"100%"><div class=3D"sc-ifAKCX fDKKAz" style=3D=
+"height: 100%; overflow: hidden; width: 72px; font-family: inherit;"></div>=
+</td></tr><tr style=3D"margin: 0; padding: 0; border: none; border-spacing:=
+ 0; -webkit-border-horizontal-spacing: 0; -webkit-border-vertical-spacing: =
+0; border-collapse: collapse; font-family: inherit;"><td colspan=3D"3" clas=
+s=3D"sc-EHOje jXKNAd" style=3D"-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; margin: 0; pa=
+dding: 0; border: none; border-spacing: 0; -webkit-border-horizontal-spacin=
+g: 0; -webkit-border-vertical-spacing: 0; height: 64px; border-collapse: co=
+llapse; font-family: inherit;" height=3D"64"><table style=3D"-webkit-text-s=
+ize-adjust: 100%; -ms-text-size-adjust: 100%; mso-table-lspace: 0pt; mso-ta=
+ble-rspace: 0pt; margin: 0; padding: 0; border: none; border-spacing: 0; -w=
+ebkit-border-horizontal-spacing: 0; -webkit-border-vertical-spacing: 0; wid=
+th: 100%; border-collapse: collapse;" width=3D"100%"></table></td></tr></ta=
+ble></td></tr></table></td></tr></table></div>
+  <!--[if mso | IE]>
+      </td>
+      <td style=3D"padding:0;margin:0;">&nbsp;</td>
+    </tr>
+  </table>
+  <![endif]-->
+
+    </body>
+<img src=3D"https://links.riotgames.com/wf/open?upn=3DI2ZneDYMm30bX-2BRxYz8=
+2EqVmWgovkXO1mHRl89j0THxPOCMTDolf25hM5zLL1vCON8mNplEWUa-2FA6-2BslG7vwYDxOIw=
+F4o6ljkr1kePV-2BnGnGDxTyWz81OYj0tEH06pfg1qREtZB35zshqdwgW-2B4EZ5GUdW-2FzGxp=
+tnICiCgd-2BuU7JIfRvST0qAOgdUHOUW24s48Rp8NEp8-2BNojKpEOCEfiLBdoKgrwewZTePf-2=
+BABDjltVSlY5O-2BztFoFqx30tsztR8yRr9EpiN-2FjoC4ZNIfDTluJEuV6KJns9yXtHvTn-2F3=
+uSzJrbyl-2FjZmkycLDn-2FvCnj31-2BA-2F7hZ2m0vTcK6-2Bu0xijnoUhxWkm6Dn0H8sDn7B-=
+2BWgwktflxtFhQTouXDSoBbFpPoWiODunXaC0ylZ-2BJOqZKw3L8lPpK3ehmuK17RDTxNGtiGYf=
+Dork2LuP-2FiYVxfFRYN0Q2wMNUe0-2FsKczJ5Kp6ut2JS8yoBMmKHAQdq1GT7k76FBb122-2F-=
+2FcDzuMNszzQz-2Fm0HMh5D7QGSCP-2BqAlfCuxlw-2BTwZs07CLFLXXrDplqHr4oORxuuWGP0N=
+imvmvI-2BLbR9-2F9ZKlFPrnt1sXsDMy83GY-2B15dx8jY6PnrECW-2FTxFxyBWg9wDK4-2BlXt=
+0LpRYY2RTLWQoLDtYZB0vceDDzHuBMJ1iTVpF6t-2BDvfGx9gXFF8-2Be9yuz5SN9n5KcmjIVyx=
+zWD3kflf4xzoq6cnhq9sICYC29GRDvA3rG-2FwMj7QiElxkxkZzDN-2B6ZN-2Fc-2FUnmJx2B-2=
+FmgTlxdKWcN4VCTk3V7DNaR871jJkS0V59JCLxHY3LK09L71fRagRteDTNzCymG67V-2ByjgjRa=
+UBjxajqgFfz-2Bm7yLewaKleK57HcG981saULSJG-2BJYioQpiT95I9JsVU-2FGs5NXWzVHiZKk=
+JTvoDQI5HUxaIMNyL2RWj2CY7xnh-2FzrSz3jkkhyC3mPA3PD2" alt=3D"" width=3D"1" he=
+ight=3D"1" border=3D"0" style=3D"height:1px !important;width:1px !important=
+;border-width:0 !important;margin-top:0 !important;margin-bottom:0 !importa=
+nt;margin-right:0 !important;margin-left:0 !important;padding-top:0 !import=
+ant;padding-bottom:0 !important;padding-right:0 !important;padding-left:0 !=
+important;"/></body></html>
+
+--99b5caa2ef4654198626b56e15cf708cb5f78292b0adfaf6690cd1b21e3e--

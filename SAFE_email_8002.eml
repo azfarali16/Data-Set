@@ -1,0 +1,871 @@
+X-GM-THRID: 1728278137913989450
+X-Gmail-Labels: Inbox,Important,Opened,Category Updates
+Delivered-To: azfarali007.aa@gmail.com
+Received: by 2002:a05:6214:a6c:0:0:0:0 with SMTP id ef12csp6114349qvb;
+        Fri, 25 Mar 2022 06:21:12 -0700 (PDT)
+X-Google-Smtp-Source: ABdhPJxWBy6OK1UakNFdgH/wKKcD4ZIbwUq1+xm9PS337MJWjwA2D8u8qosXcluJSHNzpGHRL/QX
+X-Received: by 2002:adf:df01:0:b0:203:d6f0:794b with SMTP id y1-20020adfdf01000000b00203d6f0794bmr8834939wrl.394.1648214471840;
+        Fri, 25 Mar 2022 06:21:11 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1648214471; cv=none;
+        d=google.com; s=arc-20160816;
+        b=Phsy3XGYVasGCyulC9Zl10BMqCYM3k++iraJHWoRAjy9H6PEJrE+4c04hqD3mfajoU
+         psXleCyR57x7Je82mo/d2vDSKE97nWTxmqnHNAGLWCbRM2ZNaGWWJeJL2c83aj7bBbpY
+         D33NGXBnyMLUbfHjEoSlI16FYlBf16qWTXUOAOBZ26M9T75tAVfcUn3SANi/B33YkZgJ
+         S67MAFH2N5PVu15CJpksIo7ZqgjpkzPRCVtGx9O8wyoO+wBh4IHGXm/UxLbiOiY6z9Sn
+         5srKqYZAfSJ8TqBHXU5p35/E4NFOr5M3omrcLIviyr/GpGC033eWDVRxoeNzPWtxwPNe
+         5J0w==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=mime-version:list-unsubscribe:list-unsubscribe-post:sender
+         :feedback-id:precedence:message-id:subject:reply-to:from:to:date
+         :dkim-signature;
+        bh=utYbkQPcgTGv/rSHLO1PXjniRbLfosNjapz+82nMlpY=;
+        b=pI7yRt4AZN8RBPe5DPxJkdWKvKf2KGCuaOZdnJLv823z8FZapdqtid0Jp+eFz3ueXC
+         b/qMnASf/o2ZPqvo4hhCZEkBh/YThfIMk0ymxQLLJjvq7zkfBnbtdjriGugBzw+aFD9+
+         YsUc6EcDfmy4AFxs1tAspYKZR0+iW+loEdmenUYMOmDv5+XI945Sf8GWA2oq2hh0KhXq
+         ImkymKZxLA3TGY3MRDm6jIh3OoNiSEEvmAGphvSpdVfg+rTxobuVtqpaz0GQKnq3kqYj
+         ViFS3YnmUX+cRYVg/r9/WymPpo1FcvEZDZ8TlVhiDjKNyOOGpjhzkOT3uweDvnm3DqDb
+         OyMw==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@mlflow.com header.s=ml header.b="TIpr/mC7";
+       spf=pass (google.com: domain of bounce-r4q3-1913841382259170226@mlflow.com designates 185.249.220.197 as permitted sender) smtp.mailfrom=bounce-r4q3-1913841382259170226@mlflow.com
+Return-Path: <bounce-r4q3-1913841382259170226@mlflow.com>
+Received: from mail197.on.mlflow.com (mail197.on.mlflow.com. [185.249.220.197])
+        by mx.google.com with ESMTPS id a11-20020a05600c348b00b0038c77be9cdasi2416696wmq.162.2022.03.25.06.21.11
+        for <azfarali007.aa@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Fri, 25 Mar 2022 06:21:11 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bounce-r4q3-1913841382259170226@mlflow.com designates 185.249.220.197 as permitted sender) client-ip=185.249.220.197;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@mlflow.com header.s=ml header.b="TIpr/mC7";
+       spf=pass (google.com: domain of bounce-r4q3-1913841382259170226@mlflow.com designates 185.249.220.197 as permitted sender) smtp.mailfrom=bounce-r4q3-1913841382259170226@mlflow.com
+Received: from (127.0.0.1)
+	(using TLSv1.3 with cipher TLS_AES_256_GCM_SHA384 (256/256 bits)
+	 key-exchange ECDHE (P-256) server-signature RSA-PSS (2048 bits)
+	 client-signature RSA-PSS (2048 bits))
+	(Client CN "on.mlflow.com", Issuer "on.mlflow.com" (verified OK))
+	by mail197.on.mlflow.com (Postfix) with ESMTPS id 8DFDADC0CF5
+	for <azfarali007.aa@gmail.com>; Fri, 25 Mar 2022 13:21:11 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=mlflow.com; s=ml;
+	t=1648214471; bh=utYbkQPcgTGv/rSHLO1PXjniRbLfosNjapz+82nMlpY=;
+	h=Date:To:From:Reply-To:Subject:Message-ID:List-Unsubscribe:
+	 MIME-Version:Content-Type;
+	b=TIpr/mC7AhPYHoLTBUUQwIsWhMkfQYqKUh+xQzdd71Jb6pLFtjJV0rOcWZknEiK/f
+	 y0fZbMk9CqwqX/r9md4BBOj+IfYWCRuSVLGRXYedQDdrNr7rnQJoLXD0NBfAtnXK6+
+	 NC5PIgvtyaRHoPptjocY+MP9+32K/LFC8ZgW4v6Q=
+Received: from (127.0.0.1)
+	by mail197.on.mlflow.com (Postfix) with ESMTP id 8BCD7DC0D5E
+	for <azfarali007.aa@gmail.com>; Fri, 25 Mar 2022 13:21:11 +0000 (UTC)
+Date: Fri, 25 Mar 2022 15:21:11 +0200
+To: Syed Azfar Ali <azfarali007.aa@gmail.com>
+From: Khalil Ullah Khan <hello@khalilullahkhan.com>
+Reply-To: Khalil Ullah Khan <hello@khalilullahkhan.com>
+Subject: =?utf-8?Q?YOUR=20Ebook=20is=20HERE,=20=20Syed=20Azfar=20Ali?=
+Message-ID: <af47da2fd6837848667145a1769a607a@mlflow.com>
+X-Mailer-SubscriberID: 1913841382259170226;r4q3;b6c1fbb3deb62a5a66871ba241273727
+X-Mailru-Msgtype: b6c1fbb3deb62a5a66871ba241273727
+Precedence: bulk
+Feedback-ID: z2v7g1:b6c1fbb3deb62a5a66871ba241273727:1252904268105623731:MailerLite
+Sender: =?utf-8?Q?"Khalil=20Ullah=20Khan"?=<hello=khalilullahkhan.com@mlflow.com>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+List-Unsubscribe: <mailto:unsubscribe-1913841382259170226-r4q3-b6c1fbb3deb62a5a66871ba241273727@mlflow.com?body=unsubscribe>, <https://click.mlflow.com/link/c/YT0xOTEzODQxMzgyMjU5MTcwMjI2JmM9cjRxMyZlPTAmYj00ODI0MjE5MzEmZD14OW40cTRp.4Jf0vRn6h4JuO04VLy45Bs01O0uhPj-l2x-4ejN9kBM>
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+	boundary="b1_af47da2fd6837848667145a1769a607a"
+
+
+--b1_af47da2fd6837848667145a1769a607a
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+Hello,
+
+You have received a newsletter from Khalil Ullah Khan.
+
+However, your email software can't display HTML emails. You can view the =
+newsletter by clicking here:
+
+https://click.mlflow.com/link/c/YT0xOTEzODQxMzgyMjU5MTcwMjI2JmM9cjRxMyZlP=
+TAmYj00ODI0MjE5MjUmZD16OWg3bjJ1.YVLSkyLrr0q952Sx4_i-Y8zjB8qII0wz9sTt6tv2E=
+K0
+
+
+
+You're receiving this newsletter because you have shown interest in Khali=
+l Ullah Khan.
+Not interested anymore? Click here to unsubscribe:
+https://click.mlflow.com/link/c/YT0xOTEzODQxMzgyMjU5MTcwMjI2JmM9cjRxMyZlP=
+TAmYj00ODI0MjE5MzQmZD12NmYwaTlp.cYw3MU6nrX6zhijQXiR73hExsceVz60viqfb5YEIF=
+9c
+
+
+--b1_af47da2fd6837848667145a1769a607a
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html>
+ =20
+  <head>
+    <!--[if gte mso 9]>
+      <xml>
+        <o:OfficeDocumentsettings>
+          <o:AllowPNG/>
+          <o:PixelsPerInch>96</o:PixelsPerInch>
+        </o:OfficeDocumentsettings>
+      </xml>
+    <![endif]-->
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf=
+-8">
+    <meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scal=
+e=3D1.0">
+    <meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
+    <meta name=3D"format-detection" content=3D"address=3Dno">
+    <meta name=3D"format-detection" content=3D"telephone=3Dno">
+    <meta name=3D"format-detection" content=3D"email=3Dno">
+    <meta name=3D"x-apple-disable-message-reformatting">    <!--[if !mso]=
+>
+      <!-->
+      <style type=3D"text/css">
+        @import url("https://static.mailerlite.com/assets/plugins/groot/m=
+odules/includes/groot_fonts/import.css?version=3D1608296");
+      </style>
+    <!--<![endif]-->
+    <!-- RSS STYLE STARTS -->
+    <!--[if mso]>
+      <style type=3D"text/css">
+        .content-MS .content img { width: 560px; }
+      </style>
+    <![endif]-->
+    <!-- WINDOWS 10 HACKS FOR LINK AND BG COLOR -->
+    <!--[if (mso)|(mso 16)]>
+      <style type=3D"text/css">
+        .mlContentButton a { text-decoration: none; }
+      </style>
+    <![endif]-->
+    <!--[if !mso]>
+      <!-- -->
+      <style type=3D"text/css">
+        .mlBodyBackgroundImage { background-image: url(''); }
+      </style>
+    <!--<![endif]-->
+    <!--[if (lt mso 16)]>
+      <style type=3D"text/css">
+        .mlBodyBackgroundImage { background-image: url(''); }
+      </style>
+    <![endif]-->
+    <style type=3D"text/css">
+      .ReadMsgBody { width: 100%; }     .ExternalClass{ width: 100%; }   =
+  .ExternalClass * { line-height: 100%; }     .ExternalClass, .ExternalCl=
+ass p, .ExternalClass td, .ExternalClass div, .ExternalClass span, .Exter=
+nalClass font { line-height:100%; }     body { margin: 0; padding: 0; }  =
+   body, table, td, p, a, li { -webkit-text-size-adjust: 100%; -ms-text-s=
+ize-adjust: 100%; }     table td { border-collapse: collapse; }     table=
+ { border-spacing: 0; border-collapse: collapse; }     p, a, li, td, bloc=
+kquote { mso-line-height-rule: exactly; }     p, a, li, td, body, table, =
+blockquote { -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; =
+}     img, a img { border: 0; outline: none; text-decoration: none; }    =
+ img { -ms-interpolation-mode: bicubic; }     * img[tabindex=3D"0"] + div=
+ { display: none !important; }     a[href^=3Dtel],a[href^=3Dsms],a[href^=3D=
+mailto], a[href^=3Ddate] { color: inherit; cursor: pointer; text-decorati=
+on: none; }     a[x-apple-data-detectors]{ color:
+inherit!important; text-decoration: none!important; font-size: inherit!im=
+portant; font-family: inherit!important; font-weight: inherit!important; =
+line-height: inherit!important; }     #MessageViewBody a { color: inherit=
+; text-decoration: none; font-size: inherit; font-family: inherit; font-w=
+eight: inherit; line-height: inherit; }     #MessageViewBody { width: 100=
+% !important; }     #MessageWebViewDiv { width: 100% !important; }      @=
+-moz-document url-prefix() {       .bodyText p a, .bodyTitle p a {       =
+  word-break: break-word;       }     }      @media screen {       body {=
+       font-family: 'Poppins', sans-serif;     }     * {     direction: l=
+tr;     }     }      @media only screen and (min-width:768px){       .mlE=
+mailContainer{         width: 640px!important;       }     }      @media =
+only screen and (max-width: 640px) {       .mlTemplateContainer {        =
+ padding: 10px 10px 0 10px;       }     } @media only screen and (max-wid=
+th: 640px) {       .mlTemplateContainer{       =20
+padding: 10px 10px 0 10px;       }     } @media only screen and (max-widt=
+h: 640px) {       .mlContentCenter{         min-width: 10%!important;    =
+     margin: 0!important;         float: none!important;       }     } @m=
+edia only screen and (max-width: 640px) {       .mlContentTable{         =
+width: 100%!important;         min-width: 10%!important;         margin: =
+0!important;         float: none!important;       }     } @media only scr=
+een and (max-width: 640px) {       .mlContentBlock{         display: bloc=
+k !important;         width: 100%!important;         min-width: 10%!impor=
+tant;         margin: 0!important;         float: none!important;       }=
+     } @media only screen and (max-width: 640px) {       .mlContentOuter{=
+         padding-bottom: 0px!important;         padding-left: 15px!import=
+ant;         padding-right: 15px!important;         padding-top: 0px!impo=
+rtant;       }     } @media only screen and (max-width: 640px) {       .m=
+lContentOuterSmall{         padding-bottom:
+0px!important;         padding-left: 10px!important;         padding-righ=
+t: 10px!important;         padding-top: 0px!important;       }     } @med=
+ia only screen and (max-width: 640px) {       .mlMenuOuter{         paddi=
+ng-bottom: 0px!important;         padding-left: 5px!important;         pa=
+dding-right: 5px!important;         padding-top: 0px!important;       }  =
+   } @media only screen and (max-width: 640px) {       .mlContentOuterFul=
+lBig{         padding: 30px!important;       }     } @media only screen a=
+nd (max-width: 640px) {       .mlContentImage img {         height: auto!=
+important;         width: 100%!important;       }     } @media only scree=
+n and (max-width: 640px) {       .mlContentImage160 img {         height:=
+ auto!important;         max-width: 160px;         width: 100%!important;=
+       }     } @media only screen and (max-width: 640px) {       .mlConte=
+ntImage260 img {         height: auto!important;         max-width: 260px=
+;         width: 100%!important;       }     }
+@media only screen and (max-width: 640px) {       .mlContentImage{       =
+  height: 100%!important;         width: auto!important;       }     } @m=
+edia only screen and (max-width: 640px) {       .mlProductImage{         =
+height: auto!important;         width: 100%!important;       }     } @med=
+ia only screen and (max-width: 640px) {       .mlContentButton a{        =
+ display: block!important;         width: auto!important;       }     } @=
+media only screen and (max-width: 640px) {       .spacingHeight-20{      =
+   height: 10px!important;       }     } @media only screen and (max-widt=
+h: 640px) {       .spacingHeight-30{         height: 15px!important;     =
+  }     } @media only screen and (max-width: 640px) {       .spacingHeigh=
+t-40{         height: 20px!important;       }     } @media only screen an=
+d (max-width: 640px) {       .spacingHeight-50{         height: 25px!impo=
+rtant;       }     } @media only screen and (max-width: 640px) {       .s=
+pacingHeight-60{         height: 30px!important;
+      }     } @media only screen and (max-width: 640px) {       .spacingH=
+eight-70{         height: 35px!important;       }     } @media only scree=
+n and (max-width: 640px) {       .spacingHeight-80{         height: 40px!=
+important;       }     } @media only screen and (max-width: 640px) {     =
+  .spacingHeight-90{         height: 45px!important;       }     } @media=
+ only screen and (max-width: 640px) {       .spacingHeight-100{         h=
+eight: 50px!important;       }     } @media only screen and (max-width: 6=
+40px) {       .spacingWidth-20{         width: 10px!important;       }   =
+  } @media only screen and (max-width: 640px) {       .spacingWidth-30{  =
+       width: 15px!important;       }     } @media only screen and (max-w=
+idth: 640px) {       .spacingWidth-40{         width: 20px!important;    =
+   }     } @media only screen and (max-width: 640px) {       .spacingWidt=
+h-60{         width: 30px!important;       }     } @media only screen and=
+ (max-width: 640px) {       .mobileHide{       =20
+display: none!important;       }     } @media only screen and (max-width:=
+ 640px) {       .mobileShow{         display: block!important;       }   =
+  } @media only screen and (max-width: 640px) {       .alignCenter{      =
+   height: auto!important;         text-align: center!important;       } =
+    } @media only screen and (max-width: 640px) {       .alignCenter img{=
+         display: inline !important;         text-align: center!important=
+;       }     } @media only screen and (max-width: 640px) {       .margin=
+Bottom{         margin-bottom: 15px!important;       }     } @media only =
+screen and (max-width: 640px) {       .mlContentHeight{         height: a=
+uto!important;       }     } @media only screen and (max-width: 640px) { =
+      .mlDisplayInline {         display: inline-block!important;        =
+ float: none!important;       }     } @media only screen and (max-width: =
+640px) {       .mlNoFloat{         float: none!important;         margin-=
+left: auto!important;         margin-right:
+auto!important;       }     } @media only screen and (max-width: 640px) {=
+       .mlContentSurvey{         float: none!important;         margin-bo=
+ttom: 10px!important;         width:100%!important;       }     } @media =
+only screen and (max-width: 640px) {       .mlContentSurvey td a{        =
+ width: auto!important;       }     } @media only screen and (max-width: =
+640px) {       .multiple-choice-item-table{         width: 100% !importan=
+t;         margin-bottom: 20px !important;         min-width: 10% !import=
+ant;         float: none !important;       }     } @media only screen and=
+ (max-width: 640px) {       body{         margin: 0px!important;         =
+padding: 0px!important;       }     } @media only screen and (max-width: =
+640px) {       body, table, td, p, a, li, blockquote{         -webkit-tex=
+t-size-adjust: none!important;       }     }     @media only screen and (=
+max-width: 480px){       .social-LinksTable{         width: 100%!importan=
+t;       }     } @media only screen and
+(max-width: 640px) {       .social-LinksTable td:first-child{         pad=
+ding-left: 0px!important;       }     } @media only screen and (max-width=
+: 640px) {       .social-LinksTable td:last-child{         padding-right:=
+ 0px!important;       }     } @media only screen and (max-width: 640px) {=
+       .social-LinksTable td{         padding: 0 10px!important;       } =
+    } @media only screen and (max-width: 640px) {       .social-LinksTabl=
+e td img{         height: auto!important;         max-width: 48px;       =
+  width: 100%!important;       }     }      /* Carousel style */      @me=
+dia screen and (-webkit-min-device-pixel-ratio: 0) {       .webkit {     =
+    display: block !important;       }     }  @media screen and (-webkit-=
+min-device-pixel-ratio: 0) {       .non-webkit {         display: none !i=
+mportant;       }     }  @media screen and (-webkit-min-device-pixel-rati=
+o: 0) {       /* TARGET OUTLOOK.COM */       [class=3D"x_non-webkit"] {  =
+       display: block !important;       }     }=20
+@media screen and (-webkit-min-device-pixel-ratio: 0) {       [class=3D"x=
+_webkit"] {         display: none !important;       }     }
+    </style>
+    <!--[if mso]>
+      <style type=3D"text/css">
+        .bodyText { font-family: Arial, Helvetica, sans-serif!important ;=
+ }     .bodyText * { font-family: Arial, Helvetica, sans-serif!important;=
+ }     .bodyText a { font-family: Arial, Helvetica, sans-serif!important;=
+ }     .bodyText a span { font-family: Arial, Helvetica, sans-serif!impor=
+tant; }     .bodyText span { font-family: Arial, Helvetica, sans-serif!im=
+portant; }     .bodyText p { font-family: Arial, Helvetica, sans-serif!im=
+portant; }     .bodyText ul li { font-family: Arial, Helvetica, sans-seri=
+f!important; }     .bodyTitle { font-family: Arial, Helvetica, sans-serif=
+!important ; }     .bodyTitle * { font-family: Arial, Helvetica, sans-ser=
+if!important; }     .bodyTitle a { font-family: Arial, Helvetica, sans-se=
+rif!important; }     .bodyTitle a span { font-family: Arial, Helvetica, s=
+ans-serif!important; }     .bodyTitle span { font-family: Arial, Helvetic=
+a, sans-serif!important; }     .bodyTitle p { font-family: Arial, Helveti=
+ca, sans-serif!important; }     .bodyFont {
+font-family: Arial, Helvetica, sans-serif!important ; }     .bodyFont * {=
+ font-family: Arial, Helvetica, sans-serif!important; }     .bodyFont a {=
+ font-family: Arial, Helvetica, sans-serif!important; }     .bodyFont a s=
+pan { font-family: Arial, Helvetica, sans-serif!important; }     .bodyFon=
+t span { font-family: Arial, Helvetica, sans-serif!important; }     .body=
+Font p { font-family: Arial, Helvetica, sans-serif!important; }     .mlCo=
+ntentButton { font-family: Arial, Helvetica, sans-serif!important; }
+      </style>
+    <![endif]-->
+    <style type=3D"text/css">
+      @media only screen and (max-width: 640px){ 		#imageBlock-4 img { 		=
+	max-width: 560px!important; 			width: 100%!important; 		} 	}
+    </style>
+    <title>YOUR Ebook is HERE, Syed Azfar Ali</title>
+    <meta name=3D"robots" content=3D"noindex, nofollow">
+  </head>
+ =20
+  <body class=3D"mlBodyBackground" style=3D"padding: 0; margin: 0; -webki=
+t-font-smoothing:antialiased; background-color:#f6f8f9; -webkit-text-size=
+-adjust:none;">
+    <style>
+      div.OutlookMessageHeader, table.moz-email-headers-table, blockquote=
+ #_t, #MailContainerBody #_t {background-image:url("https://click.mlflow.=
+com/link/f/")}
+    </style>
+    <img src=3D"https://click.mlflow.com/link/o/YT0xOTEzODQxMzgyMjU5MTcwM=
+jI2JmM9cjRxMyZlPTA=3D.iD96CsAddx193lrMHCLY35ECCu1YZCplN-DpqhmpwPo" class=3D=
+"open_img" style=3D"display:block; height:0px; width:0px; max-width:0px; =
+max-height:0px; overflow:hidden;" width=3D"1" height=3D"1" border=3D"0" a=
+lt=3D"" />
+    <!-- Make your email an accessible article. -->
+    <div role=3D"article" aria-roledescription=3D"email" aria-label=3D"YO=
+UR+Ebook+is+HERE%2C++%7B%24name%7D">
+      <!--[if !mso]>
+        <!-- -->
+        <table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D=
+"0" bgcolor=3D"#f6f8f9" class=3D"mainTable mlBodyBackground" dir=3D"ltr" =
+background=3D"">
+          <tr>
+            <td class=3D"mlTemplateContainer" align=3D"center">
+            <!--<![endif]-->
+            <!--[if mso 16]>
+              <table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpa=
+dding=3D"0" align=3D"center">
+                <tr>
+                  <td bgcolor=3D"#f6f8f9" align=3D"center">
+                  <!--<![endif]-->
+                  <!-- Content starts here -->
+                  <!-- BORDER RADIUS FOR CARDS LAYOUT -->
+                  <!-- BORDER RADIUS FOR DEFAULT LAYOUT -->
+                  <table cellpadding=3D"0" cellspacing=3D"0" border=3D"0"=
+ align=3D"center" width=3D"640" style=3D"width: 640px; min-width: 640px;"=
+ class=3D"mobileHide">
+                    <tr>
+                      <td align=3D"center">
+                        <table cellpadding=3D"0" cellspacing=3D"0" border=
+=3D"0" align=3D"center" width=3D"640" style=3D"width: 640px; min-width: 6=
+40px;" class=3D"mlContentTable">
+                          <tr>
+                            <td colspan=3D"2" height=3D"20"></td>
+                          </tr>
+                          <tr>
+                            <td align=3D"left" style=3D"font-family: 'Pop=
+pins', sans-serif; color: #111111; font-size: 12px; line-height: 18px;"><=
+/td>
+                            <td align=3D"right" style=3D"font-family: 'Po=
+ppins', sans-serif; color: #111111; font-size: 12px; line-height: 18px;">
+                              <a style=3D"color: #111111;" href=3D"https:=
+//click.mlflow.com/link/c/YT0xOTEzODQxMzgyMjU5MTcwMjI2JmM9cjRxMyZlPTAmYj0=
+0ODI0MTMyNTgmZD15NXE2bjVz.odgOfMkJzlrAzt-3bz_-zuaXdM9-y5SQYi4QovaYf7k" da=
+ta-link-id=3D"482413258" target=3D"_blank"></a>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td colspan=3D"2" height=3D"20"></td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                  <table align=3D"center" border=3D"0" cellpadding=3D"0" =
+cellspacing=3D"0" class=3D"mlContentTable  mlContentBorderRadius" width=3D=
+"640" style=3D"border-radius: 5px; overflow: hidden;">
+                    <tr>
+                      <td>
+                        <!--  -->
+                        <table align=3D"center" border=3D"0" bgcolor=3D"#=
+ffffff" class=3D"mlContentTable mlContentTableDefault" cellpadding=3D"0" =
+cellspacing=3D"0" width=3D"640">
+                          <tr>
+                            <td class=3D"mlContentTableCardTd">
+                              <table align=3D"center" bgcolor=3D"#ffffff"=
+ border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"mlContentTable=
+ ml-default" style=3D"width: 640px; min-width: 640px;" width=3D"640">
+                                <tr>
+                                  <td>
+                                    <table role=3D"presentation" cellpadd=
+ing=3D"0" cellspacing=3D"0" border=3D"0" align=3D"center" width=3D"640" s=
+tyle=3D"width: 640px; min-width: 640px;" class=3D"mlContentTable">
+                                      <tr>
+                                        <td align=3D"center" style=3D"pad=
+ding: 0px 40px;" class=3D"mlContentOuter">
+                                          <table role=3D"presentation" ce=
+llpadding=3D"0" cellspacing=3D"0" border=3D"0" align=3D"center" width=3D"=
+100%">
+                                            <tr>
+                                              <td align=3D"center" id=3D"=
+imageBlock-4">
+                                                <img src=3D"https://bucke=
+t.mlcdn.com/a/2678/2678974/images/ce0cfdeff42c627c4361d7f45500a65e5ee5fc5=
+a.png" border=3D"0" alt=3D"" width=3D"560" style=3D"display: block;">
+                                              </td>
+                                            </tr>
+                                          </table>
+                                        </td>
+                                      </tr>
+                                    </table>
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                        </table>
+                        <!--  -->
+                        <!--  -->
+                        <table align=3D"center" border=3D"0" bgcolor=3D"#=
+ffffff" class=3D"mlContentTable mlContentTableDefault" cellpadding=3D"0" =
+cellspacing=3D"0" width=3D"640">
+                          <tr>
+                            <td class=3D"mlContentTableCardTd">
+                              <table align=3D"center" bgcolor=3D"#ffffff"=
+ border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"mlContentTable=
+ ml-default" style=3D"width: 640px; min-width: 640px;" width=3D"640">
+                                <tr>
+                                  <td>
+                                    <table role=3D"presentation" cellpadd=
+ing=3D"0" cellspacing=3D"0" border=3D"0" align=3D"center" width=3D"640" s=
+tyle=3D"width: 640px; min-width: 640px;" class=3D"mlContentTable">
+                                      <tr>
+                                        <td height=3D"40" class=3D"spacin=
+gHeight-40" style=3D"line-height: 40px; min-height: 40px;"></td>
+                                      </tr>
+                                    </table>
+                                    <table role=3D"presentation" cellpadd=
+ing=3D"0" cellspacing=3D"0" border=3D"0" align=3D"center" width=3D"640" s=
+tyle=3D"width: 640px; min-width: 640px;" class=3D"mlContentTable">
+                                      <tr>
+                                        <td align=3D"center" style=3D"pad=
+ding: 0px 40px;" class=3D"mlContentOuter">
+                                          <table role=3D"presentation" ce=
+llpadding=3D"0" cellspacing=3D"0" border=3D"0" align=3D"center" width=3D"=
+100%">
+                                            <tr>
+                                              <td class=3D"bodyTitle" id=3D=
+"bodyText-6" style=3D"font-family: 'Poppins', sans-serif; font-size: 14px=
+; line-height: 150%; color: #6f6f6f;">
+                                                <p style=3D"margin-top: 0=
+px; margin-bottom: 10px; line-height: 150%; text-align: center;"></p>
+                                                <p style=3D"margin-top: 0=
+px; margin-bottom: 10px; line-height: 150%;">Hey <span class=3D"redactor-=
+component" data-redactor-type=3D"variable-ml">Syed Azfar Ali</span>,</p>
+                                                <p style=3D"margin-top: 0=
+px; margin-bottom: 10px; line-height: 150%;">Here's the ebook: "Become a =
+Freelance Writer" by Khalil Ullah Khan. You can download it by clicking o=
+n the button below.</p>
+                                                <p style=3D"margin-top: 0=
+px; margin-bottom: 10px; line-height: 150%;">I am grateful that you chose=
+ to read this. I hope you learn a thing or two and have a good time.</p>
+                                                <p style=3D"margin-top: 0=
+px; margin-bottom: 10px; line-height: 150%;">Best Regards,</p>
+                                                <p style=3D"margin-top: 0=
+px; margin-bottom: 10px; line-height: 150%;">Khalil Ullah Khan</p>
+                                                <p style=3D"margin-top: 0=
+px; margin-bottom: 0px; line-height: 150%;"></p>
+                                              </td>
+                                            </tr>
+                                          </table>
+                                        </td>
+                                      </tr>
+                                    </table>
+                                    <table role=3D"presentation" cellpadd=
+ing=3D"0" cellspacing=3D"0" border=3D"0" align=3D"center" width=3D"640" s=
+tyle=3D"width: 640px; min-width: 640px;" class=3D"mlContentTable">
+                                      <tr>
+                                        <td height=3D"20" class=3D"spacin=
+gHeight-20" style=3D"line-height: 20px; min-height: 20px;"></td>
+                                      </tr>
+                                    </table>
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                        </table>
+                        <!--  -->
+                        <!--  -->
+                        <table align=3D"center" border=3D"0" bgcolor=3D"#=
+ffffff" class=3D"mlContentTable mlContentTableDefault" cellpadding=3D"0" =
+cellspacing=3D"0" width=3D"640">
+                          <tr>
+                            <td class=3D"mlContentTableCardTd">
+                              <table align=3D"center" bgcolor=3D"#ffffff"=
+ border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"mlContentTable=
+ ml-default" style=3D"width: 640px; min-width: 640px;" width=3D"640">
+                                <tr>
+                                  <td>
+                                    <table role=3D"presentation" cellpadd=
+ing=3D"0" cellspacing=3D"0" border=3D"0" align=3D"center" width=3D"640" s=
+tyle=3D"width: 640px; min-width: 640px;" class=3D"mlContentTable">
+                                      <tr>
+                                        <td height=3D"20" class=3D"spacin=
+gHeight-20" style=3D"line-height: 20px; min-height: 20px;"></td>
+                                      </tr>
+                                    </table>
+                                    <table role=3D"presentation" cellpadd=
+ing=3D"0" cellspacing=3D"0" border=3D"0" align=3D"center" width=3D"640" s=
+tyle=3D"width: 640px; min-width: 640px;" class=3D"mlContentTable">
+                                      <tr>
+                                        <td align=3D"center" style=3D"pad=
+ding: 0px 40px;" class=3D"mlContentOuter">
+                                          <table role=3D"presentation" ce=
+llpadding=3D"0" cellspacing=3D"0" border=3D"0" align=3D"center" width=3D"=
+100%" style=3D"width: 100%; min-width: 100%;">
+                                            <tr>
+                                              <td align=3D"center">
+                                                <table role=3D"presentati=
+on" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" style=
+=3D"width: 100%; min-width: 100%;">
+                                                  <tr>
+                                                    <td align=3D"center" =
+class=3D"mlContentButton" style=3D"font-family: 'Poppins', sans-serif;">
+                                                      <!--[if mso]>
+                                                        <v:roundrect xmln=
+s:v=3D"urn:schemas-microsoft-com:vml" xmlns:w=3D"urn:schemas-microsoft-co=
+m:office:word" href=3D"https://click.mlflow.com/link/c/YT0xOTEzODQxMzgyMj=
+U5MTcwMjI2JmM9cjRxMyZlPTAmYj00ODI0MTMyNjEmZD1oMHoydTFl.GJ1Mt6SoGHGXt0W-1f=
+4vQbLcingnm6G4-HdryNVsxpI" data-link-id=3D"482413261" style=3D"height:50p=
+x;v-text-anchor:middle;width:229px;" arcsize=3D"6%" stroke=3D"f" fillcolo=
+r=3D"#2d8cff">
+                                                          <w:anchorlock/>
+                                                          <center>
+                                                          <![endif]-->
+                                                          <a class=3D"mlC=
+ontentButton" href=3D"https://click.mlflow.com/link/c/YT0xOTEzODQxMzgyMjU=
+5MTcwMjI2JmM9cjRxMyZlPTAmYj00ODI0MTMyNjEmZD1oMHoydTFl.GJ1Mt6SoGHGXt0W-1f4=
+vQbLcingnm6G4-HdryNVsxpI" data-link-id=3D"482413261" target=3D"_blank" st=
+yle=3D"font-family: 'Poppins', sans-serif; background-color: #2d8cff; bor=
+der-radius: 3px; color: #ffffff; display: inline-block; font-size: 14px; =
+font-weight: 400; line-height: 20px; padding: 15px 0 15px 0; text-align: =
+center; text-decoration: none; width: 200px;">Download eBook</a>
+                                                          <!--[if mso]>
+                                                          </center>
+                                                        </v:roundrect>
+                                                      <![endif]-->
+                                                    </td>
+                                                  </tr>
+                                                </table>
+                                              </td>
+                                            </tr>
+                                          </table>
+                                        </td>
+                                      </tr>
+                                    </table>
+                                    <table role=3D"presentation" cellpadd=
+ing=3D"0" cellspacing=3D"0" border=3D"0" align=3D"center" width=3D"640" s=
+tyle=3D"width: 640px; min-width: 640px;" class=3D"mlContentTable">
+                                      <tr>
+                                        <td height=3D"20" class=3D"spacin=
+gHeight-20" style=3D"line-height: 20px; min-height: 20px;"></td>
+                                      </tr>
+                                    </table>
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                        </table>
+                        <!--  -->
+                        <!--  -->
+                        <table align=3D"center" border=3D"0" bgcolor=3D"#=
+ffffff" class=3D"mlContentTable mlContentTableDefault" cellpadding=3D"0" =
+cellspacing=3D"0" width=3D"640">
+                          <tr>
+                            <td class=3D"mlContentTableCardTd">
+                              <table align=3D"center" bgcolor=3D"#ffffff"=
+ border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"mlContentTable=
+ ml-default" style=3D"width: 640px; min-width: 640px;" width=3D"640">
+                                <tr>
+                                  <td>
+                                    <table role=3D"presentation" cellpadd=
+ing=3D"0" cellspacing=3D"0" border=3D"0" align=3D"center" width=3D"640" s=
+tyle=3D"width: 640px; min-width: 640px;" class=3D"mlContentTable">
+                                      <tr>
+                                        <td height=3D"20" class=3D"spacin=
+gHeight-20" style=3D"line-height: 20px; min-height: 20px;"></td>
+                                      </tr>
+                                    </table>
+                                    <table role=3D"presentation" cellpadd=
+ing=3D"0" cellspacing=3D"0" border=3D"0" align=3D"center" width=3D"640" s=
+tyle=3D"width: 640px; min-width: 640px;" class=3D"mlContentTable">
+                                      <tr>
+                                        <td align=3D"center" class=3D"">
+                                          <table role=3D"presentation" ce=
+llpadding=3D"0" cellspacing=3D"0" border=3D"0" align=3D"center" width=3D"=
+100%" style=3D"border-top: 1px solid #ededf3; border-collapse: initial;" =
+class=3D"">
+                                            <tr>
+                                              <td height=3D"20" class=3D"=
+spacingHeight-20" style=3D"line-height: 20px; min-height: 20px;">
+                                                <img src=3D"https://cdn.m=
+ailerlite.com/images/default/spacer.gif" width=3D"1" height=3D"1" border=3D=
+"0" alt=3D"" style=3D"display: block;">
+                                              </td>
+                                            </tr>
+                                          </table>
+                                        </td>
+                                      </tr>
+                                    </table>
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                        </table>
+                        <!--  -->
+                        <!--  -->
+                        <table align=3D"center" border=3D"0" bgcolor=3D"#=
+ffffff" class=3D"mlContentTable mlContentTableDefault" cellpadding=3D"0" =
+cellspacing=3D"0" width=3D"640">
+                          <tr>
+                            <td class=3D"mlContentTableCardTd">
+                              <table align=3D"center" bgcolor=3D"#ffffff"=
+ border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"mlContentTable=
+ ml-default" style=3D"width: 640px; min-width: 640px;" width=3D"640">
+                                <tr>
+                                  <td>
+                                    <table role=3D"presentation" cellpadd=
+ing=3D"0" cellspacing=3D"0" border=3D"0" align=3D"center" width=3D"640" s=
+tyle=3D"width: 640px; min-width: 640px;" class=3D"mlContentTable">
+                                      <tr>
+                                        <td height=3D"20" class=3D"spacin=
+gHeight-20" style=3D"line-height: 20px; min-height: 20px;"></td>
+                                      </tr>
+                                    </table>
+                                    <table role=3D"presentation" cellpadd=
+ing=3D"0" cellspacing=3D"0" border=3D"0" align=3D"center" width=3D"640" s=
+tyle=3D"width: 640px; min-width: 640px;" class=3D"mlContentTable">
+                                      <tr>
+                                        <td align=3D"center" class=3D"">
+                                          <table role=3D"presentation" ce=
+llpadding=3D"0" cellspacing=3D"0" border=3D"0" align=3D"center" width=3D"=
+100%" style=3D"border-top: 1px solid #ededf3; border-collapse: initial;" =
+class=3D"">
+                                            <tr>
+                                              <td height=3D"20" class=3D"=
+spacingHeight-20" style=3D"line-height: 20px; min-height: 20px;">
+                                                <img src=3D"https://cdn.m=
+ailerlite.com/images/default/spacer.gif" width=3D"1" height=3D"1" border=3D=
+"0" alt=3D"" style=3D"display: block;">
+                                              </td>
+                                            </tr>
+                                          </table>
+                                        </td>
+                                      </tr>
+                                    </table>
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                        </table>
+                        <!--  -->
+                        <table align=3D"center" border=3D"0" bgcolor=3D"#=
+ffffff" class=3D"mlContentTable mlContentTableFooterDefault" cellpadding=3D=
+"0" cellspacing=3D"0" width=3D"640">
+                          <tr>
+                            <td class=3D"mlContentTableFooterCardTd">
+                              <table align=3D"center" bgcolor=3D"#ffffff"=
+ border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"mlContentTable=
+ ml-default" style=3D"width: 640px; min-width: 640px;" width=3D"640">
+                                <tr>
+                                  <td>
+                                    <table role=3D"presentation" cellpadd=
+ing=3D"0" cellspacing=3D"0" border=3D"0" align=3D"center" width=3D"640" s=
+tyle=3D"width: 640px; min-width: 640px;" class=3D"mlContentTable">
+                                      <tr>
+                                        <td height=3D"10" class=3D"spacin=
+gHeight-10" style=3D"line-height: 10px; min-height: 10px;"></td>
+                                      </tr>
+                                    </table>
+                                    <table role=3D"presentation" cellpadd=
+ing=3D"0" cellspacing=3D"0" border=3D"0" align=3D"center" width=3D"640" s=
+tyle=3D"width: 640px; min-width: 640px;" class=3D"mlContentTable">
+                                      <tr>
+                                        <td align=3D"center" style=3D"pad=
+ding: 0px 40px;" class=3D"mlContentOuter">
+                                          <table role=3D"presentation" ce=
+llpadding=3D"0" cellspacing=3D"0" border=3D"0" align=3D"center" width=3D"=
+100%">
+                                            <tr>
+                                              <td align=3D"left" class=3D=
+"bodyTitle" style=3D"font-family: 'Poppins', sans-serif; font-size: 14px;=
+ font-weight: 700; line-height: 150%; color: #111111;">Khalil Ullah Khan<=
+/td>
+                                            </tr>
+                                          </table>
+                                        </td>
+                                      </tr>
+                                    </table>
+                                    <table role=3D"presentation" cellpadd=
+ing=3D"0" cellspacing=3D"0" border=3D"0" align=3D"center" width=3D"640" s=
+tyle=3D"width: 640px; min-width: 640px;" class=3D"mlContentTable">
+                                      <tr>
+                                        <td height=3D"10" class=3D"spacin=
+gHeight-10"></td>
+                                      </tr>
+                                    </table>
+                                    <table role=3D"presentation" cellpadd=
+ing=3D"0" cellspacing=3D"0" border=3D"0" align=3D"center" width=3D"640" s=
+tyle=3D"width: 640px; min-width: 640px;" class=3D"mlContentTable">
+                                      <tr>
+                                        <td align=3D"center" style=3D"pad=
+ding: 0px 40px;" class=3D"mlContentOuter">
+                                          <table role=3D"presentation" ce=
+llpadding=3D"0" cellspacing=3D"0" border=3D"0" align=3D"center" width=3D"=
+100%">
+                                            <tr>
+                                              <td align=3D"center">
+                                                <table role=3D"presentati=
+on" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" align=3D"left" width=
+=3D"267" style=3D"width: 267px; min-width: 267px;" class=3D"mlContentTabl=
+e marginBottom">
+                                                  <tr>
+                                                    <td align=3D"left" cl=
+ass=3D"bodyTitle" id=3D"footerText-14" style=3D"font-family: 'Poppins', s=
+ans-serif; font-size: 12px; line-height: 150%; color: #111111;">
+                                                      <p style=3D"margin-=
+top: 0px; margin-bottom: 0px;">54000, Lahore, Lahore<br>Pakistan</p>
+                                                    </td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td height=3D"25" cla=
+ss=3D"spacingHeight-20"></td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td align=3D"center">
+                                                      <table role=3D"pres=
+entation" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" align=3D"left"=
+>
+                                                        <tr>
+                                                          <td align=3D"ce=
+nter" width=3D"24" style=3D"padding: 0px 5px;" ng-show=3D"slink.link !=3D=
+ ''">
+                                                            <a href=3D"ht=
+tps://click.mlflow.com/link/c/YT0xOTEzODQxMzgyMjU5MTcwMjI2JmM9cjRxMyZlPTA=
+mYj00ODI0MTMyNjQmZD1oM3Q2aTV5.4Y1chmNp0ZVV20lwbvyQTeB93CUaDu4qC_lS0a_R5es=
+" data-link-id=3D"482413264" target=3D"_blank"> 													<img width=3D=
+"24" alt=3D"facebook" src=3D"https://cdn.mailerlite.com/images/icons/defa=
+ult/round/black/facebook.png" style=3D"display: block;" border=3D"0"> 			=
+									</a>
+                                                          </td>
+                                                          <td align=3D"ce=
+nter" width=3D"24" style=3D"padding: 0px 5px;" ng-show=3D"slink.link !=3D=
+ ''">
+                                                            <a href=3D"ht=
+tps://click.mlflow.com/link/c/YT0xOTEzODQxMzgyMjU5MTcwMjI2JmM9cjRxMyZlPTA=
+mYj00ODI0MTMyNjcmZD1lMWM0YjR5.QT_JLBWE-OdIVmH4GdueWeRwxPu3NlV_5meGTq4gMfg=
+" data-link-id=3D"482413267" target=3D"_blank"> 													<img width=3D=
+"24" alt=3D"youtube" src=3D"https://cdn.mailerlite.com/images/icons/defau=
+lt/round/black/youtube.png" style=3D"display: block;" border=3D"0"> 					=
+							</a>
+                                                          </td>
+                                                          <td align=3D"ce=
+nter" width=3D"24" style=3D"padding: 0px 5px;" ng-show=3D"slink.link !=3D=
+ ''">
+                                                            <a href=3D"ht=
+tps://click.mlflow.com/link/c/YT0xOTEzODQxMzgyMjU5MTcwMjI2JmM9cjRxMyZlPTA=
+mYj00ODI0MTMyNzAmZD13OWc3dDV2.56EXzf1s6d0i0hvpz6zyCgDduquK-ws1ccPRGb8q3ws=
+" data-link-id=3D"482413270" target=3D"_blank"> 													<img width=3D=
+"24" alt=3D"instagram" src=3D"https://cdn.mailerlite.com/images/icons/def=
+ault/round/black/instagram.png" style=3D"display: block;" border=3D"0"> 	=
+											</a>
+                                                          </td>
+                                                        </tr>
+                                                      </table>
+                                                    </td>
+                                                  </tr>
+                                                </table>
+                                                <table role=3D"presentati=
+on" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" align=3D"right" widt=
+h=3D"267" style=3D"width: 267px; min-width: 267px;" class=3D"mlContentTab=
+le">
+                                                  <tr>
+                                                    <td align=3D"right" c=
+lass=3D"bodyTitle" id=3D"footerUnsubscribeText-14" style=3D"font-family: =
+'Poppins', sans-serif; font-size: 12px; line-height: 150%; color: #111111=
+;">
+                                                      <p style=3D"margin-=
+top: 0px; margin-bottom: 0px;">You received this email because you signed=
+ up on our website.</p>
+                                                    </td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td height=3D"10"></t=
+d>
+                                                  </tr>
+                                                  <tr>
+                                                    <td align=3D"right" c=
+lass=3D"bodyTitle" style=3D"font-family: 'Poppins', sans-serif; font-size=
+: 12px; line-height: 150%; color: #111111;">
+                                                      <a href=3D"https://=
+click.mlflow.com/link/c/YT0xOTEzODQxMzgyMjU5MTcwMjI2JmM9cjRxMyZlPTAmYj00O=
+DI0MjE5MjgmZD11M3A2ZzFy.nhXTn2SeeKiAp5aAjLAKQy6nZZZjXE4id00bd32pIko" styl=
+e=3D"color: #111111; text-decoration: underline;">           					<span s=
+tyle=3D"color: #111111;">Unsubscribe</span>           					         					=
+</a>
+                                                    </td>
+                                                  </tr>
+                                                </table>
+                                              </td>
+                                            </tr>
+                                          </table>
+                                        </td>
+                                      </tr>
+                                    </table>
+                                    <table role=3D"presentation" cellpadd=
+ing=3D"0" cellspacing=3D"0" border=3D"0" align=3D"center" width=3D"640" s=
+tyle=3D"width: 640px; min-width: 640px;" class=3D"mlContentTable">
+                                      <tr>
+                                        <td height=3D"40" class=3D"spacin=
+gHeight-40" style=3D"line-height: 40px; min-height: 40px;"></td>
+                                      </tr>
+                                    </table>
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                  <table cellpadding=3D"0" cellspacing=3D"0" border=3D"0"=
+ align=3D"center" width=3D"640" style=3D"width: 640px; min-width: 640px;"=
+ class=3D"mlContentTable">
+                    <tr>
+                      <td height=3D"40" class=3D"spacingHeight-20"></td>
+                    </tr></table>
+                  <!-- Content ends here -->
+                  <!--[if mso 16]>
+                  </td>
+                </tr>
+              </table>
+            <!--<![endif]-->
+            <!--[if !mso]>
+              <!-- -->
+            </td>
+          </tr>
+        </table>
+      <!--<![endif]-->
+    </div>
+  </body>
+
+</html>
+
+
+
+--b1_af47da2fd6837848667145a1769a607a--
+
+

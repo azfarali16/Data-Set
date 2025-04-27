@@ -1,0 +1,1730 @@
+X-GM-THRID: 1794973540796346613
+X-Gmail-Labels: Inbox,Category Updates,Unread
+Delivered-To: azfarali007.aa@gmail.com
+Received: by 2002:a05:6214:1883:b0:696:8f71:4d28 with SMTP id cx3csp2485241qvb;
+        Sat, 30 Mar 2024 10:36:04 -0700 (PDT)
+X-Google-Smtp-Source: AGHT+IErspxP3G/bECxwlK+f4Z7+ZLIXnW9PFKAM8QQ3sbUD045IB1Lk3vhID55upuqrk48B8Ulr
+X-Received: by 2002:a54:4605:0:b0:3c3:e307:5038 with SMTP id p5-20020a544605000000b003c3e3075038mr4627937oip.57.1711820164238;
+        Sat, 30 Mar 2024 10:36:04 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1711820164; cv=none;
+        d=google.com; s=arc-20160816;
+        b=pNONKGo/XmBlM3cF0gxk3UCzRzTK1Vp6uMeanFADWJr9p40SPQvl5xU3oyJlGwpxQE
+         CVMvmHhwKNJ63CpgfXjc40/fKKSw7yvTHSKX+Uhc65mWCB2eGXgyDYPNWWKAqQzAbJXC
+         RdPqmpulFWHYArb1ecQgTvER1g8kUbrcLJ77gWLrO9PhXobtGDRicpuw+OKpz6g0jHi3
+         CepsIdFohU9aqNT2WlXFy8bUYYWFzQkQr2EupqJZMxCcWfE6FSFaZTz36PEIsi6blQLs
+         byE6ZAiW+1H/QzUDnmP1izM1qyzmliT1QiCoG1d1gAnazG6Bk9p03vnOCG+wLqHSVkk6
+         yH+A==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=message-id:to:from:subject:mime-version:date:dkim-signature
+         :dkim-signature;
+        bh=bKLNDW8Qx6JPoIT7cAd47F+zll/Ql+/reZpd2jd8JhE=;
+        fh=1ghr3/vhIGL7+ytS5gYC2yrxOtO8q7dbhZ8cIHrxcdk=;
+        b=p1dtaE465un/aoP/jqlmpf0YeovGLwAdyApHQemWJRK/H/2n7ujluknCo/bkzIWtoN
+         9lIaDlxnjIsDBLF2Yxt/wsgXXhIOKvga4QJImdzeTwFWN5/Fr9Zo/9N7hV3MqnuP26y+
+         dpSD9d4EPxclPMM6ZKmpJXxfoCVAgEg9rErDNChWmHY/xue2dLIcIHeb69Nd1QAaSqZv
+         W4P+RFX+ev5DWAL40SDlZxe32FkrS1zQ2GFkk0Q592erhE8mjVAzbDUgRRPeaJoJ8hpA
+         NPxGcy0d8Vh3dxxFRhibjwa2elv9ka14U0hvkb8tFqgHdIKDVtlT6aIJjke142yBfK+P
+         U87Q==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@cio33540.datacamp.com header.s=pic header.b=jtho5y+k;
+       dkim=pass header.i=@mailgun.org header.s=mg header.b=UwE6v03i;
+       spf=pass (google.com: domain of postmaster@cio33540.datacamp.com designates 161.38.193.40 as permitted sender) smtp.mailfrom=postmaster@cio33540.datacamp.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=datacamp.com
+Return-Path: <postmaster@cio33540.datacamp.com>
+Received: from m193-40.mailgun.net (m193-40.mailgun.net. [161.38.193.40])
+        by mx.google.com with UTF8SMTPS id s20-20020ad44b34000000b0068cc0945defsi1404680qvw.318.2024.03.30.10.36.04
+        for <azfarali007.aa@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Sat, 30 Mar 2024 10:36:04 -0700 (PDT)
+Received-SPF: pass (google.com: domain of postmaster@cio33540.datacamp.com designates 161.38.193.40 as permitted sender) client-ip=161.38.193.40;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@cio33540.datacamp.com header.s=pic header.b=jtho5y+k;
+       dkim=pass header.i=@mailgun.org header.s=mg header.b=UwE6v03i;
+       spf=pass (google.com: domain of postmaster@cio33540.datacamp.com designates 161.38.193.40 as permitted sender) smtp.mailfrom=postmaster@cio33540.datacamp.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=datacamp.com
+DKIM-Signature: a=rsa-sha256; v=1; c=relaxed/relaxed; d=cio33540.datacamp.com; q=dns/txt; s=pic; t=1711820163; x=1711827363;
+ h=Message-Id: To: To: From: From: Subject: Subject: Content-Type: Mime-Version: Date: X-Feedback-Id: Sender;
+ bh=bKLNDW8Qx6JPoIT7cAd47F+zll/Ql+/reZpd2jd8JhE=;
+ b=jtho5y+kfv3bH4PDhlxzqoEq/VgHHAZ89GFHhQBMR9Ps0uPKdoi3L81zEgun0HhlKBhcjlirZ03Zjk9a4VTmPdewizYdlD1VVFTmgvxST8GX7/yku+/plfHm4FEMgjvgIczCIRDAdp9PW+pF1nIlTKBZ9J/SLPZ4ZuoEl64ewcc=
+DKIM-Signature: a=rsa-sha256; v=1; c=relaxed/relaxed; d=mailgun.org; q=dns/txt; s=mg; t=1711820163; x=1711827363;
+ h=Message-Id: To: To: From: From: Subject: Subject: Content-Type: Mime-Version: Date: X-Feedback-Id: Sender;
+ bh=bKLNDW8Qx6JPoIT7cAd47F+zll/Ql+/reZpd2jd8JhE=;
+ b=UwE6v03ijpb1VMt/qYEcFuvhTIrnZ0nTMCGpRDY2HUryINZZdzlegKq71/K5MvFbPnNjVtPVF5Zv0JMVceWbxD+v0MAf1kKSkGz5l5U8tk8dGXCMxaH5w14WZxC1cQiK1jX165Pmk16wVDNE448Jjjp30fHLH88W0W108rwvfaY=
+X-Feedback-Id: postmaster@cio33540.datacamp.com::5ddd74a2f4ee83003eecbcb5:mailgun
+X-Mailgun-Sending-Ip: 161.38.193.40
+X-Mailgun-Sid: WyJkNmExNiIsImF6ZmFyYWxpMDA3LmFhQGdtYWlsLmNvbSIsIjIzNDhjNSJd
+Received: from <unknown> (<unknown> []) by 9d9e800cc7c0 with HTTP id
+ 66084d83c630cc2a60ae0d16; Sat, 30 Mar 2024 17:36:03 GMT
+Date: Sat, 30 Mar 2024 17:36:03 +0000
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="0027febf4bfeb0022ebdde6a10a960731f8cdd20337677a90cde35cb4064"
+Subject: Your Statement of Accomplishment has Arrived
+From: The DataCamp Team <team@datacamp.com>
+To: azfarali007.aa@gmail.com
+X-Mailgun-Track-Clicks: false
+X-Mailgun-Track-Opens: false
+X-Mailgun-Dkim: true
+X-Mailgun-Native-Send: true
+X-Mailer: Customer.io (dgTdhwQBAJiu2AaWrtgGAY6QbspdP7nUiIiNzJHlyQ==;
+ +https://whatis.customeriomail.com)
+X-Report-Abuse-To: badactor@customer.io
+X-Mailgun-Variables: {"email_id": "dgTdhwQBAJiu2AaWrtgGAY6QbspdP7nUiIiNzJHlyQ=="}
+Message-Id: <20240330173603.112e389dc8dd8f0a@cio33540.datacamp.com>
+
+--0027febf4bfeb0022ebdde6a10a960731f8cdd20337677a90cde35cb4064
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset="utf-8"
+
+Congrats on completing Python Data Science Toolbox (Part 2)! Continue on yo=
+ur learning track and explore Exploratory Data Analysis in Python to keep y=
+our progress rolling!
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=
+=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=
+=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=
+=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=
+=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=
+=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=
+=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C
+
+DataCamp ( https://www.datacamp.com?utm_source=3Dcustomerio&utm_medium=3Dem=
+ail&utm_campaign=3D230517_1-coursetrackcomplete_2-mix_3-all_4-na_5-na_6-cou=
+rsetrack_7-le_8-emal-ci_9-na_10-bau_11-email&utm_content=3Dauto )
+
+******************************************************************
+Congratulations! You finished Python Data Science Toolbox (Part 2)
+******************************************************************
+
+Share your accomplishment
+
+LinkedIn
+Share on LinkedIn ( https://www.linkedin.com/shareArticle?mini=3Dtrue&url=
+=3Dhttps%3A%2F%2Fwww.datacamp.com%2Fcompleted%2Fstatement-of-accomplishment=
+%2Fcourse%2F871fe470313063bc2a77cf4e1273bf71e3530c51%3Fshare%3Dtrue&title=
+=3DAzfar%20Ali%20earned%20a%20statement%20of%20accomplishment%20on%20DataCa=
+mp%20for%20completing%20Python%20Data%20Science%20Toolbox%20%28Part%202%29 =
+)
+
+Facebook
+Share on Facebook ( https://www.facebook.com/sharer/sharer.php?u=3Dhttps%3A=
+%2F%2Fwww.datacamp.com%2Fcompleted%2Fstatement-of-accomplishment%2Fcourse%2=
+F871fe470313063bc2a77cf4e1273bf71e3530c51%3Fshare%3Dtrue%26utm_source%3Dcus=
+tomerio%26utm_medium%3Dreferral%26utm_campaign%3Dcertificate_share )
+
+Twitter
+Share on Twitter ( https://twitter.com/intent/tweet?text=3DAzfar%20Ali%20ea=
+rned%20a%20statement%20of%20accomplishment%20on%20DataCamp%20for%20completi=
+ng%20Python%20Data%20Science%20Toolbox%20%28Part%202%29&url=3Dhttps%3A%2F%2=
+Fwww.datacamp.com%2Fcompleted%2Fstatement-of-accomplishment%2Fcourse%2F871f=
+e470313063bc2a77cf4e1273bf71e3530c51%3Fshare%3Dtrue&hashtags=3Ddatacamp )
+
+Or download
+your statement of accomplishment ( https://www.datacamp.com/completed/state=
+ment-of-accomplishment/course/871fe470313063bc2a77cf4e1273bf71e3530c51?utm_=
+source=3Dcustomerio&utm_medium=3Demail&utm_campaign=3D230517_1-coursetrackc=
+omplete_2-mix_3-all_4-na_5-na_6-coursetrack_7-le_8-emal-ci_9-na_10-bau_11-e=
+mail&utm_content=3Dauto )
+
+-----------------
+Your next course:
+-----------------
+
+-----------------------------------
+Exploratory Data Analysis in Python
+----------------------------------- ( https://www.datacamp.com/courses/expl=
+oratory-data-analysis-in-python?utm_source=3Dcustomerio&utm_medium=3Demail&=
+utm_campaign=3D230517_1-coursetrackcomplete_2-mix_3-all_4-na_5-na_6-courset=
+rack_7-le_8-emal-ci_9-na_10-bau_11-email&utm_content=3Dauto )
+
+Learn how to explore, visualize, and extract insights from data using explo=
+ratory data analysis (EDA) in Python. ( https://www.datacamp.com/courses/ex=
+ploratory-data-analysis-in-python?utm_source=3Dcustomerio&utm_medium=3Demai=
+l&utm_campaign=3D230517_1-coursetrackcomplete_2-mix_3-all_4-na_5-na_6-cours=
+etrack_7-le_8-emal-ci_9-na_10-bau_11-email&utm_content=3Dauto )
+
+Start Now =E2=86=92 ( https://www.datacamp.com/courses/exploratory-data-ana=
+lysis-in-python?utm_source=3Dcustomerio&utm_medium=3Demail&utm_campaign=3D2=
+30517_1-coursetrackcomplete_2-mix_3-all_4-na_5-na_6-coursetrack_7-le_8-emal=
+-ci_9-na_10-bau_11-email&utm_content=3Dauto )
+
+See All Upcoming Courses ( https://www.datacamp.com/tracks/associate-data-s=
+cientist-in-python?utm_source=3Dcustomerio&utm_medium=3Demail&utm_campaign=
+=3D230517_1-coursetrackcomplete_2-mix_3-all_4-na_5-na_6-coursetrack_7-le_8-=
+emal-ci_9-na_10-bau_11-email&utm_content=3Dauto )
+
+clear as data ( https://www.datacamp.com/ )
+
+DataCamp, Inc. | 350 5th Ave. | Suite 7720 | New York, NY 10118
+
+Facebook ( https://www.facebook.com/datacampinc/ )
+Twitter ( https://twitter.com/datacamp )
+LinkedIn ( https://www.linkedin.com/company/datacampinc/ )
+Youtube ( https://www.youtube.com/channel/UC79Gv3mYp6zKiSwYemEik9A )
+Instagram ( https://www.instagram.com/datacamp/?hl=3Den )
+
+Apple Store ( https://datacamp.onelink.me/xztQ/cghcfw5o )
+Google Play ( https://datacamp.onelink.me/xztQ/cghcfw5o )
+
+Unsubscribe ( https://www.datacamp.com/mail_preferences/2ffd40a5-ce85-445f-=
+aa59-cd9a8ab7c9d6 )=C2=A0=C2=A0 =C2=A0=C2=A0Privacy Policy ( https://www.da=
+tacamp.com/privacy-policy/ )=E2=80=8B ( https://datacamp.com?utm_source=3Dc=
+ustomerio&utm_medium=3Demail&utm_term=3Dbot&dc_euid=3D14105168 )
+--0027febf4bfeb0022ebdde6a10a960731f8cdd20337677a90cde35cb4064
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset="utf-8"
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.=
+w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns=3D"http://www.w3.=
+org/1999/xhtml" lang=3D"en"><head>
+  <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"/=
+>
+  <!--[if !mso]><!-->
+  <meta content=3D"IE=3Dedge" http-equiv=3D"X-UA-Compatible"/>
+  <!--<![endif]-->
+  <meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=3D=
+1.0"/>
+  <meta name=3D"color-scheme" content=3D"light dark"/>
+  <meta name=3D"supported-color-schemes" content=3D"light dark"/>
+  <title></title>
+  <style type=3D"text/css">
+ :root {
+ color-scheme: light dark;
+ supported-color-schemes: light dark;
+ }
+  </style>
+  <title></title>
+  <style type=3D"text/css">
+ /* http://meyerweb.com/eric/tools/css/reset/
+ v2.0 | 20110126
+ License: none (public domain)
+ */
+ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, =
+blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, =
+img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, =
+i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, ca=
+ption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, em=
+bed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, s=
+ection, summary, time, mark, audio, video {
+ margin: 0;
+ padding: 0;
+ border: 0;
+ font-size: 100%;
+ font: inherit;
+ vertical-align: baseline;
+ }
+ /* HTML5 display-role reset for older browsers */
+ article, aside, details, figcaption, figure, footer, header, hgroup, menu,=
+ nav, section {
+ display: block;
+ }
+ body {
+ line-height: 1;
+ }
+ ol, ul {
+ list-style: none;
+ }
+ blockquote, q {
+ quotes: none;
+ }
+ blockquote:before, blockquote:after, q:before, q:after {
+ content: '';
+ content: none;
+ }
+ table {
+ border-collapse: collapse;
+ border-spacing: 0;
+ }
+  </style>
+  <style type=3D"text/css">
+ /* CLIENT-SPECIFIC STYLES */
+ img {
+ -ms-interpolation-mode: bicubic;
+ }
+ /* Force IE to smoothly render resized images. */
+ #outlook a {
+ padding: 0;
+ }
+ /* Remove spacing between tables in Outlook 2007 and up. */
+ .ReadMsgBody {
+ width: 100%;
+ }
+ .ExternalClass {
+ width: 100%;
+ }
+ /* Force Outlook.com to display emails at full width. */
+ p, a, td {
+ mso-line-height-rule: exactly;
+ }
+ /* Force Outlook to render line heights as they're originally set. */
+ p, a, td, body, table {
+ -ms-text-size-adjust: 100%;
+ -webkit-text-size-adjust: 100%;
+ }
+ /* Prevent Windows- and Webkit-based mobile platforms from changing declar=
+ed text sizes. */
+ .ExternalClass, .ExternalClass p, .ExternalClass td, .ExternalClass div, .=
+ExternalClass span, .ExternalClass font {
+ line-height: 100%;
+ }
+ #MessageViewBody a {
+ color: inherit;
+ text-decoration: none;
+ font-size: inherit;
+ font-family: inherit;
+ font-weight: inherit;
+ line-height: inherit;
+ }
+ /* Force Outlook.com to display line heights normally. */
+ a[x-apple-data-detectors] {
+ color: inherit !important;
+ text-decoration: none !important;
+ font-size: inherit !important;
+ font-family: inherit !important;
+ font-weight: inherit !important;
+ line-height: inherit !important;
+ }
+ span.MsoHyperlink {
+ mso-style-priority: 99;
+ color: inherit;
+ }
+ span.MsoHyperlinkFollowed {
+ mso-style-priority: 99;
+ color: inherit;
+ }
+  </style>
+  <style type=3D"text/css">
+ body {
+ margin: 0;
+ padding: 0;
+ }
+ table {
+ border-spacing: 0;
+ }
+ td {
+ padding: 0;
+ }
+ img {
+ border: 0;
+ }
+ .wrapper {
+ width: 100%;
+ table-layout: fixed;
+ -webkit-text-size-adjust: 100%;
+ -ms-text-size-adjust: 100%;
+ }
+ .webkit {
+ max-width: 600px;
+ margin: 0 auto;
+ }
+ .outer {
+ Margin: 0 auto;
+ width: 100%;
+ max-width: 600px;
+ }
+ .full-width-image img {
+ width: 100%;
+ max-width: 600px;
+ height: auto;
+ }
+ .inner {
+ padding: 0px;
+ }
+ .one-column .contents {
+ text-align: left;
+ }
+ .two-column {
+ text-align: center;
+ font-size: 0;
+ }
+ .two-column .column {
+ width: 100%;
+ max-width: 300px;
+ display: inline-block;
+ vertical-align: top;
+ }
+ .contents {
+ width: 100%;
+ }
+ .two-column img {
+ width: 100%;
+ max-width: 300px;
+ height: auto;
+ }
+ .three-column {
+ text-align: center;
+ font-size: 0;
+ padding-top: 10px;
+ padding-bottom: 10px;
+ }
+ .three-column .column {
+ width: 100%;
+ max-width: 200px;
+ display: inline-block;
+ vertical-align: top;
+ }
+ .three-column img {
+ width: 100%;
+ max-width: 380px;
+ height: auto;
+ }
+ .icon img {
+ width: 100%;
+ max-width: 100px;
+ height: auto;
+ }
+ .three-column .text {
+ padding-top: 10px;
+ }
+ .left-sidebar {
+ text-align: center;
+ font-size: 0;
+ }
+ .left-sidebar .column {
+ width: 100%;
+ display: inline-block;
+ vertical-align: middle;
+ }
+ .left-sidebar .left {
+ max-width: 300px;
+ }
+ .left-sidebar .right {
+ max-width: 300px;
+ }
+ .left-sidebar .img {
+ width: 100%;
+ max-width: 300px;
+ height: auto;
+ }
+ .left-sidebar .contents {
+ text-align: center;
+ }
+ .left-sidebar a {
+ color: #85ab70;
+ }
+ .right-sidebar {
+ text-align: center;
+ font-size: 0;
+ }
+ .right-sidebar .column {
+ width: 100%;
+ display: inline-block;
+ vertical-align: middle;
+ }
+ .right-sidebar .left {
+ max-width: 300px;
+ }
+ .right-sidebar .right {
+ max-width: 300px;
+ }
+ .right-sidebar .img {
+ width: 100%;
+ max-width: 300px;
+ height: auto;
+ }
+ .right-sidebar .contents {
+ font-size: 14px;
+ text-align: center;
+ }
+ .right-sidebar a {
+ color: #70bbd9;
+ }
+  </style>
+  <style type=3D"text/css">
+ @media screen and (-webkit-min-device-pixel-ratio:0) {
+ .webkit-hide {
+ display: none !important
+ }
+ .webkit-show {
+ display: block !important;
+ max-height: none !important
+ }
+ }
+  </style>
+  <style type=3D"text/css">
+ @media screen and (min-width: 401px) and (max-width: 600px) {
+ .two-column .column, .two-column img {
+ max-width: 100% !important;
+ }
+ .three-column .column, .three-column img, .six-column .column {
+ max-width: 100% !important;
+ }
+ .three-column .column {
+ max-width: 33% !important;
+ }
+ .two-column .column {
+ max-width: 50% !important;
+ }
+ }
+ @media screen and (max-width: 480px) {
+ .two-column .column, .two-column img {
+ max-width: 100% !important;
+ }
+ .three-column .column, .three-column img, .six-column .column {
+ max-width: 100% !important;
+ }
+ .full {
+ width: 100% !important;
+ max-width: none !important;
+ }
+ }
+  </style>
+  <style type=3D"text/css">
+ @media (prefers-color-scheme: dark ) {
+  /* Shows Dark Mode-Only Content, Like Images */
+  .dark-img {
+   display: block !important;
+   width: auto !important;
+   overflow: visible !important;
+   float: none !important;
+   max-height: inherit !important;
+   max-width: inherit !important;
+   line-height: auto !important;
+   margin-top: 0px !important;
+   visibility: inherit !important;
+  }
+
+  /* Hides Light Mode-Only Content, Like Images */
+  .light-img {
+   display: none;
+   display: none !important;
+  }
+
+  /* Custom Dark Mode Background Color */
+  .darkmode {
+   background-color: #ffffff !important;
+   background-image: linear-gradient(#ffffff, #ffffff) !important;
+  }
+
+  .darkcard {
+   background-color: #05192d !important;
+   background-image: linear-gradient(#05192d, #05192d) !important;
+  }
+
+  .dark {
+   color: #ffffff !important;
+  }
+
+  .light {
+   color: #000000 !important;
+  }
+ }
+  </style>
+  <style type=3D"text/css">
+ /* Shows Dark Mode-Only Content, Like Images */
+ [data-ogsc] .dark-img {
+ display: block !important;
+ width: auto !important;
+ overflow: visible !important;
+ float: none !important;
+ max-height: inherit !important;
+ max-width: inherit !important;
+ line-height: auto !important;
+ margin-top: 0px !important;
+ visibility: inherit !important;
+ }
+ /* Hides Light Mode-Only Content, Like Images */
+ [data-ogsc] .light-img {
+ display: none;
+ display: none !important;
+ }
+ [data-ogsc] .dark {
+ color: #ffffff !important;
+ }
+ /* Custom Dark Mode Text Link Color */
+ [data-ogsc] .light {
+ color: #000000 !important;
+ }
+ /* Custom Dark Mode Font Colors */
+ [data-ogsc] h1, [data-ogsc] h2, [data-ogsc] p, [data-ogsc] span, [data-ogs=
+c] a, [data-ogsc] b {
+ color: #ffffff !important;
+ }
+  </style>
+  <style type=3D"text/css">
+ /* Shows Dark Mode-Only Content, Like Images */
+ [data-ogsc] .dark-img {
+ display: block !important;
+ width: auto !important;
+ overflow: visible !important;
+ float: none !important;
+ max-height: inherit !important;
+ max-width: inherit !important;
+ line-height: auto !important;
+ margin-top: 0px !important;
+ visibility: inherit !important;
+ }
+ /* Hides Light Mode-Only Content, Like Images */
+ [data-ogsc] .light-img {
+ display: none;
+ display: none !important;
+ }
+ [data-ogsc] .dark {
+ color: #ffffff !important;
+ }
+ /* Custom Dark Mode Text Link Color */
+ [data-ogsc] .light {
+ color: #000000 !important;
+ }
+ /* Custom Dark Mode Font Colors */
+ [data-ogsc] h1, [data-ogsc] h2, [data-ogsc] p, [data-ogsc] span, [data-ogs=
+c] a, [data-ogsc] b {
+ color: #ffffff !important;
+ }
+  </style>
+  <style type=3D"text/css">
+   @media screen {
+    @font-face {
+     font-family: "StudioFeixenSans";
+     src: url("https://waffles.datacamp.com/fonts/StudioFeixenSans-Regular.=
+woff2")
+     format("woff2");
+     font-weight: normal;
+     font-style: normal;
+    }
+
+    @font-face {
+     font-family: "StudioFeixenSans";
+     src: url("https://waffles.datacamp.com/fonts/StudioFeixenSans-Bold.wof=
+f2")
+     format("woff2");
+     font-weight: bold;
+     font-style: normal;
+    }
+   }
+  </style>
+  <style type=3D"text/css">
+ body, table, td, a {
+ -webkit-text-size-adjust: 100%;
+ -ms-text-size-adjust: 100%;
+ }
+  </style>
+  <style type=3D"text/css">
+ /* ANDROID CENTER FIX */
+ div[style*=3D"margin: 16px 0"] {
+ margin: 0 !important;
+ }
+  </style>
+  <style type=3D"text/css">
+ /*Fixing gap on th right in Gmail*/
+ u + .body .gwfw {
+ width: 100% !important;
+ }
+  </style>
+  <style type=3D"text/css">
+ MessageViewBody, #MessageWebViewDiv {
+ width: 100% !important;
+ }
+  </style>
+  <style type=3D"text/css">
+ div > u + .body .gmail {
+ display: block !important;
+ }
+  </style>
+  <style>
+    u + .body .gmail-blend-screen { background:#000; mix-blend-mode:screen;=
+ }
+    u + .body .gmail-blend-difference { background:#000; mix-blend-mode:dif=
+ference; }
+</style>
+  <!--[if true]>
+  <style type=3D"text/css">
+ table {border-collapse: collapse !important;}
+  </style>
+  <![endif]-->
+ </head>
+ <body style=3D"margin:0;padding:0;min-width:100%;" bgcolor=3D"#05192d" cla=
+ss=3D"body">
+  <div class=3D"tripane content">
+ <div class=3D"msg-body inner undoreset">
+  <div style=3D"background:#05192d; background-image:linear-gradient(#05192=
+d,#05192d);">
+   <!-- Preheader.
+  Shows up on iPhone / Gmail.
+  -->
+   <!-- Insert =E2=80=8C=C2=A0 hack after hidden preview text -->
+   <div style=3D"display: none; max-height: 0px; overflow: hidden;">
+Congrats on completing Python Data Science Toolbox (Part 2)! Continue on yo=
+ur learning track and  explore Exploratory Data Analysis in Python to keep =
+your progress rolling!
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=
+=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=
+=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=
+=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=
+=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=
+=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=
+=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C </div>
+   <!--[if true]>
+   <style type=3D"text/css">
+  body, table, td, div, a, p {font-family: Arial, Helvetica, sans-serif !im=
+portant;}
+   </style>
+   <![endif]-->
+   <custom name=3D"opencounter" type=3D"tracking">
+  <center class=3D"wrapper" style=3D"width:100%;table-layout:fixed;-webkit-=
+text-size-adjust:100%;-ms-text-size-adjust:100%;">
+   <div style=3D"display: none; max-height: 0px; overflow: hidden;"> </div>
+   <table cellspacing=3D"0" cellpadding=3D"0" border=3D"0" width=3D"100%" c=
+lass=3D"gwfw" role=3D"presentation" style=3D"min-width: 100%;" align=3D"cen=
+ter">
+    <tbody>
+   <tr>
+    <td style=3D"padding-top:0;padding-bottom:0;padding-right:10px;padding-=
+left:10px;">
+     <div class=3D"webkit" style=3D"max-width:600px;margin-top:0;margin-bot=
+tom:0;margin-right:auto;margin-left:auto;">
+    <!--[if true]>
+    <table role=3D"presentation" width=3D"600" align=3D"center" cellpadding=
+=3D"0" cellspacing=3D"0" border=3D"0">
+     <tr>
+      <td align=3D"center">
+     <![endif]-->
+     <table role=3D"presentation" class=3D"outer" align=3D"center" style=3D=
+"border-spacing:0; Margin: 0 auto;width:100%; max-width:600px;">
+      <tbody>
+       <!-- ///////////////////////////// MODULE: LOGO CENTERED STARTS ////=
+///////////////////////// -->
+       <!-- Spacer begins -->
+       <tr>
+      <td width=3D"0" height=3D"32" style=3D"font-size:1px; line-height:1px=
+; mso-line-height-rule: exactly;"></td>
+       </tr>
+       <!-- Spacer ends -->
+       <tr>
+      <td class=3D"one-column" align=3D"center" style=3D"padding-top:0; pad=
+ding-bottom:0; padding-right:20px; padding-left:20px;">
+       <!--[if true]>
+       <table role=3D"presentation" width=3D"600" align=3D"center" cellpadd=
+ing=3D"0" cellspacing=3D"0" border=3D"0">
+        <tr>
+       <td align=3D"center" width=3D"600">
+        <![endif]-->
+        <table role=3D"presentation" align=3D"center" border=3D"0" cellpadd=
+ing=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"border-radius: 4px;">
+         <tbody>
+        <tr>
+         <td align=3D"left" valign=3D"top"><a target=3D"_blank" href=3D"htt=
+ps://links.datacamp.com/e/c/eyJlbWFpbF9pZCI6ImRnVGRod1FCQUppdTJBYVdydGdHQVk=
+2UWJzcGRQN25VaUlpTnpKSGx5UT09IiwiaHJlZiI6Imh0dHBzOi8vd3d3LmRhdGFjYW1wLmNvbT=
+91dG1fc291cmNlPWN1c3RvbWVyaW9cdTAwMjZ1dG1fbWVkaXVtPWVtYWlsXHUwMDI2dXRtX2Nhb=
+XBhaWduPTIzMDUxN18xLWNvdXJzZXRyYWNrY29tcGxldGVfMi1taXhfMy1hbGxfNC1uYV81LW5h=
+XzYtY291cnNldHJhY2tfNy1sZV84LWVtYWwtY2lfOS1uYV8xMC1iYXVfMTEtZW1haWxcdTAwMjZ=
+1dG1fY29udGVudD1hdXRvIiwiaW50ZXJuYWwiOiJkZDg3MDRkMzAzODZhMTAxOThhZWQ4MDYiLC=
+JsaW5rX2lkIjozMjg1NzA0ODV9/692f72012938456a409818935efde940ff978d5d2da0eaf8=
+a8afa769cff4b564"><img alt=3D"DataCamp" title=3D"" border=3D"0" align=3D"ce=
+nter" style=3D"border: 0; display: block; color: #8a8a8d; font-family: Stud=
+ioFeixenSans, &#39;StudioFeixenSans&#39;, Arial, sans-serif; font-size: 14p=
+x; font-size: 22px; font-weight: bold; height: auto; outline: 0; padding: 0=
+; width: 100%; max-width: 180px; display: block;" width=3D"180" src=3D"http=
+s://assets.datacamp.com/email/rebrand/full-logo-regular-inverted.png"/></a>=
+</td>
+        </tr>
+        <!-- Spacer begins -->
+        <tr>
+         <td width=3D"0" height=3D"32" style=3D"font-size:1px; line-height:=
+1px; mso-line-height-rule: exactly;"></td>
+        </tr>
+        <!-- Spacer ends -->
+         </tbody>
+        </table>
+        <!--[if true]>
+       </td>
+        </tr>
+       </table>
+       <![endif]-->
+      </td>
+       </tr>
+       <!-- ///////////////////////////// MODULE: LOGO CENTERED ENDS //////=
+/////////////////////// -->
+       <!-- ///////////////////////////// MODULE: HEADER LEFT STARTS //////=
+/////////////////////// -->
+       <tr>
+      <td class=3D"one-column" align=3D"center" style=3D"padding-top:0; pad=
+ding-bottom:0; padding-right:20px; padding-left:20px;">
+       <!--[if true]>
+       <table role=3D"presentation" width=3D"600" align=3D"center" cellpadd=
+ing=3D"0" cellspacing=3D"0" border=3D"0">
+        <tr>
+       <td align=3D"center" width=3D"600">
+        <![endif]-->
+        <table role=3D"presentation" align=3D"center" border=3D"0" cellpadd=
+ing=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"border-radius: 4px;">
+         <tbody>
+        <tr>
+         <td align=3D"left" style=3D"padding-top:0px; padding-left:0px; pad=
+ding-bottom:0px; padding-right: 0px;">
+          <h1 style=3D" color: #f4f4f4; font-family: StudioFeixenSans, &#39=
+;StudioFeixenSans&#39;, Arial, sans-serif; font-size: 40px; font-weight: bo=
+ld; font-stretch: normal; font-style: normal;line-height: 1.15; letter-spac=
+ing: -1px;"><span class=3D"gmail-blend-screen"><span class=3D"gmail-blend-d=
+ifference">Congratulations! You finished</span></span> <span style=3D"color=
+:#03ef62;">Python Data Science Toolbox (Part 2)</span></h1>
+         </td>
+        </tr>
+        <!-- Spacer begins -->
+        <tr>
+         <td width=3D"0" height=3D"42" style=3D"font-size:1px; line-height:=
+1px; mso-line-height-rule: exactly;"></td>
+        </tr>
+        <!-- Spacer ends -->
+         </tbody>
+        </table>
+        <!--[if true]>
+       </td>
+        </tr>
+       </table>
+       <![endif]-->
+      </td>
+       </tr>
+       <!-- ///////////////////////////// MODULE: HEADER LEFT ENDS ////////=
+///////////////////// -->
+
+       <!-- ///////////////////////////// MODULE: SOCIAL SHARING STARTS ///=
+////////////////////////// -->
+       <tr>
+        <td class=3D"one-column" align=3D"center" style=3D"padding-top:0px;=
+ padding-left:10px; padding-bottom:0px; padding-right: 10px;">
+          <!--[if true]>
+<table role=3D"presentation" width=3D"600" align=3D"center" cellpadding=3D"=
+0" cellspacing=3D"0" border=3D"0">
+<tr>
+<td align=3D"center" width=3D"600">
+<![endif]-->
+          <table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacin=
+g=3D"0" role=3D"presentation" style=3D"border-radius: 4px; margin: 0 auto; =
+width: 100%;" bgcolor=3D"#ffffff" class=3D"darkcard">
+            <tbody>
+              <!-- Spacer begins -->
+              <tr>
+                <td width=3D"0" height=3D"22" style=3D"font-size:1px; line-=
+height:1px; mso-line-height-rule: exactly;"></td>
+              </tr>
+              <!-- Spacer ends -->
+              <tr>
+                <td align=3D"center" style=3D"padding-top:0px; padding-left=
+:10px; padding-bottom:0px; padding-right: 10px;">
+                  <!--[if true]>
+<table role=3D"presentation" width=3D"470" align=3D"center" cellpadding=3D"=
+0" cellspacing=3D"0" border=3D"0">
+<tr>
+<td align=3D"center">
+<![endif]-->
+                  <table align=3D"center" border=3D"0" cellpadding=3D"0" ce=
+llspacing=3D"0" role=3D"presentation" style=3D"margin: 0 auto; max-width: 4=
+70px; width: 100%;">
+                    <tbody>
+                      <!-- Spacer begins -->
+                      <tr>
+                        <td width=3D"0" height=3D"14" style=3D"font-size:1p=
+x; line-height:1px; mso-line-height-rule: exactly;">
+                        </td>
+                      </tr>
+                      <!-- Spacer ends -->
+                      <tr>
+                        <td align=3D"center">
+                          <p style=3D"color:#05192d; font-family: StudioFei=
+xenSans, &#39;StudioFeixenSans&#39;, Arial, sans-serif; font-size: 20px; li=
+ne-height: 26px; font-weight: bold;" class=3D"dark">
+                            Share your accomplishment
+                          </p>
+                        </td>
+                      </tr>
+                      <!-- Spacer begins -->
+                      <tr>
+                        <td width=3D"0" height=3D"32" style=3D"font-size:1p=
+x; line-height:1px; mso-line-height-rule: exactly;">
+                        </td>
+                      </tr>
+                      <!-- Spacer ends -->
+                       =20
+                      <tr>
+                        <td style=3D"border-collapse:collapse;">
+                          <!-- CTA BUTTON -->
+                          <table role=3D"presentation" align=3D"center" bgc=
+olor=3D"#06bdfc" class=3D"darkcard" style=3D"border-collapse:collapse;margi=
+n:0 auto;padding:0;border-spacing:0;border-radius:4px; background-color:#06=
+bdfc; background-image: linear-gradient(#06bdfc,#06bdfc);width:100%" cellpa=
+dding=3D"0" cellspacing=3D"0" border=3D"0">
+                            <tbody>
+                              <tr>
+                                <td style=3D"border-collapse:collapse;font-=
+family: StudioFeixenSans, &#39;StudioFeixenSans&#39;, Arial, sans-serif; fo=
+nt-size:16px; font-weight: bold; padding:12px;border:0;text-align:center;bo=
+rder-radius:4px;color:#05192d;mso-padding-alt:10px 19px; background-color:#=
+0A66C2; background-image: linear-gradient(#0A66C2,#0A66C2);" align=3D"left"=
+>
+                                  <a target=3D"_blank" style=3D"text-decora=
+tion:none;color:#ffffff; font-family: StudioFeixenSans, &#39;StudioFeixenSa=
+ns&#39;, Arial, sans-serif; font-size:16px; font-weight: bold; text-align:c=
+enter;border-radius:4px; font-size:16px; line-height:30px;" href=3D"https:/=
+/links.datacamp.com/e/c/eyJlbWFpbF9pZCI6ImRnVGRod1FCQUppdTJBYVdydGdHQVk2UWJ=
+zcGRQN25VaUlpTnpKSGx5UT09IiwiaHJlZiI6Imh0dHBzOi8vd3d3LmxpbmtlZGluLmNvbS9zaG=
+FyZUFydGljbGU_bWluaT10cnVlXHUwMDI2dXJsPWh0dHBzJTNBJTJGJTJGd3d3LmRhdGFjYW1wL=
+mNvbSUyRmNvbXBsZXRlZCUyRnN0YXRlbWVudC1vZi1hY2NvbXBsaXNobWVudCUyRmNvdXJzZSUy=
+Rjg3MWZlNDcwMzEzMDYzYmMyYTc3Y2Y0ZTEyNzNiZjcxZTM1MzBjNTElM0ZzaGFyZSUzRHRydWV=
+cdTAwMjZ0aXRsZT1BemZhciUyMEFsaSUyMGVhcm5lZCUyMGElMjBzdGF0ZW1lbnQlMjBvZiUyMG=
+FjY29tcGxpc2htZW50JTIwb24lMjBEYXRhQ2FtcCUyMGZvciUyMGNvbXBsZXRpbmclMjBQeXRob=
+24lMjBEYXRhJTIwU2NpZW5jZSUyMFRvb2xib3glMjAlMjhQYXJ0JTIwMiUyOSIsImludGVybmFs=
+IjoiZGQ4NzA0ZDMwMzg2YTEwMTk4YWVkODA2IiwibGlua19pZCI6MzI4NTcwNDc4fQ/f392a78a=
+5e3fda282c0b7c1bdde7fbf5b390a95ec756ca186bd241d9186071c8">
+                                    <img height=3D"16" border=3D"0" alt=3D"=
+LinkedIn" style=3D"padding-left: 8px; padding-right: 8px; color: #8a8a8d; f=
+ont-family: StudioFeixenSans, &#39;StudioFeixenSans&#39;, Arial, sans-serif=
+;" src=3D"https://assets.datacamp.com/email/rebrand/linkedin3x.png"/>
+                                      <span>Share on LinkedIn</span>
+                                  </a>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <!-- /CTA BUTTON -->
+                        </td>
+                      </tr>
+
+
+                      <!-- Spacer begins -->
+                      <tr>
+                        <td width=3D"0" height=3D"16" style=3D"font-size:1p=
+x; line-height:1px; mso-line-height-rule: exactly;">
+                        </td>
+                      </tr>
+                      <!-- Spacer ends -->
+                      <tr>
+                        <td style=3D"border-collapse:collapse;">
+                          <!-- CTA BUTTON -->
+                          <table role=3D"presentation" align=3D"center" bgc=
+olor=3D"#06bdfc" class=3D"darkcard" style=3D"border-collapse:collapse;margi=
+n:0 auto;padding:0;border-spacing:0;border-radius:4px; background-color:#06=
+bdfc; background-image: linear-gradient(#06bdfc,#06bdfc);width:100%" cellpa=
+dding=3D"0" cellspacing=3D"0" border=3D"0">
+                            <tbody>
+                              <tr>
+                                <td style=3D"border-collapse:collapse;font-=
+family: StudioFeixenSans, &#39;StudioFeixenSans&#39;, Arial, sans-serif; fo=
+nt-size:16px; font-weight: bold; padding:0;border:0;text-align:left;border-=
+radius:4px;color:#05192d;mso-padding-alt:10px 19px; background-color:#1778F=
+2; background-image: linear-gradient(#1778F2,#1778F2);" align=3D"left">
+                                  <a target=3D"_blank" style=3D"text-decora=
+tion:none;color:#ffffff; font-family: StudioFeixenSans, &#39;StudioFeixenSa=
+ns&#39;, Arial, sans-serif; font-size:16px; font-weight: bold; text-align:c=
+enter;border-radius:4px; font-size:16px; line-height:30px;" href=3D"https:/=
+/links.datacamp.com/e/c/eyJlbWFpbF9pZCI6ImRnVGRod1FCQUppdTJBYVdydGdHQVk2UWJ=
+zcGRQN25VaUlpTnpKSGx5UT09IiwiaHJlZiI6Imh0dHBzOi8vd3d3LmZhY2Vib29rLmNvbS9zaG=
+FyZXIvc2hhcmVyLnBocD91PWh0dHBzJTNBJTJGJTJGd3d3LmRhdGFjYW1wLmNvbSUyRmNvbXBsZ=
+XRlZCUyRnN0YXRlbWVudC1vZi1hY2NvbXBsaXNobWVudCUyRmNvdXJzZSUyRjg3MWZlNDcwMzEz=
+MDYzYmMyYTc3Y2Y0ZTEyNzNiZjcxZTM1MzBjNTElM0ZzaGFyZSUzRHRydWUlMjZ1dG1fc291cmN=
+lJTNEY3VzdG9tZXJpbyUyNnV0bV9tZWRpdW0lM0RyZWZlcnJhbCUyNnV0bV9jYW1wYWlnbiUzRG=
+NlcnRpZmljYXRlX3NoYXJlIiwiaW50ZXJuYWwiOiJkZDg3MDRkMzAzODZhMTAxOThhZWQ4MDYiL=
+CJsaW5rX2lkIjozMjg1NzA0Nzd9/897b8c1cbdee2a9184967af2ebecdb104c4dbf5c554fb55=
+7902f3a4f1ec4b7ff">
+                                    <!--[if !gte mso 9]><!---->
+                                    <span style=3D"padding:10px 19px;border=
+-radius:4px;display:block">
+                                      <!--<![endif]-->
+                                      <img height=3D"16" border=3D"0" alt=
+=3D"Facebook" style=3D"padding-left: 8px; padding-right: 8px; color: #8a8a8=
+d; font-family: StudioFeixenSans, &#39;StudioFeixenSans&#39;, Arial, sans-s=
+erif;" src=3D"https://assets.datacamp.com/email/rebrand/facebook3x.png"/>
+                                      Share on Facebook
+                                      <!--[if !gte mso 9]><!---->
+                                    </span>
+                                    <!--<![endif]-->
+                                  </a>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <!-- /CTA BUTTON -->
+                        </td>
+                      </tr>
+
+
+                      <!-- Spacer begins -->
+                      <tr>
+                        <td width=3D"0" height=3D"16" style=3D"font-size:1p=
+x; line-height:1px; mso-line-height-rule: exactly;">
+                        </td>
+                      </tr>
+                      <!-- Spacer ends -->
+                      <tr>
+                        <td style=3D"border-collapse:collapse;">
+                          <!-- CTA BUTTON -->
+                          <table role=3D"presentation" align=3D"center" bgc=
+olor=3D"#06bdfc" class=3D"darkcard" style=3D"border-collapse:collapse;margi=
+n:0 auto;padding:0;border-spacing:0;border-radius:4px; background-color:#06=
+bdfc; background-image: linear-gradient(#06bdfc,#06bdfc);width:100%" cellpa=
+dding=3D"0" cellspacing=3D"0" border=3D"0">
+                            <tbody>
+                              <tr>
+                                <td style=3D"border-collapse:collapse;font-=
+family: StudioFeixenSans, &#39;StudioFeixenSans&#39;, Arial, sans-serif; fo=
+nt-size:16px; font-weight: bold; padding:0;border:0;text-align:left;border-=
+radius:4px;color:#05192d;mso-padding-alt:10px 19px; background-color:#00ACE=
+E; background-image: linear-gradient(#00ACEE,#00ACEE);" align=3D"left">
+                                  <a target=3D"_blank" style=3D"text-decora=
+tion:none;color:#ffffff; font-family: StudioFeixenSans, &#39;StudioFeixenSa=
+ns&#39;, Arial, sans-serif; font-size:16px; font-weight: bold; text-align:c=
+enter;border-radius:4px; font-size:16px; line-height:30px;" href=3D"https:/=
+/links.datacamp.com/e/c/eyJlbWFpbF9pZCI6ImRnVGRod1FCQUppdTJBYVdydGdHQVk2UWJ=
+zcGRQN25VaUlpTnpKSGx5UT09IiwiaHJlZiI6Imh0dHBzOi8vdHdpdHRlci5jb20vaW50ZW50L3=
+R3ZWV0P3RleHQ9QXpmYXIlMjBBbGklMjBlYXJuZWQlMjBhJTIwc3RhdGVtZW50JTIwb2YlMjBhY=
+2NvbXBsaXNobWVudCUyMG9uJTIwRGF0YUNhbXAlMjBmb3IlMjBjb21wbGV0aW5nJTIwUHl0aG9u=
+JTIwRGF0YSUyMFNjaWVuY2UlMjBUb29sYm94JTIwJTI4UGFydCUyMDIlMjlcdTAwMjZ1cmw9aHR=
+0cHMlM0ElMkYlMkZ3d3cuZGF0YWNhbXAuY29tJTJGY29tcGxldGVkJTJGc3RhdGVtZW50LW9mLW=
+FjY29tcGxpc2htZW50JTJGY291cnNlJTJGODcxZmU0NzAzMTMwNjNiYzJhNzdjZjRlMTI3M2JmN=
+zFlMzUzMGM1MSUzRnNoYXJlJTNEdHJ1ZVx1MDAyNmhhc2h0YWdzPWRhdGFjYW1wIiwiaW50ZXJu=
+YWwiOiJkZDg3MDRkMzAzODZhMTAxOThhZWQ4MDYiLCJsaW5rX2lkIjozMjg1NzA0ODl9/c5b1f5=
+988c2c378e6f12a0e5adee08c30b3448e0c1b3bbc40d5eddaa57c09b03">
+                                    <!--[if !gte mso 9]><!---->
+                                    <span style=3D"padding:10px 19px;border=
+-radius:4px;display:block">
+                                      <!--<![endif]-->
+                                      <img height=3D"16" border=3D"0" alt=
+=3D"Twitter" style=3D"padding-left: 8px; padding-right: 8px; color: #8a8a8d=
+; font-family: StudioFeixenSans, &#39;StudioFeixenSans&#39;, Arial, sans-se=
+rif;" src=3D"https://assets.datacamp.com/email/rebrand/twitter3x.png"/>
+                                      Share on Twitter
+                                      <!--[if !gte mso 9]><!---->
+                                    </span>
+                                    <!--<![endif]-->
+                                  </a>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <!-- /CTA BUTTON -->
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td class=3D"one-column" style=3D"padding-top:20px;=
+ padding-bottom:0; padding-right:10px; padding-left:10px; border-bottom-lef=
+t-radius: 4px; border-bottom-right-radius: 4px;" align=3D"center">
+                          <!--[if true]>
+   <table role=3D"presentation" width=3D"552" align=3D"center" cellpadding=
+=3D"0" cellspacing=3D"0" border=3D"0">
+    <tr>
+   <td align=3D"center" width=3D"552">
+    <![endif]-->
+                          <table align=3D"center" border=3D"0" cellpadding=
+=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"margin: 0 auto; max=
+-width: 552px; width: 100%;">
+                            <tbody>
+                              <tr>
+                                <td align=3D"center">
+                                  <p style=3D"color:#0065D1; font-family: S=
+tudioFeixenSans, &#39;StudioFeixenSans&#39;, Arial, sans-serif; font-size: =
+16px; line-height: 28px;" class=3D"dark">
+                                        <a href=3D"https://links.datacamp.c=
+om/e/c/eyJlbWFpbF9pZCI6ImRnVGRod1FCQUppdTJBYVdydGdHQVk2UWJzcGRQN25VaUlpTnpK=
+SGx5UT09IiwiaHJlZiI6Imh0dHBzOi8vd3d3LmRhdGFjYW1wLmNvbS9jb21wbGV0ZWQvc3RhdGV=
+tZW50LW9mLWFjY29tcGxpc2htZW50L2NvdXJzZS84NzFmZTQ3MDMxMzA2M2JjMmE3N2NmNGUxMj=
+czYmY3MWUzNTMwYzUxP3V0bV9zb3VyY2U9Y3VzdG9tZXJpb1x1MDAyNnV0bV9tZWRpdW09ZW1ha=
+WxcdTAwMjZ1dG1fY2FtcGFpZ249MjMwNTE3XzEtY291cnNldHJhY2tjb21wbGV0ZV8yLW1peF8z=
+LWFsbF80LW5hXzUtbmFfNi1jb3Vyc2V0cmFja183LWxlXzgtZW1hbC1jaV85LW5hXzEwLWJhdV8=
+xMS1lbWFpbFx1MDAyNnV0bV9jb250ZW50PWF1dG8iLCJpbnRlcm5hbCI6ImRkODcwNGQzMDM4Nm=
+ExMDE5OGFlZDgwNiIsImxpbmtfaWQiOjMyODU3MDQ4Nn0/26bbee74e30a996f4a79910a5dae2=
+e6cf0288e57b790f9bd5bf7195740113639" style=3D"color: #0065D1; font-family: =
+StudioFeixenSans, &#39;StudioFeixenSans&#39;, Arial, sans-serif; font-size:=
+ 16px; line-height: 28px; text-decoration: none; font-weight: 600;">Or down=
+load
+                                      your statement of accomplishment</a><=
+/p>
+                                </td>
+                              </tr>
+                              <!-- Spacer begins -->
+                              <tr>
+                                <td width=3D"0" height=3D"32" style=3D"font=
+-size:1px; line-height:1px; mso-line-height-rule: exactly;"></td>
+                              </tr>
+                              <!-- Spacer ends -->
+                            </tbody>
+                          </table>
+                          <!--[if true]>
+   </td>
+    </tr>
+   </table>
+   <![endif]-->
+                        </td>
+                      </tr>
+
+
+                      <!-- Spacer ends -->
+                    </tbody>
+                  </table>
+                  <!--[if true]>
+</td>
+</tr>
+</table>
+<![endif]-->
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <!--[if true]>
+</td>
+</tr>
+</table>
+<![endif]-->
+        </td>
+      </tr>
+       <!-- ///////////////////////////// MODULE: SOCIAL SHARING ENDS /////=
+//////////////////////// -->
+       =20
+        <!-- ///////////////////////////// MODULE: TEXT BLOCK STARTS //////=
+/////////////////////// -->
+                        <!-- Spacer begins -->
+                        <tr>
+                          <td width=3D"0" height=3D"48" style=3D"font-size:=
+1px; line-height:1px; mso-line-height-rule: exactly;"></td>
+                        </tr>
+                        <!-- Spacer ends -->
+                        <tr>
+                          <td class=3D"one-column" align=3D"left" style=3D"=
+padding-top:0px; padding-left:10px; padding-right: 10px;"><!--[if true]>
+					<table role=3D"presentation" width=3D"600" align=3D"center" cellpaddin=
+g=3D"0" cellspacing=3D"0" border=3D"0">
+					<tr><td align=3D"center" width=3D"600">
+					<![endif]-->
+
+                            <table role=3D"presentation" align=3D"center" b=
+order=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%">
+                              <tbody>
+                                <tr>
+                                  <td align=3D"left" style=3D"vertical-alig=
+n: middle;"><div class=3D"gmail-blend-screen"><div class=3D"gmail-blend-dif=
+ference"><h2 style=3D"color:#ffffff; font-family: StudioFeixenSans, &#39;St=
+udioFeixenSans&#39;, Arial, sans-serif; font-size: 32px; font-weight: bold;=
+ font-stretch: normal; font-style: normal; line-height: 38px; letter-spacin=
+g: -0.5px;" class=3D"dark">Your next course:</h2></div></div></td>
+                                </tr>
+                              </tbody>
+                            </table>
+
+                            <!--[if true]>
+					</td>
+					</tr>
+					</table>
+					<![endif]--></td>
+                        </tr>
+                        <!-- Spacer begins -->
+                        <tr>
+                          <td width=3D"0" height=3D"22" style=3D"font-size:=
+1px; line-height:1px; mso-line-height-rule: exactly;"></td>
+                        </tr>
+                        <!-- Spacer ends -->
+                        <tr>
+                          <td class=3D"one-column" align=3D"center" style=
+=3D" padding-left: 10px; padding-right: 10px;"><!--[if true]>
+					<table role=3D"presentation" width=3D"600" align=3D"center" cellpaddin=
+g=3D"0" cellspacing=3D"0" border=3D"0">
+					<tr><td align=3D"center" width=3D"600">
+					<![endif]-->
+
+                            <table role=3D"presentation" class=3D"darkcard"=
+ align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D=
+"100%" style=3D"border-radius: 4px; background-color:#fcce0d; background-im=
+age: linear-gradient(#fcce0d,#fcce0d);" bgcolor=3D"#fcce0d">
+                              <tbody>
+                                <tr>
+                                  <td align=3D"center" style=3D"padding-top=
+:20px; padding-left:20px; padding-bottom:0px; padding-right: 20px;"><table =
+align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"p=
+resentation" style=3D"margin: 0 auto; max-width: 540px; width: 100%;">
+                                      <tbody>
+                                        <tr>
+                                          <td align=3D"center"><table align=
+=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presen=
+tation" style=3D"margin: 0 auto; max-width: 540px; width: 100%;">
+                                              <tbody>
+                                                <tr>
+                                                  <td align=3D"left" style=
+=3D"padding-top:0px; padding-left:0px; padding-right: 0px;">
+												<a style=3D"text-decoration: none;" href=3D"https://links.datac=
+amp.com/e/c/eyJlbWFpbF9pZCI6ImRnVGRod1FCQUppdTJBYVdydGdHQVk2UWJzcGRQN25VaUl=
+pTnpKSGx5UT09IiwiaHJlZiI6Imh0dHBzOi8vd3d3LmRhdGFjYW1wLmNvbS9jb3Vyc2VzL2V4cG=
+xvcmF0b3J5LWRhdGEtYW5hbHlzaXMtaW4tcHl0aG9uP3V0bV9zb3VyY2U9Y3VzdG9tZXJpb1x1M=
+DAyNnV0bV9tZWRpdW09ZW1haWxcdTAwMjZ1dG1fY2FtcGFpZ249MjMwNTE3XzEtY291cnNldHJh=
+Y2tjb21wbGV0ZV8yLW1peF8zLWFsbF80LW5hXzUtbmFfNi1jb3Vyc2V0cmFja183LWxlXzgtZW1=
+hbC1jaV85LW5hXzEwLWJhdV8xMS1lbWFpbFx1MDAyNnV0bV9jb250ZW50PWF1dG8iLCJpbnRlcm=
+5hbCI6ImRkODcwNGQzMDM4NmExMDE5OGFlZDgwNiIsImxpbmtfaWQiOjMyODU3MDQ4N30/e8c54=
+91b03e118d07f191bfdde1e126fc2573986e2de28ecb5a868cc0e9a1646">
+												<h2 style=3D"color:#05192d; font-family: StudioFeixenSans, &#39=
+;StudioFeixenSans&#39;, Arial, sans-serif; font-size: 24px; font-weight: bo=
+ld; font-stretch: normal; font-style: normal; line-height: 28px; letter-spa=
+cing: -0.5px;" class=3D"dark">Exploratory Data Analysis in Python</h2></a><=
+/td>
+
+                                                </tr>
+                                              </tbody>
+                                            </table></td>
+                                        </tr>
+                                        <!-- Spacer begins -->
+                                        <tr>
+                                          <td width=3D"0" height=3D"14" sty=
+le=3D"font-size:1px; line-height:1px; mso-line-height-rule: exactly;"></td>
+                                        </tr>
+                                        <!-- Spacer ends -->
+                                        <tr>
+                                          <td align=3D"left"><a href=3D"htt=
+ps://links.datacamp.com/e/c/eyJlbWFpbF9pZCI6ImRnVGRod1FCQUppdTJBYVdydGdHQVk=
+2UWJzcGRQN25VaUlpTnpKSGx5UT09IiwiaHJlZiI6Imh0dHBzOi8vd3d3LmRhdGFjYW1wLmNvbS=
+9jb3Vyc2VzL2V4cGxvcmF0b3J5LWRhdGEtYW5hbHlzaXMtaW4tcHl0aG9uP3V0bV9zb3VyY2U9Y=
+3VzdG9tZXJpb1x1MDAyNnV0bV9tZWRpdW09ZW1haWxcdTAwMjZ1dG1fY2FtcGFpZ249MjMwNTE3=
+XzEtY291cnNldHJhY2tjb21wbGV0ZV8yLW1peF8zLWFsbF80LW5hXzUtbmFfNi1jb3Vyc2V0cmF=
+ja183LWxlXzgtZW1hbC1jaV85LW5hXzEwLWJhdV8xMS1lbWFpbFx1MDAyNnV0bV9jb250ZW50PW=
+F1dG8iLCJpbnRlcm5hbCI6ImRkODcwNGQzMDM4NmExMDE5OGFlZDgwNiIsImxpbmtfaWQiOjMyO=
+DU3MDQ4N30/e8c5491b03e118d07f191bfdde1e126fc2573986e2de28ecb5a868cc0e9a1646=
+" style=3D"color:#05192d; font-family: StudioFeixenSans, &#39;StudioFeixenS=
+ans&#39;, Arial, sans-serif; font-size: 18px; font-weight: normal; font-str=
+etch: normal; font-style: normal; line-height: 1.33; letter-spacing: normal=
+; color: #05192d; text-decoration: none;" class=3D"dark">
+Learn how to explore, visualize, and extract insights from data using explo=
+ratory data analysis (EDA) in Python.</a></td>
+                                        </tr>
+                                        <!-- Spacer begins -->
+                                        <tr>
+                                          <td width=3D"0" height=3D"14" sty=
+le=3D"font-size:1px; line-height:1px; mso-line-height-rule: exactly;"></td>
+                                        </tr>
+                                        <!-- Spacer ends -->
+                                      </tbody>
+                                    </table></td>
+                                </tr>
+                                <tr>
+                                  <td class=3D"darkcard" style=3D"border-co=
+llapse:collapse; padding-left:10px; padding-right: 10px; border-bottom-left=
+-radius: 4px; border-bottom-right-radius: 4px;" bgcolor=3D"#ffffff"><!-- CT=
+A BUTTON -->
+
+                                    <table role=3D"presentation" align=3D"l=
+eft" style=3D"border-collapse:collapse;margin:0 auto;padding:0;border-spaci=
+ng:0;border-radius:0px;" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" w=
+idth=3D"100%">
+                                      <tbody>
+                                        <tr>
+                                          <td style=3D"border-collapse:coll=
+apse;font-family: StudioFeixenSans, &#39;StudioFeixenSans&#39;, Arial, sans=
+-serif; font-size: 18px; font-weight: bold; padding:0;border:0;text-align:l=
+eft;border-radius:0px;color:#05192d;mso-padding-alt:20px 10px;" align=3D"le=
+ft"><a class=3D"dark" target=3D"_blank" style=3D"text-decoration:none;color=
+:#05192d; font-family: StudioFeixenSans, &#39;StudioFeixenSans&#39;, Arial,=
+ sans-serif; font-size: 18px; font-weight: bold; text-align:left;border-rad=
+ius:0px; font-size:18px; line-height:30px;" href=3D"https://links.datacamp.=
+com/e/c/eyJlbWFpbF9pZCI6ImRnVGRod1FCQUppdTJBYVdydGdHQVk2UWJzcGRQN25VaUlpTnp=
+KSGx5UT09IiwiaHJlZiI6Imh0dHBzOi8vd3d3LmRhdGFjYW1wLmNvbS9jb3Vyc2VzL2V4cGxvcm=
+F0b3J5LWRhdGEtYW5hbHlzaXMtaW4tcHl0aG9uP3V0bV9zb3VyY2U9Y3VzdG9tZXJpb1x1MDAyN=
+nV0bV9tZWRpdW09ZW1haWxcdTAwMjZ1dG1fY2FtcGFpZ249MjMwNTE3XzEtY291cnNldHJhY2tj=
+b21wbGV0ZV8yLW1peF8zLWFsbF80LW5hXzUtbmFfNi1jb3Vyc2V0cmFja183LWxlXzgtZW1hbC1=
+jaV85LW5hXzEwLWJhdV8xMS1lbWFpbFx1MDAyNnV0bV9jb250ZW50PWF1dG8iLCJpbnRlcm5hbC=
+I6ImRkODcwNGQzMDM4NmExMDE5OGFlZDgwNiIsImxpbmtfaWQiOjMyODU3MDQ4N30/e8c5491b0=
+3e118d07f191bfdde1e126fc2573986e2de28ecb5a868cc0e9a1646">
+                                            <!--[if !gte mso 9]><!----><spa=
+n style=3D"padding:20px 10px;border-radius:0px;display:block"><!--<![endif]=
+-->
+                                            Start Now =E2=86=92
+                                            <!--[if !gte mso 9]><!----> </s=
+pan><!--<![endif]-->
+                                            </a></td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+
+                                    <!-- /CTA BUTTON --></td>
+                                </tr>
+                              </tbody>
+                            </table>
+
+                            <!--[if true]>
+					</td>
+					</tr>
+					</table>
+					<![endif]--></td>
+                        </tr>
+                        <!-- ///////////////////////////// MODULE: TEXT BLO=
+CK ENDS ///////////////////////////// -->
+
+       <!-- ///////////////////////////// MODULE: CTA STARTS //////////////=
+/////////////// -->
+       <tr>
+      <td class=3D"one-column" align=3D"center" style=3D" padding-left: 10p=
+x; padding-right: 10px;">
+       <!--[if true]>
+       <table role=3D"presentation" width=3D"600" align=3D"center" cellpadd=
+ing=3D"0" cellspacing=3D"0" border=3D"0">
+        <tr>
+       <td align=3D"center" width=3D"600">
+        <![endif]-->
+        <table role=3D"presentation" align=3D"center" border=3D"0" cellpadd=
+ing=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"border-top-left-radius:=
+ 4px; border-top-right-radius: 4px;">
+         <tbody>
+        <tr>
+         <td style=3D"padding-top:0; padding-bottom:0; padding-right:20px; =
+padding-left:20px; border-bottom-left-radius: 4px; border-bottom-right-radi=
+us: 4px;" align=3D"center">
+          <!--[if true]>
+          <table role=3D"presentation" width=3D"540" align=3D"center" cellp=
+adding=3D"0" cellspacing=3D"0" border=3D"0">
+         <tr>
+          <td align=3D"center" width=3D"540">
+           <![endif]-->
+           <table align=3D"center" border=3D"0" cellpadding=3D"0" cellspaci=
+ng=3D"0" role=3D"presentation" style=3D"margin: 0 auto; max-width: 540px; w=
+idth: 100%;">
+          <tbody>
+           <tr>
+            <td width=3D"0" height=3D"52" align=3D"center" style=3D"border-=
+left: 1px solid #ffffff"></td>
+           </tr>
+          </tbody>
+           </table>
+           <!--[if true]>
+          </td>
+         </tr>
+          </table>
+          <![endif]-->
+         </td>
+        </tr>
+        <tr>
+         <td style=3D"border-collapse:collapse;">
+          <!-- CTA BUTTON -->
+          <table role=3D"presentation" align=3D"left" bgcolor=3D"#02ee61" c=
+lass=3D"darkcard" style=3D"border-collapse:collapse;margin:0 auto;padding:0=
+;border-spacing:0;border-radius:4px; background-color:#02ee61; background-i=
+mage: linear-gradient(#02ee61,#02ee61);" cellpadding=3D"0" cellspacing=3D"0=
+" border=3D"0">
+         <tbody>
+          <tr>
+           <td style=3D"border-collapse:collapse;font-family: StudioFeixenS=
+ans, &#39;StudioFeixenSans&#39;, Arial, sans-serif; font-size:16px; font-we=
+ight: bold; padding:0;border:0; text-align:center; border-radius:4px; color=
+:#05192d; mso-padding-alt:9px 19px; background-color:#02ee61; background-im=
+age: linear-gradient(#02ee61,#02ee61);" align=3D"center">
+          <a target=3D"_blank" style=3D"text-decoration:none;color:#05192d;=
+ font-family: StudioFeixenSans, &#39;StudioFeixenSans&#39;, Arial, sans-ser=
+if; font-size:16px; font-weight: bold; text-align:center;border-radius:4px;=
+ font-size:16px; line-height:30px;" href=3D"https://links.datacamp.com/e/c/=
+eyJlbWFpbF9pZCI6ImRnVGRod1FCQUppdTJBYVdydGdHQVk2UWJzcGRQN25VaUlpTnpKSGx5UT0=
+9IiwiaHJlZiI6Imh0dHBzOi8vd3d3LmRhdGFjYW1wLmNvbS90cmFja3MvYXNzb2NpYXRlLWRhdG=
+Etc2NpZW50aXN0LWluLXB5dGhvbj91dG1fc291cmNlPWN1c3RvbWVyaW9cdTAwMjZ1dG1fbWVka=
+XVtPWVtYWlsXHUwMDI2dXRtX2NhbXBhaWduPTIzMDUxN18xLWNvdXJzZXRyYWNrY29tcGxldGVf=
+Mi1taXhfMy1hbGxfNC1uYV81LW5hXzYtY291cnNldHJhY2tfNy1sZV84LWVtYWwtY2lfOS1uYV8=
+xMC1iYXVfMTEtZW1haWxcdTAwMjZ1dG1fY29udGVudD1hdXRvIiwiaW50ZXJuYWwiOiJkZDg3MD=
+RkMzAzODZhMTAxOThhZWQ4MDYiLCJsaW5rX2lkIjozMjg1NzA0ODh9/c31936a0770e31c05432=
+6d9fc48de28cee66209e2fe118fa7cd0ae8dface3554">
+           <!--[if !gte mso 9]><!---->
+           <span style=3D"padding:9px 19px;border-radius:4px;display:block"=
+>
+            <!--<![endif]-->
+            See All Upcoming Courses
+            <!--[if !gte mso 9]><!---->
+           </span>
+           <!--<![endif]-->
+          </a>
+           </td>
+          </tr>
+         </tbody>
+          </table>
+          <!-- /CTA BUTTON -->
+         </td>
+        </tr>
+        <!-- Spacer begins -->
+        <tr>
+         <td width=3D"0" height=3D"32" style=3D"font-size:1px; line-height:=
+1px; mso-line-height-rule: exactly;"></td>
+        </tr>
+        <!-- Spacer ends -->
+         </tbody>
+        </table>
+        <!--[if true]>
+       </td>
+        </tr>
+       </table>
+       <![endif]-->
+      </td>
+       </tr>
+       <!-- ///////////////////////////// MODULE: CTA ENDS ////////////////=
+///////////// -->
+       <!-- ///////////////////////////// MODULE: FOOTER STARTS ///////////=
+////////////////// -->
+                                  <tr>
+                                    <td class=3D"one-column" align=3D"cente=
+r" style=3D"padding-top:20px; padding-left:10px; padding-bottom:0px; paddin=
+g-right: 10px;">
+                                      <!--[if true]>
+                                      <table role=3D"presentation" width=3D=
+"600" align=3D"center" cellpadding=3D"0" cellspacing=3D"0" border=3D"0">
+                                        <tr>
+                                          <td align=3D"center" width=3D"600=
+">
+                                            <![endif]-->
+                                            <table align=3D"center" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"b=
+order: none; border-collapse: collapse; border-spacing: 0; margin: auto; ms=
+o-table-lspace: 0; mso-table-rspace: 0; width:100%;">
+                                              <!-- Spacer begins -->
+                                              <tbody>
+                                                <tr>
+                                                  <td class=3D"one-column" =
+style=3D"padding-left: 20px; padding-right: 20px;" align=3D"center">
+                                                    <table border=3D"0" cel=
+lpadding=3D"0" cellspacing=3D"0" width=3D"100%" role=3D"presentation" style=
+=3D"border-collapse: collapse; padding: 0; margin: 0; width:100%;">
+                                                      <tbody>
+                                                        <!-- Spacer begins =
+-->
+                                                        <tr>
+                                                          <td width=3D"0" h=
+eight=3D"72" style=3D"font-size:1px; line-height:1px; mso-line-height-rule:=
+ exactly;"></td>
+                                                        </tr>
+                                                        <!-- Spacer ends --=
+>
+                                                        <tr>
+                                                          <td align=3D"cent=
+er" valign=3D"top"><a target=3D"_blank" href=3D"https://links.datacamp.com/=
+e/c/eyJlbWFpbF9pZCI6ImRnVGRod1FCQUppdTJBYVdydGdHQVk2UWJzcGRQN25VaUlpTnpKSGx=
+5UT09IiwiaHJlZiI6Imh0dHBzOi8vd3d3LmRhdGFjYW1wLmNvbS8iLCJpbnRlcm5hbCI6ImRkOD=
+cwNGQzMDM4NmExMDE5OGFlZDgwNiIsImxpbmtfaWQiOjMyODU0ODY0OH0/5ae16e0d4d7530992=
+f08c9344e78d74060e2a4f8c963f79da57ab8230c8a9593"><img alt=3D"clear as data"=
+ title=3D"" border=3D"0" align=3D"center" style=3D"border: 0; display: bloc=
+k; color: #8a8a8d; font-family: StudioFeixenSans, &#39;StudioFeixenSans&#39=
+;, Arial, sans-serif; font-size: 14px; font-size: 22px; font-weight: bold; =
+height: auto; outline: 0; padding: 0; width: 100%; max-width: 90px; display=
+: block;" width=3D"90" src=3D"https://assets.datacamp.com/email/rebrand/tag=
+line.png"/></a></td>
+                                                        </tr>
+                                                        <!-- Spacer begins =
+-->
+                                                        <tr>
+                                                          <td width=3D"0" h=
+eight=3D"24" style=3D"font-size:1px; line-height:1px; mso-line-height-rule:=
+ exactly;"></td>
+                                                        </tr>
+                                                        <!-- Spacer ends --=
+>
+                                                        <tr>
+                                                          <td align=3D"cent=
+er" style=3D"padding-top:10px; padding-right:10px; padding-bottom:10px; pad=
+ding-left:10px;">
+                                                            <div class=3D"g=
+mail-blend-screen">
+                                                              <div class=3D=
+"gmail-blend-difference">
+                                                                <p style=3D=
+" color: #f4f4f4; font-family: StudioFeixenSans, &#39;StudioFeixenSans&#39;=
+, Arial, sans-serif; font-size: 14px; line-height: 26px; letter-spacing: 1p=
+x; font-weight: normal; color: #f4f4f4;" class=3D"dark">DataCamp, Inc. | 35=
+0 5th Ave. | Suite 7720 | New York, NY 10118</p>
+                                                              </div>
+                                                            </div>
+                                                          </td>
+                                                        </tr>
+                                                        <!-- Spacer begins =
+-->
+                                                        <tr>
+                                                          <td width=3D"0" h=
+eight=3D"24" style=3D"font-size:1px; line-height:1px; mso-line-height-rule:=
+ exactly;"></td>
+                                                        </tr>
+                                                        <!-- Spacer ends --=
+>
+                                                        <tr>
+                                                          <td align=3D"cent=
+er" style=3D"padding-top:0; padding-right:20px; padding-bottom:0; padding-l=
+eft:20px;">
+                                                            <!--[if true]>
+                                                            <table role=3D"=
+presentation" width=3D"200" align=3D"center" cellpadding=3D"0" cellspacing=
+=3D"0" border=3D"0">
+                                                              <tr>
+                                                                <td align=
+=3D"center">
+                                                                  <![endif]=
+-->
+                                                                  <table al=
+ign=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"pre=
+sentation" style=3D"margin: 0 auto; max-width: 220px; width: 100%;">
+                                                                    <tbody>
+                                                                      <tr>
+                                                                        <td=
+ align=3D"center"><a target=3D"_blank" href=3D"https://links.datacamp.com/e=
+/c/eyJlbWFpbF9pZCI6ImRnVGRod1FCQUppdTJBYVdydGdHQVk2UWJzcGRQN25VaUlpTnpKSGx5=
+UT09IiwiaHJlZiI6Imh0dHBzOi8vd3d3LmZhY2Vib29rLmNvbS9kYXRhY2FtcGluYy8iLCJpbnR=
+lcm5hbCI6ImRkODcwNGQzMDM4NmExMDE5OGFlZDgwNiIsImxpbmtfaWQiOjMyODU1MDgxN30/43=
+9f33d362845f11e0c396c579e85e8782e532e79204d8d9891bb1113883ef41"><img height=
+=3D"15" border=3D"0" alt=3D"Facebook" style=3D"padding-left: 8px; padding-r=
+ight: 8px; color: #8a8a8d; font-family: StudioFeixenSans, &#39;StudioFeixen=
+Sans&#39;, Arial, sans-serif;" src=3D"https://assets.datacamp.com/email/reb=
+rand/facebook3x.png"/></a></td>
+                                                                        <td=
+ align=3D"center"><a target=3D"_blank" href=3D"https://links.datacamp.com/e=
+/c/eyJlbWFpbF9pZCI6ImRnVGRod1FCQUppdTJBYVdydGdHQVk2UWJzcGRQN25VaUlpTnpKSGx5=
+UT09IiwiaHJlZiI6Imh0dHBzOi8vdHdpdHRlci5jb20vZGF0YWNhbXAiLCJpbnRlcm5hbCI6ImR=
+kODcwNGQzMDM4NmExMDE5OGFlZDgwNiIsImxpbmtfaWQiOjMyODU1MDgxOH0/b3dc102a2b9d79=
+6c8c227baab93ca03a158b583935689dcae99bc738df3bc0a9"><img width=3D"15" borde=
+r=3D"0" alt=3D"Twitter" style=3D"padding-left: 8px; padding-right: 8px; col=
+or: #8a8a8d; font-family: StudioFeixenSans, &#39;StudioFeixenSans&#39;, Ari=
+al, sans-serif;" src=3D"https://assets.datacamp.com/email/rebrand/twitter3x=
+=2Epng"/></a></td>
+                                                                        <td=
+ align=3D"center"><a target=3D"_blank" href=3D"https://links.datacamp.com/e=
+/c/eyJlbWFpbF9pZCI6ImRnVGRod1FCQUppdTJBYVdydGdHQVk2UWJzcGRQN25VaUlpTnpKSGx5=
+UT09IiwiaHJlZiI6Imh0dHBzOi8vd3d3LmxpbmtlZGluLmNvbS9jb21wYW55L2RhdGFjYW1waW5=
+jLyIsImludGVybmFsIjoiZGQ4NzA0ZDMwMzg2YTEwMTk4YWVkODA2IiwibGlua19pZCI6MzI4NT=
+UwODE5fQ/960ee9b414dc25ddaeb3e4f87acd564003728ef1b2ccc6dcca0b15a8b26bc79e">=
+<img width=3D"15" border=3D"0" alt=3D"LinkedIn" style=3D"padding-left: 8px;=
+ padding-right: 8px; color: #8a8a8d; font-family: StudioFeixenSans, &#39;St=
+udioFeixenSans&#39;, Arial, sans-serif;" src=3D"https://assets.datacamp.com=
+/email/rebrand/linkedin3x.png"/></a></td>
+                                                                        <td=
+ align=3D"center"><a target=3D"_blank" href=3D"https://links.datacamp.com/e=
+/c/eyJlbWFpbF9pZCI6ImRnVGRod1FCQUppdTJBYVdydGdHQVk2UWJzcGRQN25VaUlpTnpKSGx5=
+UT09IiwiaHJlZiI6Imh0dHBzOi8vd3d3LnlvdXR1YmUuY29tL2NoYW5uZWwvVUM3OUd2M21ZcDZ=
+6S2lTd1llbUVpazlBIiwiaW50ZXJuYWwiOiJkZDg3MDRkMzAzODZhMTAxOThhZWQ4MDYiLCJsaW=
+5rX2lkIjo1fQ/ec6c8c3c08f42876e3d2ef479190257a7d9c384ae421c7e331ce3317061203=
+dc"><img width=3D"15" border=3D"0" alt=3D"Youtube" style=3D"padding-left: 8=
+px; padding-right: 8px; color: #8a8a8d; font-family: StudioFeixenSans, &#39=
+;StudioFeixenSans&#39;, Arial, sans-serif;" src=3D"https://assets.datacamp.=
+com/email/rebrand/youtube3x.png"/></a></td>
+                                                                        <td=
+ align=3D"center"><a target=3D"_blank" href=3D"https://links.datacamp.com/e=
+/c/eyJlbWFpbF9pZCI6ImRnVGRod1FCQUppdTJBYVdydGdHQVk2UWJzcGRQN25VaUlpTnpKSGx5=
+UT09IiwiaHJlZiI6Imh0dHBzOi8vd3d3Lmluc3RhZ3JhbS5jb20vZGF0YWNhbXAvP2hsPWVuIiw=
+iaW50ZXJuYWwiOiJkZDg3MDRkMzAzODZhMTAxOThhZWQ4MDYiLCJsaW5rX2lkIjozMjg1NTA4Mj=
+B9/246688fcf7cf4622d9fefd042497477aee99a8664a436f06b102b52a5bd33ee3"><img w=
+idth=3D"15" border=3D"0" alt=3D"Instagram" style=3D"padding-left: 8px; padd=
+ing-right: 8px; color: #8a8a8d; font-family: StudioFeixenSans, &#39;StudioF=
+eixenSans&#39;, Arial, sans-serif;" src=3D"https://assets.datacamp.com/emai=
+l/rebrand/insta3x.png"/></a></td>
+                                                                      </tr>
+                                                                    </tbody=
+>
+                                                                  </table>
+                                                                  <!--[if t=
+rue]>
+                                                                </td>
+                                                              </tr>
+                                                            </table>
+                                                            <![endif]-->
+                                                          </td>
+                                                        </tr>
+                                                        <!-- Spacer begins =
+-->
+                                                        <tr>
+                                                          <td width=3D"0" h=
+eight=3D"24" style=3D"font-size:1px; line-height:1px; mso-line-height-rule:=
+ exactly;"></td>
+                                                        </tr>
+                                                        <!-- Spacer ends --=
+>
+                                                      </tbody>
+                                                    </table>
+                                                  </td>
+                                                </tr>
+                                                <tr>
+                                                  <td class=3D"one-column" =
+style=3D"padding-left: 20px; padding-right: 20px;" align=3D"center">
+                                                    <!--[if true]>
+                                                    <table role=3D"presenta=
+tion" width=3D"268" align=3D"center" cellpadding=3D"0" cellspacing=3D"0" bo=
+rder=3D"0">
+                                                      <tr>
+                                                        <td align=3D"center=
+">
+                                                          <![endif]-->
+                                                          <table align=3D"c=
+enter" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"border: none; border-collapse: collapse; border-spacing: 0; mar=
+gin: auto; mso-table-lspace: 0; mso-table-rspace: 0;">
+                                                            <tbody>
+                                                              <tr>
+                                                                <td align=
+=3D"center" style=3D"padding-left: 5px; padding-right: 5px;"><a target=3D"_=
+blank" href=3D"https://links.datacamp.com/e/c/eyJlbWFpbF9pZCI6ImRnVGRod1FCQ=
+UppdTJBYVdydGdHQVk2UWJzcGRQN25VaUlpTnpKSGx5UT09IiwiaHJlZiI6Imh0dHBzOi8vZGF0=
+YWNhbXAub25lbGluay5tZS94enRRL2NnaGNmdzVvIiwiaW50ZXJuYWwiOiJkZDg3MDRkMzAzODZ=
+hMTAxOThhZWQ4MDYiLCJsaW5rX2lkIjozMjg1NzQyMTl9/4a0b95fc8be8f8760c527ba81478a=
+0cd181809ceff64328519f9be18259abd9f"><img alt=3D"Apple Store" border=3D"0" =
+style=3D"border: 0; display: block; color:#05192d; font-family: StudioFeixe=
+nSans, &#39;StudioFeixenSans&#39;, Arial, sans-serif; font-size: 24px; font=
+-weight: 400; height: auto; max-width: 124px; outline: 0; padding: 0; width=
+: 100%; display: block;" width=3D"124" src=3D"https://assets.datacamp.com/e=
+mail/rebrand/apple2x.png"/> </a></td>
+                                                                <td align=
+=3D"center" style=3D"padding-left: 5px; padding-right: 5px;"><a target=3D"_=
+blank" href=3D"https://links.datacamp.com/e/c/eyJlbWFpbF9pZCI6ImRnVGRod1FCQ=
+UppdTJBYVdydGdHQVk2UWJzcGRQN25VaUlpTnpKSGx5UT09IiwiaHJlZiI6Imh0dHBzOi8vZGF0=
+YWNhbXAub25lbGluay5tZS94enRRL2NnaGNmdzVvIiwiaW50ZXJuYWwiOiJkZDg3MDRkMzAzODZ=
+hMTAxOThhZWQ4MDYiLCJsaW5rX2lkIjozMjg1NzQyMTl9/4a0b95fc8be8f8760c527ba81478a=
+0cd181809ceff64328519f9be18259abd9f"><img alt=3D"Google Play" border=3D"0" =
+style=3D"border: 0; display: block; color:#05192d; font-family: StudioFeixe=
+nSans, &#39;StudioFeixenSans&#39;, Arial, sans-serif; font-size: 24px; font=
+-weight: 400; height: auto; max-width: 124px; outline: 0; padding: 0; width=
+: 100%; display: block;" width=3D"124" src=3D"https://assets.datacamp.com/e=
+mail/rebrand/google2x.png"/> </a></td>
+                                                              </tr>
+                                                            </tbody>
+                                                          </table>
+                                                          <!--[if true]>
+                                                        </td>
+                                                      </tr>
+                                                    </table>
+                                                    <![endif]-->
+                                                  </td>
+                                                </tr>
+                                                <!-- Spacer begins -->
+                                                <tr>
+                                                  <td width=3D"0" height=3D=
+"24" style=3D"font-size:1px; line-height:1px; mso-line-height-rule: exactly=
+;"></td>
+                                                </tr>
+                                                <!-- Spacer ends -->
+                                                <tr>
+                                                  <td class=3D"one-column" =
+style=3D"padding-left: 20px; padding-right: 20px; padding-bottom: 10px; pad=
+ding-top: 10px;" align=3D"center">
+                                                    <div class=3D"gmail-ble=
+nd-screen">
+                                                      <div class=3D"gmail-b=
+lend-difference"><a target=3D"_blank" style=3D"text-decoration:none;color:#=
+9ba3ab; font-family: StudioFeixenSans, &#39;StudioFeixenSans&#39;, Arial, s=
+ans-serif; font-size: 14px; font-weight: normal; color: #f4f4f4;" href=3D"h=
+ttps://links.datacamp.com/e/c/eyJlbWFpbF9pZCI6ImRnVGRod1FCQUppdTJBYVdydGdHQ=
+Vk2UWJzcGRQN25VaUlpTnpKSGx5UT09IiwiaHJlZiI6Imh0dHBzOi8vd3d3LmRhdGFjYW1wLmNv=
+bS9tYWlsX3ByZWZlcmVuY2VzLzJmZmQ0MGE1LWNlODUtNDQ1Zi1hYTU5LWNkOWE4YWI3YzlkNiI=
+sImludGVybmFsIjoiZGQ4NzA0ZDMwMzg2YTEwMTk4YWVkODA2IiwibGlua19pZCI6OTQ2Mn0/84=
+142119b658302b598b9834e2aba471ec2517370634f092d25c8f0e952651b7">Unsubscribe=
+</a>=C2=A0=C2=A0 =C2=A0=C2=A0<a target=3D"_blank" style=3D"text-decoration:=
+none;color:#9ba3ab; font-family: StudioFeixenSans, &#39;StudioFeixenSans&#3=
+9;, Arial, sans-serif; font-size: 14px; font-weight: normal; color: #f4f4f4=
+;" href=3D"https://links.datacamp.com/e/c/eyJlbWFpbF9pZCI6ImRnVGRod1FCQUppd=
+TJBYVdydGdHQVk2UWJzcGRQN25VaUlpTnpKSGx5UT09IiwiaHJlZiI6Imh0dHBzOi8vd3d3LmRh=
+dGFjYW1wLmNvbS9wcml2YWN5LXBvbGljeS8iLCJpbnRlcm5hbCI6ImRkODcwNGQzMDM4NmExMDE=
+5OGFlZDgwNiIsImxpbmtfaWQiOjMyODU0ODIzN30/0c373da6a02dff8413355357d1b0b7fe64=
+7442df8501e1f1b5cea08ca5aa6c9a">Privacy Policy</a><a href=3D"https://links.=
+datacamp.com/e/c/eyJlbWFpbF9pZCI6ImRnVGRod1FCQUppdTJBYVdydGdHQVk2UWJzcGRQN2=
+5VaUlpTnpKSGx5UT09IiwiaHJlZiI6Imh0dHBzOi8vZGF0YWNhbXAuY29tP3V0bV9zb3VyY2U9Y=
+3VzdG9tZXJpb1x1MDAyNnV0bV9tZWRpdW09ZW1haWxcdTAwMjZ1dG1fdGVybT1ib3RcdTAwMjZk=
+Y19ldWlkPTE0MTA1MTY4IiwiaW50ZXJuYWwiOiJkZDg3MDRkMzAzODZhMTAxOThhZWQ4MDYiLCJ=
+saW5rX2lkIjozMjg2MDM4MzZ9/c71a5aef87836a02ec5ef95a0a327517645e6aa00ac669a8c=
+ef416be8f980d1b">=E2=80=8B</a></div>
+                                                    </div>
+                                                  </td>
+                                                </tr>
+                                                <!-- Spacer begins -->
+                                                <tr>
+                                                  <td width=3D"0" height=3D=
+"24" style=3D"font-size:1px; line-height:1px; mso-line-height-rule: exactly=
+;"></td>
+                                                </tr>
+                                                <!-- Spacer ends -->
+                                              </tbody>
+                                            </table>
+                                            <!--[if true]>
+                                          </td>
+                                        </tr>
+                                      </table>
+                                      <![endif]-->
+                                    </td>
+                                  </tr>
+                                  <!-- ///////////////////////////// MODULE=
+: FOOTER ENDS ///////////////////////////// -->
+      </tbody>
+     </table>
+     <!--[if true]>
+      </td>
+     </tr>
+    </table>
+    <![endif]-->
+     </div>
+    </td>
+   </tr>
+    </tbody>
+   </table>
+  </center>
+   </custom>
+  </div>
+ </div>
+  </div>
+=20
+
+
+<img src=3D"https://links.datacamp.com/e/o/eyJlbWFpbF9pZCI6ImRnVGRod1FCQUpp=
+dTJBYVdydGdHQVk2UWJzcGRQN25VaUlpTnpKSGx5UT09In0=3D" style=3D"height: 1px !i=
+mportant; max-height: 1px !important; max-width: 1px !important; width: 1px=
+ !important; display: none !important;" alt=3D""/></body></html>
+--0027febf4bfeb0022ebdde6a10a960731f8cdd20337677a90cde35cb4064--

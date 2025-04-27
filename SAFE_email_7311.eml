@@ -1,0 +1,990 @@
+X-GM-THRID: 1732555748625998462
+X-Gmail-Labels: Inbox,Important,Opened,Category Updates
+Delivered-To: azfarali007.aa@gmail.com
+Received: by 2002:ad4:480c:0:0:0:0:0 with SMTP id g12csp4799911qvy;
+        Wed, 11 May 2022 11:31:59 -0700 (PDT)
+X-Google-Smtp-Source: ABdhPJwy1+Hs2iqqoSWaTxQLakV89oIzXpryn3yahAI77PghwciuJm8+R855xRILttUnwl9lfdmR
+X-Received: by 2002:a0d:db82:0:b0:2f7:fca3:4e08 with SMTP id d124-20020a0ddb82000000b002f7fca34e08mr26893742ywe.259.1652293919239;
+        Wed, 11 May 2022 11:31:59 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1652293919; cv=none;
+        d=google.com; s=arc-20160816;
+        b=hULqT6Nk42e6H6ylIU5+fNl+J0R2DEiIkSfF3OY5ffmSeCOm2UMRrcWmuwVCekLsCb
+         DnWzojeSV0adEl0JbqKtDLFK9MIo7gN6+OXodTihC4197eJvI3a+SDL7DPYbd3A4RTZa
+         aHQ+e/is7iomeXAZ9XwRP3Bh8fLIqwOF0eabtw5x82aLKwwDkp+a7XgeWeQA4oYsOtcU
+         M0obF7N0t0hKnzBbpeLYml5Brkn+g2hvsUe0g0l9R3wT1LWuASv9T9ERWYe9PSDpqgeC
+         iMFSr5dsryc5OCmHrOLnj6ud1YD4BrG/VfLUMyEwK/5gWhvDweHiCs8S9Th3unzeVZuB
+         dTSQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=mime-version:date:message-id:feedback-id:to:subject:from
+         :dkim-signature:dkim-signature;
+        bh=Nwa5XqPT4TxyQOHYakgs7N6n3Sm5+HhPxQRt8TQu2OM=;
+        b=rhBhcUl7kydclZItsDA2VVA1W8LlnY1PIvxfJ+9n1+IvtMwOMYptpC0y7s2ar8WPsS
+         eYJ5vAqMUzzfjXWfz5UPXdckNK8JQ49L6z7Jgl650+JOyfCh7bXA8PTo8z+m0ClxoMJK
+         94OKX8GJVUJhsWsvPIDhbGevLN4BAgnYvu9kM5qieCLGH4UTpFG4wLGIdoDc0hznfGLD
+         qnEuBmTZ8CLZnMeTFxA5Rw7i3rZpBG/jboNrLiRSlqjyqqDbyxQpz0bbTsnh4uanZhWv
+         EwSSOtZt6/bAcN99GBdX99IRUAUP12FnYKnlX3pg6kBe/mjlDONBj2QxBHPfsqtRBKyf
+         U+sg==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@tmail.nvidia.com header.s=mandrill header.b=nCBLN1uV;
+       dkim=pass header.i=@mandrillapp.com header.s=mandrill header.b=M5zw+JVg;
+       spf=pass (google.com: domain of bounce-md_30646027.627c011e.v1-6160bac832c24446a4c3a14c19982db4@tmailclick.nvidia.com designates 198.2.128.83 as permitted sender) smtp.mailfrom=bounce-md_30646027.627c011e.v1-6160bac832c24446a4c3a14c19982db4@tmailclick.nvidia.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=nvidia.com
+Return-Path: <bounce-md_30646027.627c011e.v1-6160bac832c24446a4c3a14c19982db4@tmailclick.nvidia.com>
+Received: from mail128-83.atl41.mandrillapp.com (mail128-83.atl41.mandrillapp.com. [198.2.128.83])
+        by mx.google.com with ESMTPS id 85-20020a810558000000b002ec2d86eb1fsi3504867ywf.233.2022.05.11.11.31.59
+        for <azfarali007.aa@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Wed, 11 May 2022 11:31:59 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bounce-md_30646027.627c011e.v1-6160bac832c24446a4c3a14c19982db4@tmailclick.nvidia.com designates 198.2.128.83 as permitted sender) client-ip=198.2.128.83;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@tmail.nvidia.com header.s=mandrill header.b=nCBLN1uV;
+       dkim=pass header.i=@mandrillapp.com header.s=mandrill header.b=M5zw+JVg;
+       spf=pass (google.com: domain of bounce-md_30646027.627c011e.v1-6160bac832c24446a4c3a14c19982db4@tmailclick.nvidia.com designates 198.2.128.83 as permitted sender) smtp.mailfrom=bounce-md_30646027.627c011e.v1-6160bac832c24446a4c3a14c19982db4@tmailclick.nvidia.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=nvidia.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=tmail.nvidia.com;
+	s=mandrill; t=1652293919; x=1652596319; i=account@tmail.nvidia.com;
+	bh=Nwa5XqPT4TxyQOHYakgs7N6n3Sm5+HhPxQRt8TQu2OM=;
+	h=From:Subject:To:Feedback-ID:Message-Id:Date:MIME-Version:
+	 Content-Type:CC:Date:Subject:From;
+	b=nCBLN1uVIf1viwpjFWRmB7FzVex92FidMuWaLf1oe2tx9BqYwA+DfVL7KhNaLx6IA
+	 BHrnnX2lrWCyAXZpWvFK4AWUIjQfyLOcJ0X7OjHFBssk/obFm0zuHGCWj1wLZr2R7R
+	 MB+TPiNeGBP/QvGogH4aZzvTdhbnk25RNgN+g6Jg=
+Received: from pmta08.mandrill.prod.atl01.rsglab.com (localhost [127.0.0.1])
+	by mail128-83.atl41.mandrillapp.com (Mailchimp) with ESMTP id 4Kz3R30nywzFCXGhw
+	for <azfarali007.aa@gmail.com>; Wed, 11 May 2022 18:31:59 +0000 (GMT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=mandrillapp.com;
+ i=@mandrillapp.com; q=dns/txt; s=mandrill; t=1652293918; h=From :
+ Subject : To : Message-Id : Date : MIME-Version : Content-Type : From :
+ Subject : Date : X-Mandrill-User : List-Unsubscribe;
+ bh=Nwa5XqPT4TxyQOHYakgs7N6n3Sm5+HhPxQRt8TQu2OM=;
+ b=M5zw+JVgRvT8o1rFlTJNOgTuT7IirfI0uUbJRcBUegU1m8nfx1oHT3V2Z21M2xuOaoqpxD
+ zjKdzZG+iA2+bTkV7Jpo6H4qLdlI/shb4wsWwmtLgWUIiHoItspmwlEh+5hDEfEElsJmSPxb
+ S/vjy32GkMuZyuqRjRsMleFQvqYP4=
+From: NVIDIA Accounts <account@tmail.nvidia.com>
+Subject: Authenticate Your Email Address
+Received: from [34.241.11.225] by mandrillapp.com id 6160bac832c24446a4c3a14c19982db4; Wed, 11 May 2022 18:31:58 +0000
+X-JarvisRequestId: production:33stallbluejtig_2204550
+To: azfarali007.aa@gmail.com
+X-Report-Abuse: Please forward a copy of this message, including all headers, to abuse@mandrill.com
+X-Report-Abuse: You can also report abuse here: http://mandrillapp.com/contact/abuse?id=30646027.6160bac832c24446a4c3a14c19982db4
+X-Mandrill-User: md_30646027
+Feedback-ID: 30646027:30646027.20220511:md
+Message-Id: <30646027.20220511183158.627c011eef27c7.38916426@mail128-83.atl41.mandrillapp.com>
+Date: Wed, 11 May 2022 18:31:58 +0000
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="_av-pFCRJ_0KJDAYLCuCtQsBBA"
+
+--_av-pFCRJ_0KJDAYLCuCtQsBBA
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+ <http://www.nvidia.com/>                    
+ 
+                                                    Hello,
+
+ Your account just logged in using a(n) Windows device we haven't seen you
+use recently. Click the link below to verify this was you and continue to
+NVIDIA GeForce Experience. If this wasn't you please change your GOOGLE
+password.
+             VERIFY EMAIL ADDRESS
+<https://login.nvgs.nvidia.com/v1/nfactor/email-auth?code=3Dn_CXfE17QPNxsyl=
+TspdTAf90hlC6aLNO7b84DR6U4vYb-uX6Rw-wp3xh2q2owKxd.MzMxMzg2Nzg3OTk2ODkzNTk1&=
+amp;theme=3DDark&amp;locale=3Den-US>
+              *Location:* Karachi
+
+ To protect your privacy we do not store the specific location. North
+Western Asia is the location that will be retained for future reference.
+                                
+                          Unsubscribe
+<https://profile.nvidia.com/en-us/subscriptions/unsubscribe-from-all> |
+Manage Preferences <https://www.nvidia.com/en-us/preferences/have-account/>
+| Contact Us <https://www.nvidia.com/en-us/contact/> | Privacy Center
+<http://privacy.nvidia.com/>   =C2=A9 2022 NVIDIA Corporation. All rights
+reserved.   NVIDIA Corporation, 2788 San Tomas Expressway, Santa Clara, CA
+95051. <http://www.nvidia.com/>
+
+--_av-pFCRJ_0KJDAYLCuCtQsBBA
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/x=
+html1/DTD/xhtml1-transitional.dtd">
+<html xmlns=3D"http://www.w3.org/1999/xhtml" xmlns:v=3D"urn:schemas-microso=
+ft-com:vml" xmlns:o=3D"urn:schemas-microsoft-com:office:office">
+
+    <head>
+        <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3DU=
+TF-8">
+        <title></title>
+        <!--[if gte mso 9]>
+    <style>
+    .em_font {font-family: 'DINPro-Regular', Arial, sans-serif  !important;=
+}
+    </style>
+    <![endif]-->
+        <!--[if !mso]><!-->
+        <link href=3D"http://info.nvidianews.com/rs/156-OFN-742/images/dinp=
+ro-regular.css" rel=3D"stylesheet" type=3D"text/css">
+        <!--<![endif]-->
+        <style type=3D"text/css">
+            body {
+                font-family: Trebuchet MS, Arial, Helvetica, Sans-Serif !im=
+portant;
+            }
+
+            .text-center,
+            .btn,
+            .remove,
+            .blockRight {
+                font-family: Trebuchet MS, Arial, Helvetica, Sans-Serif !im=
+portant;
+            }
+
+            table {
+                font-family: Trebuchet MS, Arial, Helvetica, Sans-Serif !im=
+portant;
+            }
+
+            td {
+                font-family: Trebuchet MS, Arial, Helvetica, Sans-Serif !im=
+portant;
+            }
+
+            sup {
+                font-size: 100% !important;
+            }
+            .text-block {
+                text-align: left;
+            }
+            [dir=3D"rtl"] .text-block{
+                text-align: right;
+            }
+            
+
+            
+        </style>
+        <!--[endif]-->
+    <!--[if gte mso 12]>
+        <style type=3D"text/css">
+            body {
+                font-family: Trebuchet MS, Arial, Helvetica, Sans-Serif !im=
+portant;
+            }
+
+            .text-center,
+            .btn,
+            .remove,
+            .blockRight {
+                font-family: Trebuchet MS, Arial, Helvetica, Sans-Serif !im=
+portant;
+            }
+
+            table {
+                font-family: Trebuchet MS, Arial, Helvetica, Sans-Serif !im=
+portant;
+            }
+
+            td {
+                font-family: Trebuchet MS, Arial, Helvetica, Sans-Serif !im=
+portant;
+            }
+
+            sup {
+                font-size: 100% !important;
+            }
+        </style>
+        <![endif]-->
+    <!--[if gte mso 14]>
+        <style type=3D"text/css">
+            body {
+                font-family: Trebuchet MS, Arial, Helvetica, Sans-Serif !im=
+portant;
+            }
+
+            .text-center,
+            .btn,
+            .remove,
+            .blockRight {
+                font-family: Trebuchet MS, Arial, Helvetica, Sans-Serif !im=
+portant;
+            }
+
+            table {
+                font-family: Trebuchet MS, Arial, Helvetica, Sans-Serif !im=
+portant;
+            }
+
+            td {
+                font-family: Trebuchet MS, Arial, Helvetica, Sans-Serif !im=
+portant;
+            }
+
+            sup {
+                font-size: 100% !important;
+            }
+        </style>
+        <![endif]-->
+    <!--[if gte mso 15]>
+        <style type=3D"text/css">
+            body {
+                font-family: Trebuchet MS, Arial, Helvetica, Sans-Serif !im=
+portant;
+            }
+
+            .text-center,
+            .btn,
+            .remove,
+            .blockRight {
+                font-family: Trebuchet MS, Arial, Helvetica, Sans-Serif !im=
+portant;
+            }
+
+            table {
+                font-family: Trebuchet MS, Arial, Helvetica, Sans-Serif !im=
+portant;
+            }
+
+            td {
+                font-family: Trebuchet MS, Arial, Helvetica, Sans-Serif !im=
+portant;
+            }
+
+            sup {
+                font-size: 100% !important;
+            }
+        </style>
+        <![endif]-->
+    <!--[if gte mso 16]>
+        <style type=3D"text/css">
+            body {
+                font-family: Trebuchet MS, Arial, Helvetica, Sans-Serif !im=
+portant;
+            }
+
+            .text-center,
+            .btn,
+            .remove,
+            .blockRight {
+                font-family: Trebuchet MS, Arial, Helvetica, Sans-Serif !im=
+portant;
+            }
+
+            table {
+                font-family: Trebuchet MS, Arial, Helvetica, Sans-Serif !im=
+portant;
+            }
+
+            td {
+                font-family: Trebuchet MS, Arial, Helvetica, Sans-Serif !im=
+portant;
+            }
+
+            sup {
+                font-size: 100% !important;
+            }
+        </style>
+        <![endif]-->
+
+    <style type=3D"text/css">
+
+        .show {
+            display: none;
+        }
+
+        a[x-apple-data-detectors] {
+            color: inherit !important;
+            text-decoration: none !important;
+            font-size: inherit !important;
+            font-family: inherit !important;
+            font-weight: inherit !important;
+            line-height: inherit !important;
+        }
+
+        @font-face {
+            font-family: 'DINPro-Regular';
+            font-style: normal;
+            font-weight: normal;
+            src: local('DINPro-Regular'), url(http://www.nvidia.co.uk/conte=
+nt/newsletter/fonts/DINPro_Regular.woff2) format('woff2'), url(http://image=
+s.nvidia.com/newsletters/fonts/DINPro_Regular.otf) format('embedded-opentyp=
+e'), url(http://images.nvidia.com/newsletters/fonts/DINPro_Regular.ttf) for=
+mat('truetype'), url(http://images.nvidia.com/newsletters/fonts/DINPro_Regu=
+lar.woff) format('woff'), url(http://images.nvidia.com/newsletters/fonts/DI=
+NPro_Regular.svg) format('svg');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA=
+, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F0=
+00;
+        }
+
+        @font-face {
+            font-family: 'DINPro-Bold';
+            font-style: normal;
+            font-weight: normal;
+            src: local('DINPro-Bold'), url(http://www.nvidia.co.uk/content/=
+newsletter/fonts/DINPro_Bold.woff2) format('woff2'), url(http://images.nvid=
+ia.com/newsletters/fonts/DINPro_Bold.otf) format('embedded-opentype'), url(=
+http://images.nvidia.com/newsletters/fonts/DINPro_Bold.ttf) format('truetyp=
+e'), url(http://images.nvidia.com/newsletters/fonts/DINPro_Bold.woff) forma=
+t('woff'), url(http://images.nvidia.com/newsletters/fonts/DINPro_Bold.svg) =
+format('svg');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA=
+, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F0=
+00;
+        }
+
+        body {
+            margin: 0 !important;
+            padding: 0 !important;
+            -webkit-text-size-adjust: none !important;
+            -ms-text-size-adjust: 100% !important;
+            -webkit-font-smoothing: antialiased !important;
+        }
+
+        img {
+            border: 0 !important;
+            outline: none !important;
+        }
+
+        table {
+            border-collapse: collapse;
+            mso-table-lspace: 0px;
+            mso-table-rspace: 0px;
+        }
+
+        td, a, span {
+            border-collapse: collapse;
+            mso-line-height-rule: exactly;
+        }
+
+        .ExternalClass * {
+            line-height: 100%;
+        }
+        
+        
+        table.status-summary {
+          border-collapse: collapse;
+          border: 1px solid black;
+        }
+        
+        table.status-summary th {
+          border: 1px solid black;
+        }
+
+        table.status-summary td {
+          border: 1px solid black;
+          padding-left: 4px;
+          padding-right: 4px;
+        }
+        
+        td.num-type {
+            text-align: right;
+        }
+
+        .em_defaultlink a {
+            color: inherit !important;
+            text-decoration: none !important;
+        }
+
+        span.MsoHyperlink {
+            mso-style-priority: 99;
+            color: inherit;
+        }
+
+        span.MsoHyperlinkFollowed {
+            mso-style-priority: 99;
+            color: inherit;
+        }
+
+        @media only screen and (min-width:481px) and (max-width:650px) {
+            .em_main_table {
+                width: 100% !important;
+            }
+
+            span[class=3Dem_divhide] {
+                display: none !important;
+            }
+
+            .em_wrapper {
+                width: 100% !important;
+                max-width: 100% !important;
+                min-width: 100% !important;
+            }
+
+            img[class=3D"image-100-percent"] {
+                width: 100% !important;
+                height: auto;
+                max-width: 100% !important;
+                min-width: 100% !important;
+            }
+
+            .em_aside {
+                padding: 30px 15px !important; /*Update the values as requi=
+red*/
+                Margin-left: 15px !important;
+                Margin-right: 15px !important;
+            }
+
+            .em_aside1 {
+                padding: 30px 15px !important; /*Update the values as requi=
+red*/
+                Margin-left: 15px !important;
+                Margin-right: 15px !important;
+            }
+
+            .em_hide {
+                display: none !important;
+            }
+
+            .em_full_img {
+                width: 100% !important;
+                height: auto !important;
+                max-width: 100% !important;
+                min-width: 100% !important;
+                min-width: 100vw !important;
+            }
+
+            .em_align_cent {
+                text-align: center !important;
+            }
+
+            .em_spc_20 {
+                height: 30px !important;
+            }
+
+            .em_side {
+                width: 10px !important;
+            }
+
+            .em_top {
+                padding-top: 20px !important;
+            }
+
+            .em_top1 {
+                padding-top: 15px !important;
+            }
+
+            .em_auto {
+                height: auto !important;
+            }
+
+            .em_height_fixed {
+                height: 320px !important;
+            }
+
+            .em_border {
+                border-right: none !important;
+                border-bottom: 1px solid #ffffff !important;
+            }
+        }
+
+        @media only screen and (max-width:480px) {
+
+            .em_main_table {
+                width: 100% !important;
+            }
+
+            span[class=3Dem_divhide] {
+                display: none !important;
+            }
+
+            .em_wrapper {
+                width: 100% !important;
+                max-width: 100% !important;
+                min-width: 100% !important;
+            }
+
+            img[class=3D"image-100-percent"] {
+                width: 100% !important;
+                height: auto;
+                max-width: 100% !important;
+                min-width: 100% !important;
+            }
+
+            .em_aside {
+                padding: 30px 15px !important; /*Update the values as requi=
+red*/
+                Margin-left: 15px !important;
+                Margin-right: 15px !important;
+            }
+
+            .em_aside1 {
+                padding: 30px 15px !important; /*Update the values as requi=
+red*/
+                Margin-left: 15px !important;
+                Margin-right: 15px !important;
+            }
+
+            .em_hide {
+                display: none !important;
+            }
+
+            .em_full_img {
+                width: 100% !important;
+                height: auto !important;
+            }
+
+            .em_align_cent {
+                text-align: center !important;
+            }
+
+            .em_spc_20 {
+                height: 30px !important;
+            }
+
+            .em_side {
+                width: 10px !important;
+            }
+
+            .em_top {
+                padding-top: 20px !important;
+            }
+
+            .em_auto {
+                height: auto !important;
+            }
+
+            .em_height_fixed {
+                height: 320px !important;
+            }
+
+            .em_margin_10 {
+                Margin-left: 15px !important;
+                Margin-right: 15px !important;
+            }
+
+            .em_top1 {
+                padding-top: 15px !important;
+            }
+
+            .em_border {
+                border-right: none !important;
+                border-bottom: 1px solid #ffffff !important;
+            }
+        }
+
+        .MsoNormal {
+            font-family: 'DINPro-Regular', Arial, Helvetica, Sans-Serif !im=
+portant;
+            font-weight: lighter;
+        }
+    </style>
+    <!--[if gte mso 9]>
+
+
+
+
+
+
+        <![endif]-->
+</head>
+<body style=3D"margin:0px; padding:0px;">
+    <!--Full width outer table start--> <!-- Preheader Copy Start -->
+    <table class=3D"show" width=3D"100%" border=3D"0" cellspacing=3D"0" cel=
+lpadding=3D"0" style=3D"display: none; width: 0px; height: 0px; max-width: =
+0px; max-height: 0px; overflow: hidden; opacity: 0; mso-hide: all;">
+        <tbody>
+            <tr>
+                <td class=3D"mktoText" id=3D"Preheadertext" style=3D"font-s=
+ize: 1px; font-family: 'DINPro-Regular', Arial, Helvetica, Sans-Serif; colo=
+r: #ffffff; font-weight: normal; text-align: center;"></td>
+            </tr>
+        </tbody>
+    </table>
+    <!-- Preheader Copy End --> <!-- Header Logo Start -->
+    <table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" =
+bgcolor=3D"#ffffff">
+        <tbody>
+            <tr>
+                <td align=3D"center" valign=3D"top">
+                    <!--snippet-->
+                    <div class=3D"mktoSnippet" id=3D"HeaderLogoOnline">
+                        <table style=3D"table-layout: fixed;" class=3D"em_m=
+ain_table" width=3D"680" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" a=
+lign=3D"center">
+                            <tbody>
+                                <tr>
+                                    <td class=3D"em_aside" style=3D"padding=
+: 15px 40px 15px 40px;" valign=3D"top" align=3D"center">
+                                        <table class=3D"em_wrapper" style=
+=3D"width: 600px;" width=3D"600" cellspacing=3D"0" cellpadding=3D"0" border=
+=3D"0" align=3D"center">
+                                            <tbody>
+                                                <tr>
+                                                    <td valign=3D"top" alig=
+n=3D"center">
+                                                        <table class=3D"tex=
+t-block" style=3D"width: 150px;" width=3D"150" cellspacing=3D"0" cellpaddin=
+g=3D"0" border=3D"0">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td val=
+ign=3D"top" align=3D"center"><a href=3D"http://tmailclick.nvidia.com/track/=
+click/30646027/www.nvidia.com?p=3DeyJzIjoiWVBsbkZ5M0xoS3EwRG5mUlJRNXVVVXdNc=
+TlnIiwidiI6MSwicCI6IntcInVcIjozMDY0NjAyNyxcInZcIjoxLFwidXJsXCI6XCJodHRwOlxc=
+XC9cXFwvd3d3Lm52aWRpYS5jb21cXFwvXCIsXCJpZFwiOlwiNjE2MGJhYzgzMmMyNDQ0NmE0YzN=
+hMTRjMTk5ODJkYjRcIixcInVybF9pZHNcIjpbXCI3YmJhMmU5NTI4NDdlMjcyNzA3MWRjZGQ2ZD=
+I4ZWZkY2MzMjA1ZDk0XCJdfSJ9" style=3D"color: #666666; text-decoration: none;=
+" target=3D"_blank" rel=3D"noopener noreferrer" title=3D"NVIDIA"><img src=
+=3D"http://info.nvidia.com/rs/156-OFN-742/images/nvidia-logo-150x50.png" al=
+t=3D"NVIDIA" style=3D"margin: 0; padding: 0; border: 0;" id=3D"nvidia-logo"=
+ constrain=3D"true" imagepreview=3D"false" width=3D"150" height=3D"50"></a>=
+</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <table style=3D"wid=
+th: 200px;" class=3D"em_wrapper" width=3D"200" cellspacing=3D"0" cellpaddin=
+g=3D"0" border=3D"0" align=3D"right">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td hei=
+ght=3D"20"><img src=3D"http://info.nvidia.com/rs/156-OFN-742/images/spacer.=
+gif" alt=3D"" style=3D"mso-line-height: exactly; line-height: 15px; font-si=
+ze: 1px;" width=3D"1" height=3D"1" border=3D"0"></td>
+                                                                </tr>
+                                                                <tr></tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div></div>
+                    </div>
+                    <!--end snippet-->
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <!-- Header Logo End --> <!-- Sub Icon STARTS -->
+    <table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" =
+bgcolor=3D"#80bd01">
+        <tbody>
+            <tr>
+                <td align=3D"center" valign=3D"top">
+                    <table width=3D"680" border=3D"0" cellspacing=3D"0" cel=
+lpadding=3D"0" align=3D"center" style=3D"table-layout: fixed;" class=3D"em_=
+main_table">
+                        <tbody>
+                            <tr>
+                                <td align=3D"center" valign=3D"top">
+                                    <table width=3D"600" border=3D"0" cells=
+pacing=3D"0" cellpadding=3D"0" align=3D"center" class=3D"em_wrapper" style=
+=3D"width: 600px;">
+                                        <tbody>
+                                            <tr>
+                                                <td height=3D"1" style=3D"b=
+order-bottom: 2px solid #80bd01; line-height: 0px;"><img src=3D"http://info=
+.nvidia.com/rs/156-OFN-742/images/spacer.gif" width=3D"1" height=3D"1" alt=
+=3D" " style=3D"display: block;" border=3D"0"></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <!-- Sub Icon ENDS -->
+    <table style=3D"width: 100%;" cellspacing=3D"0" cellpadding=3D"0" borde=
+r=3D"0">
+        <tbody>
+            <tr>
+                <td class=3D"mktoContainer" id=3D"MainContainer">
+                    <table class=3D"mktoModule" id=3D"Module12FullWidthText=
+NoCTAdcbef793-fe4f-40cf-ae8d-d7aa4b718808" width=3D"100%" border=3D"0" cell=
+spacing=3D"0" cellpadding=3D"0" style=3D"background-color: #ffffff;" bgcolo=
+r=3D"#ffffff">
+                        <tbody>
+                            <tr>
+                                <td align=3D"center" data-nl-format=3D"date=
+time">
+                                    <table width=3D"680" border=3D"0" cells=
+pacing=3D"0" cellpadding=3D"0" align=3D"center" style=3D"table-layout: fixe=
+d;" class=3D"em_main_table">
+                                        <tbody>
+                                            <tr>
+                                                <td class=3D"em_aside1" sty=
+le=3D"padding: 60px 40px 60px 40px;" align=3D"center" valign=3D"top">
+                                                    <table width=3D"600" bo=
+rder=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=3D"center" class=3D"em=
+_wrapper" style=3D"width: 600px;">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td align=
+=3D"center" valign=3D"top" class=3D"mktoText" id=3D"Module12FullWidthTextNo=
+CTACopyBlockdcbef793-fe4f-40cf-ae8d-d7aa4b718808">
+                                                                    <table =
+width=3D"600" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=3D"cen=
+ter" style=3D"width: 600px;" class=3D"em_wrapper">
+                                                                        <tb=
+ody>
+                                                                           =
+ <tr>
+                                                                           =
+     <td class=3D"em_font" style=3D"color: #1a1a1a; font-family: 'DINPro-Re=
+gular', Trebuchet MS, Arial, Helvetica, Sans-Serif; font-size: 16px; line-h=
+eight: 24px;">
+                                                                           =
+         Hello,<br><br>
+                                                                           =
+         Your account just logged in using a(n) Windows device we haven't s=
+een you use recently. Click the link below to verify this was you and conti=
+nue to NVIDIA GeForce Experience. If this wasn't you please change your GOO=
+GLE password.<br>
+                                                                           =
+     </td>
+                                                                           =
+ </tr>
+                                                                           =
+ <tr>
+                                                                           =
+     <td height=3D"30"><img src=3D"http://info.nvidia.com/rs/156-OFN-742/im=
+ages/spacer.gif" width=3D"1" height=3D"1" alt=3D" " style=3D"display: block=
+;" border=3D"0"></td>
+                                                                           =
+ </tr>
+                                                                   
+                                                                           =
+ <tr>                                                                      =
+     
+                                                                           =
+     <td class=3D"text-block">
+                                                                           =
+         <!--BUTTON START-->
+                                                                           =
+         <table class=3D"text-block" border=3D"0" bgcolor=3D"#76b900" cellp=
+adding=3D"0" cellspacing=3D"0" style=3D"border: 1px solid #76b900;">
+                                                                           =
+             <tbody>
+                                                                           =
+                 <tr>
+                                                                           =
+                     <td align=3D"center" class=3D"em_font" valign=3D"middl=
+e" style=3D"color: #ffffff; font-family: 'DINPro-Regular', Arial, Helvetica=
+, Sans-Serif; font-size: 14px; font-weight: bold; padding: 13px 21px 13px 2=
+1px; text-transform: uppercase; letter-spacing: 1px;">
+                                                                           =
+                         <a href=3D"https://login.nvgs.nvidia.com/v1/nfacto=
+r/email-auth?code=3Dn_CXfE17QPNxsylTspdTAf90hlC6aLNO7b84DR6U4vYb-uX6Rw-wp3x=
+h2q2owKxd.MzMxMzg2Nzg3OTk2ODkzNTk1&theme=3DDark&locale=3Den-US" style=3D"te=
+xt-decoration: none; color: #ffffff; display: block;">VERIFY EMAIL ADDRESS<=
+/a>
+                                                                           =
+                             
+                                                                           =
+                     </td>
+                                                                           =
+                 </tr>
+                                                                           =
+             </tbody>
+                                                                           =
+         </table>
+                                                                           =
+         <!--BUTTON END-->
+                                                                           =
+     </td>
+                                                                           =
+                                                                      
+                                                                           =
+ </tr>
+                                                                           =
+ <tr>
+                                                                           =
+     <td height=3D"30"><img src=3D"http://info.nvidia.com/rs/156-OFN-742/im=
+ages/spacer.gif" width=3D"1" height=3D"1" alt=3D" " style=3D"display: block=
+;" border=3D"0"></td>
+                                                                           =
+ </tr>
+                                                                        
+                                                                        </t=
+body></table></td></tr>
+                                                                        <tr=
+>
+                                                                           =
+ <td class=3D"em_font" style=3D"color: #1a1a1a; font-family: 'DINPro-Regula=
+r', Trebuchet MS, Arial, Helvetica, Sans-Serif; font-size: 16px; line-heigh=
+t: 24px;">
+                                                                           =
+     
+                                                                           =
+     <div>
+                                                                           =
+         <strong>Location:</strong>
+                                                                           =
+         Karachi</div><br>
+                                                                           =
+     <div>To protect your privacy we do not store the specific location. No=
+rth Western Asia is the location that will be retained for future reference=
+.</div>
+                                                                           =
+ </td>
+                                                                        </t=
+r>
+                                                                        </t=
+body>
+                                                                    </table=
+>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                
+            
+        
+    
+    <!--Full width table End-->
+    <table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" =
+bgcolor=3D"#f0f0f0">
+        <tbody>
+            <tr>
+                <td align=3D"center" valign=3D"top">
+                    <table width=3D"680" border=3D"0" cellspacing=3D"0" cel=
+lpadding=3D"0" align=3D"center" style=3D"table-layout: fixed;" class=3D"em_=
+main_table">
+                        <tbody>
+                            <tr>
+                                <td class=3D"em_aside1" style=3D"padding: 3=
+0px 30px 30px 30px;" align=3D"center" valign=3D"top">
+                                    <table width=3D"600" border=3D"0" cells=
+pacing=3D"0" cellpadding=3D"0" align=3D"center" class=3D"em_wrapper" style=
+=3D"width: 600px;">
+                                        <tbody>
+                                            <tr>
+                                                <td align=3D"center" valign=
+=3D"top">
+                                                    <!--snippet-->
+                                                    <div class=3D"mktoSnipp=
+et" id=3D"NvidiaSubheading">
+                                                    </div>
+                                                    <!--end snippet-->
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <!-- Footer Start -->
+    <table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" =
+bgcolor=3D"#ffffff">
+        <tbody>
+            <tr>
+                <td align=3D"center" valign=3D"top" style=3D"padding: 0px 1=
+0px 0px 10px;">
+                    <!--snippet-->
+                    <table width=3D"600" border=3D"0" cellspacing=3D"0" cel=
+lpadding=3D"0" align=3D"center" class=3D"em_wrapper em_font" style=3D"width=
+: 600px;">
+                        <tbody class=3D"em_wrapper em_font">
+                            <tr>
+                                <td class=3D"em_spc_20" height=3D"60"><img =
+src=3D"http://info.nvidia.com/rs/156-OFN-742/images/spacer.gif" width=3D"1"=
+ height=3D"1" alt=3D" " style=3D"display: block;" border=3D"0"></td>
+                            </tr>
+                            <tr>
+                                <td align=3D"center" class=3D"em_font" styl=
+e=3D"color: #666666; font-family: 'DINPro-Regular', Trebuchet MS, Arial, He=
+lvetica, Sans-Serif; font-size: 11px; line-height: 20px; letter-spacing: 1p=
+x; text-decoration: none; display: block;"><a href=3D"http://tmailclick.nvi=
+dia.com/track/click/30646027/profile.nvidia.com?p=3DeyJzIjoiNEYxODZUc0JPdm5=
+YOEszU0FhV1RDOFE5aUpRIiwidiI6MSwicCI6IntcInVcIjozMDY0NjAyNyxcInZcIjoxLFwidX=
+JsXCI6XCJodHRwczpcXFwvXFxcL3Byb2ZpbGUubnZpZGlhLmNvbVxcXC9lbi11c1xcXC9zdWJzY=
+3JpcHRpb25zXFxcL3Vuc3Vic2NyaWJlLWZyb20tYWxsXCIsXCJpZFwiOlwiNjE2MGJhYzgzMmMy=
+NDQ0NmE0YzNhMTRjMTk5ODJkYjRcIixcInVybF9pZHNcIjpbXCI3OTNiMzVmZTdiOGFjYmU0Nzg=
+xZThlYWViNjA3ZjllNzBkNTk1MDU5XCJdfSJ9" class=3D"em_font" style=3D"color: #6=
+66666; text-decoration: none;" target=3D"_blank" rel=3D"noopener noreferrer=
+">Unsubscribe</a> | <a href=3D"http://tmailclick.nvidia.com/track/click/306=
+46027/www.nvidia.com?p=3DeyJzIjoiTzA1X05ZdkVsUkNtQUhfYW5Yc3BraUtqSFFVIiwidi=
+I6MSwicCI6IntcInVcIjozMDY0NjAyNyxcInZcIjoxLFwidXJsXCI6XCJodHRwczpcXFwvXFxcL=
+3d3dy5udmlkaWEuY29tXFxcL2VuLXVzXFxcL3ByZWZlcmVuY2VzXFxcL2hhdmUtYWNjb3VudFxc=
+XC9cIixcImlkXCI6XCI2MTYwYmFjODMyYzI0NDQ2YTRjM2ExNGMxOTk4MmRiNFwiLFwidXJsX2l=
+kc1wiOltcIjJlNWJhMWQ1ZDIwMzEwMzQ4MjM0MDU0ZjM1NDBkYTBkYTgxYmRiNzhcIl19In0" c=
+lass=3D"em_font" style=3D"color: #666666; text-decoration: none;" target=3D=
+"_blank" rel=3D"noopener noreferrer">Manage Preferences</a> | <a href=3D"ht=
+tp://tmailclick.nvidia.com/track/click/30646027/www.nvidia.com?p=3DeyJzIjoi=
+SzZqN21aODFCaS0zb1VhZnRUYmxYR3ZQTUFBIiwidiI6MSwicCI6IntcInVcIjozMDY0NjAyNyx=
+cInZcIjoxLFwidXJsXCI6XCJodHRwczpcXFwvXFxcL3d3dy5udmlkaWEuY29tXFxcL2VuLXVzXF=
+xcL2NvbnRhY3RcXFwvXCIsXCJpZFwiOlwiNjE2MGJhYzgzMmMyNDQ0NmE0YzNhMTRjMTk5ODJkY=
+jRcIixcInVybF9pZHNcIjpbXCI4ODk0YTg1YmFjYjQzYjI4Y2I2YWIwM2E0YTE2YTJiNjZhN2Y4=
+ZWMxXCJdfSJ9" target=3D"_blank" rel=3D"noopener noreferrer" class=3D"em_fon=
+t" style=3D"color: #666666; text-decoration: none;">Contact Us</a> | <a hre=
+f=3D"http://tmailclick.nvidia.com/track/click/30646027/privacy.nvidia.com?p=
+=3DeyJzIjoiRm15N19NN2NIdW45MS1wOS0tQm9IQW9FRlhzIiwidiI6MSwicCI6IntcInVcIjoz=
+MDY0NjAyNyxcInZcIjoxLFwidXJsXCI6XCJodHRwOlxcXC9cXFwvcHJpdmFjeS5udmlkaWEuY29=
+tXFxcL1wiLFwiaWRcIjpcIjYxNjBiYWM4MzJjMjQ0NDZhNGMzYTE0YzE5OTgyZGI0XCIsXCJ1cm=
+xfaWRzXCI6W1wiOWM2YjRlMDM4MWMxZjliNGFkMTg0MGZmYzllOGU5MThhMjgyZTVkYVwiXX0if=
+Q" style=3D"color: #666666; text-decoration: none;" target=3D"_blank" rel=
+=3D"noopener noreferrer" class=3D"em_font">Privacy Center</a></td>
+                            </tr>
+                            <tr>
+                                <td align=3D"center" class=3D"em_font" styl=
+e=3D"color: #666666; font-family: 'DINPro-Regular', Trebuchet MS, Arial, He=
+lvetica, Sans-Serif; font-size: 11px; line-height: 24px; letter-spacing: 1p=
+x;">=C2=A9 2022 NVIDIA Corporation. All rights reserved.</td>
+                            </tr>
+                            <tr>
+                                <td align=3D"center" class=3D"em_font" styl=
+e=3D"color: #666666; font-family: 'DINPro-Regular', Trebuchet MS, Arial, He=
+lvetica, Sans-Serif; font-size: 11px; line-height: 24px; letter-spacing: 1p=
+x;">NVIDIA Corporation, 2788 San Tomas Expressway, Santa Clara, CA 95051.</=
+td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!--end snippet-->
+                </td>
+            </tr>
+            <tr>
+                <td class=3D"em_spc_20" height=3D"30"><img src=3D"http://in=
+fo.nvidia.com/rs/156-OFN-742/images/spacer.gif" width=3D"1" height=3D"1" al=
+t=3D" " style=3D"display: block;" border=3D"0"></td>
+            </tr>
+            <tr>
+                <td valign=3D"top" align=3D"center"><a href=3D"http://tmail=
+click.nvidia.com/track/click/30646027/www.nvidia.com?p=3DeyJzIjoiWVBsbkZ5M0=
+xoS3EwRG5mUlJRNXVVVXdNcTlnIiwidiI6MSwicCI6IntcInVcIjozMDY0NjAyNyxcInZcIjoxL=
+FwidXJsXCI6XCJodHRwOlxcXC9cXFwvd3d3Lm52aWRpYS5jb21cXFwvXCIsXCJpZFwiOlwiNjE2=
+MGJhYzgzMmMyNDQ0NmE0YzNhMTRjMTk5ODJkYjRcIixcInVybF9pZHNcIjpbXCI3YmJhMmU5NTI=
+4NDdlMjcyNzA3MWRjZGQ2ZDI4ZWZkY2MzMjA1ZDk0XCJdfSJ9" style=3D"color: #666666;=
+ text-decoration: none;" target=3D"_blank" rel=3D"noopener noreferrer" titl=
+e=3D"NVIDIA"><img src=3D"http://info.nvidia.com/rs/156-OFN-742/images/NVIDI=
+A-Logo-GTC-small.jpg" alt=3D"NVIDIA" style=3D"margin: 0; padding: 0; border=
+: 0;" id=3D"nvidia-logo" constrain=3D"true" imagepreview=3D"false" width=3D=
+"103" height=3D"32"></a></td>
+            </tr>
+            <tr>
+                <td class=3D"em_spc_20" height=3D"60"><img src=3D"http://in=
+fo.nvidia.com/rs/156-OFN-742/images/spacer.gif" width=3D"1" height=3D"1" al=
+t=3D" " style=3D"display: block;" border=3D"0"></td>
+            </tr>
+        </tbody>
+    </table>
+    <!-- Footer End -->
+<img src=3D"http://tmailclick.nvidia.com/track/open.php?u=3D30646027&id=3D6=
+160bac832c24446a4c3a14c19982db4" height=3D"1" width=3D"1"></body>
+</html>
+
+--_av-pFCRJ_0KJDAYLCuCtQsBBA--
+
