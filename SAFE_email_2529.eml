@@ -1,0 +1,956 @@
+X-GM-THRID: 1783274881737966346
+X-Gmail-Labels: Inbox,Category Updates,Unread
+Delivered-To: azfarali007.aa@gmail.com
+Received: by 2002:a0c:f2c6:0:b0:66d:13a8:25e4 with SMTP id c6csp1250559qvm;
+        Wed, 22 Nov 2023 07:30:49 -0800 (PST)
+X-Google-Smtp-Source: AGHT+IGT5gJkJ147RzGrN1IIxkWBJjFZy1yGufaVdMG3XRyE1Rek9nt+cF6EuXkcj+R1klhI9ZAW
+X-Received: by 2002:a17:90b:4d90:b0:281:8e9:7b86 with SMTP id oj16-20020a17090b4d9000b0028108e97b86mr2739099pjb.23.1700667049209;
+        Wed, 22 Nov 2023 07:30:49 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1700667049; cv=none;
+        d=google.com; s=arc-20160816;
+        b=fbeLL0/RBejiFonPTdLjCLqJ6EUQCvfEVl0WP08KRlIDWdT7ckkBoLYV93ZyCzhw7n
+         9ZTawfvQl3WeXbi8KyY/PKfF7cNouothl/q0E7c+QpN7Vc6KXW5PwhLawkfbujmRAxJS
+         6u5dJnKgE5b+YZxicb8fGMzFMrsJtilK+0PHCgqcFv9jdpNnIhdtbjGERPRRjFsKfQpv
+         n4S+KTfXa1MwCnUOQLabQBecz3SRnD2fVR/Xfgts+t47J+PoC0bWyNzITgDR8/8osL/w
+         hFnpDN+QBTe/sXqflRpCxig7/DC5ZNaxkuq6JcFoDDBTRG7LimsBt1KWatWZ2ma5T6t0
+         6hLQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=mime-version:subject:to:from:date:dkim-signature:feedback-id
+         :message-id;
+        bh=e4Kmv+ahoV1/elY6kQ5oUpLLKUAtlAJG3IkXiBHvNFQ=;
+        fh=1ghr3/vhIGL7+ytS5gYC2yrxOtO8q7dbhZ8cIHrxcdk=;
+        b=HIFqMGNcRgIS8UhQ5116MYgymNmJhidSy6leRaKR3BoWaq+p9PbF4G6dmynyHJ9GRp
+         fcLAhe3BcP/sbnDjDlAd+XdMC+hfK77Lj3HVwrGzTv0APeN3Ez3j9YwuJ4TootKbrbB0
+         6y6hy0DUw7P9qo44gy0G1l8n88V51aoNTGQ9ngRQjxEjqq9l5LY2JKMRoD/8RsrPa7l9
+         gbMGvQHgkajuJnwqqGto/TEJiQBLUl76AwWaXCmmdFUHdZ8fuatBGvIAxfDdmq5tTqkE
+         81tJoDvv/TEBUOVpbiOxiFrI8LpWRwJBQeqypew2rAikI25i655kpdeyajaVG1Jvunwu
+         qoVg==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@alibaba.com header.s=s1024 header.b=d7ghtFAD;
+       spf=pass (google.com: domain of member@notice.alibaba.com designates 47.90.197.205 as permitted sender) smtp.mailfrom=member@notice.alibaba.com;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=alibaba.com
+Return-Path: <member@notice.alibaba.com>
+Received: from out197-205.us.a.dm.aliyun.com (out197-205.us.a.dm.aliyun.com. [47.90.197.205])
+        by mx.google.com with ESMTPS id o8-20020a17090a420800b0027000086c93si1602975pjg.102.2023.11.22.07.30.46
+        for <azfarali007.aa@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Wed, 22 Nov 2023 07:30:49 -0800 (PST)
+Received-SPF: pass (google.com: domain of member@notice.alibaba.com designates 47.90.197.205 as permitted sender) client-ip=47.90.197.205;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@alibaba.com header.s=s1024 header.b=d7ghtFAD;
+       spf=pass (google.com: domain of member@notice.alibaba.com designates 47.90.197.205 as permitted sender) smtp.mailfrom=member@notice.alibaba.com;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=alibaba.com
+Message-ID: <655e1ea9.170a0220.3330e.57aaSMTPIN_ADDED_BROKEN@mx.google.com>
+X-Google-Original-Message-ID: 5fb71f20-f845-4df7-9bb7-7c44c680dde4-0
+X-AliDM-RcptTo: YXpmYXJhbGkwMDcuYWFAZ21haWwuY29t
+Feedback-ID: default:member@notice.alibaba.com:trigger:11
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+	d=alibaba.com; s=s1024;
+	t=1700667042; h=Date:From:To:Message-ID:Subject:MIME-Version:Content-Type;
+	bh=e4Kmv+ahoV1/elY6kQ5oUpLLKUAtlAJG3IkXiBHvNFQ=;
+	b=d7ghtFADQkd/9HwuHym1Pg636ZM7cSORKk+35igVltgm8Lrr6ERIijVd5Jf6I/+292Ufz6seJbbbnVM/5086QfZl5pgMDPCEkJZy6rQ4oOVz1evGIwLT3IcQubyoOE0bH4FYxX9SGFqyvAENGNwxDRDZwQezd+8JLLN7sX1NzgM=
+X-EnvId: 600000050333649018
+Received: from ump-delivery033061251003.center.na610(mailfrom:member@notice.alibaba.com fp:SMTPD_-VHcBrdKcVj)
+          by smtp.aliyun-inc.com(127.0.0.1);
+          Wed, 22 Nov 2023 23:30:42 +0800
+Date: Wed, 22 Nov 2023 07:30:42 -0800 (PST)
+From: "Alibaba.com" <member@notice.alibaba.com>
+To: azfarali007.aa@gmail.com
+Subject: Hi Azfar, getting started With Alibaba.com!
+MIME-Version: 1.0
+Content-Type: multipart/mixed;
+	boundary="----=_Part_20536067_1203900096.1700667042236"
+
+------=_Part_20536067_1203900096.1700667042236
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>
+<html xmlns=3D"http://www.w3.org/1999/xhtml" xmlns:v=3D"urn:schemas-microso=
+ft-com:vml" xmlns:o=3D"urn:schemas-microsoft-com:office:office">
+ <head>=20
+  <title></title>=20
+  <!--[if !mso]><!-->=20
+  <meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge" />=20
+  <!--<![endif]-->=20
+  <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3DUTF-8" =
+/>=20
+  <meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=3D=
+1" />=20
+  <style type=3D"text/css">   #outlook a { padding:0; }   body { width:100%=
+ !important;min-width:100%;margin:0;padding:0;-webkit-text-size-adjust:100%=
+;-ms-text-size-adjust:100%; }   table, td { border-collapse:collapse;mso-ta=
+ble-lspace:0pt;mso-table-rspace:0pt; }   img { border:0;height:auto;line-he=
+ight:100%; outline:none;text-decoration:none;-ms-interpolation-mode:bicubic=
+; }   p { display:block;margin:0px; }   .ReadMsgBody {width: 100%;}   .aym_=
+table_wrap{ width:100% !important; }   #backgroundTable { margin:0;padding:=
+0;width:100% !important;line-height:100% !important; }   .ExternalClass,.Ex=
+ternalClass p,.ExternalClass span,.ExternalClass font,.ExternalClass td,.Ex=
+ternalClass div { line-height:100%; } </style>=20
+  <!--[if mso]> <noscript> <xml> <o:OfficeDocumentSettings>   <o:AllowPNG/>=
+   <o:PixelsPerInch>96</o:PixelsPerInch> </o:OfficeDocumentSettings> </xml>=
+ </noscript> <![endif]-->=20
+  <!--[if lte mso 11]> <style type=3D"text/css">   .rm-outlook-group-fix { =
+width:100% !important; } </style> <![endif]-->=20
+  <!--[if !mso]><!-->=20
+  <link href=3D"https://fonts.googleapis.com/css?family=3DRoboto:300,400,50=
+0,700" rel=3D"stylesheet" type=3D"text/css" />=20
+  <style type=3D"text/css">   @import url(https://fonts.googleapis.com/css?=
+family=3DRoboto:300,400,500,700); </style>=20
+  <!--<![endif]-->=20
+  <style>      .mui-zebra-module {     min-height: 0 !important;   } </styl=
+e>=20
+  <style type=3D"text/css">   @media only screen and (min-width:480px) {   =
+  .rm-column-per-100 {       width: 100% !important;       max-width: 100%;=
+     }     .rm-column-per-50 {       width: 50% !important;       max-width=
+: 50%;     }     .rm-column-per-33 {       width: 33% !important;       max=
+-width: 33%;     }     .rm-column-per-25 {       width: 25% !important;    =
+   max-width: 25%;     }     .rm-column-per-20 {       width: 20% !importan=
+t;       max-width: 20%;     }     .showPC {       display: block !importan=
+t;     }   } </style>=20
+  <style media=3D"screen and (min-width:480px)">   .moz-text-html .rm-colum=
+n-per-100 {     width: 100% !important;     max-width: 100%;   }   .moz-tex=
+t-html .rm-column-per-50 {     width: 50% !important;     max-width: 50%;  =
+ }   .moz-text-html .rm-column-per-33 {     width: 33% !important;     max-=
+width: 33%;   }   .moz-text-html .rm-column-per-20 {     width: 20% !import=
+ant;     max-width: 20%;   }   .moz-text-html .showPC {     display: block =
+!important;   } </style>=20
+  <style type=3D"text/css">   @media only screen and (max-width:480px) {   =
+  table.rm-full-width-mobile {       width: 100% !important;     }     td.r=
+m-full-width-mobile {       width: auto !important;     }   } </style>=20
+  <script src=3D"https://s.alicdn.com/@g/woodpeckerx/jssdk??wpkReporter.js,=
+plugins/flow.js"></script>
+  <script src=3D"https://s.alicdn.com/@g/woodpeckerx/jssdk??wpkReporter.js,=
+plugins/flow.js"></script>
+  <script src=3D"https://s.alicdn.com/@g/woodpeckerx/jssdk??wpkReporter.js,=
+plugins/flow.js"></script>=20
+ </head>=20
+ <body style=3D"word-spacing:normal;background-color:#f2f3f7;">=20
+  <p class=3D"showPC" style=3D"font-size:40px;line-height:40px; display: no=
+ne;">=C2=A0</p>=20
+  <table align=3D"center" cellpadding=3D"0" cellspacing=3D"0" width=3D"640p=
+x" style=3D"width:100%;min-width:350px;max-width:640px;background-color:#ff=
+ffff;">
+   <tbody>
+    <tr>
+     <td> <p style=3D"text-align:right;background-color:#f2f3f7;font-size:1=
+px;line-height:0px;color:#f2f3f7;"> </p>=20
+      <table align=3D"center" cellpadding=3D"0" cellspacing=3D"0" width=3D"=
+100%" style=3D"width:100%;">=20
+       <tbody>=20
+        <tr>=20
+         <td class=3D"rm-module-content-wrapper" style=3D"min-width: 350px;=
+">=20
+          <!--[if mso | IE]><table align=3D"center" border=3D"0" cellpaddin=
+g=3D"0" cellspacing=3D"0" class=3D"" style=3D"width:600px;" width=3D"600" >=
+<tr><td style=3D"line-height:0px;font-size:0px;mso-line-height-rule:exactly=
+;"><![endif]-->
+          <div style=3D"margin: 0px auto; max-width: 600px;">
+           <table cellpadding=3D"0" cellspacing=3D"0" data-border=3D"0" wid=
+th=3D"100%" style=3D"font-size: 0vw; line-height: 0;">
+            <tbody>
+             <tr>
+              <td>
+               <!--[if mso | IE]><table role=3D"presentation" border=3D"0" =
+cellpadding=3D"0" cellspacing=3D"0"><tr><![endif]-->
+               <!--[if mso | IE]><td class=3D"" style=3D"vertical-align:top=
+;width:600px;" ><![endif]-->
+               <div class=3D"rm-column-per-100" style=3D"text-align: left; =
+direction: ltr; display: inline-block; vertical-align: top; width: 100%;">
+                <!--[if mso | ie]><td><![endif]-->
+                <table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" ali=
+gn=3D"left" width=3D"100%">
+                 <tbody>
+                  <tr>
+                   <td style=3D"padding: 20px 10px; text-align: center; wid=
+th: 600px;"><a href=3D"https://www.alibaba.com?tracelog=3Dedm-header&mt=3Dm=
+ail&crm_mtn_tracelog_log_id=3D39582755827&crm_mtn_tracelog_task_id=3Dpush-t=
+ask_39057&crm_mtn_tracelog_template=3D2000114762&crm_mtn_tracelog_from_sys=
+=3Dservice_mobile-messages-service&as_token=3Dis%2BhUNgw6zsU%2BszucwhjNw1%2=
+Bcv4lVR24OZhhzSMd6Dks7dvf&to=3Dazfarali007.aa%40gmail.com&from=3Dmember%40n=
+otice.alibaba.com" style=3D"color: rgb(22, 134, 204); text-decoration: none=
+; font-size: 14px; font-family: Roboto, Helvetica, Tahoma, Arial, =E5=BE=AE=
+=E8=BD=AF=E9=9B=85=E9=BB=91; line-height: 0;"><img width=3D"150" src=3D"htt=
+ps://img.alicdn.com/imgextra/i1/O1CN01egHoeX22AETjfDxgR_!!6000000007079-2-t=
+ps-348-51.png" style=3D"width: 150px; vertical-align: middle;" border=3D"0p=
+x" /></a></td>
+                  </tr>
+                 </tbody>
+                </table>
+                <!--[if mso | ie]></td><![endif]-->
+               </div>
+               <!--[if mso | IE]></td><![endif]-->
+               <!--[if mso | IE]></tr></table><![endif]--></td>
+             </tr>
+            </tbody>
+           </table>
+          </div>
+          <!--[if mso | IE]></td></tr></table><![endif]--> </td>=20
+        </tr>=20
+       </tbody>=20
+      </table>=20
+      <table align=3D"center" cellpadding=3D"0" cellspacing=3D"0" width=3D"=
+100%" style=3D"width:100%;">=20
+       <tbody>=20
+        <tr>=20
+         <td class=3D"rm-module-content-wrapper" style=3D"min-width: 350px;=
+padding:0px 20px;">=20
+          <table cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" data-bo=
+rder=3D"0">
+           <tbody>
+            <tr>
+             <td style=3D"color: rgb(51, 51, 51); font-size: 1px; font-fami=
+ly: Roboto, Helvetica, Tahoma, Arial, =E5=BE=AE=E8=BD=AF=E9=9B=85=E9=BB=91;=
+ line-height: 20px; height: 20px; background-color: rgb(255, 255, 255);">=
+=C2=A0</td>
+            </tr>
+           </tbody>
+          </table> </td>=20
+        </tr>=20
+       </tbody>=20
+      </table>=20
+      <table align=3D"center" cellpadding=3D"0" cellspacing=3D"0" width=3D"=
+100%" style=3D"width:100%;">=20
+       <tbody>=20
+        <tr>=20
+         <td class=3D"rm-module-content-wrapper" style=3D"min-width: 350px;=
+padding:0px 20px;"> <img width=3D"0" src=3D"https://img.alicdn.com/imgextra=
+/i4/O1CN01Tg8J1m1L08OrUBnrk_!!6000000001236-2-tps-639-280.png" alt=3D"Aliba=
+ba.com" style=3D"width: 100%;" border=3D"0px" /> </td>=20
+        </tr>=20
+       </tbody>=20
+      </table>=20
+      <table align=3D"center" cellpadding=3D"0" cellspacing=3D"0" width=3D"=
+100%" style=3D"width:100%;">=20
+       <tbody>=20
+        <tr>=20
+         <td class=3D"rm-module-content-wrapper" style=3D"min-width: 350px;=
+padding:0px 20px;">=20
+          <table cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" data-bo=
+rder=3D"0">
+           <tbody>
+            <tr>
+             <td style=3D"color: rgb(51, 51, 51); font-size: 1px; font-fami=
+ly: Roboto, Helvetica, Tahoma, Arial, =E5=BE=AE=E8=BD=AF=E9=9B=85=E9=BB=91;=
+ line-height: 20px; height: 20px; background-color: rgb(255, 255, 255);">=
+=C2=A0</td>
+            </tr>
+           </tbody>
+          </table> </td>=20
+        </tr>=20
+       </tbody>=20
+      </table>=20
+      <table align=3D"center" cellpadding=3D"0" cellspacing=3D"0" width=3D"=
+100%" style=3D"width:100%;">=20
+       <tbody>=20
+        <tr>=20
+         <td class=3D"rm-module-content-wrapper" style=3D"min-width: 350px;=
+padding:0px 20px;"> <a href=3D"https://tradeassurance.alibaba.com/?wx_navba=
+r_transparent=3Dtrue&tracelog=3Duser&oea_welcome_ta=3Dcategory_with_multi&m=
+t=3Dmail&crm_mtn_tracelog_log_id=3D39582755827&crm_mtn_tracelog_task_id=3Dp=
+ush-task_39057&crm_mtn_tracelog_template=3D2000114762&crm_mtn_tracelog_from=
+_sys=3Dservice_mobile-messages-service&as_token=3Dis%2BhUNgw6zsU%2BszucwhjN=
+w1%2Bcv4lVR24OZhhzSMd6Dks7dvf&to=3Dazfarali007.aa%40gmail.com&from=3Dmember=
+%40notice.alibaba.com" style=3D"color: rgb(22, 134, 204); text-decoration: =
+none; font-size: 14px; font-family: Roboto, Helvetica, Tahoma, Arial, =E5=
+=BE=AE=E8=BD=AF=E9=9B=85=E9=BB=91; line-height: 0;"><img width=3D"0" src=3D=
+"https://img.alicdn.com/imgextra/i2/O1CN01mfo1vL1UDGJ2unryr_!!6000000002483=
+-2-tps-1931-1214.png" alt=3D"Alibaba.com" style=3D"width: 100%;" border=3D"=
+0px" /></a> </td>=20
+        </tr>=20
+       </tbody>=20
+      </table>=20
+      <table align=3D"center" cellpadding=3D"0" cellspacing=3D"0" width=3D"=
+100%" style=3D"width:100%;">=20
+       <tbody>=20
+        <tr>=20
+         <td class=3D"rm-module-content-wrapper" style=3D"min-width: 350px;=
+padding:0px 20px;">=20
+          <table cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" data-bo=
+rder=3D"0">
+           <tbody>
+            <tr>
+             <td style=3D"color: rgb(51, 51, 51); font-size: 1px; font-fami=
+ly: Roboto, Helvetica, Tahoma, Arial, =E5=BE=AE=E8=BD=AF=E9=9B=85=E9=BB=91;=
+ line-height: 20px; height: 20px; background-color: rgb(255, 255, 255);">=
+=C2=A0</td>
+            </tr>
+           </tbody>
+          </table> </td>=20
+        </tr>=20
+       </tbody>=20
+      </table>=20
+      <table align=3D"center" cellpadding=3D"0" cellspacing=3D"0" width=3D"=
+100%" style=3D"width:100%;">=20
+       <tbody>=20
+        <tr>=20
+         <td class=3D"rm-module-content-wrapper" style=3D"min-width: 350px;=
+padding:0px 20px;">=20
+          <table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"=
+width: 100%;">
+           <tbody>
+            <tr>
+             <td>
+              <table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=
+=3D"100%">
+               <tbody>
+                <tr>
+                 <td align=3D"center">
+                  <table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" a=
+lign=3D"center" style=3D"border-collapse: separate; background-color: rgb(2=
+55, 102, 0); border-radius: 20px;">
+                   <tbody>
+                    <tr>
+                     <td><a href=3D"https://www.alibaba.com/?bfa_edmwel_sou=
+rce=3Dcategory_with_multi&mt=3Dmail&crm_mtn_tracelog_log_id=3D39582755827&c=
+rm_mtn_tracelog_task_id=3Dpush-task_39057&crm_mtn_tracelog_template=3D20001=
+14762&crm_mtn_tracelog_from_sys=3Dservice_mobile-messages-service&as_token=
+=3Dis%2BhUNgw6zsU%2BszucwhjNw1%2Bcv4lVR24OZhhzSMd6Dks7dvf&to=3Dazfarali007.=
+aa%40gmail.com&from=3Dmember%40notice.alibaba.com" style=3D"color: rgb(255,=
+ 255, 255); text-decoration: none; font-size: 16px; font-family: Roboto, He=
+lvetica, Tahoma, Arial, =E5=BE=AE=E8=BD=AF=E9=9B=85=E9=BB=91; line-height: =
+14px; padding: 12px 40px; vertical-align: middle; display: inline-block;">S=
+tart sourcing</a></td>
+                    </tr>
+                   </tbody>
+                  </table></td>
+                </tr>
+               </tbody>
+              </table></td>
+            </tr>
+           </tbody>
+          </table> </td>=20
+        </tr>=20
+       </tbody>=20
+      </table>=20
+      <table align=3D"center" cellpadding=3D"0" cellspacing=3D"0" width=3D"=
+100%" style=3D"width:100%;">=20
+       <tbody>=20
+        <tr>=20
+         <td class=3D"rm-module-content-wrapper" style=3D"min-width: 350px;=
+padding:0px 20px;">=20
+          <table cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" data-bo=
+rder=3D"0">
+           <tbody>
+            <tr>
+             <td style=3D"color: rgb(51, 51, 51); font-size: 1px; font-fami=
+ly: Roboto, Helvetica, Tahoma, Arial, =E5=BE=AE=E8=BD=AF=E9=9B=85=E9=BB=91;=
+ line-height: 40px; height: 40px; background-color: rgb(255, 255, 255);">=
+=C2=A0</td>
+            </tr>
+           </tbody>
+          </table> </td>=20
+        </tr>=20
+       </tbody>=20
+      </table>=20
+      <table align=3D"center" cellpadding=3D"0" cellspacing=3D"0" width=3D"=
+100%" style=3D"width:100%;">=20
+       <tbody>=20
+        <tr>=20
+         <td class=3D"rm-module-content-wrapper" style=3D"min-width: 350px;=
+padding:0px 20px;"> <a href=3D"https://baba-blog.com/inside-tips-to-source-=
+on-alibaba/?iela_edm_blog=3Dcategory_with_multi&mt=3Dmail&crm_mtn_tracelog_=
+log_id=3D39582755827&crm_mtn_tracelog_task_id=3Dpush-task_39057&crm_mtn_tra=
+celog_template=3D2000114762&crm_mtn_tracelog_from_sys=3Dservice_mobile-mess=
+ages-service&as_token=3Dis%2BhUNgw6zsU%2BszucwhjNw1%2Bcv4lVR24OZhhzSMd6Dks7=
+dvf&to=3Dazfarali007.aa%40gmail.com&from=3Dmember%40notice.alibaba.com" sty=
+le=3D"color: rgb(22, 134, 204); text-decoration: none; font-size: 14px; fon=
+t-family: Roboto, Helvetica, Tahoma, Arial, =E5=BE=AE=E8=BD=AF=E9=9B=85=E9=
+=BB=91; line-height: 0;"><img width=3D"0" src=3D"https://img.alicdn.com/img=
+extra/i2/O1CN01GCEs8K1GqHQhl5LqI_!!6000000000673-2-tps-1920-1056.png" alt=
+=3D"Alibaba.com" style=3D"width: 100%;" border=3D"0px" /></a> </td>=20
+        </tr>=20
+       </tbody>=20
+      </table>=20
+      <table align=3D"center" cellpadding=3D"0" cellspacing=3D"0" width=3D"=
+100%" style=3D"width:100%;">=20
+       <tbody>=20
+        <tr>=20
+         <td class=3D"rm-module-content-wrapper" style=3D"min-width: 350px;=
+padding:0px 20px;">=20
+          <table cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" data-bo=
+rder=3D"0">
+           <tbody>
+            <tr>
+             <td style=3D"color: rgb(51, 51, 51); font-size: 1px; font-fami=
+ly: Roboto, Helvetica, Tahoma, Arial, =E5=BE=AE=E8=BD=AF=E9=9B=85=E9=BB=91;=
+ line-height: 20px; height: 20px; background-color: rgb(255, 255, 255);">=
+=C2=A0</td>
+            </tr>
+           </tbody>
+          </table> </td>=20
+        </tr>=20
+       </tbody>=20
+      </table>=20
+      <table align=3D"center" cellpadding=3D"0" cellspacing=3D"0" width=3D"=
+100%" style=3D"width:100%;">=20
+       <tbody>=20
+        <tr>=20
+         <td class=3D"rm-module-content-wrapper" style=3D"min-width: 350px;=
+padding:0px 20px;">=20
+          <table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"=
+100%">
+           <tbody>
+            <tr>
+             <td align=3D"center">
+              <table cellpadding=3D"0" cellspacing=3D"0" data-border=3D"0" =
+width=3D"90%">
+               <tbody>
+                <tr>
+                 <td style=3D"color: rgb(51, 51, 51); font-size: 1px; font-=
+family: Roboto, Helvetica, Tahoma, Arial, =E5=BE=AE=E8=BD=AF=E9=9B=85=E9=BB=
+=91; line-height: 1px; background-color: rgb(204, 204, 204);">=C2=A0</td>
+                </tr>
+               </tbody>
+              </table></td>
+            </tr>
+           </tbody>
+          </table>
+          <!--[if mso | IE]><table align=3D"center" border=3D"0" cellpaddin=
+g=3D"0" cellspacing=3D"0" class=3D"" style=3D"width:600px;" width=3D"600" >=
+<tr><td style=3D"line-height:0px;font-size:0px;mso-line-height-rule:exactly=
+;"><![endif]-->
+          <div style=3D"margin: 0px auto; max-width: 640px;">
+           <table cellpadding=3D"0" cellspacing=3D"0" data-border=3D"0" wid=
+th=3D"100%" style=3D"width: 100%; background-color: rgb(255, 255, 255); pad=
+ding-top: 0vw; padding-bottom: 0vw;">
+            <tbody>
+             <tr>
+              <td style=3D"padding: 40px 28px;">
+               <!--[if mso | IE]><table role=3D"presentation" border=3D"0" =
+cellpadding=3D"0" cellspacing=3D"0"><tr><![endif]--><p style=3D"color: rgb(=
+34, 34, 34); font-size: 22px; font-family: Roboto, Helvetica, Tahoma, Arial=
+, =E5=BE=AE=E8=BD=AF=E9=9B=85=E9=BB=91; line-height: 20px; font-weight: 700=
+; text-align: center; margin-bottom: 28px;">Explore popular categories</p>
+               <table cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" da=
+ta-border=3D"0" style=3D"border-collapse: separate;">
+                <tbody>
+                 <tr>
+                  <td style=3D"text-align: center; max-width: 120px;"><a hr=
+ef=3D"https://www.alibaba.com/Consumer-Electronics_p44?spm=3Da2700.product_=
+home_l0.home_header.46.2ce267afbdHShe&yuaedm_wel=3Dcatewith_multi_consumer_=
+eletronics&mt=3Dmail&crm_mtn_tracelog_log_id=3D39582755827&crm_mtn_tracelog=
+_task_id=3Dpush-task_39057&crm_mtn_tracelog_template=3D2000114762&crm_mtn_t=
+racelog_from_sys=3Dservice_mobile-messages-service&as_token=3Dis%2BhUNgw6zs=
+U%2BszucwhjNw1%2Bcv4lVR24OZhhzSMd6Dks7dvf&to=3Dazfarali007.aa%40gmail.com&f=
+rom=3Dmember%40notice.alibaba.com" style=3D"color: rgb(22, 134, 204); text-=
+decoration: none; font-size: 14px; font-family: Roboto, Helvetica, Tahoma, =
+Arial, =E5=BE=AE=E8=BD=AF=E9=9B=85=E9=BB=91; line-height: 0;"><img src=3D"h=
+ttps://img.alicdn.com/imgextra/i3/O1CN01eRA2Ue1xlixDKWgNo_!!6000000006484-2=
+-tps-176-176.png" style=3D"width: 88px; height: 88px; background-color: rgb=
+(244, 244, 244); border-radius: 50%; overflow: hidden; font-size: 0px;" bor=
+der=3D"0px" /></a></td>
+                  <td style=3D"text-align: center; max-width: 120px;"><a hr=
+ef=3D"https://www.alibaba.com/Apparel-Accessories_p3?spm=3Da2700.product_ho=
+me_l0.home_header.47.138b67afq5BsCB&ujaedm_welcome=3Dcatewith_multi_apparel=
+&mt=3Dmail&crm_mtn_tracelog_log_id=3D39582755827&crm_mtn_tracelog_task_id=
+=3Dpush-task_39057&crm_mtn_tracelog_template=3D2000114762&crm_mtn_tracelog_=
+from_sys=3Dservice_mobile-messages-service&as_token=3Dis%2BhUNgw6zsU%2Bszuc=
+whjNw1%2Bcv4lVR24OZhhzSMd6Dks7dvf&to=3Dazfarali007.aa%40gmail.com&from=3Dme=
+mber%40notice.alibaba.com" style=3D"color: rgb(22, 134, 204); text-decorati=
+on: none; font-size: 14px; font-family: Roboto, Helvetica, Tahoma, Arial, =
+=E5=BE=AE=E8=BD=AF=E9=9B=85=E9=BB=91; line-height: 0;"><img src=3D"https://=
+img.alicdn.com/imgextra/i2/O1CN012BU46I1ky0ZTVKngI_!!6000000004751-2-tps-17=
+6-176.png" style=3D"width: 88px; height: 88px; background-color: rgb(244, 2=
+44, 244); border-radius: 50%; overflow: hidden; font-size: 0px;" border=3D"=
+0px" /></a></td>
+                  <td style=3D"text-align: center; max-width: 120px;"><a hr=
+ef=3D"https://www.alibaba.com/Vehicle-Parts-Accessories_p34?spm=3Da2700.pro=
+duct_home_l0.home_header.53.30e667afIefukw&eopedm_welcome=3Dcatewith_multi_=
+vehicles&mt=3Dmail&crm_mtn_tracelog_log_id=3D39582755827&crm_mtn_tracelog_t=
+ask_id=3Dpush-task_39057&crm_mtn_tracelog_template=3D2000114762&crm_mtn_tra=
+celog_from_sys=3Dservice_mobile-messages-service&as_token=3Dis%2BhUNgw6zsU%=
+2BszucwhjNw1%2Bcv4lVR24OZhhzSMd6Dks7dvf&to=3Dazfarali007.aa%40gmail.com&fro=
+m=3Dmember%40notice.alibaba.com" style=3D"color: rgb(22, 134, 204); text-de=
+coration: none; font-size: 14px; font-family: Roboto, Helvetica, Tahoma, Ar=
+ial, =E5=BE=AE=E8=BD=AF=E9=9B=85=E9=BB=91; line-height: 0;"><img src=3D"htt=
+ps://img.alicdn.com/imgextra/i1/O1CN01mdJTXV24jcRTVQqrl_!!6000000007427-2-t=
+ps-176-176.png" style=3D"width: 88px; height: 88px; background-color: rgb(2=
+44, 244, 244); border-radius: 50%; overflow: hidden; font-size: 0px;" borde=
+r=3D"0px" /></a></td>
+                  <td style=3D"text-align: center; max-width: 120px;"><a hr=
+ef=3D"https://www.alibaba.com/Sports-Entertainment_p18?spm=3Da2700.product_=
+home_l0.home_header.47.6da067afZvbEiC&hdybedm_welcome=3Dcatewith_multi_spor=
+ts&mt=3Dmail&crm_mtn_tracelog_log_id=3D39582755827&crm_mtn_tracelog_task_id=
+=3Dpush-task_39057&crm_mtn_tracelog_template=3D2000114762&crm_mtn_tracelog_=
+from_sys=3Dservice_mobile-messages-service&as_token=3Dis%2BhUNgw6zsU%2Bszuc=
+whjNw1%2Bcv4lVR24OZhhzSMd6Dks7dvf&to=3Dazfarali007.aa%40gmail.com&from=3Dme=
+mber%40notice.alibaba.com" style=3D"color: rgb(22, 134, 204); text-decorati=
+on: none; font-size: 14px; font-family: Roboto, Helvetica, Tahoma, Arial, =
+=E5=BE=AE=E8=BD=AF=E9=9B=85=E9=BB=91; line-height: 0;"><img src=3D"https://=
+img.alicdn.com/imgextra/i3/O1CN01WtZswq1DXYNKUv4lt_!!6000000000226-2-tps-17=
+6-176.png" style=3D"width: 88px; height: 88px; background-color: rgb(244, 2=
+44, 244); border-radius: 50%; overflow: hidden; font-size: 0px;" border=3D"=
+0px" /></a></td>
+                 </tr>
+                 <tr>
+                  <td style=3D"text-align: center; max-width: 120px; vertic=
+al-align: top;"><a href=3D"https://www.alibaba.com/Consumer-Electronics_p44=
+?spm=3Da2700.product_home_l0.home_header.46.2ce267afbdHShe&yuaedm_wel=3Dcat=
+ewith_multi_consumer_eletronics&mt=3Dmail&crm_mtn_tracelog_log_id=3D3958275=
+5827&crm_mtn_tracelog_task_id=3Dpush-task_39057&crm_mtn_tracelog_template=
+=3D2000114762&crm_mtn_tracelog_from_sys=3Dservice_mobile-messages-service&a=
+s_token=3Dis%2BhUNgw6zsU%2BszucwhjNw1%2Bcv4lVR24OZhhzSMd6Dks7dvf&to=3Dazfar=
+ali007.aa%40gmail.com&from=3Dmember%40notice.alibaba.com" style=3D"text-dec=
+oration: none;"><p style=3D"color: rgb(118, 118, 118); font-size: 13px; fon=
+t-family: Roboto, Helvetica, Tahoma, Arial, =E5=BE=AE=E8=BD=AF=E9=9B=85=E9=
+=BB=91; line-height: 15px; margin-top: 8px; margin-bottom: 28px;">Consumer =
+Electronics</p></a></td>
+                  <td style=3D"text-align: center; max-width: 120px; vertic=
+al-align: top;"><a href=3D"https://www.alibaba.com/Apparel-Accessories_p3?s=
+pm=3Da2700.product_home_l0.home_header.47.138b67afq5BsCB&ujaedm_welcome=3Dc=
+atewith_multi_apparel&mt=3Dmail&crm_mtn_tracelog_log_id=3D39582755827&crm_m=
+tn_tracelog_task_id=3Dpush-task_39057&crm_mtn_tracelog_template=3D200011476=
+2&crm_mtn_tracelog_from_sys=3Dservice_mobile-messages-service&as_token=3Dis=
+%2BhUNgw6zsU%2BszucwhjNw1%2Bcv4lVR24OZhhzSMd6Dks7dvf&to=3Dazfarali007.aa%40=
+gmail.com&from=3Dmember%40notice.alibaba.com" style=3D"text-decoration: non=
+e;"><p style=3D"color: rgb(118, 118, 118); font-size: 13px; font-family: Ro=
+boto, Helvetica, Tahoma, Arial, =E5=BE=AE=E8=BD=AF=E9=9B=85=E9=BB=91; line-=
+height: 15px; margin-top: 8px; margin-bottom: 28px;">Apparel</p></a></td>
+                  <td style=3D"text-align: center; max-width: 120px; vertic=
+al-align: top;"><a href=3D"https://www.alibaba.com/Vehicle-Parts-Accessorie=
+s_p34?spm=3Da2700.product_home_l0.home_header.53.30e667afIefukw&eopedm_welc=
+ome=3Dcatewith_multi_vehicles&mt=3Dmail&crm_mtn_tracelog_log_id=3D395827558=
+27&crm_mtn_tracelog_task_id=3Dpush-task_39057&crm_mtn_tracelog_template=3D2=
+000114762&crm_mtn_tracelog_from_sys=3Dservice_mobile-messages-service&as_to=
+ken=3Dis%2BhUNgw6zsU%2BszucwhjNw1%2Bcv4lVR24OZhhzSMd6Dks7dvf&to=3Dazfarali0=
+07.aa%40gmail.com&from=3Dmember%40notice.alibaba.com" style=3D"text-decorat=
+ion: none;"><p style=3D"color: rgb(118, 118, 118); font-size: 13px; font-fa=
+mily: Roboto, Helvetica, Tahoma, Arial, =E5=BE=AE=E8=BD=AF=E9=9B=85=E9=BB=
+=91; line-height: 15px; margin-top: 8px; margin-bottom: 28px;">Vehicles & A=
+ccessories</p></a></td>
+                  <td style=3D"text-align: center; max-width: 120px; vertic=
+al-align: top;"><a href=3D"https://www.alibaba.com/Sports-Entertainment_p18=
+?spm=3Da2700.product_home_l0.home_header.47.6da067afZvbEiC&hdybedm_welcome=
+=3Dcatewith_multi_sports&mt=3Dmail&crm_mtn_tracelog_log_id=3D39582755827&cr=
+m_mtn_tracelog_task_id=3Dpush-task_39057&crm_mtn_tracelog_template=3D200011=
+4762&crm_mtn_tracelog_from_sys=3Dservice_mobile-messages-service&as_token=
+=3Dis%2BhUNgw6zsU%2BszucwhjNw1%2Bcv4lVR24OZhhzSMd6Dks7dvf&to=3Dazfarali007.=
+aa%40gmail.com&from=3Dmember%40notice.alibaba.com" style=3D"text-decoration=
+: none;"><p style=3D"color: rgb(118, 118, 118); font-size: 13px; font-famil=
+y: Roboto, Helvetica, Tahoma, Arial, =E5=BE=AE=E8=BD=AF=E9=9B=85=E9=BB=91; =
+line-height: 15px; margin-top: 8px; margin-bottom: 28px;">Sports & Entertai=
+nment</p></a></td>
+                 </tr>
+                 <tr>
+                  <td style=3D"text-align: center; max-width: 120px;"><a hr=
+ef=3D"https://www.alibaba.com/Industrial-Machinery_p43?spm=3Da2700.product_=
+home_l0.home_header.48.6da067afZvbEiC&banwaedm_welcome=3Dcatewith_multi_mac=
+hinery&mt=3Dmail&crm_mtn_tracelog_log_id=3D39582755827&crm_mtn_tracelog_tas=
+k_id=3Dpush-task_39057&crm_mtn_tracelog_template=3D2000114762&crm_mtn_trace=
+log_from_sys=3Dservice_mobile-messages-service&as_token=3Dis%2BhUNgw6zsU%2B=
+szucwhjNw1%2Bcv4lVR24OZhhzSMd6Dks7dvf&to=3Dazfarali007.aa%40gmail.com&from=
+=3Dmember%40notice.alibaba.com" style=3D"color: rgb(22, 134, 204); text-dec=
+oration: none; font-size: 14px; font-family: Roboto, Helvetica, Tahoma, Ari=
+al, =E5=BE=AE=E8=BD=AF=E9=9B=85=E9=BB=91; line-height: 0;"><img src=3D"http=
+s://img.alicdn.com/imgextra/i4/O1CN01DtL04H1Uek3fo26kX_!!6000000002543-2-tp=
+s-176-176.png" style=3D"width: 88px; height: 88px; background-color: rgb(24=
+4, 244, 244); border-radius: 50%; overflow: hidden; font-size: 0px;" border=
+=3D"0px" /></a></td>
+                  <td style=3D"text-align: center; max-width: 120px;"><a hr=
+ef=3D"https://www.alibaba.com/Home-Garden_p15?spm=3Da2700.product_home_l0.h=
+ome_header.116.2ce267afbdHShe&pwaedm_welcome=3Dcatewith_multi_homegarden&mt=
+=3Dmail&crm_mtn_tracelog_log_id=3D39582755827&crm_mtn_tracelog_task_id=3Dpu=
+sh-task_39057&crm_mtn_tracelog_template=3D2000114762&crm_mtn_tracelog_from_=
+sys=3Dservice_mobile-messages-service&as_token=3Dis%2BhUNgw6zsU%2BszucwhjNw=
+1%2Bcv4lVR24OZhhzSMd6Dks7dvf&to=3Dazfarali007.aa%40gmail.com&from=3Dmember%=
+40notice.alibaba.com" style=3D"color: rgb(22, 134, 204); text-decoration: n=
+one; font-size: 14px; font-family: Roboto, Helvetica, Tahoma, Arial, =E5=BE=
+=AE=E8=BD=AF=E9=9B=85=E9=BB=91; line-height: 0;"><img src=3D"https://img.al=
+icdn.com/imgextra/i2/O1CN01FFwPf823qeum6hoaE_!!6000000007307-2-tps-176-176.=
+png" style=3D"width: 88px; height: 88px; background-color: rgb(244, 244, 24=
+4); border-radius: 50%; overflow: hidden; font-size: 0px;" border=3D"0px" /=
+></a></td>
+                  <td style=3D"text-align: center; max-width: 120px;"><a hr=
+ef=3D"https://www.alibaba.com/Beauty_p66?spm=3Da2700.product_home_l0.home_h=
+eader.49.2ce267afpweRDm&nmaedm_welcome=3Dcatewith_multi_beauty&mt=3Dmail&cr=
+m_mtn_tracelog_log_id=3D39582755827&crm_mtn_tracelog_task_id=3Dpush-task_39=
+057&crm_mtn_tracelog_template=3D2000114762&crm_mtn_tracelog_from_sys=3Dserv=
+ice_mobile-messages-service&as_token=3Dis%2BhUNgw6zsU%2BszucwhjNw1%2Bcv4lVR=
+24OZhhzSMd6Dks7dvf&to=3Dazfarali007.aa%40gmail.com&from=3Dmember%40notice.a=
+libaba.com" style=3D"color: rgb(22, 134, 204); text-decoration: none; font-=
+size: 14px; font-family: Roboto, Helvetica, Tahoma, Arial, =E5=BE=AE=E8=BD=
+=AF=E9=9B=85=E9=BB=91; line-height: 0;"><img src=3D"https://img.alicdn.com/=
+imgextra/i4/O1CN01qOSuNW26a7SYbrtyb_!!6000000007677-2-tps-176-176.png" styl=
+e=3D"width: 88px; height: 88px; background-color: rgb(244, 244, 244); borde=
+r-radius: 50%; overflow: hidden; font-size: 0px;" border=3D"0px" /></a></td=
+>
+                  <td style=3D"text-align: center; max-width: 120px;"><a hr=
+ef=3D"https://m-sale.alibaba.com/category/products/index.html?wx_navbar_tra=
+nsparent=3Dtrue&path=3D/category/products/index.html&ncms_spm=3Da27aq.cp_te=
+mplate&prefetchKey=3Dallcategoriesv2&awqedm_welcome=3Dcatewith_multi_mycate=
+gories&mt=3Dmail&crm_mtn_tracelog_log_id=3D39582755827&crm_mtn_tracelog_tas=
+k_id=3Dpush-task_39057&crm_mtn_tracelog_template=3D2000114762&crm_mtn_trace=
+log_from_sys=3Dservice_mobile-messages-service&as_token=3Dis%2BhUNgw6zsU%2B=
+szucwhjNw1%2Bcv4lVR24OZhhzSMd6Dks7dvf&to=3Dazfarali007.aa%40gmail.com&from=
+=3Dmember%40notice.alibaba.com" style=3D"color: rgb(22, 134, 204); text-dec=
+oration: none; font-size: 14px; font-family: Roboto, Helvetica, Tahoma, Ari=
+al, =E5=BE=AE=E8=BD=AF=E9=9B=85=E9=BB=91; line-height: 0;"><img src=3D"http=
+s://img.alicdn.com/imgextra/i1/O1CN01sLnvTl2187AAhBHOp_!!6000000006939-2-tp=
+s-176-176.png" style=3D"width: 88px; height: 88px; background-color: rgb(24=
+4, 244, 244); border-radius: 50%; overflow: hidden; font-size: 0px;" border=
+=3D"0px" /></a></td>
+                 </tr>
+                 <tr>
+                  <td style=3D"text-align: center; max-width: 120px; vertic=
+al-align: top;"><a href=3D"https://www.alibaba.com/Industrial-Machinery_p43=
+?spm=3Da2700.product_home_l0.home_header.48.6da067afZvbEiC&banwaedm_welcome=
+=3Dcatewith_multi_machinery&mt=3Dmail&crm_mtn_tracelog_log_id=3D39582755827=
+&crm_mtn_tracelog_task_id=3Dpush-task_39057&crm_mtn_tracelog_template=3D200=
+0114762&crm_mtn_tracelog_from_sys=3Dservice_mobile-messages-service&as_toke=
+n=3Dis%2BhUNgw6zsU%2BszucwhjNw1%2Bcv4lVR24OZhhzSMd6Dks7dvf&to=3Dazfarali007=
+.aa%40gmail.com&from=3Dmember%40notice.alibaba.com" style=3D"text-decoratio=
+n: none;"><p style=3D"color: rgb(118, 118, 118); font-size: 13px; font-fami=
+ly: Roboto, Helvetica, Tahoma, Arial, =E5=BE=AE=E8=BD=AF=E9=9B=85=E9=BB=91;=
+ line-height: 15px; margin-top: 8px;">Industrial Machinery</p></a></td>
+                  <td style=3D"text-align: center; max-width: 120px; vertic=
+al-align: top;"><a href=3D"https://www.alibaba.com/Home-Garden_p15?spm=3Da2=
+700.product_home_l0.home_header.116.2ce267afbdHShe&pwaedm_welcome=3Dcatewit=
+h_multi_homegarden&mt=3Dmail&crm_mtn_tracelog_log_id=3D39582755827&crm_mtn_=
+tracelog_task_id=3Dpush-task_39057&crm_mtn_tracelog_template=3D2000114762&c=
+rm_mtn_tracelog_from_sys=3Dservice_mobile-messages-service&as_token=3Dis%2B=
+hUNgw6zsU%2BszucwhjNw1%2Bcv4lVR24OZhhzSMd6Dks7dvf&to=3Dazfarali007.aa%40gma=
+il.com&from=3Dmember%40notice.alibaba.com" style=3D"text-decoration: none;"=
+><p style=3D"color: rgb(118, 118, 118); font-size: 13px; font-family: Robot=
+o, Helvetica, Tahoma, Arial, =E5=BE=AE=E8=BD=AF=E9=9B=85=E9=BB=91; line-hei=
+ght: 15px; margin-top: 8px;">Home & Garden</p></a></td>
+                  <td style=3D"text-align: center; max-width: 120px; vertic=
+al-align: top;"><a href=3D"https://www.alibaba.com/Beauty_p66?spm=3Da2700.p=
+roduct_home_l0.home_header.49.2ce267afpweRDm&nmaedm_welcome=3Dcatewith_mult=
+i_beauty&mt=3Dmail&crm_mtn_tracelog_log_id=3D39582755827&crm_mtn_tracelog_t=
+ask_id=3Dpush-task_39057&crm_mtn_tracelog_template=3D2000114762&crm_mtn_tra=
+celog_from_sys=3Dservice_mobile-messages-service&as_token=3Dis%2BhUNgw6zsU%=
+2BszucwhjNw1%2Bcv4lVR24OZhhzSMd6Dks7dvf&to=3Dazfarali007.aa%40gmail.com&fro=
+m=3Dmember%40notice.alibaba.com" style=3D"text-decoration: none;"><p style=
+=3D"color: rgb(118, 118, 118); font-size: 13px; font-family: Roboto, Helvet=
+ica, Tahoma, Arial, =E5=BE=AE=E8=BD=AF=E9=9B=85=E9=BB=91; line-height: 15px=
+; margin-top: 8px;">Beauty</p></a></td>
+                  <td style=3D"text-align: center; max-width: 120px; vertic=
+al-align: top;"><a href=3D"https://m-sale.alibaba.com/category/products/ind=
+ex.html?wx_navbar_transparent=3Dtrue&path=3D/category/products/index.html&n=
+cms_spm=3Da27aq.cp_template&prefetchKey=3Dallcategoriesv2&awqedm_welcome=3D=
+catewith_multi_mycategories&mt=3Dmail&crm_mtn_tracelog_log_id=3D39582755827=
+&crm_mtn_tracelog_task_id=3Dpush-task_39057&crm_mtn_tracelog_template=3D200=
+0114762&crm_mtn_tracelog_from_sys=3Dservice_mobile-messages-service&as_toke=
+n=3Dis%2BhUNgw6zsU%2BszucwhjNw1%2Bcv4lVR24OZhhzSMd6Dks7dvf&to=3Dazfarali007=
+.aa%40gmail.com&from=3Dmember%40notice.alibaba.com" style=3D"text-decoratio=
+n: none;"><p style=3D"color: rgb(118, 118, 118); font-size: 13px; font-fami=
+ly: Roboto, Helvetica, Tahoma, Arial, =E5=BE=AE=E8=BD=AF=E9=9B=85=E9=BB=91;=
+ line-height: 15px; margin-top: 8px;">All categories</p></a></td>
+                 </tr>
+                </tbody>
+               </table>
+               <!--[if mso | IE]></tr></table><![endif]--></td>
+             </tr>
+            </tbody>
+           </table>
+          </div>
+          <!--[if mso | IE]></td></tr></table><![endif]--> </td>=20
+        </tr>=20
+       </tbody>=20
+      </table>=20
+      <table align=3D"center" cellpadding=3D"0" cellspacing=3D"0" width=3D"=
+100%" style=3D"width:100%;">=20
+       <tbody>=20
+        <tr>=20
+         <td class=3D"rm-module-content-wrapper" style=3D"min-width: 350px;=
+padding:0px 20px;">=20
+          <table cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" data-bo=
+rder=3D"0">
+           <tbody>
+            <tr>
+             <td style=3D"color: rgb(51, 51, 51); font-size: 1px; font-fami=
+ly: Roboto, Helvetica, Tahoma, Arial, =E5=BE=AE=E8=BD=AF=E9=9B=85=E9=BB=91;=
+ line-height: 20px; height: 20px; background-color: rgb(255, 255, 255);">=
+=C2=A0</td>
+            </tr>
+           </tbody>
+          </table> </td>=20
+        </tr>=20
+       </tbody>=20
+      </table>=20
+      <table align=3D"center" cellpadding=3D"0" cellspacing=3D"0" width=3D"=
+100%" style=3D"width:100%;">=20
+       <tbody>=20
+        <tr>=20
+         <td class=3D"rm-module-content-wrapper" style=3D"min-width: 350px;=
+">=20
+          <!--[if mso | IE]><table align=3D"center" border=3D"0" cellpaddin=
+g=3D"0" cellspacing=3D"0" class=3D"" style=3D"width:600px;" width=3D"600" >=
+<tr><td style=3D"line-height:0px;font-size:0px;mso-line-height-rule:exactly=
+;"><![endif]-->
+          <div style=3D"margin: 0px auto; max-width: 640px;">
+           <table cellpadding=3D"0" cellspacing=3D"0" data-border=3D"0" wid=
+th=3D"100%" style=3D"width: 100%; padding: 0vw 30px; background-color: rgb(=
+242, 243, 247);">
+            <tbody>
+             <tr>
+              <td style=3D"padding: 40px 40px 0px;">
+               <!--[if mso | IE]><table role=3D"presentation" border=3D"0" =
+cellpadding=3D"0" cellspacing=3D"0"><tr><![endif]-->
+               <div style=3D"min-width: 380px;">
+                <table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" ali=
+gn=3D"center">
+                 <tbody>
+                  <tr>
+                   <td><span style=3D"color: rgb(51, 51, 51); font-size: 11=
+px; font-family: Roboto, Helvetica, Tahoma, Arial, =E5=BE=AE=E8=BD=AF=E9=9B=
+=85=E9=BB=91; line-height: 20px; font-weight: bold;">Download the Alibaba.c=
+om App</span><a href=3D"https://apps.apple.com/us/app/alibaba-for-iphone/id=
+503451073?spm=3Da271h.11855717.j00nmtnb.3.949d3103lIeOOe&?uge_tracelog=3Ded=
+m_footer_appstore&mt=3Dmail&crm_mtn_tracelog_log_id=3D39582755827&crm_mtn_t=
+racelog_task_id=3Dpush-task_39057&crm_mtn_tracelog_template=3D2000114762&cr=
+m_mtn_tracelog_from_sys=3Dservice_mobile-messages-service&as_token=3Dis%2Bh=
+UNgw6zsU%2BszucwhjNw1%2Bcv4lVR24OZhhzSMd6Dks7dvf&to=3Dazfarali007.aa%40gmai=
+l.com&from=3Dmember%40notice.alibaba.com" style=3D"color: rgb(22, 134, 204)=
+; text-decoration: none; font-size: 14px; font-family: Roboto, Helvetica, T=
+ahoma, Arial, =E5=BE=AE=E8=BD=AF=E9=9B=85=E9=BB=91; line-height: 0;"><img s=
+rc=3D"https://img.alicdn.com/imgextra/i4/O1CN0190rChH1yIF4nbnTVC_!!60000000=
+06555-2-tps-264-84.png" style=3D"width: 86px; height: 28px; padding: 0px 20=
+px; font-size: 0px; vertical-align: middle;" border=3D"0px" /></a><a href=
+=3D"https://play.google.com/store/apps/details?spm=3Da271h.11855717.j00nmtn=
+b.4.949d3103lIeOOe&id=3Dcom.alibaba.intl.android.apps.poseidon&referrer=3Dp=
+cmaindownload?uge_tracelog=3Dedm_footer_googleplay&mt=3Dmail&crm_mtn_tracel=
+og_log_id=3D39582755827&crm_mtn_tracelog_task_id=3Dpush-task_39057&crm_mtn_=
+tracelog_template=3D2000114762&crm_mtn_tracelog_from_sys=3Dservice_mobile-m=
+essages-service&as_token=3Dis%2BhUNgw6zsU%2BszucwhjNw1%2Bcv4lVR24OZhhzSMd6D=
+ks7dvf&to=3Dazfarali007.aa%40gmail.com&from=3Dmember%40notice.alibaba.com" =
+style=3D"color: rgb(22, 134, 204); text-decoration: none; font-size: 14px; =
+font-family: Roboto, Helvetica, Tahoma, Arial, =E5=BE=AE=E8=BD=AF=E9=9B=85=
+=E9=BB=91; line-height: 0;"><img src=3D"https://img.alicdn.com/imgextra/i1/=
+O1CN01TKsmyb1uNVA5rimWT_!!6000000006025-2-tps-258-84.png" style=3D"width: 8=
+6px; height: 28px; font-size: 0px; vertical-align: middle;" border=3D"0px" =
+/></a></td>
+                  </tr>
+                 </tbody>
+                </table>
+                <table cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" d=
+ata-border=3D"0">
+                 <tbody>
+                  <tr>
+                   <td style=3D"color: rgb(51, 51, 51); font-size: 1px; fon=
+t-family: Roboto, Helvetica, Tahoma, Arial, =E5=BE=AE=E8=BD=AF=E9=9B=85=E9=
+=BB=91; line-height: 20px; height: 20px;">=C2=A0</td>
+                  </tr>
+                 </tbody>
+                </table>
+                <table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" ali=
+gn=3D"center">
+                 <tbody>
+                  <tr>
+                   <td><a href=3D"https://www.facebook.com/Alibaba.comGloba=
+l?tracelog=3Dedm_footer_facebook&mt=3Dmail&crm_mtn_tracelog_log_id=3D395827=
+55827&crm_mtn_tracelog_task_id=3Dpush-task_39057&crm_mtn_tracelog_template=
+=3D2000114762&crm_mtn_tracelog_from_sys=3Dservice_mobile-messages-service&a=
+s_token=3Dis%2BhUNgw6zsU%2BszucwhjNw1%2Bcv4lVR24OZhhzSMd6Dks7dvf&to=3Dazfar=
+ali007.aa%40gmail.com&from=3Dmember%40notice.alibaba.com" style=3D"color: r=
+gb(51, 51, 51); text-decoration: underline; font-size: 14px; font-family: R=
+oboto, Helvetica, Tahoma, Arial, =E5=BE=AE=E8=BD=AF=E9=9B=85=E9=BB=91; line=
+-height: 20px;"><img width=3D"36" src=3D"https://img.alicdn.com/imgextra/i2=
+/O1CN01jle56A1kzq9jUdfNT_!!6000000004755-2-tps-114-114.png" style=3D"width:=
+ 36px; padding-left: 8px; padding-right: 5px; box-sizing: content-box; vert=
+ical-align: sub;" border=3D"0px" /></a><a href=3D"https://twitter.com/Aliba=
+baB2B?tracelog=3Dedm_footer_twitter&mt=3Dmail&crm_mtn_tracelog_log_id=3D395=
+82755827&crm_mtn_tracelog_task_id=3Dpush-task_39057&crm_mtn_tracelog_templa=
+te=3D2000114762&crm_mtn_tracelog_from_sys=3Dservice_mobile-messages-service=
+&as_token=3Dis%2BhUNgw6zsU%2BszucwhjNw1%2Bcv4lVR24OZhhzSMd6Dks7dvf&to=3Dazf=
+arali007.aa%40gmail.com&from=3Dmember%40notice.alibaba.com" style=3D"color:=
+ rgb(51, 51, 51); text-decoration: underline; font-size: 14px; font-family:=
+ Roboto, Helvetica, Tahoma, Arial, =E5=BE=AE=E8=BD=AF=E9=9B=85=E9=BB=91; li=
+ne-height: 20px;"><img width=3D"36" src=3D"https://img.alicdn.com/imgextra/=
+i1/O1CN01iBKpmg20cVpshErkl_!!6000000006870-2-tps-114-114.png" style=3D"widt=
+h: 36px; padding-left: 8px; padding-right: 5px; box-sizing: content-box; ve=
+rtical-align: sub;" border=3D"0px" /></a><a href=3D"https://www.youtube.com=
+/channel/UCSoIxtP6J6oNo_d1njSluxw?tracelog=3Dedm_footer_youtube&mt=3Dmail&c=
+rm_mtn_tracelog_log_id=3D39582755827&crm_mtn_tracelog_task_id=3Dpush-task_3=
+9057&crm_mtn_tracelog_template=3D2000114762&crm_mtn_tracelog_from_sys=3Dser=
+vice_mobile-messages-service&as_token=3Dis%2BhUNgw6zsU%2BszucwhjNw1%2Bcv4lV=
+R24OZhhzSMd6Dks7dvf&to=3Dazfarali007.aa%40gmail.com&from=3Dmember%40notice.=
+alibaba.com" style=3D"color: rgb(51, 51, 51); text-decoration: underline; f=
+ont-size: 14px; font-family: Roboto, Helvetica, Tahoma, Arial, =E5=BE=AE=E8=
+=BD=AF=E9=9B=85=E9=BB=91; line-height: 20px;"><img width=3D"36" src=3D"http=
+s://img.alicdn.com/imgextra/i4/O1CN01i2LT0r1pWawgwc6Rz_!!6000000005368-2-tp=
+s-114-114.png" style=3D"width: 36px; padding-left: 8px; padding-right: 5px;=
+ box-sizing: content-box; vertical-align: sub;" border=3D"0px" /></a><a hre=
+f=3D"https://www.instagram.com/alibaba.com_official?tracelog=3Dedm_footer_i=
+nstagram&mt=3Dmail&crm_mtn_tracelog_log_id=3D39582755827&crm_mtn_tracelog_t=
+ask_id=3Dpush-task_39057&crm_mtn_tracelog_template=3D2000114762&crm_mtn_tra=
+celog_from_sys=3Dservice_mobile-messages-service&as_token=3Dis%2BhUNgw6zsU%=
+2BszucwhjNw1%2Bcv4lVR24OZhhzSMd6Dks7dvf&to=3Dazfarali007.aa%40gmail.com&fro=
+m=3Dmember%40notice.alibaba.com" style=3D"color: rgb(51, 51, 51); text-deco=
+ration: underline; font-size: 14px; font-family: Roboto, Helvetica, Tahoma,=
+ Arial, =E5=BE=AE=E8=BD=AF=E9=9B=85=E9=BB=91; line-height: 20px;"><img widt=
+h=3D"36" src=3D"https://img.alicdn.com/imgextra/i1/O1CN01xLrsa11jAFvuNTXkJ_=
+!!6000000004507-2-tps-114-114.png" style=3D"width: 36px; padding-left: 8px;=
+ padding-right: 5px; box-sizing: content-box; vertical-align: sub;" border=
+=3D"0px" /></a><a href=3D"https://www.linkedin.com/company/alibaba-com?trac=
+elog=3Dedm_footer_linkin&mt=3Dmail&crm_mtn_tracelog_log_id=3D39582755827&cr=
+m_mtn_tracelog_task_id=3Dpush-task_39057&crm_mtn_tracelog_template=3D200011=
+4762&crm_mtn_tracelog_from_sys=3Dservice_mobile-messages-service&as_token=
+=3Dis%2BhUNgw6zsU%2BszucwhjNw1%2Bcv4lVR24OZhhzSMd6Dks7dvf&to=3Dazfarali007.=
+aa%40gmail.com&from=3Dmember%40notice.alibaba.com" style=3D"color: rgb(51, =
+51, 51); text-decoration: underline; font-size: 14px; font-family: Roboto, =
+Helvetica, Tahoma, Arial, =E5=BE=AE=E8=BD=AF=E9=9B=85=E9=BB=91; line-height=
+: 20px;"><img width=3D"36" src=3D"https://img.alicdn.com/imgextra/i2/O1CN01=
+bzna5T1QMdwlF2imZ_!!6000000001962-2-tps-114-114.png" style=3D"width: 36px; =
+padding-left: 8px; padding-right: 5px; box-sizing: content-box; vertical-al=
+ign: sub;" border=3D"0px" /></a></td>
+                  </tr>
+                 </tbody>
+                </table>
+                <table cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" d=
+ata-border=3D"0">
+                 <tbody>
+                  <tr>
+                   <td style=3D"color: rgb(51, 51, 51); font-size: 1px; fon=
+t-family: Roboto, Helvetica, Tahoma, Arial, =E5=BE=AE=E8=BD=AF=E9=9B=85=E9=
+=BB=91; line-height: 20px; height: 20px;">=C2=A0</td>
+                  </tr>
+                 </tbody>
+                </table>
+                <table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" ali=
+gn=3D"center">
+                 <tbody>
+                  <tr>
+                   <td style=3D"text-align: center;"><a href=3D"https://ser=
+vice.alibaba.com/page/home?spm=3Da2700.product_home_l0.home_header.3.2ce267=
+afTPl4HE&pageId=3D122&language=3Den&mt=3Dmail&crm_mtn_tracelog_log_id=3D395=
+82755827&crm_mtn_tracelog_task_id=3Dpush-task_39057&crm_mtn_tracelog_templa=
+te=3D2000114762&crm_mtn_tracelog_from_sys=3Dservice_mobile-messages-service=
+&as_token=3Dis%2BhUNgw6zsU%2BszucwhjNw1%2Bcv4lVR24OZhhzSMd6Dks7dvf&to=3Dazf=
+arali007.aa%40gmail.com&from=3Dmember%40notice.alibaba.com" style=3D"color:=
+ rgb(51, 51, 51); text-decoration: none; font-size: 12px; font-family: Robo=
+to, Helvetica, Tahoma, Arial, =E5=BE=AE=E8=BD=AF=E9=9B=85=E9=BB=91; line-he=
+ight: 20px;">Help Center</a><span style=3D"color: rgb(51, 51, 51); font-siz=
+e: 14px; font-family: Roboto, Helvetica, Tahoma, Arial, =E5=BE=AE=E8=BD=AF=
+=E9=9B=85=E9=BB=91; line-height: 20px;">=C2=A0=C2=A0=C2=A0|=C2=A0=C2=A0=C2=
+=A0</span><a href=3D"https://baba-blog.com/?spm=3Da2700.product_home_l0.0.0=
+.2ce234aa4XOiDD&tracelog=3Dfooter_alibabablog?uwe_tracelog=3Dedm_footer_bab=
+ablog&mt=3Dmail&crm_mtn_tracelog_log_id=3D39582755827&crm_mtn_tracelog_task=
+_id=3Dpush-task_39057&crm_mtn_tracelog_template=3D2000114762&crm_mtn_tracel=
+og_from_sys=3Dservice_mobile-messages-service&as_token=3Dis%2BhUNgw6zsU%2Bs=
+zucwhjNw1%2Bcv4lVR24OZhhzSMd6Dks7dvf&to=3Dazfarali007.aa%40gmail.com&from=
+=3Dmember%40notice.alibaba.com" style=3D"color: rgb(51, 51, 51); text-decor=
+ation: none; font-size: 12px; font-family: Roboto, Helvetica, Tahoma, Arial=
+, =E5=BE=AE=E8=BD=AF=E9=9B=85=E9=BB=91; line-height: 20px;">Blog</a><span s=
+tyle=3D"color: rgb(51, 51, 51); font-size: 14px; font-family: Roboto, Helve=
+tica, Tahoma, Arial, =E5=BE=AE=E8=BD=AF=E9=9B=85=E9=BB=91; line-height: 20p=
+x;">=C2=A0=C2=A0=C2=A0|=C2=A0=C2=A0=C2=A0</span><a href=3D"https://rfq.alib=
+aba.com/rfq/post.htm?tracelog=3Dedm_footer_rfq&mt=3Dmail&crm_mtn_tracelog_l=
+og_id=3D39582755827&crm_mtn_tracelog_task_id=3Dpush-task_39057&crm_mtn_trac=
+elog_template=3D2000114762&crm_mtn_tracelog_from_sys=3Dservice_mobile-messa=
+ges-service&as_token=3Dis%2BhUNgw6zsU%2BszucwhjNw1%2Bcv4lVR24OZhhzSMd6Dks7d=
+vf&to=3Dazfarali007.aa%40gmail.com&from=3Dmember%40notice.alibaba.com" styl=
+e=3D"color: rgb(51, 51, 51); text-decoration: none; font-size: 12px; font-f=
+amily: Roboto, Helvetica, Tahoma, Arial, =E5=BE=AE=E8=BD=AF=E9=9B=85=E9=BB=
+=91; line-height: 20px;">Request for Quotation</a><span style=3D"color: rgb=
+(51, 51, 51); font-size: 14px; font-family: Roboto, Helvetica, Tahoma, Aria=
+l, =E5=BE=AE=E8=BD=AF=E9=9B=85=E9=BB=91; line-height: 20px;">=C2=A0=C2=A0=
+=C2=A0|=C2=A0=C2=A0=C2=A0</span><a href=3D"https://i.alibaba.com/globalSell=
+erIndex.htm?mt=3Dmail&crm_mtn_tracelog_log_id=3D39582755827&crm_mtn_tracelo=
+g_task_id=3Dpush-task_39057&crm_mtn_tracelog_template=3D2000114762&crm_mtn_=
+tracelog_from_sys=3Dservice_mobile-messages-service&as_token=3Dis%2BhUNgw6z=
+sU%2BszucwhjNw1%2Bcv4lVR24OZhhzSMd6Dks7dvf&to=3Dazfarali007.aa%40gmail.com&=
+from=3Dmember%40notice.alibaba.com" style=3D"color: rgb(51, 51, 51); text-d=
+ecoration: none; font-size: 12px; font-family: Roboto, Helvetica, Tahoma, A=
+rial, =E5=BE=AE=E8=BD=AF=E9=9B=85=E9=BB=91; line-height: 20px;">My Account<=
+/a>
+                    <!----></td>
+                  </tr>
+                 </tbody>
+                </table>
+               </div>
+               <!--[if mso | IE]></tr></table><![endif]--></td>
+             </tr>
+            </tbody>
+           </table>
+          </div>
+          <!--[if mso | IE]></td></tr></table><![endif]-->
+          <!--[if mso | IE]><table align=3D"center" border=3D"0" cellpaddin=
+g=3D"0" cellspacing=3D"0" class=3D"" style=3D"width:600px;" width=3D"600" >=
+<tr><td style=3D"line-height:0px;font-size:0px;mso-line-height-rule:exactly=
+;"><![endif]-->
+          <div style=3D"margin: 0px auto; max-width: 640px;">
+           <table cellpadding=3D"0" cellspacing=3D"0" data-border=3D"0" wid=
+th=3D"100%" style=3D"width: 100%; background-color: rgb(242, 243, 247); pad=
+ding-top: 0vw; padding-bottom: 0vw;">
+            <tbody>
+             <tr>
+              <td style=3D"padding: 24px 40px;">
+               <!--[if mso | IE]><table role=3D"presentation" border=3D"0" =
+cellpadding=3D"0" cellspacing=3D"0"><tr><![endif]-->
+               <div style=3D"min-width: 380px;">
+                <p style=3D"color: rgb(118, 118, 118); font-size: 11px; fon=
+t-family: Roboto, Helvetica, Tahoma, Arial, =E5=BE=AE=E8=BD=AF=E9=9B=85=E9=
+=BB=91; line-height: 16px; text-align: center; padding: 0px 30px;">If you d=
+on=E2=80=99t want to receive this kind of emails, you can <a href=3D"https:=
+//air.alibaba.com/app/sc-assets/edm_unsubscribe/pages.html?url_type=3Dfoote=
+r_unsub&tracelog=3Dunsub_con&$unsubscriptionEncryptTool.unsubscriptionEncry=
+pt?uqh_edm&footer_preferences&mt=3Dmail&crm_mtn_tracelog_log_id=3D395827558=
+27&crm_mtn_tracelog_task_id=3Dpush-task_39057&crm_mtn_tracelog_template=3D2=
+000114762&crm_mtn_tracelog_from_sys=3Dservice_mobile-messages-service&as_to=
+ken=3Dis%2BhUNgw6zsU%2BszucwhjNw1%2Bcv4lVR24OZhhzSMd6Dks7dvf&to=3Dazfarali0=
+07.aa%40gmail.com&from=3Dmember%40notice.alibaba.com" style=3D"color: rgb(0=
+, 0, 0);">update your preferences</a> or <a href=3D"https://air.alibaba.com=
+/app/sc-assets/edm_unsubscribe/pages.html?url_type=3Dfooter_unsub&tracelog=
+=3Dunsub_con&$unsubscriptionEncryptTool.unsubscriptionEncrypt?hah_edm&foote=
+r_unsubsribe&mt=3Dmail&crm_mtn_tracelog_log_id=3D39582755827&crm_mtn_tracel=
+og_task_id=3Dpush-task_39057&crm_mtn_tracelog_template=3D2000114762&crm_mtn=
+_tracelog_from_sys=3Dservice_mobile-messages-service&as_token=3Dis%2BhUNgw6=
+zsU%2BszucwhjNw1%2Bcv4lVR24OZhhzSMd6Dks7dvf&to=3Dazfarali007.aa%40gmail.com=
+&from=3Dmember%40notice.alibaba.com" style=3D"color: rgb(0, 0, 0);">Unsubsc=
+ribe from this type of email</a> Read our <a href=3D"https://rulechannel.al=
+ibaba.com/icbu?type=3Ddetail&ruleId=3D2034&cId=3D1306&mt=3Dmail&crm_mtn_tra=
+celog_log_id=3D39582755827&crm_mtn_tracelog_task_id=3Dpush-task_39057&crm_m=
+tn_tracelog_template=3D2000114762&crm_mtn_tracelog_from_sys=3Dservice_mobil=
+e-messages-service&as_token=3Dis%2BhUNgw6zsU%2BszucwhjNw1%2Bcv4lVR24OZhhzSM=
+d6Dks7dvf&to=3Dazfarali007.aa%40gmail.com&from=3Dmember%40notice.alibaba.co=
+m#/rule/detail?cId=3D1306&ruleId=3D2034?adb_edm&footer_privacy" style=3D"co=
+lor: rgb(0, 0, 0);">Privacy Policy</a> and <a href=3D"https://rulechannel.a=
+libaba.com/icbu?type=3Ddetail&ruleId=3D2041&cId=3D1307&mt=3Dmail&crm_mtn_tr=
+acelog_log_id=3D39582755827&crm_mtn_tracelog_task_id=3Dpush-task_39057&crm_=
+mtn_tracelog_template=3D2000114762&crm_mtn_tracelog_from_sys=3Dservice_mobi=
+le-messages-service&as_token=3Dis%2BhUNgw6zsU%2BszucwhjNw1%2Bcv4lVR24OZhhzS=
+Md6Dks7dvf&to=3Dazfarali007.aa%40gmail.com&from=3Dmember%40notice.alibaba.c=
+om#/rule/detail?cId=3D1307&ruleId=3D2041?maw_edm&footer_terms" style=3D"col=
+or: rgb(0, 0, 0);">Terms of Use</a></p>
+                <p style=3D"color: rgb(118, 118, 118); font-size: 11px; fon=
+t-family: Roboto, Helvetica, Tahoma, Arial, =E5=BE=AE=E8=BD=AF=E9=9B=85=E9=
+=BB=91; line-height: 16px; margin-top: 16px; text-align: center; padding: 0=
+px 100px;">Alibaba.com Singapore E-commerce Private Limited51 Bras Basah Ro=
+ad, #04-08 Lazada One, Singapore 189554</p>
+                <p style=3D"color: rgb(118, 118, 118); font-size: 9px; font=
+-family: Roboto, Helvetica, Tahoma, Arial, =E5=BE=AE=E8=BD=AF=E9=9B=85=E9=
+=BB=91; line-height: 13px; margin-top: 16px; text-align: center; padding: 0=
+px 10px;">This email was sent from an address used for notifications only a=
+nd does not give Alibaba any active role, knowledge or control over the lis=
+tings. Please do not reply to this message/email</p>
+               </div>
+               <!--[if mso | IE]></tr></table><![endif]--></td>
+             </tr>
+            </tbody>
+           </table>
+          </div>
+          <!--[if mso | IE]></td></tr></table><![endif]--> </td>=20
+        </tr>=20
+       </tbody>=20
+      </table> </td>
+    </tr>
+   </tbody>
+  </table>=20
+  <p style=3D"font-size:40px;line-height:40px;">=C2=A0</p>  =20
+  <input type=3D"text" value=3D"https://usmy.alibaba.com/user/emailservice/=
+unsubscribe_entry.htm?url_type=3Dfooter_unsub&tracelog=3Dunsub_con&_000_e_a=
+_=3D9k-xhGgcvmYt3KOwvAk2qTbYgnUFkDOHBz5*Q9IeFC0%3D&_000_e_t_=3DV1s8p6d5N9xt=
+xVa8UtDKnv2VM4u7A45x5cjW7hJZJq4%3D" style=3D"width:0;height:0" />
+  <img style=3D"display:none; visibility:hidden; color:#fff;" width=3D"0" h=
+eight=3D"0" src=3D"http://stat.alibaba.com/mail_callback.html?crm_mtn_trace=
+log_log_id=3D39582755827&crm_mtn_tracelog_task_id=3Dpush-task_39057" />
+  <img style=3D"display:none; visibility:hidden; color:#fff;" width=3D"0" h=
+eight=3D"0" src=3D"http://gm.mmstat.com/btob.10?crm_mtn_tracelog_log_id=3D3=
+9582755827&crm_mtn_tracelog_task_id=3Dpush-task_39057&from=3Dmember@notice.=
+alibaba.com&to=3Dazfarali007.aa@gmail.com&from_sys=3Dservice_mobile-message=
+s-service&biz_type=3Dnull&template=3D2000114762" />
+ </body>
+</html>
+------=_Part_20536067_1203900096.1700667042236--

@@ -1,0 +1,710 @@
+X-GM-THRID: 1674294135162419676
+X-Gmail-Labels: Inbox,Opened,Category Updates
+Delivered-To: azfarali007.aa@gmail.com
+Received: by 2002:a7b:c114:0:0:0:0:0 with SMTP id w20csp1505486wmi;
+        Thu, 6 Aug 2020 09:28:35 -0700 (PDT)
+X-Google-Smtp-Source: ABdhPJxcPkvmf+AFJhuWBguSw3doCTwgvWyKjyD7axv7Cnqnnh20nQYfT6u/YO7lnbhUcDuPYdMu
+X-Received: by 2002:a63:315:: with SMTP id 21mr8224634pgd.103.1596731314832;
+        Thu, 06 Aug 2020 09:28:34 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1596731314; cv=none;
+        d=google.com; s=arc-20160816;
+        b=ishFSkuRYGh9e8LT0aBDFdcJFaaqRzLne+3bPyK4Ll+wKagpLi1rGoLswkbQfGqBE3
+         VlEIPMg4cJew9OxeCegxP3TvnArQp2kOMc+E6XoK5/ZZ5tcHmqpVR99BmfzwcPh2zLB/
+         U20GNrF5ttnppq1xAYwYXo1vDGUE9moLEkpwqkPfNYv/MW0/9w2uEy4RWwCm5jp72l9y
+         OoMwQRzoZ5yiKPsCcRTPz8N7V0MDFJKvVgZOUOApv23eGJTSaqabac2+59hvQOTfpwpD
+         ekvEvCcivh46nVTxUf9deFAJDkf8rhVHJ6+EXZ343fVbs+oTB7cVH1jkF+firPGmV/Wx
+         qnCw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=feedback-id:precedence:from:list-unsubscribe:subject:reply-to
+         :mime-version:date:message-id:to:dkim-signature;
+        bh=M4olzVji2C4iRKVOpT01co+IQl0eLJEE+aT4MXsG2Hw=;
+        b=ly4U/OUvm5P1gmff5MTYYhMeHRMCuDqI61Vom81YfElyQfuQhoSsMZ882N6ZgaoEZW
+         pb3+WRQfUueTzX6f8ki2fH5Ao+SZCuv/xf+WhMAzLt3DweQOjPoUpve8P4itC9S+N88j
+         PjzjFxm//7hZD5KHPqh5rfuZpHs9FnBjDPaRuR5h4HvsxvhrCZijSaIL6CTpRIVgiPZm
+         n8T98keiI60Ry4pSFk4rMlBF534Uj5LnIByoO3RxWQCKGdglhtUzR6K4p8j3GR9TD6gQ
+         P6LF3Sb6h7EPqd4ciRBE6douOTD/KP0OkoUsTSWkyO3ex8Od2MSnMB+Jl0jbzPk0r2UP
+         rDEQ==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@pb04.ascendbywix.com header.s=scph0219 header.b=PeHha7xI;
+       spf=pass (google.com: domain of msprvs1=18487cusbrf0d=bounces-17751-12149@spmailt.com designates 147.253.213.108 as permitted sender) smtp.mailfrom="msprvs1=18487CuSBRF0D=bounces-17751-12149@spmailt.com";
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=ascendbywix.com
+Return-Path: <msprvs1=18487CuSBRF0D=bounces-17751-12149@spmailt.com>
+Received: from mta-213-108.sparkpostmail.com (mta-213-108.sparkpostmail.com. [147.253.213.108])
+        by mx.google.com with ESMTPS id b2si3751005pja.21.2020.08.06.09.28.34
+        for <azfarali007.aa@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Thu, 06 Aug 2020 09:28:34 -0700 (PDT)
+Received-SPF: pass (google.com: domain of msprvs1=18487cusbrf0d=bounces-17751-12149@spmailt.com designates 147.253.213.108 as permitted sender) client-ip=147.253.213.108;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@pb04.ascendbywix.com header.s=scph0219 header.b=PeHha7xI;
+       spf=pass (google.com: domain of msprvs1=18487cusbrf0d=bounces-17751-12149@spmailt.com designates 147.253.213.108 as permitted sender) smtp.mailfrom="msprvs1=18487CuSBRF0D=bounces-17751-12149@spmailt.com";
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=ascendbywix.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+	d=pb04.ascendbywix.com; s=scph0219; t=1596731314;
+	i=@pb04.ascendbywix.com;
+	bh=M4olzVji2C4iRKVOpT01co+IQl0eLJEE+aT4MXsG2Hw=;
+	h=To:Message-ID:Date:Content-Type:Subject:From;
+	b=PeHha7xI1T8SDfZwoGNPoGiIxFGgx4twJlQ7gFSEgglmxsFv7cqFsjjpqk2f8SXv4
+	 qmI1t9lDxFt3iIPZiglrEiEa6uDFpVWTndprIhPNfIJl1CwMwsppZXw9aQIANnwGW3
+	 p0SHHcCvEq2FJ7mhuV0d6IytF3UyeCDxsNV6V8Vk=
+X-MSFBL: S487lp5SpblmkTN5kw33XmDbj6eEPccEVCSOFRw9xBk=|eyJtZXNzYWdlX2lkIjo
+	iMDAyNWIyMmYyYzVmNDc2NjM0MWIiLCJyIjoiYXpmYXJhbGkwMDcuYWFAZ21haWw
+	uY29tIiwic3ViYWNjb3VudF9pZCI6IjEyMTQ5IiwidGVuYW50X2lkIjoic3BjIiw
+	iY3VzdG9tZXJfaWQiOiIxNzc1MSJ9
+To: "Syed Azfar Ali" <azfarali007.aa@gmail.com>
+Message-ID: <43.B1.26183.2BF2C2F5@ak.mta1vrest.cc.prd.sparkpost>
+Date: Thu, 06 Aug 2020 16:28:34 +0000
+Content-Type: multipart/alternative; boundary="_----te0KG8dpnEiD2ScZrk76Lg===_82/B1-26183-2BF2C2F5"
+MIME-Version: 1.0
+Reply-To: keshkreates@gmail.com
+Subject: =?utf-8?B?4pyP77iPIldvcmsgb24gQXJ0IFByb2plY3RzPyIgLSAzIFBvaW50?=
+	=?utf-8?B?IFRodXJzZGF5cyAoK0RyYXdpbmcgQ2FtcCBMYXVuY2gp?=
+List-Unsubscribe: <http://www.wix.com/my-account/contacts/unsubscribe?metaSiteId=777909e8-c610-43a1-a553-36d0a6580c29&unsubscribeToken=abcefd4d5885911e7f4ea863ecce180388e169a39e4c714f1a99cb3376c2b706a946599a8e55221a77d9440610cbd8bee99dc3a7609dff89f068e4ccb7d6f2808aa5dfe25ef439d4fd8745bfb56cfa1f445fe65559299dd1ed48d4aea7087f265ceca7c33102b91e32b4b4cf9c1b604cb87175c92cc81a3523171a0bd321e69156cace5df226b37002147b1bcf0a47fa61d4d40fc54e8dc8b9df1b36e42aa2292232b418b77f170fb0eb24eddee315fc8f4bd67975976b91d416222d5dd97a01981fa82b29f5009480a3b07e7fd28817d3549436302ec9d775598072c2acaf3dd671e2feb8cf0f35965b818feee44baecf364626c38fb38aa42c8eb7b068b4d8de30d6aba295d9551b228a3705bc7865395be489683314821d526c2a4f28f8bbe8e80f4333775fa4a4eaef92ff5398471600d235de075436e802ea8664084dfc86db088b322c40d44bb61056c5856ea29dde15ec37eccc8008c464ef463a44d6d6c57d32939c89ea2ba5e53b13f7d582>
+From: "Kesh" <keshkreates@pb04.ascendbywix.com>
+x-abuse-id: 777909e8-c610-43a1-a553-36d0a6580c29
+Precedence: Bulk
+Feedback-ID: 777909e8-c610-43a1-a553-36d0a6580c29:22ddd188-7580-4e63-a7d3-06e3ec1c9a32:wixshoutout
+
+--_----te0KG8dpnEiD2ScZrk76Lg===_82/B1-26183-2BF2C2F5
+Content-Transfer-Encoding: 7bit
+Content-Type: text/plain; charset="UTF-8"
+
+3 Point Thursdays
+
+3 Simple Ideas sent to you every Thursday
+
+1. The Bread and Butter of Drawing When it comes to working out, you can get MOST of your results just by doing few key exercises. Just like that, you can get most of the results you want with your art by knowing a few key "Mini Skills" And that is your bread and butter. You just gotta pick your own list.
+
+2. Work on Projects A great way to make the process of learning and working on your craft fun, is to work on projects. Projects are finite, it gives you a goal and you learn something every time go through one. The more projects you finish, the better you are going to be! Here are some short Project ideas - Make a 5pg Comic - Make an illustrated poster for a movie - Make a Video - Make a Zine(mini book) - Create a sticker page - Illustrate a quote or an Article
+
+3. Favourite Quote from last week "My Life is a series of Projects" - Seth Godin Woo! Almost missed this one. Drawing Camp is launching for real tomorrow and its gonna be, in the words of the young, LIT. Watch out! Aug 7, 6 pm IST. and oh, do join me on the live workshop that Im doing at my youtube channel on "A Guide to Drawing Everything" at 4.30 PM IST Take care -Kesh https://keshart.in/drawing-camp
+
+Click on the link below to open the message in a browser:
+https://www.keshart.in/so/32NF4UPbD/c?w=27udifgyMxBXKCvWMSYL4mboVhilvgR5ZP_cQz0ZRVs.eyJ1IjoiaHR0cHM6Ly93d3cua2VzaGFydC5pbi9zby8zMk5GNFVQYkQiLCJtIjoibWFpbCIsImMiOiJkODFhNGM1ZC1iZDc4LTQwZDMtYjZlYS1kYWM4YTdlZGUzMWYifQ
+
+You've received this email because you are a subscriber of this site
+https://www.keshart.in/so/32NF4UPbD/c?w=Cvr2KRP0Rtr6HC1ltI51HA4gYq0NoVfkH2BMFC8ZlNM.eyJ1IjoiaHR0cHM6Ly93d3cua2VzaGFydC5pbi8iLCJtIjoibWFpbCIsImMiOiJkODFhNGM1ZC1iZDc4LTQwZDMtYjZlYS1kYWM4YTdlZGUzMWYifQ
+
+If you feel you received it by mistake or wish to unsubscribe, click here
+http://www.wix.com/my-account/contacts/unsubscribe?metaSiteId=777909e8-c610-43a1-a553-36d0a6580c29&unsubscribeToken=abcefd4d5885911e7f4ea863ecce180388e169a39e4c714f1a99cb3376c2b706a946599a8e55221a77d9440610cbd8bee99dc3a7609dff89f068e4ccb7d6f2808aa5dfe25ef439d4fd8745bfb56cfa1f445fe65559299dd1ed48d4aea7087f265ceca7c33102b91e32b4b4cf9c1b604cb87175c92cc81a3523171a0bd321e69156cace5df226b37002147b1bcf0a47fa61d4d40fc54e8dc8b9df1b36e42aa2292232b418b77f170fb0eb24eddee315fc8f4bd67975976b91d416222d5dd97a01981fa82b29f5009480a3b07e7fd28817d3549436302ec9d775598072c2acaf3dd671e2feb8cf0f35965b818feee44baecf364626c38fb38aa42c8eb7b068b4d8de30d6aba295d9551b228a3705bc7865395be489683314821d526c2a4f28f8bbe8e80f4333775fa4a4eaef92ff5398471600d235de075436e802ea8664084dfc86db088b322c40d44bb61056c5856ea29dde15ec37eccc8008c464ef463a44d6d6c57d32939c89ea2ba5e53b13f7d582
+--_----te0KG8dpnEiD2ScZrk76Lg===_82/B1-26183-2BF2C2F5
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset="UTF-8"
+
+<!doctype html><html lang=3D"en" xmlns=3D"http://www.w3.org/1999/xhtml" xml=
+ns:v=3D"urn:schemas-microsoft-com:vml" xmlns:o=3D"urn:schemas-microsoft-com=
+:office:office"><head><title></title>=0A<meta name=3D"format-detection" con=
+tent=3D"telephone=3Dno,date=3Dno,address=3Dno,email=3Dno,url=3Dno">=0A<link=
+ rel=3D"icon" href=3D"data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAE=
+AAAAALAAAAAABAAEAAAICRAEAOw=3D=3D"><!--[if !mso]><!-- --><meta http-equiv=
+=3D"X-UA-Compatible" content=3D"IE=3Dedge"><!--<![endif]--><meta http-equiv=
+=3D"Content-Type" content=3D"text/html; charset=3DUTF-8"><meta name=3D"view=
+port" content=3D"width=3Ddevice-width,initial-scale=3D1"><style type=3D"tex=
+t/css">#a a {padding:0;}body {margin:0;padding:0;-webkit-text-size-adjust:1=
+00%;-ms-text-size-adjust:100%;}table,td {border-collapse:collapse;mso-table=
+-lspace:0pt;mso-table-rspace:0pt;}img {border:0;height:auto;line-height:100=
+%;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic;}p {disp=
+lay:block;margin:13px 0;}</style><!--[if mso]>=0A        <xml>=0A        <o=
+:OfficeDocumentSettings>=0A          <o:AllowPNG/>=0A          <o:PixelsPer=
+Inch>96</o:PixelsPerInch>=0A        </o:OfficeDocumentSettings>=0A        <=
+/xml>=0A        <![endif]--><!--[if lte mso 11]>=0A        <style type=3D"t=
+ext/css">=0A          .mj-outlook-group-fix { width:100% !important; }=0A  =
+      </style>=0A        <![endif]--><!--[if !mso]><!--><link href=3D"https=
+://fonts.googleapis.com/css=3Ffamily=3DRoboto:300,400,500,700" rel=3D"style=
+sheet" type=3D"text/css"><link href=3D"https://fonts.googleapis.com/css=3Ff=
+amily=3DUbuntu:300,400,500,700" rel=3D"stylesheet" type=3D"text/css"><link =
+href=3D"https://fonts.googleapis.com/css=3Ffamily=3DMontserrat:n,b,i,bi|&#3=
+8;subset=3Dlatin,latin-ext,cyrillic" rel=3D"stylesheet" type=3D"text/css"><=
+style type=3D"text/css">@import url(https://fonts.googleapis.com/css=3Ffami=
+ly=3DRoboto:300,400,500,700);@import url(https://fonts.googleapis.com/css=
+=3Ffamily=3DUbuntu:300,400,500,700);@import url(https://fonts.googleapis.co=
+m/css=3Ffamily=3DMontserrat:n,b,i,bi|&#38;subset=3Dlatin,latin-ext,cyrillic=
+);</style><!--<![endif]--><style type=3D"text/css">@media only screen and (=
+min-width:480px){ .a {width:100%!important;max-width:100%;}.b {width:50%!im=
+portant;max-width:50%;} }</style><style type=3D"text/css">[owa] .a {width:1=
+00%!important;max-width:100%;}[owa] .b {width:50%!important;max-width:50%;}=
+</style><style type=3D"text/css"></style><style type=3D"text/css">.c {text-=
+decoration:none;} @media all and (max-width:480px){ .d td {width:250px!impo=
+rtant;} }.e,.e table {display:none!important;font-size:0!important;height:0=
+!important;line-height:0!important;margin:0 auto!important;max-height:0!imp=
+ortant;max-height:0px!important;mso-hide:all!important;overflow:hidden!impo=
+rtant;width:0px!important;}@media all and (max-width:480px){ .f{font-size:1=
+6px!important;}.g{font-size:14px!important;}.h{font-size:32px!important;}.i=
+{font-size:30px!important;}.j{font-size:22px!important;}.k{font-size:14px!i=
+mportant;}.l{font-size:14px!important;}.m{font-size:16px!important;}.n{font=
+-size:14px!important;}.o{font-size:29px!important;}.p{font-size:16px!import=
+ant;}.f{line-height:24px!important;}.g{line-height:18px!important;}.h{line-=
+height:48px!important;}.i{line-height:39px!important;}.j{line-height:33px!i=
+mportant;}.k{line-height:21px!important;}.n{line-height:21px!important;}.o{=
+line-height:43.5px!important;} }@media only screen and (max-width:480px){ .=
+q>table>tbody>tr>td {padding:17px 20px 17px 20px!important;} .r>table>tbody=
+>tr>td {padding:17px 20px 20px 20px!important;} .s>table>tbody>tr>td {paddi=
+ng:17px 20px 17px 20px!important;} .t>table>tbody>tr>td {padding:17px 20px =
+10px 20px!important;} .u>table>tbody>tr>td {padding:17px 20px 17px 20px!imp=
+ortant;} .v>table>tbody>tr>td {padding:17px 20px 17px 20px!important;} .w>t=
+able>tbody>tr>td {padding:17px 20px 17px 20px!important;} .x>table>tbody>tr=
+>td {padding:17px 20px 17px 20px!important;} .y>table>tbody>tr>td {padding:=
+17px 20px 17px 20px!important;} .z>table>tbody>tr>td {padding:17px 20px 17p=
+x 20px!important;} .ab>table>tbody>tr>td {padding:17px 20px 0px 20px!import=
+ant;} .bb>table>tbody>tr>td {padding:10px 20px 17px 20px!important;} .cb>ta=
+ble>tbody>tr>td {padding:17px 0px 17px 0px!important;} .db>table>tbody>tr>t=
+d {padding-top:40px!important;} .e,.e table {display:none!important;font-si=
+ze:0!important;height:0!important;line-height:0!important;margin:0 auto!imp=
+ortant;max-height:0!important;max-height:0px!important;mso-hide:all!importa=
+nt;overflow:hidden!important;width:0px!important;} .eb,.eb table {max-heigh=
+t:unset!important;max-height:inherit!important;max-height:initial!important=
+;display:unset!important;display:inherit!important;display:initial!importan=
+t;display:block!important;width:auto!important;width:initial!important;over=
+flow:auto!important;overflow:initial!important;mso-hide:initial!important;h=
+eight:auto!important;height:initial!important;font-size:inherit!important;f=
+ont-size:initial!important;line-height:auto!important;line-height:initial!i=
+mportant;margin:auto!important;margin:initial!important;} .fb {width:36px!i=
+mportant;height:36px!important;} .gb {width:12px!important;} .hb>table>tbod=
+y>tr>td {padding:20px 0!important;} .ib{font-size:22px!important;} .jb{font=
+-size:16px!important;} .kb{line-height:28px!important;} .lb{line-height:24p=
+x!important;} .mb{line-height:20px!important;} .nb {padding:0!important;} .=
+ob>table>tbody>tr>td {padding:0px 30px 0px 30px!important;} .pb {padding-to=
+p:16px!important;} .qb {display:block!important;padding-bottom:18px!importa=
+nt;padding-top:18px!important;} .qb>* {width:70px!important;border-width:1p=
+x!important;} .rb {display:block!important;} .sb {padding-top:0px!important=
+;padding-bottom:0px!important;} .tb {padding-bottom:0px!important;} .ub>tab=
+le>tbody>tr>td {padding-top:8px!important;padding-bottom:10px!important;} .=
+vb>table>tbody>tr>td {padding-top:20px!important;padding-bottom:10px!import=
+ant;} .wb {padding-bottom:10px!important;} .xb {padding-top:0px!important;p=
+adding-bottom:18px!important;} .xb>* {width:70px!important;} .yb {padding:0=
+ 20px!important;} .zb {padding:10px 20px 0!important;} .ac>table>tbody>tr>t=
+d {padding-top:8px!important;padding-bottom:40px!important;} .bc>table>tbod=
+y>tr>td {padding-top:20px!important;padding-bottom:40px!important;} .cc>tab=
+le>tbody>tr>td {padding-bottom:40px!important;} } @media only screen and (m=
+in-width:480px){ .eb,.eb table {display:none!important;font-size:0!importan=
+t;height:0!important;line-height:0!important;margin:0 auto!important;max-he=
+ight:0!important;max-height:0px!important;mso-hide:all!important;overflow:h=
+idden!important;width:0px!important;} .e,.e table {max-height:unset!importa=
+nt;max-height:inherit!important;max-height:initial!important;display:unset!=
+important;display:inherit!important;display:initial!important;display:block=
+!important;width:auto!important;width:initial!important;overflow:auto!impor=
+tant;overflow:initial!important;mso-hide:initial!important;height:auto!impo=
+rtant;height:initial!important;font-size:inherit!important;font-size:initia=
+l!important;line-height:auto!important;line-height:initial!important;margin=
+:auto!important;margin:initial!important;} .dc>tbody>tr>td {padding:24px 0!=
+important;} .ec {margin-bottom:20px;} .fc.gc table {border-right:1px solid =
+#cdcdcd!important;} .fc.hc table {border-left:1px solid #cdcdcd!important;}=
+ .t.ic>table>tbody>tr>td {padding-left:30px!important;padding-right:30px!im=
+portant;} }a,a:visited {text-decoration:none;}a,a:active,a:visited,a:hover,=
+a:link {color:#109FFF;} .jc>table>tbody>tr>td {overflow:hidden;} .qb {displ=
+ay:none;}[owa] .kc,[owa] .lc {width:50%!important;}[owa] .mc {width:91%!imp=
+ortant;max-width:91%!important;}[owa] .nc {max-width:300px;margin:0 auto;}[=
+owa] .x>table>tbody>tr>td {padding:17px 30px 17px 30px!important;padding-le=
+ft:0!important;}[owa] .y>table>tbody>tr>td {padding:17px 30px 17px 30px!imp=
+ortant;}[owa] .oc>table>tbody>tr>td {padding:10px 30px 20px 30px!important;=
+}[owa] .pc {vertical-align:bottom!important;}.qc {width:auto!important;min-=
+width:unset!important;}</style></head><body style=3D"background-color:#FFFF=
+FF;">=0D=0A<div style=3D"color:transparent;visibility:hidden;opacity:0;font=
+-size:0px;border:0;max-height:1px;width:1px;margin:0px;padding:0px;border-w=
+idth:0px!important;display:none!important;line-height:0px!important;"><img =
+border=3D"0" width=3D"1" height=3D"1" src=3D"http://links.ascendbywix.com/q=
+/L_HX0qTV1mu-D2AWiGMivA~~/AABFVwA~/RgRhDrSyPVcDc3BjQgoAJbIvLF9HZjQbUhhhemZh=
+cmFsaTAwNy5hYUBnbWFpbC5jb21YBAAAL3U~"/></div>=0D=0A<div style=3D"display:no=
+ne;font-size:1px;color:#ffffff;line-height:1px;max-height:0px;max-width:0px=
+;opacity:0;overflow:hidden;">3 Simple Ideas sent to you every Thursday | 1.=
+ The Bread and Butter of Drawing When it comes to working out, you can get =
+MOST of your result</div><div class=3D"qc" style=3D"-webkit-font-smoothing:=
+antialiased;width:100%"><style type=3D"text/css">@media only screen and (ma=
+x-width:480px){ .b,.rc,.sc {max-width:100%!important;margin:0 auto!importan=
+t;} }</style><img src=3D"https://shoutout.wix.com/so/pixel/1ec1e94b-75f1-49=
+4d-9dd7-62ce87953ff6/777909e8-c610-43a1-a553-36d0a6580c29/22ddd188-7580-4e6=
+3-a7d3-06e3ec1c9a32/d81a4c5d-bd78-40d3-b6ea-dac8a7ede31f/top/true" style=3D=
+"display:table;height:1px!important;width:1px!important;border:0!important;=
+margin:0!important;padding:0!important" width=3D"1" height=3D"1" border=3D"=
+0"><!--TRACKING_PIXEL--><!--[if gte mso 9 & lt mso 16]><style> li { text-in=
+dent: -1em; }=0A</style><![endif]--><!--[if gte mso 16]><style> ul li { mar=
+gin-left: 30px; margin-right: 30px; } ol li { margin-left: 30px; margin-rig=
+ht: 30px; }=0A</style><![endif]--><style>@media screen yahoo { .kc img,.lc =
+img {max-width:90%!important;} .tc {width:300px!important;} .dc {background=
+-position:50% 0!important;} .pc {vertical-align:top!important;}tbody tr td =
+div {overflow:visible!important;} }</style><!--[if gte mso 9]><v:background=
+ xmlns:v=3D"urn:schemas-microsoft-com:vml" fill=3D"t"><v:fill type=3D"tile"=
+ src=3D"https://static.wixstatic.com/media/a306cb_abd0756716514de9a277af7a5=
+4af4dbb.png" color=3D"#FFFFFF"></v:fill></v:background><![endif]--><table a=
+lign=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"pr=
+esentation" style=3D"background:#FFFFFF;background-color:#FFFFFF;width:100%=
+;"><tbody><tr><td><!--[if mso | IE]><table align=3D"center" border=3D"0" ce=
+llpadding=3D"0" cellspacing=3D"0" style=3D"width:732px;" width=3D"732" ><tr=
+><td style=3D"line-height:0px;font-size:0px;mso-line-height-rule:exactly;">=
+<![endif]--><div style=3D"margin:0px auto;max-width:732px;"><table align=3D=
+"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentat=
+ion" style=3D"width:100%;"><tbody><tr><td style=3D"direction:ltr;font-size:=
+0px;padding:19px 20px 20px;text-align:center;"><!--[if mso | IE]><table rol=
+e=3D"presentation" border=3D"0" cellpadding=3D"0" cellspacing=3D"0"><tr><td=
+ style=3D"vertical-align:top;width:692px;" ><![endif]--><div class=3D"a" st=
+yle=3D"font-size:0px;text-align:left;direction:ltr;display:inline-block;ver=
+tical-align:top;width:100%;"><table border=3D"0" cellpadding=3D"0" cellspac=
+ing=3D"0" role=3D"presentation" style=3D"vertical-align:top;" width=3D"100%=
+"><tr><td align=3D"center" style=3D"font-size:0px;padding:0;word-break:brea=
+k-word;"><div style=3D"font-family:Helvetica,Ubuntu,Arial,sans-serif;font-s=
+ize:10px;line-height:18px;text-align:center;color:#3899ec;"><a style=3D"fon=
+t-family:Helvetica,Ubuntu,Arial,sans-serif;color:#3899ec;font-size:10px;lin=
+e-height:18px;text-decoration:none" href=3D"https://www.keshart.in/so/32NF4=
+UPbD/c=3Fw=3D27udifgyMxBXKCvWMSYL4mboVhilvgR5ZP_cQz0ZRVs.eyJ1IjoiaHR0cHM6Ly=
+93d3cua2VzaGFydC5pbi9zby8zMk5GNFVQYkQiLCJtIjoibWFpbCIsImMiOiJkODFhNGM1ZC1iZ=
+Dc4LTQwZDMtYjZlYS1kYWM4YTdlZGUzMWYifQ" rel=3D"noopener noreferrer" target=
+=3D"_blank"><strong style=3D"font-weight:normal"><span><span>Can't See This=
+ Message=3F <b><u>View in a browser</u></b></span></span></strong></a></div=
+></td></tr></table></div><!--[if mso | IE]></td></tr></table><![endif]--></=
+td></tr></tbody></table></div><!--[if mso | IE]></td></tr></table><![endif]=
+--></td></tr></tbody></table><table align=3D"center" class=3D"dc" backgroun=
+d=3D"https://static.wixstatic.com/media/a306cb_abd0756716514de9a277af7a54af=
+4dbb.png" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presenta=
+tion" style=3D"background:#FFFFFF url(https://static.wixstatic.com/media/a3=
+06cb_abd0756716514de9a277af7a54af4dbb.png)top center / auto repeat;width:10=
+0%;"><tbody><tr><td align=3D"center"><div style=3D"margin:0px auto;max-widt=
+h:732px;"><div style=3D"line-height:0;font-size:0;"><table align=3D"center"=
+ border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" sty=
+le=3D"width:100%;"><tbody><tr><td style=3D"direction:ltr;font-size:0px;padd=
+ing:16px;text-align:center;"><!--[if mso | IE]><table role=3D"presentation"=
+ border=3D"0" cellpadding=3D"0" cellspacing=3D"0"><tr><td width=3D"732px" >=
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" st=
+yle=3D"width:700px;" width=3D"700" ><tr><td style=3D"line-height:0px;font-s=
+ize:0px;mso-line-height-rule:exactly;"><![endif]--><div class=3D"y oc db" s=
+tyle=3D"background:#FFFFFF;background-color:#FFFFFF;margin:0px auto;max-wid=
+th:700px;"><table align=3D"center" border=3D"0" cellpadding=3D"0" cellspaci=
+ng=3D"0" role=3D"presentation" style=3D"background:#FFFFFF;background-color=
+:#FFFFFF;width:100%;"><tbody><tr><td style=3D"border-left:0;border-right:0;=
+border-top:0;direction:ltr;font-size:0px;padding:0px;text-align:center;"><!=
+--[if mso | IE]><table role=3D"presentation" border=3D"0" cellpadding=3D"0"=
+ cellspacing=3D"0"><tr><td style=3D"vertical-align:top;width:700px;" ><![en=
+dif]--><div class=3D"a" style=3D"font-size:0px;text-align:left;direction:lt=
+r;display:inline-block;vertical-align:top;width:100%;"><table border=3D"0" =
+cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" width=3D"100%"><t=
+body><tr><td style=3D"vertical-align:top;padding:0px;"><table border=3D"0" =
+cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" width=3D"100%"><t=
+r><td align=3D"left" class=3D"nb" style=3D"font-size:0px;padding:25px 30px =
+20px 30px;word-break:break-word;"><div style=3D"font-family:montserrat,Helv=
+etica,sans-serif;font-size:38px;font-style:normal;line-height:1;text-align:=
+left;text-transform:none;color:#2cbaf7;"><div class=3D"i" style=3D"letter-s=
+pacing:1px;line-height:1.3;text-align:center"><h3 class=3D"j ib kb" style=
+=3D"margin:0;margin-block-start:0px;margin-block-end:0px;margin-inline-star=
+t:0px;margin-inline-end:0px;font-weight:normal;color:#2f2e2c;font-family:he=
+lvetica,sans-serif;font-size:22px;line-height:33px;"><span style=3D"font-fa=
+mily:roboto,Arial,arial,sans-serif;font-weight:bold" class=3D"ib kb">3 Poin=
+t Thursdays</span></h3></div></div></td></tr></table></td></tr></tbody></ta=
+ble></div><!--[if mso | IE]></td></tr></table><![endif]--></td></tr></tbody=
+></table></div><!--[if mso | IE]></td></tr></table></td></tr><tr><td width=
+=3D"732px" ><table align=3D"center" border=3D"0" cellpadding=3D"0" cellspac=
+ing=3D"0" style=3D"width:700px;" width=3D"700" ><tr><td style=3D"line-heigh=
+t:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]--><div class=
+=3D"y" style=3D"background:#FFFFFF;background-color:#FFFFFF;margin:0px auto=
+;max-width:700px;"><table align=3D"center" border=3D"0" cellpadding=3D"0" c=
+ellspacing=3D"0" role=3D"presentation" style=3D"background:#FFFFFF;backgrou=
+nd-color:#FFFFFF;width:100%;"><tbody><tr><td style=3D"border-left:0;border-=
+right:0;direction:ltr;font-size:0px;padding:0px;text-align:center;"><!--[if=
+ mso | IE]><table role=3D"presentation" border=3D"0" cellpadding=3D"0" cell=
+spacing=3D"0"><tr><td style=3D"vertical-align:top;width:700px;" ><![endif]-=
+-><div class=3D"a" style=3D"font-size:0px;text-align:left;direction:ltr;dis=
+play:inline-block;vertical-align:top;width:100%;"><table border=3D"0" cellp=
+adding=3D"0" cellspacing=3D"0" role=3D"presentation" width=3D"100%"><tbody>=
+<tr><td style=3D"vertical-align:top;padding:0px;"><table border=3D"0" cellp=
+adding=3D"0" cellspacing=3D"0" role=3D"presentation" width=3D"100%"><tr><td=
+ align=3D"left" class=3D"nb" style=3D"font-size:0px;padding:17px 30px 17px =
+30px;word-break:break-word;"><div style=3D"font-family:helvetica,sans-serif=
+;font-size:16px;font-style:normal;line-height:1;text-align:left;text-transf=
+orm:none;color:#2f2e2c;"><div class=3D"f" style=3D"line-height:1.5;text-ali=
+gn:center"><p style=3D"margin:0;font-size:16px;line-height:24px;" class=3D"=
+jb lb">3 Simple Ideas sent to you every Thursday</p></div></div></td></tr><=
+/table></td></tr></tbody></table></div><!--[if mso | IE]></td></tr></table>=
+<![endif]--></td></tr></tbody></table></div><!--[if mso | IE]></td></tr></t=
+able></td></tr><tr><td width=3D"732px" ><table align=3D"center" border=3D"0=
+" cellpadding=3D"0" cellspacing=3D"0" style=3D"width:700px;" width=3D"700" =
+><tr><td style=3D"line-height:0px;font-size:0px;mso-line-height-rule:exactl=
+y;"><![endif]--><div class=3D"ob" style=3D"background:#FFFFFF;background-co=
+lor:#FFFFFF;margin:0px auto;max-width:700px;"><table align=3D"center" borde=
+r=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"=
+background:#FFFFFF;background-color:#FFFFFF;width:100%;"><tbody><tr><td sty=
+le=3D"border-left:0;border-right:0;direction:ltr;font-size:0px;padding:0px =
+30px 0px 30px;text-align:center;"><!--[if mso | IE]><table role=3D"presenta=
+tion" border=3D"0" cellpadding=3D"0" cellspacing=3D"0"><tr><td style=3D"ver=
+tical-align:top;width:640px;" ><![endif]--><div class=3D"a" style=3D"font-s=
+ize:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:t=
+op;width:100%;"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" rol=
+e=3D"presentation" width=3D"100%"><tbody><tr><td style=3D"vertical-align:to=
+p;padding:15px 0;"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" =
+role=3D"presentation" width=3D"100%"><tr><td align=3D"center" style=3D"font=
+-size:0px;padding:0px;word-break:break-word;"><div style=3D"font-family:Ubu=
+ntu,Helvetica,Arial,sans-serif;font-size:13px;line-height:1;text-align:cent=
+er;color:#000000;"><a style=3D"display:inline-block;max-width:100%"><img sr=
+c=3D"https://static.wixstatic.com/media/a306cb_1f2e51ab86634d989140cc0083b2=
+b121~mv2.png/v1/fit/al_c,h_10,q_100,w_72,br_-100,sat_-100,hue_180/a306cb_1f=
+2e51ab86634d989140cc0083b2b121~mv2.png" width=3D"72" height=3D"10" style=3D=
+"display:inline-block;max-width:100%;width:auto;vertical-align:middle" alt=
+=3D""></a></div></td></tr></table></td></tr></tbody></table></div><!--[if m=
+so | IE]></td></tr></table><![endif]--></td></tr></tbody></table></div><!--=
+[if mso | IE]></td></tr></table></td></tr><tr><td width=3D"732px" ><table a=
+lign=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"w=
+idth:700px;" width=3D"700" ><tr><td style=3D"line-height:0px;font-size:0px;=
+mso-line-height-rule:exactly;"><![endif]--><div class=3D"y" style=3D"backgr=
+ound:#FFFFFF;background-color:#FFFFFF;margin:0px auto;max-width:700px;"><ta=
+ble align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=
+=3D"presentation" style=3D"background:#FFFFFF;background-color:#FFFFFF;widt=
+h:100%;"><tbody><tr><td style=3D"border-left:0;border-right:0;direction:ltr=
+;font-size:0px;padding:0px;text-align:center;"><!--[if mso | IE]><table rol=
+e=3D"presentation" border=3D"0" cellpadding=3D"0" cellspacing=3D"0"><tr><td=
+ style=3D"vertical-align:top;width:700px;" ><![endif]--><div class=3D"a" st=
+yle=3D"font-size:0px;text-align:left;direction:ltr;display:inline-block;ver=
+tical-align:top;width:100%;"><table border=3D"0" cellpadding=3D"0" cellspac=
+ing=3D"0" role=3D"presentation" width=3D"100%"><tbody><tr><td style=3D"vert=
+ical-align:top;padding:0px;"><table border=3D"0" cellpadding=3D"0" cellspac=
+ing=3D"0" role=3D"presentation" width=3D"100%"><tr><td align=3D"left" class=
+=3D"nb" style=3D"font-size:0px;padding:17px 30px 17px 30px;word-break:break=
+-word;"><div style=3D"font-family:helvetica,sans-serif;font-size:16px;font-=
+style:normal;line-height:1;text-align:left;text-transform:none;color:#2f2e2=
+c;"><div class=3D"f" style=3D"line-height:1.5;text-align:center"><p style=
+=3D"margin:0;text-align:left;font-size:16px;line-height:24px;" class=3D"jb =
+lb">&#xA0;</p></div></div></td></tr></table></td></tr></tbody></table></div=
+><!--[if mso | IE]></td></tr></table><![endif]--></td></tr></tbody></table>=
+</div><!--[if mso | IE]></td></tr></table></td></tr><tr><td width=3D"732px"=
+ ><table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" =
+style=3D"width:700px;" width=3D"700" ><tr><td style=3D"line-height:0px;font=
+-size:0px;mso-line-height-rule:exactly;"><![endif]--><div class=3D"y" style=
+=3D"background:#FFFFFF;background-color:#FFFFFF;margin:0px auto;max-width:7=
+00px;"><table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" role=3D"presentation" style=3D"background:#FFFFFF;background-color:#=
+FFFFFF;width:100%;"><tbody><tr><td style=3D"border-left:0;border-right:0;di=
+rection:ltr;font-size:0px;padding:0px;text-align:center;"><!--[if mso | IE]=
+><table role=3D"presentation" border=3D"0" cellpadding=3D"0" cellspacing=3D=
+"0"><tr><td style=3D"vertical-align:top;width:700px;" ><![endif]--><div cla=
+ss=3D"a" style=3D"font-size:0px;text-align:left;direction:ltr;display:inlin=
+e-block;vertical-align:top;width:100%;"><table border=3D"0" cellpadding=3D"=
+0" cellspacing=3D"0" role=3D"presentation" width=3D"100%"><tbody><tr><td st=
+yle=3D"vertical-align:top;padding:0px;"><table border=3D"0" cellpadding=3D"=
+0" cellspacing=3D"0" role=3D"presentation" width=3D"100%"><tr><td align=3D"=
+left" class=3D"nb" style=3D"font-size:0px;padding:17px 30px 17px 30px;word-=
+break:break-word;"><div style=3D"font-family:helvetica,sans-serif;font-size=
+:16px;font-style:normal;line-height:1;text-align:left;text-transform:none;c=
+olor:#2f2e2c;"><div class=3D"f" style=3D"line-height:1.5;text-align:center"=
+><p style=3D"margin:0;text-align:left;font-size:16px;line-height:24px;" cla=
+ss=3D"jb lb"><span style=3D"font-weight:bold" class=3D"jb lb">1. The Bread =
+and Butter of Drawing</span></p><p style=3D"margin:0;text-align:left;font-s=
+ize:16px;line-height:24px;" class=3D"jb lb">&#xA0;</p><p style=3D"margin:0;=
+text-align:left;font-size:16px;line-height:24px;" class=3D"jb lb">When it c=
+omes to working out, you can get MOST of your results just by doing few key=
+ exercises.</p><p style=3D"margin:0;text-align:left;font-size:16px;line-hei=
+ght:24px;" class=3D"jb lb">&#xA0;</p><p style=3D"margin:0;text-align:left;f=
+ont-size:16px;line-height:24px;" class=3D"jb lb">Just like that, you can ge=
+t most of the results you want with your art by knowing a few key &#34;Mini=
+ Skills&#34;</p><p style=3D"margin:0;text-align:left;font-size:16px;line-he=
+ight:24px;" class=3D"jb lb">&#xA0;</p><p style=3D"margin:0;text-align:left;=
+font-size:16px;line-height:24px;" class=3D"jb lb">And that is your bread an=
+d butter. You just gotta pick your own list.&#xA0;</p></div></div></td></tr=
+></table></td></tr></tbody></table></div><!--[if mso | IE]></td></tr></tabl=
+e><![endif]--></td></tr></tbody></table></div><!--[if mso | IE]></td></tr><=
+/table></td></tr><tr><td width=3D"732px" ><table align=3D"center" border=3D=
+"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"width:700px;" width=3D"700=
+" ><tr><td style=3D"line-height:0px;font-size:0px;mso-line-height-rule:exac=
+tly;"><![endif]--><div class=3D"ob" style=3D"background:#FFFFFF;background-=
+color:#FFFFFF;margin:0px auto;max-width:700px;"><table align=3D"center" bor=
+der=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" style=
+=3D"background:#FFFFFF;background-color:#FFFFFF;width:100%;"><tbody><tr><td=
+ style=3D"border-left:0;border-right:0;direction:ltr;font-size:0px;padding:=
+0px 30px 0px 30px;text-align:center;"><!--[if mso | IE]><table role=3D"pres=
+entation" border=3D"0" cellpadding=3D"0" cellspacing=3D"0"><tr><td style=3D=
+"vertical-align:top;width:640px;" ><![endif]--><div class=3D"a" style=3D"fo=
+nt-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-ali=
+gn:top;width:100%;"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0"=
+ role=3D"presentation" width=3D"100%"><tbody><tr><td style=3D"vertical-alig=
+n:top;padding:15px 0;"><table border=3D"0" cellpadding=3D"0" cellspacing=3D=
+"0" role=3D"presentation" width=3D"100%"><tr><td align=3D"center" style=3D"=
+font-size:0px;padding:0px;word-break:break-word;"><div style=3D"font-family=
+:Ubuntu,Helvetica,Arial,sans-serif;font-size:13px;line-height:1;text-align:=
+center;color:#000000;"><a style=3D"display:inline-block;max-width:100%"><im=
+g src=3D"https://static.wixstatic.com/media/b49ee3_705ace29f9cb4733803cf482=
+c9a9e430~mv2.png/v1/fit/al_c,h_2,q_100,w_700,br_-100,sat_-100,hue_180/b49ee=
+3_705ace29f9cb4733803cf482c9a9e430~mv2.png" width=3D"630" height=3D"2" styl=
+e=3D"display:inline-block;max-width:100%;width:auto;vertical-align:middle" =
+alt=3D""></a></div></td></tr></table></td></tr></tbody></table></div><!--[i=
+f mso | IE]></td></tr></table><![endif]--></td></tr></tbody></table></div><=
+!--[if mso | IE]></td></tr></table></td></tr><tr><td width=3D"732px" ><tabl=
+e align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=
+=3D"width:700px;" width=3D"700" ><tr><td style=3D"line-height:0px;font-size=
+:0px;mso-line-height-rule:exactly;"><![endif]--><div class=3D"y" style=3D"b=
+ackground:#FFFFFF;background-color:#FFFFFF;margin:0px auto;max-width:700px;=
+"><table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" =
+role=3D"presentation" style=3D"background:#FFFFFF;background-color:#FFFFFF;=
+width:100%;"><tbody><tr><td style=3D"border-left:0;border-right:0;direction=
+:ltr;font-size:0px;padding:0px;text-align:center;"><!--[if mso | IE]><table=
+ role=3D"presentation" border=3D"0" cellpadding=3D"0" cellspacing=3D"0"><tr=
+><td style=3D"vertical-align:top;width:700px;" ><![endif]--><div class=3D"a=
+" style=3D"font-size:0px;text-align:left;direction:ltr;display:inline-block=
+;vertical-align:top;width:100%;"><table border=3D"0" cellpadding=3D"0" cell=
+spacing=3D"0" role=3D"presentation" width=3D"100%"><tbody><tr><td style=3D"=
+vertical-align:top;padding:0px;"><table border=3D"0" cellpadding=3D"0" cell=
+spacing=3D"0" role=3D"presentation" width=3D"100%"><tr><td align=3D"left" c=
+lass=3D"nb" style=3D"font-size:0px;padding:17px 30px 17px 30px;word-break:b=
+reak-word;"><div style=3D"font-family:helvetica,sans-serif;font-size:16px;f=
+ont-style:normal;line-height:1;text-align:left;text-transform:none;color:#2=
+f2e2c;"><div class=3D"f" style=3D"line-height:1.5;text-align:center"><p sty=
+le=3D"margin:0;text-align:left;font-size:16px;line-height:24px;" class=3D"j=
+b lb"><span style=3D"font-weight:bold" class=3D"jb lb">2. Work on Projects<=
+/span></p><p style=3D"margin:0;text-align:left;font-size:16px;line-height:2=
+4px;" class=3D"jb lb">&#xA0;</p><p style=3D"margin:0;text-align:left;font-s=
+ize:16px;line-height:24px;" class=3D"jb lb">A great way to make the process=
+ of learning and working on your craft fun, is to work on projects.</p><p s=
+tyle=3D"margin:0;text-align:left;font-size:16px;line-height:24px;" class=3D=
+"jb lb">&#xA0;</p><p style=3D"margin:0;text-align:left;font-size:16px;line-=
+height:24px;" class=3D"jb lb">Projects are finite, it gives you a goal and =
+you learn something every time go through one.</p><p style=3D"margin:0;text=
+-align:left;font-size:16px;line-height:24px;" class=3D"jb lb">&#xA0;</p><p =
+style=3D"margin:0;text-align:left;font-size:16px;line-height:24px;" class=
+=3D"jb lb">The more projects you finish, the better you are going to be!</p=
+><p style=3D"margin:0;text-align:left;font-size:16px;line-height:24px;" cla=
+ss=3D"jb lb">&#xA0;</p><p style=3D"margin:0;text-align:left;font-size:16px;=
+line-height:24px;" class=3D"jb lb">Here are some short Project ideas</p><p =
+style=3D"margin:0;text-align:left;font-size:16px;line-height:24px;" class=
+=3D"jb lb">&#xA0;</p><p style=3D"margin:0;text-align:left;font-size:16px;li=
+ne-height:24px;" class=3D"jb lb">- Make a 5pg Comic</p><p style=3D"margin:0=
+;text-align:left;font-size:16px;line-height:24px;" class=3D"jb lb">- Make a=
+n illustrated poster for a movie</p><p style=3D"margin:0;text-align:left;fo=
+nt-size:16px;line-height:24px;" class=3D"jb lb">- Make a Video</p><p style=
+=3D"margin:0;text-align:left;font-size:16px;line-height:24px;" class=3D"jb =
+lb">- Make a Zine(mini book)</p><p style=3D"margin:0;text-align:left;font-s=
+ize:16px;line-height:24px;" class=3D"jb lb">- Create a sticker page</p><p s=
+tyle=3D"margin:0;text-align:left;font-size:16px;line-height:24px;" class=3D=
+"jb lb">- Illustrate a quote or an Article</p><p style=3D"margin:0;text-ali=
+gn:left;font-size:16px;line-height:24px;" class=3D"jb lb">&#xA0;</p></div><=
+/div></td></tr></table></td></tr></tbody></table></div><!--[if mso | IE]></=
+td></tr></table><![endif]--></td></tr></tbody></table></div><!--[if mso | I=
+E]></td></tr></table></td></tr><tr><td width=3D"732px" ><table align=3D"cen=
+ter" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"width:700px;=
+" width=3D"700" ><tr><td style=3D"line-height:0px;font-size:0px;mso-line-he=
+ight-rule:exactly;"><![endif]--><div class=3D"ob" style=3D"background:#FFFF=
+FF;background-color:#FFFFFF;margin:0px auto;max-width:700px;"><table align=
+=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presen=
+tation" style=3D"background:#FFFFFF;background-color:#FFFFFF;width:100%;"><=
+tbody><tr><td style=3D"border-left:0;border-right:0;direction:ltr;font-size=
+:0px;padding:0px 30px 0px 30px;text-align:center;"><!--[if mso | IE]><table=
+ role=3D"presentation" border=3D"0" cellpadding=3D"0" cellspacing=3D"0"><tr=
+><td style=3D"vertical-align:top;width:640px;" ><![endif]--><div class=3D"a=
+" style=3D"font-size:0px;text-align:left;direction:ltr;display:inline-block=
+;vertical-align:top;width:100%;"><table border=3D"0" cellpadding=3D"0" cell=
+spacing=3D"0" role=3D"presentation" width=3D"100%"><tbody><tr><td style=3D"=
+vertical-align:top;padding:15px 0;"><table border=3D"0" cellpadding=3D"0" c=
+ellspacing=3D"0" role=3D"presentation" width=3D"100%"><tr><td align=3D"cent=
+er" style=3D"font-size:0px;padding:0px;word-break:break-word;"><div style=
+=3D"font-family:Ubuntu,Helvetica,Arial,sans-serif;font-size:13px;line-heigh=
+t:1;text-align:center;color:#000000;"><a style=3D"display:inline-block;max-=
+width:100%"><img src=3D"https://static.wixstatic.com/media/b49ee3_705ace29f=
+9cb4733803cf482c9a9e430~mv2.png/v1/fit/al_c,h_2,q_100,w_700,br_-100,sat_-10=
+0,hue_180/b49ee3_705ace29f9cb4733803cf482c9a9e430~mv2.png" width=3D"630" he=
+ight=3D"2" style=3D"display:inline-block;max-width:100%;width:auto;vertical=
+-align:middle" alt=3D""></a></div></td></tr></table></td></tr></tbody></tab=
+le></div><!--[if mso | IE]></td></tr></table><![endif]--></td></tr></tbody>=
+</table></div><!--[if mso | IE]></td></tr></table></td></tr><tr><td width=
+=3D"732px" ><table align=3D"center" border=3D"0" cellpadding=3D"0" cellspac=
+ing=3D"0" style=3D"width:700px;" width=3D"700" ><tr><td style=3D"line-heigh=
+t:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]--><div class=
+=3D"y" style=3D"background:#FFFFFF;background-color:#FFFFFF;margin:0px auto=
+;max-width:700px;"><table align=3D"center" border=3D"0" cellpadding=3D"0" c=
+ellspacing=3D"0" role=3D"presentation" style=3D"background:#FFFFFF;backgrou=
+nd-color:#FFFFFF;width:100%;"><tbody><tr><td style=3D"border-left:0;border-=
+right:0;direction:ltr;font-size:0px;padding:0px;text-align:center;"><!--[if=
+ mso | IE]><table role=3D"presentation" border=3D"0" cellpadding=3D"0" cell=
+spacing=3D"0"><tr><td style=3D"vertical-align:top;width:700px;" ><![endif]-=
+-><div class=3D"a" style=3D"font-size:0px;text-align:left;direction:ltr;dis=
+play:inline-block;vertical-align:top;width:100%;"><table border=3D"0" cellp=
+adding=3D"0" cellspacing=3D"0" role=3D"presentation" width=3D"100%"><tbody>=
+<tr><td style=3D"vertical-align:top;padding:0px;"><table border=3D"0" cellp=
+adding=3D"0" cellspacing=3D"0" role=3D"presentation" width=3D"100%"><tr><td=
+ align=3D"left" class=3D"nb" style=3D"font-size:0px;padding:17px 30px 17px =
+30px;word-break:break-word;"><div style=3D"font-family:helvetica,sans-serif=
+;font-size:16px;font-style:normal;line-height:1;text-align:left;text-transf=
+orm:none;color:#2f2e2c;"><div class=3D"f" style=3D"line-height:1.5;text-ali=
+gn:center"><p style=3D"margin:0;text-align:left;font-size:16px;line-height:=
+24px;" class=3D"jb lb"><span style=3D"font-weight:bold" class=3D"jb lb">3. =
+Favourite Quote from last week</span></p><p style=3D"margin:0;text-align:le=
+ft;font-size:16px;line-height:24px;" class=3D"jb lb">&#xA0;</p><p style=3D"=
+margin:0;text-align:left;font-size:16px;line-height:24px;" class=3D"jb lb">=
+&#xA0;</p><h1 style=3D"margin:0;margin-block-start:0px;margin-block-end:0px=
+;margin-inline-start:0px;margin-inline-end:0px;color:#000000;font-size:16px=
+;font-style:normal;font-weight:normal;line-height:20px;" class=3D"jb mb"><s=
+pan style=3D"" class=3D"jb mb">&#34;My Life is a series of Projects</span>&=
+#34;</h1><p style=3D"margin:0;font-size:16px;line-height:24px;" class=3D"jb=
+ lb">- Seth Godin</p><p style=3D"margin:0;font-size:16px;line-height:24px;"=
+ class=3D"jb lb">&#xA0;</p><p style=3D"margin:0;font-size:16px;line-height:=
+24px;" class=3D"jb lb">&#xA0;</p><p style=3D"margin:0;font-size:16px;text-a=
+lign:left;line-height:24px;" class=3D"jb lb">&#xA0;</p><p style=3D"margin:0=
+;text-align:left;font-size:16px;line-height:24px;" class=3D"jb lb">Woo! Alm=
+ost missed this one. Drawing Camp is launching for real tomorrow and its go=
+nna be, in the words of the young, LIT.&#xA0;</p><p style=3D"margin:0;text-=
+align:left;font-size:16px;line-height:24px;" class=3D"jb lb">&#xA0;</p><p s=
+tyle=3D"margin:0;text-align:left;font-size:16px;line-height:24px;" class=3D=
+"jb lb">Watch out! Aug 7, 6 pm IST.</p><p style=3D"margin:0;text-align:left=
+;font-size:16px;line-height:24px;" class=3D"jb lb">&#xA0;</p><p style=3D"ma=
+rgin:0;text-align:left;font-size:16px;line-height:24px;" class=3D"jb lb">an=
+d oh, do join me on the live workshop that Im doing at my youtube channel o=
+n &#34;A Guide to Drawing Everything&#34; at 4.30 PM IST</p><p style=3D"mar=
+gin:0;text-align:left;font-size:16px;line-height:24px;" class=3D"jb lb">&#x=
+A0;</p><p style=3D"margin:0;text-align:left;font-size:16px;line-height:24px=
+;" class=3D"jb lb">&#xA0;</p><p style=3D"margin:0;text-align:left;font-size=
+:16px;line-height:24px;" class=3D"jb lb">Take care</p><p style=3D"margin:0;=
+text-align:left;font-size:16px;line-height:24px;" class=3D"jb lb">-Kesh</p>=
+<p style=3D"margin:0;text-align:left;font-size:16px;line-height:24px;" clas=
+s=3D"jb lb">&#xA0;</p><p style=3D"margin:0;text-align:left;font-size:16px;l=
+ine-height:24px;" class=3D"jb lb">&#xA0;</p><p style=3D"margin:0;text-align=
+:left;font-size:16px;line-height:24px;" class=3D"jb lb"><a href=3D"https://=
+www.keshart.in/so/32NF4UPbD/c=3Fw=3DGkp7-nXBJXYZkBoSXpFGXmy6bZAHAhncCQor0Ad=
+LzSg.eyJ1IjoiaHR0cHM6Ly93d3cua2VzaGFydC5pbi9kcmF3aW5nLWNhbXAiLCJyIjoiMDVlOT=
+AwMjYtNTI2ZC00ZmI2LWE5MTItZjA3ZDM3YWFhYzdkIiwibSI6Im1haWwiLCJjIjoiZDgxYTRjN=
+WQtYmQ3OC00MGQzLWI2ZWEtZGFjOGE3ZWRlMzFmIn0" style=3D"color:#109FFF;text-dec=
+oration:none;">https://keshart.in/drawing-camp</a></p><p style=3D"margin:0;=
+text-align:left;font-size:16px;line-height:24px;" class=3D"jb lb">&#xA0;</p=
+></div></div></td></tr></table></td></tr></tbody></table></div><!--[if mso =
+| IE]></td></tr></table><![endif]--></td></tr></tbody></table></div><!--[if=
+ mso | IE]></td></tr></table></td></tr><tr><td width=3D"732px" ><table alig=
+n=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"widt=
+h:700px;" width=3D"700" ><tr><td style=3D"line-height:0px;font-size:0px;mso=
+-line-height-rule:exactly;"><![endif]--><div class=3D"t ic cc" style=3D"bac=
+kground:#FFFFFF;background-color:#FFFFFF;margin:0px auto;max-width:700px;">=
+<table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" ro=
+le=3D"presentation" style=3D"background:#FFFFFF;background-color:#FFFFFF;wi=
+dth:100%;"><tbody><tr><td style=3D"border-bottom:0;border-left:0;border-rig=
+ht:0;direction:ltr;font-size:0px;padding:17px 0px 37px 0px;text-align:cente=
+r;"><!--[if mso | IE]><table role=3D"presentation" border=3D"0" cellpadding=
+=3D"0" cellspacing=3D"0"><tr><![endif]--><div style=3D"height:10px"></div><=
+!--[if mso | IE]><td style=3D"vertical-align:middle;width:350px;" ><![endif=
+]--><div class=3D"b fc gc" style=3D"font-size:0px;text-align:left;direction=
+:ltr;display:inline-block;vertical-align:middle;width:100%;"><table border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"v=
+ertical-align:middle;" width=3D"100%"><tr><td class=3D"rb" style=3D"font-si=
+ze:0px;word-break:break-word;"><!--[if mso | IE]><table role=3D"presentatio=
+n" border=3D"0" cellpadding=3D"0" cellspacing=3D"0"><tr><td height=3D"30" s=
+tyle=3D"vertical-align:top;height:30px;"><![endif]--><div style=3D"height:3=
+0px;">&#160;</div><!--[if mso | IE]></td></tr></table><![endif]--></td></tr=
+><tr><td align=3D"center" style=3D"font-size:0px;padding:10px 25px;padding-=
+top:0px;padding-bottom:0px;word-break:break-word;"><div style=3D"font-famil=
+y:Ubuntu,Helvetica,Arial,sans-serif;font-size:13px;line-height:1;text-align=
+:center;color:#000000;"><p class=3D"g" style=3D"margin:0;color:#2f2e2c;font=
+-family:arial,sans-serif;line-height:1.5;font-size:12px;margin-bottom:10px;=
+"><span>Share Via:</span></p><p style=3D"margin:0;overflow:hidden;white-spa=
+ce:nowrap;"><a style=3D"vertical-align:middle;display:inline-block;text-dec=
+oration:none" href=3D"https://www.keshart.in/so/32NF4UPbD/c=3Fw=3DzHtV1L-R-=
+cbYWV3FhC3B0SVZ9cgb8yJaPfPjBThv-f8.eyJ1IjoiaHR0cHM6Ly93d3cuZmFjZWJvb2suY29t=
+L3NoYXJlci9zaGFyZXIucGhwP3U9aHR0cHM6Ly93d3cua2VzaGFydC5pbi9zby8zMk5GNFVQYkQ=
+iLCJyIjoiZWJkYzQwOGUtNzJiMS00NzcwLTY1ZTctYjg3OGJlNDllOGY3IiwibSI6Im1haWwiLC=
+JjIjoiZDgxYTRjNWQtYmQ3OC00MGQzLWI2ZWEtZGFjOGE3ZWRlMzFmIn0" target=3D"_blank=
+"><img class=3D"fb" src=3D"https://static.wixstatic.com/media/a306cb_ffc8a5=
+5271d049c5a877632d5b7d52a4~mv2.png/v1/fit/w_750,h_750,br_-64,sat_-93,hue_-1=
+40/a306cb_ffc8a55271d049c5a877632d5b7d52a4~mv2.png" width=3D"28" height=3D"=
+28" alt=3D"Share on Facebook"><img class=3D"gb" src=3D"https://static.wixst=
+atic.com/media/5e9922_0a9111966d7648649336e1f1546c5ec9~mv2.gif" width=3D"4"=
+ height=3D"1" style=3D"border:0px" alt=3D""></a><a style=3D"vertical-align:=
+middle;display:inline-block;text-decoration:none" href=3D"https://www.kesha=
+rt.in/so/32NF4UPbD/c=3Fw=3DkjfEv8LZhBgA4Uw_o9MiTts6oLQqXiiWq9g-bjh5RNE.eyJ1=
+IjoiaHR0cHM6Ly90d2l0dGVyLmNvbS9zaGFyZT91cmw9aHR0cHM6Ly93d3cua2VzaGFydC5pbi9=
+zby8zMk5GNFVQYkQiLCJyIjoiZWJkYzQwOGUtNzJiMS00NzcwLTY1ZTctYjg3OGJlNDllOGY3Ii=
+wibSI6Im1haWwiLCJjIjoiZDgxYTRjNWQtYmQ3OC00MGQzLWI2ZWEtZGFjOGE3ZWRlMzFmIn0" =
+target=3D"_blank"><img class=3D"fb" src=3D"https://static.wixstatic.com/med=
+ia/a306cb_a40efa16ac944077a7a8d54d359f1dd0~mv2.png/v1/fit/w_750,h_750,br_-6=
+4,sat_-93,hue_-140/a306cb_a40efa16ac944077a7a8d54d359f1dd0~mv2.png" width=
+=3D"28" height=3D"28" alt=3D"Share on Twitter"><img class=3D"gb" src=3D"htt=
+ps://static.wixstatic.com/media/5e9922_0a9111966d7648649336e1f1546c5ec9~mv2=
+.gif" width=3D"4" height=3D"1" style=3D"border:0px" alt=3D""></a><a style=
+=3D"vertical-align:middle;display:inline-block;text-decoration:none" href=
+=3D"https://www.keshart.in/so/32NF4UPbD/c=3Fw=3DZ2WgiKG2NWlLiPFFAJDpUrUUj0G=
+VRs9XEmfRp6lmzrY.eyJ1IjoiaHR0cHM6Ly9waW50ZXJlc3QuY29tL3Bpbi9jcmVhdGUvYnV0dG=
+9uLz91cmw9aHR0cHM6Ly93d3cua2VzaGFydC5pbi9zby8zMk5GNFVQYkQmbWVkaWE9JmRlc2Nya=
+XB0aW9uPTMrUG9pbnQrVGh1cnNkYXlzIiwiciI6ImViZGM0MDhlLTcyYjEtNDc3MC02NWU3LWI4=
+NzhiZTQ5ZThmNyIsIm0iOiJtYWlsIiwiYyI6ImQ4MWE0YzVkLWJkNzgtNDBkMy1iNmVhLWRhYzh=
+hN2VkZTMxZiJ9" target=3D"_blank"><img class=3D"fb" src=3D"https://static.wi=
+xstatic.com/media/a306cb_5bbcc04a306e4a7a93d506cfb81fd7b7~mv2.png/v1/fit/w_=
+750,h_750,br_-64,sat_-93,hue_-140/a306cb_5bbcc04a306e4a7a93d506cfb81fd7b7~m=
+v2.png" width=3D"28" height=3D"28" alt=3D"Share on Pinterest"></a></p></div=
+></td></tr><tr><td class=3D"qb" style=3D"font-size:0px;padding:10px 25px;pa=
+dding-right:30px;padding-left:30px;word-break:break-word;"><p style=3D"bord=
+er-top:solid 0px #cdcdcd;font-size:1px;margin:0px auto;width:0px;"></p><!--=
+[if mso | IE]><table align=3D"center" border=3D"0" cellpadding=3D"0" cellsp=
+acing=3D"0" style=3D"border-top:solid 0px #cdcdcd;font-size:1px;margin:0px =
+auto;width:0px;" role=3D"presentation" width=3D"0px" ><tr><td style=3D"heig=
+ht:0;line-height:0;"> &#160;=0A</td></tr></table><![endif]--></td></tr></ta=
+ble></div><!--[if mso | IE]></td><td style=3D"vertical-align:middle;width:3=
+50px;" ><![endif]--><div class=3D"b fc" style=3D"font-size:0px;text-align:l=
+eft;direction:ltr;display:inline-block;vertical-align:middle;width:100%;"><=
+table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation=
+" width=3D"100%"><tbody><tr><td style=3D"vertical-align:middle;padding:0px;=
+"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentat=
+ion" width=3D"100%"><tr><td align=3D"center" class=3D"sb" style=3D"font-siz=
+e:0px;padding:10px 0px 10px 10px;word-break:break-word;"><div style=3D"font=
+-family:Ubuntu,Helvetica,Arial,sans-serif;font-size:13px;line-height:1;text=
+-align:center;color:#000000;"><div style=3D"display:inline-block;vertical-a=
+lign:middle"><a class=3D"g" href=3D"https://www.keshart.in/so/32NF4UPbD/c=
+=3Fw=3Dz1j_qnhVzFdFkujF03tU0Em2-FiHk-KekaXGgkcNFFY.eyJ1IjoiaHR0cHM6Ly93d3cu=
+a2VzaGFydC5pbi8iLCJyIjoiZWJkYzQwOGUtNzJiMS00NzcwLTY1ZTctYjg3OGJlNDllOGY3Iiw=
+ibSI6Im1haWwiLCJjIjoiZDgxYTRjNWQtYmQ3OC00MGQzLWI2ZWEtZGFjOGE3ZWRlMzFmIn0" s=
+tyle=3D"text-decoration:none;font-family:arial,sans-serif;font-size:12px;ma=
+rgin-right:1.5px;line-height:25px;display:inline-block;overflow:hidden;vert=
+ical-align:middle;color:#2f2e2c;max-height:100px;" target=3D"_blank"><span =
+style=3D"margin-right:1.5px;line-height:25px;display:inline-block;overflow:=
+hidden;vertical-align:middle;max-height:100px"><strong style=3D"font-weight=
+:inherit">Check out my website</strong></span> =C2=A0<img class=3D"pc" heig=
+ht=3D"22" src=3D"https://static.wixstatic.com/media/b49ee3_dd9b1a8812ae4113=
+8409a667954a6088~mv2.png/v1/fit/w_750,h_750,br_-64,sat_-93,hue_-140/b49ee3_=
+dd9b1a8812ae41138409a667954a6088~mv2.png" style=3D"vertical-align:middle;bo=
+rder:0" width=3D"22" alt=3D""></a></div></div></td></tr></table></td></tr><=
+/tbody></table></div><!--[if mso | IE]></td></tr></table><![endif]--></td><=
+/tr></tbody></table></div><!--[if mso | IE]></td></tr></table></td></tr></t=
+able><![endif]--></td></tr></tbody></table></div></div></td></tr></tbody></=
+table><table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D=
+"0" role=3D"presentation" style=3D"background:#FFFFFF;background-color:#FFF=
+FFF;width:100%;"><tbody><tr><td><!--[if mso | IE]><table align=3D"center" b=
+order=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"width:732px;" widt=
+h=3D"732" ><tr><td style=3D"line-height:0px;font-size:0px;mso-line-height-r=
+ule:exactly;"><![endif]--><div style=3D"margin:0px auto;max-width:732px;"><=
+table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" rol=
+e=3D"presentation" style=3D"width:100%;"><tbody><tr><td style=3D"direction:=
+ltr;font-size:0px;padding:15px 15px 14px;text-align:center;"><!--[if mso | =
+IE]><table role=3D"presentation" border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0"><tr><td style=3D"vertical-align:top;width:702px;" ><![endif]--><div =
+class=3D"a" style=3D"font-size:0px;text-align:left;direction:ltr;display:in=
+line-block;vertical-align:top;width:100%;"><table border=3D"0" cellpadding=
+=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"vertical-align:top;=
+" width=3D"100%"><tr><td align=3D"center" style=3D"font-size:0px;padding:0;=
+word-break:break-word;"><div style=3D"font-family:Helvetica,Ubuntu,Arial,sa=
+ns-serif;font-size:10px;line-height:18px;text-align:center;color:#3899ec;">=
+<a style=3D"font-family:Helvetica,Ubuntu,Arial,sans-serif;color:#3899ec;fon=
+t-size:10px;line-height:18px;text-decoration:none" href=3D"https://www.kesh=
+art.in/so/32NF4UPbD/c=3Fw=3DCvr2KRP0Rtr6HC1ltI51HA4gYq0NoVfkH2BMFC8ZlNM.eyJ=
+1IjoiaHR0cHM6Ly93d3cua2VzaGFydC5pbi8iLCJtIjoibWFpbCIsImMiOiJkODFhNGM1ZC1iZD=
+c4LTQwZDMtYjZlYS1kYWM4YTdlZGUzMWYifQ" rel=3D"noopener noreferrer" target=3D=
+"_blank"><strong style=3D"font-weight:normal"><span><span>You've received t=
+his email because you are a subscriber of <b><u>this site</u></b></span></s=
+pan></strong></a></div></td></tr><tr><td align=3D"center" style=3D"font-siz=
+e:0px;padding:0;word-break:break-word;"><div style=3D"font-family:Helvetica=
+,Ubuntu,Arial,sans-serif;font-size:10px;line-height:18px;text-align:center;=
+color:#3899ec;"><a style=3D"font-family:Helvetica,Ubuntu,Arial,sans-serif;c=
+olor:#3899ec;font-size:10px;line-height:18px;text-decoration:none" href=3D"=
+http://www.wix.com/my-account/contacts/unsubscribe=3FmetaSiteId=3D777909e8-=
+c610-43a1-a553-36d0a6580c29&unsubscribeToken=3Dabcefd4d5885911e7f4ea863ecce=
+180388e169a39e4c714f1a99cb3376c2b706a946599a8e55221a77d9440610cbd8bee99dc3a=
+7609dff89f068e4ccb7d6f2808aa5dfe25ef439d4fd8745bfb56cfa1f445fe65559299dd1ed=
+48d4aea7087f265ceca7c33102b91e32b4b4cf9c1b604cb87175c92cc81a3523171a0bd321e=
+69156cace5df226b37002147b1bcf0a47fa61d4d40fc54e8dc8b9df1b36e42aa2292232b418=
+b77f170fb0eb24eddee315fc8f4bd67975976b91d416222d5dd97a01981fa82b29f5009480a=
+3b07e7fd28817d3549436302ec9d775598072c2acaf3dd671e2feb8cf0f35965b818feee44b=
+aecf364626c38fb38aa42c8eb7b068b4d8de30d6aba295d9551b228a3705bc7865395be4896=
+83314821d526c2a4f28f8bbe8e80f4333775fa4a4eaef92ff5398471600d235de075436e802=
+ea8664084dfc86db088b322c40d44bb61056c5856ea29dde15ec37eccc8008c464ef463a44d=
+6d6c57d32939c89ea2ba5e53b13f7d582" rel=3D"noopener noreferrer" target=3D"_b=
+lank" clicktracking=3D"off" ><strong style=3D"font-weight:normal"><span><sp=
+an>If you feel you received it by mistake or wish to unsubscribe, <b><u>cli=
+ck here</u></b></span></span></strong></a></div></td></tr></table></div><!-=
+-[if mso | IE]></td></tr></table><![endif]--></td></tr></tbody></table></di=
+v><!--[if mso | IE]></td></tr></table><![endif]--></td></tr></tbody></table=
+><img src=3D"https://shoutout.wix.com/so/pixel/1ec1e94b-75f1-494d-9dd7-62ce=
+87953ff6/777909e8-c610-43a1-a553-36d0a6580c29/22ddd188-7580-4e63-a7d3-06e3e=
+c1c9a32/d81a4c5d-bd78-40d3-b6ea-dac8a7ede31f/bottom/true" style=3D"display:=
+table;height:1px!important;width:1px!important;border:0!important;margin:0!=
+important;padding:0!important" width=3D"1" height=3D"1" border=3D"0"></div>=
+=0D=0A<img border=3D"0" width=3D"1" height=3D"1" alt=3D"" src=3D"http://lin=
+ks.ascendbywix.com/q/MmD4s4-B8kpyOPNul4WYVA~~/AABFVwA~/RgRhDrSyPlcDc3BjQgoA=
+JbIvLF9HZjQbUhhhemZhcmFsaTAwNy5hYUBnbWFpbC5jb21YBAAAL3U~">=0D=0A</body></ht=
+ml>
+--_----te0KG8dpnEiD2ScZrk76Lg===_82/B1-26183-2BF2C2F5--
+

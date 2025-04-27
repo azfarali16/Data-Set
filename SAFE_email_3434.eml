@@ -1,0 +1,76 @@
+X-GM-THRID: 1770333448396251708
+X-Gmail-Labels: Inbox,Category Updates,Unread
+Delivered-To: azfarali007.aa@gmail.com
+Received: by 2002:a0c:f607:0:b0:636:c2c0:dffc with SMTP id r7csp356619qvm;
+        Sun, 2 Jul 2023 11:12:21 -0700 (PDT)
+X-Google-Smtp-Source: APBJJlGBOzgus9UovS1O74wA0ZJGegm++T0sdOeTX2aUj52hGAufeSxFkcb71bML0CCM34lGfj7y
+X-Received: by 2002:a05:6214:c27:b0:621:3b88:7b09 with SMTP id a7-20020a0562140c2700b006213b887b09mr10525058qvd.35.1688321541141;
+        Sun, 02 Jul 2023 11:12:21 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1688321541; cv=none;
+        d=google.com; s=arc-20160816;
+        b=Gmj/bnwmiV9s3NOVr1wC7L1G7/UO0DFjCXBvAyVgolxj0oF4ZKZXgy+6iGBZhzimgx
+         GF6mz7ScNqdV6/4+1tPNL8NIoLQdwbNlRWm8uWqWWATp4vxNIyk2Y3gVMVO6o82BrHNh
+         CDF3gPWaCZAPvGNgLEhqz/+0SGTGfqTVieNcfT+x08XPJbrbkDVU8awxHwE8JzLmHF2q
+         6CzrpLqFteM5I+OTiCClAzbsHWOjrE4Bh6UkWTn9SpJigA/3SJ9gEm5P40oJPPZlgRhc
+         ePM2GJYXF5cuqbz7kc8rWW8zDgZ3O0vBsyCbFoBpPTJZ9S6U+GTRLvU5znC+PV+GO6X1
+         kH5w==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=content-transfer-encoding:mime-version:subject:message-id:to:from
+         :date:dkim-signature;
+        bh=pKCE3kp1NA2x4V9G16bvXr/b3CLqmZIhZk1jTRg4K+M=;
+        fh=KpNs0jnIpbsfqo6ZSfYW4fGPbRBclrNoz3b8jSdzKp4=;
+        b=ihTcaszG2R9upRXSCJ5HdtLR+Vy7qAs5bSDUXpm51X75+VschN8xFEcpGDHr8ZlaOU
+         tkM6shaF3DWVfMb/Ha/Z+UJ0XBzGDWSZgeO/iMoht3XI2OO4F3oaFaKQnYim0d5h8jNN
+         URvtu+ZKt0UYWitvPSJl/kelKvgRYYtTwgWBHAoa6zu3TBFKF1FXNOfK6uarJeLCFBaL
+         N/XZK1zE78tQKh91k/kz6VOdZb9DJTf2ia5ZbAT2kzsjYBtqkW4ANN6qHcEm0tkEXhcj
+         TXpbAXuuwgHouj5/oEXUiGYjysteFNjJFXXzkYt9yboRZYhMYBc3Wfb3cj6GAsUSBxwy
+         am+w==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@github.com header.s=pf2023 header.b=J1FYzRCA;
+       spf=pass (google.com: domain of noreply@github.com designates 192.30.252.207 as permitted sender) smtp.mailfrom=noreply@github.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=github.com
+Return-Path: <noreply@github.com>
+Received: from out-24.smtp.github.com (out-24.smtp.github.com. [192.30.252.207])
+        by mx.google.com with ESMTPS id pv20-20020ad45494000000b005e729548ee9si5252557qvb.133.2023.07.02.11.12.21
+        for <azfarali007.aa@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Sun, 02 Jul 2023 11:12:21 -0700 (PDT)
+Received-SPF: pass (google.com: domain of noreply@github.com designates 192.30.252.207 as permitted sender) client-ip=192.30.252.207;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@github.com header.s=pf2023 header.b=J1FYzRCA;
+       spf=pass (google.com: domain of noreply@github.com designates 192.30.252.207 as permitted sender) smtp.mailfrom=noreply@github.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=github.com
+Received: from github.com (hubbernetes-node-726c1c8.ac4-iad.github.net [10.52.210.34])
+	by smtp.github.com (Postfix) with ESMTPA id E4E861E01F4;
+	Sun,  2 Jul 2023 11:12:20 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=github.com;
+	s=pf2023; t=1688321540;
+	bh=pKCE3kp1NA2x4V9G16bvXr/b3CLqmZIhZk1jTRg4K+M=;
+	h=Date:From:To:Subject:From;
+	b=J1FYzRCARygf2/Z4hwUX55SfqyLN5L8y7+w5iCrENqgbIJ+pb+fbXNFeXT3JV8iRG
+	 5m0ThX6l7GAk5pHOE/wjaBPXwnH68mhbiJB/6uxZWfrlPr3ummEOyRGmHRufp8QUpX
+	 bM/ZeCkwjWR0tC8Mv8UFxINcvu/rEHj5mt3oKQPQ=
+Date: Sun, 02 Jul 2023 11:12:20 -0700
+From: GitHub <noreply@github.com>
+To: Syed Azfar Ali <ali4402832@cloud.neduet.edu.pk>
+Message-ID: <64a1be04e314f_17b9cd020685c@lowworker-5b6bdc9f9f-h7vbs.mail>
+Subject: [GitHub] A third-party OAuth application has been added to your
+ account
+Mime-Version: 1.0
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+X-Auto-Response-Suppress: All
+
+Hey azfarali16!
+
+A third-party OAuth application (JetBrains IDE Integration) with gist, read:org, repo, and workflow scopes was recently authorized to access your account.
+Visit https://github.com/settings/connections/applications/58566862bd2a5ff748fb for more information.
+
+To see this and other security events for your account, visit https://github.com/settings/security-log
+
+If you run into problems, please contact support by visiting https://github.com/contact
+
+Thanks,
+The GitHub Team
+

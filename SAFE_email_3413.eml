@@ -1,0 +1,76 @@
+X-GM-THRID: 1814691633041630077
+X-Gmail-Labels: Inbox,Category Updates,Unread
+Delivered-To: azfarali007.aa@gmail.com
+Received: by 2002:a0c:aa5b:0:b0:6cb:fb7c:d3f6 with SMTP id e27csp1562654qvb;
+        Sun, 3 Nov 2024 01:06:42 -0800 (PST)
+X-Google-Smtp-Source: AGHT+IEjFtHJoXkSNOjk3Kozq6pkRe6gl362PP2+aPQzXLJpzpDBkY7kt2i3HYpZY7PU0gs5v95V
+X-Received: by 2002:ac8:43d3:0:b0:462:a7d1:8e19 with SMTP id d75a77b69052e-462a7d1911dmr167636881cf.13.1730624802723;
+        Sun, 03 Nov 2024 01:06:42 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1730624802; cv=none;
+        d=google.com; s=arc-20240605;
+        b=lmRFSBVMGadRcv+fQYVeMfhRvAv8kpRQGSzqXxVdyxoXKbJkkuKd68dV3vOzg6+uOl
+         K7qBwqnkql+WyQYE+jeLxVhlKIMbwv2/Xmc2IW81sxSXPS90l5JndFntDzimqa15y7P8
+         Ohk+oidtX3j3an3FYWuCjDZGU47MCjn4ND9FfJ2jzfJc91l5hyJ2eptB4XxmkUAQjhOV
+         SZqWbUTaPgk94IdBnk5ONv0WVH0NiUMGFjq5asl06D37u1OeXpTVmtzjimPdBdF18nvv
+         WGDIX9YQOGkjGlqtxppSVsfNA4m04lLIfVuVZo2+1Lq/UoUOrUyLBdQ+TYOVGYvpiTkm
+         5rZg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=content-transfer-encoding:mime-version:subject:message-id:to:from
+         :date:dkim-signature;
+        bh=rgQozMDi6BHzZwzfzrEOlpma7ykLO//RYMVDV7z2q2Q=;
+        fh=8YTUxKGZafIL6voVrPBuDSaEt1xt7dhopFEjWXIlhec=;
+        b=VUdj73VDyj1jKMJtX2Ic/kYIsH/C0989l/7nmW8bdQa2TgmJjf+CFySMlSFA8vb1Mi
+         61xSe/oPlVmr5Ug5l0C8z7J5yiLeMn5T08xhUEVYCNqbhQL4p/qQArQvXtI7AImcpvfr
+         m92WT3q481pqmOdXMwGS4PL4SlLM2+Abzi6YgjGwRVN/8T6c76YcjV0My9JHdbZzdtsB
+         hcpTszX2Yhqs4YLoc2yCEDnZYzcrptqa/GTwjFOJBy/9vTP/Q6qhICDryWqwC/umcfza
+         8wEHgdnwfkeHHk6Ux0Gwbdix/DEpJyQ2gm6vEbf8dttzgb1FL8IkpSQbXF7AANbCILEm
+         GykA==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@github.com header.s=pf2023 header.b=GGosQ6DI;
+       spf=pass (google.com: domain of noreply@github.com designates 192.30.252.204 as permitted sender) smtp.mailfrom=noreply@github.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=github.com
+Return-Path: <noreply@github.com>
+Received: from out-21.smtp.github.com (out-21.smtp.github.com. [192.30.252.204])
+        by mx.google.com with ESMTPS id d75a77b69052e-462ad1a12bfsi87482551cf.335.2024.11.03.01.06.42
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Sun, 03 Nov 2024 01:06:42 -0800 (PST)
+Received-SPF: pass (google.com: domain of noreply@github.com designates 192.30.252.204 as permitted sender) client-ip=192.30.252.204;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@github.com header.s=pf2023 header.b=GGosQ6DI;
+       spf=pass (google.com: domain of noreply@github.com designates 192.30.252.204 as permitted sender) smtp.mailfrom=noreply@github.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=github.com
+Received: from github.com (hubbernetes-node-0da188c.ac4-iad.github.net [10.52.130.36])
+	by smtp.github.com (Postfix) with ESMTPA id 4FDAE7001E5;
+	Sun,  3 Nov 2024 01:06:42 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=github.com;
+	s=pf2023; t=1730624802;
+	bh=rgQozMDi6BHzZwzfzrEOlpma7ykLO//RYMVDV7z2q2Q=;
+	h=Date:From:To:Subject:From;
+	b=GGosQ6DIVA3VmdyWKsOq97Cfw3/VGuAl14kn1rrYtLzRBmGeDOevYB6oGodMTXJFg
+	 P+SexgjLDZQOmHlFuMhahj8Fo9nKU9nBwDOf+bVY/XdYuyQXWT2ItbLgQ4q0Wdn3d2
+	 ntyAb7v4pFIhkfsrl/FFUvDKWrtdTTBd9lh+zbLg=
+Date: Sun, 03 Nov 2024 01:06:42 -0800
+From: GitHub <noreply@github.com>
+To: Syed Azfar Ali <azfarali007.aa@gmail.com>
+Message-ID: <67273d224e1f4_921978942ec@lowworker-6c746d46d5-gwxv5.mail>
+Subject: [GitHub] A third-party OAuth application has been added to your
+ account
+Mime-Version: 1.0
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+X-Auto-Response-Suppress: All
+
+Hey azfarali16!
+
+A third-party OAuth application (lablab.ai) with read:user and user:email scopes was recently authorized to access your account.
+Visit https://github.com/settings/connections/applications/53e2683b0cad5fbbc2fb for more information.
+
+To see this and other security events for your account, visit https://github.com/settings/security-log
+
+If you run into problems, please contact support by visiting https://github.com/contact
+
+Thanks,
+The GitHub Team
+

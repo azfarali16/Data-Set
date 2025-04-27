@@ -1,0 +1,668 @@
+X-GM-THRID: 1779673262913084737
+X-Gmail-Labels: Inbox,Opened,Category Updates
+Delivered-To: azfarali007.aa@gmail.com
+Received: by 2002:a0c:db0e:0:b0:66d:13a8:25e4 with SMTP id d14csp1360708qvk;
+        Fri, 13 Oct 2023 13:24:42 -0700 (PDT)
+X-Google-Smtp-Source: AGHT+IFN2uAMQmbFDxtpios+pXWGku5LFoZTVildsnMsaUlvjYtaOXWk2ybMoBeKc9tmgHD2XOHY
+X-Received: by 2002:a92:ca0a:0:b0:351:e70:2cec with SMTP id j10-20020a92ca0a000000b003510e702cecmr37871800ils.20.1697228682489;
+        Fri, 13 Oct 2023 13:24:42 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1697228682; cv=none;
+        d=google.com; s=arc-20160816;
+        b=uQAbPju4WyYZqVFuiEj9hKIBqDtxLolEpktq1eiOq3rk9PnkKmHuSZSnhm6mQKtPiA
+         dhrBithmbMG2XnYmL73XRB2yJ92/ObyNgIYymfwBubD4Vg/dmOeeAha0ZDAN8fr8T66I
+         xJUiuQcbB2NaDjfIJ6Y1w/qJwY0SYJRBWRm7pkYIDF+tE8Jn4+QnZ7axxe+EJ6vtyU+O
+         Zhe14SgzR3G30v+/gaKhbmvZcFFLp7nWgNO4B+PIjQQww8oKx4opXz5iuAK0RTNoa5nw
+         1llncvYYLfnXAXbjrosD9ehr+thR7V1C/Sd3qqcR9eKo8RbFhv7LNPfpRaN+bzHTI8cd
+         nRCA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=list-unsubscribe:to:reply-to:subject:message-id:mime-version:from
+         :date:dkim-signature:dkim-signature;
+        bh=Gy+mNJko8v5ixTcaTFW41JmA5sXBp8WeCvlpPjXZz2M=;
+        fh=1ghr3/vhIGL7+ytS5gYC2yrxOtO8q7dbhZ8cIHrxcdk=;
+        b=PY9vlj2y7C7x7p8q0aU7fzYoeMY8ngcbyj646PBgoiHzswWb9r0BKG3Ur8GuLYgFQv
+         R1iRKo2wUSPUTlK404QZGMhfO3saHFF10aPOrG8gjN0ihbSVe3u5iSzxaP/nbL7Q2H6r
+         W40fH4uqiFOYswgFBP6XV2gJ8wPdan9RfHB/V4ATaoICXq9o+TLVGSZe8Z+3HaPzc2Tk
+         co6Ehxfz7dH0Pz+s9yM0de1jv7RMi1Hq/PiWJvqxIUo2/cJhqtpPjZC3aaKOnBlSDrwC
+         NNFQRMASc+a7HGFQ3eTB6C8Se/5MBmb40EUwWwPW9N7c1Vfbb9VdvU8HVUeDXaK+2xw9
+         MCPg==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@unity3d.com header.s=mte header.b=X8b2jLs3;
+       dkim=pass header.i=@sendgrid.info header.s=smtpapi header.b=uLe41kob;
+       spf=pass (google.com: domain of bounces+29417914-6b8a-azfarali007.aa=gmail.com@em437.unity3d.com designates 167.89.92.213 as permitted sender) smtp.mailfrom="bounces+29417914-6b8a-azfarali007.aa=gmail.com@em437.unity3d.com";
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=unity3d.com
+Return-Path: <bounces+29417914-6b8a-azfarali007.aa=gmail.com@em437.unity3d.com>
+Received: from o167-89-92-213.outbound-mail.sendgrid.net (o167-89-92-213.outbound-mail.sendgrid.net. [167.89.92.213])
+        by mx.google.com with ESMTPS id j63-20020a638b42000000b005ad1edab539si1397527pge.319.2023.10.13.13.24.41
+        for <azfarali007.aa@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Fri, 13 Oct 2023 13:24:42 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bounces+29417914-6b8a-azfarali007.aa=gmail.com@em437.unity3d.com designates 167.89.92.213 as permitted sender) client-ip=167.89.92.213;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@unity3d.com header.s=mte header.b=X8b2jLs3;
+       dkim=pass header.i=@sendgrid.info header.s=smtpapi header.b=uLe41kob;
+       spf=pass (google.com: domain of bounces+29417914-6b8a-azfarali007.aa=gmail.com@em437.unity3d.com designates 167.89.92.213 as permitted sender) smtp.mailfrom="bounces+29417914-6b8a-azfarali007.aa=gmail.com@em437.unity3d.com";
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=unity3d.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=unity3d.com;
+	h=content-type:from:mime-version:subject:reply-to:x-feedback-id:to:
+	list-unsubscribe:cc:content-type:from:subject:to;
+	s=mte; bh=Gy+mNJko8v5ixTcaTFW41JmA5sXBp8WeCvlpPjXZz2M=;
+	b=X8b2jLs3USLoa9JDmsryJI2oLXVDJDe9pYVAiR/ado8QwnsmBed+APB6ElmfUQ4ucA8X
+	kUV3lGTcW6mEwpGQmeJdrPS6/T1CDVEwrIpWvH2tsGTa4e7r4VW9MHD33JkSgCzylcbvl7
+	KVHpcqZQ0IZQ8M7is58xMama4CNMRg9K5i3sjZBocieoeaZsYY02hnMLfS59EE1dHJZzMk
+	Zyl4Ub5OWQm0QYBDOyyIlCSCQanitOX0gUFcmu7KzhD63rWz6GBvoiuqLNlcRa2fMrCqNh
+	e6h1/qO7XrH4LH3ZYtfNp492niqbJJ/pjc0Vd/xY+rtfZ1/KIcDK6y9MqXVovAPw==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=sendgrid.info;
+	h=content-type:from:mime-version:subject:reply-to:x-feedback-id:to:
+	list-unsubscribe:cc:content-type:from:subject:to;
+	s=smtpapi; bh=Gy+mNJko8v5ixTcaTFW41JmA5sXBp8WeCvlpPjXZz2M=;
+	b=uLe41kob4aa+0s/B/WjUZb2PbMPJERSR8j9YR1fis+ColbYndUXt5NRBfZJBtkj6iN7F
+	qiTe9PVFORyH7Y/ZRCyEJVFEzpNqNq9U2PK9YjZ00gFfsdXfHMtN8EYtiJeDR/PFBEWrpF
+	wz8KypRkhqZ6DKT6HRv7N2pOfzthwfJrA=
+Received: by filterdrecv-768b7fb99c-5cjw2 with SMTP id filterdrecv-768b7fb99c-5cjw2-1-6529A77F-4A
+        2023-10-13 20:24:31.613338644 +0000 UTC m=+259288.221847316
+Received: from Mjk0MTc5MTQ (unknown)
+	by geopod-ismtpd-12 (SG) with HTTP
+	id xQ8EEbPHTCG0sX17-uuxgg
+	Fri, 13 Oct 2023 20:24:31.472 +0000 (UTC)
+Content-Type: multipart/alternative; boundary=4462c5be51b5c5fe9c86e609c52172abe61323ce0f333a3554c30dada794
+Date: Fri, 13 Oct 2023 20:24:32 +0000 (UTC)
+From: Jim Whitehurst <info@unity3d.com>
+Mime-Version: 1.0
+Message-ID: <xQ8EEbPHTCG0sX17-uuxgg@geopod-ismtpd-12>
+Subject: A change in =?UTF-8?B?VW5pdHnigJlz?= leadership team
+Reply-To: noreply@unity3d.com
+X-Feedback-ID: 29417914:SG
+X-SG-EID: 
+ =?us-ascii?Q?VLRZQCHR2kXzzSWPB4gZVnddN5Efz5AaTZZ6yOKwoNl0JBGUjheFKOUGvGm82v?=
+ =?us-ascii?Q?J=2Fq7NOelWll9Biv2MfWtpiZx9+EIcp07bIhbyfJ?=
+ =?us-ascii?Q?2qZK6tB3ndpVtw5eq6EaetsyjNzp1U2BC+c=2FDOb?=
+ =?us-ascii?Q?bnO+nxU6KoZ6KUarFWMmV=2F8b=2FuUmnztsuRND738?=
+ =?us-ascii?Q?WuwNANZXPBkvFEyEqV800y5lVWIu6I5jVX518DK?=
+ =?us-ascii?Q?2fOQLO=2Fnx0f47dLk3ApESoIUkV1tWSpgjVoCw7?=
+X-SG-ID: 
+ =?us-ascii?Q?se=2F49CGmbS0sfR97ImeXvDoOrI1ra2UfBi=2FYp+tM4sZlJ2PdK+SetPMIv+rKLE?=
+ =?us-ascii?Q?zD+O8kuKHowtD22JNgMgVQg978i=2FSIh61XQxwrq?=
+ =?us-ascii?Q?3IqaGxIySh155eqFKUPgmAPXfuik9KvXR1cdEiM?=
+ =?us-ascii?Q?HT8yrbvLs62zZ0Tu4XWq73qYNPxBONLa0Q2nmYy?=
+ =?us-ascii?Q?Jca8LO0RAGh=2FW5jAd6GVEHJuA56jcyF7eMcgvOj?=
+ =?us-ascii?Q?W3z3uMj85R5mkIMjoGH+YiYHP93ApDFhWoin3Zq?=
+ =?us-ascii?Q?yN1MU0Prt7ntWF6tsgrsE91MCWzVspAQ+FkzWVE?=
+ =?us-ascii?Q?RjQQfp61pp=2FYMAeeSTTVaWCuQ8A4J+lS5tWmRNq?=
+ =?us-ascii?Q?kxJTUOOgIjOdJR78qObrRZ5d=2FTfXSK+9vFjm4+N?=
+ =?us-ascii?Q?klnWA+i8awEYO1tPr8pU0=2Fk6upDK66WAn8NODTu?=
+ =?us-ascii?Q?0mR55uwUdoZK6xHnArBUqm136i2Bo1uThT7VDhz?=
+ =?us-ascii?Q?gizke74LuDC5dOpzoMKt4N48pAS9mTpmK0PEL=2FP?=
+ =?us-ascii?Q?Qm3Wk4LUM8FBWH8eIOPfeYgJEwnk2OE+jmfUn6s?=
+ =?us-ascii?Q?W+0I9NUHfiTf2xYe9jO7lauBu3QQG5Iv1cO7iQf?=
+ =?us-ascii?Q?4N4fz9gbdIX09C0M1cnCVlgSPj3oQBfNH7Eori3?=
+ =?us-ascii?Q?FXLgTxy1pb7ZGq7aJM4qs86tJp4O164gioRu03K?=
+ =?us-ascii?Q?OXxqmJTULsPtkzD+3Fx8Q+2V6825Jp0TJimbCLu?=
+ =?us-ascii?Q?=2FMDW=2FDLUFKFSZ4B=2FPdfO7JW8eZwI+x5fnrJHr4u?=
+ =?us-ascii?Q?vYF6lpqDosH+Kl5KXPZLJU=3D?=
+To: azfarali007.aa@gmail.com
+X-Entity-ID: uaAeVQFTQBM0NWnAB5y01Q==
+List-Unsubscribe: 
+ =?us-ascii?Q?=3Cmailto=3Aunsubscribe=40em437=2Eunity3d=2Ecom=3Fsubject=3Dhttp=3A=2F=2Furl3090=2Eu?=
+ =?us-ascii?Q?nity3d=2Ecom=2Fwf=2Funsubscribe*q*upn=3DI2ZneDY?=
+ =?us-ascii?Q?Mm30bX-2BRxYz82EqVmWgovkXO1mHRl89j0THwc?=
+ =?us-ascii?Q?eRyLUjkC-2BOmn81oVuGznK2dF1mtOO1jqGN3SL?=
+ =?us-ascii?Q?PMhURYgUc6h65wpFd6giA7y8MLYAfnjGxoBBnr0?=
+ =?us-ascii?Q?8Odre5rziqYvezoDkAM5N-2B8-2FDlULjI7GaKP?=
+ =?us-ascii?Q?3xE-2B1lOAtvoURxiwOwxGbvXhc0EQgPLaHUxAR?=
+ =?us-ascii?Q?JZlGoSz-2FlWADuhzdyWzl-2BBup5K8bq6mVCBZ?=
+ =?us-ascii?Q?mxFE7gJQ-2BoXUpMlaUxwX0SkhIEspGdlYFH1xP?=
+ =?us-ascii?Q?2oxZhzHuQdi5qhVH6jDxb1DCKppDOsuBC-2FjvU?=
+ =?us-ascii?Q?-2BIBfOHI1x0Qa1OFs1CmLq0I0yF-2FpeEgUzs8?=
+ =?us-ascii?Q?rCHATdnqLc2xXS2cCdqivx4G-2F8VbUMZzka1cB?=
+ =?us-ascii?Q?Ejt3Ua9n3-2FXAJMvB6Uoy1iDfka3XlSi6HzVPw?=
+ =?us-ascii?Q?JfyAQbYcP9zeG1Ox1uW7a-2FMPTRBX0TvDc0MkD?=
+ =?us-ascii?Q?VM2GhGdDea6Wb3J9KJbzIk7cTiR3h8JT4y-2BoZ?=
+ =?us-ascii?Q?lFjPaX-2BGdq15LyFFwHCtZ7X3WdsWsYCcGhy-2?=
+ =?us-ascii?Q?BDLhR-2F2-2BREkz8LAGXsRz6N7vpVb-2Bzp3DA?=
+ =?us-ascii?Q?ex41hDg34iaIbJKN3WkRVBKAhw2z6JxG7w1c1J2?=
+ =?us-ascii?Q?NiUKEa7KMXl6UixoyG0KDHBfxHyzKmEk6ZdZfK9?=
+ =?us-ascii?Q?hpo5Qiz2rDRwdYtv-2BiaLY0tq8dpiT140W28fo?=
+ =?us-ascii?Q?7-2FC7gOagZDH21PeUELbFbDeTIewItmD4H2CB1?=
+ =?us-ascii?Q?qN4aJESqcMWLd5zD7eQiYKa4IcKyjdlkBEW85V7?=
+ =?us-ascii?Q?dJITI27W395BF-2BYA0u4i8FsV0WBnuPwd821fG?=
+ =?us-ascii?Q?Nm7mnnzyhi5C18rKhe0Lf5satWj6APbVXyjx0tY?=
+ =?us-ascii?Q?e9O4-2Fr-2FM792LVE0WhtemDwg1EYPQdoMFdgC?=
+ =?us-ascii?Q?-2FoQwmsaGpZQgbGuUmB42ZM079iIn4Mm9M5Mft?=
+ =?us-ascii?Q?gwUiAW-2BBr4Ia7835WiOJj6Zpowr00eemVXpQi?=
+ =?us-ascii?Q?e5s-2FRJykewAs83QsfX8vJn2uWCCL-2BUSs=3E?=
+
+--4462c5be51b5c5fe9c86e609c52172abe61323ce0f333a3554c30dada794
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset=utf-8
+Mime-Version: 1.0
+
+A note from Jim Whitehurst, Unity=E2=80=99s interim CEO
+
+( https://unity.com )
+View in browser
+( https://cdn.mc-weblink.sg-mktg.com/weblink/MTY5NzIyODY3MXxXWi1ySWFhRVpBLW=
+lsbHQweTd1anBkRmdnQUhtOVUtUGFmVUJ1NVQyT2VTbGpkOWN5c2czWUNkTGgtSnRBWmZjMUFmY=
+kpxUldiVFpFeHVYWTVPdEJSOUVMeXZJcjJVUFR0ek8ybFpRRS1oRlhtQ0J1cjJINHhPclc3Wjly=
+cmZ2QWQtRElhQU80V0ptZXJydmVXT1RFQ05vSHI5amN2VGVLUmdkekg0ajBETmpXREhwcTZXZzB=
+FajN3REtfakg2cTAwbDZWVDlYVjA4SkZJTFAwd1dxTW41bkk3eXdDZS1PelAzaTFtZXl2NDhEdE=
+VPOHVUQkdReEhFUkxlWWxFWWtPTmRCdHNjZGZoTjhzZUVkY2FkQVpZYTZpd3hOb1oxTGhDYmZQM=
+WdHMFE1aU93QmwyVVJzdE94Vm9ENnlScVM5YzBta1Jxa2EwMFd2azBpdXdNNUZjLVhWajdIdEpK=
+UT09fBMvs7EEiFG7ewrklZL6h4DsnUJkbaLtD68RlOqwmVAN )
+
+Earlier this week, we announced an important update regarding the future le=
+adership of Unity.
+
+John Riccitello has announced he is retiring, and I personally want to than=
+k John for his many years of service and contributions to Unity. He will re=
+main in an advisory role to support this leadership transition.
+
+I want to thank you for being a customer of Unity and for creating and grow=
+ing amazing games and real-time 3D experiences that delight your customers.=
+ Your passion is what drives Unity, and I appreciate the energy and commitm=
+ent you have shown for our tools and services.
+
+Over the next few weeks and months, I look forward to learning more about h=
+ow we can better meet your needs and seeing firsthand what you are creating=
+.
+
+I want to assure you that this announcement has no impact on our working re=
+lationship. It remains business as usual. We are fully committed to helping=
+ you create and grow interactive, real-time 3D content for years to come.
+
+Jim Whitehurst
+
+Interim CEO and President, Unity
+
+Press Release ( https://www.businesswire.com/news/home/20231009494331/en/Un=
+ity-Announces-Leadership-Transition )
+
+Unity Technologies, 30 3rd Street, San Francisco, CA 94103, United States.
+Privacy policy ( http://unity3d.com/legal/privacy-policy ) - Terms and Cond=
+itions ( http://unity3d.com/legal/terms-of-service ) - Copyright Unity Tech=
+nologies =C2=A9 2022
+--4462c5be51b5c5fe9c86e609c52172abe61323ce0f333a3554c30dada794
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset=utf-8
+Mime-Version: 1.0
+
+<!DOCTYPE html><html><head>
+  <!-- template date: may 2019 -->
+  <meta charset=3D"utf-8">
+  <meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=3D=
+1">
+  <meta name=3D"MobileOptimized" content=3D"320">
+  <meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
+  <meta name=3D"color-scheme" content=3D"light dark">
+  <meta name=3D"supported-color-schemes" content=3D"light dark">
+  <title>Unity</title>
+  <link href=3D"https://fonts.googleapis.com/css?family=3DRoboto:100,300,40=
+0,700" rel=3D"stylesheet" type=3D"text/css">
+  <link href=3D"https://fonts.googleapis.com/css?family=3DRoboto+Mono:100,3=
+00,400,700" rel=3D"stylesheet" type=3D"text/css">
+
+  <!-- main -->
+  <style type=3D"text/css">
+    :root {
+      color-scheme: light dark;
+      supported-color-schemes: light dark;
+    }
+    @media (prefers-color-scheme: dark) {
+      /* Shows Dark Mode-Only Content, Like Images */
+      .dark-img { display:block !important; width: auto !important; overflo=
+w: visible !important; float: none !important; max-height:inherit !importan=
+t; max-width:inherit !important; line-height: auto !important; margin-top:0=
+px !important; visibility:inherit !important; }
+      /* Hides Light Mode-Only Content, Like Images */
+      .light-img { display:none; display:none !important; }
+      /* Custom Dark Mode Background Color */
+      .darkmode { background-color: #121212 !important; }
+      /* Custom Dark Mode Font Colors */
+      h1, h2, p, span, b, strong, td { color: #ffffff !important; }
+    }
+    /* Shows Dark Mode-Only Content, Like Images */
+    [data-ogsc] .dark-img { display:block !important; width: auto !importan=
+t; overflow: visible !important; float: none !important; max-height:inherit=
+ !important; max-width:inherit !important; line-height: auto !important; ma=
+rgin-top:0px !important; visibility:inherit !important; }
+    /* Hides Light Mode-Only Content, Like Images */
+    [data-ogsc] .light-img { display:none; display:none !important; }
+    /* Custom Dark Mode Background Color */
+    [data-ogsc] .darkmode { background-color: #121212 !important; }
+    /* Custom Dark Mode Font Colors */
+    [data-ogsc] h1, [data-ogsc] h2, [data-ogsc] p, [data-ogsc] span, [data-=
+ogsc] b, [data-ogsc] strong, [data-ogsc] td { color: #ffffff !important; }
+  </style>
+  <style type=3D"text/css">
+    @import url(https://fonts.googleapis.com/css?family=3DRoboto:100,300,40=
+0,500,700);=20
+    @import url(https://fonts.googleapis.com/css?family=3DRoboto+Mono:100,3=
+00,400,500,700);=20
+    td {
+      font-family: 'Roboto', Arial, sans-serif;=20
+    }
+    body {
+      margin: 0;=20
+      padding: 0;=20
+    }
+    img {
+      border: 0;=20
+      max-width: 100%;=20
+      height: auto;=20
+      outline: none;=20
+      text-decoration: none;=20
+    }
+    table td {
+      border-collapse: collapse;=20
+    }
+    strong, b {
+      font-weight: 500;=20
+    }
+    .appleLinksUnityBlue a {
+      color: #000000 !important;=20
+      text-decoration: none;=20
+    }
+    .appleLinksWhite a {
+      color: #ffffff !important;=20
+      text-decoration: none;=20
+    }
+  </style>
+
+  <!-- desktop -->
+  <style type=3D"text/css">
+    @media only screen and (min-width: 600px) {
+
+    }
+  </style>
+
+  <!-- mobile -->
+  <style type=3D"text/css">
+    @media only screen and (max-width: 600px) {
+      .logo-container {
+        padding: 20px 0 !important;
+      }
+      .browser-view {
+        padding: 32px 0 !important;
+      }
+      .font14 {
+        font-size: 14px !important;=20
+        line-height: 22px !important;=20
+      }
+      .font16 {
+        font-size: 16px !important;=20
+        line-height: 24px !important;=20
+      }
+      .header {
+        padding: 0 0 25px !important;=20
+        font-size: 14px !important;=20
+        line-height: 22px !important;=20
+      }
+      .heading {
+        font-size: 20px !important;=20
+        line-height: 28px !important;=20
+      }
+      .descriptive-label {
+        font-size: 12px !important;=20
+        line-height: 20px !important;=20
+      }
+      img.logo {
+        width: 66px !important;=20
+      }
+      table.table {
+        width: 100% !important;=20
+      }
+      td.content,
+      table.content {
+        width: 92% !important;=20
+      }
+      td.footer {
+        font-size: 10px !important;=20
+      }
+      img {
+        display: block;=20
+        width: 100%;=20
+      }
+      .responsive {
+        display: block !important;
+        width: 100% !important;=20
+        height: auto !important;
+      }
+      .responsive-2 {
+        width: 47% !important;
+      }
+      .responsive-3 {
+        width: 96px !important;
+      }
+      .responsive-4 {
+        display: block;
+      }
+      .hide {
+        display:none;
+      }
+      .heading-gap {
+        line-height: 8px !important;=20
+        height: 8px !important;=20
+      }
+      .color-gap {
+        height: 50px !important;=20
+        line-height: 50px;
+      }
+      .block-gap {
+        line-height: 48px !important;=20
+        height: 48px !important;=20
+      }
+      .height8 {
+        height: 8px !important;
+        line-height: 8px !important;
+      }
+      .height12 {
+        height: 12px !important;
+        line-height: 12px !important;
+      }
+      .height4 {
+        height: 4px !important;
+        line-height: 4px !important;
+      }
+      .height16 {
+        height: 16px !important;
+        line-height: 16px !important;
+      }
+      .height24 {
+        height: 24px !important;
+        line-height: 24px !important;
+      }
+      .height32{
+        height: 32px !important;
+        line-height: 32px !important;
+      }
+      .height64 {
+        height: 64px !important;
+        line-height: 64px !important;
+      }
+      .width47 {
+        width: 47% !important;
+      }
+      .padding6 {
+        padding: 0 6% !important;
+      }
+      .padding24 {
+        padding: 0 24px !important;
+      }
+    =20
+    }
+  </style>
+
+  <!--[if mso]>
+    <style>
+        td {color: #212121; font-family: Arial,sans-serif !important; }
+        a {text-decoration: none !important; }
+  strong, b {font-weight: bold; }
+    </style>
+    <![endif]-->
+  </head>
+  <body class=3D"darkmode" style=3D"margin: 0; padding: 0; width: 100%; -we=
+bkit-text-size-adjust: none;" bgcolor=3D"#ffffff">
+  <div style=3D"font-size:0px;line-height:1px;mso-line-height-rule:exactly;=
+display:none;max-width:0px;max-height:0px;opacity:0;overflow:hidden;mso-hid=
+e:all;">
+    A note from Jim Whitehurst, Unity=E2=80=99s interim CEO
+  </div>
+    <!-- wrapper -->
+    <table class=3D"table darkmode" style=3D"border-bottom: 1px solid #eeee=
+ee; width: 100%; min-width: 100%;" width=3D"100%" cellspacing=3D"0" cellpad=
+ding=3D"0" border=3D"0" bgcolor=3D"#ffffff">
+      <tbody>
+        <!-- header -->
+       <tr>
+          <td class=3D"" align=3D"center">
+            <table class=3D"content" width=3D"600" cellspacing=3D"0" cellpa=
+dding=3D"0" border=3D"0" align=3D"center">
+              <tbody>
+                <tr>
+                  <td class=3D"logo-container" style=3D"padding: 25px 0;" a=
+lign=3D"left">
+
+                    <a href=3D"http://url3090.unity3d.com/ls/click?upn=3DvE=
+X9nigFznyBvc0R-2FJA8pGAIW-2B90OLSSuVgf68g3mKg-3DuR_-_H65ljNg3foEJU6dJQZHMcp=
+3Zdimzb4muCFBEwI-2BtxR7aXLQexRs1laU0b9joqbG63Frx-2BUOoPb1bjgVFp6rR9Fd2yhevC=
+x73tz7diy3Od-2BautHdTGeVsVtDjo3PDj8Ws-2FWfU2Uy3HG-2BDiKieGxHTjJqe3ZuuSIKeH4=
+2x6lQQKzepkdYdLSfJx-2Ba6hyNpTzv-2F3bnCIBQXkrQqkRUjOZ-2F-2BEvG8sCmbIOy52RDmF=
+feMY2Jp7o6GlgdYlYksa3bK2qGjwlp7-2Fj-2BvEx8UiR1sOQzba1DxVtF64t4Dcrbg4QK92h2d=
+MD7dEhW-2BIZ0DJqwOmu4w8H8BabgJ3zHSLU7gComuPScM1CHPTzJvSRWvm0ZUoKVCNVvIwN4uP=
+xE-2B3FQnBCFBUWO6eFnani0QtuaxJdVy7BxtOoem9q5DM2TtBYxfHA45vSf9AX44QOxx1Qmvrf=
+21PUmAMF-2FH8m5bXB5pPvFTo6UAOM0X3X3w1wb5nvbJLRJVcE3jKz-2FbLHvWjsRrVu-2BEdCi=
+92oXVoG0LSQD3v0ciWmVE1gICtOfdfg0GE4lXYUDjycEenMvJ8tseJdhPEwXzMQ1UI-2FOokloS=
+5I9HVaa-2BtRqDSbOwjInim4Yv0lG-2FFKuVeZ9g8ZQl-2FrKCONTdk-2B06HOktt0fzmZaYAQ3=
+mDVOmbzDsoRwtTRC1AkS1duexqnlFpe3ZDeyGLZgxSZ6U90ZF7unJ0Neqn56-2B8IXhh-2F6I44=
+b5-2BkKpr3SGR0m1atjXaZd9H1jYiqY4iBPAfOmTS0WC004-2BxgEkn2XP5bAT3vCU72bwi4bPY=
+FVI4szZsMajWPzPyc2O4-2Bww2rIBjRfrEZYh-2BNcR8GCMgQT8hRxXybtV3Sx5bEUiqpOINnN9=
+MwEi5lQ62wuQrpvsJBqCuWbUnpSzealmKOo1lteQUqWCJQnvdIAql0THQUWMwsG6EXLbbV3dgj-=
+2FT-2FeNwEhO5RXb54pfY" target=3D"_blank">
+
+                      <img class=3D"light-img" src=3D"https://img06.en25.co=
+m/EloquaImages/clients/Unity/%7B79c9d159-7ce7-4102-890d-ec2d92c486f8%7D_uni=
+ty-logo-lightmode.png" alt=3D"Unity" style=3D"border: 0 none; width: 77px; =
+height: auto;" width=3D"77" border=3D"0">
+
+                      <!-- The following Dark Mode logo image is hidden=20
+    with MSO conditional code and inline CSS, but will be        =20
+    revealed once Dark Mode is triggered -->
+
+                      <!--[if !mso]><! -->
+                      <div class=3D"dark-img" style=3D"display:none; overfl=
+ow:hidden; width:0px; max-height:0px; max-width:0px; line-height:0px; visib=
+ility:hidden;">
+                        <img src=3D"https://img06.en25.com/EloquaImages/cli=
+ents/Unity/%7B5da7222a-6e8b-40ab-8daa-ed74896c54b0%7D_unity-master-white.pn=
+g" alt=3D"Unity" style=3D"border: 0 none; width: 77px; height: auto;" width=
+=3D"77" border=3D"0">
+                      </div>
+                      <!--<![endif]-->
+
+                    </a>
+                  </td>
+                  <td class=3D"browser-view" style=3D"color: #757575; font-=
+family: 'Roboto', Arial, ans-serif; font-weight: 400; font-size: 12px; line=
+-height: 14px;" align=3D"right">
+                    <a href=3D"http://url3090.unity3d.com/ls/click?upn=3DvE=
+X9nigFznyBvc0R-2FJA8pMLCGSXtdRUYuQO-2Ff6t0ULGV83bKWng4kD-2FiT4j1PnEkpD4iE1h=
+-2FO-2B7Lwtslzf1olFl3KyIIqaYwz3oSRorZTW7P54c2A0-2Fdcf4jrx481npU9-2F2zNAdlF2=
+403Y8qFol-2BU9N-2BJF9h6uwM1VTcAa09u9Iqu8EI1FnOUmPp5HgtwCpYCkpRI67vh8OIaHLSI=
+Zuy-2FrZtF-2BtrdeJ0XoausHkwDfwmj-2BLS0volXSPdufdRtEYYSLokFNAttsVG1toDEGSJAr=
+Y9jA1bvje5hxnbkIOV4NfZb0FjTP08fGJogRxjrNwe6h030xF1uqEUOACkGY6mtE48EBTtVApNA=
+QyjI6OD6X3ol9ZBIKUirKpbrDs8oWD9gpqnM55dSyTpN-2FA3DK3qOIfmfZb8l2xzqgdY-2Bz7t=
+ZExl28-2FYWtatctUHjrUdsr8V80XXqAp1b8rx58aoFAIi8njMEvlFmFWQ36bdraF0IfLpq5oRy=
+GBxt56mxN5UZsRQANgLCpe3f-2BgfKIStMInny-2FUDyKekjpSWw7i-2Fuk7y5DmXLr7Snjubl-=
+2Bfv60TE6qEvvcpNkS8l04cEY8hrjVbzHNOTmLdL-2FuXd-2BFyQA-2FV7pP05KQoF0juACc1t-=
+2FBOBEMSLQgy5nVuRdPe3cENc3BjnxGhGj8zSQ-2BWJaZWuXZA611HKzqP1rUVCdVhVhaAutHmK=
+treZt3zEas24hzsqw1Pcqp2SEuI3uxYnJszM8mdFEzpBqOwfim-2FXnuUQ7Z9vaOhVAs47WJiA4=
+v8IyJirgaI5RA-3D-3DlzMm_H65ljNg3foEJU6dJQZHMcp3Zdimzb4muCFBEwI-2BtxR7aXLQex=
+Rs1laU0b9joqbG63Frx-2BUOoPb1bjgVFp6rR9Fd2yhevCx73tz7diy3Od-2BautHdTGeVsVtDj=
+o3PDj8Ws-2FWfU2Uy3HG-2BDiKieGxHTjJqe3ZuuSIKeH42x6lQQKzepkdYdLSfJx-2Ba6hyNpT=
+zv-2F3bnCIBQXkrQqkRUjOZ-2F-2BEvG8sCmbIOy52RDmFfeMY2Jp7o6GlgdYlYksa3bK2qGjwl=
+p7-2Fj-2BvEx8UiR1sOQzba1DxVtF64t4Dcrbg4QK92h2dMD7dEhW-2BIZ0DJqwOmu4w8H8Babg=
+J3zHSLU7gComuPScM1CHPTzJvSRWvm0ZUoKVCNVvIwN4uPxE-2B3FQnBCFBUWO6eFnani0Qtuax=
+JdVy7BxtOoem9q5DM2TtBYxfHA45vSf9AX44QOxx1Qmvrf21PUmAMF-2FH8m5bXB5pPvFTo6UAO=
+M0X3X3w1wb5nvbJLRJVcE3jKz-2FbLHvWjsRrVu-2BEdCi92oXVoG0LSQD3v0ciWmVE1gICtOfd=
+fg0GE4lXYUDjycEenMvJ8tseJdhPEwXzMQ1UI-2FOokloS5I9HVaa-2BtRqDSbOwjInim4Yv0lG=
+-2FFKuVeZ9g8ZQl-2FrKCONTdk-2B06HOktt0fzmZaYAQ3mDVOmbzDsoRwtTRC1AkS1duexqnlF=
+pe3ZDeyGLZgxSZ6U90ZF7unJ0Neqn56-2B8IXhh-2F6I44b5-2BkKpr3SGR0m1atjXaZd9H1jYi=
+qY4iBPAfOmTS0WC004-2BxgEkn2XP5bAT3vCU72SRuuiMf1ivuj6bZ3KL9-2Fb6BqrUHrZ3a3Bt=
+81Zk7yszWsaSZ11JzNdQpfOILvwlSGqa7SZS7iRsllr0IkkXRkLDi9rr0COBXX-2Bkgtf3g9ioc=
+rYwb9em6uXL7OnlEiaVIVpTmbipSQYfLZU9X5-2BbNV8zBcnegW2qHyi1fe5acX0o" style=3D=
+"color: #757575; text-decoration: none;">
+                      <div class=3D"">View in browser</div>
+                    </a>
+                  </td>
+                </tr>
+
+              </tbody>
+            </table>
+          </td>
+        </tr>       =20
+               =20
+
+        <!-- body -->
+        <tr>
+          <td align=3D"center">
+            <table class=3D"content" width=3D"600" cellspacing=3D"0" cellpa=
+dding=3D"0" border=3D"0" align=3D"center">
+              <tbody>
+                <tr>
+                  <td class=3D"font14" style=3D"color: #212121; font-family=
+: 'Roboto', Arial, sans-serif; font-weight: 400; font-size: 16px; line-heig=
+ht: 24px;" align=3D"left">
+
+
+    <div>
+                   =20
+                       =20
+                                =20
+                      <div style=3D"line-height: 24px; height: 24px;">&nbsp=
+;</div>
+                    </div>
+
+
+                    <!-- block 1 -->
+                 =20
+<div class=3D"height8" style=3D"line-height: 16px; height: 16px;">&nbsp;</d=
+iv>
+Earlier this week, we announced an important update regarding the future le=
+adership of Unity.=20
+<div class=3D"height8" style=3D"line-height: 16px; height: 16px;">&nbsp;</d=
+iv>
+John Riccitello has announced he is retiring, and I personally want to than=
+k John for his many years of service and contributions to Unity. He will re=
+main in an advisory role to support this leadership transition.
+<div class=3D"gap-block" style=3D"line-height: 16px; height: 16px;">&nbsp;<=
+/div>
+I want to thank you for being a customer of Unity and for creating and grow=
+ing amazing games and  real-time 3D experiences that delight your customers=
+. Your passion is what drives Unity, and I appreciate the energy and commit=
+ment you have shown for our tools and services.
+<div class=3D"height8" style=3D"line-height: 16px; height: 16px;">&nbsp;</d=
+iv>
+Over the next few weeks and months, I look forward to learning more about h=
+ow we can better meet your needs and seeing firsthand what you are creating=
+.
+<div class=3D"height8" style=3D"line-height: 16px; height: 16px;">&nbsp;</d=
+iv>
+I want to assure you that this announcement has no impact on our working re=
+lationship. It remains business as usual. We are fully committed to helping=
+ you create and grow interactive, real-time 3D content for years to come.
+<div class=3D"gap-block" style=3D"line-height: 32px; height: 32px;">&nbsp;<=
+/div>
+Jim Whitehurst
+<div class=3D"height8" style=3D"line-height: 2px; height: 2px;">&nbsp;</div=
+>
+Interim CEO and President, Unity
+<div class=3D"gap-block" style=3D"line-height: 32px; height: 32px;">&nbsp;<=
+/div>
+<a href=3D"http://url3090.unity3d.com/ls/click?upn=3DvEX9nigFznyBvc0R-2FJA8=
+pJB4BQ9yacZCysdnxX-2BYleXLxQcLrUowr7RdPNwRLEwbviwJaa6jC9oAOHwxPza88RuJ7qjpF=
+HMQ8QyYsxDfIuIDvvWSIb8phJxsYqjcWyImG7qSdTQl2KIXdaSYGosSdg-3D-3DCKiG_H65ljNg=
+3foEJU6dJQZHMcp3Zdimzb4muCFBEwI-2BtxR7aXLQexRs1laU0b9joqbG63Frx-2BUOoPb1bjg=
+VFp6rR9Fd2yhevCx73tz7diy3Od-2BautHdTGeVsVtDjo3PDj8Ws-2FWfU2Uy3HG-2BDiKieGxH=
+TjJqe3ZuuSIKeH42x6lQQKzepkdYdLSfJx-2Ba6hyNpTzv-2F3bnCIBQXkrQqkRUjOZ-2F-2BEv=
+G8sCmbIOy52RDmFfeMY2Jp7o6GlgdYlYksa3bK2qGjwlp7-2Fj-2BvEx8UiR1sOQzba1DxVtF64=
+t4Dcrbg4QK92h2dMD7dEhW-2BIZ0DJqwOmu4w8H8BabgJ3zHSLU7gComuPScM1CHPTzJvSRWvm0=
+ZUoKVCNVvIwN4uPxE-2B3FQnBCFBUWO6eFnani0QtuaxJdVy7BxtOoem9q5DM2TtBYxfHA45vSf=
+9AX44QOxx1Qmvrf21PUmAMF-2FH8m5bXB5pPvFTo6UAOM0X3X3w1wb5nvbJLRJVcE3jKz-2FbLH=
+vWjsRrVu-2BEdCi92oXVoG0LSQD3v0ciWmVE1gICtOfdfg0GE4lXYUDjycEenMvJ8tseJdhPEwX=
+zMQ1UI-2FOokloS5I9HVaa-2BtRqDSbOwjInim4Yv0lG-2FFKuVeZ9g8ZQl-2FrKCONTdk-2B06=
+HOktt0fzmZaYAQ3mDVOmbzDsoRwtTRC1AkS1duexqnlFpe3ZDeyGLZgxSZ6U90ZF7unJ0Neqn56=
+-2B8IXhh-2F6I44b5-2BkKpr3SGR0m1atjXaZd9H1jYiqY4iBPAfOmTS0WC004-2BxgEkn2XP5b=
+AT3vCU798mcIuUcw5Xi-2FDiTfDjlFkuOBRqoC4F2a382rnO-2BRY865xM29-2BZ-2FAY6T6MTE=
+dPoQqq4hddXKxuaa8XJPQaspLX1NSQqz-2Bwg4sSCZMm-2BODdzvQWwpldtnBmlYa-2FFOdEQbU=
+v21G75cuWA7Qi7tgMiG7J97BdctOYx-2FSFqNgOjaVIE" style=3D"color: #2196f3; text=
+-decoration: none;">Press Release</a>
+<div class=3D"block-gap" style=3D"line-height: 56px; height: 56px;">&nbsp;<=
+/div>
+                    <!-- /block 1 -->
+<table align=3D"center">
+<tr>
+						<td align=3D"center" class=3D"footer" style=3D"color: #A5A5A5; font-f=
+amily: 'Roboto', Arial, sans-serif; font-weight: 300; font-size: 11px; line=
+-height: 20px; margin: 0; padding: 24px 0 50px 0;"><a style=3D"color: inher=
+it; text-decoration: none">Unity Technologies, 30 3rd Street, San Francisco=
+, CA 94103, United States.</a><br />
+					=09
+						<a href=3D"http://url3090.unity3d.com/ls/click?upn=3DA9uiGOpHRihwdZwm=
+folhr20s3NZ24QXlSbLTMi8YvkA73lbV-2BxEfgzYtrAWDX4OTZ-2FB5u96VPULu9oXOaXa4Xg-=
+3D-3DLYTg_H65ljNg3foEJU6dJQZHMcp3Zdimzb4muCFBEwI-2BtxR7aXLQexRs1laU0b9joqbG=
+63Frx-2BUOoPb1bjgVFp6rR9Fd2yhevCx73tz7diy3Od-2BautHdTGeVsVtDjo3PDj8Ws-2FWfU=
+2Uy3HG-2BDiKieGxHTjJqe3ZuuSIKeH42x6lQQKzepkdYdLSfJx-2Ba6hyNpTzv-2F3bnCIBQXk=
+rQqkRUjOZ-2F-2BEvG8sCmbIOy52RDmFfeMY2Jp7o6GlgdYlYksa3bK2qGjwlp7-2Fj-2BvEx8U=
+iR1sOQzba1DxVtF64t4Dcrbg4QK92h2dMD7dEhW-2BIZ0DJqwOmu4w8H8BabgJ3zHSLU7gComuP=
+ScM1CHPTzJvSRWvm0ZUoKVCNVvIwN4uPxE-2B3FQnBCFBUWO6eFnani0QtuaxJdVy7BxtOoem9q=
+5DM2TtBYxfHA45vSf9AX44QOxx1Qmvrf21PUmAMF-2FH8m5bXB5pPvFTo6UAOM0X3X3w1wb5nvb=
+JLRJVcE3jKz-2FbLHvWjsRrVu-2BEdCi92oXVoG0LSQD3v0ciWmVE1gICtOfdfg0GE4lXYUDjyc=
+EenMvJ8tseJdhPEwXzMQ1UI-2FOokloS5I9HVaa-2BtRqDSbOwjInim4Yv0lG-2FFKuVeZ9g8ZQ=
+l-2FrKCONTdk-2B06HOktt0fzmZaYAQ3mDVOmbzDsoRwtTRC1AkS1duexqnlFpe3ZDeyGLZgxSZ=
+6U90ZF7unJ0Neqn56-2B8IXhh-2F6I44b5-2BkKpr3SGR0m1atjXaZd9H1jYiqY4iBPAfOmTS0W=
+C004-2BxgEkn2XP5bAT3vCU79EncXkLgM4A-2BZ22ubqWSNJqpxe96Zo2CdgsahzR61M5ec7mde=
+fi4-2F30GfT-2FIizEyifuaEjkdav6m9f4nhxGvXyRb-2F44h2O5HTFqKYbEw5DXCrKWzNeswFP=
+KxtGrcJ-2B6H0Ey4gB0fnPmEf9U1UuNolWePL6rb5aGD-2FCeVk4yu-2FVc" style=3D"color=
+: #606060; text-decoration: none;">Privacy policy</a> - <a href=3D"http://u=
+rl3090.unity3d.com/ls/click?upn=3DA9uiGOpHRihwdZwmfolhr20s3NZ24QXlSbLTMi8Yv=
+kDhuYNvbpoxCuLoq1uKCjq5kQBXQ8Q9nPKd6Gh4nWtOuA-3D-3DnTl__H65ljNg3foEJU6dJQZH=
+Mcp3Zdimzb4muCFBEwI-2BtxR7aXLQexRs1laU0b9joqbG63Frx-2BUOoPb1bjgVFp6rR9Fd2yh=
+evCx73tz7diy3Od-2BautHdTGeVsVtDjo3PDj8Ws-2FWfU2Uy3HG-2BDiKieGxHTjJqe3ZuuSIK=
+eH42x6lQQKzepkdYdLSfJx-2Ba6hyNpTzv-2F3bnCIBQXkrQqkRUjOZ-2F-2BEvG8sCmbIOy52R=
+DmFfeMY2Jp7o6GlgdYlYksa3bK2qGjwlp7-2Fj-2BvEx8UiR1sOQzba1DxVtF64t4Dcrbg4QK92=
+h2dMD7dEhW-2BIZ0DJqwOmu4w8H8BabgJ3zHSLU7gComuPScM1CHPTzJvSRWvm0ZUoKVCNVvIwN=
+4uPxE-2B3FQnBCFBUWO6eFnani0QtuaxJdVy7BxtOoem9q5DM2TtBYxfHA45vSf9AX44QOxx1Qm=
+vrf21PUmAMF-2FH8m5bXB5pPvFTo6UAOM0X3X3w1wb5nvbJLRJVcE3jKz-2FbLHvWjsRrVu-2BE=
+dCi92oXVoG0LSQD3v0ciWmVE1gICtOfdfg0GE4lXYUDjycEenMvJ8tseJdhPEwXzMQ1UI-2FOok=
+loS5I9HVaa-2BtRqDSbOwjInim4Yv0lG-2FFKuVeZ9g8ZQl-2FrKCONTdk-2B06HOktt0fzmZaY=
+AQ3mDVOmbzDsoRwtTRC1AkS1duexqnlFpe3ZDeyGLZgxSZ6U90ZF7unJ0Neqn56-2B8IXhh-2F6=
+I44b5-2BkKpr3SGR0m1atjXaZd9H1jYiqY4iBPAfOmTS0WC004-2BxgEkn2XP5bAT3vCU72dV8Z=
+wxv4JbHH6O5iProdMg-2BnB-2BvOeBEbLof3wKT-2FOjmrlieOfwI-2BLcYHk0IKr0PubmsWvzu=
+D-2Fp6ZfETFYZffLZ2hPmURjxDCxuZ2WcZqL2qaP6nXtajGY3x5eUGDS5IbPriMGr1x-2FSRaEr=
+oEmSCGBHwJ2IgTeJaX04PPmNYL2E" style=3D"color: #606060; text-decoration: non=
+e;">Terms and Conditions</a> - Copyright Unity Technologies &copy; 2022</td=
+>
+					</tr>
+</table>
+
+
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+
+
+          </td>
+        </tr>
+       =20
+       =20
+       =20
+      </tbody>
+    </table><img src=3D"http://url3090.unity3d.com/wf/open?upn=3DI2ZneDYMm3=
+0bX-2BRxYz82EqVmWgovkXO1mHRl89j0THwceRyLUjkC-2BOmn81oVuGznK2dF1mtOO1jqGN3SL=
+PMhURYgUc6h65wpFd6giA7y8MLYAfnjGxoBBnr08Odre5rziqYvezoDkAM5N-2B8-2FDlULjI7G=
+aKP3xE-2B1lOAtvoURxiwOwxGbvXhc0EQgPLaHUxARJZlGoSz-2FlWADuhzdyWzl-2BBup5K8bq=
+6mVCBZmxFE7gJQ-2BoXUpMlaUxwX0SkhIEspGdlYFH1xP2oxZhzHuQdi5qhVH6jDxb1DCKppDOs=
+uBC-2FjvU-2BIBfOHI1x0Qa1OFs1CmLq0I0yF-2FpeEgUzs8rCHATdnqLc2xXS2cCdqivx4G-2F=
+8VbUMZzka1cBEjt3Ua9n3-2FXAJMvB6Uoy1iDfka3XlSi6HzVPwJfyAQbYcP9zeG1Ox1uW7a-2F=
+MPTRBX0TvDc0MkDVM2GhGdDea6Wb3J9KJbzIk7cTiR3h8JT4y-2BoZlFjPaX-2BGdq15LyFFwHC=
+tZ7X3WdsWsYCcGhy-2BDLhR-2F2-2BREkz8LAGXsRz6N7vpVb-2Bzp3DAex41hDg34iaIbJKN3W=
+kRVBKAhw2z6JxG7w1c1J2NiUKEa7KMXl6UixoyG0KDHBfxHyzKmEk6ZdZfK9hpo5Qiz2rDRwdYt=
+v-2BiaLY0tq8dpiT140W28fo7-2FC7gOagZDH21PeUELbFbDeTIewItmD4H2CB1qN4aJESqcMWL=
+d5zD7eQiYKa4IcKyjdlkBEW85V7dJITI27W395BF-2BYA0u4i8FsV0WBnuPwd821fGNm7mnnzyh=
+jPQmxvZ8QnVYwr-2B9QCknXFyiGLyoc9XiKSHKbkjv2FkxN-2FJYGqJbPkGkmucjIupujfrqwHX=
+puT25CpkEzGsH4QPVHnJBULZ2q8MHd-2BYU1YUEhFDxjFb0R85kuTtd22B9o-2BvS8F1IR0sgqB=
+6FqYZ4l75Ys-2FZKPeqK81kbNe8gUJb" alt=3D"" width=3D"1" height=3D"1" border=
+=3D"0" style=3D"height:1px !important;width:1px !important;border-width:0 !=
+important;margin-top:0 !important;margin-bottom:0 !important;margin-right:0=
+ !important;margin-left:0 !important;padding-top:0 !important;padding-botto=
+m:0 !important;padding-right:0 !important;padding-left:0 !important;"/></bo=
+dy></html>
+=20
+=20
+=20
+=20
+=20
+=20
+
+--4462c5be51b5c5fe9c86e609c52172abe61323ce0f333a3554c30dada794--

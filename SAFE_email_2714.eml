@@ -1,0 +1,535 @@
+X-GM-THRID: 1800322725245504097
+X-Gmail-Labels: Inbox,Opened,Category Updates
+Delivered-To: azfarali007.aa@gmail.com
+Received: by 2002:a05:6a10:6fa7:b0:56d:7fad:f27 with SMTP id me39csp148961pxb;
+        Tue, 28 May 2024 11:39:43 -0700 (PDT)
+X-Google-Smtp-Source: AGHT+IHYzZJzsdbUpVTG27nfJc6ljZegBT4ghFP/vasRtA0cmifFaQb5RcKPXjxYXH9avcauHEMF
+X-Received: by 2002:a05:6871:811:b0:24f:d801:dff6 with SMTP id 586e51a60fabf-24fd8020ba7mr9737200fac.55.1716921544371;
+        Tue, 28 May 2024 11:39:04 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1716921544; cv=none;
+        d=google.com; s=arc-20160816;
+        b=mAuRT7llUqRqI7t21prdH85kBY1apRjlMCR4Wa/nXEw1voDTFwIfnZr4XCKIk0pVwK
+         GG7HrsdTpIWVRREp3j9kie/nLJXb7Chwq6oBUxWDWJcCE6ls2+5yVQ8ALGpkp+Tb86iF
+         tdut9P0thNphlHa7xogOaqo9yT7Ciw/cmLc3VYdm3pHCLqewuNYey17rSkkf5uwF9Siz
+         LGxxBEbXgsZnImdlb+eqcyYJ9QHoh7W43YIQ42YzsUg9zmkKkT4BdF9fN7aBiv5Vv/yK
+         yUbaI40mvix7APTVXc2rc7ig8qjFUAk8hLKPvOSc2TFbr3UuGrxVJQoOKWNSQ68VmzcJ
+         HUpA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=message-id:list-unsubscribe:to:from:subject:mime-version:date
+         :dkim-signature:dkim-signature;
+        bh=uM8PI/2hjTral7z4rddZbd9zLpylop/9UB8TopcTUpY=;
+        fh=1ghr3/vhIGL7+ytS5gYC2yrxOtO8q7dbhZ8cIHrxcdk=;
+        b=zUdii2UYb9yCDmYLVCvfSw5bzsFYtUpfHLpxwVfBlslWf40bPLlQnMdXj7pgwFrqgj
+         s8qDjzHOVg9yE9/M2rOEhAUq7xbXnzIb+f9F4UL7Bnnz48xoQu7DJGpK/3amCmPe3s7+
+         KDRZ8kRcmUC4y/7HnrCtgCGvqQ14RhlGU5Jk1RksCIjMmJkOuMUymvj5sU/8VAnbGWzU
+         ZR5fo9gIRutAV8Em7TcR76DijEP/Sd6qhMxxkLh0kdKeFC3C8Siu4eI02oGo/OmmOxWn
+         FF3gRnpYcrTNyHPTCX+2GkviJVHASzh4etYUIBTEhCJ8lgh4LmIm7pKpnp/jeCy7y2bE
+         /kkw==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@cio78101.realpython.com header.s=krs header.b=k32suDrP;
+       dkim=pass header.i=@mailgun.org header.s=mg header.b=IA+6pluC;
+       spf=pass (google.com: domain of postmaster@cio78101.realpython.com designates 159.112.241.47 as permitted sender) smtp.mailfrom=postmaster@cio78101.realpython.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=realpython.com
+Return-Path: <postmaster@cio78101.realpython.com>
+Received: from m241-47.mailgun.net (m241-47.mailgun.net. [159.112.241.47])
+        by mx.google.com with UTF8SMTPS id d75a77b69052e-43fdd7a428bsi11117171cf.532.2024.05.28.11.38.42
+        for <azfarali007.aa@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Tue, 28 May 2024 11:39:04 -0700 (PDT)
+Received-SPF: pass (google.com: domain of postmaster@cio78101.realpython.com designates 159.112.241.47 as permitted sender) client-ip=159.112.241.47;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@cio78101.realpython.com header.s=krs header.b=k32suDrP;
+       dkim=pass header.i=@mailgun.org header.s=mg header.b=IA+6pluC;
+       spf=pass (google.com: domain of postmaster@cio78101.realpython.com designates 159.112.241.47 as permitted sender) smtp.mailfrom=postmaster@cio78101.realpython.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=realpython.com
+DKIM-Signature: a=rsa-sha256; v=1; c=relaxed/relaxed; d=cio78101.realpython.com; q=dns/txt; s=krs; t=1716921522; x=1716928722;
+ h=Message-Id: List-Unsubscribe: To: To: From: From: Subject: Subject: Content-Type: Mime-Version: Date: X-Feedback-Id: Sender;
+ bh=uM8PI/2hjTral7z4rddZbd9zLpylop/9UB8TopcTUpY=;
+ b=k32suDrPyt9abH27nmz6ZrzBhQnoOsjQhBoKmiLG+eJL0OM2+Ienl6ldVOXOae+20wZSm2imd7cCtyYFKF6/xpx5fKkBPJGZmC/D1Sj5OhEhrMb1Aop6H0s1La82A7dtq/7nZbs4nLiJg93YOL6ZmN+CyGxKHKRmmEvWKycBKHI=
+DKIM-Signature: a=rsa-sha256; v=1; c=relaxed/relaxed; d=mailgun.org; q=dns/txt; s=mg; t=1716921522; x=1716928722;
+ h=Message-Id: List-Unsubscribe: To: To: From: From: Subject: Subject: Content-Type: Mime-Version: Date: X-Feedback-Id: Sender;
+ bh=uM8PI/2hjTral7z4rddZbd9zLpylop/9UB8TopcTUpY=;
+ b=IA+6pluC2a8OH1mapG6hjBKbcOmvGamRL87RIlDXb/fw6jHxShaiaR3YzbC6/inFutwVTLxscAEfockJgeq+tacYNfOOPuKIvfKrdZlDSypCb9+MnA5TQ7JwUG0XTXxuz1f7Fbe1XEyu4tNBjz0+gIEGJcfjntwvjLbPh1FZ3Ig=
+X-Feedback-Id: postmaster@cio78101.realpython.com::631103bcc0cf530fc3393d12:mailgun
+X-Mailgun-Sending-Ip: 159.112.241.47
+X-Mailgun-Sid: WyI0NDBiMSIsImF6ZmFyYWxpMDA3LmFhQGdtYWlsLmNvbSIsIjU3NGMwIl0=
+Received: from <unknown> (<unknown> []) by 204d2b97ce24 with HTTP id
+ 665624b118ca80431e27ed99; Tue, 28 May 2024 18:38:41 GMT
+Date: Tue, 28 May 2024 18:38:41 +0000
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="f7235693713a5264d6204fc3a0bee14188a04dec902e7d13a051183c03eb"
+Subject: Efficient Iterations With Python Iterators and Iterables
+From: Real Python <info@realpython.com>
+To: azfarali007.aa@gmail.com
+X-Mailgun-Dkim: true
+X-Mailgun-Native-Send: true
+X-Mailgun-Track-Clicks: false
+X-Mailgun-Track-Opens: false
+List-Unsubscribe: <https://realpython.com/account/notifications/unsubscribe/?t=eyJwIjoxMTI5NjQ5LCJzaWciOiI9PGJkXkBjUm8wIVdmcFRuSXhWJj95ZjhUdlB6NiU2Kis0b3FFfCUlIn0=>
+X-Mailer: Customer.io (dgSUzQcBANX1VtT1VgGPwH9UAlawJ1xSOapceRc=;
+ +https://whatis.customeriomail.com)
+X-Report-Abuse-To: badactor@customer.io
+X-Mailgun-Variables: {"email_id": "dgSUzQcBANX1VtT1VgGPwH9UAlawJ1xSOapceRc="}
+Message-Id: <20240528183841.5d7c982ed3c5514c@cio78101.realpython.com>
+
+--f7235693713a5264d6204fc3a0bee14188a04dec902e7d13a051183c03eb
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset="utf-8"
+
+( https://realpython.com/ )
+
+Hi Azfar,
+
+Good news, there are new notifications & updates waiting for you in your Re=
+al Python account. Here=E2=80=99s what you may have missed:
+
+New Video Course
+----------------
+
+--------------------------------------------------------
+Efficient Iterations With Python Iterators and Iterables
+--------------------------------------------------------
+
+( https://realpython.com/courses/efficient-iterations-iterators-iterables/?=
+utm_source=3Dnotification_summary&utm_medium=3Demail&utm_campaign=3D2024-05=
+-28 )
+
+In this video course, you=E2=80=99ll learn what iterators and iterables are=
+ in Python. You=E2=80=99ll learn how they differ and when to use them in yo=
+ur code. You=E2=80=99ll also learn how to create your own iterators and ite=
+rables to make data processing more efficient.
+
+Watch Now =C2=BB ( https://realpython.com/courses/efficient-iterations-iter=
+ators-iterables/?utm_source=3Dnotification_summary&utm_medium=3Demail&utm_c=
+ampaign=3D2024-05-28 )
+
+Happy Pythoning! Browse all notifications and updates waiting for you in yo=
+ur Real Python account by clicking the button below:
+
+See What=E2=80=99s New=C2=A0=C2=BB ( https://realpython.com/account/notific=
+ations/?utm_source=3Dnotification_summary&utm_medium=3Demail&utm_campaign=
+=3D2024-05-28 )
+
+Real Python emails you this summary when we haven't seen you in a while.
+Change your notification settings ( https://realpython.com/account/#notific=
+ation-settings ) or unsubscribe ( https://realpython.com/account/notificati=
+ons/unsubscribe/?t=3DeyJwIjoxMTI5NjQ5LCJzaWciOiI9PGJkXkBjUm8wIVdmcFRuSXhWJj=
+95ZjhUdlB6NiU2Kis0b3FFfCUlIn0=3D ).
+
+Real Python =C2=B7 #720-999 West Broadway, Vancouver BC V5Z 1K5, Canada
+--f7235693713a5264d6204fc3a0bee14188a04dec902e7d13a051183c03eb
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset="utf-8"
+
+<!DOCTYPE html><!-- This is from a responsive HTML email template I bought =
+at htmlemail.io --><html><head>
+    <meta name=3D"viewport" content=3D"width=3Ddevice-width"/>
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3DUTF-8=
+"/>
+    <style media=3D"all" type=3D"text/css">
+    @media only screen and (max-width: 640px) {
+      .span-2,
+      .span-3 {
+        float: none !important;
+        max-width: none !important;
+        width: 100% !important;
+      }
+      .span-2 > table,
+      .span-3 > table {
+        max-width: 100% !important;
+        width: 100% !important;
+      }
+    }
+
+    @media all {
+      .btn-primary table td:hover {
+        background-color: #34495e !important;
+      }
+      .btn-primary a:hover {
+        background-color: #34495e !important;
+        border-color: #34495e !important;
+      }
+    }
+
+    @media all {
+      .btn-secondary a:hover {
+        border-color: #34495e !important;
+        color: #34495e !important;
+      }
+    }
+
+    @media only screen and (max-width: 640px) {
+      h1 {
+        font-size: 36px !important;
+        margin-bottom: 16px !important;
+      }
+      h2 {
+        font-size: 28px !important;
+        margin-bottom: 8px !important;
+      }
+      h3 {
+        font-size: 22px !important;
+        margin-bottom: 8px !important;
+      }
+      .main p,
+      .main ul,
+      .main ol,
+      .main td,
+      .main span {
+        font-size: 16px !important;
+      }
+      .wrapper {
+        padding: 8px !important;
+      }
+      .article {
+        padding-left: 8px !important;
+        padding-right: 8px !important;
+      }
+      .content {
+        padding: 0 !important;
+      }
+      .container {
+        padding: 0 !important;
+        padding-top: 8px !important;
+        width: 100% !important;
+      }
+      .header {
+        margin-bottom: 8px !important;
+        margin-top: 0 !important;
+      }
+      .main {
+        border-left-width: 0 !important;
+        border-radius: 0 !important;
+        border-right-width: 0 !important;
+      }
+      .btn table {
+        max-width: 100% !important;
+        width: 100% !important;
+      }
+      .btn a {
+        font-size: 16px !important;
+        max-width: 100% !important;
+        width: 100% !important;
+      }
+      .img-responsive {
+        height: auto !important;
+        max-width: 100% !important;
+        width: auto !important;
+      }
+      .alert td {
+        border-radius: 0 !important;
+        font-size: 16px !important;
+        padding-bottom: 16px !important;
+        padding-left: 8px !important;
+        padding-right: 8px !important;
+        padding-top: 16px !important;
+      }
+      .receipt,
+      .receipt-container {
+        width: 100% !important;
+      }
+      .hr tr:first-of-type td,
+      .hr tr:last-of-type td {
+        height: 16px !important;
+        line-height: 16px !important;
+      }
+    }
+
+    @media all {
+      .ExternalClass {
+        width: 100%;
+      }
+      .ExternalClass,
+      .ExternalClass p,
+      .ExternalClass span,
+      .ExternalClass font,
+      .ExternalClass td,
+      .ExternalClass div {
+        line-height: 100%;
+      }
+      .apple-link a {
+        color: inherit !important;
+        font-family: inherit !important;
+        font-size: inherit !important;
+        font-weight: inherit !important;
+        line-height: inherit !important;
+        text-decoration: none !important;
+      }
+    }
+    </style>
+
+    <!--[if gte mso 9]>
+    <xml>
+ <o:OfficeDocumentSettings>
+  <o:AllowPNG/>
+  <o:PixelsPerInch>96</o:PixelsPerInch>
+ </o:OfficeDocumentSettings>
+</xml>
+<![endif]-->
+  </head>
+  <body style=3D"font-family: Helvetica, sans-serif; -webkit-font-smoothing=
+: antialiased; font-size: 14px; line-height: 1.4; -ms-text-size-adjust: 100=
+%; -webkit-text-size-adjust: 100%; background-color: #f6f6f6; margin: 0; pa=
+dding: 0;" bgcolor=3D"#f6f6f6">
+    <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"body" =
+style=3D"border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace=
+: 0pt; width: 100%; background-color: #f6f6f6;" width=3D"100%" bgcolor=3D"#=
+f6f6f6">
+      <tbody><tr>
+        <td style=3D"font-family: Helvetica, sans-serif; font-size: 14px; v=
+ertical-align: top;" valign=3D"top">=C2=A0</td>
+        <td class=3D"container" style=3D"font-family: Helvetica, sans-serif=
+; font-size: 14px; vertical-align: top; max-width: 600px; width: 600px; mar=
+gin: 0 auto; padding: 24px 0 0;" width=3D"600" valign=3D"top">
+          <div class=3D"content" style=3D"box-sizing: border-box; display: =
+block; max-width: 600px; margin: 0 auto; padding: 0;">
+
+            <!-- START CENTERED WHITE CONTAINER -->
+            <span class=3D"preheader" style=3D"color: transparent; display:=
+ none; height: 0; max-height: 0; max-width: 0; opacity: 0; overflow: hidden=
+; mso-hide: all; visibility: hidden; width: 0;"></span>
+
+            <!-- START HEADER -->
+            <div class=3D"header" style=3D"margin-bottom: 24px; margin-top:=
+ 0; width: 100%;">
+              <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=
+=3D"border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt=
+; width: 100%; min-width: 100%;" width=3D"100%">
+                <tbody><tr>
+                  <td class=3D"align-center" style=3D"font-family: Helvetic=
+a, sans-serif; font-size: 14px; vertical-align: top; text-align: center;" v=
+align=3D"top" align=3D"center">
+                    <a href=3D"https://links.realpython.com/e/c/eyJlbWFpbF9=
+pZCI6ImRnU1V6UWNCQU5YMVZ0VDFWZ0dQd0g5VUFsYXdKMXhTT2FwY2VSYz0iLCJocmVmIjoiaH=
+R0cHM6Ly9yZWFscHl0aG9uLmNvbS8iLCJpbnRlcm5hbCI6Ijk0Y2QwNzJmODQ2ZWQ1ZjU1NiIsI=
+mxpbmtfaWQiOjR9/d1e4c23efca16bd01d4cfee8623fac0e45cc904add6e12ababf302e2edc=
+1b3e9" alt=3D"Real Python" title=3D"" target=3D"_blank" style=3D"color: #34=
+98db; text-decoration: underline;"><img src=3D"https://cdn.realpython.com/s=
+tatic/real-python-logo-round-small.png" width=3D"100" height=3D"100" align=
+=3D"center" style=3D"-ms-interpolation-mode: bicubic; max-width: 100%; bord=
+er: none;"/></a>
+                  </td>
+                </tr>
+              </tbody></table>
+            </div>
+
+            <!-- END HEADER -->
+            <table class=3D"main" style=3D"border-collapse: separate; mso-t=
+able-lspace: 0pt; mso-table-rspace: 0pt; width: 100%; background-color: #ff=
+f; border-radius: 4px;" width=3D"100%" bgcolor=3D"#fff">
+
+              <!-- START MAIN CONTENT AREA -->
+              <tbody><tr>
+                <td class=3D"wrapper" style=3D"font-family: Helvetica, sans=
+-serif; font-size: 14px; vertical-align: top; box-sizing: border-box; paddi=
+ng: 24px;" valign=3D"top">
+                  <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" s=
+tyle=3D"border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace:=
+ 0pt; width: 100%;" width=3D"100%">
+
+                    <tbody><tr>
+                      <td style=3D"font-family: Helvetica, sans-serif; font=
+-size: 14px; vertical-align: top;" valign=3D"top">
+
+                      <p>Hi Azfar,</p>
+
+<p>Good news, there are new notifications &amp; updates waiting for you in =
+your Real Python account. Here=E2=80=99s what you may have missed:<br/><br/=
+></p>
+
+
+
+
+
+ =20
+   =20
+ =20
+
+
+<h3 style=3D"color: #555555; text-align: center; margin-bottom: 0; margin-t=
+op: 0;" align=3D"center">New Video Course</h3>
+<h2 style=3D"text-align: center; margin-top: 0.25em;" align=3D"center">Effi=
+cient Iterations With Python Iterators and Iterables</h2>
+
+
+  <a href=3D"https://links.realpython.com/e/c/eyJlbWFpbF9pZCI6ImRnU1V6UWNCQ=
+U5YMVZ0VDFWZ0dQd0g5VUFsYXdKMXhTT2FwY2VSYz0iLCJocmVmIjoiaHR0cHM6Ly9yZWFscHl0=
+aG9uLmNvbS9jb3Vyc2VzL2VmZmljaWVudC1pdGVyYXRpb25zLWl0ZXJhdG9ycy1pdGVyYWJsZXM=
+vP3V0bV9zb3VyY2U9bm90aWZpY2F0aW9uX3N1bW1hcnlcdTAwMjZ1dG1fbWVkaXVtPWVtYWlsXH=
+UwMDI2dXRtX2NhbXBhaWduPTIwMjQtMDUtMjgiLCJpbnRlcm5hbCI6Ijk0Y2QwNzJmODQ2ZWQ1Z=
+jU1NiIsImxpbmtfaWQiOjIxNDN9/a0f27b0373b96f8ed7f8baf740b9856cedb96cce2131295=
+ae7a3b34a8e19c24f" target=3D"_blank"><img src=3D"https://realpython.com/cdn=
+-cgi/image/width=3D720,format=3Dauto/https://files.realpython.com/media/Ite=
+rators-and-Iterables-in-Python-What-Are-They-and-How-to-Use-Them_Watermarke=
+d.5df74332ac58.jpg" style=3D"width: 100%; height: auto; border-radius: 4px;=
+ background-color: #e5c5ac;" width=3D"1280" height=3D"720" alt=3D""/></a>
+
+
+<p>In this video course, you=E2=80=99ll learn what iterators and iterables =
+are in Python. You=E2=80=99ll learn how they differ and when to use them in=
+ your code. You=E2=80=99ll also learn how to create your own iterators and =
+iterables to make data processing more efficient.</p>
+
+
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"btn btn-pr=
+imary" style=3D"border-collapse: separate; mso-table-lspace: 0pt; mso-table=
+-rspace: 0pt; width: 100%; box-sizing: border-box; min-width: 100% !importa=
+nt;" width=3D"100%">
+  <tbody>
+    <tr>
+      <td align=3D"center" style=3D"font-family: Helvetica, sans-serif; fon=
+t-size: 14px; vertical-align: top; margin-bottom: 16px;" valign=3D"top">
+        <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"bo=
+rder-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; widt=
+h: auto;">
+          <tbody>
+            <tr>
+              <td style=3D"font-family: Helvetica, sans-serif; font-size: 1=
+4px; vertical-align: top; background-color: #3498db; border-radius: 4px; te=
+xt-align: center;" valign=3D"top" bgcolor=3D"#3498db" align=3D"center"> <a =
+href=3D"https://links.realpython.com/e/c/eyJlbWFpbF9pZCI6ImRnU1V6UWNCQU5YMV=
+Z0VDFWZ0dQd0g5VUFsYXdKMXhTT2FwY2VSYz0iLCJocmVmIjoiaHR0cHM6Ly9yZWFscHl0aG9uL=
+mNvbS9jb3Vyc2VzL2VmZmljaWVudC1pdGVyYXRpb25zLWl0ZXJhdG9ycy1pdGVyYWJsZXMvP3V0=
+bV9zb3VyY2U9bm90aWZpY2F0aW9uX3N1bW1hcnlcdTAwMjZ1dG1fbWVkaXVtPWVtYWlsXHUwMDI=
+2dXRtX2NhbXBhaWduPTIwMjQtMDUtMjgiLCJpbnRlcm5hbCI6Ijk0Y2QwNzJmODQ2ZWQ1ZjU1Ni=
+IsImxpbmtfaWQiOjIxNDN9/a0f27b0373b96f8ed7f8baf740b9856cedb96cce2131295ae7a3=
+b34a8e19c24f" target=3D"_blank" style=3D"display: inline-block; color: #fff=
+fff; background-color: #3498db; border-radius: 4px; box-sizing: border-box;=
+ cursor: pointer; text-decoration: none; font-size: 14px; font-weight: bold=
+; margin: 0; padding: 12px 24px; border: 2px solid #3498db;">Watch Now =C2=
+=BB</a> </td>
+            </tr>
+          </tbody>
+        </table>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
+
+  <br/>
+
+
+
+
+<br/>
+
+
+  <p><strong>Happy Pythoning!</strong> Browse all notifications and updates=
+ waiting for you in your Real Python account by clicking the button below:<=
+/p>
+
+
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"btn btn-pr=
+imary" style=3D"border-collapse: separate; mso-table-lspace: 0pt; mso-table=
+-rspace: 0pt; width: 100%; box-sizing: border-box; min-width: 100% !importa=
+nt;" width=3D"100%">
+  <tbody>
+    <tr>
+      <td align=3D"center" style=3D"font-family: Helvetica, sans-serif; fon=
+t-size: 14px; vertical-align: top; margin-bottom: 16px;" valign=3D"top">
+        <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"bo=
+rder-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; widt=
+h: auto;">
+          <tbody>
+            <tr>
+              <td style=3D"font-family: Helvetica, sans-serif; font-size: 1=
+4px; vertical-align: top; background-color: #3498db; border-radius: 4px; te=
+xt-align: center;" valign=3D"top" bgcolor=3D"#3498db" align=3D"center"> <a =
+href=3D"https://links.realpython.com/e/c/eyJlbWFpbF9pZCI6ImRnU1V6UWNCQU5YMV=
+Z0VDFWZ0dQd0g5VUFsYXdKMXhTT2FwY2VSYz0iLCJocmVmIjoiaHR0cHM6Ly9yZWFscHl0aG9uL=
+mNvbS9hY2NvdW50L25vdGlmaWNhdGlvbnMvP3V0bV9zb3VyY2U9bm90aWZpY2F0aW9uX3N1bW1h=
+cnlcdTAwMjZ1dG1fbWVkaXVtPWVtYWlsXHUwMDI2dXRtX2NhbXBhaWduPTIwMjQtMDUtMjgiLCJ=
+pbnRlcm5hbCI6Ijk0Y2QwNzJmODQ2ZWQ1ZjU1NiIsImxpbmtfaWQiOjIxNDR9/66c3e210ec9de=
+a6285908fee0ef9b9b931af6074feb24cf2bf443442c8d44b11" target=3D"_blank" styl=
+e=3D"display: inline-block; color: #ffffff; background-color: #3498db; bord=
+er-radius: 4px; box-sizing: border-box; cursor: pointer; text-decoration: n=
+one; font-size: 14px; font-weight: bold; margin: 0; padding: 12px 24px; bor=
+der: 2px solid #3498db;">See What=E2=80=99s New=C2=A0=C2=BB</a> </td>
+            </tr>
+          </tbody>
+        </table>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<br/>
+
+                      </td>
+                    </tr>
+
+                  </tbody></table>
+                </td>
+              </tr>
+
+              <!-- END MAIN CONTENT AREA -->
+              </tbody></table>
+
+            <!-- START FOOTER -->
+            <div class=3D"footer" style=3D"clear: both; padding-top: 24px; =
+text-align: center; width: 100%;" align=3D"center">
+              <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=
+=3D"border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt=
+; width: 100%;" width=3D"100%">
+
+                <tbody><tr>
+                  <td class=3D"content-block" style=3D"font-family: Helveti=
+ca, sans-serif; vertical-align: top; padding-top: 0; padding-bottom: 24px; =
+font-size: 12px; color: #999999; text-align: center;" valign=3D"top" align=
+=3D"center">
+                    <span class=3D"apple-link" style=3D"color: #999999; fon=
+t-size: 12px; text-align: center;">Real Python emails you this summary when=
+ we haven&#39;t seen you in a while.</span>
+                    <br/><a href=3D"https://links.realpython.com/e/c/eyJlbW=
+FpbF9pZCI6ImRnU1V6UWNCQU5YMVZ0VDFWZ0dQd0g5VUFsYXdKMXhTT2FwY2VSYz0iLCJocmVmI=
+joiaHR0cHM6Ly9yZWFscHl0aG9uLmNvbS9hY2NvdW50LyNub3RpZmljYXRpb24tc2V0dGluZ3Mi=
+LCJpbnRlcm5hbCI6Ijk0Y2QwNzJmODQ2ZWQ1ZjU1NiIsImxpbmtfaWQiOjIxNDV9/d6a414a70e=
+5658e729a58d0826c2ca9f37084e28376778b01e18ae7afe66e285" style=3D"text-decor=
+ation: underline; color: #999999; font-size: 12px; text-align: center;">Cha=
+nge your notification settings</a> or <a href=3D"https://links.realpython.c=
+om/e/c/eyJlbWFpbF9pZCI6ImRnU1V6UWNCQU5YMVZ0VDFWZ0dQd0g5VUFsYXdKMXhTT2FwY2VS=
+Yz0iLCJocmVmIjoiaHR0cHM6Ly9yZWFscHl0aG9uLmNvbS9hY2NvdW50L25vdGlmaWNhdGlvbnM=
+vdW5zdWJzY3JpYmUvP3Q9ZXlKd0lqb3hNVEk1TmpRNUxDSnphV2NpT2lJOVBHSmtYa0JqVW04d0=
+lWZG1jRlJ1U1hoV0pqOTVaamhVZGxCNk5pVTJLaXMwYjNGRmZDVWxJbjA9IiwiaW50ZXJuYWwiO=
+iI5NGNkMDcyZjg0NmVkNWY1NTYiLCJsaW5rX2lkIjoyMTQ2fQ/1488e8e86b218e8264e58b3df=
+13a17339de9fa24489e6f76ba34a775d6e98446" style=3D"text-decoration: underlin=
+e; color: #999999; font-size: 12px; text-align: center;">unsubscribe</a>.
+                  </td>
+                </tr>
+               =20
+                <tr>
+                  <td class=3D"content-block" style=3D"font-family: Helveti=
+ca, sans-serif; vertical-align: top; padding-top: 0; padding-bottom: 24px; =
+font-size: 12px; color: #999999; text-align: center;" valign=3D"top" align=
+=3D"center">
+                    <span class=3D"apple-link" style=3D"color: #999999; fon=
+t-size: 12px; text-align: center;">Real Python =C2=B7 #720-999 West Broadwa=
+y, Vancouver BC V5Z 1K5, Canada</span>
+                  </td>
+                </tr>
+
+              </tbody></table>
+            </div>
+
+            <!-- END FOOTER -->
+
+<!-- END CENTERED WHITE CONTAINER -->
+</div>
+        </td>
+        <td style=3D"font-family: Helvetica, sans-serif; font-size: 14px; v=
+ertical-align: top;" valign=3D"top">=C2=A0</td>
+      </tr>
+    </tbody></table>
+ =20
+
+<img src=3D"https://links.realpython.com/e/o/eyJlbWFpbF9pZCI6ImRnU1V6UWNCQU=
+5YMVZ0VDFWZ0dQd0g5VUFsYXdKMXhTT2FwY2VSYz0ifQ=3D=3D" style=3D"height: 1px !i=
+mportant; max-height: 1px !important; max-width: 1px !important; width: 1px=
+ !important; display: none !important;" alt=3D""/></body></html>
+--f7235693713a5264d6204fc3a0bee14188a04dec902e7d13a051183c03eb--

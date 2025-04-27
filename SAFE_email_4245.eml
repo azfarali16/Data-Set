@@ -1,0 +1,823 @@
+X-GM-THRID: 1794873697409186315
+X-Gmail-Labels: Inbox,Category Updates,Unread
+Delivered-To: azfarali007.aa@gmail.com
+Received: by 2002:a05:6214:1883:b0:696:8f71:4d28 with SMTP id cx3csp1908924qvb;
+        Fri, 29 Mar 2024 08:09:06 -0700 (PDT)
+X-Google-Smtp-Source: AGHT+IHiokIsHRwyhf/hRSxlnyRDKIk5U0koj0gn/njBToJC8rGBIPbqedF9ETwhpQbixmMmIARt
+X-Received: by 2002:a0c:e30e:0:b0:696:946e:183b with SMTP id s14-20020a0ce30e000000b00696946e183bmr2399077qvl.24.1711724946074;
+        Fri, 29 Mar 2024 08:09:06 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1711724946; cv=none;
+        d=google.com; s=arc-20160816;
+        b=h6Hiabl5JDlMr+6fOwADP8rW+4/C4QGLXpKoOjdW3NItfQknfS/HIAh+dDrfTy1t4X
+         Iw6Q6WKL73o31nCqBpjhp05tiWT+0OpNXZccvX2dPGOshGslZzAh81LmJbITi/z4itkx
+         rPDMth/yOsAEUuofo012Z1za8T75Vz3S+s7pSGM9oWeilbRB4aXGVaC0dwj2rq8NYVrH
+         98Q4TVYJvCxa/kYeWZwwVtTl3Rzef/gr9Qld01IfeboSU+0CdkZfKmzq2EHfIAkrxOyj
+         UKUV3GOlE/QqBb1Sl+Kl8iFiL3a7+95kvfCjKrOwyu3Wbdc+WjaoSgCwxaONhUYk/bL2
+         YDsg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=message-id:list-unsubscribe:to:from:subject:mime-version:date
+         :dkim-signature:dkim-signature;
+        bh=K+nQ6eyPMBIPwmHbMxKxr2cSR50vdBKnBehNYuHzLFA=;
+        fh=1ghr3/vhIGL7+ytS5gYC2yrxOtO8q7dbhZ8cIHrxcdk=;
+        b=ymfP1KcVSs9Ra2J9a4/0DwoIofUN50eMNVc78VRgbO/LHRqj1FcW80mAHEZOsverSb
+         jPqIioz9leE2+31H9+LUygTwT868JgrVj8S/AzlqMgSV1wnov6eVBP2hMlrdxwgxbiIl
+         QshNDzV5ST7JIlyTewGZes2fX3Bf4Su6zl+tnGwvUejYSl7UXjT6iAyIWJimPD2HfGpQ
+         CIMrui3flwlkA4Mhe0jAqL7p09H+f2gLwlZmroW13aESORCI7pqpqzA+usuTcfAxMD+k
+         3D5bFr2XWq7PeHP20z/P8IEPSi41yCt93kiEv4l9HFgMywh4GiLo7qsAskyEJ1ubttxG
+         KlLA==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@cio78101.realpython.com header.s=krs header.b=F5DhvPef;
+       dkim=pass header.i=@mailgun.org header.s=mg header.b=ASzVKYZ8;
+       spf=pass (google.com: domain of postmaster@cio78101.realpython.com designates 159.112.241.47 as permitted sender) smtp.mailfrom=postmaster@cio78101.realpython.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=realpython.com
+Return-Path: <postmaster@cio78101.realpython.com>
+Received: from m241-47.mailgun.net (m241-47.mailgun.net. [159.112.241.47])
+        by mx.google.com with UTF8SMTPS id k11-20020a0cebcb000000b0069620a81656si3761648qvq.47.2024.03.29.08.09.05
+        for <azfarali007.aa@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Fri, 29 Mar 2024 08:09:06 -0700 (PDT)
+Received-SPF: pass (google.com: domain of postmaster@cio78101.realpython.com designates 159.112.241.47 as permitted sender) client-ip=159.112.241.47;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@cio78101.realpython.com header.s=krs header.b=F5DhvPef;
+       dkim=pass header.i=@mailgun.org header.s=mg header.b=ASzVKYZ8;
+       spf=pass (google.com: domain of postmaster@cio78101.realpython.com designates 159.112.241.47 as permitted sender) smtp.mailfrom=postmaster@cio78101.realpython.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=realpython.com
+DKIM-Signature: a=rsa-sha256; v=1; c=relaxed/relaxed; d=cio78101.realpython.com; q=dns/txt; s=krs; t=1711724945; x=1711732145;
+ h=Message-Id: List-Unsubscribe: To: To: From: From: Subject: Subject: Content-Type: Mime-Version: Date: X-Feedback-Id: Sender;
+ bh=K+nQ6eyPMBIPwmHbMxKxr2cSR50vdBKnBehNYuHzLFA=;
+ b=F5DhvPeffyJPDu/GLzhGuQWtvAZYt3O5I6Ok2Jspf6ynoBahn9WLFRtZo8KFp2zOyL0W5OKhOfOc3TnpFWatQjEgOMRmSorE/d3kcw+XEMNzCTTI5Zr6O9NutRaGqZpLXIITMRF5I8oMJxjug7lT6vzlJ4tLmn0R6oRb+PB/QxM=
+DKIM-Signature: a=rsa-sha256; v=1; c=relaxed/relaxed; d=mailgun.org; q=dns/txt; s=mg; t=1711724945; x=1711732145;
+ h=Message-Id: List-Unsubscribe: To: To: From: From: Subject: Subject: Content-Type: Mime-Version: Date: X-Feedback-Id: Sender;
+ bh=K+nQ6eyPMBIPwmHbMxKxr2cSR50vdBKnBehNYuHzLFA=;
+ b=ASzVKYZ8laVNhj/qZZdDBnUSJFO7cSNVtAaxfV2Urs322SZqYrqYCts5LxFiatJiTmTr8VUWDtViHmJLRRTA8JuUf+nCzusiyR46X3a5rPX7EgroZ5NDuaa4pTFxRJmg/8WnUQTQYTY2Gvgp/Va1X6AFF5JnBxzQZeSss55ZazY=
+X-Feedback-Id: postmaster@cio78101.realpython.com::631103bcc0cf530fc3393d12:mailgun
+X-Mailgun-Sending-Ip: 159.112.241.47
+X-Mailgun-Sid: WyI0NDBiMSIsImF6ZmFyYWxpMDA3LmFhQGdtYWlsLmNvbSIsIjU3NGMwIl0=
+Received: from <unknown> (<unknown> []) by 99244b3ec12b with HTTP id
+ 6606d991c630cc2a60e51513; Fri, 29 Mar 2024 15:09:05 GMT
+Date: Fri, 29 Mar 2024 15:09:05 +0000
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="6991585195dbbf7a43fcc44b48e246ef85d5c04759ce67997338087c0ab7"
+Subject: =?UTF-8?q?The_Real_Python_Podcast_=E2=80=93_Episode_#198:_Build_a_Video_G?=
+ =?UTF-8?q?ame_With_Python_Turtle_&_Visualize_Data_in_Seaborn?=
+From: Real Python <info@realpython.com>
+To: azfarali007.aa@gmail.com
+X-Mailgun-Track-Opens: false
+X-Mailgun-Dkim: true
+X-Mailgun-Native-Send: true
+X-Mailgun-Track-Clicks: false
+List-Unsubscribe: <https://realpython.com/account/notifications/unsubscribe/?t=eyJwIjoxMTI5NjQ5LCJzaWciOiI9PGJkXkBjUm8wIVdmcFRuSXhWJj95ZjhUdlB6NiU2Kis0b3FFfCUlIn0=>
+X-Mailer: Customer.io (dgSUzQcBANX1VtT1VgGOisHfYaSDc955fb78Ets=;
+ +https://whatis.customeriomail.com)
+X-Report-Abuse-To: badactor@customer.io
+X-Mailgun-Variables: {"email_id": "dgSUzQcBANX1VtT1VgGOisHfYaSDc955fb78Ets="}
+Message-Id: <20240329150905.b8078cffecc9fd21@cio78101.realpython.com>
+
+--6991585195dbbf7a43fcc44b48e246ef85d5c04759ce67997338087c0ab7
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset="utf-8"
+
+( https://realpython.com/ )
+
+Hi Azfar,
+
+Good news, there are new notifications & updates waiting for you in your Re=
+al Python account. Here=E2=80=99s what you may have missed:
+
+New Podcast
+-----------
+
+---------------------------------------------------------------------------=
+--------------------------------
+The Real Python Podcast =E2=80=93 Episode #198: Build a Video Game With Pyt=
+hon Turtle & Visualize Data in Seaborn
+---------------------------------------------------------------------------=
+--------------------------------
+
+( https://realpython.com/podcasts/rpp/198/?utm_source=3Dnotification_summar=
+y&utm_medium=3Demail&utm_campaign=3D2024-03-29 )
+
+Can you build a Space Invaders clone using Python=E2=80=99s built-in turtle=
+ module? What advantages does the Seaborn data visualization library provid=
+e compared to Matplotlib? Christopher Trudeau is back on the show this week=
+, along with special guest Real Python core team member Bartosz Zaczy=C5=84=
+ski. We=E2=80=99re sharing another batch of PyCoder=E2=80=99s Weekly articl=
+es and projects.
+
+Play Episode =C2=BB ( https://realpython.com/podcasts/rpp/198/?utm_source=
+=3Dnotification_summary&utm_medium=3Demail&utm_campaign=3D2024-03-29 )
+
+=C2=A0
+
+=C2=A0
+
+Community
+---------
+
+----------------------------------------------------------------------
+Join the Real Python Office Hours: Live & Online on Wednesday, April 3
+----------------------------------------------------------------------
+
+( https://realpython.com/office-hours/?utm_source=3Dnotification_summary&ut=
+m_medium=3Demail&utm_campaign=3D2024-03-29 )
+
+Join us live for the next members-only Q&A session with the Real Python Tea=
+m! You=E2=80=99ll meet fellow Pythonistas to chat about your learning progr=
+ess, ask questions, and discuss Python tips & tricks via screen sharing.
+
+Sign up for the next event on Wednesday, April 3 at the link below:
+
+View the Office Hours Schedule =C2=BB ( https://realpython.com/office-hours=
+/?utm_source=3Dnotification_summary&utm_medium=3Demail&utm_campaign=3D2024-=
+03-29 )
+
+=C2=A0
+
+=C2=A0
+
+( https://realpython.com/account/join/?utm_source=3Dnotification_summary&ut=
+m_medium=3Demail&utm_campaign=3D2024-03-29 )
+
+=C2=A0
+
+=C2=A0
+
+New Quiz
+--------
+
+--------------------------------------------------
+A Practical Introduction to Web Scraping in Python
+--------------------------------------------------
+
+( https://realpython.com/quizzes/python-web-scraping-practical-introduction=
+/?utm_source=3Dnotification_summary&utm_medium=3Demail&utm_campaign=3D2024-=
+03-29 )
+
+In this quiz, you=E2=80=99ll test your understanding of web scraping in Pyt=
+hon. Web scraping is a powerful tool for data collection and analysis. By w=
+orking through this quiz, you=E2=80=99ll revisit how to parse website data =
+using string methods, regular expressions, and HTML parsers, as well as how=
+ to interact with forms and other website components.
+
+Take the Quiz =C2=BB ( https://realpython.com/quizzes/python-web-scraping-p=
+ractical-introduction/?utm_source=3Dnotification_summary&utm_medium=3Demail=
+&utm_campaign=3D2024-03-29 )
+
+Happy Pythoning! Browse all notifications and updates waiting for you in yo=
+ur Real Python account by clicking the button below:
+
+See What=E2=80=99s New=C2=A0=C2=BB ( https://realpython.com/account/notific=
+ations/?utm_source=3Dnotification_summary&utm_medium=3Demail&utm_campaign=
+=3D2024-03-29 )
+
+Real Python emails you this summary when we haven't seen you in a while.
+Change your notification settings ( https://realpython.com/account/#notific=
+ation-settings ) or unsubscribe ( https://realpython.com/account/notificati=
+ons/unsubscribe/?t=3DeyJwIjoxMTI5NjQ5LCJzaWciOiI9PGJkXkBjUm8wIVdmcFRuSXhWJj=
+95ZjhUdlB6NiU2Kis0b3FFfCUlIn0=3D ).
+
+Real Python =C2=B7 #720-999 West Broadway, Vancouver BC V5Z 1K5, Canada
+--6991585195dbbf7a43fcc44b48e246ef85d5c04759ce67997338087c0ab7
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset="utf-8"
+
+<!DOCTYPE html><!-- This is from a responsive HTML email template I bought =
+at htmlemail.io --><html><head>
+    <meta name=3D"viewport" content=3D"width=3Ddevice-width"/>
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3DUTF-8=
+"/>
+    <style media=3D"all" type=3D"text/css">
+    @media only screen and (max-width: 640px) {
+      .span-2,
+      .span-3 {
+        float: none !important;
+        max-width: none !important;
+        width: 100% !important;
+      }
+      .span-2 > table,
+      .span-3 > table {
+        max-width: 100% !important;
+        width: 100% !important;
+      }
+    }
+
+    @media all {
+      .btn-primary table td:hover {
+        background-color: #34495e !important;
+      }
+      .btn-primary a:hover {
+        background-color: #34495e !important;
+        border-color: #34495e !important;
+      }
+    }
+
+    @media all {
+      .btn-secondary a:hover {
+        border-color: #34495e !important;
+        color: #34495e !important;
+      }
+    }
+
+    @media only screen and (max-width: 640px) {
+      h1 {
+        font-size: 36px !important;
+        margin-bottom: 16px !important;
+      }
+      h2 {
+        font-size: 28px !important;
+        margin-bottom: 8px !important;
+      }
+      h3 {
+        font-size: 22px !important;
+        margin-bottom: 8px !important;
+      }
+      .main p,
+      .main ul,
+      .main ol,
+      .main td,
+      .main span {
+        font-size: 16px !important;
+      }
+      .wrapper {
+        padding: 8px !important;
+      }
+      .article {
+        padding-left: 8px !important;
+        padding-right: 8px !important;
+      }
+      .content {
+        padding: 0 !important;
+      }
+      .container {
+        padding: 0 !important;
+        padding-top: 8px !important;
+        width: 100% !important;
+      }
+      .header {
+        margin-bottom: 8px !important;
+        margin-top: 0 !important;
+      }
+      .main {
+        border-left-width: 0 !important;
+        border-radius: 0 !important;
+        border-right-width: 0 !important;
+      }
+      .btn table {
+        max-width: 100% !important;
+        width: 100% !important;
+      }
+      .btn a {
+        font-size: 16px !important;
+        max-width: 100% !important;
+        width: 100% !important;
+      }
+      .img-responsive {
+        height: auto !important;
+        max-width: 100% !important;
+        width: auto !important;
+      }
+      .alert td {
+        border-radius: 0 !important;
+        font-size: 16px !important;
+        padding-bottom: 16px !important;
+        padding-left: 8px !important;
+        padding-right: 8px !important;
+        padding-top: 16px !important;
+      }
+      .receipt,
+      .receipt-container {
+        width: 100% !important;
+      }
+      .hr tr:first-of-type td,
+      .hr tr:last-of-type td {
+        height: 16px !important;
+        line-height: 16px !important;
+      }
+    }
+
+    @media all {
+      .ExternalClass {
+        width: 100%;
+      }
+      .ExternalClass,
+      .ExternalClass p,
+      .ExternalClass span,
+      .ExternalClass font,
+      .ExternalClass td,
+      .ExternalClass div {
+        line-height: 100%;
+      }
+      .apple-link a {
+        color: inherit !important;
+        font-family: inherit !important;
+        font-size: inherit !important;
+        font-weight: inherit !important;
+        line-height: inherit !important;
+        text-decoration: none !important;
+      }
+    }
+    </style>
+
+    <!--[if gte mso 9]>
+    <xml>
+ <o:OfficeDocumentSettings>
+  <o:AllowPNG/>
+  <o:PixelsPerInch>96</o:PixelsPerInch>
+ </o:OfficeDocumentSettings>
+</xml>
+<![endif]-->
+  </head>
+  <body style=3D"font-family: Helvetica, sans-serif; -webkit-font-smoothing=
+: antialiased; font-size: 14px; line-height: 1.4; -ms-text-size-adjust: 100=
+%; -webkit-text-size-adjust: 100%; background-color: #f6f6f6; margin: 0; pa=
+dding: 0;" bgcolor=3D"#f6f6f6">
+    <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"body" =
+style=3D"border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace=
+: 0pt; width: 100%; background-color: #f6f6f6;" width=3D"100%" bgcolor=3D"#=
+f6f6f6">
+      <tbody><tr>
+        <td style=3D"font-family: Helvetica, sans-serif; font-size: 14px; v=
+ertical-align: top;" valign=3D"top">=C2=A0</td>
+        <td class=3D"container" style=3D"font-family: Helvetica, sans-serif=
+; font-size: 14px; vertical-align: top; max-width: 600px; width: 600px; mar=
+gin: 0 auto; padding: 24px 0 0;" width=3D"600" valign=3D"top">
+          <div class=3D"content" style=3D"box-sizing: border-box; display: =
+block; max-width: 600px; margin: 0 auto; padding: 0;">
+
+            <!-- START CENTERED WHITE CONTAINER -->
+            <span class=3D"preheader" style=3D"color: transparent; display:=
+ none; height: 0; max-height: 0; max-width: 0; opacity: 0; overflow: hidden=
+; mso-hide: all; visibility: hidden; width: 0;"></span>
+
+            <!-- START HEADER -->
+            <div class=3D"header" style=3D"margin-bottom: 24px; margin-top:=
+ 0; width: 100%;">
+              <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=
+=3D"border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt=
+; width: 100%; min-width: 100%;" width=3D"100%">
+                <tbody><tr>
+                  <td class=3D"align-center" style=3D"font-family: Helvetic=
+a, sans-serif; font-size: 14px; vertical-align: top; text-align: center;" v=
+align=3D"top" align=3D"center">
+                    <a href=3D"https://links.realpython.com/e/c/eyJlbWFpbF9=
+pZCI6ImRnU1V6UWNCQU5YMVZ0VDFWZ0dPaXNIZllhU0RjOTU1ZmI3OEV0cz0iLCJocmVmIjoiaH=
+R0cHM6Ly9yZWFscHl0aG9uLmNvbS8iLCJpbnRlcm5hbCI6Ijk0Y2QwNzJmODQ2ZWQ1ZjU1NiIsI=
+mxpbmtfaWQiOjR9/dd30ba8e154deaf40e62458c381b46c91fd8c08633ed7820bc3fecc8cb2=
+45e86" alt=3D"Real Python" title=3D"" target=3D"_blank" style=3D"color: #34=
+98db; text-decoration: underline;"><img src=3D"https://cdn.realpython.com/s=
+tatic/real-python-logo-round-small.png" width=3D"100" height=3D"100" align=
+=3D"center" style=3D"-ms-interpolation-mode: bicubic; max-width: 100%; bord=
+er: none;"/></a>
+                  </td>
+                </tr>
+              </tbody></table>
+            </div>
+
+            <!-- END HEADER -->
+            <table class=3D"main" style=3D"border-collapse: separate; mso-t=
+able-lspace: 0pt; mso-table-rspace: 0pt; width: 100%; background-color: #ff=
+f; border-radius: 4px;" width=3D"100%" bgcolor=3D"#fff">
+
+              <!-- START MAIN CONTENT AREA -->
+              <tbody><tr>
+                <td class=3D"wrapper" style=3D"font-family: Helvetica, sans=
+-serif; font-size: 14px; vertical-align: top; box-sizing: border-box; paddi=
+ng: 24px;" valign=3D"top">
+                  <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" s=
+tyle=3D"border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace:=
+ 0pt; width: 100%;" width=3D"100%">
+
+                    <tbody><tr>
+                      <td style=3D"font-family: Helvetica, sans-serif; font=
+-size: 14px; vertical-align: top;" valign=3D"top">
+
+                      <p>Hi Azfar,</p>
+
+<p>Good news, there are new notifications &amp; updates waiting for you in =
+your Real Python account. Here=E2=80=99s what you may have missed:<br/><br/=
+></p>
+
+
+
+
+
+ =20
+   =20
+ =20
+
+
+<h3 style=3D"color: #555555; text-align: center; margin-bottom: 0; margin-t=
+op: 0;" align=3D"center">New Podcast</h3>
+<h2 style=3D"text-align: center; margin-top: 0.25em;" align=3D"center">The =
+Real Python Podcast =E2=80=93 Episode #198: Build a Video Game With Python =
+Turtle &amp; Visualize Data in Seaborn</h2>
+
+
+  <a href=3D"https://links.realpython.com/e/c/eyJlbWFpbF9pZCI6ImRnU1V6UWNCQ=
+U5YMVZ0VDFWZ0dPaXNIZllhU0RjOTU1ZmI3OEV0cz0iLCJocmVmIjoiaHR0cHM6Ly9yZWFscHl0=
+aG9uLmNvbS9wb2RjYXN0cy9ycHAvMTk4Lz91dG1fc291cmNlPW5vdGlmaWNhdGlvbl9zdW1tYXJ=
+5XHUwMDI2dXRtX21lZGl1bT1lbWFpbFx1MDAyNnV0bV9jYW1wYWlnbj0yMDI0LTAzLTI5IiwiaW=
+50ZXJuYWwiOiI5NGNkMDcyZjg0NmVkNWY1NTYiLCJsaW5rX2lkIjoyMTQzfQ/e2759dc702ba16=
+b0d18497c0efcda6f9d9a7361832532aa1bc7dc50741ff0077" target=3D"_blank"><img =
+src=3D"https://robocrop.realpython.net/?url=3Dhttps%3A//files.realpython.co=
+m/media/E_198_Podcast_Title.2224bbbdc8dc.jpg&amp;w=3D720&amp;sig=3Da1f1b98e=
+90772a13d3d13c1b7772387edfa5d6a7" style=3D"width: 100%; border-radius: 4px;=
+ background-color: #ffc973;" alt=3D""/></a>
+
+
+<p>Can you build a Space Invaders clone using Python=E2=80=99s built-in tur=
+tle module? What advantages does the Seaborn data visualization library pro=
+vide compared to Matplotlib? Christopher Trudeau is back on the show this w=
+eek, along with special guest Real Python core team member Bartosz Zaczy=C5=
+=84ski. We=E2=80=99re sharing another batch of PyCoder=E2=80=99s Weekly art=
+icles and projects.</p>
+
+
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"btn btn-pr=
+imary" style=3D"border-collapse: separate; mso-table-lspace: 0pt; mso-table=
+-rspace: 0pt; width: 100%; box-sizing: border-box; min-width: 100% !importa=
+nt;" width=3D"100%">
+  <tbody>
+    <tr>
+      <td align=3D"center" style=3D"font-family: Helvetica, sans-serif; fon=
+t-size: 14px; vertical-align: top; margin-bottom: 16px;" valign=3D"top">
+        <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"bo=
+rder-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; widt=
+h: auto;">
+          <tbody>
+            <tr>
+              <td style=3D"font-family: Helvetica, sans-serif; font-size: 1=
+4px; vertical-align: top; background-color: #3498db; border-radius: 4px; te=
+xt-align: center;" valign=3D"top" bgcolor=3D"#3498db" align=3D"center"> <a =
+href=3D"https://links.realpython.com/e/c/eyJlbWFpbF9pZCI6ImRnU1V6UWNCQU5YMV=
+Z0VDFWZ0dPaXNIZllhU0RjOTU1ZmI3OEV0cz0iLCJocmVmIjoiaHR0cHM6Ly9yZWFscHl0aG9uL=
+mNvbS9wb2RjYXN0cy9ycHAvMTk4Lz91dG1fc291cmNlPW5vdGlmaWNhdGlvbl9zdW1tYXJ5XHUw=
+MDI2dXRtX21lZGl1bT1lbWFpbFx1MDAyNnV0bV9jYW1wYWlnbj0yMDI0LTAzLTI5IiwiaW50ZXJ=
+uYWwiOiI5NGNkMDcyZjg0NmVkNWY1NTYiLCJsaW5rX2lkIjoyMTQzfQ/e2759dc702ba16b0d18=
+497c0efcda6f9d9a7361832532aa1bc7dc50741ff0077" target=3D"_blank" style=3D"d=
+isplay: inline-block; color: #ffffff; background-color: #3498db; border-rad=
+ius: 4px; box-sizing: border-box; cursor: pointer; text-decoration: none; f=
+ont-size: 14px; font-weight: bold; margin: 0; padding: 12px 24px; border: 2=
+px solid #3498db;">Play Episode =C2=BB</a> </td>
+            </tr>
+          </tbody>
+        </table>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
+
+  <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"hr" styl=
+e=3D"border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0p=
+t; width: 100%;" width=3D"100%">
+  <tbody>
+    <tr>
+      <td style=3D"font-family: Helvetica, sans-serif; font-size: 14px; ver=
+tical-align: top; height: 24px; line-height: 24px;" valign=3D"top">=C2=A0</=
+td>
+    </tr>
+    <tr>
+      <td height=3D"1" style=3D"font-family: Helvetica, sans-serif; font-si=
+ze: 14px; vertical-align: top; background-color: #f6f6f6; height: 1px; line=
+-height: 1px; width: 100%;" width=3D"100%" valign=3D"top" bgcolor=3D"#f6f6f=
+6"></td>
+    </tr>
+    <tr>
+      <td style=3D"font-family: Helvetica, sans-serif; font-size: 14px; ver=
+tical-align: top; height: 24px; line-height: 24px;" valign=3D"top">=C2=A0</=
+td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
+
+ =20
+   =20
+ =20
+
+
+<h3 style=3D"color: #555555; text-align: center; margin-bottom: 0; margin-t=
+op: 0;" align=3D"center">Community</h3>
+<h2 style=3D"text-align: center; margin-top: 0.25em;" align=3D"center">Join=
+ the Real Python Office Hours: Live &amp; Online on Wednesday, April 3</h2>
+
+
+  <a href=3D"https://links.realpython.com/e/c/eyJlbWFpbF9pZCI6ImRnU1V6UWNCQ=
+U5YMVZ0VDFWZ0dPaXNIZllhU0RjOTU1ZmI3OEV0cz0iLCJocmVmIjoiaHR0cHM6Ly9yZWFscHl0=
+aG9uLmNvbS9vZmZpY2UtaG91cnMvP3V0bV9zb3VyY2U9bm90aWZpY2F0aW9uX3N1bW1hcnlcdTA=
+wMjZ1dG1fbWVkaXVtPWVtYWlsXHUwMDI2dXRtX2NhbXBhaWduPTIwMjQtMDMtMjkiLCJpbnRlcm=
+5hbCI6Ijk0Y2QwNzJmODQ2ZWQ1ZjU1NiIsImxpbmtfaWQiOjIxNDN9/fb85903a1f142ea31e93=
+1f412a5c2c793078870213f9307e64ebc1abab8af96a" target=3D"_blank"><img src=3D=
+"https://robocrop.realpython.net/?url=3Dhttps%3A//files.realpython.com/medi=
+a/Office-Hours_Watermarked.c3d46e4f8841.jpg&amp;w=3D720&amp;sig=3D28d6645dc=
+be22c9bb1846ea0f856459446e9f758" style=3D"width: 100%; border-radius: 4px; =
+background-color: #abe0e6;" alt=3D""/></a>
+
+
+<p>Join us live for the next members-only Q&amp;A session with the Real Pyt=
+hon Team! You=E2=80=99ll meet fellow Pythonistas to chat about your learnin=
+g progress, ask questions, and discuss Python tips &amp; tricks via screen =
+sharing.</p>
+<p>Sign up for the next event on <em>Wednesday, April 3</em> at the link be=
+low:</p>
+
+
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"btn btn-pr=
+imary" style=3D"border-collapse: separate; mso-table-lspace: 0pt; mso-table=
+-rspace: 0pt; width: 100%; box-sizing: border-box; min-width: 100% !importa=
+nt;" width=3D"100%">
+  <tbody>
+    <tr>
+      <td align=3D"center" style=3D"font-family: Helvetica, sans-serif; fon=
+t-size: 14px; vertical-align: top; margin-bottom: 16px;" valign=3D"top">
+        <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"bo=
+rder-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; widt=
+h: auto;">
+          <tbody>
+            <tr>
+              <td style=3D"font-family: Helvetica, sans-serif; font-size: 1=
+4px; vertical-align: top; background-color: #3498db; border-radius: 4px; te=
+xt-align: center;" valign=3D"top" bgcolor=3D"#3498db" align=3D"center"> <a =
+href=3D"https://links.realpython.com/e/c/eyJlbWFpbF9pZCI6ImRnU1V6UWNCQU5YMV=
+Z0VDFWZ0dPaXNIZllhU0RjOTU1ZmI3OEV0cz0iLCJocmVmIjoiaHR0cHM6Ly9yZWFscHl0aG9uL=
+mNvbS9vZmZpY2UtaG91cnMvP3V0bV9zb3VyY2U9bm90aWZpY2F0aW9uX3N1bW1hcnlcdTAwMjZ1=
+dG1fbWVkaXVtPWVtYWlsXHUwMDI2dXRtX2NhbXBhaWduPTIwMjQtMDMtMjkiLCJpbnRlcm5hbCI=
+6Ijk0Y2QwNzJmODQ2ZWQ1ZjU1NiIsImxpbmtfaWQiOjIxNDN9/fb85903a1f142ea31e931f412=
+a5c2c793078870213f9307e64ebc1abab8af96a" target=3D"_blank" style=3D"display=
+: inline-block; color: #ffffff; background-color: #3498db; border-radius: 4=
+px; box-sizing: border-box; cursor: pointer; text-decoration: none; font-si=
+ze: 14px; font-weight: bold; margin: 0; padding: 12px 24px; border: 2px sol=
+id #3498db;">View the Office Hours Schedule =C2=BB</a> </td>
+            </tr>
+          </tbody>
+        </table>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+  <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"hr" styl=
+e=3D"border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0p=
+t; width: 100%;" width=3D"100%">
+  <tbody>
+    <tr>
+      <td style=3D"font-family: Helvetica, sans-serif; font-size: 14px; ver=
+tical-align: top; height: 24px; line-height: 24px;" valign=3D"top">=C2=A0</=
+td>
+    </tr>
+    <tr>
+      <td height=3D"1" style=3D"font-family: Helvetica, sans-serif; font-si=
+ze: 14px; vertical-align: top; background-color: #f6f6f6; height: 1px; line=
+-height: 1px; width: 100%;" width=3D"100%" valign=3D"top" bgcolor=3D"#f6f6f=
+6"></td>
+    </tr>
+    <tr>
+      <td style=3D"font-family: Helvetica, sans-serif; font-size: 14px; ver=
+tical-align: top; height: 24px; line-height: 24px;" valign=3D"top">=C2=A0</=
+td>
+    </tr>
+  </tbody>
+</table>
+
+ =20
+    <a href=3D"https://links.realpython.com/e/c/eyJlbWFpbF9pZCI6ImRnU1V6UWN=
+CQU5YMVZ0VDFWZ0dPaXNIZllhU0RjOTU1ZmI3OEV0cz0iLCJocmVmIjoiaHR0cHM6Ly9yZWFscH=
+l0aG9uLmNvbS9hY2NvdW50L2pvaW4vP3V0bV9zb3VyY2U9bm90aWZpY2F0aW9uX3N1bW1hcnlcd=
+TAwMjZ1dG1fbWVkaXVtPWVtYWlsXHUwMDI2dXRtX2NhbXBhaWduPTIwMjQtMDMtMjkiLCJpbnRl=
+cm5hbCI6Ijk0Y2QwNzJmODQ2ZWQ1ZjU1NiIsImxpbmtfaWQiOjIxNDd9/96cb38327ad6abafa1=
+9c6be612232803c2d315654930943cdcb8f5c7d0f414e2" target=3D"_blank"><img src=
+=3D"https://realpython.com/static/emails/inline-4x1-v1.png" style=3D"width:=
+ 100%; border-radius: 4px; display: block;" alt=3D""/></a>
+ =20
+
+
+
+  <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"hr" styl=
+e=3D"border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0p=
+t; width: 100%;" width=3D"100%">
+  <tbody>
+    <tr>
+      <td style=3D"font-family: Helvetica, sans-serif; font-size: 14px; ver=
+tical-align: top; height: 24px; line-height: 24px;" valign=3D"top">=C2=A0</=
+td>
+    </tr>
+    <tr>
+      <td height=3D"1" style=3D"font-family: Helvetica, sans-serif; font-si=
+ze: 14px; vertical-align: top; background-color: #f6f6f6; height: 1px; line=
+-height: 1px; width: 100%;" width=3D"100%" valign=3D"top" bgcolor=3D"#f6f6f=
+6"></td>
+    </tr>
+    <tr>
+      <td style=3D"font-family: Helvetica, sans-serif; font-size: 14px; ver=
+tical-align: top; height: 24px; line-height: 24px;" valign=3D"top">=C2=A0</=
+td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
+
+ =20
+   =20
+ =20
+
+
+<h3 style=3D"color: #555555; text-align: center; margin-bottom: 0; margin-t=
+op: 0;" align=3D"center">New Quiz</h3>
+<h2 style=3D"text-align: center; margin-top: 0.25em;" align=3D"center">A Pr=
+actical Introduction to Web Scraping in Python</h2>
+
+
+  <a href=3D"https://links.realpython.com/e/c/eyJlbWFpbF9pZCI6ImRnU1V6UWNCQ=
+U5YMVZ0VDFWZ0dPaXNIZllhU0RjOTU1ZmI3OEV0cz0iLCJocmVmIjoiaHR0cHM6Ly9yZWFscHl0=
+aG9uLmNvbS9xdWl6emVzL3B5dGhvbi13ZWItc2NyYXBpbmctcHJhY3RpY2FsLWludHJvZHVjdGl=
+vbi8_dXRtX3NvdXJjZT1ub3RpZmljYXRpb25fc3VtbWFyeVx1MDAyNnV0bV9tZWRpdW09ZW1haW=
+xcdTAwMjZ1dG1fY2FtcGFpZ249MjAyNC0wMy0yOSIsImludGVybmFsIjoiOTRjZDA3MmY4NDZlZ=
+DVmNTU2IiwibGlua19pZCI6MjE0M30/e23bf15fadc5155088bd41500ad66e568355ac16e0d8=
+fcd0ca1d37aa35f0591d" target=3D"_blank"><img src=3D"https://robocrop.realpy=
+thon.net/?url=3Dhttps%3A//files.realpython.com/media/Python-Basics-Chapter-=
+on-Web-Scraping_Watermarked.f8d56f56c22c.jpg&amp;w=3D720&amp;sig=3D76ef62a7=
+32b48460b3ef2405f2ccb3efc203d733" style=3D"width: 100%; border-radius: 4px;=
+ background-color: #abe5b2;" alt=3D""/></a>
+
+
+<p>In this quiz, you=E2=80=99ll test your understanding of web scraping in =
+Python. Web scraping is a powerful tool for data collection and analysis. B=
+y working through this quiz, you=E2=80=99ll revisit how to parse website da=
+ta using string methods, regular expressions, and HTML parsers, as well as =
+how to interact with forms and other website components.</p>
+
+
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"btn btn-pr=
+imary" style=3D"border-collapse: separate; mso-table-lspace: 0pt; mso-table=
+-rspace: 0pt; width: 100%; box-sizing: border-box; min-width: 100% !importa=
+nt;" width=3D"100%">
+  <tbody>
+    <tr>
+      <td align=3D"center" style=3D"font-family: Helvetica, sans-serif; fon=
+t-size: 14px; vertical-align: top; margin-bottom: 16px;" valign=3D"top">
+        <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"bo=
+rder-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; widt=
+h: auto;">
+          <tbody>
+            <tr>
+              <td style=3D"font-family: Helvetica, sans-serif; font-size: 1=
+4px; vertical-align: top; background-color: #3498db; border-radius: 4px; te=
+xt-align: center;" valign=3D"top" bgcolor=3D"#3498db" align=3D"center"> <a =
+href=3D"https://links.realpython.com/e/c/eyJlbWFpbF9pZCI6ImRnU1V6UWNCQU5YMV=
+Z0VDFWZ0dPaXNIZllhU0RjOTU1ZmI3OEV0cz0iLCJocmVmIjoiaHR0cHM6Ly9yZWFscHl0aG9uL=
+mNvbS9xdWl6emVzL3B5dGhvbi13ZWItc2NyYXBpbmctcHJhY3RpY2FsLWludHJvZHVjdGlvbi8_=
+dXRtX3NvdXJjZT1ub3RpZmljYXRpb25fc3VtbWFyeVx1MDAyNnV0bV9tZWRpdW09ZW1haWxcdTA=
+wMjZ1dG1fY2FtcGFpZ249MjAyNC0wMy0yOSIsImludGVybmFsIjoiOTRjZDA3MmY4NDZlZDVmNT=
+U2IiwibGlua19pZCI6MjE0M30/e23bf15fadc5155088bd41500ad66e568355ac16e0d8fcd0c=
+a1d37aa35f0591d" target=3D"_blank" style=3D"display: inline-block; color: #=
+ffffff; background-color: #3498db; border-radius: 4px; box-sizing: border-b=
+ox; cursor: pointer; text-decoration: none; font-size: 14px; font-weight: b=
+old; margin: 0; padding: 12px 24px; border: 2px solid #3498db;">Take the Qu=
+iz =C2=BB</a> </td>
+            </tr>
+          </tbody>
+        </table>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
+
+  <br/>
+
+
+
+
+<br/>
+
+
+  <p><strong>Happy Pythoning!</strong> Browse all notifications and updates=
+ waiting for you in your Real Python account by clicking the button below:<=
+/p>
+
+
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"btn btn-pr=
+imary" style=3D"border-collapse: separate; mso-table-lspace: 0pt; mso-table=
+-rspace: 0pt; width: 100%; box-sizing: border-box; min-width: 100% !importa=
+nt;" width=3D"100%">
+  <tbody>
+    <tr>
+      <td align=3D"center" style=3D"font-family: Helvetica, sans-serif; fon=
+t-size: 14px; vertical-align: top; margin-bottom: 16px;" valign=3D"top">
+        <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"bo=
+rder-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; widt=
+h: auto;">
+          <tbody>
+            <tr>
+              <td style=3D"font-family: Helvetica, sans-serif; font-size: 1=
+4px; vertical-align: top; background-color: #3498db; border-radius: 4px; te=
+xt-align: center;" valign=3D"top" bgcolor=3D"#3498db" align=3D"center"> <a =
+href=3D"https://links.realpython.com/e/c/eyJlbWFpbF9pZCI6ImRnU1V6UWNCQU5YMV=
+Z0VDFWZ0dPaXNIZllhU0RjOTU1ZmI3OEV0cz0iLCJocmVmIjoiaHR0cHM6Ly9yZWFscHl0aG9uL=
+mNvbS9hY2NvdW50L25vdGlmaWNhdGlvbnMvP3V0bV9zb3VyY2U9bm90aWZpY2F0aW9uX3N1bW1h=
+cnlcdTAwMjZ1dG1fbWVkaXVtPWVtYWlsXHUwMDI2dXRtX2NhbXBhaWduPTIwMjQtMDMtMjkiLCJ=
+pbnRlcm5hbCI6Ijk0Y2QwNzJmODQ2ZWQ1ZjU1NiIsImxpbmtfaWQiOjIxNDR9/35af2c0b903fa=
+6587d1fa6258fcea5220f84a6430c9bf7244665795c6e2be2ea" target=3D"_blank" styl=
+e=3D"display: inline-block; color: #ffffff; background-color: #3498db; bord=
+er-radius: 4px; box-sizing: border-box; cursor: pointer; text-decoration: n=
+one; font-size: 14px; font-weight: bold; margin: 0; padding: 12px 24px; bor=
+der: 2px solid #3498db;">See What=E2=80=99s New=C2=A0=C2=BB</a> </td>
+            </tr>
+          </tbody>
+        </table>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<br/>
+
+                      </td>
+                    </tr>
+
+                  </tbody></table>
+                </td>
+              </tr>
+
+              <!-- END MAIN CONTENT AREA -->
+              </tbody></table>
+
+            <!-- START FOOTER -->
+            <div class=3D"footer" style=3D"clear: both; padding-top: 24px; =
+text-align: center; width: 100%;" align=3D"center">
+              <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=
+=3D"border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt=
+; width: 100%;" width=3D"100%">
+
+                <tbody><tr>
+                  <td class=3D"content-block" style=3D"font-family: Helveti=
+ca, sans-serif; vertical-align: top; padding-top: 0; padding-bottom: 24px; =
+font-size: 12px; color: #999999; text-align: center;" valign=3D"top" align=
+=3D"center">
+                    <span class=3D"apple-link" style=3D"color: #999999; fon=
+t-size: 12px; text-align: center;">Real Python emails you this summary when=
+ we haven&#39;t seen you in a while.</span>
+                    <br/><a href=3D"https://links.realpython.com/e/c/eyJlbW=
+FpbF9pZCI6ImRnU1V6UWNCQU5YMVZ0VDFWZ0dPaXNIZllhU0RjOTU1ZmI3OEV0cz0iLCJocmVmI=
+joiaHR0cHM6Ly9yZWFscHl0aG9uLmNvbS9hY2NvdW50LyNub3RpZmljYXRpb24tc2V0dGluZ3Mi=
+LCJpbnRlcm5hbCI6Ijk0Y2QwNzJmODQ2ZWQ1ZjU1NiIsImxpbmtfaWQiOjIxNDV9/86538c73cd=
+2804e76f0a1688032db63056b788f988baaa6647261a7ce2f380a0" style=3D"text-decor=
+ation: underline; color: #999999; font-size: 12px; text-align: center;">Cha=
+nge your notification settings</a> or <a href=3D"https://links.realpython.c=
+om/e/c/eyJlbWFpbF9pZCI6ImRnU1V6UWNCQU5YMVZ0VDFWZ0dPaXNIZllhU0RjOTU1ZmI3OEV0=
+cz0iLCJocmVmIjoiaHR0cHM6Ly9yZWFscHl0aG9uLmNvbS9hY2NvdW50L25vdGlmaWNhdGlvbnM=
+vdW5zdWJzY3JpYmUvP3Q9ZXlKd0lqb3hNVEk1TmpRNUxDSnphV2NpT2lJOVBHSmtYa0JqVW04d0=
+lWZG1jRlJ1U1hoV0pqOTVaamhVZGxCNk5pVTJLaXMwYjNGRmZDVWxJbjA9IiwiaW50ZXJuYWwiO=
+iI5NGNkMDcyZjg0NmVkNWY1NTYiLCJsaW5rX2lkIjoyMTQ2fQ/ee2eee6835a92e9165832b054=
+c3ba094c1698edd7023ded9ccef9a7020b903a9" style=3D"text-decoration: underlin=
+e; color: #999999; font-size: 12px; text-align: center;">unsubscribe</a>.
+                  </td>
+                </tr>
+               =20
+                <tr>
+                  <td class=3D"content-block" style=3D"font-family: Helveti=
+ca, sans-serif; vertical-align: top; padding-top: 0; padding-bottom: 24px; =
+font-size: 12px; color: #999999; text-align: center;" valign=3D"top" align=
+=3D"center">
+                    <span class=3D"apple-link" style=3D"color: #999999; fon=
+t-size: 12px; text-align: center;">Real Python =C2=B7 #720-999 West Broadwa=
+y, Vancouver BC V5Z 1K5, Canada</span>
+                  </td>
+                </tr>
+
+              </tbody></table>
+            </div>
+
+            <!-- END FOOTER -->
+
+<!-- END CENTERED WHITE CONTAINER -->
+</div>
+        </td>
+        <td style=3D"font-family: Helvetica, sans-serif; font-size: 14px; v=
+ertical-align: top;" valign=3D"top">=C2=A0</td>
+      </tr>
+    </tbody></table>
+ =20
+
+<img src=3D"https://links.realpython.com/e/o/eyJlbWFpbF9pZCI6ImRnU1V6UWNCQU=
+5YMVZ0VDFWZ0dPaXNIZllhU0RjOTU1ZmI3OEV0cz0ifQ=3D=3D" style=3D"height: 1px !i=
+mportant; max-height: 1px !important; max-width: 1px !important; width: 1px=
+ !important; display: none !important;" alt=3D""/></body></html>
+--6991585195dbbf7a43fcc44b48e246ef85d5c04759ce67997338087c0ab7--

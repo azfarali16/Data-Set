@@ -1,0 +1,1831 @@
+X-GM-THRID: 1750549083004268963
+X-Gmail-Labels: Inbox,Category Updates,Unread
+Delivered-To: azfarali007.aa@gmail.com
+Received: by 2002:a05:6358:4ea2:b0:dc:68eb:72db with SMTP id ce34csp5934346rwb;
+        Sat, 26 Nov 2022 01:08:20 -0800 (PST)
+X-Google-Smtp-Source: AA0mqf7aC7R+3j7q/Y4YJphGuvIxk1BdwoCHjt/g25F52LjrKdNu56vCscxm+AoYTMyBo1tOxVTN
+X-Received: by 2002:a05:6871:b09:b0:132:4992:9d23 with SMTP id fq9-20020a0568710b0900b0013249929d23mr27507245oab.206.1669453699792;
+        Sat, 26 Nov 2022 01:08:19 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1669453699; cv=none;
+        d=google.com; s=arc-20160816;
+        b=IfJT6raCXxghR7p7zOAPGrpuKZ5hCSGmwbkH2+ec1M9CwzyFGzUva6fXzdBfaL+mVQ
+         MaYKnK7ZkO7JXOJjp5M0IMQylOmDD6N624b3CqQLq1ERQz04Cbp6kU5YtzWohV1pMmt7
+         849JYKLSuwVT0ik9R3dYC6naBf4Ndw242clMvulDlHpDgsrByLgm3tTs2NfwN2cuWcYi
+         mXXANWwofp81T18xQsP9fXu42UltZW3MkDJJM0XUvFkvQ/KNG4s0Z4XC5aj03grDlvXw
+         x4Hjz4YvT/hYxptW0GwL9cZWduRnHROSyx+AECjkc+5wiUHvAc7r38BAREh7itlJ3SEG
+         B7cA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=require-recipient-valid-since:feedback-id:list-unsubscribe:date:to
+         :mime-version:subject:message-id:from:dkim-signature:dkim-signature;
+        bh=bLc29slWuFEy/7mUZYzUlIFTmb3ZVL4LUiz5tvP54pQ=;
+        b=hJFrghv/DCHf2om0yuP412dj6hBo4aPoiDOJrXAFxP/f9v26/Vs7odCrEpaYOCftG3
+         qUewoDvXORRdDKHgGLlLWgdDrx2ylO6yF79SLgtIvA2SUQyJWSf06vv/vtcpZKyIIbO0
+         RlsY93Y7a5xcRNmutWu07KDjmeoHc6SwVpnMamr+x0A7RfrcxF//Diu5At0mZ4MGkiU3
+         Yt4hoeNDdFCyBFoKsIQ4Q6UCMtdz5MEDd+AzEF5QtBi4WwnOVazzDCD8I1LJUasyl6LF
+         Y8bN4PV8qoMew+mYf6rRyoSGTYuHIxqQhtiLey+6I8lWQq6JMIL+ildQgEeV5XGbQdtq
+         Nz4w==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@linkedin.com header.s=d2048-201806-01 header.b=plgfcDDt;
+       dkim=pass header.i=@maild.linkedin.com header.s=proddkim1024 header.b=bfj4RXxp;
+       spf=pass (google.com: domain of s-2kevs7y6frhw5t1czn01hiakoubj3wehpfeveg27ylmidmjlixmw7n8h@bounce.linkedin.com designates 2620:109:c003:104::179 as permitted sender) smtp.mailfrom=s-2kevs7y6frhw5t1czn01hiakoubj3wehpfeveg27ylmidmjlixmw7n8h@bounce.linkedin.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=linkedin.com
+Return-Path: <s-2kevs7y6frhw5t1czn01hiakoubj3wehpfeveg27ylmidmjlixmw7n8h@bounce.linkedin.com>
+Received: from maild-cc.linkedin.com (maild-cc.linkedin.com. [2620:109:c003:104::179])
+        by mx.google.com with ESMTPS id be32-20020a05687058a000b001415c7cc340si5244058oab.116.2022.11.26.01.08.19
+        for <azfarali007.aa@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Sat, 26 Nov 2022 01:08:19 -0800 (PST)
+Received-SPF: pass (google.com: domain of s-2kevs7y6frhw5t1czn01hiakoubj3wehpfeveg27ylmidmjlixmw7n8h@bounce.linkedin.com designates 2620:109:c003:104::179 as permitted sender) client-ip=2620:109:c003:104::179;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@linkedin.com header.s=d2048-201806-01 header.b=plgfcDDt;
+       dkim=pass header.i=@maild.linkedin.com header.s=proddkim1024 header.b=bfj4RXxp;
+       spf=pass (google.com: domain of s-2kevs7y6frhw5t1czn01hiakoubj3wehpfeveg27ylmidmjlixmw7n8h@bounce.linkedin.com designates 2620:109:c003:104::179 as permitted sender) smtp.mailfrom=s-2kevs7y6frhw5t1czn01hiakoubj3wehpfeveg27ylmidmjlixmw7n8h@bounce.linkedin.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=linkedin.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=linkedin.com;
+	s=d2048-201806-01; t=1669453699;
+	bh=bLc29slWuFEy/7mUZYzUlIFTmb3ZVL4LUiz5tvP54pQ=;
+	h=From:Subject:MIME-Version:Content-Type:To:Date:X-LinkedIn-Class:
+	 X-LinkedIn-Template:X-LinkedIn-fbl;
+	b=plgfcDDt3xIiuH+SGa9X9Uz5J6lrpYPlxtrLtzC0Yy/eTuuvJATQJvETEIEF0x03E
+	 D99cQ224RbOGrhsWNvKMRN1HQ6DI7MK73ZJFCULr2c3Eg/mrpqd1yfUm1l+rKHozXX
+	 I/LV3+m9HSzLvT74JP4aGHnT4Q3Zh0bmYso8vHQgan8JFhXpr15tv1J+Sbv3/RjD34
+	 lbfEpTBEzUs75iMRx44VMSL/Tfvz/is4fY9Zr3GpVfLalMbooV/h+Zpql+hFphJutv
+	 dyeRH/Hn6VI9y2jfoBjeOZhDIyconptWh0ZN4EW9NzG5hqXnKfCdDhvIw4DHNoceX7
+	 7tYDb+H5pc+RQ==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=maild.linkedin.com;
+	s=proddkim1024; t=1669453699;
+	bh=bLc29slWuFEy/7mUZYzUlIFTmb3ZVL4LUiz5tvP54pQ=;
+	h=From:Subject:MIME-Version:Content-Type:To:Date:X-LinkedIn-Class:
+	 X-LinkedIn-Template:X-LinkedIn-fbl;
+	b=bfj4RXxpI350gaV72mY7WJijsAUvzepJduE/WHmacJ6RP8WHNFaDh6FQgz6jZ3PyL
+	 F92M3IQylH8BFpH4so7zFDOEmd7kzcsZqq3X8HFbClc0nnjjlgid9GL3hRzxl7S9jn
+	 yu6dEB8IFbcZA+XhGigIh96mEQ3K94ZgIg5pInIw=
+From: LinkedIn Job Alerts <jobalerts-noreply@linkedin.com>
+Message-ID: <1858569308.14803385.1669453699698@ltx1-app95211.prod.linkedin.com>
+Subject: =?UTF-8?Q?1_new_job_for_=E2=80=9CGame_Artist=E2=80=9D?=
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+	boundary="----=_Part_14803383_1777778680.1669453699696"
+To: Azfar Ali <azfarali007.aa@gmail.com>
+Date: Sat, 26 Nov 2022 09:08:19 +0000 (UTC)
+X-LinkedIn-Class: SAVEDSEARCH
+X-LinkedIn-Template: email_job_alert_digest_01
+X-LinkedIn-fbl: m2-asztui84269le00no8u4f1qibe2p8xlzwe3e3zv6m0wqohcr1a56wai4f7kjo2u4y8xzn1ms06y1l3cj567svhfglxdj69r4hkrvx3
+X-LinkedIn-Id: gtbzps-laxpmm8a-4y
+List-Unsubscribe: <https://www.linkedin.com/comm/jobs/alerts?lipi=urn%3Ali%3Apage%3Aemail_email_job_alert_digest_01%3BsB0QwrxPTqmspKmInctLMQ%3D%3D&midToken=AQHK2SukXpdd9w&midSig=0T9fKXFmBAAaw1&trk=eml-email_job_alert_digest_01-unsub-0-unsub&trkEmail=eml-email_job_alert_digest_01-unsub-0-unsub-null-gtbzps~laxpmm8a~4y-null-null&eid=gtbzps-laxpmm8a-4y&loid=AQHD92Zu_mwf1AAAAYSzMdhPxTGeLXXkJIN5qw3sUg05TnApJWk8xl2dDFpYVftrWBWdcZM2dasorJ1z5ujoHjuwOTIZ7wojja52s4cTSpPGswuPw00N0q42MoJKDRI>
+Feedback-ID: email_job_alert_digest_01:linkedin
+Require-Recipient-Valid-Since: azfarali007.aa@gmail.com; Wed, 6 Jul 2022 07:10:28 +0000
+
+------=_Part_14803383_1777778680.1669453699696
+Content-Type: text/plain;charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+Content-ID: text-body
+
+Your job alert for Game Artist in Kar=C4=81chi
+       =20
+1 new job matches your preferences. =20
+         =20
+Senior Game Artist(hyper-casual games)
+ZPLAY
+Pakistan
+This company is actively hiring
+Apply with resume & profile
+View job:
+      https://www.linkedin.com/comm/jobs/view/3368508428/?trackingId=3DukC8=
+RkJaWApWSZW9pQjcCQ%3D%3D&refId=3Ddf98d52d-aa1b-420f-85b2-058aee10fb75&lipi=
+=3Durn%3Ali%3Apage%3Aemail_email_job_alert_digest_01%3BsB0QwrxPTqmspKmInctL=
+MQ%3D%3D&midToken=3DAQHK2SukXpdd9w&midSig=3D0T9fKXFmBAAaw1&trk=3Deml-email_=
+job_alert_digest_01-job_card-0-view_job&trkEmail=3Deml-email_job_alert_dige=
+st_01-job_card-0-view_job-null-gtbzps~laxpmm8a~4y-null-null&eid=3Dgtbzps-la=
+xpmm8a-4y
+
+---------------------------------------------------------
+ =20
+See all jobs on LinkedIn:=20
+      https://www.linkedin.com/comm/jobs/search?geoId=3D105451800&f_TPR=3Da=
+1669367294-&savedSearchId=3D1728883883&origin=3DJOB_ALERT_EMAIL&lipi=3Durn%=
+3Ali%3Apage%3Aemail_email_job_alert_digest_01%3BsB0QwrxPTqmspKmInctLMQ%3D%3=
+D&midToken=3DAQHK2SukXpdd9w&midSig=3D0T9fKXFmBAAaw1&trk=3Deml-email_job_ale=
+rt_digest_01-job~alert-0-see~all~jobs~text&trkEmail=3Deml-email_job_alert_d=
+igest_01-job~alert-0-see~all~jobs~text-null-gtbzps~laxpmm8a~4y-null-null&ei=
+d=3Dgtbzps-laxpmm8a-4y
+
+
+See jobs where you=E2=80=99re a top applicant
+
+      https://www.linkedin.com/comm/premium/products/?family=3Djss&lipi=3Du=
+rn%3Ali%3Apage%3Aemail_email_job_alert_digest_01%3BsB0QwrxPTqmspKmInctLMQ%3=
+D%3D&midToken=3DAQHK2SukXpdd9w&midSig=3D0T9fKXFmBAAaw1&trk=3Deml-email_job_=
+alert_digest_01-job~alert-0-premium~upsell~text&trkEmail=3Deml-email_job_al=
+ert_digest_01-job~alert-0-premium~upsell~text-null-gtbzps~laxpmm8a~4y-null-=
+null&eid=3Dgtbzps-laxpmm8a-4y
+ =20
+         =20
+     =20
+
+
+----------------
+
+This email was intended for Azfar Ali (Student at NED University of Enginee=
+ring and Technology)
+Learn why we included this:
+      https://www.linkedin.com/help/linkedin/answer/4788?lang=3Den&lipi=3Du=
+rn%3Ali%3Apage%3Aemail_email_job_alert_digest_01%3BsB0QwrxPTqmspKmInctLMQ%3=
+D%3D&midToken=3DAQHK2SukXpdd9w&midSig=3D0T9fKXFmBAAaw1&trk=3Deml-email_job_=
+alert_digest_01-SecurityHelp-0-textfooterglimmer&trkEmail=3Deml-email_job_a=
+lert_digest_01-SecurityHelp-0-textfooterglimmer-null-gtbzps~laxpmm8a~4y-nul=
+l-null&eid=3Dgtbzps-laxpmm8a-4y
+You are receiving Job Alert emails.
+
+         =20
+            Manage your job alerts:=20
+      https://www.linkedin.com/comm/jobs/alerts?lipi=3Durn%3Ali%3Apage%3Aem=
+ail_email_job_alert_digest_01%3BsB0QwrxPTqmspKmInctLMQ%3D%3D&midToken=3DAQH=
+K2SukXpdd9w&midSig=3D0T9fKXFmBAAaw1&trk=3Deml-email_job_alert_digest_01-nul=
+l-0-null&trkEmail=3Deml-email_job_alert_digest_01-null-0-null-null-gtbzps~l=
+axpmm8a~4y-null-null&eid=3Dgtbzps-laxpmm8a-4y
+     =20
+         =20
+       =20
+Unsubscribe:
+      https://www.linkedin.com/comm/jobs/alerts?lipi=3Durn%3Ali%3Apage%3Aem=
+ail_email_job_alert_digest_01%3BsB0QwrxPTqmspKmInctLMQ%3D%3D&midToken=3DAQH=
+K2SukXpdd9w&midSig=3D0T9fKXFmBAAaw1&trk=3Deml-email_job_alert_digest_01-uns=
+ubscribe-0-textfooterglimmer&trkEmail=3Deml-email_job_alert_digest_01-unsub=
+scribe-0-textfooterglimmer-null-gtbzps~laxpmm8a~4y-null-null&eid=3Dgtbzps-l=
+axpmm8a-4y&loid=3DAQHD92Zu_mwf1AAAAYSzMdhPxTGeLXXkJIN5qw3sUg05TnApJWk8xl2dD=
+FpYVftrWBWdcZM2dasorJ1z5ujoHjuwOTIZ7wojja52s4cTSpPGswuPw00N0q42MoJKDRI
+Help:
+      https://www.linkedin.com/help/linkedin/answer/67?lang=3Den&lipi=3Durn=
+%3Ali%3Apage%3Aemail_email_job_alert_digest_01%3BsB0QwrxPTqmspKmInctLMQ%3D%=
+3D&midToken=3DAQHK2SukXpdd9w&midSig=3D0T9fKXFmBAAaw1&trk=3Deml-email_job_al=
+ert_digest_01-help-0-textfooterglimmer&trkEmail=3Deml-email_job_alert_diges=
+t_01-help-0-textfooterglimmer-null-gtbzps~laxpmm8a~4y-null-null&eid=3Dgtbzp=
+s-laxpmm8a-4y
+
+=C2=A9 2022 LinkedIn Corporation, 1zwnj000 West Maude Avenue, Sunnyvale, CA=
+ 94085.LinkedIn and the LinkedIn logo are registered trademarks of LinkedIn=
+.
+------=_Part_14803383_1777778680.1669453699696
+Content-Type: text/html;charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+Content-ID: html-body
+
+<html xmlns=3D"http://www.w3.org/1999/xhtml" lang=3D"en" xml:lang=3D"en"> <=
+head> <meta http-equiv=3D"Content-Type" content=3D"text/html;charset=3Dutf-=
+8"> <meta name=3D"HandheldFriendly" content=3D"true"> <meta name=3D"viewpor=
+t" content=3D"width=3Ddevice-width; initial-scale=3D0.666667; user-scalable=
+=3D0"> <meta name=3D"viewport" content=3D"width=3Ddevice-width"> <title></t=
+itle> <style>
+          @media (max-width: 512px) { .mercado-container { width: 100% !imp=
+ortant; } }
+        </style> <style>
+          .full-width-button, .full-width-button table { display: none; } @=
+media (max-width: 512px) { .inline-button,
+          .inline-button table { display: none !important; } .full-width-bu=
+tton, .full-width-button table { display:
+          table !important; } }
+        </style> <!--[if mso]><style type=3D"text/css"> </style><![endif]--=
+> <!--[if IE]><style type=3D"text/css"> </style><![endif]--> <style>
+@media (min-width: 576px) {
+  .container {
+    max-width: 576px;
+  }
+
+  .\!container {
+    max-width: 576px !important;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+
+  .\!container {
+    max-width: 768px !important;
+  }
+}
+@media (min-width: 790px) {
+  .container {
+    max-width: 790px;
+  }
+
+  .\!container {
+    max-width: 790px !important;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    max-width: 992px;
+  }
+
+  .\!container {
+    max-width: 992px !important;
+  }
+}
+@media (min-width: 1128px) {
+  .container {
+    max-width: 1128px;
+  }
+
+  .\!container {
+    max-width: 1128px !important;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
+
+  .\!container {
+    max-width: 1200px !important;
+  }
+}
+@media (min-width: 1440px) {
+  .container {
+    max-width: 1440px;
+  }
+
+  .\!container {
+    max-width: 1440px !important;
+  }
+}
+@media (min-width: 1680px) {
+  .container {
+    max-width: 1680px;
+  }
+
+  .\!container {
+    max-width: 1680px !important;
+  }
+}
+@media (min-width: 1920px) {
+  .container {
+    max-width: 1920px;
+  }
+
+  .\!container {
+    max-width: 1920px !important;
+  }
+}
+@media (min-width: 992px) {
+  .base-detail-page__header .nav {
+    margin-left: auto;
+    margin-right: auto;
+    width: 1128px;
+  }
+}
+@media (max-width: 767px) {
+  .embedded-social-share .modal__outlet {
+    flex-direction: row;
+    font-size: 14px;
+  }
+}
+@media (max-width: 767px) {
+  .nav .search-bar {
+    order: 4;
+  }
+}
+@media (max-width: 767px) {
+  .nav .sign-in-card {
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  .nav--minified-mobile .nav__cta-container > *:not(.nav__link-person) {
+    display: none;
+  }
+}
+@media screen and (max-width: 767px) {
+  .nav .search-bar--minified-mobile {
+    margin-bottom: 0px;
+    height: 100%;
+    flex-grow: 1;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    order: initial;
+    width: initial;
+  }
+
+  .nav .search-bar--minified-mobile .search-bar__placeholder {
+    margin-top: 0px;
+  }
+}
+@media (max-width: 767px) {
+  .tw-link-column-item {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
+@media (min-width: 992px) {
+  .tw-link-column-item {
+    margin-bottom: 8px;
+  }
+
+  .tw-linkster .tw-link-column-item {
+    margin-bottom: 0px;
+  }
+}
+@media (max-width: 767px) {
+  .member-nav-menu .collapsible-dropdown__button {
+    margin-top: 24px;
+    margin-bottom: 24px;
+    margin-left: 16px;
+  }
+}
+@media (max-width: 767px) {
+  .member-nav-menu .collapsible-dropdown__list {
+    right: 0px;
+    max-height: calc(100vh - 52px);
+    overflow-y: auto;
+  }
+}
+@media (max-width: 767px) {
+  .recent-searches.recent-searches--show {
+    position: fixed;
+    top: 168px;
+    left: 0px;
+    width: 100vw;
+    min-width: 100vw;
+    border-width: 0;
+  }
+}
+@media (max-width: 767px) {
+  .search-bar .dismissable-input {
+    background-color: rgba(0, 0, 0, 0);
+    border-color: rgba(0, 0, 0, 0.75);
+    color: rgba(0, 0, 0, 0.9);
+    border-radius: 4px;
+    border-width: 1px;
+    border-style: solid;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', =
+Roboto, 'Helvetica Neue', 'Fira Sans', Ubuntu, Oxygen, 'Oxygen Sans', Canta=
+rell, 'Droid Sans', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Emoji'=
+, 'Segoe UI Symbol', 'Lucida Grande', Helvetica, Arial, sans-serif;
+    font-size: 16px;
+  }
+
+  .search-bar .dismissable-input:hover {
+    background-color: rgba(0, 0, 0, 0.04);
+    border-color: rgba(0, 0, 0, 0.9);
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.9);
+    cursor: pointer;
+    border-width: 1px;
+  }
+
+  .search-bar .dismissable-input:active {
+    background-color: rgba(0, 0, 0, 0.08);
+    border-color: rgba(0, 0, 0, 0.9);
+    cursor: pointer;
+    border-width: 1px;
+  }
+
+  .search-bar .dismissable-input:disabled {
+    background-color: rgba(0, 0, 0, 0.08);
+    border-color: rgba(0, 0, 0, 0);
+    color: rgba(0, 0, 0, 0.3);
+    cursor: not-allowed;
+    border-width: 1px;
+    box-shadow: 0 0 #0000, 0 0 #0000, 0 0 #0000;
+  }
+
+  .search-bar .dismissable-input:disabled:hover {
+    background-color: rgba(0, 0, 0, 0.08);
+    border-color: rgba(0, 0, 0, 0);
+    color: rgba(0, 0, 0, 0.3);
+    cursor: not-allowed;
+    border-width: 1px;
+    box-shadow: 0 0 #0000, 0 0 #0000, 0 0 #0000;
+  }
+
+  .search-bar .dismissable-input:disabled:focus {
+    background-color: rgba(0, 0, 0, 0.08);
+    border-color: rgba(0, 0, 0, 0);
+    color: rgba(0, 0, 0, 0.3);
+    cursor: not-allowed;
+    border-width: 1px;
+    box-shadow: 0 0 #0000, 0 0 #0000, 0 0 #0000;
+  }
+
+  .search-bar .dismissable-input:disabled:active {
+    background-color: rgba(0, 0, 0, 0.08);
+    border-color: rgba(0, 0, 0, 0);
+    color: rgba(0, 0, 0, 0.3);
+    cursor: not-allowed;
+    border-width: 1px;
+    box-shadow: 0 0 #0000, 0 0 #0000, 0 0 #0000;
+  }
+
+  .input-error .search-bar .dismissable-input {
+    background-color: rgba(0, 0, 0, 0);
+    border-color: #cf0007;
+    color: rgba(0, 0, 0, 0.9);
+    border-radius: 4px;
+    border-width: 1px;
+    border-style: solid;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', =
+Roboto, 'Helvetica Neue', 'Fira Sans', Ubuntu, Oxygen, 'Oxygen Sans', Canta=
+rell, 'Droid Sans', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Emoji'=
+, 'Segoe UI Symbol', 'Lucida Grande', Helvetica, Arial, sans-serif;
+    font-size: 16px;
+  }
+
+  .input-error .search-bar .dismissable-input:hover {
+    background-color: rgba(0, 0, 0, 0.04);
+    border-color: #8a0005;
+    box-shadow: 0 0 0 1px #8a0005;
+    cursor: pointer;
+    border-width: 1px;
+  }
+
+  .input-error .search-bar .dismissable-input:active {
+    background-color: rgba(0, 0, 0, 0.08);
+    border-color: #8a0005;
+    cursor: pointer;
+    border-width: 1px;
+  }
+
+  .input-error .search-bar .dismissable-input:disabled {
+    background-color: rgba(0, 0, 0, 0.08);
+    border-color: rgba(0, 0, 0, 0);
+    color: rgba(0, 0, 0, 0.3);
+    cursor: not-allowed;
+    border-width: 1px;
+    box-shadow: 0 0 #0000, 0 0 #0000, 0 0 #0000;
+  }
+
+  .input-error .search-bar .dismissable-input:disabled:hover {
+    background-color: rgba(0, 0, 0, 0.08);
+    border-color: rgba(0, 0, 0, 0);
+    color: rgba(0, 0, 0, 0.3);
+    cursor: not-allowed;
+    border-width: 1px;
+    box-shadow: 0 0 #0000, 0 0 #0000, 0 0 #0000;
+  }
+
+  .input-error .search-bar .dismissable-input:disabled:focus {
+    background-color: rgba(0, 0, 0, 0.08);
+    border-color: rgba(0, 0, 0, 0);
+    color: rgba(0, 0, 0, 0.3);
+    cursor: not-allowed;
+    border-width: 1px;
+    box-shadow: 0 0 #0000, 0 0 #0000, 0 0 #0000;
+  }
+
+  .input-error .search-bar .dismissable-input:disabled:active {
+    background-color: rgba(0, 0, 0, 0.08);
+    border-color: rgba(0, 0, 0, 0);
+    color: rgba(0, 0, 0, 0.3);
+    cursor: not-allowed;
+    border-width: 1px;
+    box-shadow: 0 0 #0000, 0 0 #0000, 0 0 #0000;
+  }
+
+  .base-search-bar .input-error .search-bar .dismissable-input.typeahead-in=
+put {
+    border-style: solid;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    box-shadow: 0 0 #0000, 0 0 #0000, 0 0 #0000;
+  }
+
+  .base-search-bar .input-error .search-bar .dismissable-input.typeahead-in=
+put:active {
+    border-style: solid;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    box-shadow: 0 0 #0000, 0 0 #0000, 0 0 #0000;
+  }
+
+  .base-search-bar .input-error .search-bar .dismissable-input.typeahead-in=
+put:focus-within {
+    border-style: solid;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    box-shadow: 0 0 #0000, 0 0 #0000, 0 0 #0000;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .search-bar .dismissable-input {
+    background-color: rgba(0, 0, 0, 0);
+    box-shadow: 0 0 #0000, 0 0 #0000, 0 0 #0000;
+  }
+
+  .search-bar .dismissable-input:hover {
+    border-right-color: rgba(0, 0, 0, 0.08);
+  }
+}
+@media (min-width: 992px) {
+  .search-bar .dismissable-input {
+    width: 0px;
+    background-color: rgba(0, 0, 0, 0);
+    box-shadow: 0 0 #0000, 0 0 #0000, 0 0 #0000;
+  }
+
+  .search-bar .dismissable-input:hover {
+    border-right-color: rgba(0, 0, 0, 0.08);
+  }
+}
+@media (max-width: 767px) {
+  .search-bar:not(.isExpanded) .base-search-bar__form {
+    display: none;
+  }
+}
+@media screen and (max-width: 767px) {
+  @media (max-width: 767px) {
+    .search-bar.isExpanded .search-bar__placeholder {
+      display: none;
+    }
+
+    .search-bar.isExpanded .base-search-bar__form {
+      display: flex;
+    }
+
+    position: fixed;
+        top: 0px;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+        z-index: 1000;
+        margin-bottom: 0px;
+        height: 100%;
+        background-color: #ffffff;
+    .search-bar.isExpanded .switcher-tabs {
+      display: inherit;
+    }
+
+  }
+}
+@media screen and (max-width: 767px) {
+  .stuck .search-bar {
+    transition: height 0.4s, margin-bottom 0.4s ease-in-out;
+    margin-bottom: 0px;
+    height: 0px;
+  }
+
+  .stuck .search-bar--minified-mobile .search-bar__placeholder {
+    max-height: initial;
+    pointer-events: initial;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.6);
+  }
+}
+@media (max-width: 767px) {
+  .tabs__list {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+@media (max-width: 767px) {
+  .typeahead-input__dropdown.typeahead-input__dropdown--show {
+    position: fixed;
+    top: 158px;
+    left: 0px;
+    width: 100vw;
+    min-width: 100vw;
+  }
+}
+@media (max-width: 767px) {
+  .base-search-bar .dismissable-input {
+    max-height: 40px;
+  }
+}
+@media (max-width: 767px) {
+  .base-main-card__media ~ .base-main-card__info {
+    margin-left: 0px;
+    margin-top: 16px;
+  }
+}
+@media (min-width: 992px) {
+  .filter .collapsible-dropdown__list {
+    max-height: 400px;
+  }
+}
+@media (forced-colors: active) {
+  .filter-button--selected {
+    border-width: 4px;
+  }
+}
+@media (max-width: 767px) {
+  .base-card .duration {
+    font-size: 12px;
+    font-weight: 400;
+  }
+}
+@media (max-width: 767px) {
+  .hide-on-mobile {
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  .social-action-bar__button {
+    flex-direction: row;
+    font-size: 14px;
+  }
+}
+@media (max-width: 767px) {
+  .social-action-bar__icon--svg {
+    margin: 0px;
+    height: 24px;
+    width: 24px;
+    padding-right: 4px;
+  }
+}
+@media (max-width: 767px) {
+  .babybear\:invisible {
+    visibility: hidden;
+  }
+
+  .babybear\:static {
+    position: static;
+  }
+
+  .babybear\:right-4 {
+    right: 32px;
+  }
+
+  .babybear\:-top-1 {
+    top: -8px;
+  }
+
+  .babybear\:z-0 {
+    z-index: 0;
+  }
+
+  .babybear\:my-2 {
+    margin-top: 16px;
+    margin-bottom: 16px;
+  }
+
+  .babybear\:mx-0 {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
+  .babybear\:mx-mobile-container-padding {
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+
+  .babybear\:ml-0 {
+    margin-left: 0px;
+  }
+
+  .babybear\:mb-1 {
+    margin-bottom: 8px;
+  }
+
+  .babybear\:mr-0 {
+    margin-right: 0px;
+  }
+
+  .babybear\:ml-\[-9999px\] {
+    margin-left: -9999px;
+  }
+
+  .babybear\:mb-1\.5 {
+    margin-bottom: 12px;
+  }
+
+  .babybear\:ml-1 {
+    margin-left: 8px;
+  }
+
+  .babybear\:flex {
+    display: flex;
+  }
+
+  .babybear\:hidden {
+    display: none;
+  }
+
+  .babybear\:h-\[360px\] {
+    height: 360px;
+  }
+
+  .babybear\:h-\[72px\] {
+    height: 72px;
+  }
+
+  .babybear\:h-\[27px\] {
+    height: 27px;
+  }
+
+  .babybear\:h-\[1px\] {
+    height: 1px;
+  }
+
+  .babybear\:h-\[48px\] {
+    height: 48px;
+  }
+
+  .babybear\:h-auto {
+    height: auto;
+  }
+
+  .babybear\:h-\[180px\] {
+    height: 180px;
+  }
+
+  .babybear\:max-h-\[225px\] {
+    max-height: 225px;
+  }
+
+  .babybear\:max-h-\[400px\] {
+    max-height: 400px;
+  }
+
+  .babybear\:max-h-\[250px\] {
+    max-height: 250px;
+  }
+
+  .babybear\:min-h-\[134px\] {
+    min-height: 134px;
+  }
+
+  .babybear\:w-\[360px\] {
+    width: 360px;
+  }
+
+  .babybear\:w-full {
+    width: 100%;
+  }
+
+  .babybear\:w-6 {
+    width: 48px;
+  }
+
+  .babybear\:w-\[27px\] {
+    width: 27px;
+  }
+
+  .babybear\:w-\[1px\] {
+    width: 1px;
+  }
+
+  .babybear\:w-\[100vw\] {
+    width: 100vw;
+  }
+
+  .babybear\:w-\[calc\(100\%-68px\)\] {
+    width: calc(100% - 68px);
+  }
+
+  .babybear\:min-w-full {
+    min-width: 100%;
+  }
+
+  .babybear\:max-w-\[790px\] {
+    max-width: 790px;
+  }
+
+  .babybear\:flex-none {
+    flex: none;
+  }
+
+  .babybear\:flex-auto {
+    flex: 1 1 auto;
+  }
+
+  .babybear\:flex-1 {
+    flex: 1 1 0%;
+  }
+
+  .babybear\:basis-1\/2 {
+    flex-basis: 50%;
+  }
+
+  .babybear\:container-lined {
+    border-radius: 8px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.08);
+    background-color: #ffffff;
+  }
+
+  .babybear\:flex-row {
+    flex-direction: row;
+  }
+
+  .babybear\:flex-col {
+    flex-direction: column;
+  }
+
+  .babybear\:flex-wrap {
+    flex-wrap: wrap;
+  }
+
+  .babybear\:items-start {
+    align-items: flex-start;
+  }
+
+  .babybear\:items-center {
+    align-items: center;
+  }
+
+  .babybear\:justify-around {
+    justify-content: space-around;
+  }
+
+  .babybear\:self-center {
+    align-self: center;
+  }
+
+  .babybear\:rounded-\[0px\] {
+    border-radius: 0px;
+  }
+
+  .babybear\:border-b-1 {
+    border-bottom-width: 1px;
+  }
+
+  .babybear\:border-solid {
+    border-style: solid;
+  }
+
+  .babybear\:border-color-border-low-emphasis {
+    border-color: rgba(0, 0, 0, 0.3);
+  }
+
+  .babybear\:bg-color-transparent {
+    background-color: rgba(0, 0, 0, 0);
+  }
+
+  .babybear\:bg-color-brand {
+    background-color: #0a66c2;
+  }
+
+  .babybear\:p-2 {
+    padding: 16px;
+  }
+
+  .babybear\:p-0 {
+    padding: 0px;
+  }
+
+  .babybear\:px-2 {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .babybear\:px-\[4px\] {
+    padding-left: 4px;
+    padding-right: 4px;
+  }
+
+  .babybear\:px-mobile-container-padding {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .babybear\:py-3 {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+
+  .babybear\:py-1\.5 {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+
+  .babybear\:py-1 {
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+
+  .babybear\:pb-2 {
+    padding-bottom: 16px;
+  }
+
+  .babybear\:pr-0 {
+    padding-right: 0px;
+  }
+
+  .babybear\:leading-\[150px\] {
+    line-height: 150px;
+  }
+
+  .babybear\:last\:border-b-0:last-child {
+    border-bottom-width: 0;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .mamabear\:absolute {
+    position: absolute;
+  }
+
+  .mamabear\:right-4 {
+    right: 32px;
+  }
+
+  .mamabear\:top-\[58px\] {
+    top: 58px;
+  }
+
+  .mamabear\:-top-1 {
+    top: -8px;
+  }
+
+  .mamabear\:flex {
+    display: flex;
+  }
+
+  .mamabear\:hidden {
+    display: none;
+  }
+
+  .mamabear\:h-\[100\%\] {
+    height: 100%;
+  }
+
+  .mamabear\:w-\[744px\] {
+    width: 744px;
+  }
+
+  .mamabear\:w-full {
+    width: 100%;
+  }
+
+  .mamabear\:w-\[calc\(100\%-97px\)\] {
+    width: calc(100% - 97px);
+  }
+
+  .mamabear\:min-w-0 {
+    min-width: 0px;
+  }
+
+  .mamabear\:max-w-\[790px\] {
+    max-width: 790px;
+  }
+
+  .mamabear\:container-lined {
+    border-radius: 8px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.08);
+    background-color: #ffffff;
+  }
+
+  .mamabear\:container-raised {
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+  }
+
+  .mamabear\:flex-row {
+    flex-direction: row;
+  }
+
+  .mamabear\:flex-col {
+    flex-direction: column;
+  }
+
+  .mamabear\:items-start {
+    align-items: flex-start;
+  }
+
+  .mamabear\:items-center {
+    align-items: center;
+  }
+
+  .mamabear\:justify-start {
+    justify-content: flex-start;
+  }
+
+  .mamabear\:self-center {
+    align-self: center;
+  }
+
+  .mamabear\:tab-vertical.tab-sm,
+.mamabear\:tab-vertical .tab-md,
+.mamabear\:tab-vertical .tab-lg {
+    justify-content: flex-start;
+  }
+
+  .mamabear\:tab-vertical.tab-selected {
+    box-shadow: inset 4px 0 rgba(0, 0, 0, 0.9);
+  }
+
+  .mamabear\:rounded-tr-none {
+    border-top-right-radius: 0px;
+  }
+
+  .mamabear\:px-3 {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .mamabear\:px-mobile-container-padding {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .mamabear\:py-3 {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+
+  .mamabear\:px-2 {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .mamabear\:pt-desktop-content-top-margin {
+    padding-top: 16px;
+  }
+}
+@media (min-width: 992px) {
+  .papabear\:absolute {
+    position: absolute;
+  }
+
+  .papabear\:top-\[58px\] {
+    top: 58px;
+  }
+
+  .papabear\:-top-1 {
+    top: -8px;
+  }
+
+  .papabear\:mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .papabear\:\!mx-2 {
+    margin-left: 16px !important;
+    margin-right: 16px !important;
+  }
+
+  .papabear\:mt-\[-100px\] {
+    margin-top: -100px;
+  }
+
+  .papabear\:mb-\[18px\] {
+    margin-bottom: 18px;
+  }
+
+  .papabear\:mt-0 {
+    margin-top: 0px;
+  }
+
+  .papabear\:mt-0\.5 {
+    margin-top: 4px;
+  }
+
+  .papabear\:mr-2 {
+    margin-right: 16px;
+  }
+
+  .papabear\:ml-column-gutter {
+    margin-left: 24px;
+  }
+
+  .papabear\:flex {
+    display: flex;
+  }
+
+  .papabear\:hidden {
+    display: none;
+  }
+
+  .papabear\:h-\[34px\] {
+    height: 34px;
+  }
+
+  .papabear\:h-\[100\%\] {
+    height: 100%;
+  }
+
+  .papabear\:min-h-\[96px\] {
+    min-height: 96px;
+  }
+
+  .papabear\:w-\[400px\] {
+    width: 400px;
+  }
+
+  .papabear\:w-content-max-w {
+    width: 1128px;
+  }
+
+  .papabear\:w-core-rail-width {
+    width: 790px;
+  }
+
+  .papabear\:w-right-rail-width {
+    width: calc(1128px - 24px - 790px);
+  }
+
+  .papabear\:w-auto {
+    width: auto;
+  }
+
+  .papabear\:w-\[1128px\] {
+    width: 1128px;
+  }
+
+  .papabear\:w-\[135px\] {
+    width: 135px;
+  }
+
+  .papabear\:w-\[calc\(100\%-97px\)\] {
+    width: calc(100% - 97px);
+  }
+
+  .papabear\:min-w-0 {
+    min-width: 0px;
+  }
+
+  .papabear\:max-w-\[550px\] {
+    max-width: 550px;
+  }
+
+  .papabear\:container-lined {
+    border-radius: 8px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.08);
+    background-color: #ffffff;
+  }
+
+  .papabear\:container-raised {
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+  }
+
+  .papabear\:flex-col {
+    flex-direction: column;
+  }
+
+  .papabear\:flex-nowrap {
+    flex-wrap: nowrap;
+  }
+
+  .papabear\:items-start {
+    align-items: flex-start;
+  }
+
+  .papabear\:justify-start {
+    justify-content: flex-start;
+  }
+
+  .papabear\:justify-center {
+    justify-content: center;
+  }
+
+  .papabear\:self-start {
+    align-self: flex-start;
+  }
+
+  .papabear\:tab-vertical.tab-sm,
+.papabear\:tab-vertical .tab-md,
+.papabear\:tab-vertical .tab-lg {
+    justify-content: flex-start;
+  }
+
+  .papabear\:tab-vertical.tab-selected {
+    box-shadow: inset 4px 0 rgba(0, 0, 0, 0.9);
+  }
+
+  .papabear\:rounded-tr-none {
+    border-top-right-radius: 0px;
+  }
+
+  .papabear\:border-4 {
+    border-width: 4px;
+  }
+
+  .papabear\:p-details-container-padding {
+    padding: 24px;
+  }
+
+  .papabear\:p-0 {
+    padding: 0px;
+  }
+
+  .papabear\:py-2 {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+
+  .papabear\:pt-desktop-content-top-margin {
+    padding-top: 16px;
+  }
+
+  .papabear\:text-xl {
+    font-size: 24px;
+  }
+}
+</style></head> <body dir=3D"ltr" class=3D"font-sans bg-color-background-ca=
+nvas w-full m-0 p-0 pt-1" style=3D"-webkit-text-size-adjust: 100%; -ms-text=
+-size-adjust: 100%; -moz-text-size-adjust: 100%; text-size-adjust: 100%; ma=
+rgin: 0px; width: 100%; background-color: #f3f2f0; padding: 0px; padding-to=
+p: 8px; font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe U=
+I', Roboto, 'Helvetica Neue', 'Fira Sans', Ubuntu, Oxygen, 'Oxygen Sans', C=
+antarell, 'Droid Sans', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Em=
+oji', 'Segoe UI Symbol', 'Lucida Grande', Helvetica, Arial, sans-serif;"> <=
+div class=3D"h-0 opacity-0 text-transparent invisible overflow-hidden w-0 m=
+ax-h-[0]" style=3D"visibility: hidden; height: 0px; max-height: 0; width: 0=
+px; overflow: hidden; opacity: 0; mso-hide: all;" data-email-preheader=3D"t=
+rue">Senior Game Artist(hyper-casual games) and other roles are available</=
+div> <div class=3D"h-0 opacity-0 text-transparent invisible overflow-hidden=
+ w-0 max-h-[0]" style=3D"visibility: hidden; height: 0px; max-height: 0; wi=
+dth: 0px; overflow: hidden; opacity: 0; mso-hide: all;"> =CD=8F=C2=A0=CD=8F=
+=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=
+=A0=CD=8F=C2=A0=CD=8F=C2=A0 =CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=
+=A0=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0=
+ =CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0=
+=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0 =CD=8F=C2=A0=CD=8F=C2=A0=
+=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0=CD=
+=8F=C2=A0=CD=8F=C2=A0 =CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0=CD=
+=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0 =CD=
+=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=
+=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0 =CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=
+=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=
+=A0=CD=8F=C2=A0 =CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=
+=A0=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0 =CD=8F=C2=
+=A0=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0=
+=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0 =CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0=
+=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0=CD=
+=8F=C2=A0 =CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0=CD=
+=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0 =CD=8F=C2=A0=CD=
+=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=
+=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0 =CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=
+=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=
+=A0 =CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=
+=A0=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0 =CD=8F=C2=A0=CD=8F=C2=
+=A0=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0=
+=CD=8F=C2=A0=CD=8F=C2=A0 =CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0=
+=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0=CD=8F=C2=A0 </=
+div> <table class=3D"font-sans mercado-container w-[512px] max-w-[512px] mx=
+-auto my-0 p-0 bg-color-background-container" role=3D"presentation" valign=
+=3D"top" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" width=3D"512" ali=
+gn=3D"center" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust=
+: 100%; -moz-text-size-adjust: 100%; text-size-adjust: 100%; mso-table-lspa=
+ce: 0pt; mso-table-rspace: 0pt; margin-left: auto; margin-right: auto; marg=
+in-top: 0px; margin-bottom: 0px; width: 512px; max-width: 512px; background=
+-color: #ffffff; padding: 0px; font-family: -apple-system, system-ui, Blink=
+MacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', 'Fira Sans', Ubuntu, O=
+xygen, 'Oxygen Sans', Cantarell, 'Droid Sans', 'Apple Color Emoji', 'Segoe =
+UI Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Lucida Grande', Helvetica,=
+ Arial, sans-serif;"> <tbody> <tr> <td class=3D"text-center p-3" style=3D"-=
+webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; -moz-text-size-a=
+djust: 100%; text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspac=
+e: 0pt; padding: 24px; text-align: center;"> <table class=3D"font-sans min-=
+w-full" role=3D"presentation" valign=3D"top" border=3D"0" cellspacing=3D"0"=
+ cellpadding=3D"0" width=3D"100%" style=3D"-webkit-text-size-adjust: 100%; =
+-ms-text-size-adjust: 100%; -moz-text-size-adjust: 100%; text-size-adjust: =
+100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; min-width: 100%; font-f=
+amily: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, 'H=
+elvetica Neue', 'Fira Sans', Ubuntu, Oxygen, 'Oxygen Sans', Cantarell, 'Dro=
+id Sans', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Emoji', 'Segoe U=
+I Symbol', 'Lucida Grande', Helvetica, Arial, sans-serif;"> <tbody> <tr> <t=
+d align=3D"left" valign=3D"middle" style=3D"-webkit-text-size-adjust: 100%;=
+ -ms-text-size-adjust: 100%; -moz-text-size-adjust: 100%; text-size-adjust:=
+ 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt;"> <a href=3D"https://w=
+ww.linkedin.com/comm/feed/?lipi=3Durn%3Ali%3Apage%3Aemail_email_job_alert_d=
+igest_01%3BsB0QwrxPTqmspKmInctLMQ%3D%3D&amp;midToken=3DAQHK2SukXpdd9w&amp;m=
+idSig=3D0T9fKXFmBAAaw1&amp;trk=3Deml-email_job_alert_digest_01-header-0-hom=
+e_glimmer&amp;trkEmail=3Deml-email_job_alert_digest_01-header-0-home_glimme=
+r-null-gtbzps~laxpmm8a~4y-null-null&amp;eid=3Dgtbzps-laxpmm8a-4y" target=3D=
+"_blank" class=3D"w-[84px]" style=3D"color: #0a66c2; cursor: pointer; displ=
+ay: inline-block; text-decoration: none; -webkit-text-size-adjust: 100%; -m=
+s-text-size-adjust: 100%; -moz-text-size-adjust: 100%; text-size-adjust: 10=
+0%; width: 84px;"> <img class=3D"block" alt=3D"LinkedIn" src=3D"https://www=
+.linkedin.com/comm/dms/logo?badgeTheme=3Dmercado&amp;lipi=3Durn%3Ali%3Apage=
+%3Aemail_email_job_alert_digest_01%3BsB0QwrxPTqmspKmInctLMQ%3D%3D&amp;midSi=
+g=3D0T9fKXFmBAAaw1&amp;midToken=3DAQHK2SukXpdd9w&amp;trkEmail=3Deml-email_j=
+ob_alert_digest_01-null-0-comms%7Ebadging%7Edynamic%7Eglimmer-null-gtbzps%7=
+Elaxpmm8a%7E4y-null-null&amp;trk=3Deml-email_job_alert_digest_01-null-0-com=
+ms%7Ebadging%7Edynamic%7Eglimmer&amp;_sig=3D2I51T4u1JAAaw1" data-test-heade=
+r-dynamic-badging-img style=3D"outline: none; text-decoration: none; -ms-in=
+terpolation-mode: bicubic; display: block;"> </a> </td> <td valign=3D"middl=
+e" align=3D"right" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-a=
+djust: 100%; -moz-text-size-adjust: 100%; text-size-adjust: 100%; mso-table=
+-lspace: 0pt; mso-table-rspace: 0pt;"> <table class=3D"font-sans" role=3D"p=
+resentation" valign=3D"top" border=3D"0" cellspacing=3D"0" cellpadding=3D"0=
+" width=3D"100%" data-test-header-profile style=3D"-webkit-text-size-adjust=
+: 100%; -ms-text-size-adjust: 100%; -moz-text-size-adjust: 100%; text-size-=
+adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-family: -a=
+pple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica =
+Neue', 'Fira Sans', Ubuntu, Oxygen, 'Oxygen Sans', Cantarell, 'Droid Sans',=
+ 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'=
+, 'Lucida Grande', Helvetica, Arial, sans-serif;"> <tbody> <tr> <td align=
+=3D"right" valign=3D"middle" class=3D"w-[32px]" style=3D"-webkit-text-size-=
+adjust: 100%; -ms-text-size-adjust: 100%; -moz-text-size-adjust: 100%; text=
+-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 32=
+px;" width=3D"32"> <a href=3D"https://pk.linkedin.com/comm/in/azfar-ali-954=
+5bb244?lipi=3Durn%3Ali%3Apage%3Aemail_email_job_alert_digest_01%3BsB0QwrxPT=
+qmspKmInctLMQ%3D%3D&amp;midToken=3DAQHK2SukXpdd9w&amp;midSig=3D0T9fKXFmBAAa=
+w1&amp;trk=3Deml-email_job_alert_digest_01-header-0-profile_glimmer&amp;trk=
+Email=3Deml-email_job_alert_digest_01-header-0-profile_glimmer-null-gtbzps~=
+laxpmm8a~4y-null-null&amp;eid=3Dgtbzps-laxpmm8a-4y" target=3D"_blank" style=
+=3D"color: #0a66c2; cursor: pointer; display: inline-block; text-decoration=
+: none; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; -moz-te=
+xt-size-adjust: 100%; text-size-adjust: 100%;"> <img alt=3D"Azfar Ali" src=
+=3D"https://media-exp1.licdn.com/dms/image/C4E03AQF1mg7Xh0jsLA/profile-disp=
+layphoto-shrink_200_200/0/1657091428052?e=3D1674691200&amp;v=3Dbeta&amp;t=
+=3DBnzz2ToU_Xi06iOYDdvoscokWH9SjV8596m8u3cwKJQ" class=3D"rounded-[100%] w-[=
+32px] h-[32px]" style=3D"outline: none; text-decoration: none; -ms-interpol=
+ation-mode: bicubic; height: 32px; width: 32px; border-radius: 100%;" width=
+=3D"32" height=3D"32"> </a> </td> </tr> </tbody> </table> </td> </tr> </tbo=
+dy> </table> </td> </tr> <tr> <td class=3D"px-3 pb-3" style=3D"-webkit-text=
+-size-adjust: 100%; -ms-text-size-adjust: 100%; -moz-text-size-adjust: 100%=
+; text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; pad=
+ding-left: 24px; padding-right: 24px; padding-bottom: 24px;"> <div> <table =
+class=3D"font-sans leading-regular" role=3D"presentation" valign=3D"top" bo=
+rder=3D"0" cellspacing=3D"0" cellpadding=3D"0" width=3D"100%" style=3D"-web=
+kit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; -moz-text-size-adju=
+st: 100%; text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: =
+0pt; font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI',=
+ Roboto, 'Helvetica Neue', 'Fira Sans', Ubuntu, Oxygen, 'Oxygen Sans', Cant=
+arell, 'Droid Sans', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Emoji=
+', 'Segoe UI Symbol', 'Lucida Grande', Helvetica, Arial, sans-serif; line-h=
+eight: 1.25;"> <tbody> <tr> <td style=3D"-webkit-text-size-adjust: 100%; -m=
+s-text-size-adjust: 100%; -moz-text-size-adjust: 100%; text-size-adjust: 10=
+0%; mso-table-lspace: 0pt; mso-table-rspace: 0pt;"> <h1 class=3D"text-displ=
+ay-sm font-normal leading-regular" data-test-id=3D"email-header" style=3D"m=
+argin: 0; font-size: 24px; font-weight: 400; line-height: 1.25;"> <a href=
+=3D"https://www.linkedin.com/comm/jobs/search?geoId=3D105451800&amp;f_TPR=
+=3Da1669367294-&amp;savedSearchId=3D1728883883&amp;origin=3DJOB_ALERT_EMAIL=
+&amp;lipi=3Durn%3Ali%3Apage%3Aemail_email_job_alert_digest_01%3BsB0QwrxPTqm=
+spKmInctLMQ%3D%3D&amp;midToken=3DAQHK2SukXpdd9w&amp;midSig=3D0T9fKXFmBAAaw1=
+&amp;trk=3Deml-email_job_alert_digest_01-email~job~alert~digest-0-header&am=
+p;trkEmail=3Deml-email_job_alert_digest_01-email~job~alert~digest-0-header-=
+null-gtbzps~laxpmm8a~4y-null-null&amp;eid=3Dgtbzps-laxpmm8a-4y" target=3D"_=
+blank" class=3D"text-system-gray-90" style=3D"cursor: pointer; display: inl=
+ine-block; text-decoration: none; -webkit-text-size-adjust: 100%; -ms-text-=
+size-adjust: 100%; -moz-text-size-adjust: 100%; text-size-adjust: 100%; col=
+or: #282828;"> Your job alert for <strong class=3D"font-bold" style=3D"font=
+-weight: 600;">Game Artist</strong> </a> </h1> </td> </tr> <tr> <td class=
+=3D"pt-1" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 10=
+0%; -moz-text-size-adjust: 100%; text-size-adjust: 100%; mso-table-lspace: =
+0pt; mso-table-rspace: 0pt; padding-top: 8px;"> <table class=3D"font-sans" =
+role=3D"presentation" valign=3D"top" border=3D"0" cellspacing=3D"0" cellpad=
+ding=3D"0" width=3D"100%" style=3D"-webkit-text-size-adjust: 100%; -ms-text=
+-size-adjust: 100%; -moz-text-size-adjust: 100%; text-size-adjust: 100%; ms=
+o-table-lspace: 0pt; mso-table-rspace: 0pt; font-family: -apple-system, sys=
+tem-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', 'Fira San=
+s', Ubuntu, Oxygen, 'Oxygen Sans', Cantarell, 'Droid Sans', 'Apple Color Em=
+oji', 'Segoe UI Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Lucida Grande=
+', Helvetica, Arial, sans-serif;"> <tbody> <tr> <td style=3D"-webkit-text-s=
+ize-adjust: 100%; -ms-text-size-adjust: 100%; -moz-text-size-adjust: 100%; =
+text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt;"> <h2=
+ class=3D"text-md font-normal" data-test-id=3D"email-subheader" style=3D"ma=
+rgin: 0; font-size: 16px; font-weight: 400;"> 1 new job in Kar=C4=81chi mat=
+ches your preferences. </h2> </td> </tr> </tbody> </table> </td> </tr> <tr>=
+ <td class=3D"pt-3" data-test-id=3D"job-card" style=3D"-webkit-text-size-ad=
+just: 100%; -ms-text-size-adjust: 100%; -moz-text-size-adjust: 100%; text-s=
+ize-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; padding-top=
+: 24px;"> <table class=3D"font-sans" role=3D"presentation" valign=3D"top" b=
+order=3D"0" cellspacing=3D"0" cellpadding=3D"0" width=3D"100%" style=3D"-we=
+bkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; -moz-text-size-adj=
+ust: 100%; text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace:=
+ 0pt; font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI'=
+, Roboto, 'Helvetica Neue', 'Fira Sans', Ubuntu, Oxygen, 'Oxygen Sans', Can=
+tarell, 'Droid Sans', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Emoj=
+i', 'Segoe UI Symbol', 'Lucida Grande', Helvetica, Arial, sans-serif;"> <tb=
+ody> <tr> <td class=3D"pr-2 w-6" valign=3D"top" style=3D"-webkit-text-size-=
+adjust: 100%; -ms-text-size-adjust: 100%; -moz-text-size-adjust: 100%; text=
+-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 48=
+px; padding-right: 16px;" width=3D"48"> <a href=3D"https://www.linkedin.com=
+/comm/jobs/view/3368508428/?trackingId=3DukC8RkJaWApWSZW9pQjcCQ%3D%3D&amp;r=
+efId=3Ddf98d52d-aa1b-420f-85b2-058aee10fb75&amp;lipi=3Durn%3Ali%3Apage%3Aem=
+ail_email_job_alert_digest_01%3BsB0QwrxPTqmspKmInctLMQ%3D%3D&amp;midToken=
+=3DAQHK2SukXpdd9w&amp;midSig=3D0T9fKXFmBAAaw1&amp;trk=3Deml-email_job_alert=
+_digest_01-job_card-0-company_logo&amp;trkEmail=3Deml-email_job_alert_diges=
+t_01-job_card-0-company_logo-null-gtbzps~laxpmm8a~4y-null-null&amp;eid=3Dgt=
+bzps-laxpmm8a-4y" target=3D"_blank" style=3D"color: #0a66c2; cursor: pointe=
+r; display: inline-block; text-decoration: none; -webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%; -moz-text-size-adjust: 100%; text-size-ad=
+just: 100%;"> <img class=3D"inline-block relative bg-color-entity-ghost-bac=
+kground w-6 h-6 rounded-[2px]" src=3D"https://media-exp1.licdn.com/dms/imag=
+e/C510BAQErAmOx8jbYdw/company-logo_100_100/0/1581827644289?e=3D2147483647&a=
+mp;v=3Dbeta&amp;t=3DHRyfwRiYt-vDrDBv9tvqH0Ks4pkUct2yxJP1fSuPcVA" alt=3D"ZPL=
+AY" style=3D"outline: none; text-decoration: none; -ms-interpolation-mode: =
+bicubic; position: relative; display: inline-block; height: 48px; width: 48=
+px; border-radius: 2px; background-color: #eae6df;" width=3D"48" height=3D"=
+48"> </a> </td> <td style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-=
+adjust: 100%; -moz-text-size-adjust: 100%; text-size-adjust: 100%; mso-tabl=
+e-lspace: 0pt; mso-table-rspace: 0pt;"> <a href=3D"https://www.linkedin.com=
+/comm/jobs/view/3368508428/?trackingId=3DukC8RkJaWApWSZW9pQjcCQ%3D%3D&amp;r=
+efId=3Ddf98d52d-aa1b-420f-85b2-058aee10fb75&amp;lipi=3Durn%3Ali%3Apage%3Aem=
+ail_email_job_alert_digest_01%3BsB0QwrxPTqmspKmInctLMQ%3D%3D&amp;midToken=
+=3DAQHK2SukXpdd9w&amp;midSig=3D0T9fKXFmBAAaw1&amp;trk=3Deml-email_job_alert=
+_digest_01-job_card-0-job_posting&amp;trkEmail=3Deml-email_job_alert_digest=
+_01-job_card-0-job_posting-null-gtbzps~laxpmm8a~4y-null-null&amp;eid=3Dgtbz=
+ps-laxpmm8a-4y" target=3D"_blank" style=3D"color: #0a66c2; cursor: pointer;=
+ display: inline-block; text-decoration: none; -webkit-text-size-adjust: 10=
+0%; -ms-text-size-adjust: 100%; -moz-text-size-adjust: 100%; text-size-adju=
+st: 100%;"> <table class=3D"font-sans" role=3D"presentation" valign=3D"top"=
+ border=3D"0" cellspacing=3D"0" cellpadding=3D"0" width=3D"100%" style=3D"-=
+webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; -moz-text-size-a=
+djust: 100%; text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspac=
+e: 0pt; font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe U=
+I', Roboto, 'Helvetica Neue', 'Fira Sans', Ubuntu, Oxygen, 'Oxygen Sans', C=
+antarell, 'Droid Sans', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Em=
+oji', 'Segoe UI Symbol', 'Lucida Grande', Helvetica, Arial, sans-serif;"> <=
+tbody> <tr> <td class=3D"pb-0.25" style=3D"-webkit-text-size-adjust: 100%; =
+-ms-text-size-adjust: 100%; -moz-text-size-adjust: 100%; text-size-adjust: =
+100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; padding-bottom: 2px;"> =
+<a href=3D"https://www.linkedin.com/comm/jobs/view/3368508428/?trackingId=
+=3DukC8RkJaWApWSZW9pQjcCQ%3D%3D&amp;refId=3Ddf98d52d-aa1b-420f-85b2-058aee1=
+0fb75&amp;lipi=3Durn%3Ali%3Apage%3Aemail_email_job_alert_digest_01%3BsB0Qwr=
+xPTqmspKmInctLMQ%3D%3D&amp;midToken=3DAQHK2SukXpdd9w&amp;midSig=3D0T9fKXFmB=
+AAaw1&amp;trk=3Deml-email_job_alert_digest_01-job_card-0-jobcard_body&amp;t=
+rkEmail=3Deml-email_job_alert_digest_01-job_card-0-jobcard_body-null-gtbzps=
+~laxpmm8a~4y-null-null&amp;eid=3Dgtbzps-laxpmm8a-4y" target=3D"_blank" clas=
+s=3D"font-bold text-md leading-regular text-color-brand" style=3D"cursor: p=
+ointer; display: inline-block; text-decoration: none; -webkit-text-size-adj=
+ust: 100%; -ms-text-size-adjust: 100%; -moz-text-size-adjust: 100%; text-si=
+ze-adjust: 100%; font-size: 16px; font-weight: 600; line-height: 1.25; colo=
+r: #0a66c2;"> Senior Game Artist(hyper-casual games) </a> </td> </tr> <tr> =
+<td class=3D"pb-0.5" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size=
+-adjust: 100%; -moz-text-size-adjust: 100%; text-size-adjust: 100%; mso-tab=
+le-lspace: 0pt; mso-table-rspace: 0pt; padding-bottom: 4px;"> <p class=3D"t=
+ext-system-gray-100 text-sm leading-[20px]" style=3D"margin: 0; font-weight=
+: 400; font-size: 14px; line-height: 20px; color: #1f1f1f;"> ZPLAY &middot;=
+ Pakistan (Remote) </p> </td> </tr> <tr> <td style=3D"-webkit-text-size-adj=
+ust: 100%; -ms-text-size-adjust: 100%; -moz-text-size-adjust: 100%; text-si=
+ze-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt;"> <table cla=
+ss=3D"font-sans" role=3D"presentation" valign=3D"top" border=3D"0" cellspac=
+ing=3D"0" cellpadding=3D"0" width=3D"100%" style=3D"-webkit-text-size-adjus=
+t: 100%; -ms-text-size-adjust: 100%; -moz-text-size-adjust: 100%; text-size=
+-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-family: -=
+apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica=
+ Neue', 'Fira Sans', Ubuntu, Oxygen, 'Oxygen Sans', Cantarell, 'Droid Sans'=
+, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol=
+', 'Lucida Grande', Helvetica, Arial, sans-serif;"> <tbody> <tr> <td style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; -moz-text-s=
+ize-adjust: 100%; text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-=
+rspace: 0pt; font-size: 0;" align=3D"left"> <!--[if (gte mso 9)|(IE)]><tabl=
+e cellpadding=3D"0" cellspacing=3D"0" border=3D"0" role=3D"presentation" st=
+yle=3D"width: 100%;"><![endif]--> <!--[if (gte mso 9)|(IE)]><tr> <td style=
+=3D"padding-top: 4px;"><![endif]--> <div class=3D"job-card-flavor__containe=
+r" style=3D"display: inline-block; padding-top: 4px; padding-right: 24px;">=
+ <table class=3D"font-sans" role=3D"presentation" valign=3D"top" border=3D"=
+0" cellspacing=3D"0" cellpadding=3D"0" width=3D"100%" style=3D"-webkit-text=
+-size-adjust: 100%; -ms-text-size-adjust: 100%; -moz-text-size-adjust: 100%=
+; text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; fon=
+t-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto,=
+ 'Helvetica Neue', 'Fira Sans', Ubuntu, Oxygen, 'Oxygen Sans', Cantarell, '=
+Droid Sans', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Emoji', 'Sego=
+e UI Symbol', 'Lucida Grande', Helvetica, Arial, sans-serif;"> <tbody> <tr>=
+ <td class=3D"pr-1 w-3" style=3D"-webkit-text-size-adjust: 100%; -ms-text-s=
+ize-adjust: 100%; -moz-text-size-adjust: 100%; text-size-adjust: 100%; mso-=
+table-lspace: 0pt; mso-table-rspace: 0pt; width: 24px; padding-right: 8px;"=
+ width=3D"24"> <img src=3D"https://static-exp1.licdn.com/aero-v1/sc/h/9l6a5=
+sabysjjlpb4xyj1r8g5x" alt=3D"radar icon" class=3D"w-3 h-3 block" style=3D"o=
+utline: none; text-decoration: none; -ms-interpolation-mode: bicubic; displ=
+ay: block; height: 24px; width: 24px;" width=3D"24" height=3D"24"> </td> <t=
+d style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; -moz=
+-text-size-adjust: 100%; text-size-adjust: 100%; mso-table-lspace: 0pt; mso=
+-table-rspace: 0pt;"> <p class=3D"job-card-flavor__detail" style=3D"margin:=
+ 0; font-weight: 400; font-family: -apple-system, system-ui, BlinkMacSystem=
+Font, 'Segoe UI', Roboto, 'Helvetica Neue', 'Fira Sans', Ubuntu, Oxygen, 'O=
+xygen Sans', Cantarell, 'Droid Sans', 'Apple Color Emoji', 'Segoe UI Emoji'=
+, 'Segoe UI Emoji', 'Segoe UI Symbol', 'Lucida Grande', Helvetica, Arial, s=
+ans-serif; font-size: 12px; line-height: 1.25; color: #666666;"> Actively r=
+ecruiting </p> </td> </tr> </tbody> </table> </div> <!--[if (gte mso 9)|(IE=
+)]></td> </tr><![endif]--> <!--[if (gte mso 9)|(IE)]><tr> <td style=3D"padd=
+ing-top: 4px;"><![endif]--> <div class=3D"job-card-flavor__container" style=
+=3D"display: inline-block; padding-top: 4px; padding-right: 24px;"> <table =
+class=3D"font-sans" role=3D"presentation" valign=3D"top" border=3D"0" cells=
+pacing=3D"0" cellpadding=3D"0" width=3D"100%" style=3D"-webkit-text-size-ad=
+just: 100%; -ms-text-size-adjust: 100%; -moz-text-size-adjust: 100%; text-s=
+ize-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-family=
+: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvet=
+ica Neue', 'Fira Sans', Ubuntu, Oxygen, 'Oxygen Sans', Cantarell, 'Droid Sa=
+ns', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Emoji', 'Segoe UI Sym=
+bol', 'Lucida Grande', Helvetica, Arial, sans-serif;"> <tbody> <tr> <td cla=
+ss=3D"pr-1 w-3" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adju=
+st: 100%; -moz-text-size-adjust: 100%; text-size-adjust: 100%; mso-table-ls=
+pace: 0pt; mso-table-rspace: 0pt; width: 24px; padding-right: 8px;" width=
+=3D"24"> <img alt=3D"Easy Apply" class=3D"w-3 h-3 rounded-[2px] block" src=
+=3D"https://static-exp1.licdn.com/aero-v1/sc/h/1sk0fbe9amaiat5elvybbtxsm" s=
+tyle=3D"outline: none; text-decoration: none; -ms-interpolation-mode: bicub=
+ic; display: block; height: 24px; width: 24px; border-radius: 2px;" width=
+=3D"24" height=3D"24"> </td> <td style=3D"-webkit-text-size-adjust: 100%; -=
+ms-text-size-adjust: 100%; -moz-text-size-adjust: 100%; text-size-adjust: 1=
+00%; mso-table-lspace: 0pt; mso-table-rspace: 0pt;"> <p class=3D"job-card-f=
+lavor__detail" style=3D"margin: 0; font-weight: 400; font-family: -apple-sy=
+stem, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', =
+'Fira Sans', Ubuntu, Oxygen, 'Oxygen Sans', Cantarell, 'Droid Sans', 'Apple=
+ Color Emoji', 'Segoe UI Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Luci=
+da Grande', Helvetica, Arial, sans-serif; font-size: 12px; line-height: 1.2=
+5; color: #666666;"> Easy Apply </p> </td> </tr> </tbody> </table> </div> <=
+!--[if (gte mso 9)|(IE)]></td> </tr><![endif]--> <!--[if (gte mso 9)|(IE)]>=
+</table><![endif]--> </td> </tr> </tbody> </table> </td> </tr> </tbody> </t=
+able> </a> </td> </tr> </tbody> </table> </td> </tr> <tr> <td class=3D"pt-3=
+ text-left" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: =
+100%; -moz-text-size-adjust: 100%; text-size-adjust: 100%; mso-table-lspace=
+: 0pt; mso-table-rspace: 0pt; padding-top: 24px; text-align: left;"> <table=
+ class=3D"font-sans" role=3D"presentation" valign=3D"top" border=3D"0" cell=
+spacing=3D"0" cellpadding=3D"0" width=3D"100%" style=3D"-webkit-text-size-a=
+djust: 100%; -ms-text-size-adjust: 100%; -moz-text-size-adjust: 100%; text-=
+size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-famil=
+y: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helve=
+tica Neue', 'Fira Sans', Ubuntu, Oxygen, 'Oxygen Sans', Cantarell, 'Droid S=
+ans', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Emoji', 'Segoe UI Sy=
+mbol', 'Lucida Grande', Helvetica, Arial, sans-serif;"> <tbody> <tr> <td va=
+lign=3D"middle" align=3D"left" style=3D"-webkit-text-size-adjust: 100%; -ms=
+-text-size-adjust: 100%; -moz-text-size-adjust: 100%; text-size-adjust: 100=
+%; mso-table-lspace: 0pt; mso-table-rspace: 0pt;"> <a href=3D"https://www.l=
+inkedin.com/comm/jobs/search?geoId=3D105451800&amp;f_TPR=3Da1669367294-&amp=
+;savedSearchId=3D1728883883&amp;origin=3DJOB_ALERT_EMAIL&amp;lipi=3Durn%3Al=
+i%3Apage%3Aemail_email_job_alert_digest_01%3BsB0QwrxPTqmspKmInctLMQ%3D%3D&a=
+mp;midToken=3DAQHK2SukXpdd9w&amp;midSig=3D0T9fKXFmBAAaw1&amp;trk=3Deml-emai=
+l_job_alert_digest_01-job~alert-0-see~all~jobs&amp;trkEmail=3Deml-email_job=
+_alert_digest_01-job~alert-0-see~all~jobs-null-gtbzps~laxpmm8a~4y-null-null=
+&amp;eid=3Dgtbzps-laxpmm8a-4y" target=3D"_blank" style=3D"color: #0a66c2; c=
+ursor: pointer; display: inline-block; text-decoration: none; -webkit-text-=
+size-adjust: 100%; -ms-text-size-adjust: 100%; -moz-text-size-adjust: 100%;=
+ text-size-adjust: 100%;"> <table class=3D"font-sans border-separate" role=
+=3D"presentation" valign=3D"top" border=3D"0" cellspacing=3D"0" cellpadding=
+=3D"0" width=3D"auto" style=3D"-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%; -moz-text-size-adjust: 100%; text-size-adjust: 100%; mso-ta=
+ble-lspace: 0pt; mso-table-rspace: 0pt; border-collapse: separate; font-fam=
+ily: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Hel=
+vetica Neue', 'Fira Sans', Ubuntu, Oxygen, 'Oxygen Sans', Cantarell, 'Droid=
+ Sans', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Emoji', 'Segoe UI =
+Symbol', 'Lucida Grande', Helvetica, Arial, sans-serif;"> <tbody> <tr> <td =
+class=3D"btn-md btn-primary border-color-brand button-link leading-regular =
+!min-h-[auto] font-sans !shadow-none border-1 border-solid" style=3D"-webki=
+t-text-size-adjust: 100%; -ms-text-size-adjust: 100%; -moz-text-size-adjust=
+: 100%; text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0p=
+t; height: min-content; border-radius: 24px; padding-top: 12px; padding-bot=
+tom: 12px; padding-left: 24px; padding-right: 24px; text-align: center; fon=
+t-size: 16px; font-weight: 600; cursor: pointer; text-decoration-line: none=
+; background-color: #0a66c2; color: #ffffff; border-width: 1px; border-styl=
+e: solid; border-color: #0a66c2; font-family: -apple-system, system-ui, Bli=
+nkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', 'Fira Sans', Ubuntu,=
+ Oxygen, 'Oxygen Sans', Cantarell, 'Droid Sans', 'Apple Color Emoji', 'Sego=
+e UI Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Lucida Grande', Helvetic=
+a, Arial, sans-serif; line-height: 1.25; min-height: auto !important; box-s=
+hadow: 0 0 #0000, 0 0 #0000, 0 0 #0000 !important;"> <a href=3D"https://www=
+.linkedin.com/comm/jobs/search?geoId=3D105451800&amp;f_TPR=3Da1669367294-&a=
+mp;savedSearchId=3D1728883883&amp;origin=3DJOB_ALERT_EMAIL&amp;lipi=3Durn%3=
+Ali%3Apage%3Aemail_email_job_alert_digest_01%3BsB0QwrxPTqmspKmInctLMQ%3D%3D=
+&amp;midToken=3DAQHK2SukXpdd9w&amp;midSig=3D0T9fKXFmBAAaw1&amp;trk=3Deml-em=
+ail_job_alert_digest_01-job~alert-0-see~all~jobs&amp;trkEmail=3Deml-email_j=
+ob_alert_digest_01-job~alert-0-see~all~jobs-null-gtbzps~laxpmm8a~4y-null-nu=
+ll&amp;eid=3Dgtbzps-laxpmm8a-4y" target=3D"_blank" tabindex=3D"-1" aria-hid=
+den=3D"true" style=3D"color: #0a66c2; cursor: pointer; display: inline-bloc=
+k; text-decoration: none; -webkit-text-size-adjust: 100%; -ms-text-size-adj=
+ust: 100%; -moz-text-size-adjust: 100%; text-size-adjust: 100%;"> <span cla=
+ss=3D"no-underline text-white" style=3D"color: #ffffff; text-decoration-lin=
+e: none;"> See all jobs </span> </a> </td> </tr> </tbody> </table> </a> </t=
+d> </tr> </tbody> </table> </td> </tr> <tr data-test-id=3D"premium-upsell">=
+ <td class=3D"pt-3" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-=
+adjust: 100%; -moz-text-size-adjust: 100%; text-size-adjust: 100%; mso-tabl=
+e-lspace: 0pt; mso-table-rspace: 0pt; padding-top: 24px;"> <table class=3D"=
+font-sans" role=3D"presentation" valign=3D"top" border=3D"0" cellspacing=3D=
+"0" cellpadding=3D"0" width=3D"100%" style=3D"-webkit-text-size-adjust: 100=
+%; -ms-text-size-adjust: 100%; -moz-text-size-adjust: 100%; text-size-adjus=
+t: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-family: -apple-=
+system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue'=
+, 'Fira Sans', Ubuntu, Oxygen, 'Oxygen Sans', Cantarell, 'Droid Sans', 'App=
+le Color Emoji', 'Segoe UI Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Lu=
+cida Grande', Helvetica, Arial, sans-serif;"> <tbody> <tr> <td style=3D"-we=
+bkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; -moz-text-size-adj=
+ust: 100%; text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace:=
+ 0pt;"> <table class=3D"font-sans" role=3D"presentation" valign=3D"top" bor=
+der=3D"0" cellspacing=3D"0" cellpadding=3D"0" width=3D"100%" style=3D"-webk=
+it-text-size-adjust: 100%; -ms-text-size-adjust: 100%; -moz-text-size-adjus=
+t: 100%; text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0=
+pt; font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', =
+Roboto, 'Helvetica Neue', 'Fira Sans', Ubuntu, Oxygen, 'Oxygen Sans', Canta=
+rell, 'Droid Sans', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Emoji'=
+, 'Segoe UI Symbol', 'Lucida Grande', Helvetica, Arial, sans-serif;"> <tbod=
+y> <tr> <td align=3D"left" valign=3D"top" class=3D"w-0" style=3D"-webkit-te=
+xt-size-adjust: 100%; -ms-text-size-adjust: 100%; -moz-text-size-adjust: 10=
+0%; text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; w=
+idth: 0px;" width=3D"0"> <a href=3D"https://pk.linkedin.com/comm/in/azfar-a=
+li-9545bb244?lipi=3Durn%3Ali%3Apage%3Aemail_email_job_alert_digest_01%3BsB0=
+QwrxPTqmspKmInctLMQ%3D%3D&amp;midToken=3DAQHK2SukXpdd9w&amp;midSig=3D0T9fKX=
+FmBAAaw1&amp;trk=3Deml-email_job_alert_digest_01-job~alert-0-premium~upsell=
+&amp;trkEmail=3Deml-email_job_alert_digest_01-job~alert-0-premium~upsell-nu=
+ll-gtbzps~laxpmm8a~4y-null-null&amp;eid=3Dgtbzps-laxpmm8a-4y" target=3D"_bl=
+ank" style=3D"color: #0a66c2; cursor: pointer; display: inline-block; text-=
+decoration: none; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100=
+%; -moz-text-size-adjust: 100%; text-size-adjust: 100%;"> <img class=3D"w-[=
+84px]" alt=3D"Premium icon" src=3D"https://static-exp1.licdn.com/aero-v1/sc=
+/h/40p617it49hlmq3d88bf4wguy" style=3D"outline: none; text-decoration: none=
+; -ms-interpolation-mode: bicubic; width: 84px;" width=3D"84"> </a> </td> <=
+/tr> <tr> <td class=3D"text-center" align=3D"center" style=3D"-webkit-text-=
+size-adjust: 100%; -ms-text-size-adjust: 100%; -moz-text-size-adjust: 100%;=
+ text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; text=
+-align: center;"> <img class=3D"inline-block relative bg-color-entity-ghost=
+-background clip-path-circle-50 rounded-full w-16 h-16" src=3D"https://medi=
+a-exp1.licdn.com/dms/image/C4E03AQF1mg7Xh0jsLA/profile-displayphoto-shrink_=
+200_200/0/1657091428052?e=3D1674691200&amp;v=3Dbeta&amp;t=3DBnzz2ToU_Xi06iO=
+YDdvoscokWH9SjV8596m8u3cwKJQ" alt=3D"Azfar Ali" style=3D"outline: none; tex=
+t-decoration: none; -ms-interpolation-mode: bicubic; position: relative; di=
+splay: inline-block; height: 128px; width: 128px; border-radius: 9999px; ba=
+ckground-color: #eae6df; clip-path: circle(50%);" width=3D"128" height=3D"1=
+28"> </td> </tr> </tbody> </table> </td> </tr> <tr> <td class=3D"text-lg le=
+ading-regular text-center pt-2" style=3D"-webkit-text-size-adjust: 100%; -m=
+s-text-size-adjust: 100%; -moz-text-size-adjust: 100%; text-size-adjust: 10=
+0%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; padding-top: 16px; text-a=
+lign: center; font-size: 20px; line-height: 1.25;"> See jobs where you=E2=
+=80=99re a top applicant </td> </tr> <tr> <td class=3D"pt-2" style=3D"-webk=
+it-text-size-adjust: 100%; -ms-text-size-adjust: 100%; -moz-text-size-adjus=
+t: 100%; text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0=
+pt; padding-top: 16px;"> <table class=3D"font-sans" role=3D"presentation" v=
+align=3D"top" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" width=3D"100=
+%" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; -mo=
+z-text-size-adjust: 100%; text-size-adjust: 100%; mso-table-lspace: 0pt; ms=
+o-table-rspace: 0pt; font-family: -apple-system, system-ui, BlinkMacSystemF=
+ont, 'Segoe UI', Roboto, 'Helvetica Neue', 'Fira Sans', Ubuntu, Oxygen, 'Ox=
+ygen Sans', Cantarell, 'Droid Sans', 'Apple Color Emoji', 'Segoe UI Emoji',=
+ 'Segoe UI Emoji', 'Segoe UI Symbol', 'Lucida Grande', Helvetica, Arial, sa=
+ns-serif;"> <tbody> <tr> <td valign=3D"middle" align=3D"middle" style=3D"-w=
+ebkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; -moz-text-size-ad=
+just: 100%; text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace=
+: 0pt;"> <a href=3D"https://www.linkedin.com/comm/premium/products/?family=
+=3Djss&amp;lipi=3Durn%3Ali%3Apage%3Aemail_email_job_alert_digest_01%3BsB0Qw=
+rxPTqmspKmInctLMQ%3D%3D&amp;midToken=3DAQHK2SukXpdd9w&amp;midSig=3D0T9fKXFm=
+BAAaw1&amp;trk=3Deml-email_job_alert_digest_01-null-0-null&amp;trkEmail=3De=
+ml-email_job_alert_digest_01-null-0-null-null-gtbzps~laxpmm8a~4y-null-null&=
+amp;eid=3Dgtbzps-laxpmm8a-4y" target=3D"_blank" style=3D"color: #0a66c2; cu=
+rsor: pointer; display: inline-block; text-decoration: none; -webkit-text-s=
+ize-adjust: 100%; -ms-text-size-adjust: 100%; -moz-text-size-adjust: 100%; =
+text-size-adjust: 100%;"> <table class=3D"font-sans border-separate" role=
+=3D"presentation" valign=3D"top" border=3D"0" cellspacing=3D"0" cellpadding=
+=3D"0" width=3D"auto" style=3D"-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%; -moz-text-size-adjust: 100%; text-size-adjust: 100%; mso-ta=
+ble-lspace: 0pt; mso-table-rspace: 0pt; border-collapse: separate; font-fam=
+ily: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Hel=
+vetica Neue', 'Fira Sans', Ubuntu, Oxygen, 'Oxygen Sans', Cantarell, 'Droid=
+ Sans', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Emoji', 'Segoe UI =
+Symbol', 'Lucida Grande', Helvetica, Arial, sans-serif;"> <tbody> <tr> <td =
+class=3D"btn-sm btn-secondary !border-[#424242] button-link leading-regular=
+ !min-h-[auto] font-sans !shadow-none border-1 border-solid" style=3D"-webk=
+it-text-size-adjust: 100%; -ms-text-size-adjust: 100%; -moz-text-size-adjus=
+t: 100%; text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0=
+pt; height: min-content; border-radius: 24px; padding-top: 7px; padding-bot=
+tom: 7px; padding-left: 16px; padding-right: 16px; text-align: center; font=
+-size: 14px; font-weight: 600; cursor: pointer; text-decoration-line: none;=
+ background-color: rgba(0, 0, 0, 0); color: rgba(0, 0, 0, 0.75); border-wid=
+th: 1px; border-style: solid; font-family: -apple-system, system-ui, BlinkM=
+acSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', 'Fira Sans', Ubuntu, Ox=
+ygen, 'Oxygen Sans', Cantarell, 'Droid Sans', 'Apple Color Emoji', 'Segoe U=
+I Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Lucida Grande', Helvetica, =
+Arial, sans-serif; line-height: 1.25; min-height: auto !important; border-c=
+olor: #424242 !important; box-shadow: 0 0 #0000, 0 0 #0000, 0 0 #0000 !impo=
+rtant;"> <a href=3D"https://www.linkedin.com/comm/premium/products/?family=
+=3Djss&amp;lipi=3Durn%3Ali%3Apage%3Aemail_email_job_alert_digest_01%3BsB0Qw=
+rxPTqmspKmInctLMQ%3D%3D&amp;midToken=3DAQHK2SukXpdd9w&amp;midSig=3D0T9fKXFm=
+BAAaw1&amp;trk=3Deml-email_job_alert_digest_01-null-0-null&amp;trkEmail=3De=
+ml-email_job_alert_digest_01-null-0-null-null-gtbzps~laxpmm8a~4y-null-null&=
+amp;eid=3Dgtbzps-laxpmm8a-4y" target=3D"_blank" tabindex=3D"-1" aria-hidden=
+=3D"true" style=3D"color: #0a66c2; cursor: pointer; display: inline-block; =
+text-decoration: none; -webkit-text-size-adjust: 100%; -ms-text-size-adjust=
+: 100%; -moz-text-size-adjust: 100%; text-size-adjust: 100%;"> <span class=
+=3D"no-underline !text-[#424242]" style=3D"text-decoration-line: none; colo=
+r: #424242 !important;"> Try Premium for free </span> </a> </td> </tr> </tb=
+ody> </table> </a> </td> </tr> </tbody> </table> </td> </tr> </tbody> </tab=
+le> </td> </tr> </tbody> </table> </div> </td> </tr> <tr> <td class=3D"bg-c=
+olor-background-canvas p-3" style=3D"-webkit-text-size-adjust: 100%; -ms-te=
+xt-size-adjust: 100%; -moz-text-size-adjust: 100%; text-size-adjust: 100%; =
+mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-color: #f3f2f0; pa=
+dding: 24px;"> <table class=3D"font-sans" role=3D"presentation" valign=3D"t=
+op" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" width=3D"100%" style=
+=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; -moz-text-s=
+ize-adjust: 100%; text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-=
+rspace: 0pt; font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Se=
+goe UI', Roboto, 'Helvetica Neue', 'Fira Sans', Ubuntu, Oxygen, 'Oxygen San=
+s', Cantarell, 'Droid Sans', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe =
+UI Emoji', 'Segoe UI Symbol', 'Lucida Grande', Helvetica, Arial, sans-serif=
+;"> <tbody> <tr> <td class=3D"text-center pb-2" style=3D"-webkit-text-size-=
+adjust: 100%; -ms-text-size-adjust: 100%; -moz-text-size-adjust: 100%; text=
+-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; padding-b=
+ottom: 16px; text-align: center;"> <h2 class=3D"text-lg" style=3D"margin: 0=
+; font-weight: 500; font-size: 20px;">Never miss an update with the LinkedI=
+n app</h2> </td> </tr> <tr> <td class=3D"text-center" data-test-id=3D"foote=
+r-app-store-icon" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-ad=
+just: 100%; -moz-text-size-adjust: 100%; text-size-adjust: 100%; mso-table-=
+lspace: 0pt; mso-table-rspace: 0pt; text-align: center;"> <a href=3D"https:=
+//itunes.apple.com/us/app/linkedin/id288429040?pt=3D10746&amp;ct=3Dst_appsi=
+te_flagship&amp;mt=3D8" style=3D"color: #0a66c2; cursor: pointer; display: =
+inline-block; text-decoration: none; -webkit-text-size-adjust: 100%; -ms-te=
+xt-size-adjust: 100%; -moz-text-size-adjust: 100%; text-size-adjust: 100%;"=
+> <img alt=3D"Download on the App Store" src=3D"https://static-exp1.licdn.c=
+om/aero-v1/sc/h/76yzkd0h5kiv27lrd4yaenylk" class=3D"h-[40px] w-[120px] pr-1=
+" style=3D"outline: none; text-decoration: none; -ms-interpolation-mode: bi=
+cubic; height: 40px; width: 120px; padding-right: 8px;" width=3D"120" heigh=
+t=3D"40"> </a><a href=3D"https://play.google.com/store/apps/details?id=3Dco=
+m.linkedin.android&amp;referrer=3Dst_appsite_flagship" style=3D"color: #0a6=
+6c2; cursor: pointer; display: inline-block; text-decoration: none; -webkit=
+-text-size-adjust: 100%; -ms-text-size-adjust: 100%; -moz-text-size-adjust:=
+ 100%; text-size-adjust: 100%;"> <img alt=3D"Get it on Google Play" src=3D"=
+https://static-exp1.licdn.com/aero-v1/sc/h/142qudwblp58zwmc9vkqfplug" class=
+=3D"h-[40px] w-[134px]" style=3D"outline: none; text-decoration: none; -ms-=
+interpolation-mode: bicubic; height: 40px; width: 134px;" width=3D"134" hei=
+ght=3D"40"> </a> </td> </tr> <tr> <td class=3D"py-2" style=3D"-webkit-text-=
+size-adjust: 100%; -ms-text-size-adjust: 100%; -moz-text-size-adjust: 100%;=
+ text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; padd=
+ing-top: 16px; padding-bottom: 16px;"><hr class=3D"border-none bg-[#e0dfdd]=
+ h-[1px]" style=3D"height: 1px; border-style: none; background-color: #e0df=
+dd;"></td> </tr> </tbody> </table> <table class=3D"font-sans text-xs" role=
+=3D"presentation" valign=3D"top" border=3D"0" cellspacing=3D"0" cellpadding=
+=3D"0" width=3D"100%" style=3D"-webkit-text-size-adjust: 100%; -ms-text-siz=
+e-adjust: 100%; -moz-text-size-adjust: 100%; text-size-adjust: 100%; mso-ta=
+ble-lspace: 0pt; mso-table-rspace: 0pt; font-family: -apple-system, system-=
+ui, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', 'Fira Sans', =
+Ubuntu, Oxygen, 'Oxygen Sans', Cantarell, 'Droid Sans', 'Apple Color Emoji'=
+, 'Segoe UI Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Lucida Grande', H=
+elvetica, Arial, sans-serif; font-size: 12px;"> <tbody> <tr> <td class=3D"p=
+b-1 m-0" style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100=
+%; -moz-text-size-adjust: 100%; text-size-adjust: 100%; mso-table-lspace: 0=
+pt; mso-table-rspace: 0pt; margin: 0px; padding-bottom: 8px;"> This email w=
+as intended for Azfar Ali (Student at NED University of Engineering and Tec=
+hnology) </td> </tr> <tr> <td class=3D"pb-1 m-0" style=3D"-webkit-text-size=
+-adjust: 100%; -ms-text-size-adjust: 100%; -moz-text-size-adjust: 100%; tex=
+t-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; margin: =
+0px; padding-bottom: 8px;"> <a href=3D"https://www.linkedin.com/help/linked=
+in/answer/4788?lang=3Den&amp;lipi=3Durn%3Ali%3Apage%3Aemail_email_job_alert=
+_digest_01%3BsB0QwrxPTqmspKmInctLMQ%3D%3D&amp;midToken=3DAQHK2SukXpdd9w&amp=
+;midSig=3D0T9fKXFmBAAaw1&amp;trk=3Deml-email_job_alert_digest_01-SecurityHe=
+lp-0-footerglimmer&amp;trkEmail=3Deml-email_job_alert_digest_01-SecurityHel=
+p-0-footerglimmer-null-gtbzps~laxpmm8a~4y-null-null&amp;eid=3Dgtbzps-laxpmm=
+8a-4y" target=3D"_blank" style=3D"color: #0a66c2; cursor: pointer; display:=
+ inline-block; text-decoration: none; -webkit-text-size-adjust: 100%; -ms-t=
+ext-size-adjust: 100%; -moz-text-size-adjust: 100%; text-size-adjust: 100%;=
+">Learn why we included this.</a> </td> </tr> <tr> <td class=3D"pb-1 m-0" s=
+tyle=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; -moz-te=
+xt-size-adjust: 100%; text-size-adjust: 100%; mso-table-lspace: 0pt; mso-ta=
+ble-rspace: 0pt; margin: 0px; padding-bottom: 8px;">You are receiving Job A=
+lert emails.</td> </tr> <tr> <td class=3D"pb-1 m-0" style=3D"-webkit-text-s=
+ize-adjust: 100%; -ms-text-size-adjust: 100%; -moz-text-size-adjust: 100%; =
+text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; margi=
+n: 0px; padding-bottom: 8px;"> <a href=3D"https://www.linkedin.com/comm/job=
+s/alerts?lipi=3Durn%3Ali%3Apage%3Aemail_email_job_alert_digest_01%3BsB0Qwrx=
+PTqmspKmInctLMQ%3D%3D&amp;midToken=3DAQHK2SukXpdd9w&amp;midSig=3D0T9fKXFmBA=
+Aaw1&amp;trk=3Deml-email_job_alert_digest_01-null-0-null&amp;trkEmail=3Deml=
+-email_job_alert_digest_01-null-0-null-null-gtbzps~laxpmm8a~4y-null-null&am=
+p;eid=3Dgtbzps-laxpmm8a-4y" target=3D"_blank" trackingmodule=3D"footer" tra=
+ckingsuffix=3D"manage_alert_mercado" style=3D"color: #0a66c2; cursor: point=
+er; display: inline-block; text-decoration: none; -webkit-text-size-adjust:=
+ 100%; -ms-text-size-adjust: 100%; -moz-text-size-adjust: 100%; text-size-a=
+djust: 100%;"> Manage job alerts </a> =C2=A0=C2=A0=C2=B7=C2=A0=C2=A0 <a hre=
+f=3D"https://www.linkedin.com/comm/jobs/alerts?lipi=3Durn%3Ali%3Apage%3Aema=
+il_email_job_alert_digest_01%3BsB0QwrxPTqmspKmInctLMQ%3D%3D&amp;midToken=3D=
+AQHK2SukXpdd9w&amp;midSig=3D0T9fKXFmBAAaw1&amp;trk=3Deml-email_job_alert_di=
+gest_01-unsubscribe-0-footerGlimmer&amp;trkEmail=3Deml-email_job_alert_dige=
+st_01-unsubscribe-0-footerGlimmer-null-gtbzps~laxpmm8a~4y-null-null&amp;eid=
+=3Dgtbzps-laxpmm8a-4y&amp;loid=3DAQHD92Zu_mwf1AAAAYSzMdhPxTGeLXXkJIN5qw3sUg=
+05TnApJWk8xl2dDFpYVftrWBWdcZM2dasorJ1z5ujoHjuwOTIZ7wojja52s4cTSpPGswuPw00N0=
+q42MoJKDRI" target=3D"_blank" style=3D"color: #0a66c2; cursor: pointer; dis=
+play: inline-block; text-decoration: none; -webkit-text-size-adjust: 100%; =
+-ms-text-size-adjust: 100%; -moz-text-size-adjust: 100%; text-size-adjust: =
+100%;">Unsubscribe</a> =C2=A0=C2=A0=C2=B7=C2=A0=C2=A0 <a href=3D"https://ww=
+w.linkedin.com/help/linkedin/answer/67?lang=3Den&amp;lipi=3Durn%3Ali%3Apage=
+%3Aemail_email_job_alert_digest_01%3BsB0QwrxPTqmspKmInctLMQ%3D%3D&amp;midTo=
+ken=3DAQHK2SukXpdd9w&amp;midSig=3D0T9fKXFmBAAaw1&amp;trk=3Deml-email_job_al=
+ert_digest_01-help-0-footerglimmer&amp;trkEmail=3Deml-email_job_alert_diges=
+t_01-help-0-footerglimmer-null-gtbzps~laxpmm8a~4y-null-null&amp;eid=3Dgtbzp=
+s-laxpmm8a-4y" target=3D"_blank" style=3D"color: #0a66c2; cursor: pointer; =
+display: inline-block; text-decoration: none; -webkit-text-size-adjust: 100=
+%; -ms-text-size-adjust: 100%; -moz-text-size-adjust: 100%; text-size-adjus=
+t: 100%;">Help</a> </td> </tr> <tr> <td class=3D"pb-1" style=3D"-webkit-tex=
+t-size-adjust: 100%; -ms-text-size-adjust: 100%; -moz-text-size-adjust: 100=
+%; text-size-adjust: 100%; mso-table-lspace: 0pt; mso-table-rspace: 0pt; pa=
+dding-bottom: 8px;"> <a href=3D"https://www.linkedin.com/comm/feed/?lipi=3D=
+urn%3Ali%3Apage%3Aemail_email_job_alert_digest_01%3BsB0QwrxPTqmspKmInctLMQ%=
+3D%3D&amp;midToken=3DAQHK2SukXpdd9w&amp;midSig=3D0T9fKXFmBAAaw1&amp;trk=3De=
+ml-email_job_alert_digest_01-footer-0-logoGlimmer&amp;trkEmail=3Deml-email_=
+job_alert_digest_01-footer-0-logoGlimmer-null-gtbzps~laxpmm8a~4y-null-null&=
+amp;eid=3Dgtbzps-laxpmm8a-4y" target=3D"_blank" style=3D"color: #0a66c2; cu=
+rsor: pointer; display: inline-block; text-decoration: none; -webkit-text-s=
+ize-adjust: 100%; -ms-text-size-adjust: 100%; -moz-text-size-adjust: 100%; =
+text-size-adjust: 100%;"> <img src=3D"https://static-exp1.licdn.com/aero-v1=
+/sc/h/9ehe6n39fa07dc5edzv0rla4e" alt=3D"LinkedIn" class=3D"block h-[14px] w=
+-[56px] image-rendering-crisp" style=3D"outline: none; text-decoration: non=
+e; image-rendering: -moz-crisp-edges; image-rendering: -o-crisp-edges; imag=
+e-rendering: -webkit-optimize-contrast; image-rendering: crisp-edges; -ms-i=
+nterpolation-mode: nearest-neighbor; display: block; height: 14px; width: 5=
+6px;" width=3D"56" height=3D"14"> </a> </td> </tr> <tr> <td data-test-copyr=
+ight-text style=3D"-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 10=
+0%; -moz-text-size-adjust: 100%; text-size-adjust: 100%; mso-table-lspace: =
+0pt; mso-table-rspace: 0pt;"> =C2=A9 2022 LinkedIn Corporation, 1&zwnj;000 =
+West Maude Avenue, Sunnyvale, CA 94085. <span data-test-trademarks-text> Li=
+nkedIn and the LinkedIn logo are registered trademarks of LinkedIn. </span>=
+ </td> </tr> </tbody> </table> </td> </tr> </tbody> </table> <img alt role=
+=3D"presentation" src=3D"https://www.linkedin.com/emimp/ip_WjNSaWVuQnpMV3ho=
+ZUhCdGJUaGhMVFI1OlpXMWhhV3hmYW05aVgyRnNaWEowWDJScFoyVnpkRjh3TVE9PTo=3D.gif"=
+ style=3D"outline: none; text-decoration: none; -ms-interpolation-mode: bic=
+ubic; width: 1px; height: 1px;" width=3D"1" height=3D"1"> </body> </html>
+------=_Part_14803383_1777778680.1669453699696--
+

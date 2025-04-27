@@ -1,0 +1,75 @@
+X-GM-THRID: 1770334090151077900
+X-Gmail-Labels: Inbox,Category Updates,Unread
+Delivered-To: azfarali007.aa@gmail.com
+Received: by 2002:a0c:f607:0:b0:636:c2c0:dffc with SMTP id r7csp359914qvm;
+        Sun, 2 Jul 2023 11:22:33 -0700 (PDT)
+X-Google-Smtp-Source: ACHHUZ5b8UY6rntfABqz/M6979zSQDaa0EhgPc7i4IX5aibZAGYW8+42kT+mM3FrD9bz7FFgBOcH
+X-Received: by 2002:a05:622a:312:b0:400:a94e:ddac with SMTP id q18-20020a05622a031200b00400a94eddacmr9354330qtw.28.1688322153369;
+        Sun, 02 Jul 2023 11:22:33 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1688322153; cv=none;
+        d=google.com; s=arc-20160816;
+        b=K3+FPtSvoXJyacyJATrviBuyzfExgWHK3UJhyb7xzo/3y7ComcM2O/dSXoojvmwetL
+         32zz9V+1mdfWUb9qNdmVH9V2+TGDzoD1+zJsgI2bTCxr3fBlL0aCma10WpW2hrULGRh8
+         uIdjOn/7hzrnkMcEF+QwzzyrN5jXyVsw5AM0aHK9NaQwALXCIv97NyaXNSNplTz+U3je
+         8ykyXHdmqMTryrfjkFmpX9/7b8Tqq9dBfxfp0vhpNERRgK2akLfgEzT4+yOkVW8l6Q47
+         d+wGzEqziWoY0r8ACprgwNhHIVT6DcoEWhWbZ0ocks9VxUC5G6gB6aD+fB7MGAWrcH4J
+         s+pw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=content-transfer-encoding:mime-version:subject:message-id:to:from
+         :date:dkim-signature;
+        bh=oBxRYJUgGqM0tmVSDEgpn+Zj5kgh+8VTDytpbWoKdTc=;
+        fh=KpNs0jnIpbsfqo6ZSfYW4fGPbRBclrNoz3b8jSdzKp4=;
+        b=iDGI/Mz4F7sRxeZ3M3aosEbz+JbicJC9MRhOG9s7YIVx+0xg5r5nCC/xhlRPq2T9TJ
+         ESGY1pgkpK/nluAQWHy+SLCYRPnkiqSJQt/uOdReZuVuP6JeDXgSUukJRnMKySU1jSpZ
+         4DBbAQ5PyjruUDJiAEA8vDZCrXKDJHvqJcmaJEKVQvLTki6MWkWRjNRWU0zifAfgS4ak
+         De5wE9waEvhpU6tIqfP9idO0bPP+xq9L7Ms2dyeMDiBZowbeHOp/vcwVsaHWT4jvIylf
+         1w2Vxzn71w+t2pXiS0TR+gGqW44PXdnXfzIaNx4/tChVrZ+NKOB5CTPiSJ3mGw5bykSQ
+         WmWA==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@github.com header.s=pf2023 header.b="Cw/d+eWh";
+       spf=pass (google.com: domain of noreply@github.com designates 192.30.252.203 as permitted sender) smtp.mailfrom=noreply@github.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=github.com
+Return-Path: <noreply@github.com>
+Received: from out-20.smtp.github.com (out-20.smtp.github.com. [192.30.252.203])
+        by mx.google.com with ESMTPS id y1-20020a05622a004100b0040345e141c6si3808356qtw.570.2023.07.02.11.22.33
+        for <azfarali007.aa@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Sun, 02 Jul 2023 11:22:33 -0700 (PDT)
+Received-SPF: pass (google.com: domain of noreply@github.com designates 192.30.252.203 as permitted sender) client-ip=192.30.252.203;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@github.com header.s=pf2023 header.b="Cw/d+eWh";
+       spf=pass (google.com: domain of noreply@github.com designates 192.30.252.203 as permitted sender) smtp.mailfrom=noreply@github.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=github.com
+Received: from github.com (hubbernetes-node-5fe2af5.va3-iad.github.net [10.48.138.17])
+	by smtp.github.com (Postfix) with ESMTPA id 29DB28C104B;
+	Sun,  2 Jul 2023 11:22:33 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=github.com;
+	s=pf2023; t=1688322153;
+	bh=oBxRYJUgGqM0tmVSDEgpn+Zj5kgh+8VTDytpbWoKdTc=;
+	h=Date:From:To:Subject:From;
+	b=Cw/d+eWh68PMv5KG9v4si7Uj/YRNLs9RSSRINXlgD2A1/yRYqn895FQw77H49Sz+R
+	 i1j24OMeilsefecfKDOSE3VX2nB7jRLpQCMyZrDnwRKo7yjm9wBYitn+yOLGenDrye
+	 jWzbHfJiT2sQE7BUo0l9DAzU0kP9uz2/wnaM88F0=
+Date: Sun, 02 Jul 2023 11:22:33 -0700
+From: GitHub <noreply@github.com>
+To: Syed Azfar Ali <ali4402832@cloud.neduet.edu.pk>
+Message-ID: <64a1c06927af1_15a2ad020544ab@lowworker-5b6bdc9f9f-54csv.mail>
+Subject: [GitHub] A personal access token (classic) has been added to your
+ account
+Mime-Version: 1.0
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+X-Auto-Response-Suppress: All
+
+Hey azfarali16!
+
+A personal access token (classic) "POS System" with admin:enterprise, admin:gpg_key, admin:org, admin:public_key, admin:repo_hook, admin:ssh_signing_key, audit_log, codespace, gist, project, repo, user, workflow, write:discussion, and write:packages scopes was recently added to your account. Visit https://github.com/settings/tokens for more information.
+
+To see this and other security events for your account, visit https://github.com/settings/security-log
+
+If you run into problems, please contact support by visiting https://github.com/contact
+
+Thanks,
+The GitHub Team
+

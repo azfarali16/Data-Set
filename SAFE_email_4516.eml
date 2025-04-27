@@ -1,0 +1,76 @@
+X-GM-THRID: 1757357337804951984
+X-Gmail-Labels: Inbox,Important,Opened,Category Personal
+Delivered-To: azfarali007.aa@gmail.com
+Received: by 2002:ad4:5385:0:b0:531:7d6f:7bd with SMTP id i5csp383001qvv;
+        Thu, 9 Feb 2023 04:42:43 -0800 (PST)
+X-Google-Smtp-Source: AK7set/stded7YnHNL/Yl63sFCatl9N75r10qZHaolSmaFR/mD5S5PXmdxmt2UyLciqpPt9D+NGU
+X-Received: by 2002:a17:90b:1a84:b0:231:1026:ad2d with SMTP id ng4-20020a17090b1a8400b002311026ad2dmr7725037pjb.15.1675946563653;
+        Thu, 09 Feb 2023 04:42:43 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1675946563; cv=none;
+        d=google.com; s=arc-20160816;
+        b=nny6bJfXn0Eym/uREG9vOOdoTmsEbJ7RxNP7lxSs5is5ImvwkERLSm+Rj7tSuSKbQw
+         DFkrJBEDPgPb4dnOoxsL5IPBqOVUrQUuBqLhoo4uStk+/ISj8r++YioVNdTZV2eVS9l/
+         vXoPHhMdruDJtuqgoJ0k+/MuSgjree0jcnubrC3wmQMvo6RPh6C1EVBvznaOrCw266dK
+         8WPd4/j80rhXaV8qdSOUUMbv8afkv0lD4Ek/tTPB5CHmiDKXRJiiE/zgU4eHurbnf7aT
+         FgAuBJT8/phnQd+gdBzu/O6xKs1WAKX6mIgg91f0JJwR2GTLZuiTxCkbPdjqB5WwfcNa
+         Nn+Q==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=feedback-id:message-id:date:to:from:subject
+         :content-transfer-encoding:mime-version:dkim-signature
+         :dkim-signature;
+        bh=tlRDdEWUwPjoFrMnzMVgkjZ7/H3R5Bn9TolAE8kItt0=;
+        b=qfwzHBMmy/qwTQnF8CMqDsTotnflapn3dbM1nrnZKN+U2rD6xR0hzm+bKmFOycK/Sz
+         Ef+UV/yGqWZy43sR61JUi+XH7MAqbvxu6qAjxyTVKwvyL4McNxoheEIO8ham8Zh2glYp
+         +lpnyNtiUrVQzu9+fMEdWxtZzrk/KYMMSAOz7XJpcM8kr4+uKUaAYRwCa8OGV8AKGs8Q
+         WVrdPp7agleD/LZa2H5BEYW2m6gLbsZHLhbwjna2CIBwDKCZxVBxeCkfDZ/ki9Ok3+Wn
+         ryYv3HVjUoiDLvHH98+Yd0shVs+Z8TCL2OKOi54BaJrPhVxNLqZ8PtIWJazlbIhb0kqA
+         jkQQ==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@leetcode.com header.s=55ddwkvwzbln6aj65gl5aodsrmdenrdm header.b=B5kfeG0G;
+       dkim=pass header.i=@amazonses.com header.s=gdwg2y3kokkkj5a55z2ilkup5wp5hhxx header.b=cNjEizjz;
+       spf=pass (google.com: domain of 01010186363316d4-14c50e46-d49d-4bb6-9b0a-b50fb412df11-000000@mail.leetcode.com designates 54.240.27.213 as permitted sender) smtp.mailfrom=01010186363316d4-14c50e46-d49d-4bb6-9b0a-b50fb412df11-000000@mail.leetcode.com;
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=leetcode.com
+Return-Path: <01010186363316d4-14c50e46-d49d-4bb6-9b0a-b50fb412df11-000000@mail.leetcode.com>
+Received: from a27-213.smtp-out.us-west-2.amazonses.com (a27-213.smtp-out.us-west-2.amazonses.com. [54.240.27.213])
+        by mx.google.com with ESMTPS id gb23-20020a17090b061700b0022bfa83c812si1816614pjb.126.2023.02.09.04.42.43
+        for <azfarali007.aa@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Thu, 09 Feb 2023 04:42:43 -0800 (PST)
+Received-SPF: pass (google.com: domain of 01010186363316d4-14c50e46-d49d-4bb6-9b0a-b50fb412df11-000000@mail.leetcode.com designates 54.240.27.213 as permitted sender) client-ip=54.240.27.213;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@leetcode.com header.s=55ddwkvwzbln6aj65gl5aodsrmdenrdm header.b=B5kfeG0G;
+       dkim=pass header.i=@amazonses.com header.s=gdwg2y3kokkkj5a55z2ilkup5wp5hhxx header.b=cNjEizjz;
+       spf=pass (google.com: domain of 01010186363316d4-14c50e46-d49d-4bb6-9b0a-b50fb412df11-000000@mail.leetcode.com designates 54.240.27.213 as permitted sender) smtp.mailfrom=01010186363316d4-14c50e46-d49d-4bb6-9b0a-b50fb412df11-000000@mail.leetcode.com;
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=leetcode.com
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=55ddwkvwzbln6aj65gl5aodsrmdenrdm; d=leetcode.com; t=1675946563;
+	h=Content-Type:MIME-Version:Content-Transfer-Encoding:Subject:From:To:Date:Message-ID;
+	bh=tlRDdEWUwPjoFrMnzMVgkjZ7/H3R5Bn9TolAE8kItt0=;
+	b=B5kfeG0Gyprb89AtXjbMP7h/fat1ioZJ6cjT+9+Lot8DUQCfswjroHTxhjDeF9UB
+	boacXaNzYoX9mrdvIxhKl88PWsbxBC6YI6KDjJ8LSIXB8qF7QmzOqGdCwoRDwui2Ixq
+	de/4Cykula/1quYzW/7K9GXjBsFAfJutrP3PQH8A=
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=gdwg2y3kokkkj5a55z2ilkup5wp5hhxx; d=amazonses.com; t=1675946563;
+	h=Content-Type:MIME-Version:Content-Transfer-Encoding:Subject:From:To:Date:Message-ID:Feedback-ID;
+	bh=tlRDdEWUwPjoFrMnzMVgkjZ7/H3R5Bn9TolAE8kItt0=;
+	b=cNjEizjzXItTWoOxEsoHJM+lKy+un4fb3Bi4yjpRWv50vcX/nKUHXjnijhAI8ddR
+	TXkN8csyxs3Z2SLyUrnLyXXBqBhMgHtERjL+jQR9NKxqqPEXBHlutMrDYOa2gMyZa/j
+	gxdRzCAwa3Vr3e1rZEdhRNiUc0pbf+Ia2YOczFT8=
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+Subject: [LeetCode] Confirm E-mail Address
+From: LeetCode <no-reply@leetcode.com>
+To: azfarali007.aa@gmail.com
+Date: Thu, 9 Feb 2023 12:42:43 +0000
+Message-ID: <01010186363316d4-14c50e46-d49d-4bb6-9b0a-b50fb412df11-000000@us-west-2.amazonses.com>
+Feedback-ID: 1.us-west-2.gVEWX2kZp/eVr5pU1QKR0WW7iiiBY7N5doBuy5PKuYQ=:AmazonSES
+X-SES-Outgoing: 2023.02.09-54.240.27.213
+
+Welcome azfarali!
+
+Thanks for signing up with LeetCode!
+You must follow this link to activate your account:
+https://leetcode.com/accounts/confirm-email/ODk5NzU5OA:1pQ6GA:p0fHgqO-laU7avXC9PpFsdwFrlQ/
+
+Have fun coding, and don't hesitate to contact us with your feedback.

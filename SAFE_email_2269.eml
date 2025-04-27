@@ -1,0 +1,76 @@
+X-GM-THRID: 1801213725440748172
+X-Gmail-Labels: Inbox,Opened,Category Updates
+Delivered-To: azfarali007.aa@gmail.com
+Received: by 2002:a05:6214:2cd7:b0:6a0:e07a:b94f with SMTP id lf23csp1054453qvb;
+        Fri, 7 Jun 2024 07:41:08 -0700 (PDT)
+X-Forwarded-Encrypted: i=2; AJvYcCUlbS+E8fb8gWv3m/TosJe9GmkzTdPJ7l2nlQOx9muCM4ZFwdpK69sVQ8eo6/80c8j9iDMtUFJOD1iVcp2fgiM0ZdPnVz45m4A=
+X-Google-Smtp-Source: AGHT+IFNhBb5iiWBAVRhv4bGv3GO80SzlspoHPzYyvNLhFsZDin3cflOgo3L2yFLgLwQG2ZVgR49
+X-Received: by 2002:a05:6808:306:b0:3d2:271:c358 with SMTP id 5614622812f47-3d210d46873mr3038941b6e.13.1717771268326;
+        Fri, 07 Jun 2024 07:41:08 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1717771268; cv=none;
+        d=google.com; s=arc-20160816;
+        b=R2zhvBXh4groL1DHkLq97/C8OMFq90p+Fhgm/lzHQhJ9xeAMxOlV75WAXado05uBW2
+         CWS1yy3zubR373BmCTbdotYn2RPKjUOOoV4sQmndf2FW5jMIRhAnHn55XaVXn2Q9l/a7
+         jtlmM0w2258z6AM9mb9WnWONnyVweoq6k8Q8wQdZI+VJqCntzutE1V06hmPL66NnM47u
+         GyNhftcIegAoj81whlGAbplZXt2+U+wAtOPGTbAS2iJ4c+YRqXvwfZ9CRF5tb84SlbDs
+         EaOlhW/BeI7ks3WQR0s5XYwmd0T6mg6WsKoRSi5akWu91HyBbTbstgQGS8Q6EjqlJ+Ey
+         39Ow==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=content-transfer-encoding:mime-version:subject:message-id:to:from
+         :date:dkim-signature;
+        bh=1iRB5UwLAz7WLUNqTBi/HrYIhNYQ9AvbJkoIs0bd+Eg=;
+        fh=KpNs0jnIpbsfqo6ZSfYW4fGPbRBclrNoz3b8jSdzKp4=;
+        b=kf8EAHjUSMNlzRNzYHHRJzgfwtRNGB0M5vt3eSOrRDBL2dY79EVwmIjZ5trr4kieQP
+         2dT1LtMlHlOq9aH62tTLPytBo+umeFuLCiQ9OB8J04pErdOFwfYc/X3Yu3q5pJOr+wCP
+         2zsIHaYCR0f9FZY/kEeAI8X5GNO0C4v3zBRVrwtuHbCSVYMvtOikqhEjAKmiJ9BmJzt9
+         nZmVuXf3Vs/11iMSEWuxxpX8CQZhl2yTMhjELweUZjBKKvX4nxuoVzd57xPehPH8eodf
+         VJDHVN85ZXLdyjtphUYpHzta36KMW5fYGd/zxe5U4CFfCmnia9eCTU60dP8lPbA6qSW4
+         R7/w==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@github.com header.s=pf2023 header.b="Vw/4f/Pv";
+       spf=pass (google.com: domain of noreply@github.com designates 192.30.252.208 as permitted sender) smtp.mailfrom=noreply@github.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=github.com
+Return-Path: <noreply@github.com>
+Received: from out-25.smtp.github.com (out-25.smtp.github.com. [192.30.252.208])
+        by mx.google.com with ESMTPS id 6a1803df08f44-6b04f6810a2si38602326d6.155.2024.06.07.07.41.08
+        for <azfarali007.aa@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Fri, 07 Jun 2024 07:41:08 -0700 (PDT)
+Received-SPF: pass (google.com: domain of noreply@github.com designates 192.30.252.208 as permitted sender) client-ip=192.30.252.208;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@github.com header.s=pf2023 header.b="Vw/4f/Pv";
+       spf=pass (google.com: domain of noreply@github.com designates 192.30.252.208 as permitted sender) smtp.mailfrom=noreply@github.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=github.com
+Received: from github.com (hubbernetes-node-bf34b8e.ash1-iad.github.net [10.56.171.16])
+	by smtp.github.com (Postfix) with ESMTPA id 0CC71141109;
+	Fri,  7 Jun 2024 07:41:08 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=github.com;
+	s=pf2023; t=1717771268;
+	bh=1iRB5UwLAz7WLUNqTBi/HrYIhNYQ9AvbJkoIs0bd+Eg=;
+	h=Date:From:To:Subject:From;
+	b=Vw/4f/PvnZ58mCqMXS4IhzAgc7npskp1S+x5zg9sBoxYRBVBKxOWiK5foUGx14JXp
+	 3vXAdg952D9+39WbmF+J15M9Y3BrTer9JPBAQsw51nQkyPXVn1elB1VBCFcosNxQd3
+	 ISzHPOmCCCUEr1jbEvgemPu07ixv2eDrLo+EahFQ=
+Date: Fri, 07 Jun 2024 07:41:08 -0700
+From: GitHub <noreply@github.com>
+To: Syed Azfar Ali <ali4402832@cloud.neduet.edu.pk>
+Message-ID: <66631c04a847_a218881171ee@lowworker-cb9c48cbd-p64q6.mail>
+Subject: [GitHub] An email address was added to your account.
+Mime-Version: 1.0
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+X-Auto-Response-Suppress: All
+
+Hey azfarali16!
+
+An email address (azfarali021.aa@gmail.com) was added to your account. Visit https://github.com/settings/emails to review email addresses currently associated with your account.
+
+To see this and other security events for your account, visit https://github.com/settings/security-log
+
+If you run into problems, please contact support by visiting https://github.com/contact
+
+Thanks,
+The GitHub Team
+

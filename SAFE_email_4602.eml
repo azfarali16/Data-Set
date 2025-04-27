@@ -1,0 +1,901 @@
+X-GM-THRID: 1764884174799380279
+X-Gmail-Labels: Inbox,Category Updates,Unread
+Delivered-To: azfarali007.aa@gmail.com
+Received: by 2002:a05:6214:154e:b0:61b:771e:e543 with SMTP id t14csp351868qvw;
+        Wed, 3 May 2023 07:38:29 -0700 (PDT)
+X-Google-Smtp-Source: ACHHUZ7I2sMSv09LdIjHHitkePC9Z3LRGJGA6mhFY3nkmOGf/MvrJR13IGzjHDYHyTtZuiHux3K+
+X-Received: by 2002:a81:7345:0:b0:545:637c:3ed7 with SMTP id o66-20020a817345000000b00545637c3ed7mr18879165ywc.1.1683124709284;
+        Wed, 03 May 2023 07:38:29 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1683124709; cv=none;
+        d=google.com; s=arc-20160816;
+        b=Nwi+q3n6pdK+s6bi6+dxtBTSznit2/pD8TlpDlULMvCpYKs2579Bq2z/57VeFzjce5
+         AKxklpwEodVU66iwoJaQijPsq9j4dZ902ZXSOtJLiFSt4ezs1Gn/CJZPmmdemO1bZEDc
+         V0AptQJyZunLEtuDavEVnasrz36gFHyOHR0JM4GjStohtDjadHFopYM/5SOVSEfmQ3sp
+         OAxdWOEYbxZ0xla1vonnjJY8wl+diFhJbFA5HAybE3qVlzxXfBCpEiC6uJi2I2TG/TpJ
+         XhkgVTEcvw/h0frxk2eC1anT85K4suk+Oj/umLJdHeoFIskAtlU8B42aOQh1/WlsGy8A
+         YKtA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:reply-to:subject:message-id:mime-version:from:date
+         :dkim-signature:dkim-signature;
+        bh=c73uZ5MaOddn+C/dAL6LsgHqNY7Z5s4L74j2yPhHWUY=;
+        b=yWanXVcEFsn4wIe8uOGnvZN00ehvDAMW/JtKhnp6gxRiz6KqaBSTzDsQz9r08Iu7vb
+         DT5fx9oZDmr3DLmt8GAGRG/EOS/ZrfIs6nfdmSaWbCozpAapguiiDe60OkDUdIcRxiuI
+         X1ED/lTI5bqWBdL762yGZGOGEtr3YQKT5pqy7mxmu9qo2BhRIeC9kRVUcG5n0cG6Cs+7
+         csozUaFbXYvEq4qCEhx8cVKrXDKRMkmJmvnH1k+JqJmVF7MvucK2mUJDhJpZVKFW7odG
+         49nIYSeFY+ZC5rqpV6OcRatBvqfH5hninlHuqGlRcI3WR8cMxaUsQda8fju6qWrr+G95
+         hlUA==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@notifications.fiverr.com header.s=s1 header.b=gmI+gbkh;
+       dkim=pass header.i=@sendgrid.info header.s=smtpapi header.b=upv62DR+;
+       spf=pass (google.com: domain of bounces+2943270-ca9b-azfarali007.aa=gmail.com@mail.notifications.fiverr.com designates 167.89.80.252 as permitted sender) smtp.mailfrom="bounces+2943270-ca9b-azfarali007.aa=gmail.com@mail.notifications.fiverr.com";
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=fiverr.com
+Return-Path: <bounces+2943270-ca9b-azfarali007.aa=gmail.com@mail.notifications.fiverr.com>
+Received: from o112.mail.notifications.fiverr.com (o112.mail.notifications.fiverr.com. [167.89.80.252])
+        by mx.google.com with ESMTPS id n205-20020a8172d6000000b00552909d7410si977553ywc.243.2023.05.03.07.38.28
+        for <azfarali007.aa@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Wed, 03 May 2023 07:38:29 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bounces+2943270-ca9b-azfarali007.aa=gmail.com@mail.notifications.fiverr.com designates 167.89.80.252 as permitted sender) client-ip=167.89.80.252;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@notifications.fiverr.com header.s=s1 header.b=gmI+gbkh;
+       dkim=pass header.i=@sendgrid.info header.s=smtpapi header.b=upv62DR+;
+       spf=pass (google.com: domain of bounces+2943270-ca9b-azfarali007.aa=gmail.com@mail.notifications.fiverr.com designates 167.89.80.252 as permitted sender) smtp.mailfrom="bounces+2943270-ca9b-azfarali007.aa=gmail.com@mail.notifications.fiverr.com";
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=fiverr.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=notifications.fiverr.com;
+	h=content-type:from:mime-version:subject:reply-to:x-feedback-id:to:cc:
+	content-type:from:subject:to;
+	s=s1; bh=c73uZ5MaOddn+C/dAL6LsgHqNY7Z5s4L74j2yPhHWUY=;
+	b=gmI+gbkh3fi7BUfCtRhHwxjCl9H9mcyQR+2IUrZ5Pnycto8IzsXi4gyrGtzIIkBge5aw
+	M59kwoZs9sjwA3KSplMKe6BvSzWpTOGFRNxA4N23tygWJZ9d0+Klf9NIpfBpCNh1rWqgGg
+	mM97q3nBuQ7WQVeNBMpa+RsJ1/SDNBlxe45Ms/eileCSl65vwx7J58nJWgg5nWVQCG3FBG
+	s/4iuvzWLhmgKjSROcCYSQzux1rOK3D3MCEhnQCNq2+EjW3yjPSrqrKSDbwX3ZgIM9OsCw
+	Q+78+hy96XcunZwE2w1WPy0aoTdiQ4hf1HvY9qYYMUwRnMo7kuzomOsGFaXyxWZg==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=sendgrid.info;
+	h=content-type:from:mime-version:subject:reply-to:x-feedback-id:to:cc:
+	content-type:from:subject:to;
+	s=smtpapi; bh=c73uZ5MaOddn+C/dAL6LsgHqNY7Z5s4L74j2yPhHWUY=;
+	b=upv62DR+Kq1LO59v2fShYG2jymjB11EQCDHetgkCqEnZ9yGtnFkn5WrrMSRgw3aRQtVH
+	4UZgIbRNzbiJXDNXs3+FFLb1y2TNuK2NHwQO/R3Anzz9RD3GPbJP6im9nOMvpnmXIy7zj+
+	6N631onwAUk1/Y/vn9p4+km5BzbPgUunU=
+Received: by filterdrecv-7cb7b8cbf4-8qn6b with SMTP id filterdrecv-7cb7b8cbf4-8qn6b-1-645271E4-67
+        2023-05-03 14:38:28.479767368 +0000 UTC m=+6102239.306020681
+Received: from Mjk0MzI3MA (unknown)
+	by geopod-ismtpd-6 (SG) with HTTP
+	id pW61rD08RGqpqAjlOUnNwQ
+	Wed, 03 May 2023 14:38:28.449 +0000 (UTC)
+Content-Type: multipart/alternative; boundary=ea5dfc21b3acd89e80c3eb77cfea5002c38b642fbbb5f43c712c28501b8a
+Date: Wed, 03 May 2023 14:38:28 +0000 (UTC)
+From: Fiverr <no-reply@notifications.fiverr.com>
+Mime-Version: 1.0
+Message-ID: <pW61rD08RGqpqAjlOUnNwQ@geopod-ismtpd-6>
+Subject: Check out our updated Community Standards
+Reply-To: no-reply@fiverr.com
+X-Feedback-ID: 2943270:SG
+X-SG-EID: 
+ =?us-ascii?Q?ggKlLGZ1Z4AO3zlhhIeoiNnBrH9V+xH0mTZQs574Ks4mulZKGQ0Lne7HBJdMjG?=
+ =?us-ascii?Q?aDx7ZXw3CTlwciwh9XBKXXs1UZ3W7FlLzEMnGtx?=
+ =?us-ascii?Q?x0mZz8ETSM1pV3o6f271fvVRAqzMaWWw=2FJXjqea?=
+ =?us-ascii?Q?ay8PmHSxg5RzU8nwGcPKSE6tMNRTcB5jWdEOxCL?=
+ =?us-ascii?Q?=2FnNdVkjRX0v8yrsJeGMa6X8SgVmRAFKDTWDrWKf?=
+ =?us-ascii?Q?Gh3F3dRqIoiXaFbb9piUzyxQnoWoTpX5Y5pK+B7?=
+ =?us-ascii?Q?a32ETZ09sYyu21rYOpXoA=3D=3D?=
+X-SG-ID: 
+ =?us-ascii?Q?N2C25iY2uzGMFz6rgvQsb8raWjw0ZPf1VmjsCkspi=2FKvUYPFb2vwyNNeBc9bJi?=
+ =?us-ascii?Q?Chmp7LCzbZx2YbVjOh6TsLc+f89ysE6BxqjTrqd?=
+ =?us-ascii?Q?LnGIBZmVBZqbWC5V8ovl=2FQJJahV5MMT5i7v0G7a?=
+ =?us-ascii?Q?XIwDSrDcm4AjGf56Kh9YX+qHf7IRbZN9U9lkQzS?=
+ =?us-ascii?Q?dPGbJlMcixQGxNs+h+I5amofh21Ra5hxmO43hOP?=
+ =?us-ascii?Q?4tvuYicaxUKOnqEd=2FbPGEnzTu+I0l5kRIK=2Fh8Uh?=
+ =?us-ascii?Q?ZqZaDLkVK+YA2j0VkqWFKWw3wzA1DmpEZpjmzv9?=
+ =?us-ascii?Q?rcPhADgcQxSelkvvunjKBo03Qyb58c8dNDq=2FT7X?=
+ =?us-ascii?Q?Fdl8FdTKHT2g+3QzDcABZ7jUoNo7TQ9eTShKRJA?=
+ =?us-ascii?Q?rHOgfjJZPNa0Cqcp=2F8C7azrQJUVLB5pFrQD9nie?=
+ =?us-ascii?Q?NtnL0ZvRpPbski6D8+sd5NmZ+vtaCzLEMTgrF+G?=
+ =?us-ascii?Q?jcymsicSQ5q9mZoitISk4T9PVBhZwynOUlwXwvx?=
+ =?us-ascii?Q?hNr2XIEY45nbx=2Fr6Q2XcAkSDi0EL9SWozQMBYel?=
+ =?us-ascii?Q?w4QpPel5rdQvAM3ZyQmIS=2FQqOZrxd4L1uF5Uu4w?=
+ =?us-ascii?Q?QBL0HbH?=
+To: azfarali007.aa@gmail.com
+X-Entity-ID: JavrwfWwd3cFwl0o0GybtA==
+
+--ea5dfc21b3acd89e80c3eb77cfea5002c38b642fbbb5f43c712c28501b8a
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset=utf-8
+Mime-Version: 1.0
+
+Here=E2=80=99s everything you need to know.
+Fiverr. ( https://links.notifications.fiverr.com/ls/click?upn=3DngPI5cTsN-2=
+BO-2BocNST755lOUzSChAnVF2qd1FNNW6d7wuAoeJ2U1bMwISAQZp3nvWy6e8ucV6feRT-2FAZz=
+qigOHQ-3D-3DqT9U_H65ljNg3foEJU6dJQZHMcp3Zdimzb4muCFBEwI-2BtxR6-2FXi7CbhvNQ3=
+4YdrsbuNODY0LB4ZzF2g3NuCkai43L4QE8tn1Rmw0eIEdaEHdlY4iwxpeIlR-2Br-2BLuWjDTJa=
+VXP1nw4Ll3hu1jRObzoGWIUwnWdnGr9zSntwY2B7KeqezhNSsxUvACacx99tSeWEF1kkbqeRLzJ=
+5UEWr6lgB9q5OO6Q1bKqQoSRzUaPVP1m0aFbwU6yroCa0yoLr4eJjMpAjDECoTauX6fzgljaHTD=
+vz7Uq644xNQk1Kez22cf8xaF7-2B4pxFmv7WKn0XEHOQX-2F9BHan7VnOSxYXolPHlTswMKNwUj=
+C9s-2BqWReTBQY4e7Z97kDSguztk3uk17VX-2FYbfDxFSIhmzK2D340WOBLm-2BuZq9LuXO-2FI=
+rn5a6uNCB1CtTmPfTDN4NmaX0qpPVSEYHUv9-2B53fzwB-2BRCIi8yX6zfx-2BOUmyL-2BAXIut=
+FN7u1o011cGF4c9XgeCHxNQVe7eEU7tIYB40YG0ji5IcunRcKWODiYnFkRTsFkMe4qc8kF6fkiI=
+peJIUjRWC7UamaSqwJMIFKBEIPKSTcyTEJj2xpksRoKqxByU1-2FpDXkK-2FRIZE-2BiSMweGHM=
+PLRIP9xljqqYRDzPNIYyoK5aKleKm0dbnCVlyt2n9pztNf7V8Ki9nNPmwmyYe-2F-2FSM4hvoz6=
+424eHmaAwqTrMjuWxXjlwd5F879dZVlCFfE8cGmq3BQdLlx32fbUtWtvObnAiRQOrXSbMaK5V )=
+        Hi
+azfar_ali,
+
+At Fiverr, we=E2=80=99re all about transparency when it comes to our
+Community Standards ( https://links.notifications.fiverr.com/ls/click?upn=
+=3DngPI5cTsN-2BO-2BocNST755lDXTDotb-2BWKy6y8Fl-2Bgg-2BnDHFLMErs2dAavaemZl8j=
+uX2WpO9NsTwN41EpSNPRTi8w-3D-3DSHak_H65ljNg3foEJU6dJQZHMcp3Zdimzb4muCFBEwI-2=
+BtxR6-2FXi7CbhvNQ34YdrsbuNODY0LB4ZzF2g3NuCkai43L4QE8tn1Rmw0eIEdaEHdlY4iwxpe=
+IlR-2Br-2BLuWjDTJaVXP1nw4Ll3hu1jRObzoGWIUwnWdnGr9zSntwY2B7KeqezhNSsxUvACacx=
+99tSeWEF1kkbqeRLzJ5UEWr6lgB9q5OO6Q1bKqQoSRzUaPVP1m0aFbwU6yroCa0yoLr4eJjMpAj=
+DECoTauX6fzgljaHTDvz7Uq644xNQk1Kez22cf8xaF7-2B4pxFmv7WKn0XEHOQX-2F9BHan7VnO=
+SxYXolPHlTswMKNwUjC9s-2BqWReTBQY4e7Z97kDSguztk3uk17VX-2FYbfDxFSIhmzK2D340WO=
+BLm-2BuZq9LuXO-2FIrn5a6uNCB1CtTmPfTDN4NmaX0qpPVSEYHUv9-2B53fzwB-2BRCIi8yX6z=
+fx-2BOUmyL-2BAXIutFN7u1o011cGF4c9XgeCHxNQVe7eEU7tIYB40YG0ji5IcunRcKWODiYnFk=
+RTsFkMe4qc8kF6fkiIpeJIUjRWC7UamaSqwJMIFKBEIPKSTcyTEJj2xpksRoKqxByU1-2FpDXkK=
+-2FRIZE-2BiSNndEYSZpzSmv1-2BDZd5FBShKPwnKjL4-2B5cWtJ7oGrY0CbSW1V2CWhU5OTNtQ=
+gYm9TTo6kR4JOEouLQG3NC2GCtarGx2uJy1Mc34AGSr6J8xEaXPE6UsgUeH432pf517W7rjHgj3=
+lbZ3-2F45OYGQ6KSEc ) , which define what is acceptable within our community=
+ and on
+our marketplace, based on our core values=E2=80=94respect, safety,
+acceptance, support, and open-mindedness.
+
+That=E2=80=99s why we=E2=80=99re letting you know that we=E2=80=99ve made s=
+ome important
+changes to our Community Standards. Here are the highlights: *
+More detailed descriptions and examples of illegal and prohibited
+services on Fiverr
+* Updated =E2=80=9CIntegrity and Authenticity=E2=80=9D section describing a=
+busive
+practices we block on Fiverr in order to protect our platform and
+users
+* New =E2=80=9CAI-generated content=E2=80=9D section reflecting recent dyna=
+mic
+changes in the world of AI
+We encourage you to review this updated version. We'll also hold
+a dedicated webinar with all the necessary do=E2=80=99s and don'ts soon,
+so look out for more info on that.
+
+Thank you,
+The Fiverr team
+
+Twitter=20
+( https://links.notifications.fiverr.com/ls/click?upn=3DngPI5cTsN-2BO-2BocN=
+ST755lCsqWhAQbzRIholSHbbvNIe1D2ZGKE8Qsj-2B-2B-2BpB1-2BWGWgUp6yIxZRR7wBTfb-2=
+FgrzWjVlpCQ-2BoxaMrTMKcViu074woVphmWlmw57yTVnJOLGAOb_B_H65ljNg3foEJU6dJQZHM=
+cp3Zdimzb4muCFBEwI-2BtxR6-2FXi7CbhvNQ34YdrsbuNODY0LB4ZzF2g3NuCkai43L4QE8tn1=
+Rmw0eIEdaEHdlY4iwxpeIlR-2Br-2BLuWjDTJaVXP1nw4Ll3hu1jRObzoGWIUwnWdnGr9zSntwY=
+2B7KeqezhNSsxUvACacx99tSeWEF1kkbqeRLzJ5UEWr6lgB9q5OO6Q1bKqQoSRzUaPVP1m0aFbw=
+U6yroCa0yoLr4eJjMpAjDECoTauX6fzgljaHTDvz7Uq644xNQk1Kez22cf8xaF7-2B4pxFmv7WK=
+n0XEHOQX-2F9BHan7VnOSxYXolPHlTswMKNwUjC9s-2BqWReTBQY4e7Z97kDSguztk3uk17VX-2=
+FYbfDxFSIhmzK2D340WOBLm-2BuZq9LuXO-2FIrn5a6uNCB1CtTmPfTDN4NmaX0qpPVSEYHUv9-=
+2B53fzwB-2BRCIi8yX6zfx-2BOUmyL-2BAXIutFN7u1o011cGF4c9XgeCHxNQVe7eEU7tIYB40Y=
+G0ji5IcunRcKWODiYnFkRTsFkMe4qc8kF6fkiIpeJIUjRWC7UamaSqwJMIFKBEIPKSTcyTEJj2x=
+pksRoKqxByU1-2FpDXkK-2FRIZE-2BiSMHuzSMBaTAb8ltIhTCWU3WyEnxMnqLRjhJmmn0LeuXX=
+hI6X5MDLBHMofz8tPjohKCulFHLZFykr7dFvcL6nKDlSM2Mj0ZdI9DJ8-2B3HO7NMhybo4qfi3H=
+lxCxOMK6nG1m7fLaEaG-2B2cpZxOTbGBr5RT )
+  Facebook=20
+( https://links.notifications.fiverr.com/ls/click?upn=3DngPI5cTsN-2BO-2BocN=
+ST755lBUbpif8-2FRU3sVVAUn7jm6r5gVJ0rgPiQUjVe2FcKw-2FecRSQJ-2FwEUk-2F8jpWbX2=
+yysPPOxmnArsmifosKZ9RXuOPU62C1dFBVQhzC-2F-2B35J5ww2JLs_H65ljNg3foEJU6dJQZHM=
+cp3Zdimzb4muCFBEwI-2BtxR6-2FXi7CbhvNQ34YdrsbuNODY0LB4ZzF2g3NuCkai43L4QE8tn1=
+Rmw0eIEdaEHdlY4iwxpeIlR-2Br-2BLuWjDTJaVXP1nw4Ll3hu1jRObzoGWIUwnWdnGr9zSntwY=
+2B7KeqezhNSsxUvACacx99tSeWEF1kkbqeRLzJ5UEWr6lgB9q5OO6Q1bKqQoSRzUaPVP1m0aFbw=
+U6yroCa0yoLr4eJjMpAjDECoTauX6fzgljaHTDvz7Uq644xNQk1Kez22cf8xaF7-2B4pxFmv7WK=
+n0XEHOQX-2F9BHan7VnOSxYXolPHlTswMKNwUjC9s-2BqWReTBQY4e7Z97kDSguztk3uk17VX-2=
+FYbfDxFSIhmzK2D340WOBLm-2BuZq9LuXO-2FIrn5a6uNCB1CtTmPfTDN4NmaX0qpPVSEYHUv9-=
+2B53fzwB-2BRCIi8yX6zfx-2BOUmyL-2BAXIutFN7u1o011cGF4c9XgeCHxNQVe7eEU7tIYB40Y=
+G0ji5IcunRcKWODiYnFkRTsFkMe4qc8kF6fkiIpeJIUjRWC7UamaSqwJMIFKBEIPKSTcyTEJj2x=
+pksRoKqxByU1-2FpDXkK-2FRIZE-2BiSPoeGmFuYhhXhzSsU3Lypp4TinSN7DvgwZBaaXHJ-2FY=
+va7SwpJ2TPlGae3oSGO2lzYHiMATFQXh85yTlN6vX-2BJpkHhIkJN3kvLdF8Xz1khSElGvFnjjC=
+yNtuQhsN-2BxVlVXpzX1yp8jXSHwa3kzuGDSkg )
+  Pinterest=20
+( https://links.notifications.fiverr.com/ls/click?upn=3D4yFQjwfto-2BsIp7Cnd=
+z9ec-2BjeuoQn5R-2BCGAxcB7SX2OH1oEJl5AA9PTAaMKljVknPxdOw4yBJdLzsioEyRY7sRDfY=
+oun69wEHgdHaSl-2BUytJCI57QQMh-2BAGOn8TuytNbrQFrp_H65ljNg3foEJU6dJQZHMcp3Zdi=
+mzb4muCFBEwI-2BtxR6-2FXi7CbhvNQ34YdrsbuNODY0LB4ZzF2g3NuCkai43L4QE8tn1Rmw0eI=
+EdaEHdlY4iwxpeIlR-2Br-2BLuWjDTJaVXP1nw4Ll3hu1jRObzoGWIUwnWdnGr9zSntwY2B7Keq=
+ezhNSsxUvACacx99tSeWEF1kkbqeRLzJ5UEWr6lgB9q5OO6Q1bKqQoSRzUaPVP1m0aFbwU6yroC=
+a0yoLr4eJjMpAjDECoTauX6fzgljaHTDvz7Uq644xNQk1Kez22cf8xaF7-2B4pxFmv7WKn0XEHO=
+QX-2F9BHan7VnOSxYXolPHlTswMKNwUjC9s-2BqWReTBQY4e7Z97kDSguztk3uk17VX-2FYbfDx=
+FSIhmzK2D340WOBLm-2BuZq9LuXO-2FIrn5a6uNCB1CtTmPfTDN4NmaX0qpPVSEYHUv9-2B53fz=
+wB-2BRCIi8yX6zfx-2BOUmyL-2BAXIutFN7u1o011cGF4c9XgeCHxNQVe7eEU7tIYB40YG0ji5I=
+cunRcKWODiYnFkRTsFkMe4qc8kF6fkiIpeJIUjRWC7UamaSqwJMIFKBEIPKSTcyTEJj2xpksRoK=
+qxByU1-2FpDXkK-2FRIZE-2BiSPFrMxs6JmBQtDW2uwz7TDj1JHnRw5s6MQbGHmTzi2QL4KAfFk=
+zLD8dIelBIzTDB6pMbTcKt5UyD2WCQhcuaYdApTIKTvSxM26bOj1zzoABG9fjNSP3u-2F5HjSj3=
+Y6TRrd4Lrct517CRXof5PEbJqaCq )
+  LinkedIn=20
+( https://links.notifications.fiverr.com/ls/click?upn=3Dv5LzrRLfRrOV3qEpl-2=
+FAT0WnqQN4UnX0LczDKYutZ5FQ44tms451wLW5B3C0MTagVYi9FAcxJZxRE6yh5VPiR6rqRGmUM=
+79cIm4qqWKu93GTqwp4De8lkPuqMmrhxXScso1Rky-2B5R1a7sxAp-2Bbh-2BQLA-3D-3Dxjz7_=
+H65ljNg3foEJU6dJQZHMcp3Zdimzb4muCFBEwI-2BtxR6-2FXi7CbhvNQ34YdrsbuNODY0LB4Zz=
+F2g3NuCkai43L4QE8tn1Rmw0eIEdaEHdlY4iwxpeIlR-2Br-2BLuWjDTJaVXP1nw4Ll3hu1jROb=
+zoGWIUwnWdnGr9zSntwY2B7KeqezhNSsxUvACacx99tSeWEF1kkbqeRLzJ5UEWr6lgB9q5OO6Q1=
+bKqQoSRzUaPVP1m0aFbwU6yroCa0yoLr4eJjMpAjDECoTauX6fzgljaHTDvz7Uq644xNQk1Kez2=
+2cf8xaF7-2B4pxFmv7WKn0XEHOQX-2F9BHan7VnOSxYXolPHlTswMKNwUjC9s-2BqWReTBQY4e7=
+Z97kDSguztk3uk17VX-2FYbfDxFSIhmzK2D340WOBLm-2BuZq9LuXO-2FIrn5a6uNCB1CtTmPfT=
+DN4NmaX0qpPVSEYHUv9-2B53fzwB-2BRCIi8yX6zfx-2BOUmyL-2BAXIutFN7u1o011cGF4c9Xg=
+eCHxNQVe7eEU7tIYB40YG0ji5IcunRcKWODiYnFkRTsFkMe4qc8kF6fkiIpeJIUjRWC7UamaSqw=
+JMIFKBEIPKSTcyTEJj2xpksRoKqxByU1-2FpDXkK-2FRIZE-2BiSOxRlCHaF58w7cX95lmdZEKB=
+3R7Ly5j6QH6NQ24iYmRZzT0454oeP-2FI1lyURMZRL23vYHW8uEJbn2gd7TvqQ3RPmqn37iEMzR=
+SvDX3QdEmiD4CAzYnKqwqAOg56IOsCqMrvrlRSooo60UGWMeHZpxo2 )
+  Instagram=20
+( https://links.notifications.fiverr.com/ls/click?upn=3DagYJYeDsQwsTxroWN8D=
+rwiaFVR-2B5EsJt85Tn42JmjTvrGFhr1F8vVGIXWRxo-2F1YdlYGaENQHfP3NpYzqBj4qc0V2GZ=
+0tf5pewJVNOUqkjxkuQtZ5JHc9-2B03gBqARoOrNAPRe_H65ljNg3foEJU6dJQZHMcp3Zdimzb4=
+muCFBEwI-2BtxR6-2FXi7CbhvNQ34YdrsbuNODY0LB4ZzF2g3NuCkai43L4QE8tn1Rmw0eIEdaE=
+HdlY4iwxpeIlR-2Br-2BLuWjDTJaVXP1nw4Ll3hu1jRObzoGWIUwnWdnGr9zSntwY2B7KeqezhN=
+SsxUvACacx99tSeWEF1kkbqeRLzJ5UEWr6lgB9q5OO6Q1bKqQoSRzUaPVP1m0aFbwU6yroCa0yo=
+Lr4eJjMpAjDECoTauX6fzgljaHTDvz7Uq644xNQk1Kez22cf8xaF7-2B4pxFmv7WKn0XEHOQX-2=
+F9BHan7VnOSxYXolPHlTswMKNwUjC9s-2BqWReTBQY4e7Z97kDSguztk3uk17VX-2FYbfDxFSIh=
+mzK2D340WOBLm-2BuZq9LuXO-2FIrn5a6uNCB1CtTmPfTDN4NmaX0qpPVSEYHUv9-2B53fzwB-2=
+BRCIi8yX6zfx-2BOUmyL-2BAXIutFN7u1o011cGF4c9XgeCHxNQVe7eEU7tIYB40YG0ji5IcunR=
+cKWODiYnFkRTsFkMe4qc8kF6fkiIpeJIUjRWC7UamaSqwJMIFKBEIPKSTcyTEJj2xpksRoKqxBy=
+U1-2FpDXkK-2FRIZE-2BiSPySl3D-2FEHjrqMjd8-2BU6NJ6n-2Fjshazc-2Bz4zi4zPmNb-2Bo=
+Gs4V2dVhTeuEBE7Y5EVAxN-2B9gJWYkVw75Rp-2F-2Bs2M9smgULvPVG-2BP3MVa5kvYgNRxih2=
+n6u-2B1d7ZkhikL6uzoASKhQ3ZTDay3klS-2B7cmgeK2 )
+
+
+Privacy Policy ( https://links.notifications.fiverr.com/ls/click?upn=3DngPI=
+5cTsN-2BO-2BocNST755lGX9xgJYVZPElYGyvTWnPWXog9nUrwPZHxBnvXA8vDXlVGLS_H65ljN=
+g3foEJU6dJQZHMcp3Zdimzb4muCFBEwI-2BtxR6-2FXi7CbhvNQ34YdrsbuNODY0LB4ZzF2g3Nu=
+Ckai43L4QE8tn1Rmw0eIEdaEHdlY4iwxpeIlR-2Br-2BLuWjDTJaVXP1nw4Ll3hu1jRObzoGWIU=
+wnWdnGr9zSntwY2B7KeqezhNSsxUvACacx99tSeWEF1kkbqeRLzJ5UEWr6lgB9q5OO6Q1bKqQoS=
+RzUaPVP1m0aFbwU6yroCa0yoLr4eJjMpAjDECoTauX6fzgljaHTDvz7Uq644xNQk1Kez22cf8xa=
+F7-2B4pxFmv7WKn0XEHOQX-2F9BHan7VnOSxYXolPHlTswMKNwUjC9s-2BqWReTBQY4e7Z97kDS=
+guztk3uk17VX-2FYbfDxFSIhmzK2D340WOBLm-2BuZq9LuXO-2FIrn5a6uNCB1CtTmPfTDN4Nma=
+X0qpPVSEYHUv9-2B53fzwB-2BRCIi8yX6zfx-2BOUmyL-2BAXIutFN7u1o011cGF4c9XgeCHxNQ=
+Ve7eEU7tIYB40YG0ji5IcunRcKWODiYnFkRTsFkMe4qc8kF6fkiIpeJIUjRWC7UamaSqwJMIFKB=
+EIPKSTcyTEJj2xpksRoKqxByU1-2FpDXkK-2FRIZE-2BiSNLRsFko0sNzRodQ-2FF64UstXmI12=
+pmgA-2FPQmcbgfOv3Jl8P-2FKXmt8wjntxf8pdkmpNqxOIyDMAjglK0yCPiIBNIio7I9bWgtp0a=
+jPPEPDgSF8qdxQo6Kv4NW-2B7MQqyL5pC33Ea-2B6EUJLzX4rCvhLFP6 ) |
+Support ( https://links.notifications.fiverr.com/ls/click?upn=3D7Y52O7jmMuI=
+dnXoPLV0bPaUU7mOExTkJzGwXXW4ZHH92k4iAqXVNewTHIrKabG6RHQJE_H65ljNg3foEJU6dJQ=
+ZHMcp3Zdimzb4muCFBEwI-2BtxR6-2FXi7CbhvNQ34YdrsbuNODY0LB4ZzF2g3NuCkai43L4QE8=
+tn1Rmw0eIEdaEHdlY4iwxpeIlR-2Br-2BLuWjDTJaVXP1nw4Ll3hu1jRObzoGWIUwnWdnGr9zSn=
+twY2B7KeqezhNSsxUvACacx99tSeWEF1kkbqeRLzJ5UEWr6lgB9q5OO6Q1bKqQoSRzUaPVP1m0a=
+FbwU6yroCa0yoLr4eJjMpAjDECoTauX6fzgljaHTDvz7Uq644xNQk1Kez22cf8xaF7-2B4pxFmv=
+7WKn0XEHOQX-2F9BHan7VnOSxYXolPHlTswMKNwUjC9s-2BqWReTBQY4e7Z97kDSguztk3uk17V=
+X-2FYbfDxFSIhmzK2D340WOBLm-2BuZq9LuXO-2FIrn5a6uNCB1CtTmPfTDN4NmaX0qpPVSEYHU=
+v9-2B53fzwB-2BRCIi8yX6zfx-2BOUmyL-2BAXIutFN7u1o011cGF4c9XgeCHxNQVe7eEU7tIYB=
+40YG0ji5IcunRcKWODiYnFkRTsFkMe4qc8kF6fkiIpeJIUjRWC7UamaSqwJMIFKBEIPKSTcyTEJ=
+j2xpksRoKqxByU1-2FpDXkK-2FRIZE-2BiSMYawGiWl1rkitEh-2FO0oc23I9TdktnfSXkH7Iv2=
+IhyvetGmyud6yy4aMaKdsoubO1VkQaZnOwyfvBSqgWroh-2FZSEcBBigmKJsmsJ3khJo0WUi2uc=
+lJ8TISghOMKwAllhxaspJQqBQW3antTy3DFNUvf ) | Invite a Friend=20
+( https://links.notifications.fiverr.com/ls/click?upn=3DngPI5cTsN-2BO-2BocN=
+ST755lErBOTdNCnQDJQ-2FgD6Sm2Ozo5wWTQsQr1VouLaaKS27zCg1L6dytRwo363Ot-2FKQF-2=
+FbG3L9Pgt-2FPse4cMDnUUEWGfrSdo8sw53-2F7TgE-2BMf0yaJj-2F57H8QSKDRDV3mVh5YfQ-=
+3D-3DI_Th_H65ljNg3foEJU6dJQZHMcp3Zdimzb4muCFBEwI-2BtxR6-2FXi7CbhvNQ34Ydrsbu=
+NODY0LB4ZzF2g3NuCkai43L4QE8tn1Rmw0eIEdaEHdlY4iwxpeIlR-2Br-2BLuWjDTJaVXP1nw4=
+Ll3hu1jRObzoGWIUwnWdnGr9zSntwY2B7KeqezhNSsxUvACacx99tSeWEF1kkbqeRLzJ5UEWr6l=
+gB9q5OO6Q1bKqQoSRzUaPVP1m0aFbwU6yroCa0yoLr4eJjMpAjDECoTauX6fzgljaHTDvz7Uq64=
+4xNQk1Kez22cf8xaF7-2B4pxFmv7WKn0XEHOQX-2F9BHan7VnOSxYXolPHlTswMKNwUjC9s-2Bq=
+WReTBQY4e7Z97kDSguztk3uk17VX-2FYbfDxFSIhmzK2D340WOBLm-2BuZq9LuXO-2FIrn5a6uN=
+CB1CtTmPfTDN4NmaX0qpPVSEYHUv9-2B53fzwB-2BRCIi8yX6zfx-2BOUmyL-2BAXIutFN7u1o0=
+11cGF4c9XgeCHxNQVe7eEU7tIYB40YG0ji5IcunRcKWODiYnFkRTsFkMe4qc8kF6fkiIpeJIUjR=
+WC7UamaSqwJMIFKBEIPKSTcyTEJj2xpksRoKqxByU1-2FpDXkK-2FRIZE-2BiSNVtMvZl0J6Jry=
+Ffun2L-2BzV-2F5WJW4zPGJLyMF-2BKSJb6rUj76t-2FVJcgmE5g93cdhQkdC4-2FZNDHCc2DgM=
+jk9lDNG2reNPwdYXWwqOd1ToQOyu9wwy9o2LdN39QQtNMXLK2hfRJ1jmmMqaEzNcvwD8cIiX )
+ | Get Inspired=20
+( https://links.notifications.fiverr.com/ls/click?upn=3DngPI5cTsN-2BO-2BocN=
+ST755lOzoSGD6AVmH5YRLQfuE-2FHZwEzNJ6TNIvv2YAlznWRtUaUxr9lxuJTDoXtIWhtL1MwhN=
+mj58VwEXWYw4aSAsZdcYVD2RRwx-2FbCPaW2n227klnqDA_H65ljNg3foEJU6dJQZHMcp3Zdimz=
+b4muCFBEwI-2BtxR6-2FXi7CbhvNQ34YdrsbuNODY0LB4ZzF2g3NuCkai43L4QE8tn1Rmw0eIEd=
+aEHdlY4iwxpeIlR-2Br-2BLuWjDTJaVXP1nw4Ll3hu1jRObzoGWIUwnWdnGr9zSntwY2B7Keqez=
+hNSsxUvACacx99tSeWEF1kkbqeRLzJ5UEWr6lgB9q5OO6Q1bKqQoSRzUaPVP1m0aFbwU6yroCa0=
+yoLr4eJjMpAjDECoTauX6fzgljaHTDvz7Uq644xNQk1Kez22cf8xaF7-2B4pxFmv7WKn0XEHOQX=
+-2F9BHan7VnOSxYXolPHlTswMKNwUjC9s-2BqWReTBQY4e7Z97kDSguztk3uk17VX-2FYbfDxFS=
+IhmzK2D340WOBLm-2BuZq9LuXO-2FIrn5a6uNCB1CtTmPfTDN4NmaX0qpPVSEYHUv9-2B53fzwB=
+-2BRCIi8yX6zfx-2BOUmyL-2BAXIutFN7u1o011cGF4c9XgeCHxNQVe7eEU7tIYB40YG0ji5Icu=
+nRcKWODiYnFkRTsFkMe4qc8kF6fkiIpeJIUjRWC7UamaSqwJMIFKBEIPKSTcyTEJj2xpksRoKqx=
+ByU1-2FpDXkK-2FRIZE-2BiSMnhHDzVADw8o9yWs1v-2BqqNY8lJtCn38h9Ynw3FXhbp49HQZfs=
+tmsIYlaF7x-2Bj-2FHFev7ouSpVWaE2dKpEnDrFjYk4R5KQabv9S90GCLDzhEO3lzHMXqbPIjNI=
+888n2YQJUsuxNzWzOeNTDUeWJVzLXu )
+
+
+This email was sent to you by Fiverr International Ltd.
+You are receiving this email because you signed up for
+ Fiverr.
+
+If you wish to unsubscribe from all future emails, please click
+here ( https://links.notifications.fiverr.com/ls/click?upn=3DngPI5cTsN-2BO-=
+2BocNST755lOsp9Stf-2FT2dZvnuuS8akHD5OECW1SVN3oTSfM2IITohDxP-2FntHqFRSuT3nP-=
+2Fl51Y-2Fn-2FEVolJ7qWrLB870jHETWKTtK3I29OnVOTM2PiuOP1JX7iTCO9-2B82HizzDd-2F=
+Bk0EI0vKVT02uvWavC41WVFJJ6mrw4316lHiR0kvfKnrNA-2FO4yJmxWrxeewNbquzZ8QD7Q7I4=
+n31QJBIJD41W4O3TXF3M-2Bcn3BDim5qsLrOVUSA0PjSHoBqrlaSG2flr3LNz1jZ-2BctVUg4Ti=
+KbGGA-2Fex0L9EQ-2Bcq-2FNpd3PEt-2Bt7fzuqYvdL55Nl82KO0wB61YF0Q7xYd70-2BWCOjPv=
+nBhzm9Vc9YJsavgq8Hztc8ZlQ5oPEsUCDaRZ-2B2v2NpBw9r2ei6L9-2F1LtNtHgysnCGXYZWLY=
+hmyznDC0mUoyXr99lATgSKGULgcbjAGsSabx3wZxW1ELmHasxtT824GNmuajRdslcT4en2XwtPY=
+-2Bpm8WRSO43CWd-2BpptwBOUzay1PClxQ2g0TWG9r1LM5VY-2F8tVSP-2BB2t03W0-2FPWflmI=
+RKUlbPjEz2QS4ZZcOFY7S-2FZ-2BeIobvALuCTaqQdV6Ipgl5zAzLwlglgifhCeNYliuDK-2FJM=
+rLa3BR5EfYsz6o6vnMm-2FCyzl-2BocBbKswfMCZ-2F6rUCgvestLrjd2sbzYP2xXWeyY6WNmqn=
+38Em_H65ljNg3foEJU6dJQZHMcp3Zdimzb4muCFBEwI-2BtxR6-2FXi7CbhvNQ34YdrsbuNODY0=
+LB4ZzF2g3NuCkai43L4QE8tn1Rmw0eIEdaEHdlY4iwxpeIlR-2Br-2BLuWjDTJaVXP1nw4Ll3hu=
+1jRObzoGWIUwnWdnGr9zSntwY2B7KeqezhNSsxUvACacx99tSeWEF1kkbqeRLzJ5UEWr6lgB9q5=
+OO6Q1bKqQoSRzUaPVP1m0aFbwU6yroCa0yoLr4eJjMpAjDECoTauX6fzgljaHTDvz7Uq644xNQk=
+1Kez22cf8xaF7-2B4pxFmv7WKn0XEHOQX-2F9BHan7VnOSxYXolPHlTswMKNwUjC9s-2BqWReTB=
+QY4e7Z97kDSguztk3uk17VX-2FYbfDxFSIhmzK2D340WOBLm-2BuZq9LuXO-2FIrn5a6uNCB1Ct=
+TmPfTDN4NmaX0qpPVSEYHUv9-2B53fzwB-2BRCIi8yX6zfx-2BOUmyL-2BAXIutFN7u1o011cGF=
+4c9XgeCHxNQVe7eEU7tIYB40YG0ji5IcunRcKWODiYnFkRTsFkMe4qc8kF6fkiIpeJIUjRWC7Ua=
+maSqwJMIFKBEIPKSTcyTEJj2xpksRoKqxByU1-2FpDXkK-2FRIZE-2BiSNHtqZ9WdugaYt8Eaem=
+sbpVCtXuiEbQAVzDd3l8FmqYG0Ln-2BYB8MHl26-2FQ-2F8YdixWAFPXeN6OaeWpk9MsJPGQAj-=
+2FwnByEVRFlAyLyIS1BsmVXK-2FRL1oIyRr3qTTDqWGIbyHU5X-2FT9W7YOH39l-2FrPsCH ).
+
+Fiverr International Ltd. | 38 Greene St. | New York, NY 10013,
+USA
+
+Apple Store=20
+( https://links.notifications.fiverr.com/ls/click?upn=3DngPI5cTsN-2BO-2BocN=
+ST755lOBqv7nFy8h7-2B3DzvM9i7FfKTHJX8cD4Lf96O14PyJ4kEfiUcgIPZ6WfGFs1wEYkTkNX=
+haLI5KA9pAEwP-2BUftGfFnJ3E7tIqzwYW74VtKLwH6pBDzxItQIDDM4smqwSN8A-3D-3Dl-fL_=
+H65ljNg3foEJU6dJQZHMcp3Zdimzb4muCFBEwI-2BtxR6-2FXi7CbhvNQ34YdrsbuNODY0LB4Zz=
+F2g3NuCkai43L4QE8tn1Rmw0eIEdaEHdlY4iwxpeIlR-2Br-2BLuWjDTJaVXP1nw4Ll3hu1jROb=
+zoGWIUwnWdnGr9zSntwY2B7KeqezhNSsxUvACacx99tSeWEF1kkbqeRLzJ5UEWr6lgB9q5OO6Q1=
+bKqQoSRzUaPVP1m0aFbwU6yroCa0yoLr4eJjMpAjDECoTauX6fzgljaHTDvz7Uq644xNQk1Kez2=
+2cf8xaF7-2B4pxFmv7WKn0XEHOQX-2F9BHan7VnOSxYXolPHlTswMKNwUjC9s-2BqWReTBQY4e7=
+Z97kDSguztk3uk17VX-2FYbfDxFSIhmzK2D340WOBLm-2BuZq9LuXO-2FIrn5a6uNCB1CtTmPfT=
+DN4NmaX0qpPVSEYHUv9-2B53fzwB-2BRCIi8yX6zfx-2BOUmyL-2BAXIutFN7u1o011cGF4c9Xg=
+eCHxNQVe7eEU7tIYB40YG0ji5IcunRcKWODiYnFkRTsFkMe4qc8kF6fkiIpeJIUjRWC7UamaSqw=
+JMIFKBEIPKSTcyTEJj2xpksRoKqxByU1-2FpDXkK-2FRIZE-2BiSP8myaULXXoQ1-2BuMUessha=
+PJvFXwIoUbYWyzsCZaSyMDccV79d1xxFz6zQZgSbobPL5UXqcMUXrvY0eg3eVpMVg0LJ-2B10SQ=
+49NrbNzw4-2FLAsNj-2FPAYVm35RQdEi3a-2Fizj16zjuxzaUvpL2cQX5d6Y9F )
+  Google Store=20
+( https://links.notifications.fiverr.com/ls/click?upn=3DngPI5cTsN-2BO-2BocN=
+ST755lJ4NjCwuuE13OHFrqw5qOGew4QylobOU2CI7va7NQsSaOOViCttLUsdfez-2Fsp-2FHB81=
+UnTMkmZSgE2XPBTxnWtDop7o2ZE71GPVICXt2s-2B-2FUpzTgQmB0J215VE-2BI-2FuN1mNs-2B=
+f8-2Fgt-2BE5fP6wlaz9R7E4-3D3GNI_H65ljNg3foEJU6dJQZHMcp3Zdimzb4muCFBEwI-2Btx=
+R6-2FXi7CbhvNQ34YdrsbuNODY0LB4ZzF2g3NuCkai43L4QE8tn1Rmw0eIEdaEHdlY4iwxpeIlR=
+-2Br-2BLuWjDTJaVXP1nw4Ll3hu1jRObzoGWIUwnWdnGr9zSntwY2B7KeqezhNSsxUvACacx99t=
+SeWEF1kkbqeRLzJ5UEWr6lgB9q5OO6Q1bKqQoSRzUaPVP1m0aFbwU6yroCa0yoLr4eJjMpAjDEC=
+oTauX6fzgljaHTDvz7Uq644xNQk1Kez22cf8xaF7-2B4pxFmv7WKn0XEHOQX-2F9BHan7VnOSxY=
+XolPHlTswMKNwUjC9s-2BqWReTBQY4e7Z97kDSguztk3uk17VX-2FYbfDxFSIhmzK2D340WOBLm=
+-2BuZq9LuXO-2FIrn5a6uNCB1CtTmPfTDN4NmaX0qpPVSEYHUv9-2B53fzwB-2BRCIi8yX6zfx-=
+2BOUmyL-2BAXIutFN7u1o011cGF4c9XgeCHxNQVe7eEU7tIYB40YG0ji5IcunRcKWODiYnFkRTs=
+FkMe4qc8kF6fkiIpeJIUjRWC7UamaSqwJMIFKBEIPKSTcyTEJj2xpksRoKqxByU1-2FpDXkK-2F=
+RIZE-2BiSNfJRLGNE3msO3xzdtqebSgGfVlOWxf6dv1DIULFd6uemRMzELne3l1mk6fvyk3SCiW=
+TnTlRH9a13I0eefm-2BLcaN1ZhXj1TQjxLq-2BaNeOBYf494R6HSg0sQWcgM9Y-2FRyNJZ2UHvQ=
+nBEsBFfacjYjr-2Bp )
+
+
+ #_eoa_div, #_eoa_img {
+display:none; } @media print{ #_eoa_div { background-image:
+url('https://links.notifications.fiverr.com/ls/click?upn=3DngPI5cTsN-2BO-2B=
+ocNST755lDs3vDBK87cCroT3DcslDoebqBntJs2Won-2FWC59-2BEyrAtPa-2Fkh0-2F5nUf4tR=
+8r-2FGcDSNZXM0UKO5GwUTtY3sjpxF6xzEkrPOdJ1UcThlpQQies7Zb_H65ljNg3foEJU6dJQZH=
+Mcp3Zdimzb4muCFBEwI-2BtxR6-2FXi7CbhvNQ34YdrsbuNODY0LB4ZzF2g3NuCkai43L4QE8tn=
+1Rmw0eIEdaEHdlY4iwxpeIlR-2Br-2BLuWjDTJaVXP1nw4Ll3hu1jRObzoGWIUwnWdnGr9zSntw=
+Y2B7KeqezhNSsxUvACacx99tSeWEF1kkbqeRLzJ5UEWr6lgB9q5OO6Q1bKqQoSRzUaPVP1m0aFb=
+wU6yroCa0yoLr4eJjMpAjDECoTauX6fzgljaHTDvz7Uq644xNQk1Kez22cf8xaF7-2B4pxFmv7W=
+Kn0XEHOQX-2F9BHan7VnOSxYXolPHlTswMKNwUjC9s-2BqWReTBQY4e7Z97kDSguztk3uk17VX-=
+2FYbfDxFSIhmzK2D340WOBLm-2BuZq9LuXO-2FIrn5a6uNCB1CtTmPfTDN4NmaX0qpPVSEYHUv9=
+-2B53fzwB-2BRCIi8yX6zfx-2BOUmyL-2BAXIutFN7u1o011cGF4c9XgeCHxNQVe7eEU7tIYB40=
+YG0ji5IcunRcKWODiYnFkRTsFkMe4qc8kF6fkiIpeJIUjRWC7UamaSqwJMIFKBEIPKSTcyTEJj2=
+xpksRoKqxByU1-2FpDXkK-2FRIZE-2BiSMjF4ueD914foO53EnblhmBOswBKf3iB0DG0EjPlZ6Y=
+DYoxQpdjK2fJzo0IfUvK9LPbYH68YdqgfjDtJkUIXbFVepYpaFWvFs5UqdJWdl2373JQJIdatpU=
+uTjGZj3iE0ZsYs884oVilkIM9a-2FU1i-2BmY
+} } div.OutlookMessageHeader, table.moz-email-headers-table,
+blockquote #_eoa_div, #mailContainerBody #_eoa_div {
+background-image:url('https://links.notifications.fiverr.com/ls/click?upn=
+=3DngPI5cTsN-2BO-2BocNST755lDs3vDBK87cCroT3DcslDoebqBntJs2Won-2FWC59-2BEyrA=
+tPa-2Fkh0-2F5nUf4tR8r-2FGcDSNZXM0UKO5GwUTtY3sjpxGcrmOW0AWtRd0rUm-2FDS5q73_X=
+1_H65ljNg3foEJU6dJQZHMcp3Zdimzb4muCFBEwI-2BtxR6-2FXi7CbhvNQ34YdrsbuNODY0LB4=
+ZzF2g3NuCkai43L4QE8tn1Rmw0eIEdaEHdlY4iwxpeIlR-2Br-2BLuWjDTJaVXP1nw4Ll3hu1jR=
+ObzoGWIUwnWdnGr9zSntwY2B7KeqezhNSsxUvACacx99tSeWEF1kkbqeRLzJ5UEWr6lgB9q5OO6=
+Q1bKqQoSRzUaPVP1m0aFbwU6yroCa0yoLr4eJjMpAjDECoTauX6fzgljaHTDvz7Uq644xNQk1Ke=
+z22cf8xaF7-2B4pxFmv7WKn0XEHOQX-2F9BHan7VnOSxYXolPHlTswMKNwUjC9s-2BqWReTBQY4=
+e7Z97kDSguztk3uk17VX-2FYbfDxFSIhmzK2D340WOBLm-2BuZq9LuXO-2FIrn5a6uNCB1CtTmP=
+fTDN4NmaX0qpPVSEYHUv9-2B53fzwB-2BRCIi8yX6zfx-2BOUmyL-2BAXIutFN7u1o011cGF4c9=
+XgeCHxNQVe7eEU7tIYB40YG0ji5IcunRcKWODiYnFkRTsFkMe4qc8kF6fkiIpeJIUjRWC7UamaS=
+qwJMIFKBEIPKSTcyTEJj2xpksRoKqxByU1-2FpDXkK-2FRIZE-2BiSP85gCAhF3LiiJu-2B42el=
+XiWC5POYWAKOk-2BytzCw8CqYRCRxGQUob-2FQCM1ZLa0QGWq7TgTTOXbOlRNLhR6jH6-2FjioD=
+STPunq0TpwTlBnhqipBtwTph8kFtEKur4gdN2gI11cXXe7oJeDwN6KVWXEgXsO
+}
+--ea5dfc21b3acd89e80c3eb77cfea5002c38b642fbbb5f43c712c28501b8a
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset=utf-8
+Mime-Version: 1.0
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3DUTF-8=
+">
+    <meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=
+=3D1.0">
+   =20
+<style>.ReadMsgBody {
+width: 100%; background-color: #ffffff;
+}
+.ExternalClass {
+width: 100%; background-color: #ffffff;
+}
+body {
+width: 100%; background-color: #eeeeee; margin: 0; padding: 0; -webkit-font=
+-smoothing: antialiased; font-family: Helvetica Light, Helvetica, Arial, sa=
+ns-serif; -webkit-text-size-adjust: none !important;
+}
+@media screen and (max-width: 525px) {
+  .wrapper {
+    width: 100% !important; max-width: 100% !important;
+  }
+  .logo img {
+    margin: 0 auto !important;
+  }
+  .mobile-hide {
+    display: none !important;
+  }
+  .img-max {
+    max-width: 100% !important; width: 100% !important; height: auto !impor=
+tant;
+  }
+  .responsive-table {
+    width: 100% !important;
+  }
+  .padding {
+    padding: 0px 5% 0px 5% !important;
+  }
+  .padding-meta {
+    padding: 20px 5% 20px 5% !important; text-align: left;
+  }
+  .no-padding {
+    padding: 0 !important;
+  }
+  .section-padding {
+    padding: 0px 15px 0px 15px !important;
+  }
+  .mobile-button-container {
+    margin: 0 auto; width: 100% !important;
+  }
+  .mobile-button {
+    padding: 15px !important; border: 0 !important; font-size: 16px !import=
+ant; display: block !important;
+  }
+  .mobile-bg {
+    background-color: #ffffff;
+  }
+  .mobile-nospace {
+    height: 0px !important;
+  }
+}
+</style>
+</head>
+
+<body style=3D"direction: ltr; width: 100%; -webkit-font-smoothing: antiali=
+ased; font-family: Helvetica Light, Helvetica, Arial, sans-serif; -webkit-t=
+ext-size-adjust: none !important; margin: 0; padding: 0;" bgcolor=3D"#eeeee=
+e"><img src=3D"https://links.notifications.fiverr.com/wf/open?upn=3DI2ZneDY=
+Mm30bX-2BRxYz82EqVmWgovkXO1mHRl89j0THw72L0qfSwP7e4dFErUlvrmAO2aeMH-2FCeMuWy=
+STKK0lHYVkEIy1RgyRrgsR-2F2ZL92e97pGliGOrzkcbSBf4a2xze96-2F6z0tESdmXsHW1FgIr=
+iezK1hI7POI8nXF6KxbRJ3W7h4e81OHvJGjTaESCMm8JyCeB3GvqnVTTrS3ePbpJhvJCl907Rb-=
+2FKiewqw9WxMvktX7p0xBJGyCatVqlg8qYSn2W5oDXmG1Q-2FMmYq71JxGuoF8ISQ0tkpg-2BrF=
+GRzxMVWKQGb5D1FtH8zbqR5ob3cXyO20fZm0APw7Hc3VQLacgydYjIvK5ZhVUD4NBtegDZGZDQc=
+-2FGM1qrEjZEXlnJQ3VtZpL-2FVSJUTakHN9-2FecD-2BGYqMvyEdjUef1JzPa1pcdNYBYGZstj=
+TqmSWyS1kP4zaAGhkoVDJmahLHMnt4mPw9FATiYWOFDbdMZA1Znd3LKb9ZrvYMNMmMTFW3dH76f=
+XuQdZd2rkWyNWgqfvCCchPzy7HIGRhKs-2B-2Fb0r312cdmzMdu7SXcZKZdeZjx-2FQvJmR2tcH=
+DlXVSPOySb1jeuRmkh6CWb6sZm4eCA-2Ba-2BumSDnB6v8arATwxF59Drz7byjyWDSWVyVHdDMC=
+-2BsxWlsUz-2FD1Oqk7w4Etjhgim-2Bga5oG6ctHPDtNLEK8FK2GzRIaM38uVBYJSU6pC0EX9lP=
+Zc-2FBQiVd-2Btoow7HkV3hubYTM3cStUNkJasBCcE-2B869aWQpQhH" alt=3D"" width=3D"=
+1" height=3D"1" border=3D"0" style=3D"height:1px !important;width:1px !impo=
+rtant;border-width:0 !important;margin-top:0 !important;margin-bottom:0 !im=
+portant;margin-right:0 !important;margin-left:0 !important;padding-top:0 !i=
+mportant;padding-bottom:0 !important;padding-right:0 !important;padding-lef=
+t:0 !important;"/>
+<div style=3D"display:none !important;visibility:hidden;mso-hide:all;font-s=
+ize:1px;color:#ffffff;line-height:1px;max-height:0px;max-width:0px;opacity:=
+0;overflow:hidden;">Here=E2=80=99s everything you need to know.</div>
+    <!-- Wrapper -->
+    <table role=3D"presentation" border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0" width=3D"100%" style=3D"border-collapse: separate;">
+        <!-- Spacer -->
+        <tbody>
+            <tr>
+                <td align=3D"center" bgcolor=3D"#eeeeee" class=3D"mobile-bg=
+ mobile-nospace" height=3D"20" valign=3D"top" width=3D"100%"></td>
+            </tr>
+            <tr>
+                <td align=3D"center" bgcolor=3D"#eeeeee" class=3D"no-paddin=
+g mobile-bg" style=3D"padding: 0px 15px;">
+                    <!--[if (gte mso 9)|(IE)]>
+            <table role=3D"presentation" align=3D"center" border=3D"0" cell=
+spacing=3D"0" cellpadding=3D"0" width=3D"500">
+            <tr>
+            <td align=3D"center" valign=3D"top" width=3D"600">
+            <![endif]-->
+                    <table role=3D"presentation" bgcolor=3D"#ffffff" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"responsive-table" style=
+=3D"max-width: 600px; border-collapse: separate;" width=3D"100%">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <!-- TITLE SECTION AND COPY -->
+                                    <table role=3D"presentation" align=3D"c=
+enter" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" styl=
+e=3D"border-collapse: separate;">
+                                        <tbody>
+                                           <tr>
+                                                <td role=3D"banner" align=
+=3D"left" class=3D"padding-meta !important" style=3D"padding-top: 40px; pad=
+ding-bottom: 16px; padding-left: 40px;"><a href=3D"https://links.notificati=
+ons.fiverr.com/uni/ls/click?upn=3DngPI5cTsN-2BO-2BocNST755lOUzSChAnVF2qd1FN=
+NW6d7wuAoeJ2U1bMwISAQZp3nvWXFGswz9ew9Y7w2bkuY9XS00hDr1kH33OfeJyFD-2B7784a4P=
+LDz2v20PRwP6ar4uqIj4D6TxGyiOVC42dGRUBNI6emzN8ZtyGD-2Fw35j4jq1W6cMK4btBazB4C=
+mmdhBMwMJ4QpPxNMu6uxPqFJGVw-2FyMg-3D-3D22YH_H65ljNg3foEJU6dJQZHMcp3Zdimzb4m=
+uCFBEwI-2BtxR6-2FXi7CbhvNQ34YdrsbuNODY0LB4ZzF2g3NuCkai43L4QE8tn1Rmw0eIEdaEH=
+dlY4iwxpeIlR-2Br-2BLuWjDTJaVXP1nw4Ll3hu1jRObzoGWIUwnWdnGr9zSntwY2B7KeqezhNS=
+sxUvACacx99tSeWEF1kkbqeRLzJ5UEWr6lgB9q5OO6Q1bKqQoSRzUaPVP1m0aFbwU6yroCa0yoL=
+r4eJjMpAjDECoTauX6fzgljaHTDvz7Uq644xNQk1Kez22cf8xaF7-2B4pxFmv7WKn0XEHOQX-2F=
+9BHan7VnOSxYXolPHlTswMKNwUjC9s-2BqWReTBQY4e7Z97kDSguztk3uk17VX-2FYbfDxFSIhm=
+zK2D340WOBLm-2BuZq9LuXO-2FIrn5a6uNCB1CtTmPfTDN4NmaX0qpPVSEYHUv9-2B53fzwB-2B=
+RCIi8yX6zfx-2BOUmyL-2BAXIutFN7u1o011cGF4c9XgeCHxNQVe7eEU7tIYB40YG0ji5IcunRc=
+KWODiYnFkRTsFkMe4qc8kF6fkiIpeJIUjRWC7UamaSqwJMIFKBEIPKSTcyTEJj2xpksRoKqxByU=
+1-2FpDXkK-2FRIZE-2BiSOSnmwqf35xH6wNNJzYiBCbJR6MQ4XiWLKWUFM624HnMG5e8wBSmhNb=
+iV0-2BHYOpDmiZ6jY7HbpBL5LXA4xOa6xBKVJD5GlT7IDbPvPCcMJjWHzkLRoFynqSAi4VBu0B9=
+ddL8QLcc93BYRKfDz07sDMi" target=3D"_blank" universal=3D"true"><img alt=3D"F=
+iverr." src=3D"https://appboy-images.com/appboy/communication/assets/image_=
+assets/images/6018272483566877ab3eceb8/original.png?1612195620" width=3D"80=
+" style=3D"vertical-align: left; width: 100%; max-width: 80px; border: 0px =
+solid;"></a></td>
+                                            </tr>
+                                            <!-- Spacer -->
+                                            <tr>
+                                                <td align=3D"center" bgcolo=
+r=3D"#ffffff" height=3D"30" valign=3D"top" width=3D"100%"></td>
+                                            </tr>
+                                            <!-- Body text -->
+                                            <tr>
+                                                <td align=3D"left" class=3D=
+"padding" style=3D"font-size: 16px; font-family: Helvetica Neue; line-heigh=
+t: 26px; color: #404145; padding: 0px 40px;">Hi azfar_ali,<br><br>
+                                                At Fiverr, we=E2=80=99re al=
+l about transparency when it comes to our <a href=3D"https://links.notifica=
+tions.fiverr.com/ls/click?upn=3DngPI5cTsN-2BO-2BocNST755lDXTDotb-2BWKy6y8Fl=
+-2Bgg-2BnDHFLMErs2dAavaemZl8juXj2QuH1fiyovbTx6vH6RsgTSILtlB02MpGJ6wCKdQ4Yem=
+g-2Bq7mZS-2FhfmdrVoG0DztJZ3VI-2B-2BZGnrdAjGgwJW0uz6isN2TrnrGwgrKevUeoFQV4s4=
+WX8wKbWD-2BUzGkgTDg583IpVkvVu2zM7HY-2FwcGZQ-3D-3DBncg_H65ljNg3foEJU6dJQZHMc=
+p3Zdimzb4muCFBEwI-2BtxR6-2FXi7CbhvNQ34YdrsbuNODY0LB4ZzF2g3NuCkai43L4QE8tn1R=
+mw0eIEdaEHdlY4iwxpeIlR-2Br-2BLuWjDTJaVXP1nw4Ll3hu1jRObzoGWIUwnWdnGr9zSntwY2=
+B7KeqezhNSsxUvACacx99tSeWEF1kkbqeRLzJ5UEWr6lgB9q5OO6Q1bKqQoSRzUaPVP1m0aFbwU=
+6yroCa0yoLr4eJjMpAjDECoTauX6fzgljaHTDvz7Uq644xNQk1Kez22cf8xaF7-2B4pxFmv7WKn=
+0XEHOQX-2F9BHan7VnOSxYXolPHlTswMKNwUjC9s-2BqWReTBQY4e7Z97kDSguztk3uk17VX-2F=
+YbfDxFSIhmzK2D340WOBLm-2BuZq9LuXO-2FIrn5a6uNCB1CtTmPfTDN4NmaX0qpPVSEYHUv9-2=
+B53fzwB-2BRCIi8yX6zfx-2BOUmyL-2BAXIutFN7u1o011cGF4c9XgeCHxNQVe7eEU7tIYB40YG=
+0ji5IcunRcKWODiYnFkRTsFkMe4qc8kF6fkiIpeJIUjRWC7UamaSqwJMIFKBEIPKSTcyTEJj2xp=
+ksRoKqxByU1-2FpDXkK-2FRIZE-2BiSNvGXy25sXqMVVMAiWPn7hin92lWKCrWFqBGMeaKMHB8Q=
+TNv-2Bo1SC3a3p7mlrXDEsKnOSKLmukLmHsqCF1JggHInRV565U9dcXLiG2VhHZTWemyUKU1zl-=
+2F99H-2B0ybwzUMQZUb4ZVwNAJhxXd6TrsLRz" style=3D"color: #1dbf73;" target=3D"=
+_blank">Community Standards</a>, which define what is acceptable within our=
+ community and on our marketplace, based on our core values=E2=80=94respect=
+, safety, acceptance, support, and open-mindedness.<br><br>That=E2=80=99s w=
+hy we=E2=80=99re letting you know that we=E2=80=99ve made some important ch=
+anges to our Community Standards. Here are the highlights:
+                                                <ul>
+                                                <li>More detailed descripti=
+ons and examples of illegal and prohibited services on Fiverr</li>
+                                                <li>Updated =E2=80=9CIntegr=
+ity and Authenticity=E2=80=9D section describing abusive practices we block=
+ on Fiverr in order to protect our platform and users</li>
+                                                <li>New =E2=80=9CAI-generat=
+ed content=E2=80=9D section reflecting recent dynamic changes in the world =
+of AI</li>
+                                              =20
+                                                </ul>
+                                                We encourage you to review =
+this updated version. We'll also hold a dedicated webinar with all the nece=
+ssary do=E2=80=99s and don'ts soon, so look out for more info on that.<br><=
+br>
+                                              =20
+                                                Thank you, <br>
+                                                The Fiverr team
+                                            <!-- Spacer -->
+                                            </td>
+</tr>
+<tr>
+                                                <td align=3D"center" bgcolo=
+r=3D"#ffffff" height=3D"48" valign=3D"top" width=3D"100%"></td>
+                                            </tr>
+                                            <!-- Spacer -->
+                                            <tr>
+                                                <td align=3D"center" bgcolo=
+r=3D"#ffffff" height=3D"35" valign=3D"top" width=3D"100%"></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <!--[if (gte mso 9)|(IE)]>
+            </td>
+            </tr>
+            </table>
+            <![endif]-->
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align=3D"center" bgcolor=3D"#eeeeee" st=
+yle=3D"padding: 20px 0px;">
+                                    <!--[if (gte mso 9)|(IE)]>
+            <table align=3D"center" border=3D"0" cellspacing=3D"0" cellpadd=
+ing=3D"0" width=3D"500">
+            <tr>
+            <td align=3D"center" valign=3D"top" width=3D"500">
+            <![endif]-->
+
+                  =20
+    <!-- end -->
+
+                                    <!-- UNSUBSCRIBE COPY -->
+                                    <table align=3D"center" border=3D"0" ce=
+llpadding=3D"0" cellspacing=3D"0" class=3D"responsive-table" style=3D"max-w=
+idth: 600px; border-collapse: separate;" width=3D"100%">
+                                   =20
+                                        <tbody>
+                                            <tr>
+                                                <td role=3D"contentinfo" al=
+ign=3D"center" style=3D"color: #818181; font-size: 12px; padding-top: 5px; =
+line-height: 1.5; font-family: 'Helvetica Light', 'Helvetica', Arial, sans-=
+serif;">
+<table style=3D"width: 100%; text-align: center; border-collapse: separate;=
+">
+	<tbody>
+		<tr>
+			<td align=3D"center" class=3D"center" style=3D"padding: 10px 10px 25px;"=
+>
+<!--Twitter--><a href=3D"https://links.notifications.fiverr.com/ls/click?up=
+n=3DngPI5cTsN-2BO-2BocNST755lCsqWhAQbzRIholSHbbvNIe1D2ZGKE8Qsj-2B-2B-2BpB1-=
+2BWGWgUp6yIxZRR7wBTfb-2FgrzWjVlpCQ-2BoxaMrTMKcViu074woVphmWlmw57yTVnJOLGAbf=
+aF_H65ljNg3foEJU6dJQZHMcp3Zdimzb4muCFBEwI-2BtxR6-2FXi7CbhvNQ34YdrsbuNODY0LB=
+4ZzF2g3NuCkai43L4QE8tn1Rmw0eIEdaEHdlY4iwxpeIlR-2Br-2BLuWjDTJaVXP1nw4Ll3hu1j=
+RObzoGWIUwnWdnGr9zSntwY2B7KeqezhNSsxUvACacx99tSeWEF1kkbqeRLzJ5UEWr6lgB9q5OO=
+6Q1bKqQoSRzUaPVP1m0aFbwU6yroCa0yoLr4eJjMpAjDECoTauX6fzgljaHTDvz7Uq644xNQk1K=
+ez22cf8xaF7-2B4pxFmv7WKn0XEHOQX-2F9BHan7VnOSxYXolPHlTswMKNwUjC9s-2BqWReTBQY=
+4e7Z97kDSguztk3uk17VX-2FYbfDxFSIhmzK2D340WOBLm-2BuZq9LuXO-2FIrn5a6uNCB1CtTm=
+PfTDN4NmaX0qpPVSEYHUv9-2B53fzwB-2BRCIi8yX6zfx-2BOUmyL-2BAXIutFN7u1o011cGF4c=
+9XgeCHxNQVe7eEU7tIYB40YG0ji5IcunRcKWODiYnFkRTsFkMe4qc8kF6fkiIpeJIUjRWC7Uama=
+SqwJMIFKBEIPKSTcyTEJj2xpksRoKqxByU1-2FpDXkK-2FRIZE-2BiSPCCdjGSR2QRSq3PYzjxu=
+cRL9TSDtat8BGBP7ofppAhysq-2BNZnnqKesRbKNXGzhcZJD2np2rc4Lm5FYM5EeVug8YWUZsuC=
+WhpjpvLRVXdzj0TjAfAw8p7jgeHRUeTKD9EiBM4nK0FeNVi5-2B8Rxi25e-2B" style=3D"dis=
+play: inline-block; margin: 0px;"><img alt=3D"Twitter" height=3D"40" src=3D=
+"https://appboy-images.com/appboy/communication/assets/image_assets/images/=
+6033597de16e171ec0de07a5/original.png?1613977981" style=3D"width: 40px; hei=
+ght: 40px;" width=3D"40"></a> <!--Facebook--> <a href=3D"https://links.noti=
+fications.fiverr.com/ls/click?upn=3DngPI5cTsN-2BO-2BocNST755lBUbpif8-2FRU3s=
+VVAUn7jm6r5gVJ0rgPiQUjVe2FcKw-2FecRSQJ-2FwEUk-2F8jpWbX2yysPPOxmnArsmifosKZ9=
+RXuOPU62C1dFBVQhzC-2F-2B35J5wwuwaG_H65ljNg3foEJU6dJQZHMcp3Zdimzb4muCFBEwI-2=
+BtxR6-2FXi7CbhvNQ34YdrsbuNODY0LB4ZzF2g3NuCkai43L4QE8tn1Rmw0eIEdaEHdlY4iwxpe=
+IlR-2Br-2BLuWjDTJaVXP1nw4Ll3hu1jRObzoGWIUwnWdnGr9zSntwY2B7KeqezhNSsxUvACacx=
+99tSeWEF1kkbqeRLzJ5UEWr6lgB9q5OO6Q1bKqQoSRzUaPVP1m0aFbwU6yroCa0yoLr4eJjMpAj=
+DECoTauX6fzgljaHTDvz7Uq644xNQk1Kez22cf8xaF7-2B4pxFmv7WKn0XEHOQX-2F9BHan7VnO=
+SxYXolPHlTswMKNwUjC9s-2BqWReTBQY4e7Z97kDSguztk3uk17VX-2FYbfDxFSIhmzK2D340WO=
+BLm-2BuZq9LuXO-2FIrn5a6uNCB1CtTmPfTDN4NmaX0qpPVSEYHUv9-2B53fzwB-2BRCIi8yX6z=
+fx-2BOUmyL-2BAXIutFN7u1o011cGF4c9XgeCHxNQVe7eEU7tIYB40YG0ji5IcunRcKWODiYnFk=
+RTsFkMe4qc8kF6fkiIpeJIUjRWC7UamaSqwJMIFKBEIPKSTcyTEJj2xpksRoKqxByU1-2FpDXkK=
+-2FRIZE-2BiSPdKDmCTyooaY6esspl-2BkFxnNBEDaofQMll2A-2FJfyO7sSljftL5AiBh6V-2B=
+dRVW9BWwq2gi8bD92CFM3MJcCR14WD95m2cRUj6Czw-2B3VByNEhFqCMMns418QzKYVhRIR6TuA=
+keGpW-2B5xgzWwHX0SBtj6" style=3D"display: inline-block; margin: 0px;"> <img=
+ alt=3D"Facebook" height=3D"40" src=3D"https://appboy-images.com/appboy/com=
+munication/assets/image_assets/images/6033596e141af42e11eb9011/original.png=
+?1613977966" style=3D"width: 40px; height: 40px;" width=3D"40"></a> <!--Pin=
+terest--> <a href=3D"https://links.notifications.fiverr.com/ls/click?upn=3D=
+4yFQjwfto-2BsIp7Cndz9ec-2BjeuoQn5R-2BCGAxcB7SX2OH1oEJl5AA9PTAaMKljVknPxdOw4=
+yBJdLzsioEyRY7sRDfYoun69wEHgdHaSl-2BUytJCI57QQMh-2BAGOn8TuytNbrGR0-_H65ljNg=
+3foEJU6dJQZHMcp3Zdimzb4muCFBEwI-2BtxR6-2FXi7CbhvNQ34YdrsbuNODY0LB4ZzF2g3NuC=
+kai43L4QE8tn1Rmw0eIEdaEHdlY4iwxpeIlR-2Br-2BLuWjDTJaVXP1nw4Ll3hu1jRObzoGWIUw=
+nWdnGr9zSntwY2B7KeqezhNSsxUvACacx99tSeWEF1kkbqeRLzJ5UEWr6lgB9q5OO6Q1bKqQoSR=
+zUaPVP1m0aFbwU6yroCa0yoLr4eJjMpAjDECoTauX6fzgljaHTDvz7Uq644xNQk1Kez22cf8xaF=
+7-2B4pxFmv7WKn0XEHOQX-2F9BHan7VnOSxYXolPHlTswMKNwUjC9s-2BqWReTBQY4e7Z97kDSg=
+uztk3uk17VX-2FYbfDxFSIhmzK2D340WOBLm-2BuZq9LuXO-2FIrn5a6uNCB1CtTmPfTDN4NmaX=
+0qpPVSEYHUv9-2B53fzwB-2BRCIi8yX6zfx-2BOUmyL-2BAXIutFN7u1o011cGF4c9XgeCHxNQV=
+e7eEU7tIYB40YG0ji5IcunRcKWODiYnFkRTsFkMe4qc8kF6fkiIpeJIUjRWC7UamaSqwJMIFKBE=
+IPKSTcyTEJj2xpksRoKqxByU1-2FpDXkK-2FRIZE-2BiSMnZirYB3QYZImhUBsHhRu-2F3lOof6=
+wqM-2BUNgmJKawPBzUF6JiNVemuNjSssCZO8CIFcARqjYSTl5yjmb4ZiVpZr20XNJ-2B12F7pzY=
+GMYyDLsXo-2Bc5zoN-2BnmHoQTraKt5htnGWfY3L2pqbTiBNYoxq4rY" style=3D"display: =
+inline-block; margin: 0px;"> <img alt=3D"Pinterest" height=3D"40" src=3D"ht=
+tps://appboy-images.com/appboy/communication/assets/image_assets/images/603=
+3597389461f339542c0be/original.png?1613977971" style=3D"width: 40px; height=
+: 40px;" width=3D"40"></a> <!--LinkedIn--> <a href=3D"https://links.notific=
+ations.fiverr.com/ls/click?upn=3Dv5LzrRLfRrOV3qEpl-2FAT0WnqQN4UnX0LczDKYutZ=
+5FQ44tms451wLW5B3C0MTagVYi9FAcxJZxRE6yh5VPiR6rqRGmUM79cIm4qqWKu93GTqwp4De8l=
+kPuqMmrhxXScso1Rky-2B5R1a7sxAp-2Bbh-2BQLA-3D-3DK0KM_H65ljNg3foEJU6dJQZHMcp3=
+Zdimzb4muCFBEwI-2BtxR6-2FXi7CbhvNQ34YdrsbuNODY0LB4ZzF2g3NuCkai43L4QE8tn1Rmw=
+0eIEdaEHdlY4iwxpeIlR-2Br-2BLuWjDTJaVXP1nw4Ll3hu1jRObzoGWIUwnWdnGr9zSntwY2B7=
+KeqezhNSsxUvACacx99tSeWEF1kkbqeRLzJ5UEWr6lgB9q5OO6Q1bKqQoSRzUaPVP1m0aFbwU6y=
+roCa0yoLr4eJjMpAjDECoTauX6fzgljaHTDvz7Uq644xNQk1Kez22cf8xaF7-2B4pxFmv7WKn0X=
+EHOQX-2F9BHan7VnOSxYXolPHlTswMKNwUjC9s-2BqWReTBQY4e7Z97kDSguztk3uk17VX-2FYb=
+fDxFSIhmzK2D340WOBLm-2BuZq9LuXO-2FIrn5a6uNCB1CtTmPfTDN4NmaX0qpPVSEYHUv9-2B5=
+3fzwB-2BRCIi8yX6zfx-2BOUmyL-2BAXIutFN7u1o011cGF4c9XgeCHxNQVe7eEU7tIYB40YG0j=
+i5IcunRcKWODiYnFkRTsFkMe4qc8kF6fkiIpeJIUjRWC7UamaSqwJMIFKBEIPKSTcyTEJj2xpks=
+RoKqxByU1-2FpDXkK-2FRIZE-2BiSOl13H4y3PNoXpItaaw89692D0eoS2JLtChZR1wgoYBWXYi=
+pDJ7UWOI8lvOFjy9pM2tSE3bffVTj75tGtf0-2B8Hu6Rc3e-2BZ-2B5yhf1vwi2DYYazh1OohTW=
+IVmR-2B-2FxRs38DrpVb-2BLSdj3LbJg9PoflP3G0" style=3D"display: inline-block; =
+margin: 0px;"> <img alt=3D"LinkedIn" height=3D"40" src=3D"https://appboy-im=
+ages.com/appboy/communication/assets/image_assets/images/6033597726e78f781d=
+fefd41/original.png?1613977975" style=3D"width: 40px; height: 40px;" width=
+=3D"40"></a> <!--Instagram--> <a href=3D"https://links.notifications.fiverr=
+.com/ls/click?upn=3DagYJYeDsQwsTxroWN8DrwiaFVR-2B5EsJt85Tn42JmjTvrGFhr1F8vV=
+GIXWRxo-2F1YdlYGaENQHfP3NpYzqBj4qc0V2GZ0tf5pewJVNOUqkjxkuQtZ5JHc9-2B03gBqAR=
+oOrNeb71_H65ljNg3foEJU6dJQZHMcp3Zdimzb4muCFBEwI-2BtxR6-2FXi7CbhvNQ34YdrsbuN=
+ODY0LB4ZzF2g3NuCkai43L4QE8tn1Rmw0eIEdaEHdlY4iwxpeIlR-2Br-2BLuWjDTJaVXP1nw4L=
+l3hu1jRObzoGWIUwnWdnGr9zSntwY2B7KeqezhNSsxUvACacx99tSeWEF1kkbqeRLzJ5UEWr6lg=
+B9q5OO6Q1bKqQoSRzUaPVP1m0aFbwU6yroCa0yoLr4eJjMpAjDECoTauX6fzgljaHTDvz7Uq644=
+xNQk1Kez22cf8xaF7-2B4pxFmv7WKn0XEHOQX-2F9BHan7VnOSxYXolPHlTswMKNwUjC9s-2BqW=
+ReTBQY4e7Z97kDSguztk3uk17VX-2FYbfDxFSIhmzK2D340WOBLm-2BuZq9LuXO-2FIrn5a6uNC=
+B1CtTmPfTDN4NmaX0qpPVSEYHUv9-2B53fzwB-2BRCIi8yX6zfx-2BOUmyL-2BAXIutFN7u1o01=
+1cGF4c9XgeCHxNQVe7eEU7tIYB40YG0ji5IcunRcKWODiYnFkRTsFkMe4qc8kF6fkiIpeJIUjRW=
+C7UamaSqwJMIFKBEIPKSTcyTEJj2xpksRoKqxByU1-2FpDXkK-2FRIZE-2BiSNXAg3Sn2OQUKEh=
+TvU9kfskJ4jGH071JxM4UmI4mhtQgXX7ioZM5OxsjNXK2d0nO2do5WOT5OtH9-2Fjyza91ehX8n=
+9POUAUSugHYvNBm9ebw5OBQMW69Gbi-2BfQWPdv-2FK3XiK2cCFkje1yvDdwqag7WfJ" style=
+=3D"display: inline-block; margin: 0px;"> <img alt=3D"Instagram" height=3D"=
+40" src=3D"https://appboy-images.com/appboy/communication/assets/image_asse=
+ts/images/6033595124413112353135b6/original.png?1613977937" style=3D"width:=
+ 40px; height: 40px;" width=3D"40"></a>
+</td>
+		</tr>
+		<tr>
+			<td style=3D"color: #C5C6C9; font-size: 12px; line-height: 18px; font-fa=
+mily: arial,helvetica neue,helvetica,sans-serif;" align=3D"center">
+<a href=3D"https://links.notifications.fiverr.com/ls/click?upn=3DngPI5cTsN-=
+2BO-2BocNST755lGX9xgJYVZPElYGyvTWnPWXog9nUrwPZHxBnvXA8vDXlk88t_H65ljNg3foEJ=
+U6dJQZHMcp3Zdimzb4muCFBEwI-2BtxR6-2FXi7CbhvNQ34YdrsbuNODY0LB4ZzF2g3NuCkai43=
+L4QE8tn1Rmw0eIEdaEHdlY4iwxpeIlR-2Br-2BLuWjDTJaVXP1nw4Ll3hu1jRObzoGWIUwnWdnG=
+r9zSntwY2B7KeqezhNSsxUvACacx99tSeWEF1kkbqeRLzJ5UEWr6lgB9q5OO6Q1bKqQoSRzUaPV=
+P1m0aFbwU6yroCa0yoLr4eJjMpAjDECoTauX6fzgljaHTDvz7Uq644xNQk1Kez22cf8xaF7-2B4=
+pxFmv7WKn0XEHOQX-2F9BHan7VnOSxYXolPHlTswMKNwUjC9s-2BqWReTBQY4e7Z97kDSguztk3=
+uk17VX-2FYbfDxFSIhmzK2D340WOBLm-2BuZq9LuXO-2FIrn5a6uNCB1CtTmPfTDN4NmaX0qpPV=
+SEYHUv9-2B53fzwB-2BRCIi8yX6zfx-2BOUmyL-2BAXIutFN7u1o011cGF4c9XgeCHxNQVe7eEU=
+7tIYB40YG0ji5IcunRcKWODiYnFkRTsFkMe4qc8kF6fkiIpeJIUjRWC7UamaSqwJMIFKBEIPKST=
+cyTEJj2xpksRoKqxByU1-2FpDXkK-2FRIZE-2BiSPPayN3zNz2amFglXOUDjLx2J39OXFN-2BOx=
+xUeX1CME7BNzfyVpr0CiuxIpN-2FXUn79sKEITySPRM0GnPIvEyx4EVY9MCvdyw5YJ3Hm4eMGqC=
+6xd3s0Yf99jNHx8J2KzQrdpu6s6iWaNw1J8sO9W2-2FdY4" style=3D"color: #126F43; te=
+xt-decoration: none; font-weight: bold;">Privacy Policy</a>=C2=A0|=C2=A0<a =
+href=3D"https://links.notifications.fiverr.com/ls/click?upn=3D7Y52O7jmMuIdn=
+XoPLV0bPaUU7mOExTkJzGwXXW4ZHH92k4iAqXVNewTHIrKabG6ReQay_H65ljNg3foEJU6dJQZH=
+Mcp3Zdimzb4muCFBEwI-2BtxR6-2FXi7CbhvNQ34YdrsbuNODY0LB4ZzF2g3NuCkai43L4QE8tn=
+1Rmw0eIEdaEHdlY4iwxpeIlR-2Br-2BLuWjDTJaVXP1nw4Ll3hu1jRObzoGWIUwnWdnGr9zSntw=
+Y2B7KeqezhNSsxUvACacx99tSeWEF1kkbqeRLzJ5UEWr6lgB9q5OO6Q1bKqQoSRzUaPVP1m0aFb=
+wU6yroCa0yoLr4eJjMpAjDECoTauX6fzgljaHTDvz7Uq644xNQk1Kez22cf8xaF7-2B4pxFmv7W=
+Kn0XEHOQX-2F9BHan7VnOSxYXolPHlTswMKNwUjC9s-2BqWReTBQY4e7Z97kDSguztk3uk17VX-=
+2FYbfDxFSIhmzK2D340WOBLm-2BuZq9LuXO-2FIrn5a6uNCB1CtTmPfTDN4NmaX0qpPVSEYHUv9=
+-2B53fzwB-2BRCIi8yX6zfx-2BOUmyL-2BAXIutFN7u1o011cGF4c9XgeCHxNQVe7eEU7tIYB40=
+YG0ji5IcunRcKWODiYnFkRTsFkMe4qc8kF6fkiIpeJIUjRWC7UamaSqwJMIFKBEIPKSTcyTEJj2=
+xpksRoKqxByU1-2FpDXkK-2FRIZE-2BiSOr78sBiLCCK4-2BRz3-2B0GrBWps74pOXU55RtG-2F=
+dEVNQN88S-2F7A9ClQptb8QBgbZI2wPtqitnh6HVWHMsOByNcIrk7G2ZEqdOQkUI6XO3yUN0E-2=
+BJgEeeszJbg9UHokEqtaCefAYFEQx7p7D5h8JrIicjf" style=3D"color: #126F43; text-=
+decoration: none; font-weight: bold;">Support</a>=C2=A0|=C2=A0<a href=3D"ht=
+tps://links.notifications.fiverr.com/ls/click?upn=3DngPI5cTsN-2BO-2BocNST75=
+5lErBOTdNCnQDJQ-2FgD6Sm2Ozo5wWTQsQr1VouLaaKS27zCg1L6dytRwo363Ot-2FKQF-2FbG3=
+L9Pgt-2FPse4cMDnUUEWGfrSdo8sw53-2F7TgE-2BMf0yaJj-2F57H8QSKDRDV3mVh5YfQ-3D-3=
+Dg-Tb_H65ljNg3foEJU6dJQZHMcp3Zdimzb4muCFBEwI-2BtxR6-2FXi7CbhvNQ34YdrsbuNODY=
+0LB4ZzF2g3NuCkai43L4QE8tn1Rmw0eIEdaEHdlY4iwxpeIlR-2Br-2BLuWjDTJaVXP1nw4Ll3h=
+u1jRObzoGWIUwnWdnGr9zSntwY2B7KeqezhNSsxUvACacx99tSeWEF1kkbqeRLzJ5UEWr6lgB9q=
+5OO6Q1bKqQoSRzUaPVP1m0aFbwU6yroCa0yoLr4eJjMpAjDECoTauX6fzgljaHTDvz7Uq644xNQ=
+k1Kez22cf8xaF7-2B4pxFmv7WKn0XEHOQX-2F9BHan7VnOSxYXolPHlTswMKNwUjC9s-2BqWReT=
+BQY4e7Z97kDSguztk3uk17VX-2FYbfDxFSIhmzK2D340WOBLm-2BuZq9LuXO-2FIrn5a6uNCB1C=
+tTmPfTDN4NmaX0qpPVSEYHUv9-2B53fzwB-2BRCIi8yX6zfx-2BOUmyL-2BAXIutFN7u1o011cG=
+F4c9XgeCHxNQVe7eEU7tIYB40YG0ji5IcunRcKWODiYnFkRTsFkMe4qc8kF6fkiIpeJIUjRWC7U=
+amaSqwJMIFKBEIPKSTcyTEJj2xpksRoKqxByU1-2FpDXkK-2FRIZE-2BiSNEGxODWZEtBLOixyn=
+P-2Fpy0wrIRrTA-2BL8nRHtzwOG-2BTHP9L6nYnDu9SJY4nwEMIg-2FJM0pAej6Z29S5PTkbpJE=
+Ry-2BVA81Y9hBTe3dYLfdSaoKyBRMgzqr4nbR8SxujT1SkZjyUUvUHUWYzlzp9HfbqMu" style=
+=3D"color: #126F43; text-decoration: none; font-weight: bold;">Invite a Fri=
+end</a>=C2=A0|=C2=A0<a href=3D"https://links.notifications.fiverr.com/ls/cl=
+ick?upn=3DngPI5cTsN-2BO-2BocNST755lOzoSGD6AVmH5YRLQfuE-2FHZwEzNJ6TNIvv2YAlz=
+nWRtUaUxr9lxuJTDoXtIWhtL1MwhNmj58VwEXWYw4aSAsZdcYVD2RRwx-2FbCPaW2n227kl_RbE=
+_H65ljNg3foEJU6dJQZHMcp3Zdimzb4muCFBEwI-2BtxR6-2FXi7CbhvNQ34YdrsbuNODY0LB4Z=
+zF2g3NuCkai43L4QE8tn1Rmw0eIEdaEHdlY4iwxpeIlR-2Br-2BLuWjDTJaVXP1nw4Ll3hu1jRO=
+bzoGWIUwnWdnGr9zSntwY2B7KeqezhNSsxUvACacx99tSeWEF1kkbqeRLzJ5UEWr6lgB9q5OO6Q=
+1bKqQoSRzUaPVP1m0aFbwU6yroCa0yoLr4eJjMpAjDECoTauX6fzgljaHTDvz7Uq644xNQk1Kez=
+22cf8xaF7-2B4pxFmv7WKn0XEHOQX-2F9BHan7VnOSxYXolPHlTswMKNwUjC9s-2BqWReTBQY4e=
+7Z97kDSguztk3uk17VX-2FYbfDxFSIhmzK2D340WOBLm-2BuZq9LuXO-2FIrn5a6uNCB1CtTmPf=
+TDN4NmaX0qpPVSEYHUv9-2B53fzwB-2BRCIi8yX6zfx-2BOUmyL-2BAXIutFN7u1o011cGF4c9X=
+geCHxNQVe7eEU7tIYB40YG0ji5IcunRcKWODiYnFkRTsFkMe4qc8kF6fkiIpeJIUjRWC7UamaSq=
+wJMIFKBEIPKSTcyTEJj2xpksRoKqxByU1-2FpDXkK-2FRIZE-2BiSNktA1yDpQX0A7N3ijGdCem=
+l8B1fn-2BU6wYqgrm8XTKbyKFT8e1FzDHMsQU1hQwkKR7o6djYg8-2FTGFCtCiKr-2BwMpqDzLl=
+rxJxEYItWdJnFMaSj9NIi02rkkvM8NWt-2FE0mP2H4BAI4xG5mJvIn5P8l6Q0" style=3D"col=
+or: #126F43; text-decoration: none; font-weight: bold;">Get Inspired</a><br=
+>
+			<br>
+			<span style=3D"color: #7A7D85;">This email was sent to you by Fiverr Int=
+ernational Ltd.<br>
+			You are receiving this email because you signed up for  Fiverr.=C2=A0 <b=
+r>
+			If you wish to unsubscribe from all future emails, please click <a href=
+=3D"https://links.notifications.fiverr.com/ls/click?upn=3DngPI5cTsN-2BO-2Bo=
+cNST755lOsp9Stf-2FT2dZvnuuS8akHD5OECW1SVN3oTSfM2IITohDxP-2FntHqFRSuT3nP-2Fl=
+51Y-2Fn-2FEVolJ7qWrLB870jHETWKTtK3I29OnVOTM2PiuOP1JX7iTCO9-2B82HizzDd-2FBk0=
+EI0vKVT02uvWavC41WVFJJ6mrw4316lHiR0kvfKnrNA-2FO4yJmxWrxeewNbquzZ8QD7Q7I4n31=
+QJBIJD41W4O3TXF3M-2Bcn3BDim5qsLrOVUSA0PjSHoBqrlaSG2flr3LNz1jZ-2BctVUg4TiKbG=
+GA-2Fex0L9EQ-2Bcq-2FNpd3PEt-2Bt7fzuqYvdL55Nl82KO0wB61YF0Q7xYd70-2BWCOjPvnBh=
+zm9Vc9YJsavgq8Hztc8ZlQ5oPEsUCDaRZ-2B2v2NpBw9r2ei6L9-2F1LtNtHgysnCGXYZWLYhmy=
+znDC0mUoyXr99lATgSKGULgcbjAGsSabx3wZxW1ELmHasxtT824GNmuajRdslcT4en2XwtPY-2B=
+pm8WRSO43CWd-2BpptwBOUzay1PClxQ2g0TWG9r1LM5VY-2F8tVSP-2BB2t03W0-2FPWflmIRKU=
+lbPjEz2QS4ZZcOFY7S-2FZ-2BeIobvALuCTaqQdV6Ipgl5zAzLwlglgifhCeNYliuDK-2FJMrLa=
+3BR5EfYsz6o6vnMm-2FCyzl-2BocBbKswfMCZ-2F6rUCgvestLrjd2sbzYP2xXWeyY6WNmqnrPg=
+e_H65ljNg3foEJU6dJQZHMcp3Zdimzb4muCFBEwI-2BtxR6-2FXi7CbhvNQ34YdrsbuNODY0LB4=
+ZzF2g3NuCkai43L4QE8tn1Rmw0eIEdaEHdlY4iwxpeIlR-2Br-2BLuWjDTJaVXP1nw4Ll3hu1jR=
+ObzoGWIUwnWdnGr9zSntwY2B7KeqezhNSsxUvACacx99tSeWEF1kkbqeRLzJ5UEWr6lgB9q5OO6=
+Q1bKqQoSRzUaPVP1m0aFbwU6yroCa0yoLr4eJjMpAjDECoTauX6fzgljaHTDvz7Uq644xNQk1Ke=
+z22cf8xaF7-2B4pxFmv7WKn0XEHOQX-2F9BHan7VnOSxYXolPHlTswMKNwUjC9s-2BqWReTBQY4=
+e7Z97kDSguztk3uk17VX-2FYbfDxFSIhmzK2D340WOBLm-2BuZq9LuXO-2FIrn5a6uNCB1CtTmP=
+fTDN4NmaX0qpPVSEYHUv9-2B53fzwB-2BRCIi8yX6zfx-2BOUmyL-2BAXIutFN7u1o011cGF4c9=
+XgeCHxNQVe7eEU7tIYB40YG0ji5IcunRcKWODiYnFkRTsFkMe4qc8kF6fkiIpeJIUjRWC7UamaS=
+qwJMIFKBEIPKSTcyTEJj2xpksRoKqxByU1-2FpDXkK-2FRIZE-2BiSN2FsvB8U3sgnUTmmQjhr-=
+2Fb5rc0R68cLO3eowRhj2J0gOuFnO2zpgTT9-2FsbDS2mSgJAnTzrPTCDvxkbukX5qxx-2BrRfh=
+cxZ1IySLyBfEyLfj4nJ3wYCm82K5XIop9a4x2lE-2B-2BHf90vCzvKv2Jj7sn0Db" style=3D"=
+color: #126F43; text-decoration: none;">here</a>.<br>
+			<br>
+			Fiverr International Ltd. | 38 Greene St. | New York, NY 10013, USA</spa=
+n>
+</td>
+		</tr>
+		<tr>
+			<td align=3D"center" class=3D"center" style=3D"padding: 20px 10px;">
+<!--Apple Store--><a href=3D"https://links.notifications.fiverr.com/ls/clic=
+k?upn=3DngPI5cTsN-2BO-2BocNST755lOBqv7nFy8h7-2B3DzvM9i7FfKTHJX8cD4Lf96O14Py=
+J4kEfiUcgIPZ6WfGFs1wEYkTkNXhaLI5KA9pAEwP-2BUftGfFnJ3E7tIqzwYW74VtKLwH6pBDzx=
+ItQIDDM4smqwSN8A-3D-3DEgrg_H65ljNg3foEJU6dJQZHMcp3Zdimzb4muCFBEwI-2BtxR6-2F=
+Xi7CbhvNQ34YdrsbuNODY0LB4ZzF2g3NuCkai43L4QE8tn1Rmw0eIEdaEHdlY4iwxpeIlR-2Br-=
+2BLuWjDTJaVXP1nw4Ll3hu1jRObzoGWIUwnWdnGr9zSntwY2B7KeqezhNSsxUvACacx99tSeWEF=
+1kkbqeRLzJ5UEWr6lgB9q5OO6Q1bKqQoSRzUaPVP1m0aFbwU6yroCa0yoLr4eJjMpAjDECoTauX=
+6fzgljaHTDvz7Uq644xNQk1Kez22cf8xaF7-2B4pxFmv7WKn0XEHOQX-2F9BHan7VnOSxYXolPH=
+lTswMKNwUjC9s-2BqWReTBQY4e7Z97kDSguztk3uk17VX-2FYbfDxFSIhmzK2D340WOBLm-2BuZ=
+q9LuXO-2FIrn5a6uNCB1CtTmPfTDN4NmaX0qpPVSEYHUv9-2B53fzwB-2BRCIi8yX6zfx-2BOUm=
+yL-2BAXIutFN7u1o011cGF4c9XgeCHxNQVe7eEU7tIYB40YG0ji5IcunRcKWODiYnFkRTsFkMe4=
+qc8kF6fkiIpeJIUjRWC7UamaSqwJMIFKBEIPKSTcyTEJj2xpksRoKqxByU1-2FpDXkK-2FRIZE-=
+2BiSM7msiiflRaurTpg1QBKideegSxnYoeeBT4M8RbkWswhyn2Z1OTBDW26cLxmcxeAsza3EtTO=
+UeMowpSe-2BSKc80JXkVxu5mOzHkZM6YxZ1gnTa4FjuemJFZyGIc9OeeRF7-2BDZ8mQKMU2ZF6Q=
+-2BSqqWPxU" style=3D"display: inline-block; width: 120px; height: 36px; mar=
+gin: 4px;"><img alt=3D"Apple Store" heigh=3D"36" src=3D"https://appboy-imag=
+es.com/appboy/communication/assets/image_assets/images/60335ea2798dc8263242=
+6968/original.png?1613979298" width=3D"120"></a> <!--Google Store--> <a hre=
+f=3D"https://links.notifications.fiverr.com/ls/click?upn=3DngPI5cTsN-2BO-2B=
+ocNST755lJ4NjCwuuE13OHFrqw5qOGew4QylobOU2CI7va7NQsSaOOViCttLUsdfez-2Fsp-2FH=
+B81UnTMkmZSgE2XPBTxnWtDop7o2ZE71GPVICXt2s-2B-2FUpzTgQmB0J215VE-2BI-2FuN1mNs=
+-2Bf8-2Fgt-2BE5fP6wlaz9R7E4-3DxBCk_H65ljNg3foEJU6dJQZHMcp3Zdimzb4muCFBEwI-2=
+BtxR6-2FXi7CbhvNQ34YdrsbuNODY0LB4ZzF2g3NuCkai43L4QE8tn1Rmw0eIEdaEHdlY4iwxpe=
+IlR-2Br-2BLuWjDTJaVXP1nw4Ll3hu1jRObzoGWIUwnWdnGr9zSntwY2B7KeqezhNSsxUvACacx=
+99tSeWEF1kkbqeRLzJ5UEWr6lgB9q5OO6Q1bKqQoSRzUaPVP1m0aFbwU6yroCa0yoLr4eJjMpAj=
+DECoTauX6fzgljaHTDvz7Uq644xNQk1Kez22cf8xaF7-2B4pxFmv7WKn0XEHOQX-2F9BHan7VnO=
+SxYXolPHlTswMKNwUjC9s-2BqWReTBQY4e7Z97kDSguztk3uk17VX-2FYbfDxFSIhmzK2D340WO=
+BLm-2BuZq9LuXO-2FIrn5a6uNCB1CtTmPfTDN4NmaX0qpPVSEYHUv9-2B53fzwB-2BRCIi8yX6z=
+fx-2BOUmyL-2BAXIutFN7u1o011cGF4c9XgeCHxNQVe7eEU7tIYB40YG0ji5IcunRcKWODiYnFk=
+RTsFkMe4qc8kF6fkiIpeJIUjRWC7UamaSqwJMIFKBEIPKSTcyTEJj2xpksRoKqxByU1-2FpDXkK=
+-2FRIZE-2BiSPb-2F98qy7tO2GFVojOF9lCudQeleGDxADu9qip7huC0Z31tfNsnOL4O-2Bi0-2=
+FRQgvgRioS8AN-2Bzl6R4dYNIvxVZI5QzkZS92D-2FP9SbN3zOx6V22-2FKKXFeg-2FxTljwGld=
+yxBSnkL3B51JsyqyHMt5Ft-2FRTK" style=3D"display: inline-block; width: 120px;=
+ height: 36px; margin: 4px;"> <img alt=3D"Google Store" height=3D"36" src=
+=3D"https://appboy-images.com/appboy/communication/assets/image_assets/imag=
+es/60335eaf83566879cab564c3/original.png?1613979311" width=3D"120"></a>
+</td>
+		</tr>
+	</tbody>
+</table>
+<br>
+<br>
+<br>
+
+
+<div id=3D"_eoa_div" style=3D"display: none; background-image: url('https:/=
+/VpBM5I1Och.eoapxl.com/VpBM5I1Och/8787921d-778b-4f0e-b374-22b8468cbcb2/P');=
+"></div>
+<img alt=3D"" border=3D"0" height=3D"1" id=3D"_eoa_img" src=3D"https://VpBM=
+5I1Och.eoapxl.com/VpBM5I1Och/8787921d-778b-4f0e-b374-22b8468cbcb2" style=3D=
+"height: 1px !important; width: 1px !important; display: block; margin: 0; =
+padding: 0; border: 0;" title=3D"" width=3D"1">
+</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <!--[if (gte mso 9)|(IE)]>
+            </td>
+            </tr>
+            </table>
+            <![endif]-->
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>
+
+--ea5dfc21b3acd89e80c3eb77cfea5002c38b642fbbb5f43c712c28501b8a--

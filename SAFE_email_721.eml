@@ -1,0 +1,896 @@
+X-GM-THRID: 1827408537905687480
+X-Gmail-Labels: Inbox,Important,Opened,Category Updates
+Delivered-To: azfarali007.aa@gmail.com
+Received: by 2002:a05:6f02:8901:b0:81:a727:4d4e with SMTP id r1csp1601397rci;
+        Sun, 23 Mar 2025 10:56:28 -0700 (PDT)
+X-Google-Smtp-Source: AGHT+IFe7TbJ/E+b7TRBCg/W38/4pNQm2tby/r38uLJxV2UiEGnuPHh8KUCMAn6dwCp6uXT4qnrr
+X-Received: by 2002:a05:6214:1bce:b0:6e8:97d2:9999 with SMTP id 6a1803df08f44-6eb3f32a5femr166925006d6.28.1742752588164;
+        Sun, 23 Mar 2025 10:56:28 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1742752588; cv=none;
+        d=google.com; s=arc-20240605;
+        b=fj4yIWUmKZ44dJZhoRgqB4OMHmBSY/u8zg0a+4RzYWIkXP9pGUGQTwnMvbbjWkrLZX
+         ZzH+jc1OgTzX+WWV4DqLAhqxYeCqcY6aR0VVbOcRqzbda+RCCZmCP7MY1S967StjD1Tz
+         Je8AYnVUtp7qoQN1OxWmoH7zqX5bWluhZxOllcJmoPz5bwi4mvd5YTUhdpn9oIJVNFs2
+         3w/inWnwNgBu0AkZNpMvtQnbiRRBa4n6OXJtjBi3+AZign27WcjedPx53X8g8vXJ7I0v
+         LiQqTosU6KgKB5Tc0/zlIPr3Y5KEMX1HDPXroN5YH1DmxoM17tAj/snqdkNNqEz2OPxJ
+         0vFw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=message-id:to:from:subject:mime-version:date:sender:dkim-signature
+         :dkim-signature;
+        bh=29uQLUaAT35nSZx/cWbtP99mhvDuB2V79MM76VJlx44=;
+        fh=1ghr3/vhIGL7+ytS5gYC2yrxOtO8q7dbhZ8cIHrxcdk=;
+        b=Lcxn55r7ZQLG8wYXV6cmie0NAxZDGtrYnt80MAQKlq3LG6FetdDYAVEe1YDJRT/MNK
+         Y95vLFV+ctPnY1Tyh2wXVvhvfbgFOpK9PVS/rfeTSWMul7PHOOgqanDHf0TfDhhpQwBf
+         wtrp+W3e/IHi8iASEL6uBNgSFp7q/fqBpm8Q4FoNcMLZ9TUVPV/f6NAXsfRKNnDHN9U8
+         kUYv/g2PQVQ4iJKpiaZyiNsUBoGaqYBcUO6DvCx0FUBjahrRSGeFEJRflXDo2Vh1Q8Ns
+         F0rlI+Iwyf+WAyTt1kBsJjfp4sWs4qSY2DOMdZr9iGOxsse35HEIEO7agGY4fTHie03V
+         BSaw==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@notify.docker.com header.s=krs header.b=yD8vNDfN;
+       dkim=pass header.i=@mailgun.org header.s=mg header.b="gzpmd/GX";
+       spf=pass (google.com: domain of bounce+296ddb.5e6ef-azfarali007.aa=gmail.com@notify.docker.com designates 143.55.226.117 as permitted sender) smtp.mailfrom="bounce+296ddb.5e6ef-azfarali007.aa=gmail.com@notify.docker.com";
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=docker.com
+Return-Path: <bounce+296ddb.5e6ef-azfarali007.aa=gmail.com@notify.docker.com>
+Received: from notify.docker.com (notify.docker.com. [143.55.226.117])
+        by mx.google.com with UTF8SMTPS id 6a1803df08f44-6eb3eff3724si61947846d6.206.2025.03.23.10.56.27
+        for <azfarali007.aa@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Sun, 23 Mar 2025 10:56:28 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bounce+296ddb.5e6ef-azfarali007.aa=gmail.com@notify.docker.com designates 143.55.226.117 as permitted sender) client-ip=143.55.226.117;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@notify.docker.com header.s=krs header.b=yD8vNDfN;
+       dkim=pass header.i=@mailgun.org header.s=mg header.b="gzpmd/GX";
+       spf=pass (google.com: domain of bounce+296ddb.5e6ef-azfarali007.aa=gmail.com@notify.docker.com designates 143.55.226.117 as permitted sender) smtp.mailfrom="bounce+296ddb.5e6ef-azfarali007.aa=gmail.com@notify.docker.com";
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=docker.com
+DKIM-Signature: a=rsa-sha256; v=1; c=relaxed/relaxed; d=notify.docker.com; q=dns/txt; s=krs; t=1742752587; x=1742759787;
+ h=Message-Id: To: To: From: From: Subject: Subject: Content-Type: Mime-Version: Date: Sender: Sender: X-Feedback-Id;
+ bh=29uQLUaAT35nSZx/cWbtP99mhvDuB2V79MM76VJlx44=;
+ b=yD8vNDfN4TCULeNhjVspUrcynkAOlZjGhrstlg5nUnXPOBS+2gdRHwibdqcprCUUlCA5MgIavTyj3dBNgUhFZU+EsnnYnSKQKPr920fjGVR6QsSONWQlSmDEFmIpv4CyLcGcfRpwY2tV6wuJqDqVjIgf+7PF1x0GSx7SIpeYc9k=
+DKIM-Signature: a=rsa-sha256; v=1; c=relaxed/relaxed; d=mailgun.org; q=dns/txt; s=mg; t=1742752587; x=1742759787;
+ h=Message-Id: To: To: From: From: Subject: Subject: Content-Type: Mime-Version: Date: Sender: Sender: X-Feedback-Id;
+ bh=29uQLUaAT35nSZx/cWbtP99mhvDuB2V79MM76VJlx44=;
+ b=gzpmd/GXCXyHOe5bnEcvTHrOkMoZdceOJTVklWTJNvSahJucY3p4PcqqqzJwKfXhUBCRF5oZHNSNZqaIbKnOdztWoPMDYeqFBT4FvJ93CNjXAAv8Ht3bQbfkVNG8JItYtaSYPnVjTy/iMWzXwZiQ2G0RD35yKz/ngw6985OOvZU=
+X-Feedback-Id: no-reply@notify.docker.com::571545cff3b9c42fa782f659:mailgun
+X-Mailgun-Sending-Ip: 143.55.226.117
+X-Mailgun-Sending-Ip-Pool-Name: 
+X-Mailgun-Sending-Ip-Pool: 
+X-Mailgun-Sid: WyI4ZWY0ZSIsImF6ZmFyYWxpMDA3LmFhQGdtYWlsLmNvbSIsIjVlNmVmIl0=
+Received: by 3727b7cc931f with HTTP id 67e04b39f9360a49c2c0874c; Sun, 23 Mar 2025
+ 17:56:09 GMT
+Sender: no-reply@notify.docker.com
+Date: Sun, 23 Mar 2025 17:56:09 +0000
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="67f9b0cbd8502240972acb0d814292e0ed656a4f44d9c64f7ddf67f2630a"
+Subject: [Docker] Reset password request
+From: Docker <no-reply@notify.docker.com>
+To: azfarali007.aa@gmail.com
+Message-Id: <20250323175609.1934415dabf5fe1c@notify.docker.com>
+
+--67f9b0cbd8502240972acb0d814292e0ed656a4f44d9c64f7ddf67f2630a
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+
+
+
+
+
+
+   =20
+       =20
+       =20
+           =20
+               =20
+               =20
+
+                   =20
+                   =20
+                       =20
+                           =20
+
+
+                               =20
+                               =20
+                                   =20
+                                       =20
+                                           =20
+                                           =20
+                                               =20
+                                                   =20
+                                                       =20
+                                                           =20
+                                                                 ( https://=
+email.notify.docker.com/c/eJxMycFOxiAMAOCngSNpC6U_Bw5e_vcogzri5sxcXPTpTTx5_=
+nrlkYf5UVESCRM_xK9VGjTBooO0G2d5lGwKkUa2hsjmZyUghkgRhTOUgCWmhNy1GdvAxSV4P65p=
+36Efy9s4w3LsfqvrdX18uvji6Onoed_3fz6r_pieuk0ACaouweuuc_vDr0q_AQAA__9vqTNa )=
+=20
+                                                           =20
+                                                       =20
+                                                   =20
+                                               =20
+                                           =20
+                                           =20
+                                       =20
+                                   =20
+                               =20
+                               =20
+
+                               =20
+                               =20
+                                   =20
+                                       =20
+                                           =20
+                                           =20
+                                               =20
+
+                                                    Hello azfarali!
+
+                                                    We received a request t=
+o update the password for Docker ID: azfarali
+                                                    To reset your password,=
+ click the link below:
+                                                    Reset Password ( https:=
+//email.notify.docker.com/c/eJxMzbFOwzAQANCvcTai89nnNIMHBMqAGChCDGxX55y6SRP=
+kuoH065GYuj_p9Z7ESazE68ZiQ0i7pjp6DOQcUQiWEQyGVreM2joxtAPUUiWPgAQGjW7IQVvr1l=
+irqedDpCg6KAvzUlLc6n4Jo-Q6LOdq8sdSvi_KPCrsFHbTMqT5Dijsrgq7LBcpD6vkFDdlupLCK=
+EWZ5-n9tL99ffLrCvgjI5jf-e3qXj4O66BP--1Joamy51vkzFMCaGpmZWE4c5r-_9XjXwAAAP__=
+ejpJIQ )=20
+                                                    If you did not make thi=
+s request, your email address may have been
+                                                    entered by mistake and =
+you can safely disregard this email. Visit
+                                                    your account settings p=
+age on Docker Hub ( https://email.notify.docker.com/c/eJxMzLFuxCAMANCvgTHCD=
+sZkYOiS_3DAXFBzoUq4Su3XV-p085NeSaRBq9UE7JEJKbLdU1yCl-CjRKagspQCeYPMUDUSy2Zb=
+QofkZpyBKbhlgmX2HqjIVqkqZOPd2UerP1Pp-VOvKfenPdI-xtdt5g-Dq8F1f21vbHCVnPvrHAb=
+XW8do5-O2V5LfKpcczTmeRIx3j6e04z_8TvgXAAD__wWROtw )  to
+                                                    update your information=
+=2E
+                                                    If you have any questio=
+ns or concerns, please contact us at hub-support@docker.com ( mailto:hub-su=
+pport@docker.com ) .
+                                                    Thank you,
+                                                    The Docker Team
+                                               =20
+                                           =20
+                                           =20
+                                       =20
+                                   =20
+                               =20
+                               =20
+
+                               =20
+                               =20
+                                   =20
+                                       =20
+                                       =20
+                                           =20
+                                           =20
+                                               =20
+                                                   =20
+                                                       =20
+                                                           =20
+                                                                =C2=A0
+                                                           =20
+                                                       =20
+                                                   =20
+                                               =20
+                                           =20
+                                           =20
+                                       =20
+                                       =20
+                                   =20
+                               =20
+                               =20
+                               =20
+                               =20
+                                   =20
+                                       =20
+                                       =20
+                                           =20
+                                           =20
+                                               =20
+                                                   =20
+                                                       =20
+                                                           =20
+                                                               =20
+                                                                    This em=
+ail was sent to azfarali007.aa@gmail.com to notify you of an update that wa=
+s made to your Docker Account.
+                                                               =20
+                                                                =C2=A9
+                                                                           =
+ 2025 Docker Inc. ( https://email.notify.docker.com/c/eJxMyzFOxTAMANDTJGNkO=
+3bSDBlYeg83cfgR_RSVigpOj8TE_PR6FUs2vFXMTFlIluwfNWNZmFATbxsad6RoCg3FFjVJxc9K=
+QAKRImZJUAKWyIzSdRsyDJtjeD-uOb5DP9qbnaEdT7_Xx3V9fLr44mh1tN73_Y8drf6s-jP01H0=
+C5KDqGF6fOve__lXpNwAA__-_2jOM )=20
+                                                                3790 El Cam=
+ino Real
+                                                                        #10=
+52, Palo Alto, CA 94306=C2=A0 =C2=A0 =C2=A0
+                                                                        =C2=
+=A0 =C2=A0X ( https://email.notify.docker.com/c/eJxMzDFOxjAMQOHTJBtR7NpNO2R=
+g6T3cxKYRKUUlAsHpEUz__J6-mllnNa8ZEmFi5CX5I0NB0LhTpSJEq82w4L6CWGKVuZpvGSNynH=
+CCxHNcA6wTEXCV3dgUiqP4do1m36Fe5VXvUK7T93yM8f7hpmeHm8PtS_eH7HDTU1p_staH3uEYZ=
+_d3lh-TW3qLMQURR_Hlb_r3PjP-BgAA___adDqV )=20
+                                                                Privacy Pol=
+icy ( https://email.notify.docker.com/c/eJxMzLFuwyAQgOGngS0WnDlwBoYufo_zcZe=
+gktqili336Su1S9b_l76SUaKolexTgISAU7LPXBJPk9MlRU5R2aMsUgLwpBEDymJrBgfoRhh9wu=
+jug7-PIXgstCiqeDbBfa171WsoK39KH3h92Zaf-759m_HDwGxgPs_zbRuYmzyoGZj_423r9SC-b=
+tvaKl-2Z_pR6tSqc2kgMsE9XlTbn31k-A0AAP___6o_aQ )=20
+                                                               =20
+                                                           =20
+                                                       =20
+                                                   =20
+                                               =20
+                                           =20
+                                           =20
+                                       =20
+                                       =20
+                                   =20
+                               =20
+                               =20
+
+                           =20
+                       =20
+                   =20
+                   =20
+
+                   =20
+                   =20
+                       =20
+                           =20
+                               =20
+                                   =20
+                                       =20
+                                   =20
+                               =20
+                           =20
+                       =20
+                   =20
+                   =20
+               =20
+               =20
+           =20
+       =20
+       =20
+           =20
+               =20
+                   =20
+                       =20
+                            =C2=A0
+                       =20
+                   =20
+               =20
+           =20
+       =20
+       =20
+   =20
+
+
+
+
+--67f9b0cbd8502240972acb0d814292e0ed656a4f44d9c64f7ddf67f2630a
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+<!doctype html>
+<html xmlns=3D=E2=80=9Chttp://www.w3.org/1999/xhtml=E2=80=9D xmlns:o=3D=E2=
+=80=9Curn:schemas-microsoft-com:office:office=E2=80=9D
+    xmlns:v=3D=E2=80=9Curn:schemas-microsoft-com:vml=E2=80=9D lang=3D"en-US=
+">
+
+<head>
+    <meta charset=3D"utf-8">
+    <meta content=3D"IE=3Dedge" http-equiv=3D"X-UA-Compatible" />
+    <!--[if gte mso 9]>
+  <xml>
+    <o:OfficeDocumentSettings>
+      <o:AllowPNG/>
+      <o:PixelsPerInch>96</o:PixelsPerInch>
+    </o:OfficeDocumentSettings>
+  </xml><![endif]-->
+
+    <!--Variables-->
+    <title>Docker</title>
+    <style>
+        /* CLIENT-SPECIFIC STYLES */
+        img {
+            -ms-interpolation-mode: bicubic;
+        }
+
+        /* Force IE to smoothly render resized images. */
+        #outlook a {
+            padding: 0;
+        }
+
+        /* Force Outlook 2007 and up to provide a "view in browser" message=
+=2E */
+        table {
+            mso-table-lspace: 0pt;
+            mso-table-rspace: 0pt;
+        }
+
+        /* Remove spacing between tables in Outlook 2007 and up. */
+        .ReadMsgBody {
+            width: 100%;
+        }
+
+        .ExternalClass {
+            width: 100%;
+        }
+
+        /* Force Outlook.com to display emails at full width. */
+        p,
+        a,
+        li,
+        td,
+        blockquote {
+            mso-line-height-rule: exactly;
+        }
+
+        /* Force Outlook to render line heights as they're originally set. =
+*/
+        a[href^=3D"tel"],
+        a[href^=3D"sms"] {
+            color: inherit;
+            cursor: default;
+            text-decoration: none;
+        }
+
+        /* Force mobile devices to inherit declared link styles. */
+        p,
+        a,
+        li,
+        td,
+        body,
+        table,
+        blockquote {
+            -ms-text-size-adjust: 100%;
+            -webkit-text-size-adjust: 100%;
+        }
+
+        /* Prevent Windows- and Webkit-based mobile platforms from changing=
+ declared text sizes. */
+        .ExternalClass,
+        .ExternalClass p,
+        .ExternalClass td,
+        .ExternalClass div,
+        .ExternalClass span,
+        .ExternalClass font {
+            line-height: 100%;
+        }
+
+        /* Force Outlook.com to display line heights normally. */
+        table {
+            border-collapse: collapse;
+        }
+
+        html {
+            -webkit-text-size-adjust: none;
+        }
+
+        #gmailModule,
+        .mobileOnly {
+            display: none !important;
+        }
+
+        /*Hide Full-Width Image on Desktop*/
+        a,
+        a:hover {
+            color: #086DD7;
+            text-decoration: underline;
+        }
+
+        .button a,
+        .button a:hover {
+            color: #ffffff;
+        }
+
+        span.calendar a {
+            color: #FFFFFF;
+            text-decoration: none;
+        }
+
+        a[x-apple-data-detectors] {
+            color: inherit !important;
+            text-decoration: none !important;
+            font-size: inherit !important;
+            font-family: inherit !important;
+            font-weight: inherit !important;
+            line-height: inherit !important;
+        }
+
+        @media only screen and (max-width: 600px) {
+            #bodyTable {
+                width: 100% !important;
+            }
+
+            img {
+                width: auto !important;
+                max-width: 100% !important;
+                height: auto !important;
+            }
+
+            .snippet-logo img {
+                width: 120px !important;
+                height: auto !important;
+            }
+
+            .logoContain img {
+                max-width: 215px !important;
+            }
+
+            img.arrow {
+                width: 14px !important;
+            }
+
+            img.social-icon {
+                width: 32px !important;
+            }
+
+            .tableStack {
+                width: 100% !important;
+            }
+
+            table.buttonStack {
+                margin-top: 10px !important;
+            }
+
+            td.buttonStack {
+                padding-top: 16px !important;
+            }
+
+            .stack {
+                padding-top: 15px !important;
+                padding-right: 5% !important;
+                padding-bottom: 15px !important;
+                padding-left: 5% !important;
+                width: 90% !important;
+            }
+
+            td.mobileTopPad {
+                padding-top: 30px !important;
+            }
+
+            table.mobileTopPad {
+                margin-top: 30px !important;
+            }
+
+            td.insideTopPad {
+                padding-top: 15px !important;
+            }
+
+            table.insideTopPad {
+                margin-top: 15px !important;
+            }
+
+            table.button {
+                width: 100% !important;
+                display: table !important;
+            }
+
+            .desktopPad,
+            #gmailModule {
+                display: none !important;
+            }
+
+            .center img {
+                margin-left: auto !important;
+                margin-right: auto !important;
+            }
+
+            .center table {
+                margin-right: auto;
+                margin-left: auto;
+            }
+
+            .center {
+                text-align: center !important;
+            }
+
+            .noPad {
+                padding-top: 0px !important;
+                padding-right: 0px !important;
+                padding-bottom: 0px !important;
+                padding-left: 0px !important;
+            }
+
+            .noSidePad {
+                padding-right: 0px !important;
+                padding-left: 0px !important;
+            }
+
+            hr {
+                margin-right: auto !important;
+                margin-left: auto !important;
+            }
+
+            .mobileOnly {
+                display: block !important;
+            }
+
+            .soc-img img {
+                width: 25px !important;
+            }
+        }
+    </style>
+    <!--[if gte mso 9]>
+  <style type=3D"text/css">
+    td, p, ul, ol, li {
+      font-family: Arial, sans-serif !important;
+    }
+    ul, ol {
+      margin: 0px 0px 0px 26px !important;
+      padding: 0px !important;
+      list-style-position: inside !important;
+    }
+    table.outlookPadColumn {
+      width: 34% !important;
+      padding-right: 2% !important;
+    }
+    td.outlookFloat {
+      margin-left: 25px;
+      padding-right: 0px !important;
+    }
+  </style>
+  <![endif]-->
+</head>
+
+<body bgcolor=3D"#ffffff" style=3D"background:#ffffff;mso-padding-alt: 0px =
+0px 0px 0px;">
+    <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"present=
+ation"
+        style=3D"background:#ffffff;mso-padding-alt: 0px 0px 0px 0px;" widt=
+h=3D"100%">
+        <!--Body Table Row-->
+        <tr>
+            <td>
+                <!--Body Table-->
+                <table align=3D"center" border=3D"0" cellpadding=3D"0" cell=
+spacing=3D"0" id=3D"bodyTable" role=3D"presentation"
+                    style=3D"margin-left:auto;margin-right:auto;" width=3D"=
+600">
+
+                    <!--Container Row-->
+                    <tr>
+                        <td>
+                            <table border=3D"0" cellpadding=3D"0" cellspaci=
+ng=3D"0" style=3D"border-collapse:collapse;"
+                                width=3D"100%">
+
+
+                                <!--Logo Row-->
+                                <tr>
+                                    <td>
+                                        <table border=3D"0" cellpadding=3D"=
+0" cellspacing=3D"0" role=3D"presentation"
+                                            style=3D"min-width:100%;" width=
+=3D"100%">
+                                            <!--[if gte mso 9]>
+                    <tr>
+                      <td>
+                        <table role=3D"presentation" width=3D"600" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0"
+                               style=3D"width:600px;">
+                    <![endif]-->
+                                            <tr style=3D"white-space:nowrap=
+; background-color:#ffffff;">
+                                                <td class=3D"stack center"
+                                                    style=3D"white-space:no=
+rmal; background-color:#ffffff;padding-top:15px;padding-right: 0px;padding-=
+bottom:15px;padding-left: 0px;">
+                                                    <table role=3D"presenta=
+tion" width=3D"100%" cellspacing=3D"0"
+                                                        cellpadding=3D"0" b=
+order=3D"0">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td class=
+=3D"snippet-logo" align=3D"left"><a
+                                                                        hre=
+f=3D"https://email.notify.docker.com/c/eJxMycFOxiAMAOCngSNpC6U_Bw5e_vcogzri=
+5sxcXPTpTTx5_nrlkYf5UVESCRM_xK9VGjTBooO0G2d5lGwKkUa2hsjmZyUghkgRhTOUgCWmhNy=
+1GdvAxSV4P65p36Efy9s4w3LsfqvrdX18uvji6Onoed_3fz6r_pieuk0ACaouweuuc_vDr0q_AQ=
+AA__9vqTNa"
+                                                                        tar=
+get=3D"_blank"><img
+                                                                           =
+ src=3D"https://web.docker.com/rs/790-SSB-375/images/Docker-logo-520x136.pn=
+g"
+                                                                           =
+ width=3D"130" constrain=3D"true"
+                                                                           =
+ imagepreview=3D"false" border=3D"0" /></a></td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                            <!--[if gte mso 9]>
+                    </table>
+                    </td>
+                    </tr>
+                    <![endif]-->
+                                        </table>
+                                    </td>
+                                </tr>
+                                <!--/Logo Row-->
+
+                                <!--Full Text-->
+                                <tr>
+                                    <td>
+                                        <table border=3D"0" cellpadding=3D"=
+0" cellspacing=3D"0" role=3D"presentation"
+                                            style=3D"min-width:100%;" width=
+=3D"100%">
+                                            <!--[if gte mso 9]>
+                    <tr>
+                      <td>
+                        <table role=3D"presentation" width=3D"600" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"width:600px;">
+                    <![endif]-->
+                                            <tr style=3D"white-space:nowrap=
+; background-color:#ffffff;">
+                                                <td class=3D"stack"
+                                                    style=3D"color:#253138;=
+ text-align:left; font-family: Helvetica, Arial, sans-serif; font-size:16px=
+; line-height: 1.7;white-space:normal; background-color:#ffffff;padding-top=
+:15px;padding-right: 0px;padding-bottom:15px;padding-left: 0px;">
+
+                                                    Hello azfarali!<br /><b=
+r />
+
+                                                    We received a request t=
+o update the password for Docker ID: <strong>azfarali</strong><br />
+                                                    To reset your password,=
+ click the link below:<br /><br />
+                                                    <a href=3D"https://emai=
+l.notify.docker.com/c/eJxMzbFOwzAQANCvcTai89nnNIMHBMqAGChCDGxX55y6SRPkuoH06=
+5GYuj_p9Z7ESazE68ZiQ0i7pjp6DOQcUQiWEQyGVreM2joxtAPUUiWPgAQGjW7IQVvr1lirqedD=
+pCg6KAvzUlLc6n4Jo-Q6LOdq8sdSvi_KPCrsFHbTMqT5Dijsrgq7LBcpD6vkFDdlupLCKEWZ5-n=
+9tL99ffLrCvgjI5jf-e3qXj4O66BP--1Joamy51vkzFMCaGpmZWE4c5r-_9XjXwAAAP__ejpJIQ=
+"
+                                                        style=3D"background=
+: #007bff; padding: 10px 20px; color: #fff; font-size: .85rem; text-decorat=
+ion: none; display: inline-block; cursor: pointer; border-radius: 4px; marg=
+in: 0 auto;"
+                                                        rel=3D"noopener nor=
+eferrer">Reset Password</a><br /><br />
+                                                    If you did not make thi=
+s request, your email address may have been
+                                                    entered by mistake and =
+you can safely disregard this email. Visit
+                                                    your account settings p=
+age on <a
+                                                        href=3D"https://ema=
+il.notify.docker.com/c/eJxMzLFuxCAMANCvgTHCDsZkYOiS_3DAXFBzoUq4Su3XV-p085Ne=
+SaRBq9UE7JEJKbLdU1yCl-CjRKagspQCeYPMUDUSy2ZbQofkZpyBKbhlgmX2HqjIVqkqZOPd2Ue=
+rP1Pp-VOvKfenPdI-xtdt5g-Dq8F1f21vbHCVnPvrHAbXW8do5-O2V5LfKpcczTmeRIx3j6e04z=
+_8TvgXAAD__wWROtw">Docker Hub</a> to
+                                                    update your information=
+=2E<br /><br />
+                                                    If you have any questio=
+ns or concerns, please contact us at <a
+                                                        href=3D"mailto:hub-=
+support@docker.com">hub-support@docker.com</a>.<br /><br />
+                                                    Thank you,<br />
+                                                    The Docker Team
+                                                </td>
+                                            </tr>
+                                            <!--[if gte mso 9]>
+                    </table>
+                    </td>
+                    </tr>
+                    <![endif]-->
+                                        </table>
+                                    </td>
+                                </tr>
+                                <!--/Full Width Text Row-->
+
+                                <!--Divider Row-->
+                                <tr>
+                                    <td>
+                                        <!--Divider-->
+                                        <table border=3D"0" cellpadding=3D"=
+0" cellspacing=3D"0" role=3D"presentation"
+                                            style=3D"min-width:100%;border-=
+collapse:collapse;" width=3D"100%">
+                                            <!--[if gte mso 9]>
+                        <tr>
+                          <td>
+                            <table role=3D"presentation" width=3D"600" bord=
+er=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"width:600px;">
+                        <![endif]-->
+                                            <tr style=3D"white-space:nowrap=
+; background-color:#ffffff;">
+                                                <td class=3D"stack"
+                                                    style=3D"white-space: n=
+ormal; padding-right:0px;padding-left:0px;padding-top:25px;padding-bottom:2=
+5px;">
+                                                    <table align=3D"center"=
+ border=3D"0" cellpadding=3D"0" cellspacing=3D"0"
+                                                        role=3D"presentatio=
+n"
+                                                        style=3D"margin-rig=
+ht:auto;margin-left:auto;border-collapse:separate;"
+                                                        width=3D"100%">
+                                                        <tr>
+                                                            <td height=3D"0=
+"
+                                                                style=3D"fo=
+nt-size:0px; line-height:0px; border-bottom-width:1; border-bottom-color:#E=
+7E8E9; border-bottom-style:solid; font-family: Arial, Helvetica, sans-serif=
+;">
+                                                                &nbsp;
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                            <!--[if gte mso 9]>
+                        </table>
+                        </td>
+                        </tr>
+                        <![endif]-->
+                                        </table>
+                                        <!--/Divider-->
+                                    </td>
+                                </tr>
+                                <!--/Divider Row-->
+                                <!--Footer Row-->
+                                <tr>
+                                    <td>
+                                        <!--Footer-->
+                                        <table border=3D"0" cellpadding=3D"=
+0" cellspacing=3D"0" role=3D"presentation"
+                                            style=3D"min-width:100%;" width=
+=3D"100%">
+                                            <!--[if gte mso 9]>
+                    <tr>
+                      <td>
+                        <table role=3D"presentation" width=3D"600" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"width:600px;">
+                    <![endif]-->
+                                            <tr style=3D"white-space:nowrap=
+; background-color:#ffffff">
+                                                <td class=3D"stack"
+                                                    style=3D"padding-top:5p=
+x;padding-right:0px;padding-bottom:5px;padding-left:0px;background-color:#f=
+fffff;">
+                                                    <table role=3D"presenta=
+tion" width=3D"100%" border=3D"0" cellpadding=3D"0"
+                                                        cellspacing=3D"0" s=
+tyle=3D"min-width: 100%;">
+                                                        <tr>
+                                                            <td align=3D"le=
+ft"
+                                                                style=3D"pa=
+dding-top: 10px; color: #253138; text-align: left; font-family: Arial, Helv=
+etica, sans-serf; font-size: 12px; line-height: 18px;">
+                                                                <div style=
+=3D"margin-bottom:15px;">
+                                                                    <span s=
+tyle=3D"color:#253138;">This email was sent to azfarali007.aa@gmail.com to =
+notify you of an update that was made to your Docker Account.</span>
+                                                                </div>
+                                                                <div style=
+=3D"margin-bottom: 5px;"><span
+                                                                        sty=
+le=3D"color: #253138;"><a
+                                                                           =
+ href=3D"https://email.notify.docker.com/c/eJxMyzFOxTAMANDTJGNkO3bSDBlYeg83=
+cfgR_RSVigpOj8TE_PR6FUs2vFXMTFlIluwfNWNZmFATbxsad6RoCg3FFjVJxc9KQAKRImZJUAK=
+WyIzSdRsyDJtjeD-uOb5DP9qbnaEdT7_Xx3V9fLr44mh1tN73_Y8drf6s-jP01H0C5KDqGF6fOv=
+e__lXpNwAA__-_2jOM"
+                                                                           =
+ style=3D"color: #253138; text-decoration: none;">&copy;
+                                                                           =
+ 2025 Docker Inc.</a></span></div>
+                                                                <div style=
+=3D"margin-bottom: 5px;"><span
+                                                                        sty=
+le=3D"color: #253138;">3790 El Camino Real
+                                                                        #10=
+52, Palo Alto, CA 94306&nbsp; &nbsp; &nbsp;
+                                                                        &nb=
+sp; &nbsp;</span><span
+                                                                        sty=
+le=3D"display: none; font-size: 4px; color: #ffffff;"><a
+                                                                           =
+ href=3D"https://email.notify.docker.com/c/eJxMzDFOxjAMQOHTJBtR7NpNO2Rg6T3c=
+xKYRKUUlAsHpEUz__J6-mllnNa8ZEmFi5CX5I0NB0LhTpSJEq82w4L6CWGKVuZpvGSNynHCCxHN=
+cA6wTEXCV3dgUiqP4do1m36Fe5VXvUK7T93yM8f7hpmeHm8PtS_eH7HDTU1p_staH3uEYZ_d3lh=
+-TW3qLMQURR_Hlb_r3PjP-BgAA___adDqV"
+                                                                           =
+ target=3D"_blank"
+                                                                           =
+ style=3D"color: #ffffff;">X</a></span></div>
+                                                                <div><span =
+style=3D"color: #253138;"><a
+                                                                           =
+ href=3D"https://email.notify.docker.com/c/eJxMzLFuwyAQgOGngS0WnDlwBoYufo_z=
+cZegktqili336Su1S9b_l76SUaKolexTgISAU7LPXBJPk9MlRU5R2aMsUgLwpBEDymJrBgfoRhh=
+9wujug7-PIXgstCiqeDbBfa171WsoK39KH3h92Zaf-759m_HDwGxgPs_zbRuYmzyoGZj_423r9S=
+C-btvaKl-2Z_pR6tSqc2kgMsE9XlTbn31k-A0AAP___6o_aQ"
+                                                                           =
+ style=3D"color: #253138; text-decoration: underline;"
+                                                                           =
+ target=3D"_blank">Privacy Policy</a></span>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                            <!--[if gte mso 9]>
+                    </table>
+                    </td>
+                    </tr>
+                    <![endif]-->
+                                        </table>
+                                        <!--/Footer-->
+                                    </td>
+                                </tr>
+                                <!--/Footer Row-->
+
+                            </table>
+                        </td>
+                    </tr>
+                    <!--/Container Row-->
+
+                    <!--Full Width Image for Gmail to render desktop versio=
+n on mobile-->
+                    <tr>
+                        <td>
+                            <table border=3D"0" cellpadding=3D"0" cellspaci=
+ng=3D"0" class=3D"hide" id=3D"gmailModule"
+                                role=3D"presentation" style=3D"min-width:10=
+0%;" width=3D"100%">
+                                <tr style=3D"white-space:nowrap; background=
+-color:#ffffff">
+                                    <td class=3D"hide" height=3D"1"
+                                        style=3D"min-width:600px;opacity:0;=
+ font-size:0px;line-height:0px;">
+                                        <img height=3D"1" src=3D"#"
+                                            style=3D"min-width: 600px;max-h=
+eight:0px; text-decoration: none; border: none; -ms-interpolation-mode: bic=
+ubic;" />
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <!--/Full Width Image for Gmail to render desktop versi=
+on on mobile-->
+                </table>
+                <!--End Body Table-->
+            </td>
+        </tr>
+        <tr>
+            <td style=3D"padding-top:100px;">
+                <table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" bor=
+der=3D"0" width=3D"100%">
+                    <tr>
+                        <td background=3D"https://web.docker.com/rs/790-SSB=
+-375/images/docker-footer-whale2.png"
+                            style=3D"background-repeat:no-repeat;background=
+-position:center top;background-size:cover;height:90px;">
+                            &nbsp;
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <!--/Body Table Row-->
+    </table>
+<img width=3D"1" height=3D"1" alt=3D"" src=3D"https://email.notify.docker.c=
+om/o/eJwcyVHKwjAMAODTrI8lzZKme-hh8qfJb3FzMETQ0ws-f6OzV4_kvQihMHKTdOtCo1o0w6=
+a2tYbVa6kYOIyGi1KaHQEZVlyLcIUtl20lKjz0Lzi82ELwOJ8z3nmcdvcr23mkq-sn9NJ9AkhWX=
+Qj-D537D18dvwEAAP__1ZspHQ"></body>
+
+</html>
+
+--67f9b0cbd8502240972acb0d814292e0ed656a4f44d9c64f7ddf67f2630a--

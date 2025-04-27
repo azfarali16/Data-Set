@@ -1,0 +1,553 @@
+X-GM-THRID: 1763107623200512082
+X-Gmail-Labels: Inbox,Category Updates,Unread
+Delivered-To: azfarali007.aa@gmail.com
+Received: by 2002:a05:6214:c2:b0:5ee:8eca:efa7 with SMTP id f2csp75339qvs;
+        Thu, 13 Apr 2023 17:00:57 -0700 (PDT)
+X-Google-Smtp-Source: AKy350b7sUgp5uL5RzAujZm9JAdg2cnvlJNjU9nMwKlXRijPgenQF382Bll5ryFg4mgwk9YPGAEt
+X-Received: by 2002:a05:6122:2090:b0:440:1f2f:2848 with SMTP id i16-20020a056122209000b004401f2f2848mr3530560vkd.8.1681430457171;
+        Thu, 13 Apr 2023 17:00:57 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1681430457; cv=none;
+        d=google.com; s=arc-20160816;
+        b=hq0Cf1AwkhbJGsVLDNfDQK7gEhJSeX3JMy+iASlS3gNtr8Sy8rDwa3K8mT98v+/Wk9
+         XiuaDe0mg21f4PtoRl2tdTOj7fAUajCCjNOjRTq0tqJwfPXSd0wnuYoty5KO2hiPuUav
+         3S/0EDJVY/jo2cYX29bCWOappEoT8/3em9jWz/GD+eaxcEcKCqAq4WyQNxQkIdfUk8Yt
+         mNpIVakdoxDySj+/qHTYYGPyDVAX3cV1CzkMbF8IUzJomqUYtAojNRYkE+3its6t9Xqp
+         LPFgL39CK1ClcutgaKLjtvQbqwr59OykA3tLE8UcLOBScvqRQ3ApAJhxklmS8bXgm1ng
+         QwSw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:reply-to:subject:message-id:mime-version:from:date
+         :dkim-signature:dkim-signature;
+        bh=FNPvvm29G0OoZb4zm9RE2POCWVQ4qevXWMl9T6GB/z0=;
+        b=XII6f7L7bi1npTBmtysal+iRJUBKGwm33fndvBX+VC53+G8nqFfxQbWqdhuM6n3jSl
+         kbzroxkK0ccb26EUGRoG76kEiBfT0uLdX8ZVY0e13npqzh15OL18vcSm+Fn7EXyG6iIz
+         HdnbiaieT14zc7DHSoysJ+OrTRIXT11CLGvkCwU96+qWqWb4noNQHivJUgtAKMXzjEC8
+         RjwsZTrl29nRSuOyqXdaHqUEy7cwLtxdmAzwSkNwpj65S7L48bDeCNGY3smoQij81w2j
+         PGCzyU0Uny31c1BrpMhTFFQ+lbXC7ce2iATJ1UME0kbSVdCxvCLfLLYUBTT4y/TkCFTo
+         R7Bg==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gdsc.community.dev header.s=bvy header.b=oqk10iSs;
+       dkim=pass header.i=@sendgrid.info header.s=smtpapi header.b=s91YwrrF;
+       spf=pass (google.com: domain of bounces+16161593-3a24-azfarali007.aa=gmail.com@em656.gdsc.community.dev designates 168.245.18.182 as permitted sender) smtp.mailfrom="bounces+16161593-3a24-azfarali007.aa=gmail.com@em656.gdsc.community.dev"
+Return-Path: <bounces+16161593-3a24-azfarali007.aa=gmail.com@em656.gdsc.community.dev>
+Received: from xvfrknbs.outbound-mail.sendgrid.net (xvfrknbs.outbound-mail.sendgrid.net. [168.245.18.182])
+        by mx.google.com with ESMTPS id d129-20020a1fb487000000b00431abd222ffsi784130vkf.162.2023.04.13.17.00.56
+        for <azfarali007.aa@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Thu, 13 Apr 2023 17:00:57 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bounces+16161593-3a24-azfarali007.aa=gmail.com@em656.gdsc.community.dev designates 168.245.18.182 as permitted sender) client-ip=168.245.18.182;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gdsc.community.dev header.s=bvy header.b=oqk10iSs;
+       dkim=pass header.i=@sendgrid.info header.s=smtpapi header.b=s91YwrrF;
+       spf=pass (google.com: domain of bounces+16161593-3a24-azfarali007.aa=gmail.com@em656.gdsc.community.dev designates 168.245.18.182 as permitted sender) smtp.mailfrom="bounces+16161593-3a24-azfarali007.aa=gmail.com@em656.gdsc.community.dev"
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gdsc.community.dev;
+	h=content-type:from:mime-version:subject:reply-to:x-feedback-id:to:cc:
+	content-type:from:subject:to;
+	s=bvy; bh=FNPvvm29G0OoZb4zm9RE2POCWVQ4qevXWMl9T6GB/z0=;
+	b=oqk10iSsqTb9CztUDiIH779wlMfWoG+g4HHUkToVPLZNNNreO0KfjRSzvpgaYclWx1bs
+	Mi2Vo0wSsPhOSmRixFULEjNLuJlOJR2e+AOi0at6sXsnnQpTlqO2NHOX19qCbbnw4w3hdb
+	HW00O+bTMjaNZveM+LySHPCTIOq2TB/lKjz4wlW8LQXSrIkYMMtzIv81Qwq+DKuz7lXg7V
+	kwsM/OJiZAEZATA4o5Jf524xuisGfgA6GK0LDMESJtu5xoShXGsl3p2TKe8dBH29PYohKA
+	LUDtBdllkySfSD0l7HRYicc8IiVaTBYgs3vuAn/JLyklM/YwLh1jmMc/Dw5Fk45g==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=sendgrid.info;
+	h=content-type:from:mime-version:subject:reply-to:x-feedback-id:to:cc:
+	content-type:from:subject:to;
+	s=smtpapi; bh=FNPvvm29G0OoZb4zm9RE2POCWVQ4qevXWMl9T6GB/z0=;
+	b=s91YwrrFl+1e57ew86P0b83v8xRi69TnPmENUInRekgYpX+tuKYbEGncawqCs13vVTWY
+	OF3wwao+GQLnEp9CqjCF9pi5pX9hMHXTwPTucEtKMl3OgGANjYTjLmHvLJ9VfSdziV3Fh1
+	u4CuhlQ6h4nxH5Tj6yni4KXwiK15ov8+c=
+Received: by filterdrecv-5784594f58-2942q with SMTP id filterdrecv-5784594f58-2942q-1-643897B0-1F
+        2023-04-14 00:00:48.220923809 +0000 UTC m=+4408050.759367011
+Received: from MTYxNjE1OTM (unknown)
+	by geopod-ismtpd-4 (SG) with HTTP
+	id mL_iLsxlSsOceuvgkMRsww
+	Fri, 14 Apr 2023 00:00:48.102 +0000 (UTC)
+Content-Type: multipart/alternative; boundary=a652b1227a2d57857643324b9abaf9a07d4c4f75e91e19561ab8373fd852
+Date: Fri, 14 Apr 2023 00:00:56 +0000 (UTC)
+From: GDSC Event Platform <noreply@gdsc.community.dev>
+Mime-Version: 1.0
+Message-ID: <mL_iLsxlSsOceuvgkMRsww@geopod-ismtpd-4>
+Subject: New National University of Modern Languages (NUML) - Islamabad event:
+ Data Science 101: Navigating Roadmaps, Trends, Tools & Technologies to
+ Transform Your Business
+Reply-To: GDSC Event Platform <noreply@gdsc.community.dev>
+X-Feedback-ID: 16161593:SG
+X-SG-EID: 
+ =?us-ascii?Q?L92cBbLnKzcdBNkQwAYQ+sr1gkgAdysofGN=2FhuKNVQJd0G5iopz4Y0O=2FX9Tovl?=
+ =?us-ascii?Q?Z=2F8SrF=2FwCO1xHfCtgD5LT8L6dJQ9xy+VDdYEsSm?=
+ =?us-ascii?Q?uhpGwKt=2FX=2F+wqab+7zVwTUa27WiTfcHszD28E3Q?=
+ =?us-ascii?Q?KzGBvCcvK3tFW3NoEIuzA0kWXt68l=2FEonTkhgK3?=
+ =?us-ascii?Q?iAhKuJMTrTZFVQL+rzzoLLtC0A+T86K5GD2EJcX?=
+ =?us-ascii?Q?WOj9bNh6l4qLSNJlL+HXu9gFGtl4pf4vHWXEYHn?=
+ =?us-ascii?Q?EUSKp0ISLkaldGO3M2hsg=3D=3D?=
+X-SG-ID: 
+ =?us-ascii?Q?N2C25iY2uzGMFz6rgvQsb8raWjw0ZPf1VmjsCkspi=2FI6OjusMqsQbh1b0Ag1oi?=
+ =?us-ascii?Q?xWHUdAM+aVlmjuv7hxvYfRpLCn2vp+0tJ=2FtLFto?=
+ =?us-ascii?Q?Ad3+ug5SH3n+l1YS0ADGqp4Qnkg?=
+To: azfarali007.aa@gmail.com
+X-Entity-ID: MUf8aKHxItgYcsqRjrDjLA==
+
+--a652b1227a2d57857643324b9abaf9a07d4c4f75e91e19561ab8373fd852
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset=utf-8
+Mime-Version: 1.0
+
+Hi Azfar, Check out our next event:Data Science 101: Navigating Roadmaps, T=
+rends, Tools & Technologies to Transform Your Business
+Date & time: Sun, Apr 16, 2:00 PM (PKT)
+
+Agenda:
+
+
+
+About this event=F0=9F=93=8A Data Science is an exciting and rapidly-evolvi=
+ng field that has become increasingly important for businesses across indus=
+tries. With the exponential growth of data in recent years, there is a grow=
+ing demand for professionals with the skills and knowledge to harness the p=
+ower of data to drive business success.=F0=9F=92=A1 Are you looking to expl=
+ore the field of Data Science? Join us for an exclusive online info session=
+ where we'll provide a comprehensive guide to the fundamentals and potentia=
+l of this cutting-edge field. =F0=9F=9A=80 Our expert speaker will take you=
+ through the latest trends, technologies, and tools that are shaping the in=
+dustry and offer valuable insights and advice on how to navigate the roadma=
+p to success.=F0=9F=94=8D During this session, you'll learn about the key c=
+oncepts and techniques in Data Science, including machine learning, data an=
+alysis, and data visualization. You'll also gain a deeper understanding of =
+the potential applications of Data Science in various industries, from heal=
+thcare and finance to marketing and e-commerce.=F0=9F=92=BB Whether you're =
+just starting out or looking to take your skills to the next level, this se=
+ssion is the perfect opportunity to learn from the best and unlock the powe=
+r of data science! Our expert speaker has years of experience in the indust=
+ry and is eager to share their knowledge and insights with you.=F0=9F=91=A8=
+=E2=80=8D=F0=9F=92=BC Our speaker is an industry leader, academic, and prac=
+titioner who will provide you with valuable insights and advice on how to n=
+avigate the rapidly-evolving landscape of Data Science. You'll have the opp=
+ortunity to network with fellow attendees, ask questions, and gain valuable=
+ insights that will help you take your career in Data Science to the next l=
+evel.=F0=9F=8E=93 Whether you're a recent graduate looking to break into th=
+e field or an experienced professional looking to enhance your skills, this=
+ session will provide you with the knowledge and insights you need to succe=
+ed in the exciting field of Data Science. Don't miss out on this opportunit=
+y to learn from the best and unlock the power of data! Hope to see you ther=
+e!RSVP
+You are receiving this email because you have signed up as a member of a De=
+veloper Student Club. To change your email preferences, visit National Univ=
+ersity of Modern Languages (NUML) - Islamabad. To leave the group, unsubscr=
+ibe below.
+
+
+
+
+
+---
+
+View in browser: https://u16161593.ct.sendgrid.net/ls/click?upn=3D6FylDzOsB=
+jandYrle4FqVZSdv3-2BbZ0ATs1aFPrX0Lwww-2F4aLXFYpI9LpCjVfU0l4hmz39eU0YM5Js-2F=
+w2-2Bq6nI-2FxlQMUYUplu7i5QzuLiCL1PdT-2BcYqk498nzXtXeZToiK6Th_H65ljNg3foEJU6=
+dJQZHMcp3Zdimzb4muCFBEwI-2BtxR7OKIGJ1b2DH2qtBgNRiHoO4dZ13ifMjRkDWXQVzwirQxe=
+YV7gH2pRAPw4FBd33RriKrCW7UWVCmRR4ki0F-2FrCE7k1qIpRQRPK11T147qexHKIKtbs-2BgV=
+CbXflZRAMmvO5iwtyImzJj-2BdcjtqofP1dnpoJ7F7YPi7z55-2BYGZItAV2VbFRxRFrQE3ditc=
+RYeaFG-2FbGNFkFFAGzwxOM0lcA1xuJYCFfXEtRram7e-2Fv61mtJqHCdsR8pwJ-2FhZN6OdQM7=
+fa5YzCHo-2F96RwI30yFSrnV
+
+
+---
+Click here to unsubscribe: https://u16161593.ct.sendgrid.net/ls/click?upn=
+=3DVV2HEC-2Fpe7sihHx9m-2BUmcs-2BdnFkKhwwi5VD5YfGijmo0MZi5SFxDTV8TT5gQPRXR6g=
+8Y1qrYZ2c5aiYngv-2Bh7fDAtyNzJ4-2Bzgo5jIKM-2FyVh-2FK1bLbgmPoM8So64QbJaW3VQfs=
+-2BYq-2FiA9qXeZe3O47NINvPn3qg6t0D-2BCGK6BqhG9a6AYQ2douDzu5VMMKVudXxYV6tX-2F=
+XdswSJEWehgQeZNr1BDWbyBEiOH1gqhxDmmPiQyBQKzwQjFrNqNyjcj4loBpVLc44zjAUbaP-2F=
+zCj5kkzg9-2BGH94XY60CZWIpcYI-3DBsoK_H65ljNg3foEJU6dJQZHMcp3Zdimzb4muCFBEwI-=
+2BtxR7OKIGJ1b2DH2qtBgNRiHoO4dZ13ifMjRkDWXQVzwirQxeYV7gH2pRAPw4FBd33RriKrCW7=
+UWVCmRR4ki0F-2FrCE7k1qIpRQRPK11T147qexHKIKtbs-2BgVCbXflZRAMmvO5qztG6U10Dxv0=
+ers-2FF5pvyaTaJKmdFb1ue6yOiry5D1sAYcDXIjMcDn49KBPbSE07JoTQqvedjfUDSNcpSntFH=
+pwE8e0IIuoSMOEtHqnKXHNi1oj9qr5M46vGvZg-2BgllITPyYEwiF7AXVEcrBzORbt
+
+--a652b1227a2d57857643324b9abaf9a07d4c4f75e91e19561ab8373fd852
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset=utf-8
+Mime-Version: 1.0
+
+
+<html lang=3D"en" dir=3D"ltr" xml:lang=3D"en" xmlns=3D"http://www.w3.org/19=
+99/xhtml"  xmlns:v=3D"urn:schemas-microsoft-com:vml" xmlns:o=3D"urn:schemas=
+-microsoft-com:office:office">
+    <head>
+        <title>New National University of Modern Languages (NUML) - Islamab=
+ad event: Data Science 101: Navigating Roadmaps, Trends, Tools & Technologi=
+es to Transform Your Business </title>
+        <link href=3D"https://fonts.googleapis.com/css?family=3DOpen+Sans:3=
+00italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel=
+=3D"stylesheet" type=3D"text/css">
+        <style type=3D"text/css">
+            a { color: #4285F4; }
+        </style>
+        <!--[if gte mso 9]>
+            <xml>
+                <o:OfficeDocumentSettings>
+                    <o:AllowPNG/>
+                    <o:PixelsPerInch>96</o:PixelsPerInch>
+                </o:OfficeDocumentSettings>
+            </xml>
+        <![endif]-->
+       =20
+    </head>
+
+    <body style=3D"background-color: #F6F7F9; margin:0; padding:0; font-fam=
+ily: 'Open Sans', Arial, sans-serif !important; font-weight: 400; color: #2=
+02124;">
+        <table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D=
+"15">
+            <tr>
+                <td width=3D"100%" align=3D"center" style=3D"background-col=
+or: #F6F7F9;">
+                    <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0"=
+ style=3D"border-bottom-left-radius: 4px; border-bottom-right-radius: 4px; =
+overflow: hidden; min-width: 290px; max-width: 600px;">
+                       =20
+
+
+
+<tr><td>
+    <table width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0">
+        <tbody>
+            <tr>
+               =20
+                <td valign=3D"middle" style=3D"padding: 0 0 15px; font-fami=
+ly: 'Open Sans', Arial, sans-serif !important;">
+                   =20
+                    <a href=3D"https://u16161593.ct.sendgrid.net/ls/click?u=
+pn=3D6FylDzOsBjandYrle4FqVZSdv3-2BbZ0ATs1aFPrX0LwyUnpz6b-2BcnvDvQJuNtdeXTcn=
+r41iC-2Bsm2lDoP7VVuvQNy8FOT6Nr0L79UcPMO0zL4645SxnQNyVmHVqSZUni7SI4zr_H65ljN=
+g3foEJU6dJQZHMcp3Zdimzb4muCFBEwI-2BtxR7OKIGJ1b2DH2qtBgNRiHoO4dZ13ifMjRkDWXQ=
+VzwirQxeYV7gH2pRAPw4FBd33RriKrCW7UWVCmRR4ki0F-2FrCE7k1qIpRQRPK11T147qexHKAp=
+JbfmSIQmK5wD7rH4LtJuplkweQ5i1v8HCwtIOekZpN8ST-2BeaaFkiuzY4BIhea8FPoot1f-2Fv=
+5301R0Dl-2FiJ9suEKGtV8pU1yaNsutgA07A6BMTqdI14frkedw7TfI7h-2FblHKNaFJmevL1Nd=
+8s1xbLCk98GMs6SykrfufkPnes" style=3D"font-size: 12px; color: #6f6f6f !impor=
+tant; padding: 1px 0; text-decoration: none !important;">
+                        Google Developer Student Clubs - National Universit=
+y of Modern Languages (NUML) - Islamabad
+                    </a>
+                   =20
+                </td>
+               =20
+               =20
+               =20
+               =20
+               =20
+                <td align=3D"right" valign=3D"middle" style=3D"padding: 0 0=
+ 15px; font-family: 'Open Sans', Arial, sans-serif !important;">
+                    <a class=3D"hideinbrowser" href=3D"https://u16161593.ct=
+.sendgrid.net/ls/click?upn=3D6FylDzOsBjandYrle4FqVZSdv3-2BbZ0ATs1aFPrX0Lwww=
+-2F4aLXFYpI9LpCjVfU0l4hmz39eU0YM5Js-2Fw2-2Bq6nI-2FxlQMUYUplu7i5QzuLiCL1HnCk=
+BNgFTCAiscj6L87Pst1vr_H65ljNg3foEJU6dJQZHMcp3Zdimzb4muCFBEwI-2BtxR7OKIGJ1b2=
+DH2qtBgNRiHoO4dZ13ifMjRkDWXQVzwirQxeYV7gH2pRAPw4FBd33RriKrCW7UWVCmRR4ki0F-2=
+FrCE7k1qIpRQRPK11T147qexHKApJbfmSIQmK5wD7rH4LtIDIF5D71wLSfuR3JTRXm471OE9j7J=
+0sBTqFJfFxOvixiy8Uh6XyM-2BiutxTnrQecLxkg0z1Y2CvqGF-2FQZ7Fc37RFsrrDT6ZzPMj5V=
+8APGrjDVBkRvmBfXSXjfNIJcziofhOyTdpOPQhtmVyXusIrhRv" style=3D"font-size: 12p=
+x; color: #6f6f6f !important; padding: 1px 0; text-decoration: none !import=
+ant;" >
+                        View in browser
+                    </a>
+                </td>
+               =20
+            </tr>
+        </tbody>
+    </table>
+</td></tr>
+
+
+
+
+
+                       =20
+
+                       =20
+                        <tr>
+                           =20
+<td style=3D"width: 600px; height: 136px; vertical-align: middle; border-bo=
+ttom: 0px solid #F6F7F9;
+
+   =20
+   =20
+         background-image: url(https://res.cloudinary.com/startup-grind/ima=
+ge/upload/c_fill,dpr_2.0,f_auto,g_center,h_135,q_auto:eco,w_600/v1/gcs/plat=
+form-data-dsc/contentbuilder/email_header.png);
+   =20
+   =20
+
+background-color: #fff;  border-top-right-radius: 4px; border-top-left-radi=
+us: 4px;background-size: cover;">
+
+   =20
+   =20
+    <!--[if gte mso 9]>
+        <v:rect xmlns:v=3D"urn:schemas-microsoft-com:vml" fill=3D"true" str=
+oke=3D"false" style=3D"width:600px;height:135px;">
+        <v:fill type=3D"frame" src=3D"https://res.cloudinary.com/startup-gr=
+ind/image/upload/c_fill,dpr_2.0,f_auto,g_center,h_135,q_auto:eco,w_600/v1/g=
+cs/platform-data-dsc/contentbuilder/email_header.png" color=3D"#fff" />
+        <v:textbox inset=3D"0,0,0,0">
+    <![endif]-->
+   =20
+   =20
+
+
+
+                            <table border=3D"0" cellpadding=3D"0" cellspaci=
+ng=3D"20" width=3D"100%" style=3D"width: 100%;">
+                                <tr>
+                                   =20
+                                   =20
+
+    <td style=3D"vertical-align: middle; text-align: center; ">
+        <div style=3D"display: inline-block;">
+           =20
+
+
+   =20
+        <a href=3D"https://u16161593.ct.sendgrid.net/ls/click?upn=3D6FylDzO=
+sBjandYrle4FqVZSdv3-2BbZ0ATs1aFPrX0LwyUnpz6b-2BcnvDvQJuNtdeXTcnr41iC-2Bsm2l=
+DoP7VVuvQNy8FOT6Nr0L79UcPMO0zL4645SxnQNyVmHVqSZUni7SfBA3_H65ljNg3foEJU6dJQZ=
+HMcp3Zdimzb4muCFBEwI-2BtxR7OKIGJ1b2DH2qtBgNRiHoO4dZ13ifMjRkDWXQVzwirQxeYV7g=
+H2pRAPw4FBd33RriKrCW7UWVCmRR4ki0F-2FrCE7k1qIpRQRPK11T147qexHKApJbfmSIQmK5wD=
+7rH4LtKHpPgFVQu-2B8z3w9SslQMTJcuECqFD-2BuA1aj-2FBH5upm2zhJALh4WdL3fKtXdWmMX=
+11rtTB2NZMuaU7ROAoMyE51-2FRCM756M0bocS1swSGmPDfmAho-2BnKTe52WSnv2b6dxyXcb7A=
+Vby9loLeF9AKbwbo" style=3D"text-align: center; display: block;">
+            <img src=3D"https://res.cloudinary.com/startup-grind/image/uplo=
+ad/c_fit,dpr_2.0,f_auto,g_center,h_100,q_auto:good,w_500/v1/gcs/platform-da=
+ta-dsc/contentbuilder/logo_dark_stacked_ziDh4mP.png" alt=3D"Google Develope=
+r Student Clubs" border=3D"0" height=3D"50">
+        </a>
+   =20
+
+
+           =20
+        </div>
+    </td>
+
+
+                                </tr>
+                            </table>
+
+                               =20
+    <!--[if gte mso 9]>
+        </v:textbox>
+        </v:rect>
+    <![endif]-->
+   =20
+</td>
+
+                        </tr>
+
+                       =20
+
+                       =20
+    <tr style=3D"background-color: #fff;"><td><table width=3D"100%" border=
+=3D"0" cellPadding=3D"0" cellSpacing=3D"0"><tbody><tr><td><table width=3D"1=
+00%" border=3D"0" cellPadding=3D"0" cellSpacing=3D"0"><tbody><tr><td><table=
+ width=3D"100%" border=3D"0" cellPadding=3D"0" cellSpacing=3D"0"><tbody><tr=
+><td><table width=3D"100%" style=3D"background:#fff" border=3D"0" cellPaddi=
+ng=3D"0" cellSpacing=3D"0"><tbody><tr><td width=3D"100%" style=3D"font-size=
+:16px;line-height:1.5em;padding:0 30px"><br /><span style=3D"font-size:15px=
+">Hi Azfar, <br/></span><br /><strong><span style=3D"font-size:18px">Check =
+out our next event:</span></strong><br /><strong><span style=3D"font-size:1=
+8px">Data Science 101: Navigating Roadmaps, Trends, Tools & Technologies to=
+ Transform Your Business</span></strong><br /><br /></td></tr></tbody></tab=
+le><table style=3D"margin-bottom:30px;margin-top:30px" border=3D"0" cellPad=
+ding=3D"0" cellSpacing=3D"0" width=3D"100%"><tbody><tr><td style=3D"padding=
+:5px 7px 5px 30px;text-align:center;vertical-align:top;width:40px" width=3D=
+"40"><img alt=3D"" src=3D"https://res.cloudinary.com/startup-grind/image/up=
+load/c_fill,dpr_2,f_auto,g_center,q_auto:good/v1/gcs/platform-data-dsc/cont=
+entbuilder/Date.png" style=3D"border:0;max-height:38px;max-width:38px"/></t=
+d><td style=3D"font-size:19px;padding:5px;padding-right:30px"><table border=
+=3D"0" cellPadding=3D"0" cellSpacing=3D"0" width=3D"100%"><tbody><tr><td><s=
+pan><span style=3D"font-size:15px">Date &amp; time</span><br /></span></td>=
+</tr><tr><td style=3D"font-size:16px;padding-bottom:10px">Sun, Apr 16, 2:00=
+ PM (PKT)<p style=3D"font-size:12px;color:#666;padding-top:5px;margin:0">Ad=
+d to  <a href=3D"https://u16161593.ct.sendgrid.net/ls/click?upn=3D6FylDzOsB=
+jandYrle4FqVcj-2FGqDuEYpjJPwK5iiSaRKxCmpiL07iNWQMqk7TMqSall4hjsI6qyQHw2Nvjz=
+fL22bAgOeJT4UpDrFD46T04WglYgEhPdluSCfpfxu9E-2Bd5SXjlsDLsF53ijtzGHIWGYT0eyQz=
+rTXR83k89haHg4QodNSmPL2EilLHQDId-2BjLhBdeWE9EbiZqyrSBpsUntodjsWVmsMJD-2Flom=
+tO9e8sGdlIO2XgkO49ROnghwucb2SkA4ZhNW5Vb3jd84zpeYceqURvUpekjwmbx823vkbpKCmgH=
+HhO-2BanQn3fOhZ3m58Wf6e1eVTBz1Ee67sXX-2FoMipewEC3AlreYy1SVH-2FPPkvIIMgUacSR=
+4eJp1AM9m8l4emponGBPGTHdUu6MyCQst3-2FyOpNRjCpA78ryBpXBYS1dQLyZHZCHf1FvHRi76=
+HYvQI72dX6yDsxo4yCvzxlXsvo5ehYiIzqfHb-2FKyhr6Vi4m-2Bnspxz5aHAwvMnonMcy8qF3k=
+2eloAgJDZBdNJ9n868paSUsSb-2F96YHHF8ZHaceLF430lNnLRbFs-2FVFuFz7qKZVDaZIHqnjl=
+qxNsCZ3n6IsJ3nHCZwqVfUGH1656LEi0XEuU0C8zwU7YFyBgjnjhiIQfWw14BoxHM2n1e-2F69x=
+CuXyu8ZwVW0zlqVjpmKnWsqJK3hyic0yREn-2BwflQCWDQeEW2Xf2XvuWdz7kX4r8jiGwxQbMFI=
+HPsdTgKjBp-2Fc8Gj0UrO-2BpiUca-2B9ad53IR0lmmVPio99UkOt-2FlJONH-2F7qfLT5wykFJ=
+HJUG-2BiGO5KRW-2FmU-3Dvs8G_H65ljNg3foEJU6dJQZHMcp3Zdimzb4muCFBEwI-2BtxR7OKI=
+GJ1b2DH2qtBgNRiHoO4dZ13ifMjRkDWXQVzwirQxeYV7gH2pRAPw4FBd33RriKrCW7UWVCmRR4k=
+i0F-2FrCE7k1qIpRQRPK11T147qexHKApJbfmSIQmK5wD7rH4LtJlrAftKJijPWY1ilT8F3vDUk=
+utJ5PJZZOKklfxldfKlJCadF93CvodwbuXsY4-2F4LzNiwymZVnR8QBvxnOkqLzH5blOJrhA1sf=
+ZZ3g6xj6eHZzjKlNeej-2FZ-2FT7MjOsZKC1KTYKWPwUOWI2NsPzek096" style=3D"color:#=
+4285F4">Google</a> =C2=B7 <a href=3D"https://u16161593.ct.sendgrid.net/ls/c=
+lick?upn=3D6FylDzOsBjandYrle4FqVZSdv3-2BbZ0ATs1aFPrX0LwyFaYpaLWG9TYw3Ef7enr=
+CISWSP-2BvR8lh5Wx4EsbwtKlg-3D-3DpypB_H65ljNg3foEJU6dJQZHMcp3Zdimzb4muCFBEwI=
+-2BtxR7OKIGJ1b2DH2qtBgNRiHoO4dZ13ifMjRkDWXQVzwirQxeYV7gH2pRAPw4FBd33RriKrCW=
+7UWVCmRR4ki0F-2FrCE7k1qIpRQRPK11T147qexHKApJbfmSIQmK5wD7rH4LtIxgT45gAOLyVdD=
+VrTJC4WjD9IDSkhNTgw3i-2F9R2mqhSkjA1EeNEL1lnry-2F9geV4ORkRn7BssqcQ-2FSC5dFs6=
+bR0-2BJIWOAw-2FiwMNHBQtRVr3-2BzXTvVGq0CQkUJusBce5Yf-2B2S1G5fflhGbzj-2BcYd6f=
+r8" style=3D"color:#4285F4">Outlook</a> =C2=B7 <a href=3D"https://u16161593=
+.ct.sendgrid.net/ls/click?upn=3D6FylDzOsBjandYrle4FqVZSdv3-2BbZ0ATs1aFPrX0L=
+wyFaYpaLWG9TYw3Ef7enrCISWSP-2BvR8lh5Wx4EsbwtKlg-3D-3DtkdI_H65ljNg3foEJU6dJQ=
+ZHMcp3Zdimzb4muCFBEwI-2BtxR7OKIGJ1b2DH2qtBgNRiHoO4dZ13ifMjRkDWXQVzwirQxeYV7=
+gH2pRAPw4FBd33RriKrCW7UWVCmRR4ki0F-2FrCE7k1qIpRQRPK11T147qexHKApJbfmSIQmK5w=
+D7rH4LtKdfWetuCNqFBSDeVQ8WltFnNtTlcPTUPTe4Is4fTT4K1Fzp63zyXt2PKonO3DvokpXar=
+NIG6eCAXXRJJOAMhkQcI3Lsbhow-2BDtDRyTs8t8nI9897-2Bt8pGWlFJbmgtu8SiJq8HaPhSn3=
+qiPz5q-2BWis-2B" style=3D"color:#4285F4">iCal</a> =C2=B7 <a href=3D"https:/=
+/u16161593.ct.sendgrid.net/ls/click?upn=3DVV2HEC-2Fpe7sihHx9m-2BUmcmOW1cGbj=
+1vhu2Kflt26PDOTq7TMR7VbWvu-2BlgE8uDbYDn1-2BpvYicofvNSV-2BqDu78Y7-2B6qOP-2FW=
+3qGwyIDdEow88lsRKJBhj8RGTrCs-2BA0DCBRELO54v-2FSjO7UhRtM1KP5t-2BTX40k5f45X4u=
+49jwJI5CVQGzkOK7nLBtij6gYFhFYccVG72zKbB40iGFs4TBxDIdX4SCQfqz2BkKW7UZO-2Bi3L=
+SUmaMFtmngYQWMgaRhW7-2B8HpVk7qL36GITaha9041427Y-2ByywdmXmO2hg5Uh07x2wehPQpe=
+se7tHdT9smEskRzplNFbrpJxbfKrEpm13YxgtoVVDQ6OhFzKYYp-2Be8MEg5u9KTCJGqcxEZKKe=
+aEMnuAnCFLYe0QD-2Fe8TEs6xBW3EIf9qTrX-2BHBmOl5VVJHCH899oXSFOgsfGHdfRsyUmB-2F=
+67fAEj4oiKxhPu-2FOzuDdvwVuHA6GnxRTQduZ44M0JA0OVn0Qp89IPKS4vBre60QI8hIAD5z8F=
+P8e3C2Hk63eN5RdXWCNymObb22hsCKxJ5s6oZD9QPnWZnrt2KmmqqiYGoCOoHIz61Ko5SaggxFb=
+Mj0S8zcAKma580f11Yp1lYaq7MtaZJlJIXLnIvWmFUK-2BP-2BagUnU-2FjfoHQ6cCj-2F9Kber=
+otH-2BwijCcDJEPr8sC9iJ4gGjP0-2B-2BEkDKTyeah7T54yeL3Z6AvWloBsHuG-2FH15PGTFo1=
+c-2FH4hkFZonQ-2FjEJsi9w-2BZPvRC9cpJ9BGTfMhK2BjjqA5c8-2F5HkRo2hMt0Kg-3D-3Ddu=
+8w_H65ljNg3foEJU6dJQZHMcp3Zdimzb4muCFBEwI-2BtxR7OKIGJ1b2DH2qtBgNRiHoO4dZ13i=
+fMjRkDWXQVzwirQxeYV7gH2pRAPw4FBd33RriKrCW7UWVCmRR4ki0F-2FrCE7k1qIpRQRPK11T1=
+47qexHKApJbfmSIQmK5wD7rH4LtI34HRqNoJ9GEnTvh-2BtEFQv-2BkHFIwptQpbMmhxhf56-2B=
+2EtQYdLrN7U0WfvHBZ3YvGWXJHXurMEys-2FiBRSxBxdKlfpiPqaLPmd1zcOIa7Q176obJpK1kr=
+Al-2FMMY9wmzj0Sl8pZzfdEUMUrOALw1DFcGe" style=3D"color:#4285F4">Yahoo</a></p=
+></td></tr></tbody></table></td></tr></tbody></table><table width=3D"100%" =
+style=3D"background:#fff" border=3D"0" cellPadding=3D"0" cellSpacing=3D"0">=
+<tbody><tr><td width=3D"100%" style=3D"font-size:16px;line-height:1.5em;pad=
+ding:0 30px"><strong><span style=3D"font-size:18px">About this event</span>=
+</strong><br /><br /><span style=3D"font-size:15px"><p>=F0=9F=93=8A Data Sc=
+ience is an exciting and rapidly-evolving field that has become increasingl=
+y important for businesses across industries. With the exponential growth o=
+f data in recent years, there is a growing demand for professionals with th=
+e skills and knowledge to harness the power of data to drive business succe=
+ss.</p><p>=F0=9F=92=A1 Are you looking to explore the field of Data Science=
+? Join us for an exclusive online info session where we'll provide a compre=
+hensive guide to the fundamentals and potential of this cutting-edge field.=
+ =F0=9F=9A=80 Our expert speaker will take you through the latest trends, t=
+echnologies, and tools that are shaping the industry and offer valuable ins=
+ights and advice on how to navigate the roadmap to success.</p><p>=F0=9F=94=
+=8D During this session, you'll learn about the key concepts and techniques=
+ in Data Science, including machine learning, data analysis, and data visua=
+lization. You'll also gain a deeper understanding of the potential applicat=
+ions of Data Science in various industries, from healthcare and finance to =
+marketing and e-commerce.</p><p>=F0=9F=92=BB Whether you're just starting o=
+ut or looking to take your skills to the next level, this session is the pe=
+rfect opportunity to learn from the best and unlock the power of data scien=
+ce! Our expert speaker has years of experience in the industry and is eager=
+ to share their knowledge and insights with you.</p><p>=F0=9F=91=A8=E2=80=
+=8D=F0=9F=92=BC Our speaker is an industry leader, academic, and practition=
+er who will provide you with valuable insights and advice on how to navigat=
+e the rapidly-evolving landscape of Data Science. You'll have the opportuni=
+ty to network with fellow attendees, ask questions, and gain valuable insig=
+hts that will help you take your career in Data Science to the next level.<=
+/p><p>=F0=9F=8E=93 Whether you're a recent graduate looking to break into t=
+he field or an experienced professional looking to enhance your skills, thi=
+s session will provide you with the knowledge and insights you need to succ=
+eed in the exciting field of Data Science. Don't miss out on this opportuni=
+ty to learn from the best and unlock the power of data!</p> </span><br /><b=
+r /><span style=3D"font-size:15px">Hope to see you there!</span><br /><span=
+ style=3D"font-size:15px"><div style=3D"display:block;text-align:center;mar=
+gin:20px"><a style=3D"background-color:#1a73e8;padding:15px 20px;text-decor=
+ation:none;color:#fff;border-radius:4px;display:inline-block;font-size:14px=
+;font-weight:500" href=3D"https://u16161593.ct.sendgrid.net/ls/click?upn=3D=
+6FylDzOsBjandYrle4FqVZSdv3-2BbZ0ATs1aFPrX0LwwZmWIHD22a-2BZj4cgofXJY58LTbSIe=
+cdvAy5TUJhyc9yKAcmxp1YzGw2-2F7YRQaYbVa8Sw-2FZq-2FcyPyKka5l-2FVJGkMBLuQpr1nq=
+U4rT2RSULKuVg-2B7DaeRFvyfgHPHFI3TiSj7ySjGzEySwcgXNLHafoxChIUKnAb7XYf8AwnbSM=
+XP6Dv5vAx7pyT163IpRs39YY7cUNVaiyJbw0l8y0fFEoAxcGmUVu6JKh0WL7hZtej-2Bg-2BYHU=
+enuroRDswiQqRcshp1Zr9UAHLNtthaRsXDVtZtT1I3Pg5mpHCeW7h6Ye7JNA-3D-3DIk44_H65l=
+jNg3foEJU6dJQZHMcp3Zdimzb4muCFBEwI-2BtxR7OKIGJ1b2DH2qtBgNRiHoO4dZ13ifMjRkDW=
+XQVzwirQxeYV7gH2pRAPw4FBd33RriKrCW7UWVCmRR4ki0F-2FrCE7k1qIpRQRPK11T147qexHK=
+ApJbfmSIQmK5wD7rH4LtJUfqC2AqBJZhf0PKAFj-2FX-2BUoQ4gTrLt6MyVk6-2FwlTZGZfXweC=
+8TjgUGnKv07DK4h7QQjpY5t-2FayqyXvPiWJ-2BQNj4vdxlFZ4JpUC1BxoRB2YY0JKnJubkg9Ny=
+QzyF-2FmpEhFDtR51sUI4CwPUtyCUb6P">RSVP</a></div></span><br /></td></tr></tb=
+ody></table><table width=3D"100%" style=3D"background:#fff" border=3D"0" ce=
+llPadding=3D"0" cellSpacing=3D"0"><tbody><tr><td width=3D"100%" style=3D"fo=
+nt-size:16px;line-height:1.5em;padding:0 30px"><br /><span style=3D"font-si=
+ze:12px">You are receiving this email because you have signed up as a membe=
+r of a Developer Student Club. To change your email preferences, visit <a s=
+tyle=3D"color:#4285F4" href=3D"https://u16161593.ct.sendgrid.net/ls/click?u=
+pn=3D6FylDzOsBjandYrle4FqVZSdv3-2BbZ0ATs1aFPrX0LwyUnpz6b-2BcnvDvQJuNtdeXTcn=
+r41iC-2Bsm2lDoP7VVuvQNy8FOT6Nr0L79UcPMO0zL4645SxnQNyVmHVqSZUni7SKFpo_H65ljN=
+g3foEJU6dJQZHMcp3Zdimzb4muCFBEwI-2BtxR7OKIGJ1b2DH2qtBgNRiHoO4dZ13ifMjRkDWXQ=
+VzwirQxeYV7gH2pRAPw4FBd33RriKrCW7UWVCmRR4ki0F-2FrCE7k1qIpRQRPK11T147qexHKAp=
+JbfmSIQmK5wD7rH4LtKk4kbA3tm221HuVU-2B-2B-2BlbPZB8Ufo6XOvn5N-2FP6Ab0NYZHSd-2=
+B-2Bx8ciST0kpaUthNXxO7r79k1kmzgl5EVCHadNhJLc4zFwMucqZ12HE2cFfpnmkCWbuDM7xoZ=
+zyZ-2B3zNe-2FzPCiEPhGIBW8a0YuZNIGu">National University of Modern Languages=
+ (NUML) - Islamabad</a></span><span style=3D"font-size:10px">. </span><span=
+ style=3D"font-size:12px">To leave the group, unsubscribe below.</span><br =
+/><br /></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbo=
+dy></table></td></tr></tbody></table></td></tr>
+
+
+                       =20
+
+
+    <tr>
+        <td>
+            <table width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacin=
+g=3D"0">
+                <tr>
+                    <td align=3D"center" style=3D"background-color: #ffffff=
+; border-top: 1px solid #F6F7F9; padding: 40px 0 40px; font-size: 13px; col=
+or: #7e8890;">
+                       =20
+
+
+   =20
+        <a href=3D"https://u16161593.ct.sendgrid.net/ls/click?upn=3D6FylDzO=
+sBjandYrle4FqVZSdv3-2BbZ0ATs1aFPrX0Lwzg9C4VAJP20noOG84jTS0mH9SC_H65ljNg3foE=
+JU6dJQZHMcp3Zdimzb4muCFBEwI-2BtxR7OKIGJ1b2DH2qtBgNRiHoO4dZ13ifMjRkDWXQVzwir=
+QxeYV7gH2pRAPw4FBd33RriKrCW7UWVCmRR4ki0F-2FrCE7k1qIpRQRPK11T147qexHKApJbfmS=
+IQmK5wD7rH4LtJnz5THCGSatvj8RdoB-2BRmMMtE2qDZiBRHNHmRt-2F05f-2B3nKdkGlovafVw=
+lDrwXt6J8cwn96gGGf7m0JxdpNEQk1jG0eG6QqyTvwemhjjymX5zW5fi126l7uJS-2FH7iRZVTp=
+yIkDBIenuzNFgOcNoR7xl"><img height=3D"30" src=3D"https://res.cloudinary.com=
+/startup-grind/image/upload/c_fit,dpr_2.0,f_auto,g_center,h_60,q_auto:good,=
+w_500/v1/gcs/platform-data-dsc/contentbuilder/logo_dark_horizontal_WVttpzD.=
+png" border=3D"0"></a>
+   =20
+
+
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+
+
+
+
+                       =20
+
+                       =20
+                    </table>
+                </td>
+            </tr>
+        </table>
+   =20
+<div style=3D"text-align: center; font-size: 13px; padding-bottom: 20px;">
+    <a href=3D"https://u16161593.ct.sendgrid.net/ls/click?upn=3DVV2HEC-2Fpe=
+7sihHx9m-2BUmcs-2BdnFkKhwwi5VD5YfGijmo0MZi5SFxDTV8TT5gQPRXR6g8Y1qrYZ2c5aiYn=
+gv-2Bh7fDAtyNzJ4-2Bzgo5jIKM-2FyVh-2FK1bLbgmPoM8So64QbJaW3VQfs-2BYq-2FiA9qXe=
+Ze3O47NINvPn3qg6t0D-2BCGK6BqhG9a6AYQ2douDzu5VMMKVudXxYV6tX-2FXdswSJEWehgQeZ=
+Nr1BDWbyBEiOH1gqhxDmmPiQyBQKzwQjFrNqNyjcj4WduP3z9gVqi5LzNOqvXx4w-3D-3DJvZC_=
+H65ljNg3foEJU6dJQZHMcp3Zdimzb4muCFBEwI-2BtxR7OKIGJ1b2DH2qtBgNRiHoO4dZ13ifMj=
+RkDWXQVzwirQxeYV7gH2pRAPw4FBd33RriKrCW7UWVCmRR4ki0F-2FrCE7k1qIpRQRPK11T147q=
+exHKApJbfmSIQmK5wD7rH4LtIasSNLhc61e1s3f8brCmeOrlIKFSKa0k6IrEd2MEvnsfrDI3ijS=
+ZU4VqiRmesHceFGtVQMX2t1j1FCRt2uaB47q2nS1jjfSlFRqtuVvhHvI20HWM-2FvqdUSV647AQ=
+l-2F8CHivxBApgD7i7iScdpYJoLW" style=3D"color: #888888">Unsubscribe</a>
+</div>
+<img src=3D"https://u16161593.ct.sendgrid.net/wf/open?upn=3DI2ZneDYMm30bX-2=
+BRxYz82EqVmWgovkXO1mHRl89j0THzy4lAu-2BMXnVm-2FvaXHCyt5nVWdbxNiypHX7kr-2BOhK=
+bQ8G6T6vwHaNkVOsLVnInDIdjb9ySGG1fR2wE8TiRxuQAq72yxjEWv9wIhsYOr1Z-2FrKGDJ36a=
+l-2BqVAiv5HVnapxkrZ55y8oY2iP1aGmUlqZNHtZTAImJDoYQpv-2BMvj3Kc6ez8LLmg5F-2FVl=
+efJE-2FPTWjvMoNJOaLLvQS5JscsoefLOY04uwny3ZjJoFHfShwPtO71oLCTfeZelZus9PL6sLE=
+iBEtMxUiXGq-2BivNbA2Kk-2BnB" alt=3D"" width=3D"1" height=3D"1" border=3D"0"=
+ style=3D"height:1px !important;width:1px !important;border-width:0 !import=
+ant;margin-top:0 !important;margin-bottom:0 !important;margin-right:0 !impo=
+rtant;margin-left:0 !important;padding-top:0 !important;padding-bottom:0 !i=
+mportant;padding-right:0 !important;padding-left:0 !important;"/></body>
+</html>
+
+--a652b1227a2d57857643324b9abaf9a07d4c4f75e91e19561ab8373fd852--

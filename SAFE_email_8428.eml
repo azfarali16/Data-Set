@@ -1,0 +1,1819 @@
+X-GM-THRID: 1731589431257093464
+X-Gmail-Labels: Inbox,Category Promotions,Unread
+Delivered-To: azfarali007.aa@gmail.com
+Received: by 2002:a0c:a78a:0:0:0:0:0 with SMTP id v10csp5356531qva;
+        Sat, 30 Apr 2022 19:32:47 -0700 (PDT)
+X-Google-Smtp-Source: ABdhPJwECbuNBibBk3DjU3/o1EQ1GOPS0s+x29ja65Nv/bA7KeQrfV+7WvN88pm85ySWgQRtlR6x
+X-Received: by 2002:a05:620a:6c8:b0:69c:7adc:7370 with SMTP id 8-20020a05620a06c800b0069c7adc7370mr4435914qky.49.1651372367282;
+        Sat, 30 Apr 2022 19:32:47 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1651372367; cv=none;
+        d=google.com; s=arc-20160816;
+        b=Az3FMiHb6ibpzNyI2I755vJdsuqoFWDTbmQioozqAZZnHHOcQyfyL9uB+KDNtmgON6
+         JkpFLOyYLYCzBZWOStjLiQfCCJam/pWaurYgdxp/dd3EFVPsO4DJstc0OIBcJJYQodej
+         hcue1UO0pBxzSbFAuteJ914/PJo0wNHnzSHMS+2AoqG55MDYKoVIPGG956kdXp1ooKxE
+         QTtvc6rZK2ui8GKgazw5Hsyg8TfkLt4JzsUaCvFqeB7Snj4AnrWdxqyJxdhM03UnfLj+
+         1dI75qm3KCSJYtrmBoE8qqpviVc2OVyrEeiE//Ksr955QZiWXN1zT/rjG6vNGzx7MNPX
+         nfEA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=message-id:date:list-unsubscribe:subject:to:from:mime-version
+         :dkim-signature;
+        bh=rkG0hXk2ZDEmBUgijiKm69y4wzh8zfrtd2YkAQfAQGY=;
+        b=nyTzOa0d9loSlC37rCTo758gdRTzy8Wpe8+XTXtPtkPXJxt+aSDJXsg9wCAWaHO6za
+         pe/EwaW5XqRp2VmtuaR0lSlZeJXcekH//gUC0XqJgp4VF7e95xxAQQ4FHqBPHLgIR7y3
+         mQMcV9nCC31NvTaMvTAIaL+brwjGQFt8xqMedPKdlhx/mapTuy8UnyRoGtVC3UleUOAQ
+         A/iqIHASl/c6VhAXvvV8YAYMFc9z7szKkWCbcTjtm0kODaKWqf0MGlc07pDGVCxlVVRb
+         yjs+ux9fKtwMNYc/+s4lLP1lk1v2JWCwC/BL4T5u6KzPVBaniwkNGyNOQOrABUaEMRir
+         /yzA==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@quora.com header.s=pigeon header.b=mwU6ni2E;
+       spf=pass (google.com: domain of noreply@quora.com designates 52.71.63.89 as permitted sender) smtp.mailfrom=noreply@quora.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=quora.com
+Return-Path: <noreply@quora.com>
+Received: from o10.pigeon.quora.com (o10.pigeon.quora.com. [52.71.63.89])
+        by mx.google.com with ESMTPS id h10-20020a05620a284a00b0069f5b64f369si4670122qkp.81.2022.04.30.19.32.47
+        for <azfarali007.aa@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Sat, 30 Apr 2022 19:32:47 -0700 (PDT)
+Received-SPF: pass (google.com: domain of noreply@quora.com designates 52.71.63.89 as permitted sender) client-ip=52.71.63.89;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@quora.com header.s=pigeon header.b=mwU6ni2E;
+       spf=pass (google.com: domain of noreply@quora.com designates 52.71.63.89 as permitted sender) smtp.mailfrom=noreply@quora.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=quora.com
+Received: 
+	by pigeon-at-10045 (OpenSMTPD) with ESMTP id b334e8c1
+	for <azfarali007.aa@gmail.com>;
+	Sun, 1 May 2022 02:32:45 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; d=quora.com; h=
+	content-type:mime-version:from:to:subject:list-unsubscribe:date
+	:message-id; s=pigeon; bh=+GyRAa14a1f8qsUOClsQ8ONQxSE=; b=mwU6ni
+	2E/HlXKf9mcxrq3Ypd6PbcsrG4t2weWuItPKDNULiDFQrG/MioAuOcWxioeXgl1z
+	9Sdp9EfNGYCd/fbNZAC/1zHQrOleBmPuZNUlW+Kgkt+Aa1DM0RINWDGNab0obSxa
+	7viWkkO5k1OBKVtyUQZ09MzU8IKbK/kQr02QjIU8Ma6dH9PVRp0NemALk1OD4BjD
+	7ZH8kIsLkxul5TqeNAwUhs+PV7mjGKuJx2208sKs2vSTxc67joc2z7VKpM8mkQ6k
+	zD4LoXczR0o/b2ZMyRmb8sDdrjCQD+M0JGK/izZl7xS1oYkxUNH1/MAoH4PAvVlI
+	UgX7Es/79khHcACw==
+Content-Type: multipart/alternative;
+ boundary="===============8858095052300144830=="
+MIME-Version: 1.0
+From: Quora <curiosity-noreply@quora.com>
+To: azfarali007.aa@gmail.com
+Subject: =?utf-8?q?More_related_to_=22How_is_the_display_of_45=25_NTSC=2C_and_should_?=
+ =?utf-8?q?I_buy_a_laptop_with_a_45=25_NTSC_display=3F=22?=
+List-Unsubscribe: <https://www.quora.com/email_optout/qemail_unsubscribe?email_track_id=f6bab8c78e9445dabf1f515323ccf1ab&ish=1&t=1651372364542117&token=0e07c1e44da79f07af67b2b3b00adfbd93eabea7a3595f19a1a6eb8e3f813dc2b799fc365a250cb67860d5ad448aa7f8daace8264ec7cf79be1df6e5c56a1086&type=130&uid=905486825>
+X-CID: ecrpEfEpQhBqunMA4E2QZp5Zv0I4bMI0c-ylakSWI2WC-PN8Ul8h-Dvi-W4tGZVlOpvq8e5i1QzTJJoCOwh5hJOi2cSzTQ8i3OgfhY-l2MfftcYYY98ojIWVxC3mlafnPfoQZYFoGOh6z5MbDysAAQIA
+Date: Sun, 01 May 2022 02:32:45 +0000
+Message-ID: <ecrpEfEpQhBqunMA4E2QZp5Zv0I4bMI0c-ylakSWI2WC-PN8Ul8h-Dvi-W4tGZVlOpvq8e5i1QzTJJoCOwh5hJOi2cSzTQ8i3OgfhY-l2MfftcYYY98ojIWVxC3mlafnPfoQZYFoGOh6z5MbDysAAQIA@t1.msgid.quoramail.com>
+X-SMTPAPI: =?utf-8?q?=7B=22unique=5Fargs=22=3A_=7B=22Message-ID=22=3A_=22=3CecrpEfEpQhB?=
+ =?utf-8?q?qunMA4E2QZp5Zv0I4bMI0c-ylakSWI2WC-PN8Ul8h-Dvi-W4tGZVlOpvq8e5i1QzT?=
+ =?utf-8?q?JJoCOwh5hJOi2cSzTQ8i3OgfhY-l2MfftcYYY98ojIWVxC3mlafnPfoQZYFoGOh6z?=
+ =?utf-8?q?5MbDysAAQIA=40t1=2Emsgid=2Equoramail=2Ecom=3E=22=2C_=22account=22?=
+ =?utf-8?q?=3A_=22main=22=2C_=22email=5Ftype=22=3A_130=2C_=22ip=5Fpool=22=3A?=
+ =?utf-8?q?_=22main=22=2C_=22X-QMSG=22=3A_=22gL0INclV7JfIQ4P8544jncGSB1cYv?=
+ =?utf-8?q?=5FYkk8H6ubMRhQc6ews7xPwrzS-3FXo5IXdTBevVyKaaDyyWhzaOoD63YKAezoWX?=
+ =?utf-8?q?bYxINV7Nh3VZ37JbJNikd=5FUVCXOikeGpxJFztxRL=5F3ESwxPCEFxLYgKMz7PFE?=
+ =?utf-8?q?tD0ElsPBcP7ezhinGi34z-PZdyfWvp=5Fa0=5FDtMGqWj=5FzyXu5An44Wst3DMOO?=
+ =?utf-8?q?Hkb4rAqz5NIAnPXfy1LpuTwDh37ZXPtijSX2yBhwyednu2oqH4dgwDzgJRKy8ruET?=
+ =?utf-8?q?Zfwu5gKacCXpX1tmuKBzMj72QYw=5FLPkekldykH-ahvco4grHo=5FJ5j6WIFYdsZ?=
+ =?utf-8?q?sgqVmRV4X0LhiSfYNvAm3ncFxqI1qODl8wc7XjIKJAMPSbV77uuBzzqiv5FXEdWNZ?=
+ =?utf-8?q?ZW0uq2syF=5F9tZQVCCyxgg9ZGxfG-3JPhOipLLLsaK0F9QNcMLz9zLzoSXQgPIgh?=
+ =?utf-8?q?RR991qtAwEBKDYwxcXaQsKtPrQIEHNoHIotNuZho=5FsAKUcb-pwJD-ojDWZJaE2K?=
+ =?utf-8?q?SsyfU7mqcLcs2nuWlOCmAa8lFbD=5F1JJpgCueACI5g9tIQABAgA=3D=22=7D=2C_?=
+ =?utf-8?q?=22category=22=3A_=5B=22account=5Fmain=22=2C_=22email=5Ftype=5F13?=
+ =?utf-8?q?0=22=2C_=22ip=5Fpool=5Fmain=22=5D=2C_=22filters=22=3A_=7B=22bypas?=
+ =?utf-8?q?s=5Flist=5Fmanagement=22=3A_=7B=22settings=22=3A_=7B=22enable=22?=
+ =?utf-8?q?=3A_1=7D=7D=7D=2C_=22ip=5Fpool=22=3A_=22main=22=7D?=
+X-QMSG: =?utf-8?q?gL0INclV7JfIQ4P8544jncGSB1cYv=5FYkk8H6ubMRhQc6ews7xPwrzS-3FXo5IXdT?=
+ =?utf-8?q?BevVyKaaDyyWhzaOoD63YKAezoWXbYxINV7Nh3VZ37JbJNikd=5FUVCXOikeGpxJF?=
+ =?utf-8?q?ztxRL=5F3ESwxPCEFxLYgKMz7PFEtD0ElsPBcP7ezhinGi34z-PZdyfWvp=5Fa0?=
+ =?utf-8?q?=5FDtMGqWj=5FzyXu5An44Wst3DMOOHkb4rAqz5NIAnPXfy1LpuTwDh37ZXPtijSX?=
+ =?utf-8?q?2yBhwyednu2oqH4dgwDzgJRKy8ruETZfwu5gKacCXpX1tmuKBzMj72QYw=5FLPkek?=
+ =?utf-8?q?ldykH-ahvco4grHo=5FJ5j6WIFYdsZsgqVmRV4X0LhiSfYNvAm3ncFxqI1qODl8wc?=
+ =?utf-8?q?7XjIKJAMPSbV77uuBzzqiv5FXEdWNZZW0uq2syF=5F9tZQVCCyxgg9ZGxfG-3JPhO?=
+ =?utf-8?q?ipLLLsaK0F9QNcMLz9zLzoSXQgPIghRR991qtAwEBKDYwxcXaQsKtPrQIEHNoHIot?=
+ =?utf-8?q?NuZho=5FsAKUcb-pwJD-ojDWZJaE2KSsyfU7mqcLcs2nuWlOCmAa8lFbD=5F1JJpg?=
+ =?utf-8?q?CueACI5g9tIQABAgA=3D?=
+
+--===============8858095052300144830==
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: quoted-printable
+
+Stories from your activity
+
+-----
+
+
+Question: Is it possible to have 100% SRGB on a 45% NTSC display?
+
+Answer from Giacomo Catenazzi
+
+Yes.
+
+Note: NTSC is a very bad way to define colours: nobody use it. We wanted ch=
+eap televisions, and so we got a bad standard about colours, replacing NTSC=
+. NTSC was uncommon
+Read More: https://www.quora.com/Is-it-possible-to-have-100-SRGB-on-a-45-NT=
+SC-display/answer/Giacomo-Catenazzi
+-----
+Question: Is 250 NITs, 45 percentage NTSC good for a 14-inch laptop?
+
+Answer from Pradeep Raghuraman
+
+I don't know why you're specifically asking for a 14 inch laptop. In any si=
+ze laptop, that display is standard in cheap laptops. You should aim for a =
+laptop whose display is c
+Read More: https://www.quora.com/Is-250-NITs-45-percentage-NTSC-good-for-a-=
+14-inch-laptop/answer/Pradeep-Raghuraman
+-----
+Question: Is the 45% of NTSC color accuracy good for image editing?
+
+Answer from Konstantinos Konstantinides
+
+The term 45% NTSC does not refer to color =E2=80=9Caccuracy,=E2=80=9D but t=
+o color gamut.
+
+For example, you can have a monitor with wider color gamut, but if your mon=
+itor is not calibrated, t
+Read More: https://www.quora.com/Is-the-45-of-NTSC-color-accuracy-good-for-=
+image-editing/answer/Konstantinos-Konstantinides
+-----
+Question: Is an NTSC 45% display good enough for a mid-range laptop?
+
+Answer from Robert Cox
+
+You issue will be what you want it for.
+
+Photos will not be great on it and any thought of editing any photo needs t=
+o come out of your head. Need it for only office work? Work
+Read More: https://www.quora.com/Is-an-NTSC-45-display-good-enough-for-a-mi=
+d-range-laptop/answer/Robert-Cox-294
+-----
+Question: I recently bought a laptop and noticed that it has 45 NTSC. I wan=
+t to learn graphic designing/digital art and 3D modelling. Will it be okay =
+to use this color range as a beginner?
+
+Answer from Naman Saini
+
+Absolutely yes, start with what you have.
+
+Even I would say you should not take color range so seriously just at the b=
+egging. You must first learn how make a graphic element o
+Read More: https://www.quora.com/I-recently-bought-a-laptop-and-noticed-tha=
+t-it-has-45-NTSC-I-want-to-learn-graphic-designing-digital-art-and-3D-model=
+ling-Will-it-be-okay-to-use-this-color-range-as-a-beginner/answer/Naman-Sai=
+ni-91
+-----
+Question: Which is better, NTSC at 72% or SRGB at 99%?
+
+Answer from Bhalesh Patel
+
+72% of NTSC is roughly equivalent to 100% of the sRGB color gamut. So they =
+both are almost same. Coming to which one is better than you should compare=
+ the display panels and t
+Read More: https://www.quora.com/Which-is-better-NTSC-at-72-or-SRGB-at-99/a=
+nswer/Bhalesh-Patel
+-----
+Question: Can I take a laptop with a full HD LED backlit display with a wid=
+e viewing angle, 45 percent NTSC, 250 nits brightness (my usage gaming, wat=
+ching 4k content) and minimal editing (not professional)?
+
+Answer from Amogh Gorde
+
+If you are into editing/graphics field. The thing which should concern you =
+the most is colour gamut of the display. Some laptop's dont have much vibra=
+nt display. With the low=20
+Read More: https://www.quora.com/Can-I-take-a-laptop-with-a-full-HD-LED-bac=
+klit-display-with-a-wide-viewing-angle-45-percent-NTSC-250-nits-brightness-=
+my-usage-gaming-watching-4k-content-and-minimal-editing-not-professional/an=
+swer/Amogh-Gorde
+-----
+Question: What should I choose between 45% NTSC IPS laptop display and 94% =
+NTSC TN display for architectural rendering and modelling?
+
+Answer from Aldrine George
+
+It depends on your usage ips panels are visually pleasing but with 45% ntsc=
+ it is less color accurate thus it is good for gamers and tn panel is not t=
+hat bad but it is an olde
+Read More: https://www.quora.com/What-should-I-choose-between-45-NTSC-IPS-l=
+aptop-display-and-94-NTSC-TN-display-for-architectural-rendering-and-modell=
+ing/answer/Aldrine-George
+-----
+Question: Can I take a laptop with a full HD LED backlit display with a wid=
+e viewing angle, 45 percent NTSC and 250 nits brightness? Is that okay for =
+gaming and watching 4k videos?
+
+Answer from Sanand Thapar
+
+Gaming? Maaaaayyyyybe. Media consumption? Crap. Absolute Crap. This display=
+ will most probably even display some shades of red as orange or vice versa.
+
+NTSC is the smallest C
+Read More: https://www.quora.com/Can-I-take-a-laptop-with-a-full-HD-LED-bac=
+klit-display-with-a-wide-viewing-angle-45-percent-NTSC-and-250-nits-brightn=
+ess-Is-that-okay-for-gaming-and-watching-4k-videos/answer/Sanand-Thapar
+-----
+Question: What does NTSC mean in display standards? How does it compare to =
+Adobe RGB?
+
+Answer from Bob Myers
+
+NTSC, for National Television Systems Committee, generally is used to refer=
+ to the final U.S. color television standard, or at least the color encodin=
+g and transmission standa
+Read More: https://www.quora.com/What-does-NTSC-mean-in-display-standards-H=
+ow-does-it-compare-to-Adobe-RGB/answer/Bob-Myers-5
+-----
+
+-----
+To control which emails we send you, visit: https://www.quora.com/qemail/tr=
+ack_click?aoid&aoty=3D14&aty=3D4&cp=3D0&ct=3D1651372364534283&et=3D130&id=
+=3Df6bab8c78e9445dabf1f515323ccf1ab&source&src=3D1&st=3D1651372364538456&st=
+ories=3D1_bTVSFX0kXdS%7C1_M61FRgBQwE6%7C1_1CgiTWAhgwK%7C1_qa9NFVplQBu%7C1_8=
+xpuDUvG7tK%7C1_XxoCl1omqQP%7C1_dFizM0LLMAP%7C1_4D4E1nGisR2%7C1_a0C7E9lKlmT%=
+7C1_jJqhckgEMni&ty&ty_data&uid=3Dm36BZ4XFnST&v=3D0
+
+To unsubscribe from this type of email, visit: https://www.quora.com/email_=
+optout/qemail_unsubscribe?email_track_id=3Df6bab8c78e9445dabf1f515323ccf1ab=
+&t=3D1651372364630754&token=3D6a4a210004032795c4dc6c9e03162403c611f99c1650d=
+c1e173bd8420aa5462b85ea08631dc164810433ed0f87e44b94088e64e4dbedb5d148e9bf41=
+790ace31&type=3D130&uid=3D905486825
+--===============8858095052300144830==
+Content-Type: text/html; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>
+<html>
+<head>
+<style type=3D"text/css">@media screen and (max-width: 480px) {
+    .background_inner {
+        padding: 0;
+        background: #fff
+        }
+    .container {
+        padding: 0 8px 16px
+        }
+    .footer_container {
+        border-top: 1px solid #e2e2e2
+        }
+    .AnnualThankYouEmail .background_inner {
+        padding: 10px 0
+        }
+    .polish_background_inner {
+        padding: 10px 0
+        }
+    .polish_header_logo img.header_logo_img {
+        width: 118px;
+        height: 40px
+        }
+    .polish_header_title {
+        font-size: 16px;
+        padding-top: 0;
+        padding-bottom: 5px
+        }
+    .polish_question_text {
+        line-height: 1.3
+        }
+    .polish_story .voters_list, .polish_story .user_link {
+        line-height: 1.5
+        }
+    .polish_story .truncated_q_text, .polish_story .qtext_para {
+        line-height: 1.5
+        }
+    .polish_story .content_header {
+        padding: 6px 0
+        }
+    .EndOfYearLookbackEmail .stat_large {
+        font-size: 28px
+        }
+    .EndOfYearLookbackEmail .content_text {
+        text-align: center
+        }
+    .EndOfYearLookbackEmail .half_column {
+        width: 100%
+        }
+    .EndOfYearLookbackEmail .img_wrapper {
+        margin: 10px auto
+        }
+    .TopicDigestEmail .topic_digest_header_logo img.polish_header_logo_img {
+        width: 89px;
+        height: 30px
+        }
+    .TopicDigestEmail .topic_digest_header_title {
+        font-size: 16px;
+        padding-top: 0;
+        padding-bottom: 5px
+        }
+    .WriteDigestEmail .question_text .rendered_qtext {
+        font-size: 16px
+        }
+    .email_app_link-content {
+        display: block;
+        text-align: center
+        }
+    .email_app_link-text, .email_app_link-badges_wrapper {
+        display: block
+        }
+    .email_app_link-text {
+        padding-bottom: 0;
+        box-sizing: border-box
+        }
+    .email_app_link-badges_wrapper {
+        padding-left: 10px
+        }
+    }
+@media screen and (max-width: 600px) {
+    .DigestEmail .mobile_image.digest_ad {
+        display: table;
+        width: 92vw
+        }
+    .DigestEmail .desktop_image.digest_ad {
+        display: none
+        }
+    }</style>
+<style type=3D"text/css">h1 a:active {color:red}
+h2 a:active {color:red}
+h3 a:active {color:red}
+h4 a:active {color:red}
+h5 a:active {color:red}
+h6 a:active {color:red}
+h1 a:visited {color:purple}
+h2 a:visited {color:purple}
+h3 a:visited {color:purple}
+h4 a:visited {color:purple}
+h5 a:visited {color:purple}
+h6 a:visited {color:purple}
+.banner_wrapper .banner_link:hover {text-decoration:underline}
+.polish_button_wrapper .polish_action_button:hover {opacity:0.8}
+@media (max-width: 812px) {
+    .ad_email_background .ad_table {
+        margin: 0
+        }
+    }
+.banner_wrapper .banner_link:hover {text-decoration:underline}
+.polish_button_wrapper .polish_action_button:hover {opacity:0.8}
+@media (max-width: 812px) {
+    .ad_email_background .ad_table {
+        margin: 0
+        }
+    }</style>
+</head>
+<body class=3D"email_body" style=3D"-ms-text-size-adjust:100%; -webkit-text=
+-size-adjust:100%; margin:0; padding:0; width:100%" width=3D"100%"><div cla=
+ss=3D"q_ltr u-ltr lang_en" dir=3D"ltr" lang=3D"en"><table class=3D"EmailCom=
+ponent Email SearchEngagementEmail background" cellpadding=3D"0" border=3D"=
+0" style=3D'border-collapse:collapse; mso-table-lspace:0; mso-table-rspace:=
+0; background:#eee; font-family:-apple-system, BlinkMacSystemFont, "Segoe U=
+I", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif; f=
+ont-size:13px; height:100%; text-align:left; width:100%' height=3D"100%" al=
+ign=3D"left" width=3D"100%"><tbody><tr><td class=3D"polish_background_inner=
+" align=3D"center" valign=3D"top" style=3D"border-collapse:collapse; backgr=
+ound:#fff; padding:0"><table cellpadding=3D"0" cellspacing=3D"0" border=3D"=
+0" style=3D"border-collapse:collapse; mso-table-lspace:0; mso-table-rspace:=
+0"><tbody>
+<tr><td class=3D"container" align=3D"left" style=3D"border-collapse:collaps=
+e; background:#fff; border-radius:3px; height:100%; padding:32px; width:525=
+px" height=3D"100%" width=3D"525"><table class=3D"polish_container_inner" s=
+tyle=3D"border-collapse:collapse; mso-table-lspace:0; mso-table-rspace:0; b=
+order:0; cellpadding:0; cellspacing:0; width:100%" width=3D"100%"><tbody>
+<tr><td class=3D"polish_header" style=3D"border-collapse:collapse">
+<span style=3D"display:none;font-size:1px;color:white;line-height:1px;max-h=
+eight
+        :0px;max-width:0px;opacity:0;overflow:hidden;">Answer: Yes.=E2=80=
+=8B  Note: NTSC is a very bad way to define colours: nobody use it.=E2=80=
+=8B W.=E2=80=8B.=E2=80=8B.=E2=80=8B</span><table cellpadding=3D"0" cellspac=
+ing=3D"0" border=3D"0" width=3D"100%" style=3D"border-collapse:collapse; ms=
+o-table-lspace:0; mso-table-rspace:0"><tbody>
+<tr><td class=3D"polish_header_logo" style=3D"border-collapse:collapse; tex=
+t-align:center" align=3D"center"><a href=3D"https://www.quora.com/qemail/tr=
+ack_click?aoid&amp;aoty=3D7&amp;aty=3D4&amp;cp=3D0&amp;ct=3D165137236453428=
+3&amp;et=3D130&amp;id=3Df6bab8c78e9445dabf1f515323ccf1ab&amp;source&amp;src=
+=3D1&amp;st=3D1651372364538456&amp;stories=3D1_bTVSFX0kXdS%7C1_M61FRgBQwE6%=
+7C1_1CgiTWAhgwK%7C1_qa9NFVplQBu%7C1_8xpuDUvG7tK%7C1_XxoCl1omqQP%7C1_dFizM0L=
+LMAP%7C1_4D4E1nGisR2%7C1_a0C7E9lKlmT%7C1_jJqhckgEMni&amp;ty&amp;ty_data&amp=
+;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"color:#2b6dad; text-decoration:none"=
+><img class=3D"header_logo_img" src=3D"https://qsf.fs.quoracdn.net/-4-image=
+s.logo.WordmarkLogo_592x200_4x.png-26-b469cd653dba282b.png" alt=3D"Quora" s=
+tyle=3D"-ms-interpolation-mode:bicubic; outline:0; text-decoration:none; bo=
+rder:0; height:50px; width:148px" height=3D"50" width=3D"148"><img class=3D=
+"tracking_img" style=3D"-ms-interpolation-mode:bicubic; outline:0; text-dec=
+oration:none; border:0; display:none" width=3D"1" height=3D"1" src=3D"https=
+://www.quora.com/qemail/mark_read?ct=3D1651372364534283&amp;et=3D130&amp;id=
+=3Df6bab8c78e9445dabf1f515323ccf1ab&amp;src=3D1&amp;st=3D1651372364538456&a=
+mp;stories=3D1_bTVSFX0kXdS%7C1_M61FRgBQwE6%7C1_1CgiTWAhgwK%7C1_qa9NFVplQBu%=
+7C1_8xpuDUvG7tK%7C1_XxoCl1omqQP%7C1_dFizM0LLMAP%7C1_4D4E1nGisR2%7C1_a0C7E9l=
+KlmT%7C1_jJqhckgEMni&amp;uid=3Dm36BZ4XFnST&amp;v=3D0"></a></td></tr>
+<tr><td class=3D"polish_header_title" style=3D'border-collapse:collapse; te=
+xt-align:center; color:#333; font-family:-apple-system, BlinkMacSystemFont,=
+ "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans=
+-serif; font-size:19px; font-weight:400; padding-bottom:20px' align=3D"cent=
+er">Stories from your activity</td></tr>
+<tr><td style=3D"border-collapse:collapse"><table class=3D"polish_header_wr=
+apper" style=3D"border-collapse:collapse; mso-table-lspace:0; mso-table-rsp=
+ace:0; border:0; cellpadding:0; margin-bottom:20px; width:100%" width=3D"10=
+0%"><tbody><tr>
+<td style=3D"border-collapse:collapse"></td>
+<td class=3D"polish_header_line" style=3D"border-collapse:collapse; border-=
+bottom:1px solid #b92b27; height:1px; width:198px" height=3D"1" width=3D"19=
+8"></td>
+<td style=3D"border-collapse:collapse"></td>
+</tr></tbody></table></td></tr>
+</tbody></table>
+</td></tr>
+<tr class=3D"body_container" id=3D"simple-content-row"><td class=3D"body_co=
+ntent" bgcolor=3D"#ffffff" style=3D"border-collapse:collapse"><table style=
+=3D"border-collapse:collapse; mso-table-lspace:0; mso-table-rspace:0; width=
+:100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%"><tbo=
+dy><tr>
+<td style=3D"border-collapse:collapse"><table style=3D"border-collapse:coll=
+apse; mso-table-lspace:0; mso-table-rspace:0; width:100%" cellpadding=3D"0"=
+ cellspacing=3D"0" border=3D"0" width=3D"100%"><tbody><tr><td style=3D"bord=
+er-collapse:collapse">
+<div class=3D"no_para_breaks"><div data-clog-trigger=3D"impression" data-cl=
+og-metadata=3D'{"action_log_target": {"type": 33, "hash": "0|1|1|228095112"=
+}}' data-clog-event-type=3D"ActionLogImpression" id=3D"__w2_w6uXuCPk22_acti=
+onable"><table class=3D"story_wrapper" cellspacing=3D"0" border=3D"0" style=
+=3D"border-collapse:collapse; mso-table-lspace:0; mso-table-rspace:0; width=
+:100%" width=3D"100%"><tbody><tr><td class=3D"story  first_story" style=3D"=
+border-collapse:collapse; border-bottom:0; padding:20px 0; padding-top:15px=
+"><table class=3D"digest_story_wrapper" cellpadding=3D"0" cellspacing=3D"0"=
+ border=3D"0" style=3D"border-collapse:collapse; mso-table-lspace:0; mso-ta=
+ble-rspace:0; width:100%" width=3D"100%"><tbody>
+<tr><td class=3D"reason" style=3D"border-collapse:collapse; padding-bottom:=
+4px"><table class=3D"digest_reason" cellpadding=3D"0" cellspacing=3D"0" bor=
+der=3D"0" style=3D"border-collapse:collapse; mso-table-lspace:0; mso-table-=
+rspace:0"><tbody><tr><td valign=3D"top" style=3D"border-collapse:collapse">=
+</td></tr></tbody></table></td></tr>
+<tr><td style=3D"border-collapse:collapse"><a class=3D"question_text" href=
+=3D"https://www.quora.com/qemail/track_click?al_imp=3DeyJ0eXBlIjogMzMsICJoY=
+XNoIjogIjB8MXwxfDIyODA5NTExMiJ9&amp;al_pri=3D1&amp;aoid=3DozROVD3Lkw7&amp;a=
+oty=3D2&amp;aty=3D4&amp;cp=3D1&amp;ct=3D1651372364534283&amp;et=3D130&amp;i=
+d=3Df6bab8c78e9445dabf1f515323ccf1ab&amp;source=3D7&amp;src=3D1&amp;st=3D16=
+51372364538456&amp;stories=3D1_bTVSFX0kXdS%7C1_M61FRgBQwE6%7C1_1CgiTWAhgwK%=
+7C1_qa9NFVplQBu%7C1_8xpuDUvG7tK%7C1_XxoCl1omqQP%7C1_dFizM0LLMAP%7C1_4D4E1nG=
+isR2%7C1_a0C7E9lKlmT%7C1_jJqhckgEMni&amp;ty=3D1&amp;ty_data=3DbTVSFX0kXdS&a=
+mp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"color:#333; text-decoration:none; =
+display:block; font-size:19px; font-weight:bold; letter-spacing:-0.5px; lin=
+e-height:1.4"><span class=3D"rendered_qtext" style=3D"word-break:break-word=
+">Is it possible to have 100% SRGB on a 45% NTSC display?</span></a></td></=
+tr>
+<tr><td style=3D"border-collapse:collapse"><table class=3D"item_content_wra=
+pper" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"border-coll=
+apse:collapse; mso-table-lspace:0; mso-table-rspace:0; width:100%" width=3D=
+"100%"><tbody>
+<tr><td class=3D"content_header metadata" style=3D"border-collapse:collapse=
+; padding:8px 0"><table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" st=
+yle=3D"border-collapse:collapse; mso-table-lspace:0; mso-table-rspace:0"><t=
+body><tr>
+<td class=3D"content_header_photo" style=3D"border-collapse:collapse; verti=
+cal-align:top" valign=3D"top"><a href=3D"https://www.quora.com/qemail/track=
+_click?aoid=3Da0J174LYeMQ&amp;aoty=3D3&amp;aty=3D4&amp;cp=3D1&amp;ct=3D1651=
+372364534283&amp;et=3D130&amp;id=3Df6bab8c78e9445dabf1f515323ccf1ab&amp;sou=
+rce=3D7&amp;src=3D1&amp;st=3D1651372364538456&amp;stories=3D1_bTVSFX0kXdS%7=
+C1_M61FRgBQwE6%7C1_1CgiTWAhgwK%7C1_qa9NFVplQBu%7C1_8xpuDUvG7tK%7C1_XxoCl1om=
+qQP%7C1_dFizM0LLMAP%7C1_4D4E1nGisR2%7C1_a0C7E9lKlmT%7C1_jJqhckgEMni&amp;ty=
+=3D1&amp;ty_data=3DbTVSFX0kXdS&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"co=
+lor:#2b6dad; text-decoration:none"><div id=3D"w6uXuCPk86">
+<div class=3D"hover_menu hidden white_bg show_nub" id=3D"__w2_w6uXuCPk87_me=
+nu"><div class=3D"hover_menu_contents" id=3D"__w2_w6uXuCPk87_menu_contents"=
+> </div></div>
+<span class=3D"photo_tooltip HoverMenu IdentityPhoto Photo" id=3D"__w2_w6uX=
+uCPk87_link"><img class=3D"profile_photo_img" src=3D"https://qsf.fs.quoracd=
+n.net/-4-images.new_grid.profile_default.png-26-688c79556f251aa0.png" alt=
+=3D"Giacomo Catenazzi" style=3D"-ms-interpolation-mode:bicubic; outline:0; =
+text-decoration:none; border:0; border-radius:100px; display:block; height:=
+40px; width:40px; border-style:none" height=3D"40" width=3D"40"></span>
+</div></a></td>
+<td class=3D"content_header_text" style=3D"border-collapse:collapse; paddin=
+g-left:8px; color:#333"><table cellpadding=3D"0" cellspacing=3D"0" border=
+=3D"0" style=3D"border-collapse:collapse; mso-table-lspace:0; mso-table-rsp=
+ace:0"><tbody>
+<tr><td style=3D"border-collapse:collapse">
+<a class=3D"user_link" href=3D"https://www.quora.com/qemail/track_click?aoi=
+d=3Da0J174LYeMQ&amp;aoty=3D3&amp;aty=3D4&amp;cp=3D1&amp;ct=3D16513723645342=
+83&amp;et=3D130&amp;id=3Df6bab8c78e9445dabf1f515323ccf1ab&amp;source=3D7&am=
+p;src=3D1&amp;st=3D1651372364538456&amp;stories=3D1_bTVSFX0kXdS%7C1_M61FRgB=
+QwE6%7C1_1CgiTWAhgwK%7C1_qa9NFVplQBu%7C1_8xpuDUvG7tK%7C1_XxoCl1omqQP%7C1_dF=
+izM0LLMAP%7C1_4D4E1nGisR2%7C1_a0C7E9lKlmT%7C1_jJqhckgEMni&amp;ty=3D1&amp;ty=
+_data=3DbTVSFX0kXdS&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"color:#333; t=
+ext-decoration:none; font-weight:bold; line-height:1.4; font-size:15px">Gia=
+como Catenazzi</a><span style=3D"font-size:15px; line-height:1.4">, Geek on=
+ colours</span>
+</td></tr>
+<tr><td class=3D"answer_details" style=3D"border-collapse:collapse; color:#=
+999; font-size:13px"><a href=3D"https://www.quora.com/qemail/track_click?ao=
+id=3DbTVSFX0kXdS&amp;aoty=3D1&amp;aty=3D4&amp;cp=3D1&amp;ct=3D1651372364534=
+283&amp;et=3D130&amp;id=3Df6bab8c78e9445dabf1f515323ccf1ab&amp;source=3D7&a=
+mp;src=3D1&amp;st=3D1651372364538456&amp;stories=3D1_bTVSFX0kXdS%7C1_M61FRg=
+BQwE6%7C1_1CgiTWAhgwK%7C1_qa9NFVplQBu%7C1_8xpuDUvG7tK%7C1_XxoCl1omqQP%7C1_d=
+FizM0LLMAP%7C1_4D4E1nGisR2%7C1_a0C7E9lKlmT%7C1_jJqhckgEMni&amp;ty=3D1&amp;t=
+y_data=3DbTVSFX0kXdS&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"color:#999; =
+text-decoration:none">Written Jul 17, 2020</a></td></tr>
+</tbody></table></td>
+</tr></tbody></table></td></tr>
+<tr><td class=3D"item_content" style=3D'border-collapse:collapse; color:#33=
+3; display:block; font-family:-apple-system, BlinkMacSystemFont, "Segoe UI"=
+, Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif; fon=
+t-size:15px; line-height:1.4'><a href=3D"https://www.quora.com/qemail/track=
+_click?al_imp=3DeyJ0eXBlIjogMzMsICJoYXNoIjogIjB8MXwxfDIyODA5NTExMiJ9&amp;al=
+_pri=3D0&amp;aoid=3DbTVSFX0kXdS&amp;aoty=3D1&amp;aty=3D4&amp;cp=3D1&amp;ct=
+=3D1651372364534283&amp;et=3D130&amp;id=3Df6bab8c78e9445dabf1f515323ccf1ab&=
+amp;source=3D7&amp;src=3D1&amp;st=3D1651372364538456&amp;stories=3D1_bTVSFX=
+0kXdS%7C1_M61FRgBQwE6%7C1_1CgiTWAhgwK%7C1_qa9NFVplQBu%7C1_8xpuDUvG7tK%7C1_X=
+xoCl1omqQP%7C1_dFizM0LLMAP%7C1_4D4E1nGisR2%7C1_a0C7E9lKlmT%7C1_jJqhckgEMni&=
+amp;ty=3D1&amp;ty_data=3DbTVSFX0kXdS&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=
+=3D"color:#333; text-decoration:none"><div id=3D"w6uXuCPk62"><div class=3D"=
+truncated_q_text truncated_para_breaks TruncatedQText TruncatedAnswer Trunc=
+atedAnswerForDigestEmail TruncatedAnswerForEmail" id=3D"__w2_w6uXuCPk63_tru=
+ncated" style=3D"line-height:1.6">
+<span class=3D"rendered_qtext" style=3D"word-break:break-word"><p class=3D"=
+qtext_para u-ltr u-text-align--start" style=3D"margin:1em 0; line-height:1.=
+6">Yes.</p>
+<p class=3D"qtext_para u-ltr u-text-align--start" style=3D"margin:1em 0; li=
+ne-height:1.6">Note: NTSC is a very bad way to define colours: nobody use i=
+t. We wanted cheap televisions, and so we got a bad standard about colours,=
+ replacing NTSC. NTSC was uncommo...</p></span> <a class=3D"read_more_blue"=
+ href=3D"https://www.quora.com/qemail/track_click?al_imp=3DeyJ0eXBlIjogMzMs=
+ICJoYXNoIjogIjB8MXwxfDIyODA5NTExMiJ9&amp;al_pri=3D8&amp;aoid=3DbTVSFX0kXdS&=
+amp;aoty=3D1&amp;aty=3D4&amp;cp=3D1&amp;ct=3D1651372364534283&amp;et=3D130&=
+amp;id=3Df6bab8c78e9445dabf1f515323ccf1ab&amp;source=3D7&amp;src=3D1&amp;st=
+=3D1651372364538456&amp;stories=3D1_bTVSFX0kXdS%7C1_M61FRgBQwE6%7C1_1CgiTWA=
+hgwK%7C1_qa9NFVplQBu%7C1_8xpuDUvG7tK%7C1_XxoCl1omqQP%7C1_dFizM0LLMAP%7C1_4D=
+4E1nGisR2%7C1_a0C7E9lKlmT%7C1_jJqhckgEMni&amp;ty=3D1&amp;ty_data=3DbTVSFX0k=
+XdS&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"color:#168de9; text-decoratio=
+n:none">Read More =C2=BB</a>
+</div></div>
+<div class=3D"non_quora_share_embed_wrapper"><div class=3D"item_metadata"><=
+a href=3D"https://www.quora.com/qemail/track_click?al_imp=3DeyJ0eXBlIjogMzM=
+sICJoYXNoIjogIjB8MXwxfDIyODA5NTExMiJ9&amp;al_pri=3D0&amp;aoid=3DbTVSFX0kXdS=
+&amp;aoty=3D1&amp;aty=3D4&amp;cp=3D1&amp;ct=3D1651372364534283&amp;et=3D130=
+&amp;id=3Df6bab8c78e9445dabf1f515323ccf1ab&amp;source=3D7&amp;src=3D1&amp;s=
+t=3D1651372364538456&amp;stories=3D1_bTVSFX0kXdS%7C1_M61FRgBQwE6%7C1_1CgiTW=
+AhgwK%7C1_qa9NFVplQBu%7C1_8xpuDUvG7tK%7C1_XxoCl1omqQP%7C1_dFizM0LLMAP%7C1_4=
+D4E1nGisR2%7C1_a0C7E9lKlmT%7C1_jJqhckgEMni&amp;ty=3D1&amp;ty_data=3DbTVSFX0=
+kXdS&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"color:#2b6dad; text-decorati=
+on:none"></a></div></div></a></td></tr>
+</tbody></table></td></tr>
+</tbody></table></td></tr></tbody></table></div></div>
+<div class=3D"no_para_breaks"><div data-clog-trigger=3D"impression" data-cl=
+og-metadata=3D'{"action_log_target": {"type": 33, "hash": "0|2|1|201720176"=
+}}' data-clog-event-type=3D"ActionLogImpression" id=3D"__w2_w6uXuCPk23_acti=
+onable">
+<table class=3D"polish_separator_wrapper" style=3D"border-collapse:collapse=
+; mso-table-lspace:0; mso-table-rspace:0; border:0; cellpadding:0; width:10=
+0%" width=3D"100%"><tbody><tr>
+<td style=3D"border-collapse:collapse"></td>
+<td class=3D"polish_separator" style=3D"border-collapse:collapse; border-bo=
+ttom:1px solid #eee; height:1px; width:140px" height=3D"1" width=3D"140"></=
+td>
+<td style=3D"border-collapse:collapse"></td>
+</tr></tbody></table>
+<table class=3D"story_wrapper" cellspacing=3D"0" border=3D"0" style=3D"bord=
+er-collapse:collapse; mso-table-lspace:0; mso-table-rspace:0; width:100%" w=
+idth=3D"100%"><tbody><tr><td class=3D"story " style=3D"border-collapse:coll=
+apse; border-bottom:0; padding:20px 0"><table class=3D"digest_story_wrapper=
+" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"border-collapse=
+:collapse; mso-table-lspace:0; mso-table-rspace:0; width:100%" width=3D"100=
+%"><tbody>
+<tr><td class=3D"reason" style=3D"border-collapse:collapse; padding-bottom:=
+4px"><table class=3D"digest_reason" cellpadding=3D"0" cellspacing=3D"0" bor=
+der=3D"0" style=3D"border-collapse:collapse; mso-table-lspace:0; mso-table-=
+rspace:0"><tbody><tr><td valign=3D"top" style=3D"border-collapse:collapse">=
+</td></tr></tbody></table></td></tr>
+<tr><td style=3D"border-collapse:collapse"><a class=3D"question_text" href=
+=3D"https://www.quora.com/qemail/track_click?al_imp=3DeyJ0eXBlIjogMzMsICJoY=
+XNoIjogIjB8MnwxfDIwMTcyMDE3NiJ9&amp;al_pri=3D1&amp;aoid=3DjlT1cgQmThB&amp;a=
+oty=3D2&amp;aty=3D4&amp;cp=3D2&amp;ct=3D1651372364534283&amp;et=3D130&amp;i=
+d=3Df6bab8c78e9445dabf1f515323ccf1ab&amp;source=3D7&amp;src=3D1&amp;st=3D16=
+51372364538456&amp;stories=3D1_bTVSFX0kXdS%7C1_M61FRgBQwE6%7C1_1CgiTWAhgwK%=
+7C1_qa9NFVplQBu%7C1_8xpuDUvG7tK%7C1_XxoCl1omqQP%7C1_dFizM0LLMAP%7C1_4D4E1nG=
+isR2%7C1_a0C7E9lKlmT%7C1_jJqhckgEMni&amp;ty=3D1&amp;ty_data=3DM61FRgBQwE6&a=
+mp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"color:#333; text-decoration:none; =
+display:block; font-size:19px; font-weight:bold; letter-spacing:-0.5px; lin=
+e-height:1.4"><span class=3D"rendered_qtext" style=3D"word-break:break-word=
+">Is 250 NITs, 45 percentage NTSC good for a 14-inch laptop?</span></a></td=
+></tr>
+<tr><td style=3D"border-collapse:collapse"><table class=3D"item_content_wra=
+pper" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"border-coll=
+apse:collapse; mso-table-lspace:0; mso-table-rspace:0; width:100%" width=3D=
+"100%"><tbody>
+<tr><td class=3D"content_header metadata" style=3D"border-collapse:collapse=
+; padding:8px 0"><table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" st=
+yle=3D"border-collapse:collapse; mso-table-lspace:0; mso-table-rspace:0"><t=
+body><tr>
+<td class=3D"content_header_photo" style=3D"border-collapse:collapse; verti=
+cal-align:top" valign=3D"top"><a href=3D"https://www.quora.com/qemail/track=
+_click?aoid=3D8wMy5q5pqUF&amp;aoty=3D3&amp;aty=3D4&amp;cp=3D2&amp;ct=3D1651=
+372364534283&amp;et=3D130&amp;id=3Df6bab8c78e9445dabf1f515323ccf1ab&amp;sou=
+rce=3D7&amp;src=3D1&amp;st=3D1651372364538456&amp;stories=3D1_bTVSFX0kXdS%7=
+C1_M61FRgBQwE6%7C1_1CgiTWAhgwK%7C1_qa9NFVplQBu%7C1_8xpuDUvG7tK%7C1_XxoCl1om=
+qQP%7C1_dFizM0LLMAP%7C1_4D4E1nGisR2%7C1_a0C7E9lKlmT%7C1_jJqhckgEMni&amp;ty=
+=3D1&amp;ty_data=3DM61FRgBQwE6&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"co=
+lor:#2b6dad; text-decoration:none"><div id=3D"w6uXuCPk93">
+<div class=3D"hover_menu hidden white_bg show_nub" id=3D"__w2_w6uXuCPk94_me=
+nu"><div class=3D"hover_menu_contents" id=3D"__w2_w6uXuCPk94_menu_contents"=
+> </div></div>
+<span class=3D"photo_tooltip HoverMenu IdentityPhoto Photo" id=3D"__w2_w6uX=
+uCPk94_link"><img class=3D"profile_photo_img" src=3D"https://qsf.fs.quoracd=
+n.net/-4-images.new_grid.profile_default.png-26-688c79556f251aa0.png" alt=
+=3D"Pradeep Raghuraman" style=3D"-ms-interpolation-mode:bicubic; outline:0;=
+ text-decoration:none; border:0; border-radius:100px; display:block; height=
+:40px; width:40px; border-style:none" height=3D"40" width=3D"40"></span>
+</div></a></td>
+<td class=3D"content_header_text" style=3D"border-collapse:collapse; paddin=
+g-left:8px; color:#333"><table cellpadding=3D"0" cellspacing=3D"0" border=
+=3D"0" style=3D"border-collapse:collapse; mso-table-lspace:0; mso-table-rsp=
+ace:0"><tbody>
+<tr><td style=3D"border-collapse:collapse">
+<a class=3D"user_link" href=3D"https://www.quora.com/qemail/track_click?aoi=
+d=3D8wMy5q5pqUF&amp;aoty=3D3&amp;aty=3D4&amp;cp=3D2&amp;ct=3D16513723645342=
+83&amp;et=3D130&amp;id=3Df6bab8c78e9445dabf1f515323ccf1ab&amp;source=3D7&am=
+p;src=3D1&amp;st=3D1651372364538456&amp;stories=3D1_bTVSFX0kXdS%7C1_M61FRgB=
+QwE6%7C1_1CgiTWAhgwK%7C1_qa9NFVplQBu%7C1_8xpuDUvG7tK%7C1_XxoCl1omqQP%7C1_dF=
+izM0LLMAP%7C1_4D4E1nGisR2%7C1_a0C7E9lKlmT%7C1_jJqhckgEMni&amp;ty=3D1&amp;ty=
+_data=3DM61FRgBQwE6&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"color:#333; t=
+ext-decoration:none; font-weight:bold; line-height:1.4; font-size:15px">Pra=
+deep Raghuraman</a><span style=3D"font-size:15px; line-height:1.4">, Softwa=
+re Engineer (2019-present)</span>
+</td></tr>
+<tr><td class=3D"answer_details" style=3D"border-collapse:collapse; color:#=
+999; font-size:13px"><a href=3D"https://www.quora.com/qemail/track_click?ao=
+id=3DM61FRgBQwE6&amp;aoty=3D1&amp;aty=3D4&amp;cp=3D2&amp;ct=3D1651372364534=
+283&amp;et=3D130&amp;id=3Df6bab8c78e9445dabf1f515323ccf1ab&amp;source=3D7&a=
+mp;src=3D1&amp;st=3D1651372364538456&amp;stories=3D1_bTVSFX0kXdS%7C1_M61FRg=
+BQwE6%7C1_1CgiTWAhgwK%7C1_qa9NFVplQBu%7C1_8xpuDUvG7tK%7C1_XxoCl1omqQP%7C1_d=
+FizM0LLMAP%7C1_4D4E1nGisR2%7C1_a0C7E9lKlmT%7C1_jJqhckgEMni&amp;ty=3D1&amp;t=
+y_data=3DM61FRgBQwE6&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"color:#999; =
+text-decoration:none">Written Mar 5, 2020</a></td></tr>
+</tbody></table></td>
+</tr></tbody></table></td></tr>
+<tr><td class=3D"item_content" style=3D'border-collapse:collapse; color:#33=
+3; display:block; font-family:-apple-system, BlinkMacSystemFont, "Segoe UI"=
+, Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif; fon=
+t-size:15px; line-height:1.4'><a href=3D"https://www.quora.com/qemail/track=
+_click?al_imp=3DeyJ0eXBlIjogMzMsICJoYXNoIjogIjB8MnwxfDIwMTcyMDE3NiJ9&amp;al=
+_pri=3D0&amp;aoid=3DM61FRgBQwE6&amp;aoty=3D1&amp;aty=3D4&amp;cp=3D2&amp;ct=
+=3D1651372364534283&amp;et=3D130&amp;id=3Df6bab8c78e9445dabf1f515323ccf1ab&=
+amp;source=3D7&amp;src=3D1&amp;st=3D1651372364538456&amp;stories=3D1_bTVSFX=
+0kXdS%7C1_M61FRgBQwE6%7C1_1CgiTWAhgwK%7C1_qa9NFVplQBu%7C1_8xpuDUvG7tK%7C1_X=
+xoCl1omqQP%7C1_dFizM0LLMAP%7C1_4D4E1nGisR2%7C1_a0C7E9lKlmT%7C1_jJqhckgEMni&=
+amp;ty=3D1&amp;ty_data=3DM61FRgBQwE6&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=
+=3D"color:#333; text-decoration:none"><div id=3D"w6uXuCPk64"><div class=3D"=
+truncated_q_text truncated_para_breaks TruncatedQText TruncatedAnswer Trunc=
+atedAnswerForDigestEmail TruncatedAnswerForEmail" id=3D"__w2_w6uXuCPk65_tru=
+ncated" style=3D"line-height:1.6">
+<span class=3D"rendered_qtext" style=3D"word-break:break-word"><p class=3D"=
+qtext_para u-ltr u-text-align--start" style=3D"margin:1em 0; line-height:1.=
+6">I don't know why you're specifically asking for a 14 inch laptop. In any=
+ size laptop, that display is standard in cheap laptops. You should aim for=
+ a laptop whose display i...</p></span> <a class=3D"read_more_blue" href=3D=
+"https://www.quora.com/qemail/track_click?al_imp=3DeyJ0eXBlIjogMzMsICJoYXNo=
+IjogIjB8MnwxfDIwMTcyMDE3NiJ9&amp;al_pri=3D8&amp;aoid=3DM61FRgBQwE6&amp;aoty=
+=3D1&amp;aty=3D4&amp;cp=3D2&amp;ct=3D1651372364534283&amp;et=3D130&amp;id=
+=3Df6bab8c78e9445dabf1f515323ccf1ab&amp;source=3D7&amp;src=3D1&amp;st=3D165=
+1372364538456&amp;stories=3D1_bTVSFX0kXdS%7C1_M61FRgBQwE6%7C1_1CgiTWAhgwK%7=
+C1_qa9NFVplQBu%7C1_8xpuDUvG7tK%7C1_XxoCl1omqQP%7C1_dFizM0LLMAP%7C1_4D4E1nGi=
+sR2%7C1_a0C7E9lKlmT%7C1_jJqhckgEMni&amp;ty=3D1&amp;ty_data=3DM61FRgBQwE6&am=
+p;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"color:#168de9; text-decoration:none=
+">Read More =C2=BB</a>
+</div></div>
+<div class=3D"non_quora_share_embed_wrapper"><div class=3D"item_metadata"><=
+a href=3D"https://www.quora.com/qemail/track_click?al_imp=3DeyJ0eXBlIjogMzM=
+sICJoYXNoIjogIjB8MnwxfDIwMTcyMDE3NiJ9&amp;al_pri=3D0&amp;aoid=3DM61FRgBQwE6=
+&amp;aoty=3D1&amp;aty=3D4&amp;cp=3D2&amp;ct=3D1651372364534283&amp;et=3D130=
+&amp;id=3Df6bab8c78e9445dabf1f515323ccf1ab&amp;source=3D7&amp;src=3D1&amp;s=
+t=3D1651372364538456&amp;stories=3D1_bTVSFX0kXdS%7C1_M61FRgBQwE6%7C1_1CgiTW=
+AhgwK%7C1_qa9NFVplQBu%7C1_8xpuDUvG7tK%7C1_XxoCl1omqQP%7C1_dFizM0LLMAP%7C1_4=
+D4E1nGisR2%7C1_a0C7E9lKlmT%7C1_jJqhckgEMni&amp;ty=3D1&amp;ty_data=3DM61FRgB=
+QwE6&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"color:#2b6dad; text-decorati=
+on:none"></a></div></div></a></td></tr>
+</tbody></table></td></tr>
+</tbody></table></td></tr></tbody></table>
+</div></div>
+<div class=3D"no_para_breaks"><div data-clog-trigger=3D"impression" data-cl=
+og-metadata=3D'{"action_log_target": {"type": 33, "hash": "0|3|1|278497429"=
+}}' data-clog-event-type=3D"ActionLogImpression" id=3D"__w2_w6uXuCPk24_acti=
+onable">
+<table class=3D"polish_separator_wrapper" style=3D"border-collapse:collapse=
+; mso-table-lspace:0; mso-table-rspace:0; border:0; cellpadding:0; width:10=
+0%" width=3D"100%"><tbody><tr>
+<td style=3D"border-collapse:collapse"></td>
+<td class=3D"polish_separator" style=3D"border-collapse:collapse; border-bo=
+ttom:1px solid #eee; height:1px; width:140px" height=3D"1" width=3D"140"></=
+td>
+<td style=3D"border-collapse:collapse"></td>
+</tr></tbody></table>
+<table class=3D"story_wrapper" cellspacing=3D"0" border=3D"0" style=3D"bord=
+er-collapse:collapse; mso-table-lspace:0; mso-table-rspace:0; width:100%" w=
+idth=3D"100%"><tbody><tr><td class=3D"story " style=3D"border-collapse:coll=
+apse; border-bottom:0; padding:20px 0"><table class=3D"digest_story_wrapper=
+" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"border-collapse=
+:collapse; mso-table-lspace:0; mso-table-rspace:0; width:100%" width=3D"100=
+%"><tbody>
+<tr><td class=3D"reason" style=3D"border-collapse:collapse; padding-bottom:=
+4px"><table class=3D"digest_reason" cellpadding=3D"0" cellspacing=3D"0" bor=
+der=3D"0" style=3D"border-collapse:collapse; mso-table-lspace:0; mso-table-=
+rspace:0"><tbody><tr><td valign=3D"top" style=3D"border-collapse:collapse">=
+</td></tr></tbody></table></td></tr>
+<tr><td style=3D"border-collapse:collapse"><a class=3D"question_text" href=
+=3D"https://www.quora.com/qemail/track_click?al_imp=3DeyJ0eXBlIjogMzMsICJoY=
+XNoIjogIjB8M3wxfDI3ODQ5NzQyOSJ9&amp;al_pri=3D1&amp;aoid=3DXS04I06dNsd&amp;a=
+oty=3D2&amp;aty=3D4&amp;cp=3D3&amp;ct=3D1651372364534283&amp;et=3D130&amp;i=
+d=3Df6bab8c78e9445dabf1f515323ccf1ab&amp;source=3D7&amp;src=3D1&amp;st=3D16=
+51372364538456&amp;stories=3D1_bTVSFX0kXdS%7C1_M61FRgBQwE6%7C1_1CgiTWAhgwK%=
+7C1_qa9NFVplQBu%7C1_8xpuDUvG7tK%7C1_XxoCl1omqQP%7C1_dFizM0LLMAP%7C1_4D4E1nG=
+isR2%7C1_a0C7E9lKlmT%7C1_jJqhckgEMni&amp;ty=3D1&amp;ty_data=3D1CgiTWAhgwK&a=
+mp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"color:#333; text-decoration:none; =
+display:block; font-size:19px; font-weight:bold; letter-spacing:-0.5px; lin=
+e-height:1.4"><span class=3D"rendered_qtext" style=3D"word-break:break-word=
+">Is the 45% of NTSC color accuracy good for image editing?</span></a></td>=
+</tr>
+<tr><td style=3D"border-collapse:collapse"><table class=3D"item_content_wra=
+pper" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"border-coll=
+apse:collapse; mso-table-lspace:0; mso-table-rspace:0; width:100%" width=3D=
+"100%"><tbody>
+<tr><td class=3D"content_header metadata" style=3D"border-collapse:collapse=
+; padding:8px 0"><table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" st=
+yle=3D"border-collapse:collapse; mso-table-lspace:0; mso-table-rspace:0"><t=
+body><tr>
+<td class=3D"content_header_photo" style=3D"border-collapse:collapse; verti=
+cal-align:top" valign=3D"top"><a href=3D"https://www.quora.com/qemail/track=
+_click?aoid=3DLYkizBLfT6m&amp;aoty=3D3&amp;aty=3D4&amp;cp=3D3&amp;ct=3D1651=
+372364534283&amp;et=3D130&amp;id=3Df6bab8c78e9445dabf1f515323ccf1ab&amp;sou=
+rce=3D7&amp;src=3D1&amp;st=3D1651372364538456&amp;stories=3D1_bTVSFX0kXdS%7=
+C1_M61FRgBQwE6%7C1_1CgiTWAhgwK%7C1_qa9NFVplQBu%7C1_8xpuDUvG7tK%7C1_XxoCl1om=
+qQP%7C1_dFizM0LLMAP%7C1_4D4E1nGisR2%7C1_a0C7E9lKlmT%7C1_jJqhckgEMni&amp;ty=
+=3D1&amp;ty_data=3D1CgiTWAhgwK&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"co=
+lor:#2b6dad; text-decoration:none"><div id=3D"w6uXuCPk100">
+<div class=3D"hover_menu hidden white_bg show_nub" id=3D"__w2_w6uXuCPk101_m=
+enu"><div class=3D"hover_menu_contents" id=3D"__w2_w6uXuCPk101_menu_content=
+s"> </div></div>
+<span class=3D"photo_tooltip HoverMenu IdentityPhoto Photo" id=3D"__w2_w6uX=
+uCPk101_link"><img class=3D"profile_photo_img" src=3D"https://qph.fs.quorac=
+dn.net/main-thumb-1472713-50-3uX18zHFu5jceOFCCCJoJvuMsNmdidIZ.jpeg" alt=3D"=
+Konstantinos Konstantinides" style=3D"-ms-interpolation-mode:bicubic; outli=
+ne:0; text-decoration:none; border:0; border-radius:100px; display:block; h=
+eight:40px; width:40px; border-style:none" height=3D"40" width=3D"40"></spa=
+n>
+</div></a></td>
+<td class=3D"content_header_text" style=3D"border-collapse:collapse; paddin=
+g-left:8px; color:#333"><table cellpadding=3D"0" cellspacing=3D"0" border=
+=3D"0" style=3D"border-collapse:collapse; mso-table-lspace:0; mso-table-rsp=
+ace:0"><tbody>
+<tr><td style=3D"border-collapse:collapse">
+<a class=3D"user_link" href=3D"https://www.quora.com/qemail/track_click?aoi=
+d=3DLYkizBLfT6m&amp;aoty=3D3&amp;aty=3D4&amp;cp=3D3&amp;ct=3D16513723645342=
+83&amp;et=3D130&amp;id=3Df6bab8c78e9445dabf1f515323ccf1ab&amp;source=3D7&am=
+p;src=3D1&amp;st=3D1651372364538456&amp;stories=3D1_bTVSFX0kXdS%7C1_M61FRgB=
+QwE6%7C1_1CgiTWAhgwK%7C1_qa9NFVplQBu%7C1_8xpuDUvG7tK%7C1_XxoCl1omqQP%7C1_dF=
+izM0LLMAP%7C1_4D4E1nGisR2%7C1_a0C7E9lKlmT%7C1_jJqhckgEMni&amp;ty=3D1&amp;ty=
+_data=3D1CgiTWAhgwK&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"color:#333; t=
+ext-decoration:none; font-weight:bold; line-height:1.4; font-size:15px">Kon=
+stantinos Konstantinides</a><span style=3D"font-size:15px; line-height:1.4"=
+>, Worked on image and video processing</span>
+</td></tr>
+<tr><td class=3D"answer_details" style=3D"border-collapse:collapse; color:#=
+999; font-size:13px"><a href=3D"https://www.quora.com/qemail/track_click?ao=
+id=3D1CgiTWAhgwK&amp;aoty=3D1&amp;aty=3D4&amp;cp=3D3&amp;ct=3D1651372364534=
+283&amp;et=3D130&amp;id=3Df6bab8c78e9445dabf1f515323ccf1ab&amp;source=3D7&a=
+mp;src=3D1&amp;st=3D1651372364538456&amp;stories=3D1_bTVSFX0kXdS%7C1_M61FRg=
+BQwE6%7C1_1CgiTWAhgwK%7C1_qa9NFVplQBu%7C1_8xpuDUvG7tK%7C1_XxoCl1omqQP%7C1_d=
+FizM0LLMAP%7C1_4D4E1nGisR2%7C1_a0C7E9lKlmT%7C1_jJqhckgEMni&amp;ty=3D1&amp;t=
+y_data=3D1CgiTWAhgwK&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"color:#999; =
+text-decoration:none">Written Apr 25, 2021</a></td></tr>
+</tbody></table></td>
+</tr></tbody></table></td></tr>
+<tr><td class=3D"item_content" style=3D'border-collapse:collapse; color:#33=
+3; display:block; font-family:-apple-system, BlinkMacSystemFont, "Segoe UI"=
+, Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif; fon=
+t-size:15px; line-height:1.4'><a href=3D"https://www.quora.com/qemail/track=
+_click?al_imp=3DeyJ0eXBlIjogMzMsICJoYXNoIjogIjB8M3wxfDI3ODQ5NzQyOSJ9&amp;al=
+_pri=3D0&amp;aoid=3D1CgiTWAhgwK&amp;aoty=3D1&amp;aty=3D4&amp;cp=3D3&amp;ct=
+=3D1651372364534283&amp;et=3D130&amp;id=3Df6bab8c78e9445dabf1f515323ccf1ab&=
+amp;source=3D7&amp;src=3D1&amp;st=3D1651372364538456&amp;stories=3D1_bTVSFX=
+0kXdS%7C1_M61FRgBQwE6%7C1_1CgiTWAhgwK%7C1_qa9NFVplQBu%7C1_8xpuDUvG7tK%7C1_X=
+xoCl1omqQP%7C1_dFizM0LLMAP%7C1_4D4E1nGisR2%7C1_a0C7E9lKlmT%7C1_jJqhckgEMni&=
+amp;ty=3D1&amp;ty_data=3D1CgiTWAhgwK&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=
+=3D"color:#333; text-decoration:none"><div id=3D"w6uXuCPk66"><div class=3D"=
+truncated_q_text truncated_para_breaks TruncatedQText TruncatedAnswer Trunc=
+atedAnswerForDigestEmail TruncatedAnswerForEmail" id=3D"__w2_w6uXuCPk67_tru=
+ncated" style=3D"line-height:1.6">
+<span class=3D"rendered_qtext" style=3D"word-break:break-word"><p class=3D"=
+qtext_para u-ltr u-text-align--start" style=3D"margin:1em 0; line-height:1.=
+6">The term 45% NTSC does not refer to color =E2=80=9Caccuracy,=E2=80=9D bu=
+t to color gamut.</p>
+<p class=3D"qtext_para u-ltr u-text-align--start" style=3D"margin:1em 0; li=
+ne-height:1.6">For example, you can have a monitor with wider color gamut, =
+but if your monitor is not calibrated, ...</p></span> <a class=3D"read_more=
+_blue" href=3D"https://www.quora.com/qemail/track_click?al_imp=3DeyJ0eXBlIj=
+ogMzMsICJoYXNoIjogIjB8M3wxfDI3ODQ5NzQyOSJ9&amp;al_pri=3D8&amp;aoid=3D1CgiTW=
+AhgwK&amp;aoty=3D1&amp;aty=3D4&amp;cp=3D3&amp;ct=3D1651372364534283&amp;et=
+=3D130&amp;id=3Df6bab8c78e9445dabf1f515323ccf1ab&amp;source=3D7&amp;src=3D1=
+&amp;st=3D1651372364538456&amp;stories=3D1_bTVSFX0kXdS%7C1_M61FRgBQwE6%7C1_=
+1CgiTWAhgwK%7C1_qa9NFVplQBu%7C1_8xpuDUvG7tK%7C1_XxoCl1omqQP%7C1_dFizM0LLMAP=
+%7C1_4D4E1nGisR2%7C1_a0C7E9lKlmT%7C1_jJqhckgEMni&amp;ty=3D1&amp;ty_data=3D1=
+CgiTWAhgwK&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"color:#168de9; text-de=
+coration:none">Read More =C2=BB</a>
+</div></div>
+<div class=3D"non_quora_share_embed_wrapper"><div class=3D"item_metadata"><=
+a href=3D"https://www.quora.com/qemail/track_click?al_imp=3DeyJ0eXBlIjogMzM=
+sICJoYXNoIjogIjB8M3wxfDI3ODQ5NzQyOSJ9&amp;al_pri=3D0&amp;aoid=3D1CgiTWAhgwK=
+&amp;aoty=3D1&amp;aty=3D4&amp;cp=3D3&amp;ct=3D1651372364534283&amp;et=3D130=
+&amp;id=3Df6bab8c78e9445dabf1f515323ccf1ab&amp;source=3D7&amp;src=3D1&amp;s=
+t=3D1651372364538456&amp;stories=3D1_bTVSFX0kXdS%7C1_M61FRgBQwE6%7C1_1CgiTW=
+AhgwK%7C1_qa9NFVplQBu%7C1_8xpuDUvG7tK%7C1_XxoCl1omqQP%7C1_dFizM0LLMAP%7C1_4=
+D4E1nGisR2%7C1_a0C7E9lKlmT%7C1_jJqhckgEMni&amp;ty=3D1&amp;ty_data=3D1CgiTWA=
+hgwK&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"color:#2b6dad; text-decorati=
+on:none"></a></div></div></a></td></tr>
+</tbody></table></td></tr>
+</tbody></table></td></tr></tbody></table>
+</div></div>
+<div class=3D"no_para_breaks"><div data-clog-trigger=3D"impression" data-cl=
+og-metadata=3D'{"action_log_target": {"type": 33, "hash": "0|4|1|266049444"=
+}}' data-clog-event-type=3D"ActionLogImpression" id=3D"__w2_w6uXuCPk25_acti=
+onable">
+<table class=3D"polish_separator_wrapper" style=3D"border-collapse:collapse=
+; mso-table-lspace:0; mso-table-rspace:0; border:0; cellpadding:0; width:10=
+0%" width=3D"100%"><tbody><tr>
+<td style=3D"border-collapse:collapse"></td>
+<td class=3D"polish_separator" style=3D"border-collapse:collapse; border-bo=
+ttom:1px solid #eee; height:1px; width:140px" height=3D"1" width=3D"140"></=
+td>
+<td style=3D"border-collapse:collapse"></td>
+</tr></tbody></table>
+<table class=3D"story_wrapper" cellspacing=3D"0" border=3D"0" style=3D"bord=
+er-collapse:collapse; mso-table-lspace:0; mso-table-rspace:0; width:100%" w=
+idth=3D"100%"><tbody><tr><td class=3D"story " style=3D"border-collapse:coll=
+apse; border-bottom:0; padding:20px 0"><table class=3D"digest_story_wrapper=
+" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"border-collapse=
+:collapse; mso-table-lspace:0; mso-table-rspace:0; width:100%" width=3D"100=
+%"><tbody>
+<tr><td class=3D"reason" style=3D"border-collapse:collapse; padding-bottom:=
+4px"><table class=3D"digest_reason" cellpadding=3D"0" cellspacing=3D"0" bor=
+der=3D"0" style=3D"border-collapse:collapse; mso-table-lspace:0; mso-table-=
+rspace:0"><tbody><tr><td valign=3D"top" style=3D"border-collapse:collapse">=
+</td></tr></tbody></table></td></tr>
+<tr><td style=3D"border-collapse:collapse"><a class=3D"question_text" href=
+=3D"https://www.quora.com/qemail/track_click?al_imp=3DeyJ0eXBlIjogMzMsICJoY=
+XNoIjogIjB8NHwxfDI2NjA0OTQ0NCJ9&amp;al_pri=3D1&amp;aoid=3DjFtKE6clOvq&amp;a=
+oty=3D2&amp;aty=3D4&amp;cp=3D4&amp;ct=3D1651372364534283&amp;et=3D130&amp;i=
+d=3Df6bab8c78e9445dabf1f515323ccf1ab&amp;source=3D7&amp;src=3D1&amp;st=3D16=
+51372364538456&amp;stories=3D1_bTVSFX0kXdS%7C1_M61FRgBQwE6%7C1_1CgiTWAhgwK%=
+7C1_qa9NFVplQBu%7C1_8xpuDUvG7tK%7C1_XxoCl1omqQP%7C1_dFizM0LLMAP%7C1_4D4E1nG=
+isR2%7C1_a0C7E9lKlmT%7C1_jJqhckgEMni&amp;ty=3D1&amp;ty_data=3Dqa9NFVplQBu&a=
+mp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"color:#333; text-decoration:none; =
+display:block; font-size:19px; font-weight:bold; letter-spacing:-0.5px; lin=
+e-height:1.4"><span class=3D"rendered_qtext" style=3D"word-break:break-word=
+">Is an NTSC 45% display good enough for a mid-range laptop?</span></a></td=
+></tr>
+<tr><td style=3D"border-collapse:collapse"><table class=3D"item_content_wra=
+pper" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"border-coll=
+apse:collapse; mso-table-lspace:0; mso-table-rspace:0; width:100%" width=3D=
+"100%"><tbody>
+<tr><td class=3D"content_header metadata" style=3D"border-collapse:collapse=
+; padding:8px 0"><table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" st=
+yle=3D"border-collapse:collapse; mso-table-lspace:0; mso-table-rspace:0"><t=
+body><tr>
+<td class=3D"content_header_photo" style=3D"border-collapse:collapse; verti=
+cal-align:top" valign=3D"top"><a href=3D"https://www.quora.com/qemail/track=
+_click?aoid=3DYFnoZCItAQH&amp;aoty=3D3&amp;aty=3D4&amp;cp=3D4&amp;ct=3D1651=
+372364534283&amp;et=3D130&amp;id=3Df6bab8c78e9445dabf1f515323ccf1ab&amp;sou=
+rce=3D7&amp;src=3D1&amp;st=3D1651372364538456&amp;stories=3D1_bTVSFX0kXdS%7=
+C1_M61FRgBQwE6%7C1_1CgiTWAhgwK%7C1_qa9NFVplQBu%7C1_8xpuDUvG7tK%7C1_XxoCl1om=
+qQP%7C1_dFizM0LLMAP%7C1_4D4E1nGisR2%7C1_a0C7E9lKlmT%7C1_jJqhckgEMni&amp;ty=
+=3D1&amp;ty_data=3Dqa9NFVplQBu&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"co=
+lor:#2b6dad; text-decoration:none"><div id=3D"w6uXuCPk107">
+<div class=3D"hover_menu hidden white_bg show_nub" id=3D"__w2_w6uXuCPk108_m=
+enu"><div class=3D"hover_menu_contents" id=3D"__w2_w6uXuCPk108_menu_content=
+s"> </div></div>
+<span class=3D"photo_tooltip HoverMenu IdentityPhoto Photo" id=3D"__w2_w6uX=
+uCPk108_link"><img class=3D"profile_photo_img" src=3D"https://qph.fs.quorac=
+dn.net/main-thumb-791255250-50-yhzxshgkxwmrlqftqpdvffiepbartdwm.jpeg" alt=
+=3D"Robert Cox" style=3D"-ms-interpolation-mode:bicubic; outline:0; text-de=
+coration:none; border:0; border-radius:100px; display:block; height:40px; w=
+idth:40px; border-style:none" height=3D"40" width=3D"40"></span>
+</div></a></td>
+<td class=3D"content_header_text" style=3D"border-collapse:collapse; paddin=
+g-left:8px; color:#333"><table cellpadding=3D"0" cellspacing=3D"0" border=
+=3D"0" style=3D"border-collapse:collapse; mso-table-lspace:0; mso-table-rsp=
+ace:0"><tbody>
+<tr><td style=3D"border-collapse:collapse"><a class=3D"user_link" href=3D"h=
+ttps://www.quora.com/qemail/track_click?aoid=3DYFnoZCItAQH&amp;aoty=3D3&amp=
+;aty=3D4&amp;cp=3D4&amp;ct=3D1651372364534283&amp;et=3D130&amp;id=3Df6bab8c=
+78e9445dabf1f515323ccf1ab&amp;source=3D7&amp;src=3D1&amp;st=3D1651372364538=
+456&amp;stories=3D1_bTVSFX0kXdS%7C1_M61FRgBQwE6%7C1_1CgiTWAhgwK%7C1_qa9NFVp=
+lQBu%7C1_8xpuDUvG7tK%7C1_XxoCl1omqQP%7C1_dFizM0LLMAP%7C1_4D4E1nGisR2%7C1_a0=
+C7E9lKlmT%7C1_jJqhckgEMni&amp;ty=3D1&amp;ty_data=3Dqa9NFVplQBu&amp;uid=3Dm3=
+6BZ4XFnST&amp;v=3D0" style=3D"color:#333; text-decoration:none; font-weight=
+:bold; line-height:1.4; font-size:15px">Robert Cox</a></td></tr>
+<tr><td class=3D"answer_details" style=3D"border-collapse:collapse; color:#=
+999; font-size:13px"><a href=3D"https://www.quora.com/qemail/track_click?ao=
+id=3Dqa9NFVplQBu&amp;aoty=3D1&amp;aty=3D4&amp;cp=3D4&amp;ct=3D1651372364534=
+283&amp;et=3D130&amp;id=3Df6bab8c78e9445dabf1f515323ccf1ab&amp;source=3D7&a=
+mp;src=3D1&amp;st=3D1651372364538456&amp;stories=3D1_bTVSFX0kXdS%7C1_M61FRg=
+BQwE6%7C1_1CgiTWAhgwK%7C1_qa9NFVplQBu%7C1_8xpuDUvG7tK%7C1_XxoCl1omqQP%7C1_d=
+FizM0LLMAP%7C1_4D4E1nGisR2%7C1_a0C7E9lKlmT%7C1_jJqhckgEMni&amp;ty=3D1&amp;t=
+y_data=3Dqa9NFVplQBu&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"color:#999; =
+text-decoration:none">Written Feb 17, 2021</a></td></tr>
+</tbody></table></td>
+</tr></tbody></table></td></tr>
+<tr><td class=3D"item_content" style=3D'border-collapse:collapse; color:#33=
+3; display:block; font-family:-apple-system, BlinkMacSystemFont, "Segoe UI"=
+, Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif; fon=
+t-size:15px; line-height:1.4'><a href=3D"https://www.quora.com/qemail/track=
+_click?al_imp=3DeyJ0eXBlIjogMzMsICJoYXNoIjogIjB8NHwxfDI2NjA0OTQ0NCJ9&amp;al=
+_pri=3D0&amp;aoid=3Dqa9NFVplQBu&amp;aoty=3D1&amp;aty=3D4&amp;cp=3D4&amp;ct=
+=3D1651372364534283&amp;et=3D130&amp;id=3Df6bab8c78e9445dabf1f515323ccf1ab&=
+amp;source=3D7&amp;src=3D1&amp;st=3D1651372364538456&amp;stories=3D1_bTVSFX=
+0kXdS%7C1_M61FRgBQwE6%7C1_1CgiTWAhgwK%7C1_qa9NFVplQBu%7C1_8xpuDUvG7tK%7C1_X=
+xoCl1omqQP%7C1_dFizM0LLMAP%7C1_4D4E1nGisR2%7C1_a0C7E9lKlmT%7C1_jJqhckgEMni&=
+amp;ty=3D1&amp;ty_data=3Dqa9NFVplQBu&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=
+=3D"color:#333; text-decoration:none"><div id=3D"w6uXuCPk68"><div class=3D"=
+truncated_q_text truncated_para_breaks TruncatedQText TruncatedAnswer Trunc=
+atedAnswerForDigestEmail TruncatedAnswerForEmail" id=3D"__w2_w6uXuCPk69_tru=
+ncated" style=3D"line-height:1.6">
+<span class=3D"rendered_qtext" style=3D"word-break:break-word"><p class=3D"=
+qtext_para u-ltr u-text-align--start" style=3D"margin:1em 0; line-height:1.=
+6">You issue will be what you want it for.</p>
+<p class=3D"qtext_para u-ltr u-text-align--start" style=3D"margin:1em 0; li=
+ne-height:1.6">Photos will not be great on it and any thought of editing an=
+y photo needs to come out of your head. Need it for only office work? Wor..=
+.</p></span> <a class=3D"read_more_blue" href=3D"https://www.quora.com/qema=
+il/track_click?al_imp=3DeyJ0eXBlIjogMzMsICJoYXNoIjogIjB8NHwxfDI2NjA0OTQ0NCJ=
+9&amp;al_pri=3D8&amp;aoid=3Dqa9NFVplQBu&amp;aoty=3D1&amp;aty=3D4&amp;cp=3D4=
+&amp;ct=3D1651372364534283&amp;et=3D130&amp;id=3Df6bab8c78e9445dabf1f515323=
+ccf1ab&amp;source=3D7&amp;src=3D1&amp;st=3D1651372364538456&amp;stories=3D1=
+_bTVSFX0kXdS%7C1_M61FRgBQwE6%7C1_1CgiTWAhgwK%7C1_qa9NFVplQBu%7C1_8xpuDUvG7t=
+K%7C1_XxoCl1omqQP%7C1_dFizM0LLMAP%7C1_4D4E1nGisR2%7C1_a0C7E9lKlmT%7C1_jJqhc=
+kgEMni&amp;ty=3D1&amp;ty_data=3Dqa9NFVplQBu&amp;uid=3Dm36BZ4XFnST&amp;v=3D0=
+" style=3D"color:#168de9; text-decoration:none">Read More =C2=BB</a>
+</div></div>
+<div class=3D"non_quora_share_embed_wrapper"><div class=3D"item_metadata"><=
+a href=3D"https://www.quora.com/qemail/track_click?al_imp=3DeyJ0eXBlIjogMzM=
+sICJoYXNoIjogIjB8NHwxfDI2NjA0OTQ0NCJ9&amp;al_pri=3D0&amp;aoid=3Dqa9NFVplQBu=
+&amp;aoty=3D1&amp;aty=3D4&amp;cp=3D4&amp;ct=3D1651372364534283&amp;et=3D130=
+&amp;id=3Df6bab8c78e9445dabf1f515323ccf1ab&amp;source=3D7&amp;src=3D1&amp;s=
+t=3D1651372364538456&amp;stories=3D1_bTVSFX0kXdS%7C1_M61FRgBQwE6%7C1_1CgiTW=
+AhgwK%7C1_qa9NFVplQBu%7C1_8xpuDUvG7tK%7C1_XxoCl1omqQP%7C1_dFizM0LLMAP%7C1_4=
+D4E1nGisR2%7C1_a0C7E9lKlmT%7C1_jJqhckgEMni&amp;ty=3D1&amp;ty_data=3Dqa9NFVp=
+lQBu&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"color:#2b6dad; text-decorati=
+on:none"></a></div></div></a></td></tr>
+</tbody></table></td></tr>
+</tbody></table></td></tr></tbody></table>
+</div></div>
+<div class=3D"no_para_breaks"><div data-clog-trigger=3D"impression" data-cl=
+og-metadata=3D'{"action_log_target": {"type": 33, "hash": "0|5|1|246592709"=
+}}' data-clog-event-type=3D"ActionLogImpression" id=3D"__w2_w6uXuCPk26_acti=
+onable">
+<table class=3D"polish_separator_wrapper" style=3D"border-collapse:collapse=
+; mso-table-lspace:0; mso-table-rspace:0; border:0; cellpadding:0; width:10=
+0%" width=3D"100%"><tbody><tr>
+<td style=3D"border-collapse:collapse"></td>
+<td class=3D"polish_separator" style=3D"border-collapse:collapse; border-bo=
+ttom:1px solid #eee; height:1px; width:140px" height=3D"1" width=3D"140"></=
+td>
+<td style=3D"border-collapse:collapse"></td>
+</tr></tbody></table>
+<table class=3D"story_wrapper" cellspacing=3D"0" border=3D"0" style=3D"bord=
+er-collapse:collapse; mso-table-lspace:0; mso-table-rspace:0; width:100%" w=
+idth=3D"100%"><tbody><tr><td class=3D"story " style=3D"border-collapse:coll=
+apse; border-bottom:0; padding:20px 0"><table class=3D"digest_story_wrapper=
+" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"border-collapse=
+:collapse; mso-table-lspace:0; mso-table-rspace:0; width:100%" width=3D"100=
+%"><tbody>
+<tr><td class=3D"reason" style=3D"border-collapse:collapse; padding-bottom:=
+4px"><table class=3D"digest_reason" cellpadding=3D"0" cellspacing=3D"0" bor=
+der=3D"0" style=3D"border-collapse:collapse; mso-table-lspace:0; mso-table-=
+rspace:0"><tbody><tr><td valign=3D"top" style=3D"border-collapse:collapse">=
+</td></tr></tbody></table></td></tr>
+<tr><td style=3D"border-collapse:collapse"><a class=3D"question_text" href=
+=3D"https://www.quora.com/qemail/track_click?al_imp=3DeyJ0eXBlIjogMzMsICJoY=
+XNoIjogIjB8NXwxfDI0NjU5MjcwOSJ9&amp;al_pri=3D1&amp;aoid=3Djq1i4n4RWhA&amp;a=
+oty=3D2&amp;aty=3D4&amp;cp=3D5&amp;ct=3D1651372364534283&amp;et=3D130&amp;i=
+d=3Df6bab8c78e9445dabf1f515323ccf1ab&amp;source=3D7&amp;src=3D1&amp;st=3D16=
+51372364538456&amp;stories=3D1_bTVSFX0kXdS%7C1_M61FRgBQwE6%7C1_1CgiTWAhgwK%=
+7C1_qa9NFVplQBu%7C1_8xpuDUvG7tK%7C1_XxoCl1omqQP%7C1_dFizM0LLMAP%7C1_4D4E1nG=
+isR2%7C1_a0C7E9lKlmT%7C1_jJqhckgEMni&amp;ty=3D1&amp;ty_data=3D8xpuDUvG7tK&a=
+mp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"color:#333; text-decoration:none; =
+display:block; font-size:19px; font-weight:bold; letter-spacing:-0.5px; lin=
+e-height:1.4"><span class=3D"rendered_qtext" style=3D"word-break:break-word=
+">I recently bought a laptop and noticed that it has 45 NTSC. I want to lea=
+rn graphic designing/digital art and 3D modelling. Will it be okay to use t=
+his color range as a beginner?</span></a></td></tr>
+<tr><td style=3D"border-collapse:collapse"><table class=3D"item_content_wra=
+pper" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"border-coll=
+apse:collapse; mso-table-lspace:0; mso-table-rspace:0; width:100%" width=3D=
+"100%"><tbody>
+<tr><td class=3D"content_header metadata" style=3D"border-collapse:collapse=
+; padding:8px 0"><table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" st=
+yle=3D"border-collapse:collapse; mso-table-lspace:0; mso-table-rspace:0"><t=
+body><tr>
+<td class=3D"content_header_photo" style=3D"border-collapse:collapse; verti=
+cal-align:top" valign=3D"top"><a href=3D"https://www.quora.com/qemail/track=
+_click?aoid=3Dbh3IOTk9Cfi&amp;aoty=3D3&amp;aty=3D4&amp;cp=3D5&amp;ct=3D1651=
+372364534283&amp;et=3D130&amp;id=3Df6bab8c78e9445dabf1f515323ccf1ab&amp;sou=
+rce=3D7&amp;src=3D1&amp;st=3D1651372364538456&amp;stories=3D1_bTVSFX0kXdS%7=
+C1_M61FRgBQwE6%7C1_1CgiTWAhgwK%7C1_qa9NFVplQBu%7C1_8xpuDUvG7tK%7C1_XxoCl1om=
+qQP%7C1_dFizM0LLMAP%7C1_4D4E1nGisR2%7C1_a0C7E9lKlmT%7C1_jJqhckgEMni&amp;ty=
+=3D1&amp;ty_data=3D8xpuDUvG7tK&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"co=
+lor:#2b6dad; text-decoration:none"><div id=3D"w6uXuCPk114">
+<div class=3D"hover_menu hidden white_bg show_nub" id=3D"__w2_w6uXuCPk115_m=
+enu"><div class=3D"hover_menu_contents" id=3D"__w2_w6uXuCPk115_menu_content=
+s"> </div></div>
+<span class=3D"photo_tooltip HoverMenu IdentityPhoto Photo" id=3D"__w2_w6uX=
+uCPk115_link"><img class=3D"profile_photo_img" src=3D"https://qph.fs.quorac=
+dn.net/main-thumb-1181460362-50-sestthejuaonrdmhkicnjnjeixagognw.jpeg" alt=
+=3D"Naman Saini" style=3D"-ms-interpolation-mode:bicubic; outline:0; text-d=
+ecoration:none; border:0; border-radius:100px; display:block; height:40px; =
+width:40px; border-style:none" height=3D"40" width=3D"40"></span>
+</div></a></td>
+<td class=3D"content_header_text" style=3D"border-collapse:collapse; paddin=
+g-left:8px; color:#333"><table cellpadding=3D"0" cellspacing=3D"0" border=
+=3D"0" style=3D"border-collapse:collapse; mso-table-lspace:0; mso-table-rsp=
+ace:0"><tbody>
+<tr><td style=3D"border-collapse:collapse">
+<a class=3D"user_link" href=3D"https://www.quora.com/qemail/track_click?aoi=
+d=3Dbh3IOTk9Cfi&amp;aoty=3D3&amp;aty=3D4&amp;cp=3D5&amp;ct=3D16513723645342=
+83&amp;et=3D130&amp;id=3Df6bab8c78e9445dabf1f515323ccf1ab&amp;source=3D7&am=
+p;src=3D1&amp;st=3D1651372364538456&amp;stories=3D1_bTVSFX0kXdS%7C1_M61FRgB=
+QwE6%7C1_1CgiTWAhgwK%7C1_qa9NFVplQBu%7C1_8xpuDUvG7tK%7C1_XxoCl1omqQP%7C1_dF=
+izM0LLMAP%7C1_4D4E1nGisR2%7C1_a0C7E9lKlmT%7C1_jJqhckgEMni&amp;ty=3D1&amp;ty=
+_data=3D8xpuDUvG7tK&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"color:#333; t=
+ext-decoration:none; font-weight:bold; line-height:1.4; font-size:15px">Nam=
+an Saini</a><span style=3D"font-size:15px; line-height:1.4">, I'm 15 and do=
+ing graphic designing from last 1 year</span>
+</td></tr>
+<tr><td class=3D"answer_details" style=3D"border-collapse:collapse; color:#=
+999; font-size:13px"><a href=3D"https://www.quora.com/qemail/track_click?ao=
+id=3D8xpuDUvG7tK&amp;aoty=3D1&amp;aty=3D4&amp;cp=3D5&amp;ct=3D1651372364534=
+283&amp;et=3D130&amp;id=3Df6bab8c78e9445dabf1f515323ccf1ab&amp;source=3D7&a=
+mp;src=3D1&amp;st=3D1651372364538456&amp;stories=3D1_bTVSFX0kXdS%7C1_M61FRg=
+BQwE6%7C1_1CgiTWAhgwK%7C1_qa9NFVplQBu%7C1_8xpuDUvG7tK%7C1_XxoCl1omqQP%7C1_d=
+FizM0LLMAP%7C1_4D4E1nGisR2%7C1_a0C7E9lKlmT%7C1_jJqhckgEMni&amp;ty=3D1&amp;t=
+y_data=3D8xpuDUvG7tK&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"color:#999; =
+text-decoration:none">Written Oct 28, 2020</a></td></tr>
+</tbody></table></td>
+</tr></tbody></table></td></tr>
+<tr><td class=3D"item_content" style=3D'border-collapse:collapse; color:#33=
+3; display:block; font-family:-apple-system, BlinkMacSystemFont, "Segoe UI"=
+, Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif; fon=
+t-size:15px; line-height:1.4'><a href=3D"https://www.quora.com/qemail/track=
+_click?al_imp=3DeyJ0eXBlIjogMzMsICJoYXNoIjogIjB8NXwxfDI0NjU5MjcwOSJ9&amp;al=
+_pri=3D0&amp;aoid=3D8xpuDUvG7tK&amp;aoty=3D1&amp;aty=3D4&amp;cp=3D5&amp;ct=
+=3D1651372364534283&amp;et=3D130&amp;id=3Df6bab8c78e9445dabf1f515323ccf1ab&=
+amp;source=3D7&amp;src=3D1&amp;st=3D1651372364538456&amp;stories=3D1_bTVSFX=
+0kXdS%7C1_M61FRgBQwE6%7C1_1CgiTWAhgwK%7C1_qa9NFVplQBu%7C1_8xpuDUvG7tK%7C1_X=
+xoCl1omqQP%7C1_dFizM0LLMAP%7C1_4D4E1nGisR2%7C1_a0C7E9lKlmT%7C1_jJqhckgEMni&=
+amp;ty=3D1&amp;ty_data=3D8xpuDUvG7tK&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=
+=3D"color:#333; text-decoration:none"><div id=3D"w6uXuCPk70"><div class=3D"=
+truncated_q_text truncated_para_breaks TruncatedQText TruncatedAnswer Trunc=
+atedAnswerForDigestEmail TruncatedAnswerForEmail" id=3D"__w2_w6uXuCPk71_tru=
+ncated" style=3D"line-height:1.6">
+<span class=3D"rendered_qtext" style=3D"word-break:break-word"><p class=3D"=
+qtext_para u-ltr u-text-align--start" style=3D"margin:1em 0; line-height:1.=
+6">Absolutely yes, start with what you have.</p>
+<p class=3D"qtext_para u-ltr u-text-align--start" style=3D"margin:1em 0; li=
+ne-height:1.6">Even I would say you should not take color range so seriousl=
+y just at the begging. You must first learn how make a graphic element ...<=
+/p></span> <a class=3D"read_more_blue" href=3D"https://www.quora.com/qemail=
+/track_click?al_imp=3DeyJ0eXBlIjogMzMsICJoYXNoIjogIjB8NXwxfDI0NjU5MjcwOSJ9&=
+amp;al_pri=3D8&amp;aoid=3D8xpuDUvG7tK&amp;aoty=3D1&amp;aty=3D4&amp;cp=3D5&a=
+mp;ct=3D1651372364534283&amp;et=3D130&amp;id=3Df6bab8c78e9445dabf1f515323cc=
+f1ab&amp;source=3D7&amp;src=3D1&amp;st=3D1651372364538456&amp;stories=3D1_b=
+TVSFX0kXdS%7C1_M61FRgBQwE6%7C1_1CgiTWAhgwK%7C1_qa9NFVplQBu%7C1_8xpuDUvG7tK%=
+7C1_XxoCl1omqQP%7C1_dFizM0LLMAP%7C1_4D4E1nGisR2%7C1_a0C7E9lKlmT%7C1_jJqhckg=
+EMni&amp;ty=3D1&amp;ty_data=3D8xpuDUvG7tK&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" =
+style=3D"color:#168de9; text-decoration:none">Read More =C2=BB</a>
+</div></div>
+<div class=3D"non_quora_share_embed_wrapper"><div class=3D"item_metadata"><=
+a href=3D"https://www.quora.com/qemail/track_click?al_imp=3DeyJ0eXBlIjogMzM=
+sICJoYXNoIjogIjB8NXwxfDI0NjU5MjcwOSJ9&amp;al_pri=3D0&amp;aoid=3D8xpuDUvG7tK=
+&amp;aoty=3D1&amp;aty=3D4&amp;cp=3D5&amp;ct=3D1651372364534283&amp;et=3D130=
+&amp;id=3Df6bab8c78e9445dabf1f515323ccf1ab&amp;source=3D7&amp;src=3D1&amp;s=
+t=3D1651372364538456&amp;stories=3D1_bTVSFX0kXdS%7C1_M61FRgBQwE6%7C1_1CgiTW=
+AhgwK%7C1_qa9NFVplQBu%7C1_8xpuDUvG7tK%7C1_XxoCl1omqQP%7C1_dFizM0LLMAP%7C1_4=
+D4E1nGisR2%7C1_a0C7E9lKlmT%7C1_jJqhckgEMni&amp;ty=3D1&amp;ty_data=3D8xpuDUv=
+G7tK&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"color:#2b6dad; text-decorati=
+on:none"></a></div></div></a></td></tr>
+</tbody></table></td></tr>
+</tbody></table></td></tr></tbody></table>
+</div></div>
+<div class=3D"no_para_breaks"><div data-clog-trigger=3D"impression" data-cl=
+og-metadata=3D'{"action_log_target": {"type": 33, "hash": "0|6|1|180943382"=
+}}' data-clog-event-type=3D"ActionLogImpression" id=3D"__w2_w6uXuCPk27_acti=
+onable">
+<table class=3D"polish_separator_wrapper" style=3D"border-collapse:collapse=
+; mso-table-lspace:0; mso-table-rspace:0; border:0; cellpadding:0; width:10=
+0%" width=3D"100%"><tbody><tr>
+<td style=3D"border-collapse:collapse"></td>
+<td class=3D"polish_separator" style=3D"border-collapse:collapse; border-bo=
+ttom:1px solid #eee; height:1px; width:140px" height=3D"1" width=3D"140"></=
+td>
+<td style=3D"border-collapse:collapse"></td>
+</tr></tbody></table>
+<table class=3D"story_wrapper" cellspacing=3D"0" border=3D"0" style=3D"bord=
+er-collapse:collapse; mso-table-lspace:0; mso-table-rspace:0; width:100%" w=
+idth=3D"100%"><tbody><tr><td class=3D"story " style=3D"border-collapse:coll=
+apse; border-bottom:0; padding:20px 0"><table class=3D"digest_story_wrapper=
+" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"border-collapse=
+:collapse; mso-table-lspace:0; mso-table-rspace:0; width:100%" width=3D"100=
+%"><tbody>
+<tr><td class=3D"reason" style=3D"border-collapse:collapse; padding-bottom:=
+4px"><table class=3D"digest_reason" cellpadding=3D"0" cellspacing=3D"0" bor=
+der=3D"0" style=3D"border-collapse:collapse; mso-table-lspace:0; mso-table-=
+rspace:0"><tbody><tr><td valign=3D"top" style=3D"border-collapse:collapse">=
+</td></tr></tbody></table></td></tr>
+<tr><td style=3D"border-collapse:collapse"><a class=3D"question_text" href=
+=3D"https://www.quora.com/qemail/track_click?al_imp=3DeyJ0eXBlIjogMzMsICJoY=
+XNoIjogIjB8NnwxfDE4MDk0MzM4MiJ9&amp;al_pri=3D1&amp;aoid=3DdYTsb7quUp6&amp;a=
+oty=3D2&amp;aty=3D4&amp;cp=3D6&amp;ct=3D1651372364534283&amp;et=3D130&amp;i=
+d=3Df6bab8c78e9445dabf1f515323ccf1ab&amp;source=3D7&amp;src=3D1&amp;st=3D16=
+51372364538456&amp;stories=3D1_bTVSFX0kXdS%7C1_M61FRgBQwE6%7C1_1CgiTWAhgwK%=
+7C1_qa9NFVplQBu%7C1_8xpuDUvG7tK%7C1_XxoCl1omqQP%7C1_dFizM0LLMAP%7C1_4D4E1nG=
+isR2%7C1_a0C7E9lKlmT%7C1_jJqhckgEMni&amp;ty=3D1&amp;ty_data=3DXxoCl1omqQP&a=
+mp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"color:#333; text-decoration:none; =
+display:block; font-size:19px; font-weight:bold; letter-spacing:-0.5px; lin=
+e-height:1.4"><span class=3D"rendered_qtext" style=3D"word-break:break-word=
+">Which is better, NTSC at 72% or SRGB at 99%?</span></a></td></tr>
+<tr><td style=3D"border-collapse:collapse"><table class=3D"item_content_wra=
+pper" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"border-coll=
+apse:collapse; mso-table-lspace:0; mso-table-rspace:0; width:100%" width=3D=
+"100%"><tbody>
+<tr><td class=3D"content_header metadata" style=3D"border-collapse:collapse=
+; padding:8px 0"><table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" st=
+yle=3D"border-collapse:collapse; mso-table-lspace:0; mso-table-rspace:0"><t=
+body><tr>
+<td class=3D"content_header_photo" style=3D"border-collapse:collapse; verti=
+cal-align:top" valign=3D"top"><a href=3D"https://www.quora.com/qemail/track=
+_click?aoid=3DIDqySNpz434&amp;aoty=3D3&amp;aty=3D4&amp;cp=3D6&amp;ct=3D1651=
+372364534283&amp;et=3D130&amp;id=3Df6bab8c78e9445dabf1f515323ccf1ab&amp;sou=
+rce=3D7&amp;src=3D1&amp;st=3D1651372364538456&amp;stories=3D1_bTVSFX0kXdS%7=
+C1_M61FRgBQwE6%7C1_1CgiTWAhgwK%7C1_qa9NFVplQBu%7C1_8xpuDUvG7tK%7C1_XxoCl1om=
+qQP%7C1_dFizM0LLMAP%7C1_4D4E1nGisR2%7C1_a0C7E9lKlmT%7C1_jJqhckgEMni&amp;ty=
+=3D1&amp;ty_data=3DXxoCl1omqQP&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"co=
+lor:#2b6dad; text-decoration:none"><div id=3D"w6uXuCPk121">
+<div class=3D"hover_menu hidden white_bg show_nub" id=3D"__w2_w6uXuCPk122_m=
+enu"><div class=3D"hover_menu_contents" id=3D"__w2_w6uXuCPk122_menu_content=
+s"> </div></div>
+<span class=3D"photo_tooltip HoverMenu IdentityPhoto Photo" id=3D"__w2_w6uX=
+uCPk122_link"><img class=3D"profile_photo_img" src=3D"https://qph.fs.quorac=
+dn.net/main-thumb-136116635-50-qjtkczhdosbzxifwjcebbkuhdnoznxsk.jpeg" alt=
+=3D"Bhalesh Patel" style=3D"-ms-interpolation-mode:bicubic; outline:0; text=
+-decoration:none; border:0; border-radius:100px; display:block; height:40px=
+; width:40px; border-style:none" height=3D"40" width=3D"40"></span>
+</div></a></td>
+<td class=3D"content_header_text" style=3D"border-collapse:collapse; paddin=
+g-left:8px; color:#333"><table cellpadding=3D"0" cellspacing=3D"0" border=
+=3D"0" style=3D"border-collapse:collapse; mso-table-lspace:0; mso-table-rsp=
+ace:0"><tbody>
+<tr><td style=3D"border-collapse:collapse">
+<a class=3D"user_link" href=3D"https://www.quora.com/qemail/track_click?aoi=
+d=3DIDqySNpz434&amp;aoty=3D3&amp;aty=3D4&amp;cp=3D6&amp;ct=3D16513723645342=
+83&amp;et=3D130&amp;id=3Df6bab8c78e9445dabf1f515323ccf1ab&amp;source=3D7&am=
+p;src=3D1&amp;st=3D1651372364538456&amp;stories=3D1_bTVSFX0kXdS%7C1_M61FRgB=
+QwE6%7C1_1CgiTWAhgwK%7C1_qa9NFVplQBu%7C1_8xpuDUvG7tK%7C1_XxoCl1omqQP%7C1_dF=
+izM0LLMAP%7C1_4D4E1nGisR2%7C1_a0C7E9lKlmT%7C1_jJqhckgEMni&amp;ty=3D1&amp;ty=
+_data=3DXxoCl1omqQP&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"color:#333; t=
+ext-decoration:none; font-weight:bold; line-height:1.4; font-size:15px">Bha=
+lesh Patel</a><span style=3D"font-size:15px; line-height:1.4">, Founder, SE=
+O Strategist at Growit Labs - SEO &amp; Website Agency</span>
+</td></tr>
+<tr><td class=3D"answer_details" style=3D"border-collapse:collapse; color:#=
+999; font-size:13px"><a href=3D"https://www.quora.com/qemail/track_click?ao=
+id=3DXxoCl1omqQP&amp;aoty=3D1&amp;aty=3D4&amp;cp=3D6&amp;ct=3D1651372364534=
+283&amp;et=3D130&amp;id=3Df6bab8c78e9445dabf1f515323ccf1ab&amp;source=3D7&a=
+mp;src=3D1&amp;st=3D1651372364538456&amp;stories=3D1_bTVSFX0kXdS%7C1_M61FRg=
+BQwE6%7C1_1CgiTWAhgwK%7C1_qa9NFVplQBu%7C1_8xpuDUvG7tK%7C1_XxoCl1omqQP%7C1_d=
+FizM0LLMAP%7C1_4D4E1nGisR2%7C1_a0C7E9lKlmT%7C1_jJqhckgEMni&amp;ty=3D1&amp;t=
+y_data=3DXxoCl1omqQP&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"color:#999; =
+text-decoration:none">Written Nov 17, 2019</a></td></tr>
+</tbody></table></td>
+</tr></tbody></table></td></tr>
+<tr><td class=3D"item_content" style=3D'border-collapse:collapse; color:#33=
+3; display:block; font-family:-apple-system, BlinkMacSystemFont, "Segoe UI"=
+, Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif; fon=
+t-size:15px; line-height:1.4'><a href=3D"https://www.quora.com/qemail/track=
+_click?al_imp=3DeyJ0eXBlIjogMzMsICJoYXNoIjogIjB8NnwxfDE4MDk0MzM4MiJ9&amp;al=
+_pri=3D0&amp;aoid=3DXxoCl1omqQP&amp;aoty=3D1&amp;aty=3D4&amp;cp=3D6&amp;ct=
+=3D1651372364534283&amp;et=3D130&amp;id=3Df6bab8c78e9445dabf1f515323ccf1ab&=
+amp;source=3D7&amp;src=3D1&amp;st=3D1651372364538456&amp;stories=3D1_bTVSFX=
+0kXdS%7C1_M61FRgBQwE6%7C1_1CgiTWAhgwK%7C1_qa9NFVplQBu%7C1_8xpuDUvG7tK%7C1_X=
+xoCl1omqQP%7C1_dFizM0LLMAP%7C1_4D4E1nGisR2%7C1_a0C7E9lKlmT%7C1_jJqhckgEMni&=
+amp;ty=3D1&amp;ty_data=3DXxoCl1omqQP&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=
+=3D"color:#333; text-decoration:none"><div id=3D"w6uXuCPk72"><div class=3D"=
+truncated_q_text truncated_para_breaks TruncatedQText TruncatedAnswer Trunc=
+atedAnswerForDigestEmail TruncatedAnswerForEmail" id=3D"__w2_w6uXuCPk73_tru=
+ncated" style=3D"line-height:1.6">
+<span class=3D"rendered_qtext" style=3D"word-break:break-word"><p class=3D"=
+qtext_para u-ltr u-text-align--start" style=3D"margin:1em 0; line-height:1.=
+6">72% of NTSC is roughly equivalent to 100% of the sRGB color gamut. So th=
+ey both are almost same. Coming to which one is better than you should comp=
+are the display panels an...</p></span> <a class=3D"read_more_blue" href=3D=
+"https://www.quora.com/qemail/track_click?al_imp=3DeyJ0eXBlIjogMzMsICJoYXNo=
+IjogIjB8NnwxfDE4MDk0MzM4MiJ9&amp;al_pri=3D8&amp;aoid=3DXxoCl1omqQP&amp;aoty=
+=3D1&amp;aty=3D4&amp;cp=3D6&amp;ct=3D1651372364534283&amp;et=3D130&amp;id=
+=3Df6bab8c78e9445dabf1f515323ccf1ab&amp;source=3D7&amp;src=3D1&amp;st=3D165=
+1372364538456&amp;stories=3D1_bTVSFX0kXdS%7C1_M61FRgBQwE6%7C1_1CgiTWAhgwK%7=
+C1_qa9NFVplQBu%7C1_8xpuDUvG7tK%7C1_XxoCl1omqQP%7C1_dFizM0LLMAP%7C1_4D4E1nGi=
+sR2%7C1_a0C7E9lKlmT%7C1_jJqhckgEMni&amp;ty=3D1&amp;ty_data=3DXxoCl1omqQP&am=
+p;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"color:#168de9; text-decoration:none=
+">Read More =C2=BB</a>
+</div></div>
+<div class=3D"non_quora_share_embed_wrapper"><div class=3D"item_metadata"><=
+a href=3D"https://www.quora.com/qemail/track_click?al_imp=3DeyJ0eXBlIjogMzM=
+sICJoYXNoIjogIjB8NnwxfDE4MDk0MzM4MiJ9&amp;al_pri=3D0&amp;aoid=3DXxoCl1omqQP=
+&amp;aoty=3D1&amp;aty=3D4&amp;cp=3D6&amp;ct=3D1651372364534283&amp;et=3D130=
+&amp;id=3Df6bab8c78e9445dabf1f515323ccf1ab&amp;source=3D7&amp;src=3D1&amp;s=
+t=3D1651372364538456&amp;stories=3D1_bTVSFX0kXdS%7C1_M61FRgBQwE6%7C1_1CgiTW=
+AhgwK%7C1_qa9NFVplQBu%7C1_8xpuDUvG7tK%7C1_XxoCl1omqQP%7C1_dFizM0LLMAP%7C1_4=
+D4E1nGisR2%7C1_a0C7E9lKlmT%7C1_jJqhckgEMni&amp;ty=3D1&amp;ty_data=3DXxoCl1o=
+mqQP&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"color:#2b6dad; text-decorati=
+on:none"></a></div></div></a></td></tr>
+</tbody></table></td></tr>
+</tbody></table></td></tr></tbody></table>
+</div></div>
+<div class=3D"no_para_breaks"><div data-clog-trigger=3D"impression" data-cl=
+og-metadata=3D'{"action_log_target": {"type": 33, "hash": "0|7|1|218521205"=
+}}' data-clog-event-type=3D"ActionLogImpression" id=3D"__w2_w6uXuCPk28_acti=
+onable">
+<table class=3D"polish_separator_wrapper" style=3D"border-collapse:collapse=
+; mso-table-lspace:0; mso-table-rspace:0; border:0; cellpadding:0; width:10=
+0%" width=3D"100%"><tbody><tr>
+<td style=3D"border-collapse:collapse"></td>
+<td class=3D"polish_separator" style=3D"border-collapse:collapse; border-bo=
+ttom:1px solid #eee; height:1px; width:140px" height=3D"1" width=3D"140"></=
+td>
+<td style=3D"border-collapse:collapse"></td>
+</tr></tbody></table>
+<table class=3D"story_wrapper" cellspacing=3D"0" border=3D"0" style=3D"bord=
+er-collapse:collapse; mso-table-lspace:0; mso-table-rspace:0; width:100%" w=
+idth=3D"100%"><tbody><tr><td class=3D"story " style=3D"border-collapse:coll=
+apse; border-bottom:0; padding:20px 0"><table class=3D"digest_story_wrapper=
+" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"border-collapse=
+:collapse; mso-table-lspace:0; mso-table-rspace:0; width:100%" width=3D"100=
+%"><tbody>
+<tr><td class=3D"reason" style=3D"border-collapse:collapse; padding-bottom:=
+4px"><table class=3D"digest_reason" cellpadding=3D"0" cellspacing=3D"0" bor=
+der=3D"0" style=3D"border-collapse:collapse; mso-table-lspace:0; mso-table-=
+rspace:0"><tbody><tr><td valign=3D"top" style=3D"border-collapse:collapse">=
+</td></tr></tbody></table></td></tr>
+<tr><td style=3D"border-collapse:collapse"><a class=3D"question_text" href=
+=3D"https://www.quora.com/qemail/track_click?al_imp=3DeyJ0eXBlIjogMzMsICJoY=
+XNoIjogIjB8N3wxfDIxODUyMTIwNSJ9&amp;al_pri=3D1&amp;aoid=3DRxQExzQN5z4&amp;a=
+oty=3D2&amp;aty=3D4&amp;cp=3D7&amp;ct=3D1651372364534283&amp;et=3D130&amp;i=
+d=3Df6bab8c78e9445dabf1f515323ccf1ab&amp;source=3D7&amp;src=3D1&amp;st=3D16=
+51372364538456&amp;stories=3D1_bTVSFX0kXdS%7C1_M61FRgBQwE6%7C1_1CgiTWAhgwK%=
+7C1_qa9NFVplQBu%7C1_8xpuDUvG7tK%7C1_XxoCl1omqQP%7C1_dFizM0LLMAP%7C1_4D4E1nG=
+isR2%7C1_a0C7E9lKlmT%7C1_jJqhckgEMni&amp;ty=3D1&amp;ty_data=3DdFizM0LLMAP&a=
+mp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"color:#333; text-decoration:none; =
+display:block; font-size:19px; font-weight:bold; letter-spacing:-0.5px; lin=
+e-height:1.4"><span class=3D"rendered_qtext" style=3D"word-break:break-word=
+">Can I take a laptop with a full HD LED backlit display with a wide viewin=
+g angle, 45 percent NTSC, 250 nits brightness (my usage gaming, watching 4k=
+ content) and minimal editing (not professional)?</span></a></td></tr>
+<tr><td style=3D"border-collapse:collapse"><table class=3D"item_content_wra=
+pper" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"border-coll=
+apse:collapse; mso-table-lspace:0; mso-table-rspace:0; width:100%" width=3D=
+"100%"><tbody>
+<tr><td class=3D"content_header metadata" style=3D"border-collapse:collapse=
+; padding:8px 0"><table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" st=
+yle=3D"border-collapse:collapse; mso-table-lspace:0; mso-table-rspace:0"><t=
+body><tr>
+<td class=3D"content_header_photo" style=3D"border-collapse:collapse; verti=
+cal-align:top" valign=3D"top"><a href=3D"https://www.quora.com/qemail/track=
+_click?aoid=3D34bQDdrQtK8&amp;aoty=3D3&amp;aty=3D4&amp;cp=3D7&amp;ct=3D1651=
+372364534283&amp;et=3D130&amp;id=3Df6bab8c78e9445dabf1f515323ccf1ab&amp;sou=
+rce=3D7&amp;src=3D1&amp;st=3D1651372364538456&amp;stories=3D1_bTVSFX0kXdS%7=
+C1_M61FRgBQwE6%7C1_1CgiTWAhgwK%7C1_qa9NFVplQBu%7C1_8xpuDUvG7tK%7C1_XxoCl1om=
+qQP%7C1_dFizM0LLMAP%7C1_4D4E1nGisR2%7C1_a0C7E9lKlmT%7C1_jJqhckgEMni&amp;ty=
+=3D1&amp;ty_data=3DdFizM0LLMAP&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"co=
+lor:#2b6dad; text-decoration:none"><div id=3D"w6uXuCPk128">
+<div class=3D"hover_menu hidden white_bg show_nub" id=3D"__w2_w6uXuCPk129_m=
+enu"><div class=3D"hover_menu_contents" id=3D"__w2_w6uXuCPk129_menu_content=
+s"> </div></div>
+<span class=3D"photo_tooltip HoverMenu IdentityPhoto Photo" id=3D"__w2_w6uX=
+uCPk129_link"><img class=3D"profile_photo_img" src=3D"https://qph.fs.quorac=
+dn.net/main-thumb-601365028-50-fprhfqowrajyshbjezvpnlyojqvzglkr.jpeg" alt=
+=3D"Amogh Gorde" style=3D"-ms-interpolation-mode:bicubic; outline:0; text-d=
+ecoration:none; border:0; border-radius:100px; display:block; height:40px; =
+width:40px; border-style:none" height=3D"40" width=3D"40"></span>
+</div></a></td>
+<td class=3D"content_header_text" style=3D"border-collapse:collapse; paddin=
+g-left:8px; color:#333"><table cellpadding=3D"0" cellspacing=3D"0" border=
+=3D"0" style=3D"border-collapse:collapse; mso-table-lspace:0; mso-table-rsp=
+ace:0"><tbody>
+<tr><td style=3D"border-collapse:collapse">
+<a class=3D"user_link" href=3D"https://www.quora.com/qemail/track_click?aoi=
+d=3D34bQDdrQtK8&amp;aoty=3D3&amp;aty=3D4&amp;cp=3D7&amp;ct=3D16513723645342=
+83&amp;et=3D130&amp;id=3Df6bab8c78e9445dabf1f515323ccf1ab&amp;source=3D7&am=
+p;src=3D1&amp;st=3D1651372364538456&amp;stories=3D1_bTVSFX0kXdS%7C1_M61FRgB=
+QwE6%7C1_1CgiTWAhgwK%7C1_qa9NFVplQBu%7C1_8xpuDUvG7tK%7C1_XxoCl1omqQP%7C1_dF=
+izM0LLMAP%7C1_4D4E1nGisR2%7C1_a0C7E9lKlmT%7C1_jJqhckgEMni&amp;ty=3D1&amp;ty=
+_data=3DdFizM0LLMAP&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"color:#333; t=
+ext-decoration:none; font-weight:bold; line-height:1.4; font-size:15px">Amo=
+gh Gorde</a><span style=3D"font-size:15px; line-height:1.4">, BSc IT from V=
+idyalankar School of Information Technology (2022)</span>
+</td></tr>
+<tr><td class=3D"answer_details" style=3D"border-collapse:collapse; color:#=
+999; font-size:13px"><a href=3D"https://www.quora.com/qemail/track_click?ao=
+id=3DdFizM0LLMAP&amp;aoty=3D1&amp;aty=3D4&amp;cp=3D7&amp;ct=3D1651372364534=
+283&amp;et=3D130&amp;id=3Df6bab8c78e9445dabf1f515323ccf1ab&amp;source=3D7&a=
+mp;src=3D1&amp;st=3D1651372364538456&amp;stories=3D1_bTVSFX0kXdS%7C1_M61FRg=
+BQwE6%7C1_1CgiTWAhgwK%7C1_qa9NFVplQBu%7C1_8xpuDUvG7tK%7C1_XxoCl1omqQP%7C1_d=
+FizM0LLMAP%7C1_4D4E1nGisR2%7C1_a0C7E9lKlmT%7C1_jJqhckgEMni&amp;ty=3D1&amp;t=
+y_data=3DdFizM0LLMAP&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"color:#999; =
+text-decoration:none">Written May 30, 2020</a></td></tr>
+</tbody></table></td>
+</tr></tbody></table></td></tr>
+<tr><td class=3D"item_content" style=3D'border-collapse:collapse; color:#33=
+3; display:block; font-family:-apple-system, BlinkMacSystemFont, "Segoe UI"=
+, Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif; fon=
+t-size:15px; line-height:1.4'><a href=3D"https://www.quora.com/qemail/track=
+_click?al_imp=3DeyJ0eXBlIjogMzMsICJoYXNoIjogIjB8N3wxfDIxODUyMTIwNSJ9&amp;al=
+_pri=3D0&amp;aoid=3DdFizM0LLMAP&amp;aoty=3D1&amp;aty=3D4&amp;cp=3D7&amp;ct=
+=3D1651372364534283&amp;et=3D130&amp;id=3Df6bab8c78e9445dabf1f515323ccf1ab&=
+amp;source=3D7&amp;src=3D1&amp;st=3D1651372364538456&amp;stories=3D1_bTVSFX=
+0kXdS%7C1_M61FRgBQwE6%7C1_1CgiTWAhgwK%7C1_qa9NFVplQBu%7C1_8xpuDUvG7tK%7C1_X=
+xoCl1omqQP%7C1_dFizM0LLMAP%7C1_4D4E1nGisR2%7C1_a0C7E9lKlmT%7C1_jJqhckgEMni&=
+amp;ty=3D1&amp;ty_data=3DdFizM0LLMAP&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=
+=3D"color:#333; text-decoration:none"><div id=3D"w6uXuCPk74"><div class=3D"=
+truncated_q_text truncated_para_breaks TruncatedQText TruncatedAnswer Trunc=
+atedAnswerForDigestEmail TruncatedAnswerForEmail" id=3D"__w2_w6uXuCPk75_tru=
+ncated" style=3D"line-height:1.6">
+<span class=3D"rendered_qtext" style=3D"word-break:break-word"><p class=3D"=
+qtext_para u-ltr u-text-align--start" style=3D"margin:1em 0; line-height:1.=
+6">If you are into editing/graphics field. The thing which should concern y=
+ou the most is colour gamut of the display. Some laptop's dont have much vi=
+brant display. With the l...</p></span> <a class=3D"read_more_blue" href=3D=
+"https://www.quora.com/qemail/track_click?al_imp=3DeyJ0eXBlIjogMzMsICJoYXNo=
+IjogIjB8N3wxfDIxODUyMTIwNSJ9&amp;al_pri=3D8&amp;aoid=3DdFizM0LLMAP&amp;aoty=
+=3D1&amp;aty=3D4&amp;cp=3D7&amp;ct=3D1651372364534283&amp;et=3D130&amp;id=
+=3Df6bab8c78e9445dabf1f515323ccf1ab&amp;source=3D7&amp;src=3D1&amp;st=3D165=
+1372364538456&amp;stories=3D1_bTVSFX0kXdS%7C1_M61FRgBQwE6%7C1_1CgiTWAhgwK%7=
+C1_qa9NFVplQBu%7C1_8xpuDUvG7tK%7C1_XxoCl1omqQP%7C1_dFizM0LLMAP%7C1_4D4E1nGi=
+sR2%7C1_a0C7E9lKlmT%7C1_jJqhckgEMni&amp;ty=3D1&amp;ty_data=3DdFizM0LLMAP&am=
+p;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"color:#168de9; text-decoration:none=
+">Read More =C2=BB</a>
+</div></div>
+<div class=3D"non_quora_share_embed_wrapper"><div class=3D"item_metadata"><=
+a href=3D"https://www.quora.com/qemail/track_click?al_imp=3DeyJ0eXBlIjogMzM=
+sICJoYXNoIjogIjB8N3wxfDIxODUyMTIwNSJ9&amp;al_pri=3D0&amp;aoid=3DdFizM0LLMAP=
+&amp;aoty=3D1&amp;aty=3D4&amp;cp=3D7&amp;ct=3D1651372364534283&amp;et=3D130=
+&amp;id=3Df6bab8c78e9445dabf1f515323ccf1ab&amp;source=3D7&amp;src=3D1&amp;s=
+t=3D1651372364538456&amp;stories=3D1_bTVSFX0kXdS%7C1_M61FRgBQwE6%7C1_1CgiTW=
+AhgwK%7C1_qa9NFVplQBu%7C1_8xpuDUvG7tK%7C1_XxoCl1omqQP%7C1_dFizM0LLMAP%7C1_4=
+D4E1nGisR2%7C1_a0C7E9lKlmT%7C1_jJqhckgEMni&amp;ty=3D1&amp;ty_data=3DdFizM0L=
+LMAP&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"color:#2b6dad; text-decorati=
+on:none"></a></div></div></a></td></tr>
+</tbody></table></td></tr>
+</tbody></table></td></tr></tbody></table>
+</div></div>
+<div class=3D"no_para_breaks"><div data-clog-trigger=3D"impression" data-cl=
+og-metadata=3D'{"action_log_target": {"type": 33, "hash": "0|8|1|171207242"=
+}}' data-clog-event-type=3D"ActionLogImpression" id=3D"__w2_w6uXuCPk29_acti=
+onable">
+<table class=3D"polish_separator_wrapper" style=3D"border-collapse:collapse=
+; mso-table-lspace:0; mso-table-rspace:0; border:0; cellpadding:0; width:10=
+0%" width=3D"100%"><tbody><tr>
+<td style=3D"border-collapse:collapse"></td>
+<td class=3D"polish_separator" style=3D"border-collapse:collapse; border-bo=
+ttom:1px solid #eee; height:1px; width:140px" height=3D"1" width=3D"140"></=
+td>
+<td style=3D"border-collapse:collapse"></td>
+</tr></tbody></table>
+<table class=3D"story_wrapper" cellspacing=3D"0" border=3D"0" style=3D"bord=
+er-collapse:collapse; mso-table-lspace:0; mso-table-rspace:0; width:100%" w=
+idth=3D"100%"><tbody><tr><td class=3D"story " style=3D"border-collapse:coll=
+apse; border-bottom:0; padding:20px 0"><table class=3D"digest_story_wrapper=
+" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"border-collapse=
+:collapse; mso-table-lspace:0; mso-table-rspace:0; width:100%" width=3D"100=
+%"><tbody>
+<tr><td class=3D"reason" style=3D"border-collapse:collapse; padding-bottom:=
+4px"><table class=3D"digest_reason" cellpadding=3D"0" cellspacing=3D"0" bor=
+der=3D"0" style=3D"border-collapse:collapse; mso-table-lspace:0; mso-table-=
+rspace:0"><tbody><tr><td valign=3D"top" style=3D"border-collapse:collapse">=
+</td></tr></tbody></table></td></tr>
+<tr><td style=3D"border-collapse:collapse"><a class=3D"question_text" href=
+=3D"https://www.quora.com/qemail/track_click?al_imp=3DeyJ0eXBlIjogMzMsICJoY=
+XNoIjogIjB8OHwxfDE3MTIwNzI0MiJ9&amp;al_pri=3D1&amp;aoid=3Da5u3niT5Iw6&amp;a=
+oty=3D2&amp;aty=3D4&amp;cp=3D8&amp;ct=3D1651372364534283&amp;et=3D130&amp;i=
+d=3Df6bab8c78e9445dabf1f515323ccf1ab&amp;source=3D7&amp;src=3D1&amp;st=3D16=
+51372364538456&amp;stories=3D1_bTVSFX0kXdS%7C1_M61FRgBQwE6%7C1_1CgiTWAhgwK%=
+7C1_qa9NFVplQBu%7C1_8xpuDUvG7tK%7C1_XxoCl1omqQP%7C1_dFizM0LLMAP%7C1_4D4E1nG=
+isR2%7C1_a0C7E9lKlmT%7C1_jJqhckgEMni&amp;ty=3D1&amp;ty_data=3D4D4E1nGisR2&a=
+mp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"color:#333; text-decoration:none; =
+display:block; font-size:19px; font-weight:bold; letter-spacing:-0.5px; lin=
+e-height:1.4"><span class=3D"rendered_qtext" style=3D"word-break:break-word=
+">What should I choose between 45% NTSC IPS laptop display and 94% NTSC TN =
+display for architectural rendering and modelling?</span></a></td></tr>
+<tr><td style=3D"border-collapse:collapse"><table class=3D"item_content_wra=
+pper" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"border-coll=
+apse:collapse; mso-table-lspace:0; mso-table-rspace:0; width:100%" width=3D=
+"100%"><tbody>
+<tr><td class=3D"content_header metadata" style=3D"border-collapse:collapse=
+; padding:8px 0"><table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" st=
+yle=3D"border-collapse:collapse; mso-table-lspace:0; mso-table-rspace:0"><t=
+body><tr>
+<td class=3D"content_header_photo" style=3D"border-collapse:collapse; verti=
+cal-align:top" valign=3D"top"><a href=3D"https://www.quora.com/qemail/track=
+_click?aoid=3DMkedbOBEdGd&amp;aoty=3D3&amp;aty=3D4&amp;cp=3D8&amp;ct=3D1651=
+372364534283&amp;et=3D130&amp;id=3Df6bab8c78e9445dabf1f515323ccf1ab&amp;sou=
+rce=3D7&amp;src=3D1&amp;st=3D1651372364538456&amp;stories=3D1_bTVSFX0kXdS%7=
+C1_M61FRgBQwE6%7C1_1CgiTWAhgwK%7C1_qa9NFVplQBu%7C1_8xpuDUvG7tK%7C1_XxoCl1om=
+qQP%7C1_dFizM0LLMAP%7C1_4D4E1nGisR2%7C1_a0C7E9lKlmT%7C1_jJqhckgEMni&amp;ty=
+=3D1&amp;ty_data=3D4D4E1nGisR2&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"co=
+lor:#2b6dad; text-decoration:none"><div id=3D"w6uXuCPk135">
+<div class=3D"hover_menu hidden white_bg show_nub" id=3D"__w2_w6uXuCPk136_m=
+enu"><div class=3D"hover_menu_contents" id=3D"__w2_w6uXuCPk136_menu_content=
+s"> </div></div>
+<span class=3D"photo_tooltip HoverMenu IdentityPhoto Photo" id=3D"__w2_w6uX=
+uCPk136_link"><img class=3D"profile_photo_img" src=3D"https://qph.fs.quorac=
+dn.net/main-thumb-286432621-50-pqpufepyybgobmbhixwlvobhxzmfrcis.jpeg" alt=
+=3D"Aldrine George" style=3D"-ms-interpolation-mode:bicubic; outline:0; tex=
+t-decoration:none; border:0; border-radius:100px; display:block; height:40p=
+x; width:40px; border-style:none" height=3D"40" width=3D"40"></span>
+</div></a></td>
+<td class=3D"content_header_text" style=3D"border-collapse:collapse; paddin=
+g-left:8px; color:#333"><table cellpadding=3D"0" cellspacing=3D"0" border=
+=3D"0" style=3D"border-collapse:collapse; mso-table-lspace:0; mso-table-rsp=
+ace:0"><tbody>
+<tr><td style=3D"border-collapse:collapse"><a class=3D"user_link" href=3D"h=
+ttps://www.quora.com/qemail/track_click?aoid=3DMkedbOBEdGd&amp;aoty=3D3&amp=
+;aty=3D4&amp;cp=3D8&amp;ct=3D1651372364534283&amp;et=3D130&amp;id=3Df6bab8c=
+78e9445dabf1f515323ccf1ab&amp;source=3D7&amp;src=3D1&amp;st=3D1651372364538=
+456&amp;stories=3D1_bTVSFX0kXdS%7C1_M61FRgBQwE6%7C1_1CgiTWAhgwK%7C1_qa9NFVp=
+lQBu%7C1_8xpuDUvG7tK%7C1_XxoCl1omqQP%7C1_dFizM0LLMAP%7C1_4D4E1nGisR2%7C1_a0=
+C7E9lKlmT%7C1_jJqhckgEMni&amp;ty=3D1&amp;ty_data=3D4D4E1nGisR2&amp;uid=3Dm3=
+6BZ4XFnST&amp;v=3D0" style=3D"color:#333; text-decoration:none; font-weight=
+:bold; line-height:1.4; font-size:15px">Aldrine George</a></td></tr>
+<tr><td class=3D"answer_details" style=3D"border-collapse:collapse; color:#=
+999; font-size:13px"><a href=3D"https://www.quora.com/qemail/track_click?ao=
+id=3D4D4E1nGisR2&amp;aoty=3D1&amp;aty=3D4&amp;cp=3D8&amp;ct=3D1651372364534=
+283&amp;et=3D130&amp;id=3Df6bab8c78e9445dabf1f515323ccf1ab&amp;source=3D7&a=
+mp;src=3D1&amp;st=3D1651372364538456&amp;stories=3D1_bTVSFX0kXdS%7C1_M61FRg=
+BQwE6%7C1_1CgiTWAhgwK%7C1_qa9NFVplQBu%7C1_8xpuDUvG7tK%7C1_XxoCl1omqQP%7C1_d=
+FizM0LLMAP%7C1_4D4E1nGisR2%7C1_a0C7E9lKlmT%7C1_jJqhckgEMni&amp;ty=3D1&amp;t=
+y_data=3D4D4E1nGisR2&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"color:#999; =
+text-decoration:none">Written Oct 1, 2019</a></td></tr>
+</tbody></table></td>
+</tr></tbody></table></td></tr>
+<tr><td class=3D"item_content" style=3D'border-collapse:collapse; color:#33=
+3; display:block; font-family:-apple-system, BlinkMacSystemFont, "Segoe UI"=
+, Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif; fon=
+t-size:15px; line-height:1.4'><a href=3D"https://www.quora.com/qemail/track=
+_click?al_imp=3DeyJ0eXBlIjogMzMsICJoYXNoIjogIjB8OHwxfDE3MTIwNzI0MiJ9&amp;al=
+_pri=3D0&amp;aoid=3D4D4E1nGisR2&amp;aoty=3D1&amp;aty=3D4&amp;cp=3D8&amp;ct=
+=3D1651372364534283&amp;et=3D130&amp;id=3Df6bab8c78e9445dabf1f515323ccf1ab&=
+amp;source=3D7&amp;src=3D1&amp;st=3D1651372364538456&amp;stories=3D1_bTVSFX=
+0kXdS%7C1_M61FRgBQwE6%7C1_1CgiTWAhgwK%7C1_qa9NFVplQBu%7C1_8xpuDUvG7tK%7C1_X=
+xoCl1omqQP%7C1_dFizM0LLMAP%7C1_4D4E1nGisR2%7C1_a0C7E9lKlmT%7C1_jJqhckgEMni&=
+amp;ty=3D1&amp;ty_data=3D4D4E1nGisR2&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=
+=3D"color:#333; text-decoration:none"><div id=3D"w6uXuCPk76"><div class=3D"=
+truncated_q_text truncated_para_breaks TruncatedQText TruncatedAnswer Trunc=
+atedAnswerForDigestEmail TruncatedAnswerForEmail" id=3D"__w2_w6uXuCPk77_tru=
+ncated" style=3D"line-height:1.6">
+<span class=3D"rendered_qtext" style=3D"word-break:break-word"><p class=3D"=
+qtext_para u-ltr u-text-align--start" style=3D"margin:1em 0; line-height:1.=
+6">It depends on your usage ips panels are visually pleasing but with 45% n=
+tsc it is less color accurate thus it is good for gamers and tn panel is no=
+t that bad but it is an o...</p></span> <a class=3D"read_more_blue" href=3D=
+"https://www.quora.com/qemail/track_click?al_imp=3DeyJ0eXBlIjogMzMsICJoYXNo=
+IjogIjB8OHwxfDE3MTIwNzI0MiJ9&amp;al_pri=3D8&amp;aoid=3D4D4E1nGisR2&amp;aoty=
+=3D1&amp;aty=3D4&amp;cp=3D8&amp;ct=3D1651372364534283&amp;et=3D130&amp;id=
+=3Df6bab8c78e9445dabf1f515323ccf1ab&amp;source=3D7&amp;src=3D1&amp;st=3D165=
+1372364538456&amp;stories=3D1_bTVSFX0kXdS%7C1_M61FRgBQwE6%7C1_1CgiTWAhgwK%7=
+C1_qa9NFVplQBu%7C1_8xpuDUvG7tK%7C1_XxoCl1omqQP%7C1_dFizM0LLMAP%7C1_4D4E1nGi=
+sR2%7C1_a0C7E9lKlmT%7C1_jJqhckgEMni&amp;ty=3D1&amp;ty_data=3D4D4E1nGisR2&am=
+p;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"color:#168de9; text-decoration:none=
+">Read More =C2=BB</a>
+</div></div>
+<div class=3D"non_quora_share_embed_wrapper"><div class=3D"item_metadata"><=
+a href=3D"https://www.quora.com/qemail/track_click?al_imp=3DeyJ0eXBlIjogMzM=
+sICJoYXNoIjogIjB8OHwxfDE3MTIwNzI0MiJ9&amp;al_pri=3D0&amp;aoid=3D4D4E1nGisR2=
+&amp;aoty=3D1&amp;aty=3D4&amp;cp=3D8&amp;ct=3D1651372364534283&amp;et=3D130=
+&amp;id=3Df6bab8c78e9445dabf1f515323ccf1ab&amp;source=3D7&amp;src=3D1&amp;s=
+t=3D1651372364538456&amp;stories=3D1_bTVSFX0kXdS%7C1_M61FRgBQwE6%7C1_1CgiTW=
+AhgwK%7C1_qa9NFVplQBu%7C1_8xpuDUvG7tK%7C1_XxoCl1omqQP%7C1_dFizM0LLMAP%7C1_4=
+D4E1nGisR2%7C1_a0C7E9lKlmT%7C1_jJqhckgEMni&amp;ty=3D1&amp;ty_data=3D4D4E1nG=
+isR2&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"color:#2b6dad; text-decorati=
+on:none"></a></div></div></a></td></tr>
+</tbody></table></td></tr>
+</tbody></table></td></tr></tbody></table>
+</div></div>
+<div class=3D"no_para_breaks"><div data-clog-trigger=3D"impression" data-cl=
+og-metadata=3D'{"action_log_target": {"type": 33, "hash": "0|9|1|218516068"=
+}}' data-clog-event-type=3D"ActionLogImpression" id=3D"__w2_w6uXuCPk30_acti=
+onable">
+<table class=3D"polish_separator_wrapper" style=3D"border-collapse:collapse=
+; mso-table-lspace:0; mso-table-rspace:0; border:0; cellpadding:0; width:10=
+0%" width=3D"100%"><tbody><tr>
+<td style=3D"border-collapse:collapse"></td>
+<td class=3D"polish_separator" style=3D"border-collapse:collapse; border-bo=
+ttom:1px solid #eee; height:1px; width:140px" height=3D"1" width=3D"140"></=
+td>
+<td style=3D"border-collapse:collapse"></td>
+</tr></tbody></table>
+<table class=3D"story_wrapper" cellspacing=3D"0" border=3D"0" style=3D"bord=
+er-collapse:collapse; mso-table-lspace:0; mso-table-rspace:0; width:100%" w=
+idth=3D"100%"><tbody><tr><td class=3D"story " style=3D"border-collapse:coll=
+apse; border-bottom:0; padding:20px 0"><table class=3D"digest_story_wrapper=
+" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"border-collapse=
+:collapse; mso-table-lspace:0; mso-table-rspace:0; width:100%" width=3D"100=
+%"><tbody>
+<tr><td class=3D"reason" style=3D"border-collapse:collapse; padding-bottom:=
+4px"><table class=3D"digest_reason" cellpadding=3D"0" cellspacing=3D"0" bor=
+der=3D"0" style=3D"border-collapse:collapse; mso-table-lspace:0; mso-table-=
+rspace:0"><tbody><tr><td valign=3D"top" style=3D"border-collapse:collapse">=
+</td></tr></tbody></table></td></tr>
+<tr><td style=3D"border-collapse:collapse"><a class=3D"question_text" href=
+=3D"https://www.quora.com/qemail/track_click?al_imp=3DeyJ0eXBlIjogMzMsICJoY=
+XNoIjogIjB8OXwxfDIxODUxNjA2OCJ9&amp;al_pri=3D1&amp;aoid=3D0WV5Mzkhqm&amp;ao=
+ty=3D2&amp;aty=3D4&amp;cp=3D9&amp;ct=3D1651372364534283&amp;et=3D130&amp;id=
+=3Df6bab8c78e9445dabf1f515323ccf1ab&amp;source=3D7&amp;src=3D1&amp;st=3D165=
+1372364538456&amp;stories=3D1_bTVSFX0kXdS%7C1_M61FRgBQwE6%7C1_1CgiTWAhgwK%7=
+C1_qa9NFVplQBu%7C1_8xpuDUvG7tK%7C1_XxoCl1omqQP%7C1_dFizM0LLMAP%7C1_4D4E1nGi=
+sR2%7C1_a0C7E9lKlmT%7C1_jJqhckgEMni&amp;ty=3D1&amp;ty_data=3Da0C7E9lKlmT&am=
+p;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"color:#333; text-decoration:none; d=
+isplay:block; font-size:19px; font-weight:bold; letter-spacing:-0.5px; line=
+-height:1.4"><span class=3D"rendered_qtext" style=3D"word-break:break-word"=
+>Can I take a laptop with a full HD LED backlit display with a wide viewing=
+ angle, 45 percent NTSC and 250 nits brightness? Is that okay for gaming an=
+d watching 4k videos?</span></a></td></tr>
+<tr><td style=3D"border-collapse:collapse"><table class=3D"item_content_wra=
+pper" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"border-coll=
+apse:collapse; mso-table-lspace:0; mso-table-rspace:0; width:100%" width=3D=
+"100%"><tbody>
+<tr><td class=3D"content_header metadata" style=3D"border-collapse:collapse=
+; padding:8px 0"><table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" st=
+yle=3D"border-collapse:collapse; mso-table-lspace:0; mso-table-rspace:0"><t=
+body><tr>
+<td class=3D"content_header_photo" style=3D"border-collapse:collapse; verti=
+cal-align:top" valign=3D"top"><a href=3D"https://www.quora.com/qemail/track=
+_click?aoid=3DmfPEm4bQwZP&amp;aoty=3D3&amp;aty=3D4&amp;cp=3D9&amp;ct=3D1651=
+372364534283&amp;et=3D130&amp;id=3Df6bab8c78e9445dabf1f515323ccf1ab&amp;sou=
+rce=3D7&amp;src=3D1&amp;st=3D1651372364538456&amp;stories=3D1_bTVSFX0kXdS%7=
+C1_M61FRgBQwE6%7C1_1CgiTWAhgwK%7C1_qa9NFVplQBu%7C1_8xpuDUvG7tK%7C1_XxoCl1om=
+qQP%7C1_dFizM0LLMAP%7C1_4D4E1nGisR2%7C1_a0C7E9lKlmT%7C1_jJqhckgEMni&amp;ty=
+=3D1&amp;ty_data=3Da0C7E9lKlmT&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"co=
+lor:#2b6dad; text-decoration:none"><div id=3D"w6uXuCPk142">
+<div class=3D"hover_menu hidden white_bg show_nub" id=3D"__w2_w6uXuCPk143_m=
+enu"><div class=3D"hover_menu_contents" id=3D"__w2_w6uXuCPk143_menu_content=
+s"> </div></div>
+<span class=3D"photo_tooltip HoverMenu IdentityPhoto Photo" id=3D"__w2_w6uX=
+uCPk143_link"><img class=3D"profile_photo_img" src=3D"https://qph.fs.quorac=
+dn.net/main-thumb-277532912-50-uporqqperimghhishsgvbjgnqmiguorn.jpeg" alt=
+=3D"Sanand Thapar" style=3D"-ms-interpolation-mode:bicubic; outline:0; text=
+-decoration:none; border:0; border-radius:100px; display:block; height:40px=
+; width:40px; border-style:none" height=3D"40" width=3D"40"></span>
+</div></a></td>
+<td class=3D"content_header_text" style=3D"border-collapse:collapse; paddin=
+g-left:8px; color:#333"><table cellpadding=3D"0" cellspacing=3D"0" border=
+=3D"0" style=3D"border-collapse:collapse; mso-table-lspace:0; mso-table-rsp=
+ace:0"><tbody>
+<tr><td style=3D"border-collapse:collapse">
+<a class=3D"user_link" href=3D"https://www.quora.com/qemail/track_click?aoi=
+d=3DmfPEm4bQwZP&amp;aoty=3D3&amp;aty=3D4&amp;cp=3D9&amp;ct=3D16513723645342=
+83&amp;et=3D130&amp;id=3Df6bab8c78e9445dabf1f515323ccf1ab&amp;source=3D7&am=
+p;src=3D1&amp;st=3D1651372364538456&amp;stories=3D1_bTVSFX0kXdS%7C1_M61FRgB=
+QwE6%7C1_1CgiTWAhgwK%7C1_qa9NFVplQBu%7C1_8xpuDUvG7tK%7C1_XxoCl1omqQP%7C1_dF=
+izM0LLMAP%7C1_4D4E1nGisR2%7C1_a0C7E9lKlmT%7C1_jJqhckgEMni&amp;ty=3D1&amp;ty=
+_data=3Da0C7E9lKlmT&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"color:#333; t=
+ext-decoration:none; font-weight:bold; line-height:1.4; font-size:15px">San=
+and Thapar</a><span style=3D"font-size:15px; line-height:1.4">, Casual Game=
+r - i5 9300H, GTX 1050</span>
+</td></tr>
+<tr><td class=3D"answer_details" style=3D"border-collapse:collapse; color:#=
+999; font-size:13px"><a href=3D"https://www.quora.com/qemail/track_click?ao=
+id=3Da0C7E9lKlmT&amp;aoty=3D1&amp;aty=3D4&amp;cp=3D9&amp;ct=3D1651372364534=
+283&amp;et=3D130&amp;id=3Df6bab8c78e9445dabf1f515323ccf1ab&amp;source=3D7&a=
+mp;src=3D1&amp;st=3D1651372364538456&amp;stories=3D1_bTVSFX0kXdS%7C1_M61FRg=
+BQwE6%7C1_1CgiTWAhgwK%7C1_qa9NFVplQBu%7C1_8xpuDUvG7tK%7C1_XxoCl1omqQP%7C1_d=
+FizM0LLMAP%7C1_4D4E1nGisR2%7C1_a0C7E9lKlmT%7C1_jJqhckgEMni&amp;ty=3D1&amp;t=
+y_data=3Da0C7E9lKlmT&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"color:#999; =
+text-decoration:none">Written May 30, 2020</a></td></tr>
+</tbody></table></td>
+</tr></tbody></table></td></tr>
+<tr><td class=3D"item_content" style=3D'border-collapse:collapse; color:#33=
+3; display:block; font-family:-apple-system, BlinkMacSystemFont, "Segoe UI"=
+, Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif; fon=
+t-size:15px; line-height:1.4'><a href=3D"https://www.quora.com/qemail/track=
+_click?al_imp=3DeyJ0eXBlIjogMzMsICJoYXNoIjogIjB8OXwxfDIxODUxNjA2OCJ9&amp;al=
+_pri=3D0&amp;aoid=3Da0C7E9lKlmT&amp;aoty=3D1&amp;aty=3D4&amp;cp=3D9&amp;ct=
+=3D1651372364534283&amp;et=3D130&amp;id=3Df6bab8c78e9445dabf1f515323ccf1ab&=
+amp;source=3D7&amp;src=3D1&amp;st=3D1651372364538456&amp;stories=3D1_bTVSFX=
+0kXdS%7C1_M61FRgBQwE6%7C1_1CgiTWAhgwK%7C1_qa9NFVplQBu%7C1_8xpuDUvG7tK%7C1_X=
+xoCl1omqQP%7C1_dFizM0LLMAP%7C1_4D4E1nGisR2%7C1_a0C7E9lKlmT%7C1_jJqhckgEMni&=
+amp;ty=3D1&amp;ty_data=3Da0C7E9lKlmT&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=
+=3D"color:#333; text-decoration:none"><div id=3D"w6uXuCPk78"><div class=3D"=
+truncated_q_text truncated_para_breaks TruncatedQText TruncatedAnswer Trunc=
+atedAnswerForDigestEmail TruncatedAnswerForEmail" id=3D"__w2_w6uXuCPk79_tru=
+ncated" style=3D"line-height:1.6">
+<span class=3D"rendered_qtext" style=3D"word-break:break-word"><p class=3D"=
+qtext_para u-ltr u-text-align--start" style=3D"margin:1em 0; line-height:1.=
+6">Gaming? Maaaaayyyyybe. Media consumption? Crap. Absolute Crap. This disp=
+lay will most probably even display some shades of red as orange or vice ve=
+rsa.</p>
+<p class=3D"qtext_para u-ltr u-text-align--start" style=3D"margin:1em 0; li=
+ne-height:1.6">NTSC is the smallest ...</p></span> <a class=3D"read_more_bl=
+ue" href=3D"https://www.quora.com/qemail/track_click?al_imp=3DeyJ0eXBlIjogM=
+zMsICJoYXNoIjogIjB8OXwxfDIxODUxNjA2OCJ9&amp;al_pri=3D8&amp;aoid=3Da0C7E9lKl=
+mT&amp;aoty=3D1&amp;aty=3D4&amp;cp=3D9&amp;ct=3D1651372364534283&amp;et=3D1=
+30&amp;id=3Df6bab8c78e9445dabf1f515323ccf1ab&amp;source=3D7&amp;src=3D1&amp=
+;st=3D1651372364538456&amp;stories=3D1_bTVSFX0kXdS%7C1_M61FRgBQwE6%7C1_1Cgi=
+TWAhgwK%7C1_qa9NFVplQBu%7C1_8xpuDUvG7tK%7C1_XxoCl1omqQP%7C1_dFizM0LLMAP%7C1=
+_4D4E1nGisR2%7C1_a0C7E9lKlmT%7C1_jJqhckgEMni&amp;ty=3D1&amp;ty_data=3Da0C7E=
+9lKlmT&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"color:#168de9; text-decora=
+tion:none">Read More =C2=BB</a>
+</div></div>
+<div class=3D"non_quora_share_embed_wrapper"><div class=3D"item_metadata"><=
+a href=3D"https://www.quora.com/qemail/track_click?al_imp=3DeyJ0eXBlIjogMzM=
+sICJoYXNoIjogIjB8OXwxfDIxODUxNjA2OCJ9&amp;al_pri=3D0&amp;aoid=3Da0C7E9lKlmT=
+&amp;aoty=3D1&amp;aty=3D4&amp;cp=3D9&amp;ct=3D1651372364534283&amp;et=3D130=
+&amp;id=3Df6bab8c78e9445dabf1f515323ccf1ab&amp;source=3D7&amp;src=3D1&amp;s=
+t=3D1651372364538456&amp;stories=3D1_bTVSFX0kXdS%7C1_M61FRgBQwE6%7C1_1CgiTW=
+AhgwK%7C1_qa9NFVplQBu%7C1_8xpuDUvG7tK%7C1_XxoCl1omqQP%7C1_dFizM0LLMAP%7C1_4=
+D4E1nGisR2%7C1_a0C7E9lKlmT%7C1_jJqhckgEMni&amp;ty=3D1&amp;ty_data=3Da0C7E9l=
+KlmT&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"color:#2b6dad; text-decorati=
+on:none"></a></div></div></a></td></tr>
+</tbody></table></td></tr>
+</tbody></table></td></tr></tbody></table>
+</div></div>
+<div class=3D"no_para_breaks"><div data-clog-trigger=3D"impression" data-cl=
+og-metadata=3D'{"action_log_target": {"type": 33, "hash": "0|10|1|30124574"=
+}}' data-clog-event-type=3D"ActionLogImpression" id=3D"__w2_w6uXuCPk31_acti=
+onable">
+<table class=3D"polish_separator_wrapper" style=3D"border-collapse:collapse=
+; mso-table-lspace:0; mso-table-rspace:0; border:0; cellpadding:0; width:10=
+0%" width=3D"100%"><tbody><tr>
+<td style=3D"border-collapse:collapse"></td>
+<td class=3D"polish_separator" style=3D"border-collapse:collapse; border-bo=
+ttom:1px solid #eee; height:1px; width:140px" height=3D"1" width=3D"140"></=
+td>
+<td style=3D"border-collapse:collapse"></td>
+</tr></tbody></table>
+<table class=3D"story_wrapper" cellspacing=3D"0" border=3D"0" style=3D"bord=
+er-collapse:collapse; mso-table-lspace:0; mso-table-rspace:0; width:100%" w=
+idth=3D"100%"><tbody><tr><td class=3D"story " style=3D"border-collapse:coll=
+apse; border-bottom:0; padding:20px 0"><table class=3D"digest_story_wrapper=
+" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"border-collapse=
+:collapse; mso-table-lspace:0; mso-table-rspace:0; width:100%" width=3D"100=
+%"><tbody>
+<tr><td class=3D"reason" style=3D"border-collapse:collapse; padding-bottom:=
+4px"><table class=3D"digest_reason" cellpadding=3D"0" cellspacing=3D"0" bor=
+der=3D"0" style=3D"border-collapse:collapse; mso-table-lspace:0; mso-table-=
+rspace:0"><tbody><tr><td valign=3D"top" style=3D"border-collapse:collapse">=
+</td></tr></tbody></table></td></tr>
+<tr><td style=3D"border-collapse:collapse"><a class=3D"question_text" href=
+=3D"https://www.quora.com/qemail/track_click?al_imp=3DeyJ0eXBlIjogMzMsICJoY=
+XNoIjogIjB8MTB8MXwzMDEyNDU3NCJ9&amp;al_pri=3D1&amp;aoid=3DLj62q3gNQrH&amp;a=
+oty=3D2&amp;aty=3D4&amp;cp=3D10&amp;ct=3D1651372364534283&amp;et=3D130&amp;=
+id=3Df6bab8c78e9445dabf1f515323ccf1ab&amp;source=3D7&amp;src=3D1&amp;st=3D1=
+651372364538456&amp;stories=3D1_bTVSFX0kXdS%7C1_M61FRgBQwE6%7C1_1CgiTWAhgwK=
+%7C1_qa9NFVplQBu%7C1_8xpuDUvG7tK%7C1_XxoCl1omqQP%7C1_dFizM0LLMAP%7C1_4D4E1n=
+GisR2%7C1_a0C7E9lKlmT%7C1_jJqhckgEMni&amp;ty=3D1&amp;ty_data=3DjJqhckgEMni&=
+amp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"color:#333; text-decoration:none;=
+ display:block; font-size:19px; font-weight:bold; letter-spacing:-0.5px; li=
+ne-height:1.4"><span class=3D"rendered_qtext" style=3D"word-break:break-wor=
+d">What does NTSC mean in display standards? How does it compare to Adobe R=
+GB?</span></a></td></tr>
+<tr><td style=3D"border-collapse:collapse"><table class=3D"item_content_wra=
+pper" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"border-coll=
+apse:collapse; mso-table-lspace:0; mso-table-rspace:0; width:100%" width=3D=
+"100%"><tbody>
+<tr><td class=3D"content_header metadata" style=3D"border-collapse:collapse=
+; padding:8px 0"><table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" st=
+yle=3D"border-collapse:collapse; mso-table-lspace:0; mso-table-rspace:0"><t=
+body><tr>
+<td class=3D"content_header_photo" style=3D"border-collapse:collapse; verti=
+cal-align:top" valign=3D"top"><a href=3D"https://www.quora.com/qemail/track=
+_click?aoid=3DMaWXtGsfnbU&amp;aoty=3D3&amp;aty=3D4&amp;cp=3D10&amp;ct=3D165=
+1372364534283&amp;et=3D130&amp;id=3Df6bab8c78e9445dabf1f515323ccf1ab&amp;so=
+urce=3D7&amp;src=3D1&amp;st=3D1651372364538456&amp;stories=3D1_bTVSFX0kXdS%=
+7C1_M61FRgBQwE6%7C1_1CgiTWAhgwK%7C1_qa9NFVplQBu%7C1_8xpuDUvG7tK%7C1_XxoCl1o=
+mqQP%7C1_dFizM0LLMAP%7C1_4D4E1nGisR2%7C1_a0C7E9lKlmT%7C1_jJqhckgEMni&amp;ty=
+=3D1&amp;ty_data=3DjJqhckgEMni&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"co=
+lor:#2b6dad; text-decoration:none"><div id=3D"w6uXuCPk149">
+<div class=3D"hover_menu hidden white_bg show_nub" id=3D"__w2_w6uXuCPk150_m=
+enu"><div class=3D"hover_menu_contents" id=3D"__w2_w6uXuCPk150_menu_content=
+s"> </div></div>
+<span class=3D"photo_tooltip HoverMenu IdentityPhoto Photo" id=3D"__w2_w6uX=
+uCPk150_link"><img class=3D"profile_photo_img" src=3D"https://qph.fs.quorac=
+dn.net/main-thumb-7763306-50-9nHdHM9nNfVNF2hgu2K2hTNzkKxDmpSB.jpeg" alt=3D"=
+Bob Myers" style=3D"-ms-interpolation-mode:bicubic; outline:0; text-decorat=
+ion:none; border:0; border-radius:100px; display:block; height:40px; width:=
+40px; border-style:none" height=3D"40" width=3D"40"></span>
+</div></a></td>
+<td class=3D"content_header_text" style=3D"border-collapse:collapse; paddin=
+g-left:8px; color:#333"><table cellpadding=3D"0" cellspacing=3D"0" border=
+=3D"0" style=3D"border-collapse:collapse; mso-table-lspace:0; mso-table-rsp=
+ace:0"><tbody>
+<tr><td style=3D"border-collapse:collapse">
+<a class=3D"user_link" href=3D"https://www.quora.com/qemail/track_click?aoi=
+d=3DMaWXtGsfnbU&amp;aoty=3D3&amp;aty=3D4&amp;cp=3D10&amp;ct=3D1651372364534=
+283&amp;et=3D130&amp;id=3Df6bab8c78e9445dabf1f515323ccf1ab&amp;source=3D7&a=
+mp;src=3D1&amp;st=3D1651372364538456&amp;stories=3D1_bTVSFX0kXdS%7C1_M61FRg=
+BQwE6%7C1_1CgiTWAhgwK%7C1_qa9NFVplQBu%7C1_8xpuDUvG7tK%7C1_XxoCl1omqQP%7C1_d=
+FizM0LLMAP%7C1_4D4E1nGisR2%7C1_a0C7E9lKlmT%7C1_jJqhckgEMni&amp;ty=3D1&amp;t=
+y_data=3DjJqhckgEMni&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"color:#333; =
+text-decoration:none; font-weight:bold; line-height:1.4; font-size:15px">Bo=
+b Myers</a><span style=3D"font-size:15px; line-height:1.4">, lives in New E=
+ngland</span>
+</td></tr>
+<tr><td class=3D"answer_details" style=3D"border-collapse:collapse; color:#=
+999; font-size:13px"><a href=3D"https://www.quora.com/qemail/track_click?ao=
+id=3DjJqhckgEMni&amp;aoty=3D1&amp;aty=3D4&amp;cp=3D10&amp;ct=3D165137236453=
+4283&amp;et=3D130&amp;id=3Df6bab8c78e9445dabf1f515323ccf1ab&amp;source=3D7&=
+amp;src=3D1&amp;st=3D1651372364538456&amp;stories=3D1_bTVSFX0kXdS%7C1_M61FR=
+gBQwE6%7C1_1CgiTWAhgwK%7C1_qa9NFVplQBu%7C1_8xpuDUvG7tK%7C1_XxoCl1omqQP%7C1_=
+dFizM0LLMAP%7C1_4D4E1nGisR2%7C1_a0C7E9lKlmT%7C1_jJqhckgEMni&amp;ty=3D1&amp;=
+ty_data=3DjJqhckgEMni&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"color:#999;=
+ text-decoration:none">Written Nov 1, 2016</a></td></tr>
+</tbody></table></td>
+</tr></tbody></table></td></tr>
+<tr><td class=3D"item_content" style=3D'border-collapse:collapse; color:#33=
+3; display:block; font-family:-apple-system, BlinkMacSystemFont, "Segoe UI"=
+, Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif; fon=
+t-size:15px; line-height:1.4'><a href=3D"https://www.quora.com/qemail/track=
+_click?al_imp=3DeyJ0eXBlIjogMzMsICJoYXNoIjogIjB8MTB8MXwzMDEyNDU3NCJ9&amp;al=
+_pri=3D0&amp;aoid=3DjJqhckgEMni&amp;aoty=3D1&amp;aty=3D4&amp;cp=3D10&amp;ct=
+=3D1651372364534283&amp;et=3D130&amp;id=3Df6bab8c78e9445dabf1f515323ccf1ab&=
+amp;source=3D7&amp;src=3D1&amp;st=3D1651372364538456&amp;stories=3D1_bTVSFX=
+0kXdS%7C1_M61FRgBQwE6%7C1_1CgiTWAhgwK%7C1_qa9NFVplQBu%7C1_8xpuDUvG7tK%7C1_X=
+xoCl1omqQP%7C1_dFizM0LLMAP%7C1_4D4E1nGisR2%7C1_a0C7E9lKlmT%7C1_jJqhckgEMni&=
+amp;ty=3D1&amp;ty_data=3DjJqhckgEMni&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=
+=3D"color:#333; text-decoration:none"><div id=3D"w6uXuCPk80"><div class=3D"=
+truncated_q_text truncated_para_breaks TruncatedQText TruncatedAnswer Trunc=
+atedAnswerForDigestEmail TruncatedAnswerForEmail" id=3D"__w2_w6uXuCPk81_tru=
+ncated" style=3D"line-height:1.6">
+<span class=3D"rendered_qtext" style=3D"word-break:break-word"><p class=3D"=
+qtext_para u-ltr u-text-align--start" style=3D"margin:1em 0; line-height:1.=
+6">NTSC, for National Television Systems Committee, generally is used to re=
+fer to the final U.S. color television standard, or at least the color enco=
+ding and transmission sta...</p></span> <a class=3D"read_more_blue" href=3D=
+"https://www.quora.com/qemail/track_click?al_imp=3DeyJ0eXBlIjogMzMsICJoYXNo=
+IjogIjB8MTB8MXwzMDEyNDU3NCJ9&amp;al_pri=3D8&amp;aoid=3DjJqhckgEMni&amp;aoty=
+=3D1&amp;aty=3D4&amp;cp=3D10&amp;ct=3D1651372364534283&amp;et=3D130&amp;id=
+=3Df6bab8c78e9445dabf1f515323ccf1ab&amp;source=3D7&amp;src=3D1&amp;st=3D165=
+1372364538456&amp;stories=3D1_bTVSFX0kXdS%7C1_M61FRgBQwE6%7C1_1CgiTWAhgwK%7=
+C1_qa9NFVplQBu%7C1_8xpuDUvG7tK%7C1_XxoCl1omqQP%7C1_dFizM0LLMAP%7C1_4D4E1nGi=
+sR2%7C1_a0C7E9lKlmT%7C1_jJqhckgEMni&amp;ty=3D1&amp;ty_data=3DjJqhckgEMni&am=
+p;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"color:#168de9; text-decoration:none=
+">Read More =C2=BB</a>
+</div></div>
+<div class=3D"non_quora_share_embed_wrapper"><div class=3D"item_metadata"><=
+a href=3D"https://www.quora.com/qemail/track_click?al_imp=3DeyJ0eXBlIjogMzM=
+sICJoYXNoIjogIjB8MTB8MXwzMDEyNDU3NCJ9&amp;al_pri=3D0&amp;aoid=3DjJqhckgEMni=
+&amp;aoty=3D1&amp;aty=3D4&amp;cp=3D10&amp;ct=3D1651372364534283&amp;et=3D13=
+0&amp;id=3Df6bab8c78e9445dabf1f515323ccf1ab&amp;source=3D7&amp;src=3D1&amp;=
+st=3D1651372364538456&amp;stories=3D1_bTVSFX0kXdS%7C1_M61FRgBQwE6%7C1_1CgiT=
+WAhgwK%7C1_qa9NFVplQBu%7C1_8xpuDUvG7tK%7C1_XxoCl1omqQP%7C1_dFizM0LLMAP%7C1_=
+4D4E1nGisR2%7C1_a0C7E9lKlmT%7C1_jJqhckgEMni&amp;ty=3D1&amp;ty_data=3DjJqhck=
+gEMni&amp;uid=3Dm36BZ4XFnST&amp;v=3D0" style=3D"color:#2b6dad; text-decorat=
+ion:none"></a></div></div></a></td></tr>
+</tbody></table></td></tr>
+</tbody></table></td></tr></tbody></table>
+</div></div>
+</td></tr></tbody></table></td>
+<td class=3D"w30" style=3D"border-collapse:collapse"> </td>
+</tr></tbody></table></td></tr>
+<tr><td style=3D"border-collapse:collapse"><div class=3D"polish_button_wrap=
+per" style=3D"margin-bottom:25px; text-align:center" align=3D"center"><a cl=
+ass=3D"polish_action_button" href=3D"https://www.quora.com/qemail/track_cli=
+ck?aoid&amp;aoty=3D7&amp;aty=3D4&amp;cp=3D0&amp;ct=3D1651372364534283&amp;e=
+t=3D130&amp;id=3Df6bab8c78e9445dabf1f515323ccf1ab&amp;source&amp;src=3D1&am=
+p;st=3D1651372364538456&amp;stories=3D1_bTVSFX0kXdS%7C1_M61FRgBQwE6%7C1_1Cg=
+iTWAhgwK%7C1_qa9NFVplQBu%7C1_8xpuDUvG7tK%7C1_XxoCl1omqQP%7C1_dFizM0LLMAP%7C=
+1_4D4E1nGisR2%7C1_a0C7E9lKlmT%7C1_jJqhckgEMni&amp;ty&amp;ty_data&amp;uid=3D=
+m36BZ4XFnST&amp;v=3D0" style=3D"color:#fff; text-decoration:none; backgroun=
+d-color:#168de9; border-radius:3px; box-shadow:0 1px 1px 0 rgba(200, 200, 2=
+00, 0.2); cursor:pointer; display:inline-block; font-size:15px; line-height=
+:1.4; outline:0; padding:15px 25px; text-align:center" bgcolor=3D"#168de9" =
+align=3D"center">Search More on Quora</a></div></td></tr>
+<tr><td style=3D"border-collapse:collapse"></td></tr>
+</tbody></table></td></tr>
+<tr><td class=3D"polish_footer_section footer_container_wrapper" align=3D"c=
+enter" style=3D"border-collapse:collapse; max-width:525px; margin-top:16px"=
+><table class=3D"footer_container" cellpadding=3D"0" cellspacing=3D"0" bord=
+er=3D"0" style=3D"border-collapse:collapse; mso-table-lspace:0; mso-table-r=
+space:0; color:#999; font-size:11px; padding-top:16px; text-align:center; w=
+idth:100%" align=3D"center" width=3D"100%"><tr><td style=3D"border-collapse=
+:collapse"><div class=3D"footer_text_wrapper" style=3D"padding:25px 20px"><=
+div>
+<span style=3D"color:#999; display:block; padding-bottom:8px">This email wa=
+s sent by Quora (605 Castro Street, Mountain View, CA 94041). </span><span =
+style=3D"color:#999; display:block; padding-bottom:8px">If you don't want t=
+o receive this type of email in the future, please <a class=3D"unsubscribe_=
+link" href=3D"https://www.quora.com/email_optout/qemail_unsubscribe?email_t=
+rack_id=3Df6bab8c78e9445dabf1f515323ccf1ab&amp;t=3D1651372364650318&amp;tok=
+en=3D273b679c4f7d168a823a7e60d62fe0d564b20f7489e68993457a42a99b3ec3beadf3d5=
+db452c637bc89df464710bdde239877ab9e22fe0339656510efee75406&amp;type=3D130&a=
+mp;uid=3D905486825" style=3D"color:#999; text-decoration:underline">unsubsc=
+ribe</a>.</span><span style=3D"color:#999; display:block; padding-bottom:8p=
+x"><a href=3D"https://www.quora.com/" style=3D"color:#999; text-decoration:=
+underline">https://www.quora.com/</a></span>
+</div></div></td></tr></table></td></tr>
+</tbody></table></td></tr></tbody></table></div></body>
+</html>
+
+--===============8858095052300144830==--

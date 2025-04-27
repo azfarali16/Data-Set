@@ -1,0 +1,719 @@
+X-GM-THRID: 1704478214064119176
+X-Gmail-Labels: Inbox,Opened,Category Updates
+Delivered-To: azfarali007.aa@gmail.com
+Received: by 2002:a05:6a10:b70e:0:0:0:0 with SMTP id v14csp1769632pxx;
+        Mon, 5 Jul 2021 13:31:35 -0700 (PDT)
+X-Google-Smtp-Source: ABdhPJwaEBMZ4WvjKp0ZTRa1nRwwOUXpGCJhVZ+gRoSTNY69j7VoVNmF78gtfQQLiqEBttSb89aK
+X-Received: by 2002:aed:206b:: with SMTP id 98mr14098472qta.47.1625517095541;
+        Mon, 05 Jul 2021 13:31:35 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1625517095; cv=none;
+        d=google.com; s=arc-20160816;
+        b=p/az3NWnZT/G7vmuo/XoWP9tjqMeMdgTl3HuCF99YmUKOx/JKCnYYWMiZVu8SetmBI
+         JLxebCTdiNXnpzfsG/nSVnX0Pebyw05ZEKQNMsOsOwvMnGejZTb7YX8XSBNYJh2Ug+DW
+         bdSIWpVmMR1wGl7Hjyf34GgKQFg3ymM4SBKf3/bqvCznyeFYPf5zWUiUU3kfCjiGoxIv
+         1HMbGbAQkaZDUuU16/0N9B56i7oNan2xQnoYiMpTqWSBgvQD/0QnafT3e+Pt69K6OE00
+         gj043POTwn1iZ+JjAoyjN0+nb7C9tupp9hvMIFh1ccd7GXHD6kt8iPElZ4fWEwA4lS0l
+         cunw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=feedback-id:date:message-id:content-transfer-encoding:mime-version
+         :subject:to:from:dkim-signature:dkim-signature;
+        bh=7paWUlIXtGtwVDlYu+eCMFD2k65SKtPYT/BwW7WIOUI=;
+        b=pjv/fZ0wiF+A7qX1roA0uDApLBB8L5y+Rrc/s6yFYLfhEPo/quRkeWf4C8YSte6KRV
+         3JWQJDukBxnDnhqasPjcac337jQO/rJzTlYFmMagU9CdOSzBSIzxqs0NVfzCtq6gCHNm
+         xIbCj4vfRSxnhbjBx5SlX1jfjb9N78pTpxicPZSkkIYe8PFKj6gDz32R1RK8fiJt6vj4
+         7TCaNKnZuDdq9+uBseb9sWTDAww+gScFE+KqQpN+Oloc4RI2qVZzQFc6zuAEjWf3YR88
+         zmRN1j6OEEnimmrpqZXgIIZtbBdKMBhShu1eYBOI1WixKWGyzpfRBmBEHvrhpuBxNRCC
+         Ol8A==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@redditmail.com header.s=zsdxg4vit6vafqw4l4pg6mfqb57gfujl header.b=Ix3TOhvr;
+       dkim=pass header.i=@amazonses.com header.s=ug7nbtf4gccmlpwj322ax3p6ow6yfsug header.b=LDTtPVl6;
+       spf=pass (google.com: domain of 0100017a785e781c-70a91657-d811-4acb-ab1b-ed777e23cf9b-000000@amazonses.com designates 23.251.231.194 as permitted sender) smtp.mailfrom=0100017a785e781c-70a91657-d811-4acb-ab1b-ed777e23cf9b-000000@amazonses.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=redditmail.com
+Return-Path: <0100017a785e781c-70a91657-d811-4acb-ab1b-ed777e23cf9b-000000@amazonses.com>
+Received: from e231-194.smtp-out.amazonses.com (e231-194.smtp-out.amazonses.com. [23.251.231.194])
+        by mx.google.com with ESMTPS id b6si9487889qtr.46.2021.07.05.13.31.35
+        for <azfarali007.aa@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-SHA bits=128/128);
+        Mon, 05 Jul 2021 13:31:35 -0700 (PDT)
+Received-SPF: pass (google.com: domain of 0100017a785e781c-70a91657-d811-4acb-ab1b-ed777e23cf9b-000000@amazonses.com designates 23.251.231.194 as permitted sender) client-ip=23.251.231.194;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@redditmail.com header.s=zsdxg4vit6vafqw4l4pg6mfqb57gfujl header.b=Ix3TOhvr;
+       dkim=pass header.i=@amazonses.com header.s=ug7nbtf4gccmlpwj322ax3p6ow6yfsug header.b=LDTtPVl6;
+       spf=pass (google.com: domain of 0100017a785e781c-70a91657-d811-4acb-ab1b-ed777e23cf9b-000000@amazonses.com designates 23.251.231.194 as permitted sender) smtp.mailfrom=0100017a785e781c-70a91657-d811-4acb-ab1b-ed777e23cf9b-000000@amazonses.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=redditmail.com
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=zsdxg4vit6vafqw4l4pg6mfqb57gfujl; d=redditmail.com; t=1625517095;
+	h=From:To:Subject:MIME-Version:Content-Type:Content-Transfer-Encoding:Message-ID:Date;
+	bh=vhun374tmKnqvUVkq+DadwwovWnrQBxJZJdqLsmR9FA=;
+	b=Ix3TOhvrNPs6IS9TX/TDRUd0cq2bMc8jjFtD5oht3wmq9WN0Kfn6ADzqjFoPqMdm
+	arSCzsXUiXqLK3rhIGQLZ8b4sZZsNTTcgsRGSKZFPm03/fLyoX7aNhvQIqbBVfKZgzd
+	cs0CROV6c95mAcp4uHMM21l2FKLg0/WQ6Y/85Rzo=
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=ug7nbtf4gccmlpwj322ax3p6ow6yfsug; d=amazonses.com; t=1625517095;
+	h=From:To:Subject:MIME-Version:Content-Type:Content-Transfer-Encoding:Message-ID:Date:Feedback-ID;
+	bh=vhun374tmKnqvUVkq+DadwwovWnrQBxJZJdqLsmR9FA=;
+	b=LDTtPVl6qeLFndnzpn323KbZcwuDoNXdYC4uwnosqjnwFpIHzfFzxmV8SFDYcJDi
+	ZwNhBhWjCjexwsqomLjII+ZSXLnDS8YuBiCEEDcWJGXet9ownMplGeADzGvymQ1gU8k
+	P64j/ryvdGkwFAyr8Y3o4pKFUSvZ/cN5TibGdK+A=
+From: Reddit <noreply@redditmail.com>
+To: azfarali007.aa@gmail.com
+Subject: u/WeirdMagpie replied to your post in r/krita
+MIME-Version: 1.0
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+Message-ID: <0100017a785e781c-70a91657-d811-4acb-ab1b-ed777e23cf9b-000000@email.amazonses.com>
+Date: Mon, 5 Jul 2021 20:31:34 +0000
+Feedback-ID: 1.us-east-1.UqlFplRllIQtiw+Kq2b87y7uRSu9p66fMici2AQNsMU=:AmazonSES
+X-SES-Outgoing: 2021.07.05-23.251.231.194
+
+<!DOCTYPE html PUBLIC "-//W3C//DTDXHTML1.0Transitional//EN" "http://www.w3.=
+org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns=3D"http://www.w3.org/1999/xhtml" xmlns:v=3D"urn:schemas-microso=
+ft-com:vml"
+  xmlns:o=3D"urn:schemas-microsoft-com:office:office">
+
+<head>
+  <!-- MonitorCampaignID: email_post_reply -->
+   <!--[if gte mso 9]>
+ <xml>
+    <o:OfficeDocumentSettings>
+       <o:AllowPNG/>
+       <o:PixelsPerInch>96</o:PixelsPerInch>
+    </o:OfficeDocumentSettings>
+ </xml>
+ <![endif]-->
+ <meta http-equiv=3D"Content-type" content=3D"text/html; charset=3Dutf-8">
+ <meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=3D1=
+, maximum-scale=3D1">
+ <meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
+ <meta name=3D"format-detection" content=3D"date=3Dno">
+ <meta name=3D"format-detection" content=3D"address=3Dno">
+ <meta name=3D"format-detection" content=3D"telephone=3Dno">
+ <meta name=3D"x-apple-disable-message-reformatting">
+ <!--[if !mso]><!-->
+ <!--<![endif]-->
+ <title>Email Template</title>
+ <!--[if gte mso 9]>
+ <style type=3D"text/css" media=3D"all">
+    sup { font-size: 100% !important; }
+ </style>
+ <![endif]-->
+ <style type=3D"text/css" media=3D"screen">
+    body { padding:0 !important; margin:0 auto !important; display:block !i=
+mportant; min-width:100% !important; width:100% !important; background:#fff=
+fff; -webkit-text-size-adjust:none }
+    a { color:#313e42; text-decoration:none }
+    p { padding:0 !important; margin:0 !important }
+    img { margin: 0 !important; -ms-interpolation-mode: bicubic; /* Allow s=
+moother rendering of resized image in Internet Explorer */ }
+    a[x-apple-data-detectors] {
+    color: inherit !important;
+    text-decoration: inherit !important;
+    font-size: inherit !important;
+    font-family: inherit !important;
+    font-weight: inherit !important;
+    line-height: inherit !important;
+    }
+    .btn-12 a { display: block; padding: 4px; text-decoration: none; }
+    .btn-14 a { display: block; padding: 8px; text-decoration: none; }
+    .btn-14-4 a { display: block; padding: 8px; text-decoration: none; }
+    .l-red a { color: #ff0000; }
+    /* Mobile styles */
+    @media only screen and (max-device-width: 480px), only screen and (max-=
+width: 480px) {
+    .mpx-16 { padding-left: 16px !important; padding-right: 16px !important=
+; }
+    .mpb-48 { padding-bottom: 48px !important; }
+    .mfz-16 { font-size: 16px !important; }
+    .mlh-18 { line-height: 18px !important; }
+    .mpb-28 { padding-bottom: 28px !important; }
+    .mfz-14 { font-size: 14px !important; }
+    .mlh-16 { line-height: 16px !important; }
+    .mpb-12 { padding-bottom: 12px !important; }
+    .mpt-8 { padding-top: 8px !important; }
+    .mpb-44 { padding-bottom: 44px !important; }
+    .mpb-27 { padding-bottom: 27px !important; }
+    .mpt-21 { padding-top: 21px !important; }
+    .mpb-34 { padding-bottom: 34px !important; }
+    .mpb-17 { padding-bottom: 17px !important; }
+    .mpb-20 { padding-bottom: 20px !important; }
+    .mpt-16 { padding-top: 16px !important; }
+    .mpt-34 { padding-top: 34px !important; }
+    .mpx-12 { padding-left: 12px !important; padding-right: 12px !important=
+; }
+    .mfz-12 { font-size: 12px !important; }
+    .mpb-8 { padding-bottom: 8px !important; }
+    u + .body .gwfw { width:100% !important; width:100vw !important; }
+    .td,
+    .m-shell { width: 100% !important; min-width: 100% !important; }
+    .mt-left { text-align: left !important; }
+    .mt-center { text-align: center !important; }
+    .mt-right { text-align: right !important; }
+    .me-left { margin-right: auto !important; }
+    .me-center { margin: 0 auto !important; }
+    .me-right { margin-left: auto !important; }
+    .h-auto { height: auto !important; }
+    .w-auto { width: auto !important; }
+    .fluid-img img { width: 100% !important; max-width: 100% !important; he=
+ight: auto !important; }
+    .column,
+    .column-top,
+    .column-dir,
+    .column-dir-top { float: left !important; width: 100% !important; displ=
+ay: block !important; }
+    .m-hide { display: none !important; width: 0 !important; height: 0 !imp=
+ortant; font-size: 0 !important; line-height: 0 !important; min-height: 0 !=
+important; }
+    .m-block { display: block !important; }
+    /*Width*/
+    .w-15 { width: 15px !important; }
+    .w-8 { width: 8px !important; height: auto !important; }
+    .w-12 { width: 12px !important; height: auto !important; }
+    .w-60 { width: 60px !important; height: auto !important; }
+    .w-54 { width: 54px !important; height: auto !important; }
+    .w-54 img { width: 54px !important; height: auto !important; }
+    .w-104 { width: 104px !important; height: auto !important; }
+    .w-104 img { width: 104px !important; height: auto !important; }
+    .w-114 { width: 114px !important; height: auto !important; }
+    .w-114 img { width: 114px !important; height: auto !important; }
+    .btn-14-4 { font-size: 12px !important; line-height: 16px !important; }
+    .btn-14-4 a { padding: 4px !important; }
+    .w-2p { width: 2% !important; }
+    .w-32p { width: 32% !important; }
+    .w-49p { width: 49% !important; }
+    .w-50p { width: 50% !important; }
+    .w-100p { width: 100% !important; }
+    /*Text*/
+    }
+</style>
+</head>
+
+<body class=3D"body"
+  style=3D"padding:0 !important; margin:0 auto !important; display:block !i=
+mportant; min-width:100% !important; width:100% !important; background:#fff=
+fff; -webkit-text-size-adjust:none;">
+  <span class=3D"preview-text" style=3D"display: none !important; visibilit=
+y: hidden; opacity: 0; color: transparent; height: 0; width: 0;">I had this=
+ issue.
+I needed to calibrate my laptop display in its settings menu, in addition t=
+o choosing the correct profile in krita.
+Then my image looked as it did on my phone - muddy and wrong colou... &bull=
+; Colors of photo change when sending a PNG photo to phone &bull; </span>
+  <center>
+    <table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" =
+style=3D"margin: 0; padding: 0; width: 100%;"
+      bgcolor=3D"#ffffff" class=3D"gwfw">
+      <tr>
+        <td style=3D"margin: 0; padding: 0; width: 100%;" align=3D"center">
+          <table width=3D"600" border=3D"0" cellspacing=3D"0" cellpadding=
+=3D"0" class=3D"m-shell">
+            <tr>
+              <td class=3D"td"
+                style=3D"width:600px; min-width:600px; font-size:0pt; line-=
+height:0pt; padding:0; margin:0; font-weight:normal;">
+                <table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpa=
+dding=3D"0">
+
+                  <!-- Post reply -->
+                  <tr>
+                    <td class=3D"img" style=3D"font-size:0pt; line-height:0=
+pt; text-align:left;">
+                      <table width=3D"100%" border=3D"0" cellspacing=3D"0" =
+cellpadding=3D"0">
+                        <tr>
+                          <td class=3D"px-32 mpx-16" style=3D"padding-left:=
+ 32px; padding-right: 32px;">
+                            <table width=3D"100%" border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"0">
+                              <tr>
+                                <td class=3D"pt-25 pt-16" style=3D"padding-=
+top: 16px;">
+                                  <table width=3D"100%" border=3D"0" cellsp=
+acing=3D"0" cellpadding=3D"0">
+                                    <tr>
+                                      <td class=3D"pb-68 mpb-48" style=3D"p=
+adding-bottom: 55px;">
+                                        <table width=3D"100%" border=3D"0" =
+cellspacing=3D"0" cellpadding=3D"0">
+                                          <tr>
+                                            <td class=3D"img w-104" width=
+=3D"112"
+                                              style=3D"font-size:0pt; line-=
+height:0pt; text-align:left;">
+                                              <a href=3D"https://click.redd=
+itmail.com/CL0/https:%2F%2Fwww.reddit.com%2F/1/0100017a785e781c-70a91657-d8=
+11-4acb-ab1b-ed777e23cf9b-000000/jw33HTs5AYea59ukkPfAGQhHEL9anpONvicKxYQsMD=
+k=3D204" target=3D"_blank"><img
+                                                  src=3D"https://www.reddit=
+static.com/emaildigest/logo@2x.png" width=3D"112" height=3D"39" border=3D"0=
+" alt=3D"" /></a>
+                                            </td>
+                                            <td class=3D"img" width=3D"20"
+                                              style=3D"font-size:0pt; line-=
+height:0pt; text-align:left;"></td>
+                                            <td class=3D"img" style=3D"font=
+-size:0pt; line-height:0pt; text-align:left;">
+                                              <table width=3D"100%" border=
+=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+                                                <tr>
+                                                  <td align=3D"right">
+                                                    <table border=3D"0" cel=
+lspacing=3D"0" cellpadding=3D"0">
+                                                      <tr>
+                                                        <td class=3D"img" w=
+idth=3D"16" valign=3D"top"
+                                                          style=3D"font-siz=
+e:0pt; line-height:0pt; text-align:left;"><img
+                                                            src=3D"https://=
+www.redditstatic.com/emaildigest/default_user_icon.png" width=3D"16" height=
+=3D"16" border=3D"0"
+                                                            alt=3D"" /></td=
+>
+                                                        <td class=3D"img" w=
+idth=3D"4"
+                                                          style=3D"font-siz=
+e:0pt; line-height:0pt; text-align:left;"></td>
+                                                        <td class=3D"text-1=
+2 c-grey-4"
+                                                          style=3D"font-siz=
+e:12px; line-height:14px; font-family:Helvetica, Arial, sans-serif; text-al=
+ign:left; min-width:auto !important; color:#7a9299;">
+                                                          <a href=3D"https:=
+//click.redditmail.com/CL0/https:%2F%2Fwww.reddit.com%2Fuser%2FSpionix%2F%3=
+F$deep_link=3Dtrue%26correlation_id=3D5d8cc7c9-b47e-4f63-ac15-fa673d5e05a8%=
+26ref=3Demail_post_reply%26ref_campaign=3Demail_post_reply%26ref_source=3De=
+mail/1/0100017a785e781c-70a91657-d811-4acb-ab1b-ed777e23cf9b-000000/6cWQyA_=
+fS-qFbqmR5kbiERphzPxcJnb6Adjj7taRYUU=3D204" target=3D"_blank" class=3D"link=
+ c-grey-4"
+                                                            style=3D"text-d=
+ecoration:none; color:#7a9299;">
+                                                            <span class=3D"=
+link c-grey-4"
+                                                              style=3D"text=
+-decoration:none; color:#7a9299;">u/Spionix</span>
+                                                          </a>
+                                                        </td>
+                                                      </tr>
+                                                    </table>
+                                                  </td>
+                                                </tr>
+                                              </table>
+                                            </td>
+                                          </tr>
+                                        </table>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td class=3D"img-center pb-4"
+                                        style=3D"font-size:0pt; line-height=
+:0pt; text-align:center; padding-bottom: 14px;">
+                                        <a href=3D"https://click.redditmail=
+.com/CL0/https:%2F%2Fwww.reddit.com%2Fuser%2FWeirdMagpie%2F%3F$deep_link=3D=
+true%26correlation_id=3D5d8cc7c9-b47e-4f63-ac15-fa673d5e05a8%26ref=3Demail_=
+post_reply%26ref_campaign=3Demail_post_reply%26ref_source=3Demail/1/0100017=
+a785e781c-70a91657-d811-4acb-ab1b-ed777e23cf9b-000000/fmqjBOzk7S7ZjEEfrXoi2=
+lO_REoyGFqI5PpmC1MMwtg=3D204" target=3D"_blank">
+                                          <div style=3D"border: 1px solid #=
+EDEFF1; border-radius: 50%; margin: auto; width: 88px; height: 88px; backgr=
+ound-position: center; background-repeat: no-repeat; background-size: 100% =
+100%; background-image: url('https://styles.redditmedia.com/t5_3y0flf/style=
+s/profileIcon_snoo4f6d6387-e756-4dc0-8dd1-434760eac467-headshot.png?width=
+=3D256&amp;height=3D256&amp;crop=3D256:256,smart&amp;s=3Da97173588d2b8ffc1e=
+088e8a20f54e3e53b1c7d6');">
+                                            <img src=3D"https://www.reddits=
+tatic.com/emaildigest/post_reply_icon@4x.png" alt=3D"" style=3D"border:0; w=
+idth:41px; height:41px; padding-top:56px; padding-left:56px;">
+                                          </div>
+                                        </a>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td class=3D"title-20 a-center pb-34 =
+mfz-16 mlh-18 mpb-28"
+                                        style=3D"font-size:20px; line-heigh=
+t:23px; color:#313e42; font-family:Helvetica, Arial, sans-serif; font-weigh=
+t:normal; min-width:auto !important; text-align:center; padding-bottom: 34p=
+x;">
+                                        <a href=3D"https://click.redditmail=
+.com/CL0/https:%2F%2Fwww.reddit.com%2Fuser%2FWeirdMagpie%2F%3F$deep_link=3D=
+true%26correlation_id=3D5d8cc7c9-b47e-4f63-ac15-fa673d5e05a8%26ref=3Demail_=
+post_reply%26ref_campaign=3Demail_post_reply%26ref_source=3Demail/2/0100017=
+a785e781c-70a91657-d811-4acb-ab1b-ed777e23cf9b-000000/hC5sp8jhcleK43t5PXi-E=
+VsaIfdITh9HCrZ7QwwBTcs=3D204" target=3D"_blank" class=3D"link c-blue"
+                                          style=3D"text-decoration:none; co=
+lor:#006cbf;">
+                                          <span class=3D"link c-blue" style=
+=3D"text-decoration:none; color:#006cbf;">
+                                            <strong class=3D"c-blue" style=
+=3D"color:#006cbf;">u/WeirdMagpie</strong>
+                                          </span>
+                                        </a>
+                                        replied to your post in
+                                        <span class=3D"m-hide"><br /></span=
+>
+                                        <a href=3D"https://click.redditmail=
+.com/CL0/https:%2F%2Fwww.reddit.com%2Fr%2Fkrita%2F%3F$deep_link=3Dtrue%26co=
+rrelation_id=3D5d8cc7c9-b47e-4f63-ac15-fa673d5e05a8%26ref=3Demail_post_repl=
+y%26ref_campaign=3Demail_post_reply%26ref_source=3Demail/1/0100017a785e781c=
+-70a91657-d811-4acb-ab1b-ed777e23cf9b-000000/rOVNEw9h3Y1j3MnmjCu-JBmsJHtoKY=
+hRkYKm5_MDZuE=3D204" target=3D"_blank" class=3D"link c-dark-2"
+                                          style=3D"text-decoration:none; co=
+lor:#313e42;">
+                                          <span class=3D"link c-dark-2"
+                                            style=3D"text-decoration:none; =
+color:#313e42;">r/krita</span>
+                                        </a>
+                                        <span class=3D"c-grey" style=3D"col=
+or:#a7b4b8;">&middot; </span>
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td style=3D"border-bottom: 1px solid #ebee=
+f0;">
+                                  <table width=3D"100%" border=3D"0" cellsp=
+acing=3D"0" cellpadding=3D"0">
+                                    <tr>
+                                      <td class=3D"pb-8" style=3D"padding-b=
+ottom: 8px;">
+                                        <table width=3D"100%" border=3D"0" =
+cellspacing=3D"0" cellpadding=3D"0">
+                                          <tr>
+                                            <td class=3D"img" width=3D"32" =
+valign=3D"top"
+                                              style=3D"font-size:0pt; line-=
+height:0pt; text-align:left;"><img
+                                                src=3D"https://styles.reddi=
+tmedia.com/t5_2u4qs/styles/communityIcon_58dg7gpxt5811.png" width=3D"32" he=
+ight=3D"32" style=3D"border-radius: 50%;" border=3D"0" alt=3D"" />
+                                            </td>
+                                            <td class=3D"img" width=3D"4"
+                                              style=3D"font-size:0pt; line-=
+height:0pt; text-align:left;"></td>
+                                            <td class=3D"text-12 c-grey-4"
+                                              style=3D"font-size:12px; line=
+-height:14px; font-family:Helvetica, Arial, sans-serif; text-align:left; mi=
+n-width:auto !important; color:#7a9299;">
+                                              <a href=3D"https://click.redd=
+itmail.com/CL0/https:%2F%2Fwww.reddit.com%2Fr%2Fkrita%2F%3F$deep_link=3Dtru=
+e%26correlation_id=3D5d8cc7c9-b47e-4f63-ac15-fa673d5e05a8%26ref=3Demail_pos=
+t_reply%26ref_campaign=3Demail_post_reply%26ref_source=3Demail/2/0100017a78=
+5e781c-70a91657-d811-4acb-ab1b-ed777e23cf9b-000000/0KX2NHPVxUR37tRg0XXG4acv=
+rXqlmGjU2uJFmPO_0_w=3D204" target=3D"_blank" class=3D"link c-dark-4"
+                                                style=3D"text-decoration:no=
+ne; color:#1b2426;">
+                                                <span class=3D"link c-dark-=
+4"
+                                                  style=3D"text-decoration:=
+none; color:#1b2426;">
+                                                  <strong class=3D"text-14 =
+c-dark-4"
+                                                    style=3D"font-size:14px=
+; line-height:18px; font-family:Helvetica, Arial, sans-serif; text-align:le=
+ft; min-width:auto !important; color:#1b2426;">r/krita</strong>
+                                                </span>
+                                              </a>
+                                              <br />
+                                              <a href=3D"https://click.redd=
+itmail.com/CL0/https:%2F%2Fwww.reddit.com%2Fuser%2FSpionix%2F%3F$deep_link=
+=3Dtrue%26correlation_id=3D5d8cc7c9-b47e-4f63-ac15-fa673d5e05a8%26ref=3Dema=
+il_post_reply%26ref_campaign=3Demail_post_reply%26ref_source=3Demail/2/0100=
+017a785e781c-70a91657-d811-4acb-ab1b-ed777e23cf9b-000000/5ttAVgCp6XjtVuY-CP=
+mrEkoZayxNvxAmpRc0NwkZfpA=3D204" target=3D"_blank" class=3D"link c-grey-4"
+                                                style=3D"text-decoration:no=
+ne; color:#7a9299;">
+                                                <span class=3D"link c-grey-=
+4"
+                                                  style=3D"text-decoration:=
+none; color:#7a9299;">u/Spionix</span>
+                                              </a>
+                                              &bull;
+                                              <a href=3D"https://click.redd=
+itmail.com/CL0/https:%2F%2Fwww.reddit.com%2Fr%2Fkrita%2Fcomments%2Foecmd1%2=
+Fcolors_of_photo_change_when_sending_a_png_photo%2F%3F$deep_link=3Dtrue%26c=
+orrelation_id=3D5d8cc7c9-b47e-4f63-ac15-fa673d5e05a8%26ref=3Demail_post_rep=
+ly%26ref_campaign=3Demail_post_reply%26ref_source=3Demail/1/0100017a785e781=
+c-70a91657-d811-4acb-ab1b-ed777e23cf9b-000000/qwgfLR0PW8-DM8loRpI_Ha6VDDY8Q=
+UMDdzw42EIyOOE=3D204" target=3D"_blank" class=3D"link c-grey-4"
+                                                style=3D"text-decoration:no=
+ne; color:#7a9299;">
+                                                <span class=3D"link c-grey-=
+4"
+                                                  style=3D"text-decoration:=
+none; color:#7a9299;">2h ago</span>
+                                              </a>
+                                            </td>
+                                          </tr>
+                                        </table>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td class=3D"text-18 pb-4 mfz-14 mlh-=
+16"
+                                        style=3D"font-size:18px; line-heigh=
+t:22px; color:#1b2426; font-family:Helvetica, Arial, sans-serif; text-align=
+:left; min-width:auto !important; padding-bottom: 4px;">
+                                        <a href=3D"https://click.redditmail=
+.com/CL0/https:%2F%2Fwww.reddit.com%2Fr%2Fkrita%2Fcomments%2Foecmd1%2Fcolor=
+s_of_photo_change_when_sending_a_png_photo%2F%3F$deep_link=3Dtrue%26correla=
+tion_id=3D5d8cc7c9-b47e-4f63-ac15-fa673d5e05a8%26ref=3Demail_post_reply%26r=
+ef_campaign=3Demail_post_reply%26ref_source=3Demail/2/0100017a785e781c-70a9=
+1657-d811-4acb-ab1b-ed777e23cf9b-000000/5UGhUGaXo9vPrb2I0xrLQxepJOOrIFkbvNX=
+w3qO_UiI=3D204" target=3D"_blank" class=3D"link c-dark-4"
+                                          style=3D"text-decoration:none; co=
+lor:#1b2426;">
+                                          <span class=3D"link c-dark-4" sty=
+le=3D"text-decoration:none; color:#1b2426;">
+                                            <strong>Colors of photo change =
+when sending a PNG photo to phone</strong>
+                                          </span>
+                                        </a>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td class=3D"text-12 c-grey-4 pb-14 m=
+pb-12"
+                                        style=3D"font-size:12px; line-heigh=
+t:14px; font-family:Helvetica, Arial, sans-serif; text-align:left; min-widt=
+h:auto !important; color:#7a9299; padding-bottom: 14px;">
+                                        <a href=3D"https://click.redditmail=
+.com/CL0/https:%2F%2Fwww.reddit.com%2Fr%2Fkrita%2Fcomments%2Foecmd1%2Fcolor=
+s_of_photo_change_when_sending_a_png_photo%2F%3F$deep_link=3Dtrue%26correla=
+tion_id=3D5d8cc7c9-b47e-4f63-ac15-fa673d5e05a8%26ref=3Demail_post_reply%26r=
+ef_campaign=3Demail_post_reply%26ref_source=3Demail/3/0100017a785e781c-70a9=
+1657-d811-4acb-ab1b-ed777e23cf9b-000000/fdnUqLlMchzzUTWmof98swMX3BDstFUsFtz=
+alrXjWLU=3D204" target=3D"_blank" class=3D"link c-grey-4"
+                                          style=3D"text-decoration:none; co=
+lor:#7a9299;">
+                                          <span class=3D"link c-grey-4" sty=
+le=3D"text-decoration:none; color:#7a9299;">1
+                                            points</span>
+                                        </a>
+                                        &middot;
+                                        <a href=3D"https://click.redditmail=
+.com/CL0/https:%2F%2Fwww.reddit.com%2Fr%2Fkrita%2Fcomments%2Foecmd1%2Fcolor=
+s_of_photo_change_when_sending_a_png_photo%2F%3F$deep_link=3Dtrue%26correla=
+tion_id=3D5d8cc7c9-b47e-4f63-ac15-fa673d5e05a8%26ref=3Demail_post_reply%26r=
+ef_campaign=3Demail_post_reply%26ref_source=3Demail/4/0100017a785e781c-70a9=
+1657-d811-4acb-ab1b-ed777e23cf9b-000000/eqEZvwZ65TVOIZecONUNOd40haxxU4rgZYQ=
+1MgrS-3E=3D204" target=3D"_blank" class=3D"link c-grey-4"
+                                          style=3D"text-decoration:none; co=
+lor:#7a9299;">
+                                          <span class=3D"link c-grey-4" sty=
+le=3D"text-decoration:none; color:#7a9299;">12
+                                            comments</span>
+                                        </a>
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class=3D"pt-14 pb-48 mpt-8" style=3D"pa=
+dding-top: 14px; padding-bottom: 48px;">
+                                  <table width=3D"100%" border=3D"0" cellsp=
+acing=3D"0" cellpadding=3D"0">
+                                    <tr>
+                                      <td class=3D"text-12 c-grey-4 pb-4"
+                                        style=3D"font-size:12px; line-heigh=
+t:14px; font-family:Helvetica, Arial, sans-serif; text-align:left; min-widt=
+h:auto !important; color:#7a9299; padding-bottom: 4px; font-style: normal; =
+font-weight: 400;">
+                                        <a href=3D"https://click.redditmail=
+.com/CL0/https:%2F%2Fwww.reddit.com%2Fuser%2FWeirdMagpie%2F%3F$deep_link=3D=
+true%26correlation_id=3D5d8cc7c9-b47e-4f63-ac15-fa673d5e05a8%26ref=3Demail_=
+post_reply%26ref_campaign=3Demail_post_reply%26ref_source=3Demail/3/0100017=
+a785e781c-70a91657-d811-4acb-ab1b-ed777e23cf9b-000000/ZlPkwo23PGWIBEMM-4Gid=
+I6hR0U2T8GjIJFSxWW3vXw=3D204" target=3D"_blank" class=3D"link c-grey-4"
+                                          style=3D"text-decoration:none; co=
+lor:#7a9299;">
+                                          <span class=3D"link c-grey-4"
+                                            style=3D"text-decoration:none; =
+color:#7a9299;">u/WeirdMagpie</span>
+                                        </a>
+                                        &middot;
+                                        <a href=3D"https://click.redditmail=
+.com/CL0/https:%2F%2Fwww.reddit.com%2Fr%2Fkrita%2Fcomments%2Foecmd1%2Fcolor=
+s_of_photo_change_when_sending_a_png_photo%2Fh45xhop%2F%3F$deep_link=3Dtrue=
+%26correlation_id=3D5d8cc7c9-b47e-4f63-ac15-fa673d5e05a8%26ref=3Demail_post=
+_reply%26ref_campaign=3Demail_post_reply%26ref_source=3Demail/1/0100017a785=
+e781c-70a91657-d811-4acb-ab1b-ed777e23cf9b-000000/3EHNc6dM4VLNhfgg6VoV1o0dr=
+xOeOtRCjFJQRJtwa2A=3D204" target=3D"_blank" class=3D"link c-grey-4"
+                                          style=3D"text-decoration:none; co=
+lor:#7a9299;">
+                                          <span class=3D"link c-grey-4" sty=
+le=3D"text-decoration:none; color:#7a9299;">1
+                                            votes</span>
+                                        </a>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td class=3D"text-16 c-dark-4 pb-48 m=
+pb-28 mfz-14 mlh-18"
+                                        style=3D"font-size:16px; line-heigh=
+t:21px; font-family:Helvetica, Arial, sans-serif; text-align:left; min-widt=
+h:auto !important; color:#1b2426; padding-bottom: 35px; font-style: normal;=
+ font-weight: 400;">
+                                        <a href=3D"https://click.redditmail=
+.com/CL0/https:%2F%2Fwww.reddit.com%2Fr%2Fkrita%2Fcomments%2Foecmd1%2Fcolor=
+s_of_photo_change_when_sending_a_png_photo%2Fh45xhop%2F%3F$deep_link=3Dtrue=
+%26correlation_id=3D5d8cc7c9-b47e-4f63-ac15-fa673d5e05a8%26ref=3Demail_post=
+_reply%26ref_campaign=3Demail_post_reply%26ref_source=3Demail/2/0100017a785=
+e781c-70a91657-d811-4acb-ab1b-ed777e23cf9b-000000/2Buw0pxW2U32W-KykzDqEJ2A8=
+zuRkfOu44vMBwIhZZM=3D204" target=3D"_blank" class=3D"link c-dark-4"
+                                          style=3D"text-decoration:none; co=
+lor:#1b2426;">
+                                          <span class=3D"link c-dark-4" sty=
+le=3D"text-decoration:none; color:#1b2426;">I had this issue.
+I needed to calibrate my laptop display in its settings menu, in addition t=
+o choosing the correct profile in krita.
+Then my image looked as it did on my phone - muddy and wrong colou...</span=
+>
+                                        </a>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td align=3D"center">
+                                        <table width=3D"180" border=3D"0" c=
+ellspacing=3D"0" cellpadding=3D"0">
+                                          <tr>
+                                            <td class=3D"btn-14" bgcolor=3D=
+"#0079d3"
+                                              style=3D"border-radius: 4px; =
+font-size:14px; line-height:18px; mso-padding-alt:8px; color:#ffffff; font-=
+family:Helvetica, Arial, sans-serif; text-align:center; min-width:auto !imp=
+ortant;">
+                                              <a href=3D"https://click.redd=
+itmail.com/CL0/https:%2F%2Fwww.reddit.com%2Fr%2Fkrita%2Fcomments%2Foecmd1%2=
+Fcolors_of_photo_change_when_sending_a_png_photo%2Fh45xhop%2F%3F$deep_link=
+=3Dtrue%26correlation_id=3D5d8cc7c9-b47e-4f63-ac15-fa673d5e05a8%26ref=3Dema=
+il_post_reply%26ref_campaign=3Demail_post_reply%26ref_source=3Demail/3/0100=
+017a785e781c-70a91657-d811-4acb-ab1b-ed777e23cf9b-000000/QMLBZGC2_VbphwtCud=
+EunPZL-DijyyYOwYNWb-Usnb8=3D204" target=3D"_blank" class=3D"link c-white"
+                                                style=3D"display: block; pa=
+dding: 8px; text-decoration:none; color:#ffffff;">
+                                                <span class=3D"link c-white=
+" style=3D"text-decoration:none; color:#ffffff;">
+                                                  <strong>View Reply</stron=
+g>
+                                                </span>
+                                              </a>
+                                            </td>
+                                          </tr>
+                                        </table>
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                  <!-- END Post reply -->
+                  <!-- Footer - 1 -->
+<tr>
+   <td class=3D"pt-48 mpt-16 mpt-34" style=3D"padding-top: 48px;" bgcolor=
+=3D"#f2f5f6">
+      <table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D"0=
+">
+         <tbody>
+            <tr>
+               <td class=3D"img-center pb-28 w-104 mpb-20" style=3D"font-si=
+ze:0pt; line-height:0pt; text-align:center; padding-bottom: 28px;"><a href=
+=3D"https://click.redditmail.com/CL0/https:%2F%2Fwww.reddit.com%2F/2/010001=
+7a785e781c-70a91657-d811-4acb-ab1b-ed777e23cf9b-000000/GYkRXqTnj0CKZR6UIK5G=
+nC35mPvH7DiFPccQgqMKhZI=3D204" target=3D"_blank"><img src=3D"https://www.re=
+dditstatic.com/emaildigest/logo@2x.png" alt=3D"" width=3D"115" height=3D"40=
+" border=3D"0"></a></td>
+            </tr>
+            <tr>
+               <td class=3D"pb-20" style=3D"padding-bottom: 20px;" align=3D=
+"center">
+                  <table cellspacing=3D"0" cellpadding=3D"0" border=3D"0">
+                     <tbody>
+                        <tr>
+                          <td class=3D"img w-114" style=3D"font-size:0pt; l=
+ine-height:0pt; text-align:left;" valign=3D"top"><a href=3D"https://click.r=
+edditmail.com/CL0/https:%2F%2Fapps.apple.com%2Fus%2Fapp%2Freddit%2Fid106421=
+6828/1/0100017a785e781c-70a91657-d811-4acb-ab1b-ed777e23cf9b-000000/dAvMHtZ=
+qScKM92Mf57CtberVDFMOtJWU6Y9w4t1kB2Q=3D204" target=3D"_blank"><img src=3D"h=
+ttps://www.redditstatic.com/emaildigest/app_store_8_8.png" alt=3D"" width=
+=3D"124" height=3D"37" border=3D"0"></a></td>
+                           <td class=3D"img w-8" style=3D"font-size:0pt; li=
+ne-height:0pt; text-align:left;" width=3D"10"></td>
+                           <td class=3D"img w-114" style=3D"font-size:0pt; =
+line-height:0pt; text-align:left;" valign=3D"top"><a href=3D"https://click.=
+redditmail.com/CL0/https:%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fi=
+d=3Dcom.reddit.frontpage/1/0100017a785e781c-70a91657-d811-4acb-ab1b-ed777e2=
+3cf9b-000000/JL_Ku6bOPqMOVcjwBsZhggkxFSvM0CIMVi9MRuhtUM4=3D204" target=3D"_=
+blank"><img src=3D"https://www.redditstatic.com/emaildigest/google_play_8_8=
+.png" alt=3D"" width=3D"124" height=3D"37" border=3D"0"></a></td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </td>
+            </tr>
+            <tr>
+               <td class=3D"pb-20 px-24 mpx-12 mpb-20" style=3D"padding-bot=
+tom: 20px; padding-left: 24px; padding-right: 24px;">
+                  <table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0"=
+ border=3D"0">
+                     <tbody>
+                        <tr>
+                           <td class=3D"text-16-8 mfz-12 mlh-18 a-center" s=
+tyle=3D"font-size:16px; line-height:18px; color:#687981; font-family:Helvet=
+ica, Arial, sans-serif; min-width:auto !important; text-align:center;">
+                             This email was intended for u/Spionix. <a href=
+=3D"https://click.redditmail.com/CL0/https:%2F%2Fwww.reddit.com%2Fmail%2Fun=
+subscribe%2F5iyalfir%2F3%2Fd1e0b27b98ca73decf9cc9641443907b04352567662b1042=
+8423837279bf5828%3F$web_only=3Dtrue%26correlation_id=3D5d8cc7c9-b47e-4f63-a=
+c15-fa673d5e05a8%26ref=3Demail_post_reply%26ref_campaign=3Demail_post_reply=
+%26ref_source=3Demail%26utm_content=3Dunsubscribe/1/0100017a785e781c-70a916=
+57-d811-4acb-ab1b-ed777e23cf9b-000000/oSu3ZYHCK1yHHGZ8vCJ80XTIt5ed4I2v-USNQ=
+FdBCbo=3D204" target=3D"_blank" class=3D"link c-blue" style=3D"text-decorat=
+ion:none; color:#006cbf;"><span class=3D"link c-blue" style=3D"text-decorat=
+ion:none; color:#006cbf;">Unsubscribe</span></a> from post reply messages, =
+or visit your settings to manage what emails Reddit sends you.
+                           </td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </td>
+            </tr>
+            <tr>
+               <td class=3D"text-16-8 mfz-12 mlh-18 c-dark-8-8 a-center px-=
+24 mpx-12" style=3D"font-size:16px; line-height:18px; font-family:Helvetica=
+, Arial, sans-serif; min-width:auto !important; color:#222222; text-align:c=
+enter; padding-left: 24px; padding-right: 24px;">548 Market St., #16093, Sa=
+n Francisco, CA 94104=E2=80=935401</td>
+            </tr>
+            <tr>
+              <td class=3D"fluid-img" style=3D"font-size:0pt; line-height:0=
+pt; text-align:left;"><img src=3D"https://www.redditstatic.com/emaildigest/=
+footer_logo_8_8.png" alt=3D"" width=3D"600" height=3D"115" border=3D"0"></t=
+d>
+            </tr>
+         </tbody>
+      </table>
+   </td>
+</tr>
+<!-- END Footer - 1 -->
+                </table>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </center>
+<img alt=3D"" src=3D"http://click.redditmail.com/CI0/0100017a785e781c-70a91=
+657-d811-4acb-ab1b-ed777e23cf9b-000000/cT5IYSQyQillTM3oFQp1QzQNRkEMvh0X4uog=
+MrQtNBo=3D204" style=3D"display: none; width: 1px; height: 1px;">
+</body>
+
+</html>

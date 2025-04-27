@@ -1,0 +1,1626 @@
+X-GM-THRID: 1789001239357471126
+X-Gmail-Labels: Inbox,Opened,Category Promotions
+Delivered-To: azfarali007.aa@gmail.com
+Received: by 2002:a0c:8bd9:0:b0:681:876a:23b with SMTP id a25csp173235qvc;
+        Wed, 24 Jan 2024 11:28:54 -0800 (PST)
+X-Google-Smtp-Source: AGHT+IH80uQQ7CbChFtZnBDyY5218CtpIIy6yx//anH7sCIiQGgwA3aWFC1ziVO6U+IlLZe5mD+f
+X-Received: by 2002:ad4:518b:0:b0:681:96f4:2455 with SMTP id b11-20020ad4518b000000b0068196f42455mr152505qvp.51.1706124533982;
+        Wed, 24 Jan 2024 11:28:53 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1706124533; cv=none;
+        d=google.com; s=arc-20160816;
+        b=zWflip+t7aBTyr4sFZBw1PYm1ssffxtbUZL23R08bO7StqBn0oelyR6Qu44ZBNGXPf
+         RLCfsp+Cj0caOZbsz0RQZ9ZdaEmFsbqWEX7veajP77+VP1aN6bcFzD28ZfRfMPckB49n
+         a5U0TcnbQd9wVSrc983FWpTAcuaitmHqByXyY0V41ujeo36ZqpnKyLU5V284Q4P+K67k
+         +x1xsl6gtjrOSHntLDHG5Vb663dk9/HcdgzvfvIMmKI34GOHgPy3eeGoo73F4PcLBUGV
+         TbsHiCyrUNsq4KO5aAbyvWqvE+F42kps7RPMkG3JJlWOwgQrB/iBeYSabAOAOxYEhMGx
+         dF3w==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=message-id:to:from:subject:mime-version:date:dkim-signature
+         :dkim-signature;
+        bh=SZwfT5eI8Fj3RjywGPBygfF+edApIsFTK0IPYY4OENg=;
+        fh=1ghr3/vhIGL7+ytS5gYC2yrxOtO8q7dbhZ8cIHrxcdk=;
+        b=lipKNEg+AVPBWWqixU1hTZW/b8uLC9b4gzD3RrWziKzuxmojv2/dXpDh63UZTCWUeB
+         PSKuOOcNIPIHBX0oPpHo0a30Trzs3bWAm7ouaGNzsW4VyHm871w7+99gfG3D5rb8vIuT
+         M/beZzwjBH8oUG8AiUV1X/qIfzuTWgfctBb3bhtEU7BbMo5qPYnUye0M+Kh0vOsfpii6
+         xBq0DuD9oBzoiwGXZ4lEN9VNZFygTzyo/v2iHggpWNqAUgTGPemexhTuYofyLbQGPrT0
+         pmoX6fmKC0+Dc5OWbdMkiXPpYMaKW+5kI3aaxQXF24c8sAvfxaqSLU8bqkZsS4nwr/Uv
+         S94g==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@cio33540.datacamp.com header.s=pic header.b="I/vAxB+f";
+       dkim=pass header.i=@mailgun.org header.s=mg header.b=mxlyV7x3;
+       spf=pass (google.com: domain of postmaster@cio33540.datacamp.com designates 161.38.193.40 as permitted sender) smtp.mailfrom=postmaster@cio33540.datacamp.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=datacamp.com
+Return-Path: <postmaster@cio33540.datacamp.com>
+Received: from m193-40.mailgun.net (m193-40.mailgun.net. [161.38.193.40])
+        by mx.google.com with UTF8SMTPS id q22-20020a05620a0d9600b00783358104ffsi11785059qkl.589.2024.01.24.11.28.53
+        for <azfarali007.aa@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Wed, 24 Jan 2024 11:28:53 -0800 (PST)
+Received-SPF: pass (google.com: domain of postmaster@cio33540.datacamp.com designates 161.38.193.40 as permitted sender) client-ip=161.38.193.40;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@cio33540.datacamp.com header.s=pic header.b="I/vAxB+f";
+       dkim=pass header.i=@mailgun.org header.s=mg header.b=mxlyV7x3;
+       spf=pass (google.com: domain of postmaster@cio33540.datacamp.com designates 161.38.193.40 as permitted sender) smtp.mailfrom=postmaster@cio33540.datacamp.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=datacamp.com
+DKIM-Signature: a=rsa-sha256; v=1; c=relaxed/relaxed; d=cio33540.datacamp.com; q=dns/txt; s=pic; t=1706124533; x=1706131733;
+ h=Message-Id: To: To: From: From: Subject: Subject: Content-Type: Mime-Version: Date: X-Feedback-Id: Sender;
+ bh=SZwfT5eI8Fj3RjywGPBygfF+edApIsFTK0IPYY4OENg=;
+ b=I/vAxB+fU8rqZAhbENGKfmSfB8NXBueSpu07TgV+NYpt8mLre0GcB6UWmp5rM9rDj3TScCspTZ5x1IyTINbb56s4Q7Ftgu8drc5MgM0cFlpfJr9qXejkczL0nV4IoodclvPyyZ77wwG5tbBRW0Bnwr2OThAecd23psO2fzB2BbY=
+DKIM-Signature: a=rsa-sha256; v=1; c=relaxed/relaxed; d=mailgun.org; q=dns/txt; s=mg; t=1706124533; x=1706131733;
+ h=Message-Id: To: To: From: From: Subject: Subject: Content-Type: Mime-Version: Date: X-Feedback-Id: Sender;
+ bh=SZwfT5eI8Fj3RjywGPBygfF+edApIsFTK0IPYY4OENg=;
+ b=mxlyV7x3gCPXIkdjUPQsHvOCh5SFzrKPHLsaVoKDv3LPKRcGrfX4oKTI5jzH4NRFbOQV4d/k0WbN5QzH8GaO5aruNIlxUJLEPG4V8UWxpr2briS4AYhcNRt03jtTo54u7EWykddZq5ZqkZnptxkBevc1pFgTvA/cvUW8WHzC3TM=
+X-Feedback-Id: postmaster@cio33540.datacamp.com::5ddd74a2f4ee83003eecbcb5:mailgun
+X-Mailgun-Sending-Ip: 161.38.193.40
+X-Mailgun-Sid: WyJkNmExNiIsImF6ZmFyYWxpMDA3LmFhQGdtYWlsLmNvbSIsIjIzNDhjNSJd
+Received: from <unknown> (<unknown> []) by a3cc174d2a9a with HTTP id
+ 65b164f5090757214f45b8c4; Wed, 24 Jan 2024 19:28:53 GMT
+Date: Wed, 24 Jan 2024 19:28:53 +0000
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="9c8a6c167b5c26ebff0806b4a4132d5bd12ab82cfedc351667d7cf2f478a"
+Subject: 50% Off: Ends soon!
+From: DataCamp <team@datacamp.com>
+To: azfarali007.aa@gmail.com
+X-Mailgun-Dkim: true
+X-Mailgun-Native-Send: true
+X-Mailgun-Track-Clicks: false
+X-Mailgun-Track-Opens: false
+X-Mailer: Customer.io (dgTdhwQDAJiu2AaWrtgGAY087k-0yK-Rbq3O0LStmQ==;
+ +https://whatis.customeriomail.com)
+X-Report-Abuse-To: badactor@customer.io
+X-Mailgun-Variables: {"email_id": "dgTdhwQDAJiu2AaWrtgGAY087k-0yK-Rbq3O0LStmQ=="}
+Message-Id: <20240124192853.0985e237a896fef1@cio33540.datacamp.com>
+
+--9c8a6c167b5c26ebff0806b4a4132d5bd12ab82cfedc351667d7cf2f478a
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset="utf-8"
+
+Save 50% on DataCamp and access all courses and certifications.=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=
+=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=
+=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=
+=E2=80=8C=C2=A0=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=
+=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=
+=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=
+=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=
+=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C
+
+DataCamp ( https://www.datacamp.com?utm_source=3Dcustomerio&utm_medium=3Dem=
+ail&utm_campaign=3D240124_1-jan24-promo-t3_2-b2c_3-all_4-na_5-na_6-na_7-le_=
+8-emal-ci_9-na_10-jan24_11-email&utm_content=3Dblast&dc_euid=3D14105168 )
+
+Save 50% on all courses and certifications ( https://promo.datacamp.com?utm=
+_source=3Dcustomerio&utm_medium=3Demail&utm_campaign=3D240124_1-jan24-promo=
+-t3_2-b2c_3-all_4-na_5-na_6-na_7-le_8-emal-ci_9-na_10-jan24_11-email&utm_co=
+ntent=3Dblast&dc_euid=3D14105168 )
+
+Verify your data skills and land your dream job with Forbes=E2=80=99 #1 cer=
+tification program
+
+Offer ends in ( https://promo.datacamp.com?utm_source=3Dcustomerio&utm_medi=
+um=3Demail&utm_campaign=3D240124_1-jan24-promo-t3_2-b2c_3-all_4-na_5-na_6-n=
+a_7-le_8-emal-ci_9-na_10-jan24_11-email&utm_content=3Dblast&dc_euid=3D14105=
+168 )
+
+Countdown timer until January 25 at 12:59 p.m. ET ( https://promo.datacamp.=
+com?utm_source=3Dcustomerio&utm_medium=3Demail&utm_campaign=3D240124_1-jan2=
+4-promo-t3_2-b2c_3-all_4-na_5-na_6-na_7-le_8-emal-ci_9-na_10-jan24_11-email=
+&utm_content=3Dblast&dc_euid=3D14105168 )
+
+Boost My Career ( https://promo.datacamp.com?utm_source=3Dcustomerio&utm_me=
+dium=3Demail&utm_campaign=3D240124_1-jan24-promo-t3_2-b2c_3-all_4-na_5-na_6=
+-na_7-le_8-emal-ci_9-na_10-jan24_11-email&utm_content=3Dblast&dc_euid=3D141=
+05168 )
+
+Fast-track your path
+to Certification today
+
+New or seasoned practitioner, signal to employers you are 100% job-ready.
+
+icon of a checkmark in a circle
+
+Available at Associate and Professional levels
+
+icon of a checkmark in a circle
+
+Choose from Career, Technology, or Fundamentals Certifications
+
+icon of a checkmark in a circle
+
+Exclusive access to our DC Certified Community
+
+Get Certified ( https://promo.datacamp.com?utm_source=3Dcustomerio&utm_medi=
+um=3Demail&utm_campaign=3D240124_1-jan24-promo-t3_2-b2c_3-all_4-na_5-na_6-n=
+a_7-le_8-emal-ci_9-na_10-jan24_11-email&utm_content=3Dblast&dc_euid=3D14105=
+168 )
+
+clear as data ( https://www.datacamp.com/ )
+
+DataCamp, Inc. | 350 5th Ave. | Suite 7720 | New York, NY 10118
+
+Facebook ( https://www.facebook.com/datacampinc/ )
+Twitter ( https://twitter.com/datacamp )
+LinkedIn ( https://www.linkedin.com/company/datacampinc/ )
+Youtube ( https://www.youtube.com/channel/UC79Gv3mYp6zKiSwYemEik9A )
+Instagram ( https://www.instagram.com/datacamp/?hl=3Den )
+
+Apple Store ( https://datacamp.onelink.me/xztQ/cghcfw5o )
+Google Play ( https://datacamp.onelink.me/xztQ/cghcfw5o )
+
+Unsubscribe ( https://www.datacamp.com/mail_preferences/2ffd40a5-ce85-445f-=
+aa59-cd9a8ab7c9d6 )=C2=A0=C2=A0 =C2=A0=C2=A0Privacy Policy ( https://www.da=
+tacamp.com/privacy-policy/ )
+--9c8a6c167b5c26ebff0806b4a4132d5bd12ab82cfedc351667d7cf2f478a
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset="utf-8"
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.=
+w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns=3D"http://www.w3.=
+org/1999/xhtml" lang=3D"en"><head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"/>
+<!--[if !mso]><!-->
+<meta content=3D"IE=3Dedge" http-equiv=3D"X-UA-Compatible"/>
+<!--<![endif]-->
+<meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=3D1.=
+0"/>
+<meta name=3D"color-scheme" content=3D"light dark"/>
+<meta name=3D"supported-color-schemes" content=3D"light dark"/>
+<title></title>
+<style type=3D"text/css">
+:root {
+    color-scheme: light dark;
+    supported-color-schemes: light dark;
+}
+</style>
+<title></title>
+<style type=3D"text/css">
+/* http://meyerweb.com/eric/tools/css/reset/
+      v2.0 | 20110126
+      License: none (public domain)
+      */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, b=
+lockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, i=
+mg, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i=
+, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, cap=
+tion, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, emb=
+ed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, se=
+ction, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, =
+nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+</style>
+<style type=3D"text/css">
+/* CLIENT-SPECIFIC STYLES */
+img {
+    -ms-interpolation-mode: bicubic;
+}
+/* Force IE to smoothly render resized images. */
+#outlook a {
+    padding: 0;
+}
+/* Remove spacing between tables in Outlook 2007 and up. */
+=2EReadMsgBody {
+    width: 100%;
+}
+=2EExternalClass {
+    width: 100%;
+}
+/* Force Outlook.com to display emails at full width. */
+p, a, td {
+    mso-line-height-rule: exactly;
+}
+/* Force Outlook to render line heights as they're originally set. */
+p, a, td, body, table {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+/* Prevent Windows- and Webkit-based mobile platforms from changing declare=
+d text sizes. */
+=2EExternalClass, .ExternalClass p, .Ex=
+ternalClass td, .ExternalClass div, .E=
+xternalClass span, .ExternalClass font {
+    line-height: 100%;
+}
+#MessageViewBody a {
+    color: inherit;
+    text-decoration: none;
+    font-size: inherit;
+    font-family: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+}
+/* Force Outlook.com to display line heights normally. */
+a[x-apple-data-detectors] {
+    color: inherit !important;
+    text-decoration: none !important;
+    font-size: inherit !important;
+    font-family: inherit !important;
+    font-weight: inherit !important;
+    line-height: inherit !important;
+}
+span.MsoHyperlink {
+    mso-style-priority: 99;
+    color: inherit;
+}
+span.MsoHyperlinkFollowed {
+    mso-style-priority: 99;
+    color: inherit;
+}
+</style>
+<style type=3D"text/css">
+body {
+    margin: 0;
+    padding: 0;
+}
+table {
+    border-spacing: 0;
+}
+td {
+    padding: 0;
+}
+img {
+    border: 0;
+}
+=2Ewrapper {
+    width: 100%;
+    table-layout: fixed;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+=2Ewebkit {
+    max-width: 600px;
+    margin: 0 auto;
+}
+=2Eouter {
+    Margin: 0 auto;
+    width: 100%;
+    max-width: 600px;
+}
+=2Efull-width-image img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+}
+=2Einner {
+    padding: 0px;
+}
+=2Eone-column .contents {
+    text-align: left;
+}
+=2Etwo-column {
+    text-align: center;
+    font-size: 0;
+}
+=2Etwo-column .column {
+    width: 100%;
+    max-width: 300px;
+    display: inline-block;
+    vertical-align: top;
+}
+=2Econtents {
+    width: 100%;
+}
+=2Etwo-column img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+}
+=2Ethree-column {
+    text-align: center;
+    font-size: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+=2Ethree-column .column {
+    width: 100%;
+    max-width: 200px;
+    display: inline-block;
+    vertical-align: top;
+}
+=2Ethree-column img {
+    width: 100%;
+    max-width: 380px;
+    height: auto;
+}
+=2Eicon img {
+    width: 100%;
+    max-width: 100px;
+    height: auto;
+}
+=2Ethree-column .text {
+    padding-top: 10px;
+}
+=2Eleft-sidebar {
+    text-align: center;
+    font-size: 0;
+}
+=2Eleft-sidebar .column {
+    width: 100%;
+    display: inline-block;
+    vertical-align: middle;
+}
+=2Eleft-sidebar .left {
+    max-width: 300px;
+}
+=2Eleft-sidebar .right {
+    max-width: 300px;
+}
+=2Eleft-sidebar .img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+}
+=2Eleft-sidebar .contents {
+    text-align: center;
+}
+=2Eleft-sidebar a {
+    color: #85ab70;
+}
+=2Eright-sidebar {
+    text-align: center;
+    font-size: 0;
+}
+=2Eright-sidebar .column {
+    width: 100%;
+    display: inline-block;
+    vertical-align: middle;
+}
+=2Eright-sidebar .left {
+    max-width: 300px;
+}
+=2Eright-sidebar .right {
+    max-width: 300px;
+}
+=2Eright-sidebar .img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+}
+=2Eright-sidebar .contents {
+    font-size: 14px;
+    text-align: center;
+}
+=2Eright-sidebar a {
+    color: #70bbd9;
+}
+=2Edark-img {
+    display: none;
+    display: none !important;
+}
+</style>
+<style type=3D"text/css">
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+=2Ewebkit-hide {
+    display: none !important
+}
+=2Ewebkit-show {
+    display: block !important;
+    max-height: none !important
+}
+}
+</style>
+<style type=3D"text/css">
+@media screen and (min-width: 401px) and (max-width: 600px) {
+=2Etwo-column .column, .two-column img {
+    max-width: 100% !important;
+}
+=2Ethree-column .column, .three-column img, .six-column .column {
+    max-width: 100% !important;
+}
+=2Ethree-column .column {
+    max-width: 33% !important;
+}
+=2Etwo-column .column {
+    max-width: 50% !important;
+}
+}
+
+@media screen and (max-width: 480px) {
+=2Etwo-column .column, .two-column img {
+    max-width: 100% !important;
+    margin-left: 0 important;
+    margin-right: 0 important;
+}
+=2Ethree-column .column, .three-column img, .six-column .column {
+    max-width: 100% !important;
+}
+=2Efull {
+    width: 100% !important;
+    max-width: none !important;
+}
+}
+</style>
+<style type=3D"text/css">
+@media (prefers-color-scheme: dark ) {
+/* Shows Dark Mode-Only Content, Like Images */
+=2Edark-img {
+    display: block !important;
+    width: auto !important;
+    overflow: visible !important;
+    float: none !important;
+    max-height: inherit !important;
+    max-width: inherit !important;
+    line-height: auto !important;
+    margin-top: 0px !important;
+    visibility: inherit !important;
+}
+/* Hides Light Mode-Only Content, Like Images */
+=2Elight-img {
+    display: none;
+    display: none !important;
+}
+/* Custom Dark Mode Background Color */
+=2Edarkmode {
+  background-color: #ffffff !important;
+  background-image: linear-gradient(#ffffff, #ffffff) !important;
+}
+=2Edarkcard {
+  background-color: #05192d !important;
+  background-image: linear-gradient(#05192d, #05192d) !important;
+}
+=2Edarkcard-custom {
+  background-color: #213147 !important;
+  background-image: linear-gradient(#213147, #213147) !important;
+}
+=2Edark {
+    color: #ffffff !important;
+}
+=2Elight {
+    color: #000000 !important;
+}
+=2Edark-button-hollow {
+  border-color: #ffffff !important;
+}
+}
+</style>
+<style type=3D"text/css">
+/* Shows Dark Mode-Only Content, Like Images */
+[data-ogsc] .dark-img {
+    display: block !important;
+    width: auto !important;
+    overflow: visible !important;
+    float: none !important;
+    max-height: inherit !important;
+    max-width: inherit !important;
+    line-height: auto !important;
+    margin-top: 0px !important;
+    visibility: inherit !important;
+}
+/* Hides Light Mode-Only Content, Like Images */
+[data-ogsc] .light-img {
+    display: none;
+    display: none !important;
+}
+[data-ogsc] .dark {
+    color: #ffffff !important;
+}
+/* Custom Dark Mode Text Link Color */
+[data-ogsc] .light {
+    color: #000000 !important;
+}
+/* Custom Dark Mode Font Colors */
+[data-ogsc] h1, [data-ogsc] h2, [data-ogsc] p, [data-ogsc] span, [data-ogsc=
+] a, [data-ogsc] b {
+    color: #ffffff !important;
+}
+</style>
+<style type=3D"text/css">
+/* Shows Dark Mode-Only Content, Like Images */
+[data-ogsc] .dark-img {
+    display: block !important;
+    width: auto !important;
+    overflow: visible !important;
+    float: none !important;
+    max-height: inherit !important;
+    max-width: inherit !important;
+    line-height: auto !important;
+    margin-top: 0px !important;
+    visibility: inherit !important;
+}
+/* Hides Light Mode-Only Content, Like Images */
+[data-ogsc] .light-img {
+    display: none;
+    display: none !important;
+}
+[data-ogsc] .dark {
+    color: #ffffff !important;
+}
+/* Custom Dark Mode Text Link Color */
+[data-ogsc] .light {
+    color: #000000 !important;
+}
+/* Custom Dark Mode Font Colors */
+[data-ogsc] h1, [data-ogsc] h2, [data-ogsc] p, [data-ogsc] span, [data-ogsc=
+] a, [data-ogsc] b {
+    color: #ffffff !important;
+}
+</style>
+<style type=3D"text/css">
+  @media screen {
+    @font-face {
+      font-family: "StudioFeixenSans";
+      src: url("https://waffles.datacamp.com/fonts/StudioFeixenSans-Regular=
+=2Ewoff2")
+        format("woff2");
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: "StudioFeixenSans";
+      src: url("https://waffles.datacamp.com/fonts/StudioFeixenSans-Bold.wo=
+ff2")
+        format("woff2");
+      font-weight: bold;
+      font-style: normal;
+    }
+  }
+</style>
+<style type=3D"text/css">
+body, table, td, a {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+</style>
+<style type=3D"text/css">
+/* ANDROID CENTER FIX */
+div[style*=3D"margin: 16px 0"] {
+    margin: 0 !important;
+}
+</style>
+<style type=3D"text/css">
+/*Fixing gap on th right in Gmail*/
+u + .body .gwfw {
+    width: 100% !important;
+    width: 100vw !important;
+}
+</style>
+<style type=3D"text/css">
+MessageViewBody, #MessageWebViewDiv {
+    width: 100% !important;
+}
+</style>
+<style type=3D"text/css">
+div > u + .body .gmail {
+    display: block !important;
+}
+</style>
+<style>
+@media screen and (max-width: 820px) {
+  u + .body .gmail-blend-screen { background:#000; mix-blend-mode:screen; }
+  u + .body .gmail-blend-difference { background:#000; mix-blend-mode:diffe=
+rence;  }
+}
+</style>
+
+<style>
+    @media screen and (max-width: 599px) {
+      .img-star-set-one {
+        width: 24px !important;
+      }
+      .img-star-set-two {
+        width: 21px !important;
+      }
+      .img-star-set-one {
+        width: 24px !important;
+      }
+      .img-star-set-two {
+        width: 21px !important;
+      }
+      .text-holiday-sale, .text-save, .text-cheatsheet-title {
+        font-size: 14px !important;
+      }
+      .text-top-cheat-sheets {
+        font-size: 22px !important;
+      }
+      .text-description {
+        font-size: 12px !important;
+        line-height: 18px !important;
+      }
+    }
+  </style>
+
+  <style>
+    @media screen and (max-width: 374px) {
+      .px-0-default {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+      }
+    }
+
+    @media screen and (min-width: 375px) and (max-width: 599px) {
+      .pl-24-pr-0-mobile {
+        padding-left: 24px !important;
+        padding-right: 0 !important;
+      }
+    }
+
+    @media screen and (max-width: 599px) {
+      .px-0-mobile {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+      }
+      .pr-32-mobile {
+        padding-right: 32px !important;
+      }
+      .full-mobile {
+        width: 100% !important;
+      }
+      .pt-16-mobile {
+        padding-top: 16px !important;
+      }
+      .width-187-mobile {
+        width: 187px !important;
+      }
+      .width-125-mobile {
+        width: 125px !important;
+      }
+    }
+  </style>
+
+<!--[if true]>
+<style type=3D"text/css">
+table {border-collapse: collapse !important;}
+</style>
+<![endif]-->
+</head>
+
+<body class=3D"body" style=3D"background-image: linear-gradient(#05192d,#05=
+192d); margin:0;padding:0;min-width:100%;" bgcolor=3D"#05192d">
+
+  <div class=3D"tripane content">
+    <div class=3D"msg-body inner undoreset" style=3D"background-image: line=
+ar-gradient(#05192d,#05192d); background-color: #05192d;">
+<!-- Preheader. Shows up on iPhone / Gmail.-->
+<!-- Insert =E2=80=8C=C2=A0 hack after hidden preview text -->
+<div style=3D"display: none; max-height: 0px; overflow: hidden;">Save 50% o=
+n DataCamp and access all courses and certifications.=C2=A0=E2=80=8C=C2=A0=
+=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=
+=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=
+=E2=80=8C=C2=A0=E2=80=8C=C2=A0=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=
+=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=
+=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=
+=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=
+=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=
+=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=
+=80=8C=C2=A0=E2=80=8C=C2=A0=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=
+=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C=C2=A0=C2=A0=E2=80=8C=C2=A0=E2=80=
+=8C=C2=A0=E2=80=8C=C2=A0=E2=80=8C </div>
+      <!--[if true]>
+      <style type=3D"text/css">
+        body, table, td, div, a, p {font-family: Arial, Helvetica, sans-ser=
+if !important;}
+      </style>
+      <![endif]-->
+      <custom name=3D"opencounter" type=3D"tracking">
+        <center class=3D"wrapper" style=3D"width:100%;table-layout:fixed;-w=
+ebkit-text-size-adjust:100%;-ms-text-size-adjust:100%;">
+          <!-- No clue what the div does, but don't want to remove it -->
+          <div style=3D"display: none; max-height: 0px; overflow: hidden;">=
+</div>
+          <!-- ///////////////////////////// MODULE: BODY STARTS //////////=
+/////////////////// -->
+          <table cellspacing=3D"0" cellpadding=3D"0" border=3D"0" width=3D"=
+100%" role=3D"presentation" align=3D"center">
+            <tbody>
+              <!-- ///////////////////////////// MODULE: LOGO CENTERED STAR=
+TS ///////////////////////////// -->
+  <!-- Spacer begins -->
+  <tr>
+    <td width=3D"0" height=3D"32" style=3D"font-size:1px; line-height:1px; =
+mso-line-height-rule: exactly;"></td>
+  </tr>
+  <!-- Spacer ends -->
+  <tr>
+    <td align=3D"center" valign=3D"top"><a target=3D"_blank" href=3D"https:=
+//links.datacamp.com/e/c/eyJlbWFpbF9pZCI6ImRnVGRod1FEQUppdTJBYVdydGdHQVkwOD=
+drLTB5Sy1SYnEzTzBMU3RtUT09IiwiaHJlZiI6Imh0dHBzOi8vd3d3LmRhdGFjYW1wLmNvbT91d=
+G1fc291cmNlPWN1c3RvbWVyaW9cdTAwMjZ1dG1fbWVkaXVtPWVtYWlsXHUwMDI2dXRtX2NhbXBh=
+aWduPTI0MDEyNF8xLWphbjI0LXByb21vLXQzXzItYjJjXzMtYWxsXzQtbmFfNS1uYV82LW5hXzc=
+tbGVfOC1lbWFsLWNpXzktbmFfMTAtamFuMjRfMTEtZW1haWxcdTAwMjZ1dG1fY29udGVudD1ibG=
+FzdFx1MDAyNmRjX2V1aWQ9MTQxMDUxNjgiLCJpbnRlcm5hbCI6ImRkODcwNGQzMDM4NmExMDE5O=
+GFlZDgwNiIsImxpbmtfaWQiOjMyODU4OTE0N30/f5a432b17af92af153f1eb28e00fcb23a037=
+12ff4e63ca509359e27a4c782502"><img alt=3D"DataCamp" title=3D"" border=3D"0"=
+ align=3D"center" style=3D"border: 0; display: block; color: #8a8a8d; font-=
+family: StudioFeixenSans, &#39;StudioFeixenSans&#39;, Arial, sans-serif; fo=
+nt-size: 14px; font-size: 22px; font-weight: bold; height: auto; outline: 0=
+; padding: 0; width: 100%; max-width: 180px; display: block;" width=3D"180"=
+ src=3D"https://assets.datacamp.com/email/rebrand/full-logo-regular-inverte=
+d.png"/></a></td>
+  </tr>
+  <!-- ///////////////////////////// MODULE: LOGO CENTERED ENDS ///////////=
+////////////////// -->
+
+
+<!-- spacer begins -->
+<tr>
+  <td width=3D"0" height=3D"40" style=3D"font-size:1px; line-height:1px; ms=
+o-line-height-rule: exactly;"></td>
+</tr>
+<!-- spacer ends -->
+
+
+              <!-- ///////////////////////////// MODULE: CONTAINER BLOCK ST=
+ARTS ///////////////////////////// -->
+              <tr>
+                <td align=3D"center" class=3D"one-column" style=3D"padding-=
+bottom: 2px; padding-left: 16px; padding-right: 16px;">
+                  <!--[if true]>
+                  <table role=3D"presentation" width=3D"532" align=3D"cente=
+r" cellpadding=3D"0" cellspacing=3D"0" border=3D"0">
+                    <tr>
+                      <td align=3D"center" width=3D"532">
+                        <![endif]-->
+                        <table align=3D"center" border=3D"0" cellpadding=3D=
+"0" cellspacing=3D"0" class=3D"darkcard" role=3D"presentation" style=3D"mar=
+gin: 0 auto; max-width: 532px; width: 100%;">
+                          <tbody>
+                            <!-- rowText begins -->
+                            <tr>
+                              <td style=3D"padding-top:0px; padding-bottom:=
+0px;">
+                                <div class=3D"gmail-blend-screen">
+                                  <div class=3D"gmail-blend-difference">
+                                    <p style=3D"color:#ffffff; font-family:=
+ StudioFeixenSans, &#39;StudioFeixenSans&#39;, Arial, sans-serif; font-size=
+: 40px; line-height: 48px; font-weight: bold; text-align: center;" class=3D=
+"dark"><a href=3D"https://links.datacamp.com/e/c/eyJlbWFpbF9pZCI6ImRnVGRod1=
+FEQUppdTJBYVdydGdHQVkwODdrLTB5Sy1SYnEzTzBMU3RtUT09IiwiaHJlZiI6Imh0dHBzOi8vc=
+HJvbW8uZGF0YWNhbXAuY29tP3V0bV9zb3VyY2U9Y3VzdG9tZXJpb1x1MDAyNnV0bV9tZWRpdW09=
+ZW1haWxcdTAwMjZ1dG1fY2FtcGFpZ249MjQwMTI0XzEtamFuMjQtcHJvbW8tdDNfMi1iMmNfMy1=
+hbGxfNC1uYV81LW5hXzYtbmFfNy1sZV84LWVtYWwtY2lfOS1uYV8xMC1qYW4yNF8xMS1lbWFpbF=
+x1MDAyNnV0bV9jb250ZW50PWJsYXN0XHUwMDI2ZGNfZXVpZD0xNDEwNTE2OCIsImludGVybmFsI=
+joiZGQ4NzA0ZDMwMzg2YTEwMTk4YWVkODA2IiwibGlua19pZCI6MzI4NTg5MTQ4fQ/60b3e640c=
+4a313d5476d9cddb0e61282d9e4fd1faa44473d31bc53684c9d1bdc" style=3D"color: #F=
+FFFFF; text-decoration: none;"><span style=3D"color: #02ee61;">Save 50% </s=
+pan>on all courses and certifications</a></p>
+                                  </div>
+                                </div>
+                              </td>
+                            </tr>
+                            <!-- rowText ends -->
+
+                           =20
+<!-- spacer begins -->
+<tr>
+  <td width=3D"0" height=3D"16" style=3D"font-size:1px; line-height:1px; ms=
+o-line-height-rule: exactly;"></td>
+</tr>
+<!-- spacer ends -->
+
+
+                            <!-- rowText begins -->
+                            <tr>
+                              <td style=3D"padding-top:0px; padding-bottom:=
+0px;">
+                                <!--[if true]>
+                                <table role=3D"presentation" width=3D"360" =
+align=3D"center" cellpadding=3D"0" cellspacing=3D"0" border=3D"0">
+                                  <tr>
+                                    <td align=3D"center" width=3D"360">
+                                      <![endif]-->
+                                      <table align=3D"center" border=3D"0" =
+cellpadding=3D"0" cellspacing=3D"0" class=3D"darkcard" role=3D"presentation=
+" style=3D"margin: 0 auto; max-width: 360px; width: 100%;">
+                                        <tbody>
+                                          <!-- rowText begins -->
+                                          <tr>
+                                            <td style=3D"padding-top:0px; p=
+adding-bottom:0px;">
+                                              <div class=3D"gmail-blend-scr=
+een">
+                                                <div class=3D"gmail-blend-d=
+ifference">
+                                                  <p style=3D"color:#ffffff=
+; font-family: StudioFeixenSans, &#39;StudioFeixenSans&#39;, Arial, sans-se=
+rif; font-size: 20px; line-height: 25px; text-align: center;" class=3D"dark=
+">Verify your data skills and land your dream job with <strong style=3D"fon=
+t-weight: bold;">Forbes=E2=80=99 #1 certification program</strong></p>
+                                                </div>
+                                              </div>
+                                            </td>
+                                          </tr>
+                                         =20
+<!-- spacer begins -->
+<tr>
+  <td width=3D"0" height=3D"32" style=3D"font-size:1px; line-height:1px; ms=
+o-line-height-rule: exactly;"></td>
+</tr>
+<!-- spacer ends -->
+
+                                          <tr>
+                                            <td>
+                                              <table border=3D"0" cellpaddi=
+ng=3D"0" cellspacing=3D"0" style=3D" border-collapse: separate;" width=3D"1=
+00%">
+                                                <tbody>
+                                                  <tr>
+                                                    <td style=3D"background=
+-color: #213147; background-image: linear-gradient(#213147, #213147);  bord=
+er-collapse: separate; border-radius: 4px; box-shadow: 0px 1px 37px rgba(0,=
+ 0, 0, 0.5); padding: 16px;">
+                                                      <table border=3D"0" c=
+ellpadding=3D"0" cellspacing=3D"0" style=3D" border-collapse: separate;" wi=
+dth=3D"100%">
+                                                        <tbody>
+                                                          <tr>
+                                                            <td>
+                                                              <div class=3D=
+"gmail-blend-screen">
+                                                                <div class=
+=3D"gmail-blend-difference">
+                                                                  <p style=
+=3D"color:#ffffff; font-family: StudioFeixenSans, &#39;StudioFeixenSans&#39=
+;, Arial, sans-serif; font-size: 14px; font-weight: bold; letter-spacing: 1=
+=2E5px; line-height: 18px; text-align:=20=
+center; text-transform: uppercase;" cl=
+ass=3D"dark"><a href=3D"https://links.datacamp.com/e/c/eyJlbWFpbF9pZCI6ImRn=
+VGRod1FEQUppdTJBYVdydGdHQVkwODdrLTB5Sy1SYnEzTzBMU3RtUT09IiwiaHJlZiI6Imh0dHB=
+zOi8vcHJvbW8uZGF0YWNhbXAuY29tP3V0bV9zb3VyY2U9Y3VzdG9tZXJpb1x1MDAyNnV0bV9tZW=
+RpdW09ZW1haWxcdTAwMjZ1dG1fY2FtcGFpZ249MjQwMTI0XzEtamFuMjQtcHJvbW8tdDNfMi1iM=
+mNfMy1hbGxfNC1uYV81LW5hXzYtbmFfNy1sZV84LWVtYWwtY2lfOS1uYV8xMC1qYW4yNF8xMS1l=
+bWFpbFx1MDAyNnV0bV9jb250ZW50PWJsYXN0XHUwMDI2ZGNfZXVpZD0xNDEwNTE2OCIsImludGV=
+ybmFsIjoiZGQ4NzA0ZDMwMzg2YTEwMTk4YWVkODA2IiwibGlua19pZCI6MzI4NTg5MTQ4fQ/60b=
+3e640c4a313d5476d9cddb0e61282d9e4fd1faa44473d31bc53684c9d1bdc" style=3D"col=
+or: #FFFFFF; text-decoration: none;">Offer ends in</a>
+                                                                  </p>
+                                                                </div>
+                                                              </div>
+                                                            </td>
+                                                          </tr>
+                                                          <tr>
+                                                            <td style=3D"pa=
+dding-left: 16px; padding-right: 16px; padding-top: 8px;"><a target=3D"_bla=
+nk" style=3D"border: 0;" href=3D"https://links.datacamp.com/e/c/eyJlbWFpbF9=
+pZCI6ImRnVGRod1FEQUppdTJBYVdydGdHQVkwODdrLTB5Sy1SYnEzTzBMU3RtUT09IiwiaHJlZi=
+I6Imh0dHBzOi8vcHJvbW8uZGF0YWNhbXAuY29tP3V0bV9zb3VyY2U9Y3VzdG9tZXJpb1x1MDAyN=
+nV0bV9tZWRpdW09ZW1haWxcdTAwMjZ1dG1fY2FtcGFpZ249MjQwMTI0XzEtamFuMjQtcHJvbW8t=
+dDNfMi1iMmNfMy1hbGxfNC1uYV81LW5hXzYtbmFfNy1sZV84LWVtYWwtY2lfOS1uYV8xMC1qYW4=
+yNF8xMS1lbWFpbFx1MDAyNnV0bV9jb250ZW50PWJsYXN0XHUwMDI2ZGNfZXVpZD0xNDEwNTE2OC=
+IsImludGVybmFsIjoiZGQ4NzA0ZDMwMzg2YTEwMTk4YWVkODA2IiwibGlua19pZCI6MzI4NTg5M=
+TQ4fQ/60b3e640c4a313d5476d9cddb0e61282d9e4fd1faa44473d31bc53684c9d1bdc"><im=
+g alt=3D"Countdown timer until January 25 at 12:59 p.m. ET" src=3D"https://=
+gen.sendtric.com/countdown/i1nvyfdkq0" style=3D"display: block; max-width: =
+100%;"/></a></td>
+                                                          </tr>
+                                                        </tbody>
+                                                      </table>
+                                                    </td>
+                                                  </tr>
+                                                </tbody>
+                                              </table>
+                                            </td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                      <!--[if true]>
+                                    </td>
+                                  </tr>
+                                </table>
+                                <![endif]-->
+                              </td>
+                            </tr>
+                            <!-- rowText ends -->
+                            <!-- CTA button starts -->
+                            <tr>
+                              <td align=3D"center" style=3D"padding-top: 8p=
+x; padding-top: 32px;">
+                                <div class=3D"gmail-blend-screen">
+                                  <div class=3D"gmail-blend-difference">
+                                    <table role=3D"presentation" align=3D"c=
+enter" bgcolor=3D"#02ee61" style=3D"border-collapse:collapse;margin:0 auto;=
+padding:0;border-spacing:0;border-radius:4px; background-color:#02ee61; bac=
+kground-image: linear-gradient(#02ee61,#02ee61);" cellpadding=3D"0" cellspa=
+cing=3D"0" border=3D"0">
+                                      <tbody>
+                                        <tr>
+                                          <td style=3D"border-collapse:coll=
+apse;font-family: StudioFeixenSans, &#39;StudioFeixenSans&#39;, Arial, sans=
+-serif; font-size: 16px; font-weight: bold; padding:0;border:0; text-align:=
+center; border-radius:4px; color:#05192d; mso-padding-alt:9px 19px; backgro=
+und-color:#02ee61; background-image: linear-gradient(#02ee61,#02ee61);" ali=
+gn=3D"center" width=3D"290">
+                                            <a class=3D"link" target=3D"_bl=
+ank" style=3D"text-decoration:none;color:#05192d; font-family: StudioFeixen=
+Sans, &#39;StudioFeixenSans&#39;, Arial, sans-serif; font-size: 16px; font-=
+weight: bold; text-align:center;border-radius:4px; font-size:16px; line-hei=
+ght:30px;" href=3D"https://links.datacamp.com/e/c/eyJlbWFpbF9pZCI6ImRnVGRod=
+1FEQUppdTJBYVdydGdHQVkwODdrLTB5Sy1SYnEzTzBMU3RtUT09IiwiaHJlZiI6Imh0dHBzOi8v=
+cHJvbW8uZGF0YWNhbXAuY29tP3V0bV9zb3VyY2U9Y3VzdG9tZXJpb1x1MDAyNnV0bV9tZWRpdW0=
+9ZW1haWxcdTAwMjZ1dG1fY2FtcGFpZ249MjQwMTI0XzEtamFuMjQtcHJvbW8tdDNfMi1iMmNfMy=
+1hbGxfNC1uYV81LW5hXzYtbmFfNy1sZV84LWVtYWwtY2lfOS1uYV8xMC1qYW4yNF8xMS1lbWFpb=
+Fx1MDAyNnV0bV9jb250ZW50PWJsYXN0XHUwMDI2ZGNfZXVpZD0xNDEwNTE2OCIsImludGVybmFs=
+IjoiZGQ4NzA0ZDMwMzg2YTEwMTk4YWVkODA2IiwibGlua19pZCI6MzI4NTg5MTQ4fQ/60b3e640=
+c4a313d5476d9cddb0e61282d9e4fd1faa44473d31bc53684c9d1bdc">
+                                              <!--[if !gte mso 9]><!----><s=
+pan style=3D"padding:9px 19px;border-radius:4px;display:block"><!--<![endif=
+]-->
+                                              Boost My Career
+                                              <!--[if !gte mso 9]><!----> <=
+/span><!--<![endif]-->
+                                            </a>
+                                          </td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                  </div>
+                                </div>
+                              </td>
+                            </tr>
+                            <!-- CTA button ends -->
+
+                            <!-- spacer begins -->
+                <tr>
+                  <td width=3D"0" height=3D"48" style=3D"font-size:1px; lin=
+e-height:1px; mso-line-height-rule: exactly;"></td>
+                </tr>
+                <!-- spacer ends -->
+
+
+                                                    <!-- rowText begins -->
+                                                    <tr>
+                                                      <td>
+                                                        <div class=3D"gmail=
+-blend-screen">
+                                                          <div class=3D"gma=
+il-blend-difference">
+                                                            <p style=3D"col=
+or:#ffffff; font-family: StudioFeixenSans, &#39;StudioFeixenSans&#39;, Aria=
+l, sans-serif; font-size: 28px; line-height: 34px; font-weight: bold; text-=
+align: center;" class=3D"dark">Fast-track your path<br/> to <span style=3D"=
+color: #03EF62;">Certification</span> today</p>
+                                                          </div>
+                                                        </div>
+                                                      </td>
+                                                    </tr>
+                                                    <!-- rowText ends -->
+
+
+<!-- spacer begins -->
+<tr>
+  <td width=3D"0" height=3D"16" style=3D"font-size:1px; line-height:1px; ms=
+o-line-height-rule: exactly;"></td>
+</tr>
+<!-- spacer ends -->
+
+                          </tbody>
+                        </table>
+                        <!--[if true]>
+                      </td>
+                    </tr>
+                  </table>
+                  <![endif]-->
+                </td>
+              </tr>
+              <!-- ///////////////////////////// MODULE: CONTAINER BLOCK EN=
+DS ///////////////////////////// -->
+
+              <tr>
+                <td align=3D"center" style=3D"padding-top: 0px; padding-rig=
+ht: 16px; padding-left: 16px;">
+                  <!--[if true]>
+                  <table role=3D"presentation" width=3D"632" align=3D"cente=
+r" cellpadding=3D"0" cellspacing=3D"0" border=3D"0">
+                    <tr>
+                      <td align=3D"center" width=3D"632">
+                        <![endif]-->
+                        <table align=3D"center" border=3D"0" cellpadding=3D=
+"0" cellspacing=3D"0" class=3D"darkcard" role=3D"presentation" style=3D"mar=
+gin: 0 auto; max-width: 632px; width: 100%;">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <!-- Media Flag Fluid Start -->
+                                <table align=3D"center" cellpadding=3D"0" c=
+ellspacing=3D"0" class=3D"media-flag-to-stack" width=3D"100%">
+                                  <tbody><tr>
+                                    <td style=3D"font-size: 0; padding-top:=
+ 16px;">
+                                      <!-- 1. Set the width of the table --=
+>
+                                      <!--[if mso]>
+                                      <table align=3D"center" border=3D"0" =
+cellspacing=3D"0" cellpadding=3D"0" width=3D"632">
+                                      <tr>
+                                      <td>
+                                      <![endif]-->
+
+                                      <div style=3D"display: inline-block; =
+vertical-align: middle;">
+                                        <!-- 2. Set the width on the td inc=
+luding padding if needed -->
+                                        <table align=3D"left" border=3D"0" =
+cellpadding=3D"0" cellspacing=3D"0" class=3D"child" width=3D"140">
+                                          <tbody><tr>
+                                            <td style=3D"padding-left: 32px=
+; padding-right: 32px;">
+                                              <!-- 3. Set the width on the =
+image -->
+                                              <img alt=3D"" border=3D"0" sr=
+c=3D"https://assets.datacamp.com/email/rebrand/promos/thumbnail-lady.jpg" s=
+tyle=3D"border: 0; display: block; color:#414345; font-family: Karla, &#39;=
+Karla&#39;, sans-serif;  font-size: 14px; height: auto; max-width: 169px; o=
+utline: 0; padding: 0; display: block; color: #414345; width: 169px !import=
+ant;" width=3D"169"/>
+                                            </td>
+                                          </tr>
+                                        </tbody></table>
+                                      </div>
+
+                                      <!--[if mso]>
+                                        </td><td>
+                                      <![endif]-->
+
+                                      <div style=3D"display: inline-block; =
+vertical-align: middle;">
+                                        <!-- 4. Set the max-width of 600px =
+- media table width (or adjust based on the table width) -->
+                                        <table border=3D"0" cellpadding=3D"=
+0" cellspacing=3D"0" class=3D"child" style=3D"max-width: 399px;">
+                                          <tbody><tr>
+                                            <td style=3D"text-align: left; =
+padding-top: 16px;">
+                                              <!-- 5. Add a content table -=
+->
+                                              <table border=3D"0" cellpaddi=
+ng=3D"0" cellspacing=3D"0">
+                                                <!-- rowText begins -->
+                                                <tbody><tr>
+                                                  <td style=3D"padding-top:=
+0px; padding-bottom:0px;">
+                                                    <div class=3D"gmail-ble=
+nd-screen">
+                                                      <div class=3D"gmail-b=
+lend-difference">
+                                                        <p style=3D"color:#=
+ffffff; font-family: StudioFeixenSans, &#39;StudioFeixenSans&#39;, Arial, s=
+ans-serif; font-size: 18px; font-weight: bold; line-height: 23px;" class=3D=
+"dark">New or seasoned practitioner, signal to employers you are 100% job-r=
+eady.</p>
+                                                      </div>
+                                                    </div>
+                                                  </td>
+                                                </tr>
+                                                <!-- rowText ends -->
+                                                <!-- rowText ends -->
+                                                <tr>
+                                                  <td>
+                                                    <table border=3D"0" cel=
+lpadding=3D"0" cellspacing=3D"0" width=3D"100%">
+                                                      <tbody>
+                                                        <tr>
+                                                          <td style=3D"padd=
+ing-top: 12px; width: 16px;">
+                                                            <img alt=3D"ico=
+n of a checkmark in a circle" src=3D"https://assets.datacamp.com/email/rebr=
+and/promos/icon-bullet-pink.png" width=3D"8"/>
+                                                          </td>
+                                                          <td td=3D"" style=
+=3D"padding-top: 14px;">
+                                                            <div class=3D"g=
+mail-blend-screen">
+                                                              <div class=3D=
+"gmail-blend-difference">
+                                                                <p style=3D=
+"color:#ffffff; font-family: StudioFeixenSans, &#39;StudioFeixenSans&#39;, =
+Arial, sans-serif; font-size: 16px; line-height: 24px; text-align: left;" c=
+lass=3D"dark">Available at Associate and Professional levels</p>
+                                                              </div>
+                                                            </div>
+                                                          </td>
+                                                        </tr>
+                                                        <tr>
+                                                          <td style=3D"padd=
+ing-top: 12px; width: 16px;">
+                                                            <img alt=3D"ico=
+n of a checkmark in a circle" src=3D"https://assets.datacamp.com/email/rebr=
+and/promos/icon-bullet-pink.png" width=3D"8"/>
+                                                          </td>
+                                                          <td td=3D"" style=
+=3D"padding-top: 14px;">
+                                                            <div class=3D"g=
+mail-blend-screen">
+                                                              <div class=3D=
+"gmail-blend-difference">
+                                                                <p style=3D=
+"color:#ffffff; font-family: StudioFeixenSans, &#39;StudioFeixenSans&#39;, =
+Arial, sans-serif; font-size: 16px; line-height: 24px; text-align: left;" c=
+lass=3D"dark">Choose from Career, Technology, or Fundamentals Certification=
+s</p>
+                                                              </div>
+                                                            </div>
+                                                          </td>
+                                                        </tr>
+                                                        <tr>
+                                                          <td style=3D"padd=
+ing-top: 12px; width: 16px;">
+                                                            <img alt=3D"ico=
+n of a checkmark in a circle" src=3D"https://assets.datacamp.com/email/rebr=
+and/promos/icon-bullet-pink.png" width=3D"8"/>
+                                                          </td>
+                                                          <td td=3D"" style=
+=3D"padding-top: 14px;">
+                                                            <div class=3D"g=
+mail-blend-screen">
+                                                              <div class=3D=
+"gmail-blend-difference">
+                                                                <p style=3D=
+"color:#ffffff; font-family: StudioFeixenSans, &#39;StudioFeixenSans&#39;, =
+Arial, sans-serif; font-size: 16px; line-height: 24px; text-align: left;" c=
+lass=3D"dark">Exclusive access to our DC Certified Community</p>
+                                                              </div>
+                                                            </div>
+                                                          </td>
+                                                        </tr>
+                                                      </tbody></table>
+                                                  </td>
+                                                </tr>
+                                                <!-- CTA button starts -->
+                                                <tr>
+                                                  <td style=3D"padding-top:=
+ 8px; padding-top: 24px;">
+                                                    <div class=3D"gmail-ble=
+nd-screen">
+                                                      <div class=3D"gmail-b=
+lend-difference">
+                                                        <table align=3D"lef=
+t" role=3D"presentation" bgcolor=3D"#02ee61" style=3D"border-collapse:colla=
+pse;margin:0 auto;padding:0;border-spacing:0;border-radius:4px; background-=
+color:#02ee61;" cellpadding=3D"0" cellspacing=3D"0" border=3D"0">
+                                                          <tbody>
+                                                            <tr>
+                                                              <td style=3D"=
+border-collapse:collapse;font-family: StudioFeixenSans, &#39;StudioFeixenSa=
+ns&#39;, Arial, sans-serif; font-size: 16px; font-weight: bold; padding:0;b=
+order:0; text-align:left; border-radius:4px; color:#05192d; mso-padding-alt=
+:9px 12px; background-color:#02ee61;" width=3D"146">
+                                                                <a class=3D=
+"link" target=3D"_blank" style=3D"text-decoration:none;color:#05192d; font-=
+family: StudioFeixenSans, &#39;StudioFeixenSans&#39;, Arial, sans-serif; fo=
+nt-size: 16px; font-weight: bold; text-align:center;border-radius:4px; font=
+-size:14px; line-height:24px;" href=3D"https://links.datacamp.com/e/c/eyJlb=
+WFpbF9pZCI6ImRnVGRod1FEQUppdTJBYVdydGdHQVkwODdrLTB5Sy1SYnEzTzBMU3RtUT09Iiwi=
+aHJlZiI6Imh0dHBzOi8vcHJvbW8uZGF0YWNhbXAuY29tP3V0bV9zb3VyY2U9Y3VzdG9tZXJpb1x=
+1MDAyNnV0bV9tZWRpdW09ZW1haWxcdTAwMjZ1dG1fY2FtcGFpZ249MjQwMTI0XzEtamFuMjQtcH=
+JvbW8tdDNfMi1iMmNfMy1hbGxfNC1uYV81LW5hXzYtbmFfNy1sZV84LWVtYWwtY2lfOS1uYV8xM=
+C1qYW4yNF8xMS1lbWFpbFx1MDAyNnV0bV9jb250ZW50PWJsYXN0XHUwMDI2ZGNfZXVpZD0xNDEw=
+NTE2OCIsImludGVybmFsIjoiZGQ4NzA0ZDMwMzg2YTEwMTk4YWVkODA2IiwibGlua19pZCI6MzI=
+4NTg5MTQ4fQ/60b3e640c4a313d5476d9cddb0e61282d9e4fd1faa44473d31bc53684c9d1bd=
+c">=20
+                                                                  <!--[if !=
+gte mso 9]><!----><span style=3D"padding:9px 12px;border-radius:4px;display=
+:block"><!--<![endif]-->=20
+                                                                  Get Certi=
+fied
+                                                                  <!--[if !=
+gte mso 9]><!----> </span><!--<![endif]-->=20
+                                                                </a>
+                                                              </td>
+                                                            </tr>
+                                                          </tbody>
+                                                        </table>
+                                                      </div>
+                                                    </div>
+                                                  </td>
+                                                </tr>
+                                                <!-- CTA button ends -->
+                                              </tbody></table>
+                                            </td>
+                                          </tr>
+                                        </tbody></table>
+                                      </div>
+
+                                      <!--[if mso]>
+                                      </td>
+                                      </tr>
+                                      </table>
+                                      <![endif]-->
+                                    </td>
+                                  </tr>
+                                </tbody></table>
+                                <!-- Media Flag Fluid End -->
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <!--[if true]>
+                      </td>
+                    </tr>
+                  </table>
+                  <![endif]-->
+                </td>
+              </tr>
+
+<!-- ///////////////////////////// MODULE: FOOTER STARTS //////////////////=
+/////////// -->
+                                  <tr>
+                                    <td class=3D"one-column" align=3D"cente=
+r" style=3D"padding-top:20px; padding-left:10px; padding-bottom:0px; paddin=
+g-right: 10px;">
+                                      <!--[if true]>
+                                      <table role=3D"presentation" width=3D=
+"600" align=3D"center" cellpadding=3D"0" cellspacing=3D"0" border=3D"0">
+                                        <tr>
+                                          <td align=3D"center" width=3D"600=
+">
+                                            <![endif]-->
+                                            <table align=3D"center" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"b=
+order: none; border-collapse: collapse; border-spacing: 0; margin: auto; ms=
+o-table-lspace: 0; mso-table-rspace: 0; width:100%;">
+                                              <!-- Spacer begins -->
+                                              <tbody>
+                                                <tr>
+                                                  <td class=3D"one-column" =
+style=3D"padding-left: 20px; padding-right: 20px;" align=3D"center">
+                                                    <table border=3D"0" cel=
+lpadding=3D"0" cellspacing=3D"0" width=3D"100%" role=3D"presentation" style=
+=3D"border-collapse: collapse; padding: 0; margin: 0; width:100%;">
+                                                      <tbody>
+                                                        <!-- Spacer begins =
+-->
+                                                        <tr>
+                                                          <td width=3D"0" h=
+eight=3D"72" style=3D"font-size:1px; line-height:1px; mso-line-height-rule:=
+ exactly;"></td>
+                                                        </tr>
+                                                        <!-- Spacer ends --=
+>
+                                                        <tr>
+                                                          <td align=3D"cent=
+er" valign=3D"top"><a target=3D"_blank" href=3D"https://links.datacamp.com/=
+e/c/eyJlbWFpbF9pZCI6ImRnVGRod1FEQUppdTJBYVdydGdHQVkwODdrLTB5Sy1SYnEzTzBMU3R=
+tUT09IiwiaHJlZiI6Imh0dHBzOi8vd3d3LmRhdGFjYW1wLmNvbS8iLCJpbnRlcm5hbCI6ImRkOD=
+cwNGQzMDM4NmExMDE5OGFlZDgwNiIsImxpbmtfaWQiOjMyODU0ODY0OH0/43effc4e18ddb4484=
+ed0c2e9da86884a6e796630a90ec95aa2e1efcb4b83f08b"><img alt=3D"clear as data"=
+ title=3D"" border=3D"0" align=3D"center" style=3D"border: 0; display: bloc=
+k; color: #8a8a8d; font-family: StudioFeixenSans, &#39;StudioFeixenSans&#39=
+;, Arial, sans-serif; font-size: 14px; font-size: 22px; font-weight: bold; =
+height: auto; outline: 0; padding: 0; width: 100%; max-width: 90px; display=
+: block;" width=3D"90" src=3D"https://assets.datacamp.com/email/rebrand/tag=
+line.png"/></a></td>
+                                                        </tr>
+                                                        <!-- Spacer begins =
+-->
+                                                        <tr>
+                                                          <td width=3D"0" h=
+eight=3D"24" style=3D"font-size:1px; line-height:1px; mso-line-height-rule:=
+ exactly;"></td>
+                                                        </tr>
+                                                        <!-- Spacer ends --=
+>
+                                                        <tr>
+                                                          <td align=3D"cent=
+er" style=3D"padding-top:10px; padding-right:10px; padding-bottom:10px; pad=
+ding-left:10px;">
+                                                            <div class=3D"g=
+mail-blend-screen">
+                                                              <div class=3D=
+"gmail-blend-difference">
+                                                                <p style=3D=
+" color: #f4f4f4; font-family: StudioFeixenSans, &#39;StudioFeixenSans&#39;=
+, Arial, sans-serif; font-size: 14px; line-height: 26px; letter-spacing: 1p=
+x; font-weight: normal; color: #f4f4f4;" class=3D"dark">DataCamp, Inc. | 35=
+0 5th Ave. | Suite 7720 | New York, NY 10118</p>
+                                                              </div>
+                                                            </div>
+                                                          </td>
+                                                        </tr>
+                                                        <!-- Spacer begins =
+-->
+                                                        <tr>
+                                                          <td width=3D"0" h=
+eight=3D"24" style=3D"font-size:1px; line-height:1px; mso-line-height-rule:=
+ exactly;"></td>
+                                                        </tr>
+                                                        <!-- Spacer ends --=
+>
+                                                        <tr>
+                                                          <td align=3D"cent=
+er" style=3D"padding-top:0; padding-right:20px; padding-bottom:0; padding-l=
+eft:20px;">
+                                                            <!--[if true]>
+                                                            <table role=3D"=
+presentation" width=3D"200" align=3D"center" cellpadding=3D"0" cellspacing=
+=3D"0" border=3D"0">
+                                                              <tr>
+                                                                <td align=
+=3D"center">
+                                                                  <![endif]=
+-->
+                                                                  <table al=
+ign=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"pre=
+sentation" style=3D"margin: 0 auto; max-width: 220px; width: 100%;">
+                                                                    <tbody>
+                                                                      <tr>
+                                                                        <td=
+ align=3D"center"><a target=3D"_blank" href=3D"https://links.datacamp.com/e=
+/c/eyJlbWFpbF9pZCI6ImRnVGRod1FEQUppdTJBYVdydGdHQVkwODdrLTB5Sy1SYnEzTzBMU3Rt=
+UT09IiwiaHJlZiI6Imh0dHBzOi8vd3d3LmZhY2Vib29rLmNvbS9kYXRhY2FtcGluYy8iLCJpbnR=
+lcm5hbCI6ImRkODcwNGQzMDM4NmExMDE5OGFlZDgwNiIsImxpbmtfaWQiOjMyODU1MDgxN30/64=
+9d289d3772815763f56de14559e980700343131aaf6a6b0b47806c16e1ae57"><img height=
+=3D"15" border=3D"0" alt=3D"Facebook" style=3D"padding-left: 8px; padding-r=
+ight: 8px; color: #8a8a8d; font-family: StudioFeixenSans, &#39;StudioFeixen=
+Sans&#39;, Arial, sans-serif;" src=3D"https://assets.datacamp.com/email/reb=
+rand/facebook3x.png"/></a></td>
+                                                                        <td=
+ align=3D"center"><a target=3D"_blank" href=3D"https://links.datacamp.com/e=
+/c/eyJlbWFpbF9pZCI6ImRnVGRod1FEQUppdTJBYVdydGdHQVkwODdrLTB5Sy1SYnEzTzBMU3Rt=
+UT09IiwiaHJlZiI6Imh0dHBzOi8vdHdpdHRlci5jb20vZGF0YWNhbXAiLCJpbnRlcm5hbCI6ImR=
+kODcwNGQzMDM4NmExMDE5OGFlZDgwNiIsImxpbmtfaWQiOjMyODU1MDgxOH0/1fc5d7eb753b33=
+13cf3c6b006d2867403bbadd6330efff5218dbe801f381a4d5"><img width=3D"15" borde=
+r=3D"0" alt=3D"Twitter" style=3D"padding-left: 8px; padding-right: 8px; col=
+or: #8a8a8d; font-family: StudioFeixenSans, &#39;StudioFeixenSans&#39;, Ari=
+al, sans-serif;" src=3D"https://assets.datacamp.com/email/rebrand/twitter3x=
+=2Epng"/></a></td>
+                                                                        <td=
+ align=3D"center"><a target=3D"_blank" href=3D"https://links.datacamp.com/e=
+/c/eyJlbWFpbF9pZCI6ImRnVGRod1FEQUppdTJBYVdydGdHQVkwODdrLTB5Sy1SYnEzTzBMU3Rt=
+UT09IiwiaHJlZiI6Imh0dHBzOi8vd3d3LmxpbmtlZGluLmNvbS9jb21wYW55L2RhdGFjYW1waW5=
+jLyIsImludGVybmFsIjoiZGQ4NzA0ZDMwMzg2YTEwMTk4YWVkODA2IiwibGlua19pZCI6MzI4NT=
+UwODE5fQ/199f104c3302507d851570f903e5250acc576472cc59e5ccc710de5824d7833c">=
+<img width=3D"15" border=3D"0" alt=3D"LinkedIn" style=3D"padding-left: 8px;=
+ padding-right: 8px; color: #8a8a8d; font-family: StudioFeixenSans, &#39;St=
+udioFeixenSans&#39;, Arial, sans-serif;" src=3D"https://assets.datacamp.com=
+/email/rebrand/linkedin3x.png"/></a></td>
+                                                                        <td=
+ align=3D"center"><a target=3D"_blank" href=3D"https://links.datacamp.com/e=
+/c/eyJlbWFpbF9pZCI6ImRnVGRod1FEQUppdTJBYVdydGdHQVkwODdrLTB5Sy1SYnEzTzBMU3Rt=
+UT09IiwiaHJlZiI6Imh0dHBzOi8vd3d3LnlvdXR1YmUuY29tL2NoYW5uZWwvVUM3OUd2M21ZcDZ=
+6S2lTd1llbUVpazlBIiwiaW50ZXJuYWwiOiJkZDg3MDRkMzAzODZhMTAxOThhZWQ4MDYiLCJsaW=
+5rX2lkIjo1fQ/74fc5aaf24fbc571d8d047fae3bf631bf943d554b370610488550c7235e6c8=
+9f"><img width=3D"15" border=3D"0" alt=3D"Youtube" style=3D"padding-left: 8=
+px; padding-right: 8px; color: #8a8a8d; font-family: StudioFeixenSans, &#39=
+;StudioFeixenSans&#39;, Arial, sans-serif;" src=3D"https://assets.datacamp.=
+com/email/rebrand/youtube3x.png"/></a></td>
+                                                                        <td=
+ align=3D"center"><a target=3D"_blank" href=3D"https://links.datacamp.com/e=
+/c/eyJlbWFpbF9pZCI6ImRnVGRod1FEQUppdTJBYVdydGdHQVkwODdrLTB5Sy1SYnEzTzBMU3Rt=
+UT09IiwiaHJlZiI6Imh0dHBzOi8vd3d3Lmluc3RhZ3JhbS5jb20vZGF0YWNhbXAvP2hsPWVuIiw=
+iaW50ZXJuYWwiOiJkZDg3MDRkMzAzODZhMTAxOThhZWQ4MDYiLCJsaW5rX2lkIjozMjg1NTA4Mj=
+B9/6a9691e81fbb801e11711495bc6602ced30c2e237d4dd702d2001d24e8094bfb"><img w=
+idth=3D"15" border=3D"0" alt=3D"Instagram" style=3D"padding-left: 8px; padd=
+ing-right: 8px; color: #8a8a8d; font-family: StudioFeixenSans, &#39;StudioF=
+eixenSans&#39;, Arial, sans-serif;" src=3D"https://assets.datacamp.com/emai=
+l/rebrand/insta3x.png"/></a></td>
+                                                                      </tr>
+                                                                    </tbody=
+>
+                                                                  </table>
+                                                                  <!--[if t=
+rue]>
+                                                                </td>
+                                                              </tr>
+                                                            </table>
+                                                            <![endif]-->
+                                                          </td>
+                                                        </tr>
+                                                        <!-- Spacer begins =
+-->
+                                                        <tr>
+                                                          <td width=3D"0" h=
+eight=3D"24" style=3D"font-size:1px; line-height:1px; mso-line-height-rule:=
+ exactly;"></td>
+                                                        </tr>
+                                                        <!-- Spacer ends --=
+>
+                                                      </tbody>
+                                                    </table>
+                                                  </td>
+                                                </tr>
+                                                <tr>
+                                                  <td class=3D"one-column" =
+style=3D"padding-left: 20px; padding-right: 20px;" align=3D"center">
+                                                    <!--[if true]>
+                                                    <table role=3D"presenta=
+tion" width=3D"268" align=3D"center" cellpadding=3D"0" cellspacing=3D"0" bo=
+rder=3D"0">
+                                                      <tr>
+                                                        <td align=3D"center=
+">
+                                                          <![endif]-->
+                                                          <table align=3D"c=
+enter" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentatio=
+n" style=3D"border: none; border-collapse: collapse; border-spacing: 0; mar=
+gin: auto; mso-table-lspace: 0; mso-table-rspace: 0;">
+                                                            <tbody>
+                                                              <tr>
+                                                                <td align=
+=3D"center" style=3D"padding-left: 5px; padding-right: 5px;"><a target=3D"_=
+blank" href=3D"https://links.datacamp.com/e/c/eyJlbWFpbF9pZCI6ImRnVGRod1FEQ=
+UppdTJBYVdydGdHQVkwODdrLTB5Sy1SYnEzTzBMU3RtUT09IiwiaHJlZiI6Imh0dHBzOi8vZGF0=
+YWNhbXAub25lbGluay5tZS94enRRL2NnaGNmdzVvIiwiaW50ZXJuYWwiOiJkZDg3MDRkMzAzODZ=
+hMTAxOThhZWQ4MDYiLCJsaW5rX2lkIjozMjg1NzQyMTl9/267b269fdd46d2e1df77f0d7e3071=
+a5857f04d0c2d42eb6e3584ab265c83b530"><img alt=3D"Apple Store" border=3D"0" =
+style=3D"border: 0; display: block; color:#05192d; font-family: StudioFeixe=
+nSans, &#39;StudioFeixenSans&#39;, Arial, sans-serif; font-size: 24px; font=
+-weight: 400; height: auto; max-width: 124px; outline: 0; padding: 0; width=
+: 100%; display: block;" width=3D"124" src=3D"https://assets.datacamp.com/e=
+mail/rebrand/apple2x.png"/> </a></td>
+                                                                <td align=
+=3D"center" style=3D"padding-left: 5px; padding-right: 5px;"><a target=3D"_=
+blank" href=3D"https://links.datacamp.com/e/c/eyJlbWFpbF9pZCI6ImRnVGRod1FEQ=
+UppdTJBYVdydGdHQVkwODdrLTB5Sy1SYnEzTzBMU3RtUT09IiwiaHJlZiI6Imh0dHBzOi8vZGF0=
+YWNhbXAub25lbGluay5tZS94enRRL2NnaGNmdzVvIiwiaW50ZXJuYWwiOiJkZDg3MDRkMzAzODZ=
+hMTAxOThhZWQ4MDYiLCJsaW5rX2lkIjozMjg1NzQyMTl9/267b269fdd46d2e1df77f0d7e3071=
+a5857f04d0c2d42eb6e3584ab265c83b530"><img alt=3D"Google Play" border=3D"0" =
+style=3D"border: 0; display: block; color:#05192d; font-family: StudioFeixe=
+nSans, &#39;StudioFeixenSans&#39;, Arial, sans-serif; font-size: 24px; font=
+-weight: 400; height: auto; max-width: 124px; outline: 0; padding: 0; width=
+: 100%; display: block;" width=3D"124" src=3D"https://assets.datacamp.com/e=
+mail/rebrand/google2x.png"/> </a></td>
+                                                              </tr>
+                                                            </tbody>
+                                                          </table>
+                                                          <!--[if true]>
+                                                        </td>
+                                                      </tr>
+                                                    </table>
+                                                    <![endif]-->
+                                                  </td>
+                                                </tr>
+                                                <!-- Spacer begins -->
+                                                <tr>
+                                                  <td width=3D"0" height=3D=
+"24" style=3D"font-size:1px; line-height:1px; mso-line-height-rule: exactly=
+;"></td>
+                                                </tr>
+                                                <!-- Spacer ends -->
+                                                <tr>
+                                                  <td class=3D"one-column" =
+style=3D"padding-left: 20px; padding-right: 20px; padding-bottom: 10px; pad=
+ding-top: 10px;" align=3D"center">
+                                                    <div class=3D"gmail-ble=
+nd-screen">
+                                                      <div class=3D"gmail-b=
+lend-difference"><a target=3D"_blank" style=3D"text-decoration:none;color:#=
+9ba3ab; font-family: StudioFeixenSans, &#39;StudioFeixenSans&#39;, Arial, s=
+ans-serif; font-size: 14px; font-weight: normal; color: #f4f4f4;" href=3D"h=
+ttps://links.datacamp.com/e/c/eyJlbWFpbF9pZCI6ImRnVGRod1FEQUppdTJBYVdydGdHQ=
+VkwODdrLTB5Sy1SYnEzTzBMU3RtUT09IiwiaHJlZiI6Imh0dHBzOi8vd3d3LmRhdGFjYW1wLmNv=
+bS9tYWlsX3ByZWZlcmVuY2VzLzJmZmQ0MGE1LWNlODUtNDQ1Zi1hYTU5LWNkOWE4YWI3YzlkNiI=
+sImludGVybmFsIjoiZGQ4NzA0ZDMwMzg2YTEwMTk4YWVkODA2IiwibGlua19pZCI6OTQ2Mn0/1e=
+8774405e6839e8a11718933db85c9617029950398b31cb75b103a2f65a0d9a">Unsubscribe=
+</a>=C2=A0=C2=A0 =C2=A0=C2=A0<a target=3D"_blank" style=3D"text-decoration:=
+none;color:#9ba3ab; font-family: StudioFeixenSans, &#39;StudioFeixenSans&#3=
+9;, Arial, sans-serif; font-size: 14px; font-weight: normal; color: #f4f4f4=
+;" href=3D"https://links.datacamp.com/e/c/eyJlbWFpbF9pZCI6ImRnVGRod1FEQUppd=
+TJBYVdydGdHQVkwODdrLTB5Sy1SYnEzTzBMU3RtUT09IiwiaHJlZiI6Imh0dHBzOi8vd3d3LmRh=
+dGFjYW1wLmNvbS9wcml2YWN5LXBvbGljeS8iLCJpbnRlcm5hbCI6ImRkODcwNGQzMDM4NmExMDE=
+5OGFlZDgwNiIsImxpbmtfaWQiOjMyODU0ODIzN30/3609c3a86d4088857207848947f319d45e=
+650c7c7a539f091cb59537630db10d">Privacy Policy</a></div>
+                                                    </div>
+                                                  </td>
+                                                </tr>
+                                                <!-- Spacer begins -->
+                                                <tr>
+                                                  <td width=3D"0" height=3D=
+"24" style=3D"font-size:1px; line-height:1px; mso-line-height-rule: exactly=
+;"></td>
+                                                </tr>
+                                                <!-- Spacer ends -->
+                                              </tbody>
+                                            </table>
+                                            <!--[if true]>
+                                          </td>
+                                        </tr>
+                                      </table>
+                                      <![endif]-->
+                                    </td>
+                                  </tr>
+                                  <!-- ///////////////////////////// MODULE=
+: FOOTER ENDS ///////////////////////////// -->
+            </tbody>
+          </table>
+          <!-- ///////////////////////////// MODULE: BODY ENDS ////////////=
+///////////////// -->
+        </center>
+      </custom>
+    </div>
+  </div>
+
+
+
+
+
+<img src=3D"https://links.datacamp.com/e/o/eyJlbWFpbF9pZCI6ImRnVGRod1FEQUpp=
+dTJBYVdydGdHQVkwODdrLTB5Sy1SYnEzTzBMU3RtUT09In0=3D" style=3D"height: 1px !i=
+mportant; max-height: 1px !important; max-width: 1px !important; width: 1px=
+ !important; display: none !important;" alt=3D""/></body></html>
+--9c8a6c167b5c26ebff0806b4a4132d5bd12ab82cfedc351667d7cf2f478a--

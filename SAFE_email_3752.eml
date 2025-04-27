@@ -1,0 +1,536 @@
+X-GM-THRID: 1767013001925818245
+X-Gmail-Labels: Inbox,Category Updates,Unread
+Delivered-To: azfarali007.aa@gmail.com
+Received: by 2002:a05:6214:2d14:b0:623:a3c4:bf7e with SMTP id mz20csp136486qvb;
+        Fri, 26 May 2023 19:35:16 -0700 (PDT)
+X-Google-Smtp-Source: ACHHUZ64W/2oE9agRFwa2pbeAV7/1Cj0HvPrEkgKA0XVh20JS+CMvxS+MdbyV4YzcEmPw33bbuEh
+X-Received: by 2002:a25:7710:0:b0:bac:5d73:7f0a with SMTP id s16-20020a257710000000b00bac5d737f0amr3982472ybc.17.1685154916429;
+        Fri, 26 May 2023 19:35:16 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1685154916; cv=none;
+        d=google.com; s=arc-20160816;
+        b=hkXyHirR155q2zLNQNtA9aJFFN9/IzLLfJv513cPyI7YOSHdC+LJiRjU6lmGOXA/KP
+         XwniMwuAObyXxZlQW8ndavjxEMRWvb5OkRlaA6zUTOyIl/U//Jt2HA3u1Byfx1SUiy1N
+         dawOF5oqWNiK3rFg7okK1pDZR2TUxrY6DHVV7ZwGKLd2YnsxOTZAtYTbmiqvrKiEhhti
+         v5Eev2s/nEVekbaFCgFvoeerP+RnsFqd0NicBhKOiyvIiZVImvAOtyHPjJ3V+pTQNgio
+         PQqswvEmhBu+uTawAJRYTIeNOcnZ7nRuwdJbLzyb1yiAsBh6ZXwgJbO4ZvA9P5/2+FHg
+         +crw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:reply-to:subject:message-id:mime-version:from:date
+         :dkim-signature:dkim-signature;
+        bh=2QEVrmRZ0aNTXs6gdPJRi+VOaSVAhwu3ybCMwPizOLY=;
+        b=YKyWF5wPn0Nw1BMpSPSKlmaj3JoCvAMBVIjmFhGaYHh0+hkMtkhwIgrropJTcCjtUB
+         RBsBlR1kJI7DiiSk77pfS/yMOd6qbsQyjHJmMmcpUPAzHUEb95z/B3aD5RvKSFlu+BCX
+         XW+Z70Lzl/hVahm6bFp1XR9ilo2OfHsrvYcEUFnA+vszzshRDPUmEiiJHvDwanb9Y5I3
+         lrZlGltkKVOH5GvXguuDIZQgJ8sCziaRWLzlc94Y9TBE/CEkthMncbicHRrFG6gh5wgH
+         Ud8zREZKXmlvfdenEI5267s4YhkDhcr/0fNSSk2/+QxtZXb2qs8Gt2hk9YlJ1hPats3n
+         N6zw==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gdsc.community.dev header.s=bvy header.b=Ge9h4Wz4;
+       dkim=pass header.i=@sendgrid.info header.s=smtpapi header.b=xeJlI5xJ;
+       spf=pass (google.com: domain of bounces+16161593-3a24-azfarali007.aa=gmail.com@em656.gdsc.community.dev designates 50.31.42.31 as permitted sender) smtp.mailfrom="bounces+16161593-3a24-azfarali007.aa=gmail.com@em656.gdsc.community.dev"
+Return-Path: <bounces+16161593-3a24-azfarali007.aa=gmail.com@em656.gdsc.community.dev>
+Received: from o1.ptr7481.bevy.com (o1.ptr7481.bevy.com. [50.31.42.31])
+        by mx.google.com with ESMTPS id f204-20020a251fd5000000b00b7dd3e5ce4dsi4878609ybf.644.2023.05.26.19.35.15
+        for <azfarali007.aa@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Fri, 26 May 2023 19:35:16 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bounces+16161593-3a24-azfarali007.aa=gmail.com@em656.gdsc.community.dev designates 50.31.42.31 as permitted sender) client-ip=50.31.42.31;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gdsc.community.dev header.s=bvy header.b=Ge9h4Wz4;
+       dkim=pass header.i=@sendgrid.info header.s=smtpapi header.b=xeJlI5xJ;
+       spf=pass (google.com: domain of bounces+16161593-3a24-azfarali007.aa=gmail.com@em656.gdsc.community.dev designates 50.31.42.31 as permitted sender) smtp.mailfrom="bounces+16161593-3a24-azfarali007.aa=gmail.com@em656.gdsc.community.dev"
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gdsc.community.dev;
+	h=content-type:from:mime-version:subject:reply-to:x-feedback-id:to:cc:
+	content-type:from:subject:to;
+	s=bvy; bh=2QEVrmRZ0aNTXs6gdPJRi+VOaSVAhwu3ybCMwPizOLY=;
+	b=Ge9h4Wz4qTZ5GYnmZ8lQ/ecDDyBkxFTy9edEnauBhwa2Qp8SOHqiCsW3bWYPNQzk3M7j
+	xDnwmFSMD8rbckLJ1rD/49jcMDPwd6hbpyVRBiAmgBP7uxRzutRcxSI/HGB4yEZyK0WBQA
+	VoAxnT76RTuquAG08DSzyhRHpWW1HT0S+f/1Dx2hMOnYuJPKDJ/1ZyFQ6iyuWgREtEl1xh
+	4twgOFRMluv3P3eMvXtM4HKaf1LwS42SsHR/nAq4bpr0OXZU9HZuJi1hwMKJ82J/05Cqal
+	oNf3cpN+wEGdBr1pHdkwgvhxGU2DK1cPgv535xZr3r8mcZ+W5dumRiwytGhWcmaQ==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=sendgrid.info;
+	h=content-type:from:mime-version:subject:reply-to:x-feedback-id:to:cc:
+	content-type:from:subject:to;
+	s=smtpapi; bh=2QEVrmRZ0aNTXs6gdPJRi+VOaSVAhwu3ybCMwPizOLY=;
+	b=xeJlI5xJAV9PJ2mbtG5i27ZDkHBqNa8+vQrdl+KY+mZNzVE1uysZycf4bkz6LaYUM7n1
+	j6GatHh3d64ECts9hj9PzlN3o8YKCjO10S64SARcN62P0eiotIXqltxSlhRy7i1BJb15xk
+	x2ZBJJl51Z7kRvKiax4K9kmYvAjrW+hPo=
+Received: by filterdrecv-7dfc896d4-plw52 with SMTP id filterdrecv-7dfc896d4-plw52-1-64716C5B-46
+        2023-05-27 02:35:08.082456424 +0000 UTC m=+1393138.828449724
+Received: from MTYxNjE1OTM (unknown)
+	by geopod-ismtpd-10 (SG) with HTTP
+	id yAFXk5oATmma_1y7uXo6hg
+	Sat, 27 May 2023 02:35:07.889 +0000 (UTC)
+Content-Type: multipart/alternative; boundary=2ef191df3858da7afbee7db96365431e9ff4dc6f74d87a6dac9bf27a5888
+Date: Sat, 27 May 2023 02:35:15 +0000 (UTC)
+From: GDSC Event Platform <noreply@gdsc.community.dev>
+Mime-Version: 1.0
+Message-ID: <yAFXk5oATmma_1y7uXo6hg@geopod-ismtpd-10>
+Subject: New National University of Modern Languages (NUML) - Islamabad event:
+ Pathway to Google: Insights from a Google Engineer
+Reply-To: GDSC Event Platform <noreply@gdsc.community.dev>
+X-Feedback-ID: 16161593:SG
+X-SG-EID: 
+ =?us-ascii?Q?L92cBbLnKzcdBNkQwAYQ+sr1gkgAdysofGN=2FhuKNVQJd0G5iopz4Y0O=2FX9Tovl?=
+ =?us-ascii?Q?Z=2F8SrF=2FwCO1xHfCtgD5LT8L6dJQ9xy+VDdYEsSm?=
+ =?us-ascii?Q?uhpGwIlSTK1eG4Q6rVW2W48WgMaE1BsGtHpTjtN?=
+ =?us-ascii?Q?33ZwoRhsRD6Bkj88RMYgotnQTAlIkDnK4HRwTHO?=
+ =?us-ascii?Q?EeNCeLpRDU++R+iju08iIsIeBJWCmn74nBDh5I7?=
+ =?us-ascii?Q?g7CNJdkCgw1HiAAhY5Dp2q29Z2MtNt+7bnMiBwO?=
+ =?us-ascii?Q?ZxDWlDdeFVw+3BTsDSvug=3D=3D?=
+X-SG-ID: 
+ =?us-ascii?Q?N2C25iY2uzGMFz6rgvQsb8raWjw0ZPf1VmjsCkspi=2FI6OjusMqsQbh1b0Ag1oi?=
+ =?us-ascii?Q?xWHUdAM+aVlmjuv7hxvYfRpLCn2vp+0tJ=2FtLFto?=
+ =?us-ascii?Q?Ad3+ujzelZ8sz3fsbui8sfsNnnv?=
+To: azfarali007.aa@gmail.com
+X-Entity-ID: MUf8aKHxItgYcsqRjrDjLA==
+
+--2ef191df3858da7afbee7db96365431e9ff4dc6f74d87a6dac9bf27a5888
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset=utf-8
+Mime-Version: 1.0
+
+Hi Azfar, Check out our next event:Pathway to Google: Insights from a Googl=
+e Engineer
+Date & time: Fri, Jun 2, 8:00 PM (PKT)
+
+Agenda:
+
+
+
+About this eventAre you looking to take your career to the next level? Do y=
+ou dream of working for one of the world's most innovative companies? Look =
+no further than "Pathway to Google: INSIGHT FROM GOOGLE ENGINEER" =E2=80=93=
+ the ultimate event for all undergraduate students who aspire to make their=
+ mark in the tech industry. Our guest speaker, Arsalan Arshad, a software e=
+ngineer at Google Switzerland, will provide exclusive insights into what it=
+ takes to succeed in one of the most dynamic and fast-paced industries in t=
+he world.Join us on June 02, 2023, at 8:00 PM, and discover the secrets to =
+success at Google. With Arsalan Arshad at the helm, you'll gain the knowled=
+ge and skills you need to make your way to one of the world's most sought-a=
+fter tech companies. Learn about the interview process, the skills you need=
+ to succeed, and the unique culture that sets Google apart from the rest.Do=
+n't miss out on this opportunity to hear from one of the industry's top exp=
+erts. Register now for "Pathway to Google: INSIGHT FROM GOOGLE ENGINEER" an=
+d pave your own way to success in the tech industry. Whether you're just st=
+arting out or looking to take your career to the next level, this event is =
+a must-attend for anyone serious about making their mark in the world of te=
+ch. Hope to see you there!RSVP
+You are receiving this email because you have signed up as a member of a De=
+veloper Student Club. To change your email preferences, visit National Univ=
+ersity of Modern Languages (NUML) - Islamabad. To leave the group, unsubscr=
+ibe below.
+
+
+
+
+
+---
+
+View in browser: https://u16161593.ct.sendgrid.net/ls/click?upn=3D6FylDzOsB=
+jandYrle4FqVZSdv3-2BbZ0ATs1aFPrX0Lwww-2F4aLXFYpI9LpCjVfU0l4Oc2IXL7cO-2F24RK=
+AETDk4GJF-2FP-2FJSEG6t-2FhZ-2BvPOkOfgO-2B7x7nld798d3ZDk-2BOmKhsSti_H65ljNg3=
+foEJU6dJQZHMcp3Zdimzb4muCFBEwI-2BtxR7OKIGJ1b2DH2qtBgNRiHoO4dZ13ifMjRkDWXQVz=
+wirQxeYV7gH2pRAPw4FBd33RrhZK2tptFrOoqNaQyCeFJ4rEPj8qz1JxpSKU3-2BJZAPeIoPTej=
+6t9JnE1PbMHWr-2FDbeu2heUEHpS6RMBbuRTwT-2BmriKlUCQdb29UtF0u8zKhZfGWXo8orqCq3=
+IhuMJg7ZEFRwSGoPxscNX-2B-2BIQYkmwz8rT6La9Ysnibf1WZRoW3phHETHIl-2Fic69nsgvSH=
+nMWqEknEIreIP97iZ30UWfXZbA
+
+
+---
+Click here to unsubscribe: https://u16161593.ct.sendgrid.net/ls/click?upn=
+=3DVV2HEC-2Fpe7sihHx9m-2BUmcs-2BdnFkKhwwi5VD5YfGijmo0MZi5SFxDTV8TT5gQPRXR6g=
+8Y1qrYZ2c5aiYngv-2Bh7fDAtyNzJ4-2Bzgo5jIKM-2FyVh-2FK1bLbgmPoM8So64QbJaW3VQfs=
+-2BYq-2FiA9qXeZe3O47NINvPn3qg6t0D-2BCGK6BqhG9a6AYQ2douDzu5VMMKVudXxYV6tX-2F=
+XdswSJEWehgQeXwnhqe3ajtdSgYg-2B5Is3KEbtSJ7C3HYTUYUZFis3Tm0ZYNSB-2F-2Fxw92rY=
+lGBO9g-2F05rxs1nTAabTY8ORypeiKWQ-3Dazwc_H65ljNg3foEJU6dJQZHMcp3Zdimzb4muCFB=
+EwI-2BtxR7OKIGJ1b2DH2qtBgNRiHoO4dZ13ifMjRkDWXQVzwirQxeYV7gH2pRAPw4FBd33RrhZ=
+K2tptFrOoqNaQyCeFJ4rEPj8qz1JxpSKU3-2BJZAPeIoPTej6t9JnE1PbMHWr-2FDbcy9wHKIn4=
+q4-2FZrl5vo-2F3ZqBwI8HwLq8RXgjvM-2BchcTXKyh5NxOOJ4at5TQTe-2FarfEYIFJ4WLRC8M=
+M7LUQ9C1-2BPBVI-2B64VyUEB5R1-2FrwIymKCxz-2BfmbKY4WNrpNP387O-2BrHw4HrbQqam0L=
+4GaDVaIbh
+
+--2ef191df3858da7afbee7db96365431e9ff4dc6f74d87a6dac9bf27a5888
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset=utf-8
+Mime-Version: 1.0
+
+
+<html lang=3D"en" dir=3D"ltr" xml:lang=3D"en" xmlns=3D"http://www.w3.org/19=
+99/xhtml"  xmlns:v=3D"urn:schemas-microsoft-com:vml" xmlns:o=3D"urn:schemas=
+-microsoft-com:office:office">
+    <head>
+        <title>New National University of Modern Languages (NUML) - Islamab=
+ad event: Pathway to Google: Insights from a Google Engineer </title>
+        <link href=3D"https://fonts.googleapis.com/css?family=3DOpen+Sans:3=
+00italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel=
+=3D"stylesheet" type=3D"text/css">
+        <style type=3D"text/css">
+            a { color: #4285F4; }
+        </style>
+        <!--[if gte mso 9]>
+            <xml>
+                <o:OfficeDocumentSettings>
+                    <o:AllowPNG/>
+                    <o:PixelsPerInch>96</o:PixelsPerInch>
+                </o:OfficeDocumentSettings>
+            </xml>
+        <![endif]-->
+       =20
+    </head>
+
+    <body style=3D"background-color: #F6F7F9; margin:0; padding:0; font-fam=
+ily: 'Open Sans', Arial, sans-serif !important; font-weight: 400; color: #2=
+02124;">
+        <table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D=
+"15">
+            <tr>
+                <td width=3D"100%" align=3D"center" style=3D"background-col=
+or: #F6F7F9;">
+                    <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0"=
+ style=3D"border-bottom-left-radius: 4px; border-bottom-right-radius: 4px; =
+overflow: hidden; min-width: 290px; max-width: 600px;">
+                       =20
+
+
+
+<tr><td>
+    <table width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0">
+        <tbody>
+            <tr>
+               =20
+                <td valign=3D"middle" style=3D"padding: 0 0 15px; font-fami=
+ly: 'Open Sans', Arial, sans-serif !important;">
+                   =20
+                    <a href=3D"https://u16161593.ct.sendgrid.net/ls/click?u=
+pn=3D6FylDzOsBjandYrle4FqVZSdv3-2BbZ0ATs1aFPrX0LwyUnpz6b-2BcnvDvQJuNtdeXTcn=
+r41iC-2Bsm2lDoP7VVuvQNy8FOT6Nr0L79UcPMO0zL4645SxnQNyVmHVqSZUni7S6xfw_H65ljN=
+g3foEJU6dJQZHMcp3Zdimzb4muCFBEwI-2BtxR7OKIGJ1b2DH2qtBgNRiHoO4dZ13ifMjRkDWXQ=
+VzwirQxeYV7gH2pRAPw4FBd33RrhZK2tptFrOoqNaQyCeFJ4rEPj8qz1JxpSKU3-2BJZAPeIgea=
+8bvqIn78hN-2FfFxXtG4DW4QDP3BucU0rK4koAnIMIFDgD1xcQrXiBcG5mz8NR5gf94N-2Bff1b=
+RqbpBESCewpwVZiFBxNr2DxmyHtvcyA-2BWMEeM0VMVVHvv47Zb4XO8EsU2lDC280sIOOw36SMV=
+FfcfolqpYYPmoq3yDnQJEiyC" style=3D"font-size: 12px; color: #6f6f6f !importa=
+nt; padding: 1px 0; text-decoration: none !important;">
+                        Google Developer Student Clubs - National Universit=
+y of Modern Languages (NUML) - Islamabad
+                    </a>
+                   =20
+                </td>
+               =20
+               =20
+               =20
+               =20
+               =20
+                <td align=3D"right" valign=3D"middle" style=3D"padding: 0 0=
+ 15px; font-family: 'Open Sans', Arial, sans-serif !important;">
+                    <a class=3D"hideinbrowser" href=3D"https://u16161593.ct=
+.sendgrid.net/ls/click?upn=3D6FylDzOsBjandYrle4FqVZSdv3-2BbZ0ATs1aFPrX0Lwww=
+-2F4aLXFYpI9LpCjVfU0l4Oc2IXL7cO-2F24RKAETDk4GJF-2FP-2FJSEG6t-2FhZ-2BvPOkOfj=
+Yae3Ng4HqiiHMJj5iT8-2Fy52Qf_H65ljNg3foEJU6dJQZHMcp3Zdimzb4muCFBEwI-2BtxR7OK=
+IGJ1b2DH2qtBgNRiHoO4dZ13ifMjRkDWXQVzwirQxeYV7gH2pRAPw4FBd33RrhZK2tptFrOoqNa=
+QyCeFJ4rEPj8qz1JxpSKU3-2BJZAPeIgea8bvqIn78hN-2FfFxXtG4AbHUGXOVi0Ou3b5lUSGdK=
+VKHJIvkn0D-2Fv4quN-2BNb0NieNjSR3IdOsOIArd6zVT6B1v-2FehABMUknLzssBsSyVdwsNwt=
+CFhZ6Ni5rtx29rhySJUSmYQvUgdtbp0zscwwVSfKz0mx2AEVLm5ahBe0x6YC" style=3D"font=
+-size: 12px; color: #6f6f6f !important; padding: 1px 0; text-decoration: no=
+ne !important;" >
+                        View in browser
+                    </a>
+                </td>
+               =20
+            </tr>
+        </tbody>
+    </table>
+</td></tr>
+
+
+
+
+
+                       =20
+
+                       =20
+                        <tr>
+                           =20
+<td style=3D"width: 600px; height: 136px; vertical-align: middle; border-bo=
+ttom: 0px solid #F6F7F9;
+
+   =20
+   =20
+         background-image: url(https://res.cloudinary.com/startup-grind/ima=
+ge/upload/c_fill,dpr_2.0,f_auto,g_center,h_135,q_auto:eco,w_600/v1/gcs/plat=
+form-data-dsc/contentbuilder/email_header.png);
+   =20
+   =20
+
+background-color: #fff;  border-top-right-radius: 4px; border-top-left-radi=
+us: 4px;background-size: cover;">
+
+   =20
+   =20
+    <!--[if gte mso 9]>
+        <v:rect xmlns:v=3D"urn:schemas-microsoft-com:vml" fill=3D"true" str=
+oke=3D"false" style=3D"width:600px;height:135px;">
+        <v:fill type=3D"frame" src=3D"https://res.cloudinary.com/startup-gr=
+ind/image/upload/c_fill,dpr_2.0,f_auto,g_center,h_135,q_auto:eco,w_600/v1/g=
+cs/platform-data-dsc/contentbuilder/email_header.png" color=3D"#fff" />
+        <v:textbox inset=3D"0,0,0,0">
+    <![endif]-->
+   =20
+   =20
+
+
+
+                            <table border=3D"0" cellpadding=3D"0" cellspaci=
+ng=3D"20" width=3D"100%" style=3D"width: 100%;">
+                                <tr>
+                                   =20
+                                   =20
+
+    <td style=3D"vertical-align: middle; text-align: center; ">
+        <div style=3D"display: inline-block;">
+           =20
+
+
+   =20
+        <a href=3D"https://u16161593.ct.sendgrid.net/ls/click?upn=3D6FylDzO=
+sBjandYrle4FqVZSdv3-2BbZ0ATs1aFPrX0LwyUnpz6b-2BcnvDvQJuNtdeXTcnr41iC-2Bsm2l=
+DoP7VVuvQNy8FOT6Nr0L79UcPMO0zL4645SxnQNyVmHVqSZUni7SQiOM_H65ljNg3foEJU6dJQZ=
+HMcp3Zdimzb4muCFBEwI-2BtxR7OKIGJ1b2DH2qtBgNRiHoO4dZ13ifMjRkDWXQVzwirQxeYV7g=
+H2pRAPw4FBd33RrhZK2tptFrOoqNaQyCeFJ4rEPj8qz1JxpSKU3-2BJZAPeIgea8bvqIn78hN-2=
+FfFxXtG4CT1UchCkQmX0E34N1wXSmAEaeZTmPqk68ve09bdjVrpIYoXi8caqgsQaiRvebO-2FgL=
+t3BxoJm-2ByGoEVfmTjBXoncFNp17-2F839tjq5gaZJTmXEVd1JBQ6y13ogwXjWPK58w3Jrp80b=
+lDcV9IWPYSsblx" style=3D"text-align: center; display: block;">
+            <img src=3D"https://res.cloudinary.com/startup-grind/image/uplo=
+ad/c_fit,dpr_2.0,f_auto,g_center,h_100,q_auto:good,w_500/v1/gcs/platform-da=
+ta-dsc/contentbuilder/logo_dark_stacked_ziDh4mP.png" alt=3D"Google Develope=
+r Student Clubs" border=3D"0" height=3D"50">
+        </a>
+   =20
+
+
+           =20
+        </div>
+    </td>
+
+
+                                </tr>
+                            </table>
+
+                               =20
+    <!--[if gte mso 9]>
+        </v:textbox>
+        </v:rect>
+    <![endif]-->
+   =20
+</td>
+
+                        </tr>
+
+                       =20
+
+                       =20
+    <tr style=3D"background-color: #fff;"><td><table width=3D"100%" border=
+=3D"0" cellPadding=3D"0" cellSpacing=3D"0"><tbody><tr><td><table width=3D"1=
+00%" border=3D"0" cellPadding=3D"0" cellSpacing=3D"0"><tbody><tr><td><table=
+ width=3D"100%" border=3D"0" cellPadding=3D"0" cellSpacing=3D"0"><tbody><tr=
+><td><table width=3D"100%" style=3D"background:#fff" border=3D"0" cellPaddi=
+ng=3D"0" cellSpacing=3D"0"><tbody><tr><td width=3D"100%" style=3D"font-size=
+:16px;line-height:1.5em;padding:0 30px"><br /><span style=3D"font-size:15px=
+">Hi Azfar, <br/></span><br /><strong><span style=3D"font-size:18px">Check =
+out our next event:</span></strong><br /><strong><span style=3D"font-size:1=
+8px">Pathway to Google: Insights from a Google Engineer</span></strong><br =
+/><br /></td></tr></tbody></table><table style=3D"margin-bottom:30px;margin=
+-top:30px" border=3D"0" cellPadding=3D"0" cellSpacing=3D"0" width=3D"100%">=
+<tbody><tr><td style=3D"padding:5px 7px 5px 30px;text-align:center;vertical=
+-align:top;width:40px" width=3D"40"><img alt=3D"" src=3D"https://res.cloudi=
+nary.com/startup-grind/image/upload/c_fill,dpr_2,f_auto,g_center,q_auto:goo=
+d/v1/gcs/platform-data-dsc/contentbuilder/Date.png" style=3D"border:0;max-h=
+eight:38px;max-width:38px"/></td><td style=3D"font-size:19px;padding:5px;pa=
+dding-right:30px"><table border=3D"0" cellPadding=3D"0" cellSpacing=3D"0" w=
+idth=3D"100%"><tbody><tr><td><span><span style=3D"font-size:15px">Date &amp=
+; time</span><br /></span></td></tr><tr><td style=3D"font-size:16px;padding=
+-bottom:10px">Fri, Jun 2, 8:00 PM (PKT)<p style=3D"font-size:12px;color:#66=
+6;padding-top:5px;margin:0">Add to  <a href=3D"https://u16161593.ct.sendgri=
+d.net/ls/click?upn=3D6FylDzOsBjandYrle4FqVcj-2FGqDuEYpjJPwK5iiSaRKxCmpiL07i=
+NWQMqk7TMqSall4hjsI6qyQHw2NvjzfL2zknYNAP3fRooPltdMTBVSk3dijcV-2FSR8R-2B4fAY=
+D9tXpIa2p-2BeQGpFwZ4nHzHGHB41KkBL-2FsSFCk4ylJKnENdgowXtV0KWoi3ji11tU9NzbhET=
+5hiXVc2RPPRTkrZh80-2BSbJkQH1hREHAXvLQK7r62SGE2b0Rzq8bU41UnIigzM0sjzdWOJ1jR4=
+bBpEz8nYRS-2FIJdiqomieVwfhNNN90QGedPKXuxHsBEa490p0QPupcZfY9o7Lh-2FdMXwZlmWc=
+88KhaVp5HRdJM5v0Iu7PDVJBVlJZ8JPT9ei9-2BiH6z3oozopYuGoskv-2BUW3iWEWbmLrbZgsF=
+fj1qMQWrllLsHVG84YmsjmJiJNuBZgQbGgGalkynaxRj5oh-2BC9W6kTI3Va9-2BbUnuFxcV-2F=
+SjRKduTWlWKrPVHW71fpQ-2BEX9VBi7VFxX0Cltv-2FSJYbc0ap-2FOutPhYxrN8pmSKhtyEUYS=
+VasMk8G7-2Fhz74itBDQ3YYIqkmVFSysVYTLQWNauJDAzWYQc9unkAAcE1bwluHdR1TMz-2BWJx=
+MIZ1gWrAyMJ6oR-2BfrF0kFqV4wZIhVGlQCuhg8r7qHP7SnvftRLjdSn3ygFFEE9MkVA7-2BvGG=
+BsZtDMvZsDeErJsqgrzmxvy1R-2BoSWGPgafps7vpqIXFYetlSaJtXeXFFliEIlLIqcWNypIMof=
+5JLJvBG5Nkad97K53jygAtfFiZG0hlzsiMc-2B5hswAnsHXR61P2TyZ9XWxzj8yci0-2FOxzh3p=
+RJhTPch-2FOuO5eBaH7oj3oySaYjg5j92mt5IIiM3gYf8Y5mi4D2Zjeg-2B8zpKvIKKylWgYRbE=
+C0MjuZWSQH15C4g6-2BjYXJdAZYWliIrUM00fgGkiApTrUHXlwPlGLlTeGwqa4RgcyhBCL-2FkV=
+I0zypZuOjqrdeLsyfioVUhUL-2F8kIQdnTtT09HgvdOX-2BrLiKCwH34xizTpVsq6QfoiulyzuN=
+CoJ0YwOFjZZ02d-2FpId3duappxIH06m9FRZy-2FuNdJPb67-2BNuJOWcIOVqaqWmfbJATkU1d-=
+2FeDR8EBl5xf0atiAw-3DdJuD_H65ljNg3foEJU6dJQZHMcp3Zdimzb4muCFBEwI-2BtxR7OKIG=
+J1b2DH2qtBgNRiHoO4dZ13ifMjRkDWXQVzwirQxeYV7gH2pRAPw4FBd33RrhZK2tptFrOoqNaQy=
+CeFJ4rEPj8qz1JxpSKU3-2BJZAPeIgea8bvqIn78hN-2FfFxXtG4CZpkIeZNJmnPvMwmc0LFV-2=
+FD-2BQLkGhMoDXuhe-2BhBaCqurE11MyzFMR6YwHPzyfPs4hj8LIH8mgZwVmurcKJOaQ64CeVe1=
+UtUmbfYnHypFCQgltY67DR0VjaZ1t3MZdiEnIBPaluZ9OCMZp2dU2rITwz" style=3D"color:=
+#4285F4">Google</a> =C2=B7 <a href=3D"https://u16161593.ct.sendgrid.net/ls/=
+click?upn=3D6FylDzOsBjandYrle4FqVZSdv3-2BbZ0ATs1aFPrX0LwwnOchUL9zZ-2FM8Xv1D=
+IaYkiiWaiL8dzR0VsAKJFMfcKjQ-3D-3DRAKa_H65ljNg3foEJU6dJQZHMcp3Zdimzb4muCFBEw=
+I-2BtxR7OKIGJ1b2DH2qtBgNRiHoO4dZ13ifMjRkDWXQVzwirQxeYV7gH2pRAPw4FBd33RrhZK2=
+tptFrOoqNaQyCeFJ4rEPj8qz1JxpSKU3-2BJZAPeIgea8bvqIn78hN-2FfFxXtG4D-2FTpwAysh=
+SXYEAidVk8VhF1ttw1ukxT90EDdWTq7LNFtAnUCCDSznB-2B1Prv-2FsmcGQ-2B9CDcKTpeL65a=
+8Jg0Z61cuhYvsKB2L5KSBHxMwTxAccxrVrY53eZOI7NSwdZFbX-2BG42jQobEHIhwB0W7PF3eR"=
+ style=3D"color:#4285F4">Outlook</a> =C2=B7 <a href=3D"https://u16161593.ct=
+.sendgrid.net/ls/click?upn=3D6FylDzOsBjandYrle4FqVZSdv3-2BbZ0ATs1aFPrX0Lwwn=
+OchUL9zZ-2FM8Xv1DIaYkiiWaiL8dzR0VsAKJFMfcKjQ-3D-3D6-zz_H65ljNg3foEJU6dJQZHM=
+cp3Zdimzb4muCFBEwI-2BtxR7OKIGJ1b2DH2qtBgNRiHoO4dZ13ifMjRkDWXQVzwirQxeYV7gH2=
+pRAPw4FBd33RrhZK2tptFrOoqNaQyCeFJ4rEPj8qz1JxpSKU3-2BJZAPeIgea8bvqIn78hN-2Ff=
+FxXtG4BRG9NltFTFlmw-2FAR0C8jS2mfJ-2Fo-2BDl-2BSsWAg-2FHnhHvHewji5GcxxjFmGbz6=
+IV7ZQBwxeWmAFOb9fIx380kZf93I4ZWAB6CfFf2S66vhtorDtPH8weC7cSxZZrmeQDIbFDdsONb=
+xt1HjTPgVIn9cSqM" style=3D"color:#4285F4">iCal</a> =C2=B7 <a href=3D"https:=
+//u16161593.ct.sendgrid.net/ls/click?upn=3DVV2HEC-2Fpe7sihHx9m-2BUmcmOW1cGb=
+j1vhu2Kflt26PDOTq7TMR7VbWvu-2BlgE8uDbYWvprwDEKUMULgRVf4MHLd6yi32wJnNORtpSNy=
+t2TnWDv6GxEhA7NiXg1V03jTOEgB6QE2dZGGkRIlBwO-2BAL99U5E9sFYHuPwvYtik2kVqPdTwy=
+RBwtZaIidxuY1HKHyW-2FTUD-2BXEsGpn-2F0XmXUtFKdweKLWq0X1wdMGJo-2BVo73DJMqWZUE=
+rDKjWVLZvgQvCiPpMDhKrnmv3i2bsspkDmCzoBBt-2FL4eKWtk36-2Flkd8Ij0RM9a8wy-2BlF6=
+JWo8Q4jbV45j10CRh5RbRmzyfQmt6T0QLUaNrPWcr0EH0o5-2F5iA6gnTQEGmn9UT4tP43cShJ4=
+N2-2BryBqmrs7kJnX5Y8QJjo7yjIcpHbHhW8NY6bvIBLTXE5raXlfvLqA89ocQcZYypS9mhrDVC=
+-2BY7q9r3XUSFm4tgBUrFYfv06NzfOtPXJqFxLtEizCdtqhwMKQrETXMOnqMHRDGoJHioQIzX0E=
+G8p8szrtBl8OiQLRLl3Jt2S7YESZepS1jfwFQ-2FGnuSLXpIN5DxJC-2BO3bhR-2Fof0awLmK0j=
+q6CQNyR4Os0icn-2F9SEMjQAZrGJQAQzCi9awLvE-2BdYKAu-2BPSKQK8qLLyrgvHaYWLExPHqX=
+2eTpp6XN3PdfQUqz2ZQSYd8VR3yMevjNN-2FcbbSd2Gp02-2F6dNOk6nvRM3dg6jrYySq8G0WYd=
+BQ8hFKJ8O-2BjglXZAKHPj3WrkDoviSm1s7YvM0cJBjeY9mm9WIVq-2F4zScqbAN6Jd8jerRQyc=
+WFpwjbOCyKHknZzuI3KZHXInm8sn1C-2FWjf-2FvQIyzvD8qHRIhW3scBZNIhzx5-2Fogf0CBND=
+EqE-2FZZV6uvmIq-2BOjnvfz4X6JAbaaCJVV0L606bo-2F-2FkFjHBgXrimJZCC1B6d2AfExnWT=
+QR4Fgn6HJOobe9-2Bcf8eLalfH4ZMWNs2-2FgWBqj-2BWTamwiT83opZ-2F9jBGX3zm0X4udQY9=
+2hK7exY1lvntpenxKMxuh4sD2iGBNGAvn3JkCnGo94BgEWXFGqXG-2FNtUc3KLMMmIUAGPQgknP=
+U1zvUGp_H65ljNg3foEJU6dJQZHMcp3Zdimzb4muCFBEwI-2BtxR7OKIGJ1b2DH2qtBgNRiHoO4=
+dZ13ifMjRkDWXQVzwirQxeYV7gH2pRAPw4FBd33RrhZK2tptFrOoqNaQyCeFJ4rEPj8qz1JxpSK=
+U3-2BJZAPeIgea8bvqIn78hN-2FfFxXtG4DeVjcBIlRMqZef7jSM4AhFRzCuSewXk-2FkjtQDDs=
+JKIu5FTKTh-2BzrN2XPHDof1w-2BmbxKM81o3yLTxR39ZISyA-2FAE-2B075uEbC2xDofZ4SXh2=
+vbGklF8AEtyzUPtYJSzY6xmR1fI50f-2BKswaVw6CmzaEz" style=3D"color:#4285F4">Yah=
+oo</a></p></td></tr></tbody></table></td></tr></tbody></table><table width=
+=3D"100%" style=3D"background:#fff" border=3D"0" cellPadding=3D"0" cellSpac=
+ing=3D"0"><tbody><tr><td width=3D"100%" style=3D"font-size:16px;line-height=
+:1.5em;padding:0 30px"><strong><span style=3D"font-size:18px">About this ev=
+ent</span></strong><br /><br /><span style=3D"font-size:15px"><p>Are you lo=
+oking to take your career to the next level? Do you dream of working for on=
+e of the world's most innovative companies? Look no further than "Pathway t=
+o Google: INSIGHT FROM GOOGLE ENGINEER" =E2=80=93 the ultimate event for al=
+l undergraduate students who aspire to make their mark in the tech industry=
+. Our guest speaker, Arsalan Arshad, a software engineer at Google Switzerl=
+and, will provide exclusive insights into what it takes to succeed in one o=
+f the most dynamic and fast-paced industries in the world.</p><p>Join us on=
+ June 02, 2023, at 8:00 PM, and discover the secrets to success at Google. =
+With Arsalan Arshad at the helm, you'll gain the knowledge and skills you n=
+eed to make your way to one of the world's most sought-after tech companies=
+. Learn about the interview process, the skills you need to succeed, and th=
+e unique culture that sets Google apart from the rest.</p><p>Don't miss out=
+ on this opportunity to hear from one of the industry's top experts. Regist=
+er now for "Pathway to Google: INSIGHT FROM GOOGLE ENGINEER" and pave your =
+own way to success in the tech industry. Whether you're just starting out o=
+r looking to take your career to the next level, this event is a must-atten=
+d for anyone serious about making their mark in the world of tech.</p> </sp=
+an><br /><br /><span style=3D"font-size:15px">Hope to see you there!</span>=
+<br /><span style=3D"font-size:15px"><div style=3D"display:block;text-align=
+:center;margin:20px"><a style=3D"background-color:#1a73e8;padding:15px 20px=
+;text-decoration:none;color:#fff;border-radius:4px;display:inline-block;fon=
+t-size:14px;font-weight:500" href=3D"https://u16161593.ct.sendgrid.net/ls/c=
+lick?upn=3D6FylDzOsBjandYrle4FqVZSdv3-2BbZ0ATs1aFPrX0LwwZmWIHD22a-2BZj4cgof=
+XJY58LTbSIecdvAy5TUJhyc9yK52zQ0sS3nyK8kqaddAFagCZ4LJ0Ujh-2By4pzMI9OL1XvZW2l=
+ikYKAMUVMXYmdr1wxgM9-2BsySt9vy-2FibmTuYsxTXvbAhAerSAv8PSxMsHQJC1cv2uzdUdkz9=
+ViVg4Szk3XtfDJ1yDG-2FheAjusnFfQNKxqRzRCs1HsCCJBba1c-2FmYKG0a_H65ljNg3foEJU6=
+dJQZHMcp3Zdimzb4muCFBEwI-2BtxR7OKIGJ1b2DH2qtBgNRiHoO4dZ13ifMjRkDWXQVzwirQxe=
+YV7gH2pRAPw4FBd33RrhZK2tptFrOoqNaQyCeFJ4rEPj8qz1JxpSKU3-2BJZAPeIgea8bvqIn78=
+hN-2FfFxXtG4CnE-2B8WCFBTB4hkh2koKRfCJ-2FvKjYw7W9huloIbegoMSWCiWivPh4ILvFtK7=
+M9NR6qGOvq-2FyReBLnxyYnLnuuY1G4HF5GJ-2Fdw7xnGO6W1XBxqL8Lfmm73xJHvElKXmyCdhr=
+dEfOhYfqamW1LWofWfEt">RSVP</a></div></span><br /></td></tr></tbody></table>=
+<table width=3D"100%" style=3D"background:#fff" border=3D"0" cellPadding=3D=
+"0" cellSpacing=3D"0"><tbody><tr><td width=3D"100%" style=3D"font-size:16px=
+;line-height:1.5em;padding:0 30px"><br /><span style=3D"font-size:12px">You=
+ are receiving this email because you have signed up as a member of a Devel=
+oper Student Club. To change your email preferences, visit <a style=3D"colo=
+r:#4285F4" href=3D"https://u16161593.ct.sendgrid.net/ls/click?upn=3D6FylDzO=
+sBjandYrle4FqVZSdv3-2BbZ0ATs1aFPrX0LwyUnpz6b-2BcnvDvQJuNtdeXTcnr41iC-2Bsm2l=
+DoP7VVuvQNy8FOT6Nr0L79UcPMO0zL4645SxnQNyVmHVqSZUni7SI7zt_H65ljNg3foEJU6dJQZ=
+HMcp3Zdimzb4muCFBEwI-2BtxR7OKIGJ1b2DH2qtBgNRiHoO4dZ13ifMjRkDWXQVzwirQxeYV7g=
+H2pRAPw4FBd33RrhZK2tptFrOoqNaQyCeFJ4rEPj8qz1JxpSKU3-2BJZAPeIgea8bvqIn78hN-2=
+FfFxXtG4BHF1gyhpEsImx6pU-2FFw42Q7SdxJK0w4RxwbvAohi1JLLIma75Ja1nIVg7qmHWJaOg=
+d51MqtY-2FOqRVAfnFBunSGe3qzgtcHIHp5akIDOzwW-2BQDBg4UJ7ie2bG2jzjWkBSldA8NMxk=
+dHHdBMedC9-2BvXr">National University of Modern Languages (NUML) - Islamaba=
+d</a></span><span style=3D"font-size:10px">. </span><span style=3D"font-siz=
+e:12px">To leave the group, unsubscribe below.</span><br /><br /></td></tr>=
+</tbody></table></td></tr></tbody></table></td></tr></tbody></table></td></=
+tr></tbody></table></td></tr>
+
+
+                       =20
+
+
+    <tr>
+        <td>
+            <table width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacin=
+g=3D"0">
+                <tr>
+                    <td align=3D"center" style=3D"background-color: #ffffff=
+; border-top: 1px solid #F6F7F9; padding: 40px 0 40px; font-size: 13px; col=
+or: #7e8890;">
+                       =20
+
+
+   =20
+        <a href=3D"https://u16161593.ct.sendgrid.net/ls/click?upn=3D6FylDzO=
+sBjandYrle4FqVZSdv3-2BbZ0ATs1aFPrX0Lwzg9C4VAJP20noOG84jTS0mdZwX_H65ljNg3foE=
+JU6dJQZHMcp3Zdimzb4muCFBEwI-2BtxR7OKIGJ1b2DH2qtBgNRiHoO4dZ13ifMjRkDWXQVzwir=
+QxeYV7gH2pRAPw4FBd33RrhZK2tptFrOoqNaQyCeFJ4rEPj8qz1JxpSKU3-2BJZAPeIgea8bvqI=
+n78hN-2FfFxXtG4BO4EPw7jxcoNtImsc7mOPuRClZieuYIz1la93hIXn61hg7kqiVHoCOpF4GrE=
+eawPvPIJmTpl-2FfrKVAyQidxkqb15WJMSLni7Sm-2FGDIx-2Bz1zRQJG9CLSCGwIlM0vM-2BiR=
+BM19poqOiO-2Bi40b31fjIiO6"><img height=3D"30" src=3D"https://res.cloudinary=
+.com/startup-grind/image/upload/c_fit,dpr_2.0,f_auto,g_center,h_60,q_auto:g=
+ood,w_500/v1/gcs/platform-data-dsc/contentbuilder/logo_dark_horizontal_WVtt=
+pzD.png" border=3D"0"></a>
+   =20
+
+
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+
+
+
+
+                       =20
+
+                       =20
+                    </table>
+                </td>
+            </tr>
+        </table>
+   =20
+<div style=3D"text-align: center; font-size: 13px; padding-bottom: 20px;">
+    <a href=3D"https://u16161593.ct.sendgrid.net/ls/click?upn=3DVV2HEC-2Fpe=
+7sihHx9m-2BUmcs-2BdnFkKhwwi5VD5YfGijmo0MZi5SFxDTV8TT5gQPRXR6g8Y1qrYZ2c5aiYn=
+gv-2Bh7fDAtyNzJ4-2Bzgo5jIKM-2FyVh-2FK1bLbgmPoM8So64QbJaW3VQfs-2BYq-2FiA9qXe=
+Ze3O47NINvPn3qg6t0D-2BCGK6BqhG9a6AYQ2douDzu5VMMKVudXxYV6tX-2FXdswSJEWehgQeX=
+wnhqe3ajtdSgYg-2B5Is3KEbtSJ7C3HYTUYUZFis3Tm011amkbv0A-2B1MTmsoTwyaGA-3D-3D1=
+mFW_H65ljNg3foEJU6dJQZHMcp3Zdimzb4muCFBEwI-2BtxR7OKIGJ1b2DH2qtBgNRiHoO4dZ13=
+ifMjRkDWXQVzwirQxeYV7gH2pRAPw4FBd33RrhZK2tptFrOoqNaQyCeFJ4rEPj8qz1JxpSKU3-2=
+BJZAPeIgea8bvqIn78hN-2FfFxXtG4CeSqpIJ3G270TLNqcLQrYIRYZmXEQBlF4xKDcb7f3xoow=
+Er17pN9aEOuTPh35GY-2FLHHkRJIqPkQKljcof4Ty1o8SPQj9RXQuzfHPx3-2BbViBIp6Gxwn8X=
+WZhX3CC2dXeCivZGtbzZ0Ua1UMRKS8lKCO" style=3D"color: #888888">Unsubscribe</a=
+>
+</div>
+<img src=3D"https://u16161593.ct.sendgrid.net/wf/open?upn=3DI2ZneDYMm30bX-2=
+BRxYz82EqVmWgovkXO1mHRl89j0THzy4lAu-2BMXnVm-2FvaXHCyt5nVWdbxNiypHX7kr-2BOhK=
+bQ8G6T6vwHaNkVOsLVnInDIdgdqRi32zMjAx4g5mP6f2mwnpmHrQ5ZAKhHQskNFQxpHuIHrrwe4=
+IaLvZfsJQi-2Bo0RmAeRVyyprUetdaHnAHkxezIaG-2B2NkfFM0tZmr44-2F5jxACESaFbvqlyg=
+-2B8N5V3dDbzD3PAj2-2BKyqwLamrUycSwSyIlpHhCVWBKzz1sWJ9RTpUcnDZATDHVLLpkdFr2J=
+Na8PJ8BKmhSf2tT-2B5QA53ln" alt=3D"" width=3D"1" height=3D"1" border=3D"0" s=
+tyle=3D"height:1px !important;width:1px !important;border-width:0 !importan=
+t;margin-top:0 !important;margin-bottom:0 !important;margin-right:0 !import=
+ant;margin-left:0 !important;padding-top:0 !important;padding-bottom:0 !imp=
+ortant;padding-right:0 !important;padding-left:0 !important;"/></body>
+</html>
+
+--2ef191df3858da7afbee7db96365431e9ff4dc6f74d87a6dac9bf27a5888--

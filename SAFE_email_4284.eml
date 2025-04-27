@@ -1,0 +1,529 @@
+X-GM-THRID: 1760581470154960080
+X-Gmail-Labels: Inbox,Important,Category Updates,Unread
+Delivered-To: azfarali007.aa@gmail.com
+Received: by 2002:a05:6214:4208:b0:572:1d29:860 with SMTP id nd8csp207292qvb;
+        Thu, 16 Mar 2023 19:48:50 -0700 (PDT)
+X-Google-Smtp-Source: AK7set8AcaeMsi+ivrGpI9HxQdtUjlq31CdsQ3guRNPr3WgvXUoAXELelfP0mqR+JZX3wxn4bi5b
+X-Received: by 2002:a17:902:ceca:b0:1a1:9ff6:ca9 with SMTP id d10-20020a170902ceca00b001a19ff60ca9mr2944998plg.28.1679021330311;
+        Thu, 16 Mar 2023 19:48:50 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1679021330; cv=none;
+        d=google.com; s=arc-20160816;
+        b=hEjBDzw4WHUuTipeYm9K9WPcCJvqR6806rUk+fyHWWz6TcYdUJAFTgeP8N0ftmoVKZ
+         fkfHRe+fQAnpEV6GgjFAIvG7j02XAxhu1yn/ljJEUxJwU5r3/Fag1jlFZ2ZXnROiMKHA
+         /FLnQ4A3PlytS/4DQWYEv5n5j/p4FWCSgLRyMYIWYI0MfFf0lQN1XsQ82gFjYi4Wq1Tl
+         /4thumAokzvJUOLHD58qk1NSs3AE5eTpqggTUhYDb8BAPPrtMc3edQhjU4yeuozVxEph
+         NvgbP2sy4RPy5N079c0CzRLd48ry02In6g15HmwCV7lshAEArxypWu0bvIsQifUhMsk2
+         lwiQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:reply-to:subject:message-id:mime-version:from:date
+         :dkim-signature:dkim-signature;
+        bh=v154Fc33OtxZLRye7UlHAaZxbdZDIhBPMbfbxpyXoL0=;
+        b=QupK3bRSczBq8mDTgfvwW67XkHPzQ4WNXtA/bMikICTfKryIqaUTH5r5rhE8q1zPtU
+         ACq7ZMUZ7hWdHSpzIkotYTUnmoq/82jm158PvHb7JJnaxclBDY4vAMTj6WaXA7MCRFXn
+         2IP1iQcNtTulNK5f77nyCLRGZbhDlF69ungcfQLnF9X8T8y5/7jj9ToOC+V0bIbmVvLy
+         olBsR8zGs+/HLFF2NrsZk/Jmv8QzNnUYilhIHeyVEeaKpw9iAqX6wDElQvSyhdkWEjwQ
+         6SyWG5llXSUmPt+2sAEZP1vik8Y+OZL87XAuQ8MuqOVnKIHiGKti8laHlt6+xkSyeMgj
+         d/ng==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gdsc.community.dev header.s=bvy header.b=dx+xpJmo;
+       dkim=pass header.i=@sendgrid.info header.s=smtpapi header.b=Z9Uv+l6e;
+       spf=pass (google.com: domain of bounces+16161593-3a24-azfarali007.aa=gmail.com@em656.gdsc.community.dev designates 168.245.18.182 as permitted sender) smtp.mailfrom="bounces+16161593-3a24-azfarali007.aa=gmail.com@em656.gdsc.community.dev"
+Return-Path: <bounces+16161593-3a24-azfarali007.aa=gmail.com@em656.gdsc.community.dev>
+Received: from xvfrknbs.outbound-mail.sendgrid.net (xvfrknbs.outbound-mail.sendgrid.net. [168.245.18.182])
+        by mx.google.com with ESMTPS id j3-20020a170902758300b0019935e9b087si1086988pll.234.2023.03.16.19.48.49
+        for <azfarali007.aa@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Thu, 16 Mar 2023 19:48:50 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bounces+16161593-3a24-azfarali007.aa=gmail.com@em656.gdsc.community.dev designates 168.245.18.182 as permitted sender) client-ip=168.245.18.182;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gdsc.community.dev header.s=bvy header.b=dx+xpJmo;
+       dkim=pass header.i=@sendgrid.info header.s=smtpapi header.b=Z9Uv+l6e;
+       spf=pass (google.com: domain of bounces+16161593-3a24-azfarali007.aa=gmail.com@em656.gdsc.community.dev designates 168.245.18.182 as permitted sender) smtp.mailfrom="bounces+16161593-3a24-azfarali007.aa=gmail.com@em656.gdsc.community.dev"
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gdsc.community.dev;
+	h=content-type:from:mime-version:subject:reply-to:x-feedback-id:to:cc:
+	content-type:from:subject:to;
+	s=bvy; bh=v154Fc33OtxZLRye7UlHAaZxbdZDIhBPMbfbxpyXoL0=;
+	b=dx+xpJmoC+mpWRnDijlXgQi6BnngslBpkVjHOCoU04rKF1I19AfXziBkO48EawHzmWLx
+	c5kp0h67TiOo1A1bHUYzM80IBRaFnDDV/n0MzJ7pj1uOuLMojW1GtgERAbLllfkIcktfil
+	Dfo9pBKWqUVWZsqDugU8EccfSn/EHSCBwA/gA0TboD3kpw4xT4lGO1TqZJKKppuUhpHNKz
+	il1AHnf3REYdZWKjY4LTCILLkNIB/QtjqdbtMh3+LM7bNQE2gynuMJspT+sEQ79PNk2g2g
+	hhSgbd/61MZOiq2yU0J4YzbdESbmr/tlBcv8ig1ZwrdwStgQJn9aAtPBANzn7kSw==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=sendgrid.info;
+	h=content-type:from:mime-version:subject:reply-to:x-feedback-id:to:cc:
+	content-type:from:subject:to;
+	s=smtpapi; bh=v154Fc33OtxZLRye7UlHAaZxbdZDIhBPMbfbxpyXoL0=;
+	b=Z9Uv+l6eU5J2UOkKH1EANb/4mI0kmXKnzZNUeKieAc/DpNfzKTEuEvsSrMyLI5D4rgxO
+	WuLtGJcDKt4bJSDN6gX0ptvu8ON9+WQWizxLN+m8VDD0l7u+d5nclLljXKe2Y124GQvqzu
+	BOT3WXA5jn6U7b1ucJ3wJTqJXBLItIW34=
+Received: by filterdrecv-7bdf855fc8-4m8qz with SMTP id filterdrecv-7bdf855fc8-4m8qz-1-6413D50A-2
+        2023-03-17 02:48:42.018741976 +0000 UTC m=+1998902.707788798
+Received: from MTYxNjE1OTM (unknown)
+	by geopod-ismtpd-8 (SG) with HTTP
+	id a9fU_3OuTyey6GnSZpgh2A
+	Fri, 17 Mar 2023 02:48:41.986 +0000 (UTC)
+Content-Type: multipart/alternative; boundary=f7a0c19cb83e564c8eb97235d98ef30c259530086701ec2ac70bc3d456bf
+Date: Fri, 17 Mar 2023 02:48:48 +0000 (UTC)
+From: GDSC Event Platform <noreply@gdsc.community.dev>
+Mime-Version: 1.0
+Message-ID: <a9fU_3OuTyey6GnSZpgh2A@geopod-ismtpd-8>
+Subject: New National University of Modern Languages (NUML) - Islamabad event:
+ Flutter Bootcamp Day 04
+Reply-To: GDSC Event Platform <noreply@gdsc.community.dev>
+X-Feedback-ID: 16161593:SG
+X-SG-EID: 
+ =?us-ascii?Q?L92cBbLnKzcdBNkQwAYQ+sr1gkgAdysofGN=2FhuKNVQJd0G5iopz4Y0O=2FX9Tovl?=
+ =?us-ascii?Q?Z=2F8SrF=2FwCO1xHfCtgD5LT8L6dJQ9xy+VDdYEsSm?=
+ =?us-ascii?Q?uhpGwIEQobt8kw9UD9EhGmpZBr7pf0eTtMoQGpa?=
+ =?us-ascii?Q?gI9wZK4PWAyodpdOZq=2FkdelKPPCbPAW0YIchqiR?=
+ =?us-ascii?Q?WPwTEvWIHFBcnqkwlHO5xe3jm+Ljw8JypRZLC68?=
+ =?us-ascii?Q?JYmmSEEci+RQGdxRo4wI8kgNQ7jio96TtoFYmA2?=
+ =?us-ascii?Q?uTZ4xwxrQHgF0twXf3LcQ=3D=3D?=
+X-SG-ID: 
+ =?us-ascii?Q?N2C25iY2uzGMFz6rgvQsb8raWjw0ZPf1VmjsCkspi=2FI6OjusMqsQbh1b0Ag1oi?=
+ =?us-ascii?Q?xWHUdAM+aVlmjuv7hxvYfRpLCn2vp+0tJ=2FtLFto?=
+ =?us-ascii?Q?Ad3+uiTy18OmtvHIWM6iSkyaGfH?=
+To: azfarali007.aa@gmail.com
+X-Entity-ID: MUf8aKHxItgYcsqRjrDjLA==
+
+--f7a0c19cb83e564c8eb97235d98ef30c259530086701ec2ac70bc3d456bf
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset=utf-8
+Mime-Version: 1.0
+
+Hi Azfar, Check out our next event:Flutter Bootcamp Day 04
+Date & time: Sat, Mar 18, 8:30 PM (PKT)
+
+Agenda:
+
+
+
+About this eventHey Folks, It=E2=80=99s time to learn an interesting new te=
+chnology. =F0=9F=91=A8=E2=80=8D=F0=9F=92=BBGDSC NUML is back with another l=
+earning opportunity for you. Introducing our Flutter Bootcamp 2023. Flutter=
+ is an open-source framework by Google for building beautiful, natively com=
+piled, and multi-platform applications from a single codebase. This 7-day i=
+ntensive bootcamp will take you from scratch through the journey of app dev=
+elopment with Flutter. =F0=9F=99=8CPerks you will get by attending the Flut=
+ter Bootcamp: =F0=9F=A4=A9- Hands-on Learning- Training from Experts- Mento=
+rship from Professionals- Official Certificate of Bootcamp from GDSC NUML- =
+Swags for Top LearnersSo, what are you waiting for? Register now to start y=
+our journey into the world of app development with Flutter! =F0=9F=9A=80Reg=
+istration Form: bit.ly/gdscnuml_flutterbootcampRegistration Deadline is 15 =
+Match 12 PM Afternoon.=F0=9F=97=93=EF=B8=8F: 15 March - 19 March=F0=9F=95=
+=90: 8:30 PM - 10:30 PM=F0=9F=93=8D: Microsoft teams#flutter #flutterbootca=
+mp #gdsc #gdscnuml #gdscpakistan #googledeveloperstudentclubs@GoogleDevs @G=
+oogleStudents Hope to see you there!RSVP
+You are receiving this email because you have signed up as a member of a De=
+veloper Student Club. To change your email preferences, visit National Univ=
+ersity of Modern Languages (NUML) - Islamabad. To leave the group, unsubscr=
+ibe below.
+
+
+
+
+
+---
+
+View in browser: https://u16161593.ct.sendgrid.net/ls/click?upn=3D6FylDzOsB=
+jandYrle4FqVZSdv3-2BbZ0ATs1aFPrX0Lwww-2F4aLXFYpI9LpCjVfU0l4rm0JplJh-2FIyXzF=
+jzxnKgu6yvLxLqFt0F6n23ZLtCqMd3JQn96BhO1S-2FjSwmVzD4NwP4k_H65ljNg3foEJU6dJQZ=
+HMcp3Zdimzb4muCFBEwI-2BtxR7OKIGJ1b2DH2qtBgNRiHoO4dZ13ifMjRkDWXQVzwirQxeYV7g=
+H2pRAPw4FBd33RrjfswDIYMYHCYcGSCxtpi732ZiWccd8UCgNzZLXzxQbBiOnMYHSMvp-2FrPhV=
+SVE8EkAFdYE5kqeBztskoMEIIOH7ZqpQ8d2idtFO2YW5eJ1JJeGk6FB0qvhH-2BCOPBx3DQLLWL=
+D4NUJdRObPTbcC2KbIuL5Mx1ABd-2BgCutcY5R119PdPUzLeBA6Os-2B2pKZqHoCAZqrsAFd5X4=
+AISJzpa5uNzt
+
+
+---
+Click here to unsubscribe: https://u16161593.ct.sendgrid.net/ls/click?upn=
+=3DVV2HEC-2Fpe7sihHx9m-2BUmcs-2BdnFkKhwwi5VD5YfGijmo0MZi5SFxDTV8TT5gQPRXR6g=
+8Y1qrYZ2c5aiYngv-2Bh7fDAtyNzJ4-2Bzgo5jIKM-2FyVh-2FK1bLbgmPoM8So64QbJaW3VQfs=
+-2BYq-2FiA9qXeZe3O47NINvPn3qg6t0D-2BCGK6BqhG9a6AYQ2douDzu5VMMKVudXxYV6tX-2F=
+XdswSJEWehgQeXv6a7QJ92co-2BUifGhMoFRBDFjBcDjmI28xgD-2FEHgFeDoFAdOd5EQCmEnwF=
+cnCniUax7UK9w1A7kgeqSBTy3OZU-3DFB0p_H65ljNg3foEJU6dJQZHMcp3Zdimzb4muCFBEwI-=
+2BtxR7OKIGJ1b2DH2qtBgNRiHoO4dZ13ifMjRkDWXQVzwirQxeYV7gH2pRAPw4FBd33RrjfswDI=
+YMYHCYcGSCxtpi732ZiWccd8UCgNzZLXzxQbBiOnMYHSMvp-2FrPhVSVE8EkCEjycNiVb89M8N8=
+eVJHnJ-2BvgpMyLwQV-2FDaQf8ELLBolgw8bYtxdozuN3tBqU6yCu73Hth4guWMx9KW7vD3gilb=
+TQWK2F4SYCxyIpLDZVDuyehCGAnAdUr6h65ofUdVVMBLVaUwfad-2FrY5s0ouHDGge
+
+--f7a0c19cb83e564c8eb97235d98ef30c259530086701ec2ac70bc3d456bf
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset=utf-8
+Mime-Version: 1.0
+
+
+<html lang=3D"en" dir=3D"ltr" xml:lang=3D"en" xmlns=3D"http://www.w3.org/19=
+99/xhtml"  xmlns:v=3D"urn:schemas-microsoft-com:vml" xmlns:o=3D"urn:schemas=
+-microsoft-com:office:office">
+    <head>
+        <title>New National University of Modern Languages (NUML) - Islamab=
+ad event: Flutter Bootcamp Day 04 </title>
+        <link href=3D"https://fonts.googleapis.com/css?family=3DOpen+Sans:3=
+00italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel=
+=3D"stylesheet" type=3D"text/css">
+        <style type=3D"text/css">
+            a { color: #4285F4; }
+        </style>
+        <!--[if gte mso 9]>
+            <xml>
+                <o:OfficeDocumentSettings>
+                    <o:AllowPNG/>
+                    <o:PixelsPerInch>96</o:PixelsPerInch>
+                </o:OfficeDocumentSettings>
+            </xml>
+        <![endif]-->
+       =20
+    </head>
+
+    <body style=3D"background-color: #F6F7F9; margin:0; padding:0; font-fam=
+ily: 'Open Sans', Arial, sans-serif !important; font-weight: 400; color: #2=
+02124;">
+        <table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D=
+"15">
+            <tr>
+                <td width=3D"100%" align=3D"center" style=3D"background-col=
+or: #F6F7F9;">
+                    <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0"=
+ style=3D"border-bottom-left-radius: 4px; border-bottom-right-radius: 4px; =
+overflow: hidden; min-width: 290px; max-width: 600px;">
+                       =20
+
+
+
+<tr><td>
+    <table width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0">
+        <tbody>
+            <tr>
+               =20
+                <td valign=3D"middle" style=3D"padding: 0 0 15px; font-fami=
+ly: 'Open Sans', Arial, sans-serif !important;">
+                   =20
+                    <a href=3D"https://u16161593.ct.sendgrid.net/ls/click?u=
+pn=3D6FylDzOsBjandYrle4FqVZSdv3-2BbZ0ATs1aFPrX0LwyUnpz6b-2BcnvDvQJuNtdeXTcn=
+r41iC-2Bsm2lDoP7VVuvQNy8FOT6Nr0L79UcPMO0zL4645SxnQNyVmHVqSZUni7SoWjP_H65ljN=
+g3foEJU6dJQZHMcp3Zdimzb4muCFBEwI-2BtxR7OKIGJ1b2DH2qtBgNRiHoO4dZ13ifMjRkDWXQ=
+VzwirQxeYV7gH2pRAPw4FBd33RrjfswDIYMYHCYcGSCxtpi732ZiWccd8UCgNzZLXzxQbBmN0wt=
+vHxoe0GB97gvAhP-2F9SSo-2BSLMHFZJcT8erHAI-2FPxE1tNtcYCZpYw-2BpzwaZAfZHQ6MVe4=
+vAdXQCVbKEw3JkuJNNp3IjOJdDlWOSqGqyaXROFlwSBLlBtRHLVlRfbeV3rJHin4zDz5PHFq1Nr=
+LgThITqIrIRPMA-2FbAG5CaGtS" style=3D"font-size: 12px; color: #6f6f6f !impor=
+tant; padding: 1px 0; text-decoration: none !important;">
+                        Google Developer Student Clubs - National Universit=
+y of Modern Languages (NUML) - Islamabad
+                    </a>
+                   =20
+                </td>
+               =20
+               =20
+               =20
+               =20
+               =20
+                <td align=3D"right" valign=3D"middle" style=3D"padding: 0 0=
+ 15px; font-family: 'Open Sans', Arial, sans-serif !important;">
+                    <a class=3D"hideinbrowser" href=3D"https://u16161593.ct=
+.sendgrid.net/ls/click?upn=3D6FylDzOsBjandYrle4FqVZSdv3-2BbZ0ATs1aFPrX0Lwww=
+-2F4aLXFYpI9LpCjVfU0l4rm0JplJh-2FIyXzFjzxnKgu6yvLxLqFt0F6n23ZLtCqMeUxxyv6bh=
+S8PqZyxfs0JqYt7jY_H65ljNg3foEJU6dJQZHMcp3Zdimzb4muCFBEwI-2BtxR7OKIGJ1b2DH2q=
+tBgNRiHoO4dZ13ifMjRkDWXQVzwirQxeYV7gH2pRAPw4FBd33RrjfswDIYMYHCYcGSCxtpi732Z=
+iWccd8UCgNzZLXzxQbBmN0wtvHxoe0GB97gvAhP-2F8JmBDvFaHvI20JNC7qEOb6M-2BdCnz3kb=
+A4UuL-2Bchr7pYl-2FeiwvrnBzbrSsTV9-2BxC8yvIwlmq6IigeuGKtl710I-2FRhw0oOMwraYL=
+fyan2ai6xM-2FbF-2FBCd99-2B4hCXRlPT3OD5k-2FnPR-2B3OwgAJ2-2F8Sv9JT" style=3D"=
+font-size: 12px; color: #6f6f6f !important; padding: 1px 0; text-decoration=
+: none !important;" >
+                        View in browser
+                    </a>
+                </td>
+               =20
+            </tr>
+        </tbody>
+    </table>
+</td></tr>
+
+
+
+
+
+                       =20
+
+                       =20
+                        <tr>
+                           =20
+<td style=3D"width: 600px; height: 136px; vertical-align: middle; border-bo=
+ttom: 0px solid #F6F7F9;
+
+   =20
+   =20
+         background-image: url(https://res.cloudinary.com/startup-grind/ima=
+ge/upload/c_fill,dpr_2.0,f_auto,g_center,h_135,q_auto:eco,w_600/v1/gcs/plat=
+form-data-dsc/contentbuilder/email_header.png);
+   =20
+   =20
+
+background-color: #fff;  border-top-right-radius: 4px; border-top-left-radi=
+us: 4px;background-size: cover;">
+
+   =20
+   =20
+    <!--[if gte mso 9]>
+        <v:rect xmlns:v=3D"urn:schemas-microsoft-com:vml" fill=3D"true" str=
+oke=3D"false" style=3D"width:600px;height:135px;">
+        <v:fill type=3D"frame" src=3D"https://res.cloudinary.com/startup-gr=
+ind/image/upload/c_fill,dpr_2.0,f_auto,g_center,h_135,q_auto:eco,w_600/v1/g=
+cs/platform-data-dsc/contentbuilder/email_header.png" color=3D"#fff" />
+        <v:textbox inset=3D"0,0,0,0">
+    <![endif]-->
+   =20
+   =20
+
+
+
+                            <table border=3D"0" cellpadding=3D"0" cellspaci=
+ng=3D"20" width=3D"100%" style=3D"width: 100%;">
+                                <tr>
+                                   =20
+                                   =20
+
+    <td style=3D"vertical-align: middle; text-align: center; ">
+        <div style=3D"display: inline-block;">
+           =20
+
+
+   =20
+        <a href=3D"https://u16161593.ct.sendgrid.net/ls/click?upn=3D6FylDzO=
+sBjandYrle4FqVZSdv3-2BbZ0ATs1aFPrX0LwyUnpz6b-2BcnvDvQJuNtdeXTcnr41iC-2Bsm2l=
+DoP7VVuvQNy8FOT6Nr0L79UcPMO0zL4645SxnQNyVmHVqSZUni7SdQGQ_H65ljNg3foEJU6dJQZ=
+HMcp3Zdimzb4muCFBEwI-2BtxR7OKIGJ1b2DH2qtBgNRiHoO4dZ13ifMjRkDWXQVzwirQxeYV7g=
+H2pRAPw4FBd33RrjfswDIYMYHCYcGSCxtpi732ZiWccd8UCgNzZLXzxQbBmN0wtvHxoe0GB97gv=
+AhP-2F-2BiVi4W7Lvr8WrJ81u5baitxsZmLLoR1zVFFz-2Fz163prECKUuOLrjL-2B-2FMSRDWe=
+2MMNwo8fwYX6jHqgdfdFzjkz9Ae4nISrcOpdVXWaMDhvaThqqLftMtrC8TT08e9Q2d-2FjwhWPl=
+zDW-2B-2FNS4VQTQ3sfS" style=3D"text-align: center; display: block;">
+            <img src=3D"https://res.cloudinary.com/startup-grind/image/uplo=
+ad/c_fit,dpr_2.0,f_auto,g_center,h_100,q_auto:good,w_500/v1/gcs/platform-da=
+ta-dsc/contentbuilder/logo_dark_stacked_ziDh4mP.png" alt=3D"Google Develope=
+r Student Clubs" border=3D"0" height=3D"50">
+        </a>
+   =20
+
+
+           =20
+        </div>
+    </td>
+
+
+                                </tr>
+                            </table>
+
+                               =20
+    <!--[if gte mso 9]>
+        </v:textbox>
+        </v:rect>
+    <![endif]-->
+   =20
+</td>
+
+                        </tr>
+
+                       =20
+
+                       =20
+    <tr style=3D"background-color: #fff;"><td><table width=3D"100%" border=
+=3D"0" cellPadding=3D"0" cellSpacing=3D"0"><tbody><tr><td><table width=3D"1=
+00%" border=3D"0" cellPadding=3D"0" cellSpacing=3D"0"><tbody><tr><td><table=
+ width=3D"100%" border=3D"0" cellPadding=3D"0" cellSpacing=3D"0"><tbody><tr=
+><td><table width=3D"100%" style=3D"background:#fff" border=3D"0" cellPaddi=
+ng=3D"0" cellSpacing=3D"0"><tbody><tr><td width=3D"100%" style=3D"font-size=
+:16px;line-height:1.5em;padding:0 30px"><br /><span style=3D"font-size:15px=
+">Hi Azfar, <br/></span><br /><strong><span style=3D"font-size:18px">Check =
+out our next event:</span></strong><br /><strong><span style=3D"font-size:1=
+8px">Flutter Bootcamp Day 04</span></strong><br /><br /></td></tr></tbody><=
+/table><table style=3D"margin-bottom:30px;margin-top:30px" border=3D"0" cel=
+lPadding=3D"0" cellSpacing=3D"0" width=3D"100%"><tbody><tr><td style=3D"pad=
+ding:5px 7px 5px 30px;text-align:center;vertical-align:top;width:40px" widt=
+h=3D"40"><img alt=3D"" src=3D"https://res.cloudinary.com/startup-grind/imag=
+e/upload/c_fill,dpr_2,f_auto,g_center,q_auto:good/v1/gcs/platform-data-dsc/=
+contentbuilder/Date.png" style=3D"border:0;max-height:38px;max-width:38px"/=
+></td><td style=3D"font-size:19px;padding:5px;padding-right:30px"><table bo=
+rder=3D"0" cellPadding=3D"0" cellSpacing=3D"0" width=3D"100%"><tbody><tr><t=
+d><span><span style=3D"font-size:15px">Date &amp; time</span><br /></span><=
+/td></tr><tr><td style=3D"font-size:16px;padding-bottom:10px">Sat, Mar 18, =
+8:30 PM (PKT)<p style=3D"font-size:12px;color:#666;padding-top:5px;margin:0=
+">Add to  <a href=3D"https://u16161593.ct.sendgrid.net/ls/click?upn=3D6FylD=
+zOsBjandYrle4FqVcj-2FGqDuEYpjJPwK5iiSaRKxCmpiL07iNWQMqk7TMqSall4hjsI6qyQHw2=
+NvjzfL25en8xjL9Mib1lLL-2FFcvz8kkrGnDCIem-2BesryUFYzhu4pymNFa6K0dO2OWhLXHZq6=
+WWMakeCLsuRarXC6AI1fdwgE-2FS4-2FCxsFP1zcKy-2BAQ-2FwzuCcFAynW0-2FmkkNEWEA3n7=
+rOXOg-2BDLwlpW25WKpt7rYB8gI-2B0jCc9SUniGsP0-2Bt3ZDHSR-2FP5d-2BbUkMYnxQBYoH1=
+Bs202fm-2Bh36ZfnPIIJU9IjJWosQONuSPye1Jvi8xcy7Arf-2FpsSPs0VJl6GV2NgvVmlJU9Ao=
+lxdlqBduKFSTChQOTtcSiIXx06DMFH7MhhBFd-2FhfkHJoVQnpFinXh6vi0mxnfH-2BQy-2B3fn=
+t1wYg3ea4m1FaIh4qZGtbETq2oR6G-2FStbxg-2BMoF8jyZ3R6GjoCfvUmQ93L4lAqdDzx4ZS-2=
+B5bmP31Pyn8QllkNfs0N-2F3yvwo0-2B796FN0pf8XxCFUlJyBgM0KGPWUjn3-2FXFQ9u5dGwDJ=
+yphs8DgboBfajtffMVU0t3Is1kkn4wTvwNGxMslyBIMAXuGp6xeEdVVMZU8ys-2B5I8OYV-2BRt=
+AsBCMb060XQ0a7VsrM19RZn-2Fni8DqYa9ORCbayIYhfw87uvtWCax0lEyVAY0utvaeQfj6PZRR=
+FVUpatFRUA97xg2osPbKt8lEeuN18Ad8wGJiZLzG4wGZ9UWyLb95mtkZR8erCHdUooamg9DDYM3=
+5fG1YLfcp25dy-2BS1tf9Umt-2FTdiA4Jq9xV5Y-3DrIhn_H65ljNg3foEJU6dJQZHMcp3Zdimz=
+b4muCFBEwI-2BtxR7OKIGJ1b2DH2qtBgNRiHoO4dZ13ifMjRkDWXQVzwirQxeYV7gH2pRAPw4FB=
+d33RrjfswDIYMYHCYcGSCxtpi732ZiWccd8UCgNzZLXzxQbBmN0wtvHxoe0GB97gvAhP-2F8zwA=
+ZggwHbf1xvGRCCelXDk0Kgvuz-2BpyHWi-2FxHFu4WBEaFI8AlhheuMZHv9t6L-2BTODHXZt-2B=
+EMWtLEG3ufNX4Dy0jERx2f2vAQIEHWo-2FuJSAL-2FmMPhI-2BqXUckufSV7sVdgxKxAByQBa4Q=
+YBTT7OrgTq" style=3D"color:#4285F4">Google</a> =C2=B7 <a href=3D"https://u1=
+6161593.ct.sendgrid.net/ls/click?upn=3D6FylDzOsBjandYrle4FqVZSdv3-2BbZ0ATs1=
+aFPrX0LwzxhKE98hsx-2Fd7-2FQf9LD07BRQ8TbMZVbwlJJnR8wliZhg-3D-3DLKxS_H65ljNg3=
+foEJU6dJQZHMcp3Zdimzb4muCFBEwI-2BtxR7OKIGJ1b2DH2qtBgNRiHoO4dZ13ifMjRkDWXQVz=
+wirQxeYV7gH2pRAPw4FBd33RrjfswDIYMYHCYcGSCxtpi732ZiWccd8UCgNzZLXzxQbBmN0wtvH=
+xoe0GB97gvAhP-2F-2FGOL3-2F15iBLHFUnjBskfBgo7fH1HtnVJgdszGKFk6KgXb5yOFh-2BBf=
+4LfRe08s2vqql9GF-2FVoz383p6GfhhtZumOyfa4JakO8iWSGurOz7s4goJ8xpc9QvRF7DCh8h2=
+Ef-2BjnhyTTxgc9z2LJuf6McUp" style=3D"color:#4285F4">Outlook</a> =C2=B7 <a h=
+ref=3D"https://u16161593.ct.sendgrid.net/ls/click?upn=3D6FylDzOsBjandYrle4F=
+qVZSdv3-2BbZ0ATs1aFPrX0LwzxhKE98hsx-2Fd7-2FQf9LD07BRQ8TbMZVbwlJJnR8wliZhg-3=
+D-3DuJGB_H65ljNg3foEJU6dJQZHMcp3Zdimzb4muCFBEwI-2BtxR7OKIGJ1b2DH2qtBgNRiHoO=
+4dZ13ifMjRkDWXQVzwirQxeYV7gH2pRAPw4FBd33RrjfswDIYMYHCYcGSCxtpi732ZiWccd8UCg=
+NzZLXzxQbBmN0wtvHxoe0GB97gvAhP-2F-2F9CQErp-2FlIE0QsZmwozv66uH8atxIdqvW-2FRL=
+XNQBsVZ0v8HWILTjs40Brx2YGIJwSjK8lf9uxOjMyBQ7h-2BWpN3NZptwgaqWF7lUimlLeaimdb=
+M2c58FE1Lr5srYrg2XHxWdCfY-2FFZkW-2F4abFhqjPqP" style=3D"color:#4285F4">iCal=
+</a> =C2=B7 <a href=3D"https://u16161593.ct.sendgrid.net/ls/click?upn=3DVV2=
+HEC-2Fpe7sihHx9m-2BUmcmOW1cGbj1vhu2Kflt26PDOTq7TMR7VbWvu-2BlgE8uDbYqDP2BwHN=
+eltQ9aquG1WOTAYvRIe8-2Btq3CiNwvH0jE-2FhCaPCr1vUHXTxsZe6S26u4-2B4EFSWTbX1r5F=
+s1B7180WadasSmG-2Bap06OFJEmvBN-2BnHeee-2F2k-2BQYngm2H7bD4xpnKwA0kHJ1PZiftwJ=
+npgtw1fWBznYq3kgCtdU9aNJE0AfNZLPVyAqkqH6saiR0nbCRlb23ZoPyedZb1zdI0SiM1ZD28m=
+rpobSA0vCeg6qm9i0eWIkEDYkYVeUaXJGWFDvxNPIXwjMCiO7FtEA6hBHgqtW9R-2Br49P1R19i=
+AYF6Byg0F4ou7-2BiARZ9nrrRkmO3gQgRsyTw4RKiqECImcYktfWF586lN8P-2BIUuNtio4dnlX=
+ScSlRnhjKzd8fPnTBC8A-2FaZ-2BqiyAlS4V7nWirU9RMqNoad2uqffqy3hmEK67AF8JtXuFVlg=
+-2FK05GEoG43M4JNx1QMGiAhDoNYjORwvNFmnmfyNEYxLcVkeR2yuGfeCWo2h35NWNX0MbV3eHj=
+yJ751ClNarxkNwYLsTU7XJshmPMP4hlzzlIQ2dfhH0uqiGzIyZNCQ64wUMtAdw4kOG-2B1T1DME=
+vjz3k5OTRhN-2BvVkcErsyfehdsCOit1eXi6-2F0wZ-2BJAaththat8BzWt1UpmxLZRXGFZGZwX=
+lxRolnmTFnhLE00b-2BbwazdDri6sd0bECFA1GR6fW3D31vPtSQQ-2Ffz6LpbgQASF9eTn7-2BY=
+bkmJDMGg-3D-3Dzt-__H65ljNg3foEJU6dJQZHMcp3Zdimzb4muCFBEwI-2BtxR7OKIGJ1b2DH2=
+qtBgNRiHoO4dZ13ifMjRkDWXQVzwirQxeYV7gH2pRAPw4FBd33RrjfswDIYMYHCYcGSCxtpi732=
+ZiWccd8UCgNzZLXzxQbBmN0wtvHxoe0GB97gvAhP-2F-2F3jzN-2FaRXXYLqrEI5quQ3ld9qvfd=
+azDHXfayL9pm6kxx1ltqx7jA0F-2Flyj2jzKouBGTPDQM3Ko1licGCdZJX2FfOjkxH3HgOmIJ-2=
+B8xf2eEi3xky6ZMOZZQ6Q6ppjPCKLKZvgmbhGnBChMJHVwoKlEO" style=3D"color:#4285F4=
+">Yahoo</a></p></td></tr></tbody></table></td></tr></tbody></table><table w=
+idth=3D"100%" style=3D"background:#fff" border=3D"0" cellPadding=3D"0" cell=
+Spacing=3D"0"><tbody><tr><td width=3D"100%" style=3D"font-size:16px;line-he=
+ight:1.5em;padding:0 30px"><strong><span style=3D"font-size:18px">About thi=
+s event</span></strong><br /><br /><span style=3D"font-size:15px"><p>Hey Fo=
+lks, It=E2=80=99s time to learn an interesting new technology. =F0=9F=91=A8=
+=E2=80=8D=F0=9F=92=BB</p><p>GDSC NUML is back with another learning opportu=
+nity for you. Introducing our Flutter Bootcamp 2023. Flutter is an open-sou=
+rce framework by Google for building beautiful, natively compiled, and mult=
+i-platform applications from a single codebase. This 7-day intensive bootca=
+mp will take you from scratch through the journey of app development with F=
+lutter. =F0=9F=99=8C</p><p>Perks you will get by attending the Flutter Boot=
+camp: =F0=9F=A4=A9<br>- Hands-on Learning<br>- Training from Experts<br>- M=
+entorship from Professionals<br>- Official Certificate of Bootcamp from GDS=
+C NUML<br>- Swags for Top Learners</p><p>So, what are you waiting for? Regi=
+ster now to start your journey into the world of app development with Flutt=
+er! =F0=9F=9A=80</p><p>Registration Form: <a href=3D"https://u16161593.ct.s=
+endgrid.net/ls/click?upn=3DVV2HEC-2Fpe7sihHx9m-2BUmcmkiQ2fQTfnFtkyruet9SSBM=
+F-2FtJxcqCTdjiUyLMfdLIYVAu_H65ljNg3foEJU6dJQZHMcp3Zdimzb4muCFBEwI-2BtxR7OKI=
+GJ1b2DH2qtBgNRiHoO4dZ13ifMjRkDWXQVzwirQxeYV7gH2pRAPw4FBd33RrjfswDIYMYHCYcGS=
+Cxtpi732ZiWccd8UCgNzZLXzxQbBmN0wtvHxoe0GB97gvAhP-2F8rtgsYUkdclomc4-2B2am5vW=
+jy1mcwwwZZN5tsTwPDbulsKGaof-2Bwb41sE40cafiWF0RtxpdohFf-2F563yhlmqCzrF-2FrgT=
+1zs0a40zLxjTPie-2FNOZMj34pl-2Brau8Z-2FaH3x-2FZIyw0-2BVL29aiUsvbHsOaBB"><spa=
+n>bit.ly/gdscnuml_flutterbootcamp</span></a></p><p>Registration Deadline is=
+ 15 Match 12 PM Afternoon.</p><p>=F0=9F=97=93=EF=B8=8F: 15 March - 19 March=
+<br>=F0=9F=95=90: 8:30 PM - 10:30 PM<br>=F0=9F=93=8D: Microsoft teams</p><p=
+>#flutter #flutterbootcamp #gdsc #gdscnuml #gdscpakistan #googledeveloperst=
+udentclubs</p><p>@GoogleDevs @GoogleStudents</p> </span><br /><br /><span s=
+tyle=3D"font-size:15px">Hope to see you there!</span><br /><span style=3D"f=
+ont-size:15px"><div style=3D"display:block;text-align:center;margin:20px"><=
+a style=3D"background-color:#1a73e8;padding:15px 20px;text-decoration:none;=
+color:#fff;border-radius:4px;display:inline-block;font-size:14px;font-weigh=
+t:500" href=3D"https://u16161593.ct.sendgrid.net/ls/click?upn=3D6FylDzOsBja=
+ndYrle4FqVZSdv3-2BbZ0ATs1aFPrX0LwwZmWIHD22a-2BZj4cgofXJY58LTbSIecdvAy5TUJhy=
+c9yK52zQ0sS3nyK8kqaddAFagCZ4LJ0Ujh-2By4pzMI9OL1XvZW2likYKAMUVMXYmdr1wxgM9-2=
+BsySt9vy-2FibmTuYsxSpDLt-2BAgKwmjsFpd-2B5xKxaj4vrgz8FrqATgOK9e23zToIORGfXRC=
+-2FMUyymxLJKbrA-3D2lSk_H65ljNg3foEJU6dJQZHMcp3Zdimzb4muCFBEwI-2BtxR7OKIGJ1b=
+2DH2qtBgNRiHoO4dZ13ifMjRkDWXQVzwirQxeYV7gH2pRAPw4FBd33RrjfswDIYMYHCYcGSCxtp=
+i732ZiWccd8UCgNzZLXzxQbBmN0wtvHxoe0GB97gvAhP-2F-2BZlH4Yp8YXrZ3A6AhywOCl30bx=
+Nfmu1zj-2FRsEf4-2FRclZdeXErK4-2BvXcXxfCkq1C5xyi0jVS-2BHKG0aHep-2BbFfRy3iIBx=
+wdrEquf2mleiMFA1rqAzSeYPDbeCzLv5yMLx9yPCj1V5jM79ggbNVnAcumG">RSVP</a></div>=
+</span><br /></td></tr></tbody></table><table width=3D"100%" style=3D"backg=
+round:#fff" border=3D"0" cellPadding=3D"0" cellSpacing=3D"0"><tbody><tr><td=
+ width=3D"100%" style=3D"font-size:16px;line-height:1.5em;padding:0 30px"><=
+br /><span style=3D"font-size:12px">You are receiving this email because yo=
+u have signed up as a member of a Developer Student Club. To change your em=
+ail preferences, visit <a style=3D"color:#4285F4" href=3D"https://u16161593=
+.ct.sendgrid.net/ls/click?upn=3D6FylDzOsBjandYrle4FqVZSdv3-2BbZ0ATs1aFPrX0L=
+wyUnpz6b-2BcnvDvQJuNtdeXTcnr41iC-2Bsm2lDoP7VVuvQNy8FOT6Nr0L79UcPMO0zL4645Sx=
+nQNyVmHVqSZUni7SzdDk_H65ljNg3foEJU6dJQZHMcp3Zdimzb4muCFBEwI-2BtxR7OKIGJ1b2D=
+H2qtBgNRiHoO4dZ13ifMjRkDWXQVzwirQxeYV7gH2pRAPw4FBd33RrjfswDIYMYHCYcGSCxtpi7=
+32ZiWccd8UCgNzZLXzxQbBmN0wtvHxoe0GB97gvAhP-2F99MqsLtPWg9O1zpKB9Fw3EAaMBdB6g=
+i-2FvrdU1vCoPwzG5smDg-2BHnEdEvWybGD4XYOxidEN9ruLYu7wQ00I1-2F1qNiLIn8QmMfL8f=
+tLa-2FgR3O1LeY7h0H02-2FPLtsLnBV1rb4C3IdIn1DCzQP5Q80SuIT">National Universit=
+y of Modern Languages (NUML) - Islamabad</a></span><span style=3D"font-size=
+:10px">. </span><span style=3D"font-size:12px">To leave the group, unsubscr=
+ibe below.</span><br /><br /></td></tr></tbody></table></td></tr></tbody></=
+table></td></tr></tbody></table></td></tr></tbody></table></td></tr>
+
+
+                       =20
+
+
+    <tr>
+        <td>
+            <table width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacin=
+g=3D"0">
+                <tr>
+                    <td align=3D"center" style=3D"background-color: #ffffff=
+; border-top: 1px solid #F6F7F9; padding: 40px 0 40px; font-size: 13px; col=
+or: #7e8890;">
+                       =20
+
+
+   =20
+        <a href=3D"https://u16161593.ct.sendgrid.net/ls/click?upn=3D6FylDzO=
+sBjandYrle4FqVZSdv3-2BbZ0ATs1aFPrX0Lwzg9C4VAJP20noOG84jTS0mMn2Y_H65ljNg3foE=
+JU6dJQZHMcp3Zdimzb4muCFBEwI-2BtxR7OKIGJ1b2DH2qtBgNRiHoO4dZ13ifMjRkDWXQVzwir=
+QxeYV7gH2pRAPw4FBd33RrjfswDIYMYHCYcGSCxtpi732ZiWccd8UCgNzZLXzxQbBmN0wtvHxoe=
+0GB97gvAhP-2F9nuBYT2M5SQ4vfxLk0sD2IxMDVrnbUgGHz-2BjbDK0Mz1fXhSgOReVBFngeszX=
+rGL7PEc8Wq5codXM6gShfPrSdmSUYukoxnX-2FEXYrkOPNhV6u7O84nFcVOHtEVqJylwtgRfNN-=
+2Fq1-2B2VTShjStz3Is8v"><img height=3D"30" src=3D"https://res.cloudinary.com=
+/startup-grind/image/upload/c_fit,dpr_2.0,f_auto,g_center,h_60,q_auto:good,=
+w_500/v1/gcs/platform-data-dsc/contentbuilder/logo_dark_horizontal_WVttpzD.=
+png" border=3D"0"></a>
+   =20
+
+
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+
+
+
+
+                       =20
+
+                       =20
+                    </table>
+                </td>
+            </tr>
+        </table>
+   =20
+<div style=3D"text-align: center; font-size: 13px; padding-bottom: 20px;">
+    <a href=3D"https://u16161593.ct.sendgrid.net/ls/click?upn=3DVV2HEC-2Fpe=
+7sihHx9m-2BUmcs-2BdnFkKhwwi5VD5YfGijmo0MZi5SFxDTV8TT5gQPRXR6g8Y1qrYZ2c5aiYn=
+gv-2Bh7fDAtyNzJ4-2Bzgo5jIKM-2FyVh-2FK1bLbgmPoM8So64QbJaW3VQfs-2BYq-2FiA9qXe=
+Ze3O47NINvPn3qg6t0D-2BCGK6BqhG9a6AYQ2douDzu5VMMKVudXxYV6tX-2FXdswSJEWehgQeX=
+v6a7QJ92co-2BUifGhMoFRBDFjBcDjmI28xgD-2FEHgFeDnOiqny-2FJ1nfik-2BYnuOU1Rw-3D=
+-3DbyG6_H65ljNg3foEJU6dJQZHMcp3Zdimzb4muCFBEwI-2BtxR7OKIGJ1b2DH2qtBgNRiHoO4=
+dZ13ifMjRkDWXQVzwirQxeYV7gH2pRAPw4FBd33RrjfswDIYMYHCYcGSCxtpi732ZiWccd8UCgN=
+zZLXzxQbBmN0wtvHxoe0GB97gvAhP-2F-2FhF32UELcBkyIXIcmFd7xqLL-2FTD2CtYkNpJN1Ac=
+mzN8zHfF3oWWVT0q0VG1eOxlSU3gWDCmjHsz-2Bhu5ofm0LgWzKejfwZl6TAX-2FWn9jSG8DzUF=
+6j2tJFxglEENgNdhI1EhFNszPQfgUhCrF5BGJfxB" style=3D"color: #888888">Unsubscr=
+ibe</a>
+</div>
+<img src=3D"https://u16161593.ct.sendgrid.net/wf/open?upn=3DI2ZneDYMm30bX-2=
+BRxYz82EqVmWgovkXO1mHRl89j0THzy4lAu-2BMXnVm-2FvaXHCyt5nVWdbxNiypHX7kr-2BOhK=
+bQ8G6T6vwHaNkVOsLVnInDIdi3LpK-2BK9kUIWWHjykNPx4mpxB0qLUnQE64p2elv-2FYNLeeQb=
+clOo7Ilee-2BKJ-2FgY5aJRm-2FU2-2F-2FuFL1YCVoTjvf5W29KMGLvWfQJAe0O3Ui9OXxNYkf=
+QCRgUSoATj3t-2BNkukW2SX7IlTkp6oiNISZTvY3dnDDwJpzoJ5cdxx-2Bsbo2RBE1-2F8FI8gk=
+lstUIp8D3oVUVOLp7y-2Bo5pQa7httC2mS3" alt=3D"" width=3D"1" height=3D"1" bord=
+er=3D"0" style=3D"height:1px !important;width:1px !important;border-width:0=
+ !important;margin-top:0 !important;margin-bottom:0 !important;margin-right=
+:0 !important;margin-left:0 !important;padding-top:0 !important;padding-bot=
+tom:0 !important;padding-right:0 !important;padding-left:0 !important;"/></=
+body>
+</html>
+
+--f7a0c19cb83e564c8eb97235d98ef30c259530086701ec2ac70bc3d456bf--

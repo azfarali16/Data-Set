@@ -1,0 +1,909 @@
+X-GM-THRID: 1702197966359804785
+X-Gmail-Labels: Inbox,Category Updates,Unread
+Delivered-To: azfarali007.aa@gmail.com
+Received: by 2002:a05:6a10:2a86:0:0:0:0 with SMTP id ja6csp708703pxb;
+        Thu, 10 Jun 2021 09:28:02 -0700 (PDT)
+X-Google-Smtp-Source: ABdhPJwEJQND7/6ojsp4CLCJWkFrP1IziUJCN/Z26xlifd+ifkythLH8h5WaZoSCzWTGgRYeIaRB
+X-Received: by 2002:ab0:634d:: with SMTP id f13mr624480uap.90.1623342482072;
+        Thu, 10 Jun 2021 09:28:02 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1623342482; cv=none;
+        d=google.com; s=arc-20160816;
+        b=THKvmkl1pAb/h80yxElpBRXbBLdhhZZE/JN0II6WatQEm1X+hVt+kBipFCB6hOih59
+         dGb/Ad5SXeM6g8V3E5dqCWrjZ2MG4kgO6D2/tXHKOv1jmlJYfO7Z6qT1R6AWEUygpLL+
+         Yq8jegfwnzHuC5JvyI6i9lKZQuFdTSEwlcDdUXpX8lFiCfODymZ11AN+4K50lZfV3jLW
+         PkCVr4fYFAJ1ngi/k5le1QNh+k+3KkMs725PCo/SzIaKsFoDFUJLcvQcxqmxJJOBUB1p
+         153DODEEEaRp1e5/0nml66k2uR5EleaYgO+yMh68+7eWLtfd30N8AGyAExelnNKYV7/F
+         84Yw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=feedback-id:mime-version:date:list-unsubscribe:message-id:subject
+         :to:from:list-id:dkim-signature:dkim-signature;
+        bh=UgdMm5srX0GRzAGDe39iGKVVJvDh9qZF1RxcEVm+Jm8=;
+        b=qKAlbcqGJO4lMrtL31uXWAJQN6P24O/n84cSAgLOi8pANTmVCb86S9+Fs89KioFrFF
+         5cMYe9IP49t1ywOaqG0S9FNUCslAJbuG3vxi0euGz48nWtApx11FOPQvwkBPF/7QBYPA
+         m+hT2zNsFguNDd9BmuNDcp0dD9RpOrOyJ8t1epV6S3xobBlaupZ7q9Pl00QaOM89H7Sk
+         c3KFHCAJ2gQ7Pj4gH89qWtMPkecbZt3pabTprG9uYY1MWlZvt8ls1m4E+rjD8TqFsiEU
+         W4VTQ9YSF7Db3EBW5MNpp4uS/d8hpPdLK94EnfAxcszraEY77qz9FMIKLg7JpWf9F1ts
+         9qXg==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@artstation.com header.s=fk7jnbtkpf5do6ludggu6qquiywidphe header.b=WcZ9pfEi;
+       dkim=pass header.i=@amazonses.com header.s=ug7nbtf4gccmlpwj322ax3p6ow6yfsug header.b=XBN1WrLG;
+       spf=pass (google.com: domain of 01000179f6c08027-472cb965-ec10-4dad-bebd-921299b78f1c-000000@ses.artstation.com designates 54.240.11.11 as permitted sender) smtp.mailfrom=01000179f6c08027-472cb965-ec10-4dad-bebd-921299b78f1c-000000@ses.artstation.com;
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=artstation.com
+Return-Path: <01000179f6c08027-472cb965-ec10-4dad-bebd-921299b78f1c-000000@ses.artstation.com>
+Received: from a11-11.smtp-out.amazonses.com (a11-11.smtp-out.amazonses.com. [54.240.11.11])
+        by mx.google.com with ESMTPS id m14si2023463vsk.36.2021.06.10.09.28.01
+        for <azfarali007.aa@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-SHA bits=128/128);
+        Thu, 10 Jun 2021 09:28:02 -0700 (PDT)
+Received-SPF: pass (google.com: domain of 01000179f6c08027-472cb965-ec10-4dad-bebd-921299b78f1c-000000@ses.artstation.com designates 54.240.11.11 as permitted sender) client-ip=54.240.11.11;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@artstation.com header.s=fk7jnbtkpf5do6ludggu6qquiywidphe header.b=WcZ9pfEi;
+       dkim=pass header.i=@amazonses.com header.s=ug7nbtf4gccmlpwj322ax3p6ow6yfsug header.b=XBN1WrLG;
+       spf=pass (google.com: domain of 01000179f6c08027-472cb965-ec10-4dad-bebd-921299b78f1c-000000@ses.artstation.com designates 54.240.11.11 as permitted sender) smtp.mailfrom=01000179f6c08027-472cb965-ec10-4dad-bebd-921299b78f1c-000000@ses.artstation.com;
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=artstation.com
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=fk7jnbtkpf5do6ludggu6qquiywidphe; d=artstation.com; t=1623342481;
+	h=Content-Type:List-ID:From:To:Subject:Message-ID:List-Unsubscribe:Date:MIME-Version;
+	bh=X+4VENzZILGLh9EFdMDjuq87d/t4RLcKQ7YVhypnRu4=;
+	b=WcZ9pfEiuWlnvNLl/jMn3lbw8qrGzjFQyaNkY/pZJUaftLGD6Tj7eEJthV0sQ9PD
+	Qh1WSTBUwTsavUdKch/cRon67bWiA2fsMcz8ycVqbT9REfkuV7OLkLFUy8JmM9HFVVC
+	WCmituyCYa0qGcge2IsbXqfzqMX6tQOnMJ//7D/0=
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=ug7nbtf4gccmlpwj322ax3p6ow6yfsug; d=amazonses.com; t=1623342481;
+	h=Content-Type:List-ID:From:To:Subject:Message-ID:List-Unsubscribe:Date:MIME-Version:Feedback-ID;
+	bh=X+4VENzZILGLh9EFdMDjuq87d/t4RLcKQ7YVhypnRu4=;
+	b=XBN1WrLG8UoiQF5Iy7q6WaNo0zzE8u3dJX9YSzCSvwvtH2KqE9Bso+wcE4iOsWne
+	IN3amLFm8QiAZ0eIZElORCTGAFxA+Ca+9yffhrkheusW4ZxyiHF6TL4nb1vyDtygina
+	TccKzB47+Umqx7cQinRL1QkOzXBbVqgF478ns2RI=
+Content-Type: multipart/alternative;
+ boundary="--_NmP-a298c47898327539-Part_1"
+X-FBL: xyJ2OVOCF.Y_zsEjzN.sVf68jxTd
+X-Msys-Api: {"campaign_id":"xyJ2OVOCF.Y_zsEjzN.sVf68jxTd"}
+X-SMTPAPI: {"unique_args":{"campaign_id":"xyJ2OVOCF.Y_zsEjzN.sVf68jxTd"}}
+X-Mailgun-Variables: {"campaign_id":"xyJ2OVOCF.Y_zsEjzN.sVf68jxTd"}
+List-ID: Announcements <Y_zsEjzN.mt.artstation.com>
+From: ArtStation <notifications@artstation.com>
+To: Azfar  Ali <azfarali007.aa@gmail.com>
+Subject: Platform Update: Link Prints to Projects, ArchViz Week Recap,
+ Marketplace Updates, ArtStation Learning Free
+Message-ID: <01000179f6c08027-472cb965-ec10-4dad-bebd-921299b78f1c-000000@email.amazonses.com>
+X-Mailer: ArtStation Mailer
+List-Unsubscribe: 
+ <https://www.artstation.com/unsubscribe/lists?cid=Y_zsEjzN&encrypted_email=c18a87c2f893d850689cbb1e5eca84de70615a03358c349c4e202cd4bdb88972&iv=dbea8941dab29a128372a306783811f9>
+Date: Thu, 10 Jun 2021 16:28:01 +0000
+MIME-Version: 1.0
+Feedback-ID: 1.us-east-1.8Zh2mCooNZhbMZkNNxsV94bdOs56IVbS7KQiZUDWDeY=:AmazonSES
+X-SES-Outgoing: 2021.06.10-54.240.11.11
+
+----_NmP-a298c47898327539-Part_1
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+ArtStation [https://cdn.artstation.com/mailer/logo-mailer.png]
+[https://mt.artstation.com/links/xyJ2OVOCF/Y_zsEjzN/sVf68jxTd/j4UCTBlPp]
+[https://mt.artstation.com/mosaico/uploads/static/1dd2e6c9a8448787e31e6f7ca=
+c9679e1.jpeg]
+[https://mt.artstation.com/links/xyJ2OVOCF/Y_zsEjzN/sVf68jxTd=
+/j4UCTBlPp]Artwork by Florent Lebrun [https://mt.artstation.=
+com/links/xyJ2OVOCF/Y_zsEjzN/sVf68jxTd/hl-OxzqXje]
+
+Hi Azfar Ali!
+
+We're excited to share some of the features and improvements we've made to =
+ArtStation recently! Here are a few updates you won't
+want to miss:
+
+ * Link Prints to Projects
+ * ArtStation Learning - Free for the Rest of =
+2021
+ * Marketplace Updates: Bundles + 100% Coupons
+  =20
+ * ArchViz Week Recap
+
+
+
+--------------------------------------------------=
+---------------------------------------------------------------------------=
+-----
+
+
+[https://mt.artstation.com/mosaico/uploads/static/02b1a1b1e78018457=
+1b21e9e7034a2ee.jpeg]
+[https://mt.artstation.com/links/xyJ2OVOCF/Y_zsEjzN/s=
+Vf68jxTd/NeLJ2Ep9D2]Boost visibility to your ArtStation Prints by linking
+your print to a project. This new feature enables you to let viewers who =
+come to your portfolio know the artwork they=E2=80=99re admiring
+is available as print.
+
+
+The best part? These placements will replace ads =
+on your project page so that you can take advantage of that space yourself.=
+ Set
+up your print shop and start driving your audience to your prints =
+right away!
+
+Upload a Print [https://mt.artstation.com/links/xyJ2OVOCF/Y_zs=
+EjzN/sVf68jxTd/4w1-VG28LC]
+
+
+
+---------------------------------------------=
+---------------------------------------------------------------------------=
+----------
+
+
+[https://mt.artstation.com/mosaico/uploads/static/83197dd0252e=
+85416acf3961659347c6.jpeg]
+[https://mt.artstation.com/links/xyJ2OVOCF/Y_zsE=
+jzN/sVf68jxTd/G6nQgUFN26]Unlimited access to ArtStation Learning is free =
+for the
+rest of the year! Watch hundreds of courses by expert instructors =
+at your own pace.
+
+Never want to miss a course? Update your Settings =
+[https://mt.artstation.com/links/xyJ2OVOCF/Y_zsEjzN/sVf68jxTd/5LOP7kQN5I] =
+to
+opt-in for email notifications when a new course is released.
+
+Go to ArtStation Learning [https://mt.artstation.com/links/xyJ2OVOCF/Y_zsEj=
+zN/sVf68jxTd/G6nQgUFN26]
+
+
+
+-----------------------------------------------=
+---------------------------------------------------------------------------=
+--------
+
+
+[https://mt.artstation.com/mosaico/uploads/static/fb86188b78e7f1=
+1c19a3d02c91670d21.png]
+[https://mt.artstation.com/links/xyJ2OVOCF/Y_zsEjzN=
+/sVf68jxTd/uThiWPWVPR]ArtStation ArchViz week celebrated artists in
+architectural visualization and shed some light on exciting opportunities =
+for artists in the industry.=20
+
+In case you missed it last week, here's a =
+recap of a few highlights:
+
+ * 8 Inspiring ArchViz Interiors on the =
+ArtStation Marketplace
+   [https://mt.artstation.com/links/xyJ2OVOCF/Y_zsEj=
+zN/sVf68jxTd/b5nz7Czpun]
+ * Building The Mountain Refuge: Interview with =
+Massimo Gnocchi
+   [https://mt.artstation.com/links/xyJ2OVOCF/Y_zsEjzN/sVf6=
+8jxTd/h-7Ro9U7vc]
+ * Creating Groundbreaking Architectural Visualization in=
+ Real-Time
+   [https://mt.artstation.com/links/xyJ2OVOCF/Y_zsEjzN/sVf68jxTd=
+/QrYWCAQDLW]
+ * KitBash3D Live with Victor Bonafonte & Vladimir Somov =
+[https://mt.artstation.com/links/xyJ2OVOCF/Y_zsEjzN/sVf68jxTd/5hNrJeeQF7]
+ * Twinmotion ArchViz Demo + Live Q&A [https://mt.artstation.=
+com/links/xyJ2OVOCF/Y_zsEjzN/sVf68jxTd/13UGk9-odS]
+ * How to Collaborate on=
+ a 30gb 3ds Max Model With Chaos Vantage
+   [https://mt.artstation.=
+com/links/xyJ2OVOCF/Y_zsEjzN/sVf68jxTd/MpSN-TlAoY]
+
+Learn More [https://mt.artstation.com/links/xyJ2OVOCF/Y_zsEjzN/sVf68jxTd/uT=
+hiWPWVPR]
+
+
+
+--------------------------------------------------------------=
+--------------------------------------------------------------------
+
+
+[https://mt.artstation.com/mosaico/uploads/static/d1655009dfcabeca80cd2ece6=
+1c44c60.jpeg]
+[https://mt.artstation.com/links/xyJ2OVOCF/Y_zsEjzN/sVf68jxTd=
+/YJa49LxcxM]The ArtStation Marketplace [https://mt.artstation.=
+com/links/xyJ2OVOCF/Y_zsEjzN/sVf68jxTd/KK-GgZTGMp] has become =
+artists=E2=80=99 go-to
+place for resources that are made for artists, by =
+artists. We=E2=80=99ve recently made some major changes that we know both =
+sellers and
+buyers will love:
+
+Bundles
+Offer more value to customers =
+looking for convenience or deals with new product bundles. This new release=
+ enables sellers to
+easily combine existing products and package them into =
+discounted bundles so buyers can save when they buy more.
+
+100% Coupons
+The Marketplace coupon feature just got better! The latest update enables =
+sellers to create coupons that give buyers 100% off.
+This release makes it possible for sellers to reward customers with a way =
+to get a paid product for free.
+
+See More [https://mt.artstation.=
+com/links/xyJ2OVOCF/Y_zsEjzN/sVf68jxTd/YJa49LxcxM]
+
+ArtStation
+33 Prince, Suite 313 =E2=80=A2 Montreal, QC H3C 2M7 =E2=80=A2 Canada
+
+This is an announcement from ArtStation.
+Unsubscribe
+[https://www.artstation.com/unsubscribe/lists?cid=3DY_zsEjzN&encrypted_emai=
+l=3Dc18a87c2f893d850689cbb1e5eca84de70615a03358c349c4e202cd4bdb88972&iv=3Dd=
+bea8941dab29a128372a306783811f9]
+
+[https://www.google-analytics.com/collect=
+?v=3D1&amp;tid=3DUA-29038430-17&amp;cid=3DsVf68jxTd&amp;t=3Devent&amp;ec=3D=
+email&amp;ea=3Dopen&amp;el=3Dannouncement_xyJ2OVOCF]mt [https://mt.=
+artstation.com/links/xyJ2OVOCF/Y_zsEjzN/sVf68jxTd]
+----_NmP-a298c47898327539-Part_1
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>
+<html xmlns=3D"http://www.w3.org/1999/xhtml"><head>
+<meta content=3D"width=3Ddevice-width" name=3D"viewport">
+<meta content=3D"text/html; charset=3DUTF-8" http-equiv=3D"Content-Type">
+<title>ArtStation Email</title>
+<style>
+      .tool{
+        line-height: 1.1;
+      }
+
+      .fa{
+        font-family: =
+'FontAwesome' !important;
+      }
+
+    </style>
+<style>
+      /* -------------------------------------
+          GLOBAL
+      ------------------------------------- */
+
+      @font-face {
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: 300;
+        src: local('Open Sans Light'), =
+local('OpenSans-Light'), url(https://cdn.artstation.=
+com/mailer/fonts/opensans-light.woff2) format('woff2'), url(https://cdn.=
+artstation.com/mailer/fonts/opensans-light.woff) format('woff');
+      }
+
+      @font-face {
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: 400;
+        src: local('Open Sans Regular'), local('OpenSans-Regular'), =
+url(https://cdn.artstation.com/mailer/fonts/opensans-regular.woff2) =
+format('woff2'), url(https://cdn.artstation.com/mailer/fonts/opensans-regul=
+ar.woff) format('woff');
+      }
+
+      @font-face {
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: 700;
+        src: local('Open Sans Bold'), =
+local('OpenSans-Bold'), url(https://cdn.artstation.com/mailer/fonts/opensan=
+s-bold.woff2) format('woff2'), url(https://cdn.artstation.=
+com/mailer/fonts/opensans-bold.woff) format('woff');
+      }
+
+      *{
+        margin: 0;
+        padding: 0;
+        font-size: 100%;
+        font-family: "Open Sans", Helvetica, Arial, sans-serif;
+      }
+
+      img{
+        max-width: 100%;
+      }
+
+      body, .body{
+        -webkit-font-smoothing: antialiased;
+        =
+-webkit-text-size-adjust: none;
+        background: #f6f6f6;
+        color: #000;
+        width: 100% !important;
+        height: 100%;
+        font-size: 14px;
+        line-height: 1.6;
+      }
+
+      /* -------------------------------------
+          ELEMENTS
+      ------------------------------------- */
+
+      a{
+        color: #13aff0;
+      }
+
+      .btn-primary, .btn-secondary{
+        text-decoration: none;
+        color: #FFF;
+        line-height: 2;
+        font-weight: bold;
+        margin-right: 10px;
+        text-align: center;
+        cursor: pointer;
+        display: inline-block;
+        border-radius: 25px;
+      }
+
+      .btn-primary{
+        background-color: #13aff0;
+        border: solid #13aff0;
+        border-width: 10px 20px;
+      }
+
+      .btn-secondary{
+        background-color: #aaa;
+        border: solid #aaa;
+        border-width: 10px 20px;
+      }
+
+      @media (max-width: 767px) {
+        .btn-primary, .btn-secondary{
+          margin-top: 5px;
+          margin-bottom: 5px;
+        }
+      }
+
+      .last{
+        margin-bottom: 0;
+      }
+
+      .first{
+        margin-top: 0;
+      }
+
+      .padding{
+        padding: 10px 0;
+      }
+
+
+      /* -------------------------------------
+          BODY
+      ------------------------------------- */
+      table.body-wrap{
+        width: 100%;
+        padding: 0 20px 20px 20px;
+      }
+
+      table.body-wrap .container{
+        border: 1px solid #f0f0f0;
+      }
+
+
+      /* -------------------------------------
+          FOOTER
+      ------------------------------------- */
+      table.footer-wrap{
+        width: 100%;
+        clear: both!important;
+      }
+
+      .footer-wrap .container p{
+        font-size: 12px;
+        color: #666;
+
+      }
+
+      table.footer-wrap a{
+        color: #999;
+      }
+
+
+      /* -----------------------------------=
+--
+          TYPOGRAPHY
+      ------------------------------------- */
+      h1, h2, h3{
+        color: #000;
+        margin: 40px 0 10px;
+        line-height: 1.2;
+        font-weight: 400;
+      }
+
+      h1{
+        font-size: 36px;
+      }
+      h2{
+        font-size: 28px;
+      }
+      h3{
+        font-size: 22px;
+      }
+
+      p, ul, ol{
+        margin-bottom: 10px;
+        font-weight: normal;
+        font-size: 14px;
+      }
+
+      ul li, ol li{
+        margin-left: 5px;
+        list-style-position: inside;
+      }
+
+      ul ul, ol ol, ul ol, ol ul{
+        margin-left: 14px;
+      }
+
+      blockquote{
+        font-style: italic;
+        border-left: 4px =
+solid #ccc;
+        padding: 4px 0 4px 16px;
+      }
+
+      /* ---------------------------------------------------
+          RESPONSIVENESS
+          Nuke it from orbit. It's the only way to=
+ be sure.
+      ------------------------------------------------------ */
+
+      /* Set a max-width, and make it display as block so it will =
+automatically stretch to that width, but will also shrink down on a phone =
+or something */
+      .container{
+        display: block!important;
+        max-width: 600px!important;
+        margin: 0 auto!important; /* =
+makes it centered */
+        clear: both!important;
+      }
+
+      /* Set the padding on the td rather than the div for Outlook =
+compatibility */
+      .body-wrap .container{
+        padding: 20px;
+      }
+
+      /* This should also be a block element, so that it will fill=
+ 100% of the .container */
+      .content{
+        max-width: 600px;
+        margin: 0 auto;
+        display: block;
+      }
+
+      /* Let's make sure tables in the content area are 100% wide */
+      .content table{
+        width: 100%;
+      }
+
+      /* ArtStation specific styles */
+      table.header-wrap{
+        width: 100%;
+        clear: both!important;
+      }
+
+      table.header-wrap .container-lg{
+        display: block!important;
+        max-width: 640px!important;
+        margin: 0 auto!important; /* =
+makes it centered */
+        clear: both!important;
+      }
+
+      table.header-wrap .content{
+        max-width: 640px;
+      }
+
+      table.header-wrap .header-content{
+        padding: 0 20px;
+      }
+
+      table.header-wrap .header-content p{
+        font-size: 16px;
+      }
+
+      hr{
+        margin: 10px 0;
+        background: #ebebeb;
+        border: none;
+        height: 1px;
+      }
+
+      p.small{
+        font-size: 12px;
+        color: #666;
+      }
+
+      img.emoji{
+        float: none !important;
+        display: inline !important;
+        width: 15px !important;
+        height: auto !important;
+      }
+
+      .mail-text-preview{
+        font-size: 0;
+        line-height: 0;
+        opacity: 0;
+      }
+
+      .preheader, .preheader p{
+        font-size: 11px;
+        line-height: 1.3;
+        color: #606060;
+        margin: 0;
+      }
+
+      .preheader{
+        margin-bottom: 10px;
+      }
+
+      .preheader a{
+        color: #606060;
+      }
+
+      .header{
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+
+      .social-icons{
+        list-style: none;
+        padding: 0;
+        margin: 14px 0;
+        border: 1px solid #eee;
+        background: #FAFAFA;
+        padding: 9px;
+        text-align: =
+center;
+      }
+
+      .social-icons li{
+        margin: 0 5px;
+        display: inline-block;
+        vertical-align: top;
+      }
+
+      .social-icons img{
+        display: block;
+        margin: 0 auto =
+5px;
+      }
+
+      .social-icons a{
+        color: #606060;
+        font-size: 11px;
+        text-decoration: none;
+      }
+
+    </style>
+<style>
+      @media (max-width: 767px) {
+
+        table.body-wrap{
+          padding-left: 0 !important;
+          padding-right: 0 !important;
+        }
+
+        .social-icons a{
+          font-size: 10px !important;
+        }
+
+        .social-icons img{
+          width: 32px !important;
+          height: 32px !important;
+        }
+
+      }
+    </style>
+</head>
+<body bgcolor=3D"#f6f6f6">
+<div class=3D"mail-text-preview"></div>
+<table width=3D"100%" =
+height=3D"100%" bgcolor=3D"#f6f6f6" class=3D"body">
+<tbody><tr>
+<td width=3D"100%" height=3D"100%" bgcolor=3D"#f6f6f6" valign=3D"top">
+<table class=3D"header-wrap">
+<tbody><tr>
+<td></td>
+<td class=3D"container-lg">
+<div class=3D"content">
+<table>
+<tbody><tr>
+<td align=3D"center">
+<br>
+<a href=3D"https://mt.artstation.=
+com/links/xyJ2OVOCF/Y_zsEjzN/sVf68jxTd/j4UCTBlPp" target=3D"_new">
+<img src=3D"https://cdn.artstation.com/mailer/logo-mailer.png" =
+width=3D"140" height=3D"25" alt=3D"ArtStation">
+</a>
+</td>
+</tr>
+</tbody></table>
+</div>
+</td>
+<td></td>
+</tr>
+</tbody></table>
+<br>
+<table class=3D"body-wrap">
+<tbody><tr>
+<td></td>
+<td class=3D"container" =
+bgcolor=3D"#FFFFFF">
+<div class=3D"content">
+<table>
+<tbody><tr>
+<table width=3D"100%" cellpadding=3D"0" border=3D"0" cellspacing=3D"0" =
+class=3D"header" id=3D"ko_headerBlock_1">
+<tbody><tr>
+<td valign=3D"top" align=3D"center">
+<a target=3D"_new" href=3D"https://mt.=
+artstation.com/links/xyJ2OVOCF/Y_zsEjzN/sVf68jxTd/j4UCTBlPp">
+ <img hspace=3D"0" border=3D"0" width=3D"596" alt=3D"" style=3D"max-width: =
+100%; height: auto; line-height: 1;" src=3D"https://mt.artstation.=
+com/mosaico/uploads/static/1dd2e6c9a8448787e31e6f7cac9679e1.jpeg">
+</a>
+</td>
+</tr>
+<tr>
+<td style=3D"text-align: right;">
+
+<div><p>Artwork by <a href=3D"https://mt.artstation.=
+com/links/xyJ2OVOCF/Y_zsEjzN/sVf68jxTd/hl-OxzqXje">Florent =
+Lebrun</a></p></div>
+
+</td>
+</tr>
+</tbody></table><table width=3D"100%" =
+cellpadding=3D"0" border=3D"0" cellspacing=3D"0" id=3D"ko_textBlock_2">
+<tbody><tr>
+<td valign=3D"top"><p>Hi Azfar  Ali!</p><p>We're excited to =
+share some of the features and improvements we've made to ArtStation =
+recently! Here are a few updates you won't want to miss:</p><ul><li>Link =
+Prints to Projects</li><li>ArtStation Learning - Free for the Rest of =
+2021</li><li>Marketplace Updates: Bundles + 100% Coupons&nbsp;<br></li><li>=
+ArchViz Week Recap</li></ul></td>
+</tr>
+</tbody></table><table =
+width=3D"100%" cellpadding=3D"0" border=3D"0" cellspacing=3D"0" =
+id=3D"ko_hrBlock_3">
+<tbody><tr>
+<td>
+<br>
+<hr>
+<br>
+</td>
+</tr>
+</tbody></table><table width=3D"100%" cellpadding=3D"0" border=3D"0" =
+cellspacing=3D"0" id=3D"ko_imageBlock_4">
+<tbody><tr>
+<td valign=3D"top" align=3D"center">
+<a target=3D"_new" href=3D"https://mt.=
+artstation.com/links/xyJ2OVOCF/Y_zsEjzN/sVf68jxTd/NeLJ2Ep9D2">
+<img hspace=3D"0" border=3D"0" width=3D"596" alt=3D"" style=3D"max-width: =
+100%; height: auto; line-height: 1;" src=3D"https://mt.artstation.=
+com/mosaico/uploads/static/02b1a1b1e780184571b21e9e7034a2ee.jpeg">
+</a>
+</td>
+</tr>
+</tbody></table><table width=3D"100%" cellpadding=3D"0" =
+border=3D"0" cellspacing=3D"0" id=3D"ko_textBlock_5">
+<tbody><tr>
+<td valign=3D"top"><p>Boost visibility to your&nbsp;ArtStation =
+Prints&nbsp;by linking your print to a project. This new feature enables =
+you to let viewers who come to your portfolio know the artwork =
+they=E2=80=99re admiring is available as print.<br></p><p>The best part? =
+These placements will replace ads on your project page so that you can take=
+ advantage of that space yourself.&nbsp; Set up your print shop and start =
+driving your audience to your prints right away!</p></td>
+</tr>
+</tbody></table><table width=3D"100%" cellpadding=3D"0" border=3D"0" =
+cellspacing=3D"0" id=3D"ko_buttonBlock_13">
+<tbody><tr>
+<td valign=3D"top">
+<p style=3D"text-align: center;">
+<a class=3D"btn btn-primary" =
+target=3D"_new" href=3D"https://mt.artstation.com/links/xyJ2OVOCF/Y_zsEjzN/=
+sVf68jxTd/4w1-VG28LC" style=3D"color: #fff;">Upload a Print</a>
+</p>
+</td>
+</tr>
+</tbody></table><table width=3D"100%" cellpadding=3D"0" border=3D"0" =
+cellspacing=3D"0" id=3D"ko_hrBlock_6">
+<tbody><tr>
+<td>
+<br>
+<hr>
+<br>
+</td>
+</tr>
+</tbody></table><table width=3D"100%" cellpadding=3D"0" =
+border=3D"0" cellspacing=3D"0" id=3D"ko_imageBlock_17">
+<tbody><tr>
+<td valign=3D"top" align=3D"center">
+<a target=3D"_new" href=3D"https://mt.=
+artstation.com/links/xyJ2OVOCF/Y_zsEjzN/sVf68jxTd/G6nQgUFN26">
+<img hspace=3D"0" border=3D"0" width=3D"596" alt=3D"" style=3D"max-width: =
+100%; height: auto; line-height: 1;" src=3D"https://mt.artstation.=
+com/mosaico/uploads/static/83197dd0252e85416acf3961659347c6.jpeg">
+</a>
+</td>
+</tr>
+</tbody></table><table width=3D"100%" cellpadding=3D"0" =
+border=3D"0" cellspacing=3D"0" id=3D"ko_textBlock_18">
+<tbody><tr>
+<td valign=3D"top"><p>Unlimited access to ArtStation Learning is free for =
+the rest of the year! Watch hundreds of courses by expert instructors at =
+your own pace.</p><p>Never want to miss a course?&nbsp;Update your <a =
+href=3D"https://mt.artstation.com/links/xyJ2OVOCF/Y_zsEjzN/sVf68jxTd/5LOP7k=
+QN5I">Settings</a> to opt-in for email notifications when a new course is =
+released.</p></td>
+</tr>
+</tbody></table><table width=3D"100%" =
+cellpadding=3D"0" border=3D"0" cellspacing=3D"0" id=3D"ko_buttonBlock_19">
+<tbody><tr>
+<td valign=3D"top">
+<p style=3D"text-align: center;">
+<a class=3D"btn btn-primary" target=3D"_new" href=3D"https://mt.artstation.=
+com/links/xyJ2OVOCF/Y_zsEjzN/sVf68jxTd/G6nQgUFN26" style=3D"color: =
+#fff;">Go to ArtStation Learning</a>
+</p>
+</td>
+</tr>
+</tbody></table><table width=3D"100%" cellpadding=3D"0" border=3D"0" =
+cellspacing=3D"0" id=3D"ko_hrBlock_21">
+<tbody><tr>
+<td>
+<br>
+<hr>
+<br>
+</td>
+</tr>
+</tbody></table><table width=3D"100%" cellpadding=3D"0" =
+border=3D"0" cellspacing=3D"0" id=3D"ko_imageBlock_8">
+<tbody><tr>
+<td valign=3D"top" align=3D"center">
+<a target=3D"_new" href=3D"https://mt.=
+artstation.com/links/xyJ2OVOCF/Y_zsEjzN/sVf68jxTd/uThiWPWVPR">
+<img hspace=3D"0" border=3D"0" width=3D"596" alt=3D"" style=3D"max-width: =
+100%; height: auto; line-height: 1;" src=3D"https://mt.artstation.=
+com/mosaico/uploads/static/fb86188b78e7f11c19a3d02c91670d21.png">
+</a>
+</td>
+</tr>
+</tbody></table><table width=3D"100%" cellpadding=3D"0" =
+border=3D"0" cellspacing=3D"0" id=3D"ko_textBlock_9">
+<tbody><tr>
+<td valign=3D"top"><p>ArtStation ArchViz week celebrated artists in =
+architectural visualization and&nbsp;shed some light on =
+exciting&nbsp;opportunities for artists in the industry. </p><p>In case you=
+ missed it last week, here's a recap of a few highlights:</p><ul><li><a =
+href=3D"https://mt.artstation.com/links/xyJ2OVOCF/Y_zsEjzN/sVf68jxTd/b5nz7C=
+zpun">8 Inspiring ArchViz Interiors on the ArtStation =
+Marketplace</a></li><li><a href=3D"https://mt.artstation.=
+com/links/xyJ2OVOCF/Y_zsEjzN/sVf68jxTd/h-7Ro9U7vc">Building The Mountain =
+Refuge: Interview with Massimo Gnocchi</a></li><li><a href=3D"https://mt.=
+artstation.com/links/xyJ2OVOCF/Y_zsEjzN/sVf68jxTd/QrYWCAQDLW">Creating =
+Groundbreaking Architectural Visualization in Real-Time</a></li><li><a =
+href=3D"https://mt.artstation.com/links/xyJ2OVOCF/Y_zsEjzN/sVf68jxTd/5hNrJe=
+eQF7">KitBash3D Live with Victor Bonafonte &amp; Vladimir =
+Somov</a></li><li><a href=3D"https://mt.artstation.com/links/xyJ2OVOCF/Y_zs=
+EjzN/sVf68jxTd/13UGk9-odS">Twinmotion ArchViz Demo + Live =
+Q&amp;A</a></li><li><a href=3D"https://mt.artstation.=
+com/links/xyJ2OVOCF/Y_zsEjzN/sVf68jxTd/MpSN-TlAoY">How to Collaborate on a =
+30gb 3ds Max Model With Chaos Vantage</a></li></ul></td>
+</tr>
+</tbody></table><table width=3D"100%" cellpadding=3D"0" border=3D"0" =
+cellspacing=3D"0" id=3D"ko_buttonBlock_22">
+<tbody><tr>
+<td valign=3D"top">
+<p style=3D"text-align: center;">
+<a class=3D"btn btn-primary" =
+target=3D"_new" href=3D"https://mt.artstation.com/links/xyJ2OVOCF/Y_zsEjzN/=
+sVf68jxTd/uThiWPWVPR" style=3D"color: #fff;">Learn More</a>
+</p>
+</td>
+</tr>
+</tbody></table><table width=3D"100%" cellpadding=3D"0" border=3D"0" =
+cellspacing=3D"0" id=3D"ko_hrBlock_10">
+<tbody><tr>
+<td>
+<br>
+<hr>
+<br>
+</td>
+</tr>
+</tbody></table><table width=3D"100%" cellpadding=3D"0" =
+border=3D"0" cellspacing=3D"0" id=3D"ko_imageBlock_11">
+<tbody><tr>
+<td valign=3D"top" align=3D"center">
+<a target=3D"_new" href=3D"https://mt.=
+artstation.com/links/xyJ2OVOCF/Y_zsEjzN/sVf68jxTd/YJa49LxcxM">
+<img hspace=3D"0" border=3D"0" width=3D"596" alt=3D"" style=3D"max-width: =
+100%; height: auto; line-height: 1;" src=3D"https://mt.artstation.=
+com/mosaico/uploads/static/d1655009dfcabeca80cd2ece61c44c60.jpeg">
+</a>
+</td>
+</tr>
+</tbody></table><table width=3D"100%" cellpadding=3D"0" =
+border=3D"0" cellspacing=3D"0" id=3D"ko_textBlock_12">
+<tbody><tr>
+<td valign=3D"top"><p>The <a href=3D"https://mt.artstation.=
+com/links/xyJ2OVOCF/Y_zsEjzN/sVf68jxTd/KK-GgZTGMp">ArtStation =
+Marketplace</a> has become artists=E2=80=99 go-to place for resources that =
+are made for artists, by artists. We=E2=80=99ve recently made some major =
+changes that we know both sellers and buyers will love:</p><p><strong>Bundl=
+es</strong><br>Offer more value to customers looking for convenience or =
+deals with new product bundles.&nbsp; This new release enables sellers to =
+easily combine existing products and package them into discounted bundles =
+so buyers can save when they buy more.</p><p><strong>100% =
+Coupons</strong><br>The Marketplace coupon feature just got better! The =
+latest update enables sellers to create coupons that give buyers 100% off. =
+This release makes it possible for sellers to reward customers with a way =
+to get a paid product for free.</p></td>
+</tr>
+</tbody></table><table =
+width=3D"100%" cellpadding=3D"0" border=3D"0" cellspacing=3D"0" =
+id=3D"ko_buttonBlock_14">
+<tbody><tr>
+<td valign=3D"top">
+<p style=3D"text-align: center;">
+<a class=3D"btn btn-primary" =
+target=3D"_new" href=3D"https://mt.artstation.com/links/xyJ2OVOCF/Y_zsEjzN/=
+sVf68jxTd/YJa49LxcxM" style=3D"color: #fff;">See More</a>
+</p>
+</td>
+</tr>
+</tbody></table>
+</tr>
+</tbody></table>
+</div>
+</td>
+<td></td>
+</tr>
+</tbody></table>
+<table class=3D"footer-wrap">
+<tbody><tr>
+<td></td>
+<td class=3D"container">
+<div class=3D"content">
+<table>
+<tbody><tr>
+<td align=3D"center">
+<p>
+ArtStation
+<br>
+33 Prince, Suite 313 =E2=80=A2 =
+Montreal, QC H3C 2M7 =E2=80=A2 Canada
+</p>
+<p>
+This is an announcement from=
+ ArtStation.
+<br>
+<a href=3D"https://www.artstation.com/unsubscribe/lists?=
+cid=3DY_zsEjzN&encrypted_email=3Dc18a87c2f893d850689cbb1e5eca84de70615a0335=
+8c349c4e202cd4bdb88972&iv=3Ddbea8941dab29a128372a306783811f9" =
+target=3D"_new">Unsubscribe</a>
+</p>
+</td>
+</tr>
+</tbody></table>
+</div>
+</td>
+<td></td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+</tbody></table>
+<img src=3D"https://www.google-analytics.com/collect?=
+v=3D1&amp;tid=3DUA-29038430-17&amp;cid=3DsVf68jxTd&amp;t=3Devent&amp;ec=3De=
+mail&amp;ea=3Dopen&amp;el=3Dannouncement_xyJ2OVOCF" width=3D"0" =
+height=3D"0" alt=3D"">
+
+
+<img src=3D"https://mt.artstation.=
+com/links/xyJ2OVOCF/Y_zsEjzN/sVf68jxTd" width=3D"1" height=3D"1" =
+alt=3D"mt"></body></html>
+----_NmP-a298c47898327539-Part_1--
